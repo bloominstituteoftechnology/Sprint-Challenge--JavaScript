@@ -14,7 +14,7 @@ Even more, `.map` iterates over each element in an array, and creates a new arra
 <li>Boolean</li>
 <li>Object</li>
 <li>Null</li>
-</li>
+</ul>
 
 Arrays can hold multiple values of the types listed above. 
 
