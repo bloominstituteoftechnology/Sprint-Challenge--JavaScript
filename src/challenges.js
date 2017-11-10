@@ -1,13 +1,13 @@
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
   for (let i = 0; i < elements.length; i++) { cb(elements[i]); }
-}; each([1,2,3], (element) => console.log(element));
+}; each([1, 2, 3], element => console.log(element));
 
 const map = (elements, cb) => {
-  const _elements = [];
-  for (let i = 0; i < elements.length; i++) { _elements.push(cb(elements[i])); }
-  return _elements;
-}; console.log(map([1,2,3], (element) => element + 100));
+  const myElements = [];
+  for (let i = 0; i < elements.length; i++) { myElements.push(cb(elements[i])); }
+  return myElements;
+}; console.log(map([1, 2, 3], element => element + 100));
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
@@ -28,8 +28,7 @@ const cacheFunction = cb => {
 
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => {
-  // reverse str takes in a string and returns that string in reversed order
-  // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+
 };
 
 const checkMatchingLeaves = obj => {
@@ -38,15 +37,16 @@ const checkMatchingLeaves = obj => {
 };
 
 const flatten = elements => {
-  const _elements = [];
+  const myElements = [];
   for (let i = 0; i < elements.length; i++) {
     if (Array.isArray(elements[i])) {
-      _elements.push.apply(_elements, (flatten(elements[i])));
+      myElements.push.apply(myElements, (flatten(elements[i])));
+    } else {
+      myElements.push(elements[i]);
     }
-    else { _elements.push(elements[i]) }
   }
-  return _elements;
-}; console.log(flatten([1,2,3,4,5,[1,2,3,4]]));
+  return myElements;
+}; console.log(flatten([1, 2, 3, 4, 5, [1, 2, 3, 4]]));
 
 module.exports = {
   each,
