@@ -43,7 +43,8 @@ Closure is an inner scope looking outwardly for some variables.
 **4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)**
 
 'This' Principles:
-⋅⋅⋅1. Window/global this points to that object.⋅⋅ 
-⋅⋅⋅2. Implicit binding - object before dot becomes this. ⋅⋅
-⋅⋅⋅3. New Binding - object where the new keyboard called. ⋅⋅
-⋅⋅⋅4. Whenever Javascript's call or apply method is used, this is explicitly defined.⋅⋅
+
+1. Window/global this points to that object.
+2. Implicit binding - object before dot becomes this. 
+3. New Binding - object where the new keyboard called. 
+4. Whenever Javascript's call or apply method is used, this is explicitly defined.
