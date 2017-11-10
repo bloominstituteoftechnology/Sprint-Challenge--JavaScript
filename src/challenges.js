@@ -37,16 +37,31 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  // const cache = {};
+  // // return cached value if it is the same value being called in cb
+  // return () => {
+  //   for (let i = 0; i < cache.length; i++) {
+  //     if (cb === cache[i]) {
+  //       return cache[i];
+  //     }
+  //     // if the object isn't cached, cache it and return it.
+  //     const result = cb;
+  //     cache.push(cb);
+  //     return result;
+  //   }
+  // };
   const cache = {};
   return () => {
-    for (let i = 0; i < cache.length; i++) {
-      if (cb === cache[i]) {
-        return cache[i];
-      }
-      const result = cb;
-      cache.push(cb);
-      return result;
+    const args = Array.prototype.slice.call(arguments);
+    if (cb) {
+      args.sort();
     }
+    if (cache[args] !== undefined) {
+      return cache[args];
+    }
+    const result = cb.apply(this, args);
+    cache.push(result);
+    return result;
   };
 };
 
