@@ -29,13 +29,22 @@ const limitFunctionCallCount = (cb, n) => {
 
 
 const cacheFunction = cb => {
-  // Should return a funciton that invokes `cb`.
+  const u = {};
+  return input => {
+    if (u[input] === undefined) {
+      u[input] = cb;
+      return u[input](input);
+    }
+    return u[input];
+  };
+};
+// Should return a funciton that invokes `cb`.
   // A cache (object) should be kept in closure scope.
   // The cache should keep track of all arguments have been used to invoke this function.
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
-};
+
 
 /* eslint-enable no-unused-vars */
 
