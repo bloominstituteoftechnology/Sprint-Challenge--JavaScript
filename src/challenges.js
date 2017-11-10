@@ -58,6 +58,7 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  const valueSet = new Set();
   const flattenObject = obj1 => {
     let arr = [];
     Object.values(obj1).forEach(value => {
@@ -69,7 +70,10 @@ const checkMatchingLeaves = obj => {
     });
     return arr;
   };
-  return !!flattenObject(obj).reduce((a, b) => { return a === b ? a : NaN; });
+  flattenObject(obj).forEach(element => {
+    valueSet.add(element);
+  });
+  return valueSet.size === 1;
 };
 
 const flatten = elements => {
