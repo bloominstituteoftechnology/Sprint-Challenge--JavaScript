@@ -39,3 +39,16 @@
 ..*Its own scope
 ..*The outer function's scope
 ..*The global scope
+3. The inner function also has access to the outer function's parameters, with the only catch being that it doesn't have access to the **arguments** object. (an array of all passed-in arguments)
+```
+function showName (firstName, lastName) {
+​var nameIntro = "Your name is ";
+    // this inner function has access to the outer function's variables, including the parameter​
+​function makeFullName () {        
+​return nameIntro + firstName + " " + lastName;    
+}
+​
+​return makeFullName ();
+}
+
+```
