@@ -33,3 +33,5 @@
 4. Doubly-Linked List--Like a Linked List, but each node also points to the preceding node as well as the next node. O(1) access for insertion/deletion.
 5. Tree--A hierarchical data structure with a root node and children nodes. The children nodes can have children ad infinitum.
 
+# What is Closure?
+1. A **closure** is an inner function with access to the enclosing function's variables. 
