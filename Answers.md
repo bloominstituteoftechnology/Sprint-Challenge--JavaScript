@@ -15,8 +15,10 @@ What is closure? Can you code out a quick example of a closure?
 	When an inner function can reference the variables of it's outer function. 
 
 	const outFunction = (cb) => {
+		let n = 0;
 		innerFunction () {
-			cb(n);
+			n++;
+			return cb();
 		}
 	}
 

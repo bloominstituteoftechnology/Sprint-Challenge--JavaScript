@@ -39,11 +39,19 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
-  const cache = {};
   const newFunction = (...args) => {
+    const cache = [];
+    let exist = false;
     for (let i = 0; i < args.length; i++) {
-      if (args[i] === cache[i]) {
-        return args[i];
+      for (let j = 0; j < cache.length; i++) {
+        if (cache[j] === args[i]) {
+          exist = true;
+          return cache[j];
+        }
+      }
+      if (!exist) {
+        cache.push(cb(args[i]));
+        return cb(args[i]);
       }
     }
   };
@@ -56,16 +64,63 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  let newString = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    newString += str[i];
+  }
+  return newString;
 };
 
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  let val;
+  let flag = true;
+  const checkLeaves = tree => {
+    Object.keys(tree).forEach(key => {
+      if (val === undefined && typeof key !== 'object') {
+        val = tree[key];
+        return undefined;
+      }
+      if (typeof tree[key] === 'object') {
+        return checkLeaves(tree[key]);
+      }
+      if (tree[key] !== val) {
+        flag = false;
+        return undefined;
+      }
+      return undefined;
+    });
+  };
+  checkLeaves(obj);
+  return flag;
 };
 
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+
+  const reduce = (item, cb, startingValue) => {
+    for (let i = 0; i < elements.length; i++) {
+      if (startingValue === undefined) {
+        startingValue = elements[0];
+        i = 1;
+      }
+      startingValue = cb(startingValue, elements[i]);
+    }
+    return startingValue;
+  };
+
+  const flattenedArray = reduce(elements,
+    (prev, next) => {
+      if (Array.isArray(next)) {
+        return prev.concat(flatten(next));
+      }
+      return prev.concat(next);
+    },
+    [],
+    );
+  return flattenedArray;
 };
 
 module.exports = {
