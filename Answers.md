@@ -26,5 +26,5 @@ Closure allows a local function to reach **out** of it's scope environement to g
   - then `this` refers to the object mentioned before the dot.
 - using `this` in a class object (a.k.a. a constructor function):
   - then `this` refers to the specific instance created from that constructor function.
-- using `this` with `.call()` or `.apply()`:
+- using `this` with `.call()`, `.apply()`, or `.bind()`:
   - then `this` refers to the object of whatever is in the parenthesis.
