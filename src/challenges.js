@@ -32,8 +32,13 @@ const reverseStr = str => {
 };
 
 const checkMatchingLeaves = obj => {
-  // return true if every property on `obj` is the same
-  // otherwise return false
+  const keys = Object.keys(obj);
+  if (typeof obj[keys[0]] === 'object') { checkMatchingLeaves(obj[keys[0]]); }
+  for (let i = 1; i < keys.length; i++) {
+    if (typeof obj[keys[i]] === 'object') { checkMatchingLeaves(obj[keys[i]]); }
+    if (obj[keys[i]] !== obj[keys[0]] && typeof obj[keys[i]] !== 'object') { return false; }
+  }
+  return true;
 };
 
 const flatten = elements => {
