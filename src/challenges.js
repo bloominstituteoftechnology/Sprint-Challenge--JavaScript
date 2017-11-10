@@ -1,6 +1,9 @@
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
-  // Iterates over a list of elements, yielding each in turn to the `cb` function.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
+    // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
 };
 
