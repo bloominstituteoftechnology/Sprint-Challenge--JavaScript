@@ -22,12 +22,11 @@ const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
   let count = 0;
-  function limitern() {
-    if (count > n) return;
+  return function limit() {
+    if (count === n) return;
     count++;
     cb();
-  }
-  return limitern;
+  };
 };
 
 const cacheFunction = cb => {
@@ -61,8 +60,8 @@ const checkMatchingLeaves = obj => {
   // otherwise return false
   let val;
   let flag = true;
-  const checkLeaves = (tree) => {
-    Object.keys(tree).forEach((key) => {
+  const checkLeaves = tree => {
+    Object.keys(tree).forEach(key => {
       if (val === undefined && typeof key !== 'object') {
         val = tree[key];
         return undefined;
