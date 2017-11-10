@@ -38,7 +38,7 @@ const cacheFunction = cb => {
   // `cb` should only ever be invoked once for a given set of arguments.
   const cache = {};
   return x => {
-    if (!cache.hasOwnProperty(x)) {
+    if (!Object.prototype.hasOwnProperty.call(cache, x)) {
       cache[x] = cb(x);
     }
     return cache[x];
@@ -79,7 +79,7 @@ const checkMatchingLeaves = obj => {
 };
 
 
-const flatten = (elements) => {
+const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
   let newArr = [];
