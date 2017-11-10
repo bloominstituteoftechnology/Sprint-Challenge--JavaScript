@@ -62,9 +62,49 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
-  
+  const testKey = obj[Object.keys(obj)[0]];
+  console.log(testKey);
+  const rCheck = (object, keyToFind) => {
+    Object.keys(object).forEach(key => {
+      console.log(key);
+      if (typeof object[key] === 'object') {
+        console.log(object[key]);
+        rCheck(object[key], keyToFind);
+        if (key === keyToFind) return true;
+      }
+    });
+    return false;
+  };
+  rCheck(obj, testKey);
 };
-
+const tree1 = {
+  x: 1,
+  y: 1,
+  z: 1,
+  xa: {
+    xx: 1,
+    xy: 1,
+    xz: 1,
+    zz: {
+      a: {
+        b: {
+          z: 1,
+        },
+      },
+    },
+  },
+};
+console.log(checkMatchingLeaves(tree1));
+// const testKey = obj[Object.keys(obj)[0]];
+// const x = (obj2, testCase) => {
+//   const objKey = Object.keys(obj2);
+//   for (let i = 0; i < objKey.length; i++) {
+//     if (typeof obj2[objKey[i]] === 'object') return x(obj2[objKey[i]], testCase);
+//     if (testKey !== obj2[objKey[i]]) return false;
+//   }
+//   return true;
+// };
+// return x(obj, testKey);
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
