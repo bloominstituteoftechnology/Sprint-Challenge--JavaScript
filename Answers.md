@@ -22,3 +22,8 @@
         const printGlobalVar = () => { console.log(globalVar); }
         printGlobalVar();
         ```
+4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
+    * When it the global scope or in a regular function(Not Arrow Function): .this points to the window or console object.
+    * When a function is called as a method: .this points to the object to the left of the dot.
+    * When in a constructor function: .this points to the object that is being created by the constructor.
+    * When explicitly set by the use of(bind, apply, call): this refers to the object passed with(bind, apply, call).
