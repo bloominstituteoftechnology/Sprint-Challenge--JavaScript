@@ -22,11 +22,12 @@ const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
   let count = 0;
-  return function limit() {
-    if (count === n) return;
+  function limit() {
+    if (count >= n) return;
     count++;
-    cb();
-  };
+    return cb();
+  }
+  return limit;
 };
 
 const cacheFunction = cb => {
@@ -79,9 +80,18 @@ const checkMatchingLeaves = obj => {
 };
 
 
-const flatten = elements => {
+const flatten = (elements) => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  let newArr = [];
+  for (let i = 0; i < elements.length; i++) {
+    if (Array.isArray(elements[i])) {
+      newArr = newArr.concat(flatten(elements[i]));
+    } else {
+      newArr.push(elements[i]);
+    }
+  }
+  return newArr;
 };
 
 module.exports = {
