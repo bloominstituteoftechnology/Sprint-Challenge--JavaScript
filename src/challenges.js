@@ -36,6 +36,13 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const cache = {};
+  return (vals) => {
+    if (vals in cache === false) {
+      cache[vals] = cb(vals);
+    }
+    return cache[vals];
+  };
 };
 
 /* eslint-enable no-unused-vars */
@@ -56,11 +63,30 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  let val;
+  let flag = true;
+  const checkLeave = (tree) => {
+    Object.keys(tree).forEach(key => {
+      if (val === undefined && typeof key !== 'object') {
+        val = tree[key];
+        return undefined;
+      }
+      if (typeof tree[key] === 'object') {
+        return checkLeave(tree[key]);
+      }
+      if (tree[key !== val]) {
+        flag = false;
+        return undefined;
+      }
+      return undefined;
+    });
+  };
 };
 
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+
 };
 
 module.exports = {
