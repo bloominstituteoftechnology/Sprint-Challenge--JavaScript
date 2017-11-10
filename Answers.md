@@ -1,9 +1,14 @@
 # Your responses to the short answer questions should be laid out here using Mark Down.
-### For help with markdown syntax [Go here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+For help with markdown syntax [Go here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-1. Describe some of the differences between `.forEach` & `.map`.
+#### 1. Describe some of the differences between `.forEach` & `.map`.
 
-2. Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays?
+- `.map` returns an new array after iterating over the elements in the *original* array with a function.
+  - So `.map` doesn't modify the array it is working on (i.e. called on).
+- `.forEach doesn't return anything. It simply iterates over the elements in the array with a function.
+  - So `.forEach` also doesn't modify the array it is called on.
+
+#### 2. Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays?
 
 - String
 - Number
@@ -11,13 +16,28 @@
 - Array
 - Object
 
-Arrays are a bit special because they can hold multiple values like an object, but also have some built-in methods like `.length` attached to the Array prototype.
+Arrays are a bit special because they can hold multiple values like an object, but also have some built-in methods like `.length`, `.pop`, etc. attached to the Array prototype.
 
-3. What is closure? Can you code out a quick example of a closure?
+#### 3. What is closure? Can you code out a quick example of a closure?
 
-Closure allows a local function to reach **out** of it's scope environement to grab the value of an already declared variable. It's only one way though, a function can't see **into** a nested scope.
+Closure is both the function and the local enviroment where the function is declared. 
 
-4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
+Closure allows an inner function to reach **out** of it's scope enviroment to grab the value of an already declared variable in outer functions. It's only one way though—an outer function can't see variables **inside** a nested function.
+
+An example of closure:
+
+```
+function outterFunction() {
+    let name = pinwale;
+    function print() {  // this print() function is a closure
+        return name;    // the part between the brackets...
+    }                   // ...is also part of the closure
+}
+```
+
+In the example above, the `name` variable is invoked in the `print()` function—but `name` does not exist in the closure! It has to reach out to the `outterFunction()` to find the value of `name`.
+
+#### 4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
 
 - using `this` inside functions in the the global scope (i.e. not nested): 
   - then `this` refers to the `window` object.
