@@ -23,9 +23,7 @@
 ### Remember you can use any resources you want to solve these problems, but avoid copying/pasting solutions you've previously written. Also if you don't finish all of the challenges, that's fine! Just do what you can and submit your challenges in the end! HAVE FUN!
 
 ## Once you are finished - We have further reading for you and your weekend video/study materials.
-* Watch this first - [Node/Express - Lecture](https://youtu.be/K1RkG_irE9I) 
-* Study up on these topics before Monday 
-  - [Node/express Hello World - Study Guide](https://expressjs.com/en/starter/hello-world.html)
-  - [Basic Routing with Node](https://expressjs.com/en/starter/basic-routing.html)
+* Watch this first - [Data Structures I - Lecture](https://www.youtube.com/watch?v=hCOJeCA8-MI) 
+* [Slides from the video](https://docs.google.com/presentation/d/1I-e6qaaoqf9w7Q-8jM7REJ9AjmGLvnxeGyXFl5HXm98/edit)
+* Study up on these topics before Monday - [Data Structures I - Study Guide](https://github.com/LambdaSchool/Data-Structures-I-Mini-Sprint)
 * Come prepared on Monday to discuss data structures. These weekend study guides and materials will help you become much stronger when the window of discussion opens up on these topics!
-
