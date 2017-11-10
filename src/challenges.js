@@ -37,8 +37,8 @@ const cacheFunction = cb => {
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
   const cache = {};
-  return function cacher(x) {
-    if (!cache[x]) {
+  return x => {
+    if (!cache.hasOwnProperty(x)) {
       cache[x] = cb(x);
     }
     return cache[x];
