@@ -14,3 +14,23 @@ Both are method in JavaScript which executes the function once for each element 
 
 #### What is so special about Arrays?
 Arrays are **objects** in the form `[0, 1, 2, 3, 5]`
+
+### 3. What is closure? Can you code out a quick example of a closure?
+A **closure** is a function inside another function, where the inner function has access to the outer function.
+Example of a closure:
+`
+const saveData = (data) => {
+    const dataBase = [];
+    return (data) => {
+        dataBase.push(data);
+        console.log('You data is saved successfully.');
+        return dataBase;
+    };
+};
+`
+
+### 4. Describe the four principles (rules) of the 'this' keyword.
+1) **Default Scope**: `this` keyword points to the Global scope by default.
+2) **Implicit Binding**: Object before the . (dot) will become `this`.
+3) **New Binding**: using the 'new' keyword.
+4) **Explicit Binding**: using the methods `.call()`, `.apply()` and `.bind()`.
