@@ -1,13 +1,13 @@
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
-  // Iterates over a list of elements, yielding each in turn to the `cb` function.
-  // This only needs to work with arrays.
-};
+  for (let i = 0; i < elements.length; i++) { cb(elements[i]); }
+}; each([1,2,3], (element) => console.log(element));
 
 const map = (elements, cb) => {
-  // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
-  // Return the new array.
-};
+  const _elements = [];
+  for (let i = 0; i < elements.length; i++) { _elements.push(cb(elements[i])); }
+  return _elements;
+}; console.log(map([1,2,3], (element) => element + 100));
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
