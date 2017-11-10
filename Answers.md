@@ -26,7 +26,7 @@ A closure is a variable that is used outside of a particular scope of a function
 const makeSandwich = () => {
   const firstIngredient = 'peanut butter';
   // firstIngredient is defined outside of the 'make' function, closure.
-  const make = (secondIngredient) => firstIngredient + ' and ' + secondIngredient;
+  const make = (secondIngredient) => `${firstIngredient} and ${secondIngredient}`;
   return make('jelly');
 }
 makeSandwich(); // 'peanut butter and jelly'
