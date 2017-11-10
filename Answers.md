@@ -4,7 +4,7 @@
 2. Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays?
 3. What is closure? Can you code out a quick example of a closure?
 4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time
-	1. 
-	2.
-	3.
-	4.
+	1. words 
+	2. words
+	3. more
+	4. words
