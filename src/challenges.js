@@ -21,6 +21,12 @@ const map = (elements, cb) => {
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let callC = 0;
+  return (...args) => {
+    if (callC === n) return null;
+    callC++;
+    return cb();
+  };
 };
 
 const cacheFunction = cb => {
@@ -30,6 +36,7 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+
 };
 
 /* eslint-enable no-unused-vars */
@@ -38,6 +45,7 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+
 };
 
 const checkMatchingLeaves = obj => {
