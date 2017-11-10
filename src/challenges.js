@@ -37,6 +37,17 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const cache = {};
+  return () => {
+    for (let i = 0; i < cache.length; i++) {
+      if (cb === cache[i]) {
+        return cache[i];
+      }
+      const result = cb;
+      cache.push(cb);
+      return result;
+    }
+  };
 };
 
 /* eslint-enable no-unused-vars */
@@ -59,7 +70,7 @@ const checkMatchingLeaves = obj => {
   let val;
   let flag = true;
   const checkLeaves = () => {
-    Object.keys(tree).forEach((leaf) => {
+    Object.keys(tree).forEach(leaf => {
       if (val === undefined && typeof leaf !== 'object') {
         val = tree[leaf];
         return undefined;
