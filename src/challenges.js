@@ -10,12 +10,26 @@ const each = (elements, cb) => {
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
+  const newArray = [];
+  for (let i = 0; i < elements.length; i++) {
+    newArray.push(cb(elements[i]));
+  }
+  return newArray;
 };
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  const newFunction = (...args) => {
+    count++;
+    if (count <= n) {
+      return cb(...args);
+    }
+    return null;
+  };
+  return newFunction;
 };
 
 const cacheFunction = cb => {
@@ -25,6 +39,15 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const cache = {};
+  const newFunction = (...args) => {
+    for (let i = 0; i < args.length; i++) {
+      if (args[i] === cache[i]) {
+        return args[i];
+      }
+    }
+  };
+  return newFunction;
 };
 
 /* eslint-enable no-unused-vars */
