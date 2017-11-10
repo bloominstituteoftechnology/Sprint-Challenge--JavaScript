@@ -1,5 +1,11 @@
 # Your responses to the short answer questions should be laid out here using Mark Down.
 ### For help with markdown syntax [Go here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-# `.forEach`
-This is a method executes the function provided as argument once for each element in the array.
+## `.forEach` vs `.map`
+Both are method in JavaScript which executes the function once for each element in the array.
+
+#### `.forEach`
+* Method return `undefined`.
+
+#### `.map`
+* Method returns new Array.
