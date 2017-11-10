@@ -22,9 +22,9 @@ const limitFunctionCallCount = (cb, n) => {
     if (callCount === n) {
       return null;
     }
-    callCount++
+    callCount++;
     return cb(...args);
-  }
+  };
 };
 
 const cacheFunction = cb => {
@@ -35,7 +35,7 @@ const cacheFunction = cb => {
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
   const cache = {};
-  return (n) => {
+  return n => {
     if (n in cache) {
       return cache[n];
     }
@@ -50,14 +50,14 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
-  let strArray = str.split('');
+  const strArray = str.split('');
   let callCount = str.length;
-  let returnArr = [];
+  const returnArr = [];
 
   const reverseStep = () => {
     if (callCount > 0) {
       returnArr[strArray.length - callCount] = strArray[callCount - 1];
-      callCount--
+      callCount--;
       reverseStep();
     } else {
       return returnArr;
@@ -73,7 +73,7 @@ const checkMatchingLeaves = obj => {
   // otherwise return false
   const combineObj = (...params) => {
     let newArr = [];
-    Object.values(...params).forEach((objectValue) => {
+    Object.values(...params).forEach(objectValue => {
       if (typeof objectValue === 'object' && objectValue !== null) {
         newArr = newArr.concat(combineObj(objectValue));
         return;
@@ -84,7 +84,6 @@ const checkMatchingLeaves = obj => {
   };
 
   const objectToArray = combineObj(obj);
-
   const returnVal = objectToArray.filter(
     testValue => objectToArray[0] !== testValue,
   );
@@ -99,8 +98,8 @@ const flatten = elements => {
   const returnArr = elements.reduce((previousItem, nextItem) => {
     if (Array.isArray(nextItem)) {
       return previousItem.concat(flatten(nextItem));
-    };
-    return previousItem.concat(nextItem)
+    }
+    return previousItem.concat(nextItem);
   },
     [],
   );
