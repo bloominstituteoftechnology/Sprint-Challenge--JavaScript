@@ -1,13 +1,13 @@
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
-  // Iterates over a list of elements, yielding each in turn to the `cb` function.
-  // This only needs to work with arrays.
-};
+  for (let i = 0; i < elements.length; i++) { cb(elements[i]); }
+}; each([1, 2, 3], element => console.log(element));
 
 const map = (elements, cb) => {
-  // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
-  // Return the new array.
-};
+  const myElements = [];
+  for (let i = 0; i < elements.length; i++) { myElements.push(cb(elements[i])); }
+  return myElements;
+}; console.log(map([1, 2, 3], element => element + 100));
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
@@ -28,19 +28,30 @@ const cacheFunction = cb => {
 
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => {
-  // reverse str takes in a string and returns that string in reversed order
-  // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+
 };
 
 const checkMatchingLeaves = obj => {
-  // return true if every property on `obj` is the same
-  // otherwise return false
+  const keys = Object.keys(obj);
+  if (typeof obj[keys[0]] === 'object') { checkMatchingLeaves(obj[keys[0]]); }
+  for (let i = 1; i < keys.length; i++) {
+    if (typeof obj[keys[i]] === 'object') { checkMatchingLeaves(obj[keys[i]]); }
+    if (obj[keys[i]] !== obj[keys[0]] && typeof obj[keys[i]] !== 'object') { return false; }
+  }
+  return true;
 };
 
 const flatten = elements => {
-  // Flattens a nested array (the nesting can be to any depth).
-  // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
-};
+  const myElements = [];
+  for (let i = 0; i < elements.length; i++) {
+    if (Array.isArray(elements[i])) {
+      myElements.push.apply(myElements, (flatten(elements[i])));
+    } else {
+      myElements.push(elements[i]);
+    }
+  }
+  return myElements;
+}; console.log(flatten([1, 2, 3, 4, 5, [1, 2, 3, 4]]));
 
 module.exports = {
   each,
