@@ -54,12 +54,23 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+
 };
 
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  const flatObjValues = myObj => {
+    const vals = Object.keys(myObj).map(key => {
+      if (typeof myObj[key] === 'object') return flatObjValues(myObj[key]);
+      return myObj[key];
+    });
+    return [].concat(...vals);
+  };
+  const values = flatObjValues(obj);
+  return values.every(x => values[0] === x);
 };
+
 
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
