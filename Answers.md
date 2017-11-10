@@ -27,11 +27,15 @@
 
 
 # Five Data Structures in JavaScript:
-1. Array--A collection of elements with each element accessibly by index address. Mutable and iterable. 
-2. Singly-Linked List--A group of nodes that form a sequence. Each node has data and a pointer to the next node in the sequence. Single Linked List users enjoy O(1) access when inserting or deleting items.
-3. Stack--A collection of elements with two primary commands, push (adds element to top of stack), and pop (removes last item from top of stack). Most stacks also have a third command called peek, which allows us to check the last pushed item without popping it. Stack users also enjoy O(1) access when inserting/deleting items.
-4. Doubly-Linked List--Like a Linked List, but each node also points to the preceding node as well as the next node. O(1) access for insertion/deletion.
-5. Tree--A hierarchical data structure with a root node and children nodes. The children nodes can have children ad infinitum.
+1. **Array**--A collection of elements with each element accessibly by index address. Mutable and iterable. 
+2. **Singly-Linked List**--A group of nodes that form a sequence. Each node has data and a pointer to the next node in the sequence. Single Linked List users enjoy O(1) access when inserting or deleting items.
+3. **Stack**--A collection of elements with two primary commands, push (adds element to top of stack), and pop (removes last item from top of stack). Most stacks also have a third command called peek, which allows us to check the last pushed item without popping it. Stack users also enjoy O(1) access when inserting/deleting items.
+4. **Doubly-Linked List**--Like a Linked List, but each node also points to the preceding node as well as the next node. O(1) access for insertion/deletion.
+5. **Tree**--A hierarchical data structure with a root node and children nodes. The children nodes can have children ad infinitum.
 
 # What is Closure?
 1. A **closure** is an inner function with access to the enclosing function's variables. 
+2. A **closure** has access to three scopes:
+..*Its own scope
+..*The outer function's scope
+..*The global scope
