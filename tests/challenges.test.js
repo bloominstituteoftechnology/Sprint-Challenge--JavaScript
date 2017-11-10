@@ -110,8 +110,8 @@ describe('challenges', () => {
         y: 1,
         z: 2,
       };
-      expect(challengeMethods.checkMatchingLeaves(tree1)).toBe(true);
-      expect(challengeMethods.checkMatchingLeaves(tree2)).toBe(false);
+      expect(recursiveMethods.checkMatchingLeaves(tree1)).toBe(true);
+      expect(recursiveMethods.checkMatchingLeaves(tree2)).toBe(false);
     });
 
     it('should check nested objects', () => {
@@ -150,27 +150,27 @@ describe('challenges', () => {
         },
         r: 1,
       };
-      expect(challengeMethods.checkMatchingLeaves(tree1)).toBe(true);
-      expect(challengeMethods.checkMatchingLeaves(tree2)).toBe(false);
+      expect(recursiveMethods.checkMatchingLeaves(tree1)).toBe(true);
+      expect(recursiveMethods.checkMatchingLeaves(tree2)).toBe(false);
     });
   });
+});
 
-  describe('flatten', () => {
-    it('should return an array', () => {
-      const arr = [1, 2, 3, 4, 5];
-      const results = challengeMethods.flatten(arr);
-      expect(Array.isArray(results)).toBe(true);
-    });
-    it('should return a flattened array when given a nested array', () => {
-      const arr = [1, 2, 3, 4, 5, [6], [7]];
-      const results = challengeMethods.flatten(arr);
-      expect(Array.isArray(results)).toBe(true);
-      expect(results).toEqual([1, 2, 3, 4, 5, 6, 7]);
-    });
-    it('should return a flattened array regardless of how deep the array nesting is', () => {
-      const arr = [1, [2], [[3]], [[[4]]]];
-      const results = challengeMethods.flatten(arr);
-      expect(results).toEqual([1, 2, 3, 4]);
-    });
+describe('flatten', () => {
+  it('should return an array', () => {
+    const arr = [1, 2, 3, 4, 5];
+    const results = challengeMethods.flatten(arr);
+    expect(Array.isArray(results)).toBe(true);
+  });
+  it('should return a flattened array when given a nested array', () => {
+    const arr = [1, 2, 3, 4, 5, [6], [7]];
+    const results = challengeMethods.flatten(arr);
+    expect(Array.isArray(results)).toBe(true);
+    expect(results).toEqual([1, 2, 3, 4, 5, 6, 7]);
+  });
+  it('should return a flattened array regardless of how deep the array nesting is', () => {
+    const arr = [1, [2], [[3]], [[[4]]]];
+    const results = challengeMethods.flatten(arr);
+    expect(results).toEqual([1, 2, 3, 4]);
   });
 });
