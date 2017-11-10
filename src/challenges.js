@@ -11,9 +11,16 @@ const map = (elements, cb) => {
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
+  let callCount = 0;
+  return (...args) => {
+    if (callCount === n) return null;
+    callCount++;
+    return cb(...args);
+  };
+};
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
-};
+
 
 const cacheFunction = cb => {
   // Should return a funciton that invokes `cb`.

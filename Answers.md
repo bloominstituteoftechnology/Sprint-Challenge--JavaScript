@@ -21,14 +21,14 @@ Arrays are special because:
 
 Closure is an inner scope looking outwardly for some variables. 
 ```
-    const limitFunctionalCallCount = (cb, n) => {
-    let Callcount = 0;
-    return (...args) =>
-    if (callCount === n ) return null;
+    const limitFunctionCallCount = (cb, n) => {
+    let callCount = 0;
+    return (...args) => {
+    if (callCount === n) return null;
     callCount++;
-    return cb(...args):
-  };
-};
+    return cb(...args);
+         };
+    };
  ```
  > Or Simple: 
  ```
