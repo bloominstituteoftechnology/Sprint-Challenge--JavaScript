@@ -3,7 +3,7 @@ const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
   for (let i = 0; i < elements.length; i++) {
-    cb(elements[i]);
+    cb(elements[i], i);
   }
 };
 
@@ -27,12 +27,19 @@ const cacheFunction = cb => {
   // `cb` should only ever be invoked once for a given set of arguments.
 };
 
-/* eslint-enable no-unused-vars */
 
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  let rStr = '';
+  const x = n => {
+    const m = n.substr([n.length - 1]);
+    rStr += m;
+    while (n.length > 0) return x(n.substr(0, n.length - 1));
+  };
+  x(str);
+  return rStr;
 };
 
 const checkMatchingLeaves = obj => {
