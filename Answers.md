@@ -12,6 +12,20 @@
 
 * Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays?
    number, string, boolean, object, undefined, null. Arrays are special cause Ryan said so :), but also because
-   they are simple to implement and if sorted have a lookup time of 0(log n) which is fast. Arrays also have a lot of very useful prototype methods attached to them. 
+   they are simple to implement and if sorted have a lookup time of 0(log n) which is fast. Arrays also have a lot of very useful prototype methods attached to them.
 * What is closure? Can you code out a quick example of a closure?
+  Answer heavily referenced from book you don't know js (https://www.gitbook.com/book/maximdenisov/you-don-t-know-js/details)
+  A closure is a way to remember and continue to access a functions scope even if the function has finished running.
+
+  function adder(x){
+    // x's scope is here
+
+    function add(){
+      return x + y;
+    };
+    return add;
+  }
+
+  let addOne = adder(1);
+  addOne(10); // 11,  here  addOne is reference the add function which still has acces to the x variable
 * Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
