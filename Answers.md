@@ -59,3 +59,5 @@ function showName (firstName, lastName) {
 3. Third principle: New Binding; When making a new object from a constructor function
      **this** refers the the instance of an object being created.
 4. Fourth principle: Explicit Binding. **this** is explicity defined when using call() or apply()
+
+
