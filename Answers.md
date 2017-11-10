@@ -7,5 +7,8 @@ What I mean is .foreach changes the original array with it’s callback and .map
 1. strings => 'Aaron'
 2. Numbers => 1234 
 3. Boolean => true false
-4. Array => [1,2,3,4,'a'] //object aswell
-5. Object => {a: 2, b: 3, cat: 'Ninja"}
+4. Object => {a: 2, b: 3, cat: 'Ninja"}
+5. Array => [1,2,3,4,'a'] //object aswell
+* The cool thing about array's besides being an easier place to store data instead of a bunch of variables for each item is that because they are an object you have access to a new set of built in functions. like .map and .foreach.
+
+## What is Closure?
