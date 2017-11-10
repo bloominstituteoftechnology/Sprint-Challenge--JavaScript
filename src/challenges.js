@@ -39,6 +39,14 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const cache = {};
+  return y0 => {
+    if (cache[y0] === undefined) {
+      cache[y0] = cb;
+      return cache[y0](y0);
+    }
+    return cache[y0];
+  };
 };
 
 /* eslint-enable no-unused-vars */
@@ -47,13 +55,10 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
-  const arr = [];
-
-  for (let i = str.length - 1; i >= 0; i--) {
-    arr.push(str[i]);
+  if (str === '') {
+    return '';
   }
-
-  return arr.join('');
+  return reverseStr(str.substr(1)) + str.charAt(0);
 };
 
 const checkMatchingLeaves = obj => {
