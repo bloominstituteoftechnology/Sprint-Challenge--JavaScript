@@ -55,13 +55,31 @@ const reverseStr = str => {
 };
 
 const checkMatchingLeaves = obj => {
-  // return true if every property on `obj` is the same
+  let val;
+  let flag = true;
+  const checkLeaves = tree => {
+    Object.keys(tree).forEach(key => {
+      if (val === undefined && typeof key !== 'object') {
+        val = tree[key];
+        return undefined;
+      }
+      if (typeof tree[key] === 'object') return checkLeaves(tree[key]);
+      if (tree[key] !== val) {
+        flag = false;
+        return undefined;
+      }
+    });
+  };
+  checkLeaves(obj);
+  return flag;
+   // return true if every property on `obj` is the same
   // otherwise return false
 };
 
+
 const flatten = elements => {
   let arr = [];
-  for (let i = 0; i < elements.lenght; i++) {
+  for (let i = 0; i < elements.length; i++) {
     if (Array.isArray(elements[i])) {
       arr = arr.concat(flatten(elements[i]));
     } else {
