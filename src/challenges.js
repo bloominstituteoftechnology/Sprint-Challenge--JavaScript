@@ -16,7 +16,7 @@ const limitFunctionCallCount = (cb, n) => {
 };
 
 const cacheFunction = cb => {
-  // Should return a funciton that invokes `cb`.
+  // Should return a function that invokes `cb`.
   // A cache (object) should be kept in closure scope.
   // The cache should keep track of all arguments have been used to invoke this function.
   // If the returned function is invoked with arguments that it has already seen
