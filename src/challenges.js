@@ -21,6 +21,12 @@ const limitFunctionCallCount = (cb, n) => {
   // and I don't want to copy the code I have in my notes
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let callCount = 0;
+  return (...args) => {
+    if (callCount === n) return null;
+    callCount++;
+    return cb(...args);
+  };
 };
 
 const cacheFunction = cb => {
@@ -43,6 +49,10 @@ const reverseStr = str => {
   }
   return str[str.length - 1] + str.slice(0, str.length - 1).reverse;
   // this is not right come back and figure out why
+  // where does reverse go?
+  // i don't think the dot chain is the way I want to go 
+  // apparently I don't know anything
+  
 
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
@@ -77,7 +87,7 @@ const flatten = elements => {
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
   if (Array.isArray(elements)) {
   for (let i = 0; i < elements.length; i++) {
-    
+
 
   }
   }
