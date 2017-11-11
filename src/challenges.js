@@ -27,7 +27,7 @@ const limitFunctionCallCount = (cb, n) => {
   return (...args) => {
     if (nCount === n) return null;
     nCount++;
-    return cb();
+    return cb(...args);
   };
 };
 const cacheFunction = cb => {
@@ -37,35 +37,20 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
-//   const cache = {};
-//   // return cached value if it is the same value being called in cb
-//   return () => {
-//     for (let i = 0; i < cache.length; i++) {
-//       if (cb === cache[i]) {
-//         return cache[i];
-//       }
-//       // if the object isn't cached, cache it and return it.
-//       const result = cb;
-//       cache.push(cb);
-//       return result;
-//     }
-//   };
-// };
   const cache = {};
+  // return cached value if it is the same value being called in cb
   return () => {
-    const args = Array.prototype.slice.call(arguments);
-    if (cb) {
-      args.sort();
+    for (let i = 0; i < cache.length; i++) {
+      if (cb === cache[i]) {
+        return cache[i];
+      }
+      // if the object isn't cached, cache it and return it.
+      const result = cb;
+      cache.push(cb);
+      return result;
     }
-    if (cache[args] !== undefined) {
-      return cache[args];
-    }
-    const result = cb.apply(this, args);
-    // cache.push(result);
-    return cb(args);
   };
 };
-
 /* eslint-enable no-unused-vars */
 
 /* ======================== Recursion Practice ============================ */
@@ -82,17 +67,18 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
-  let tree;
+  // let tree;
+  const tree = obj;
   let val;
   let flag = true;
   const checkLeaves = () => {
-    Object.keys(tree).forEach(leaf => {
-      if (val === undefined && typeof leaf !== 'object') {
-        val = tree[leaf];
-        return undefined;
-      }
-      if (typeof tree[leaf] === 'object') return checkLeaves(tree[leaf]);
-      if (tree[leaf] !== val) {
+    // retrieve values for each leaf, and compare for same values, then
+    Object.keys(tree).forEach(key => {
+      if (val === undefined && typeof key !== 'object') {
+        val = tree[key];
+        return true;
+      } else if (typeof tree[key] === 'object') return checkLeaves(obj);
+      if (tree[key] !== val) {
         flag = false;
         return undefined;
       }
@@ -106,13 +92,16 @@ const checkMatchingLeaves = obj => {
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
-
-  elements = elements.reduce(function(a, b) {
+//   const flattenedArray = reduce(elements, (prev, next) => {
+  elements = elements.reduce((a, b) => {
+    // bring together elements in each nested array, if an element is an array itself, call function on it.
     if (Array.isArray(b)) return a.concat(flatten(b));
     return a.concat(b);
   }, []);
+  // return flattened array
   return elements;
 };
+
 
 module.exports = {
   each,
