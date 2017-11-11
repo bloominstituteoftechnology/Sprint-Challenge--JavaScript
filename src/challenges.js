@@ -37,20 +37,20 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
-  const cache = {};
   // return cached value if it is the same value being called in cb
-  return () => {
-    for (let i = 0; i < cache.length; i++) {
-      if (cb === cache[i]) {
-        return cache[i];
-      }
-      // if the object isn't cached, cache it and return it.
-      const result = cb;
-      cache.push(cb);
-      return result;
+  //
+  // create cached object in outer scope, if argument n is cached, return cached object.
+  const myCache = {};
+  return n => {
+    if (n in myCache) {
+      return myCache[n];
     }
+    // invoke cb once and cache the result. return cached value
+    myCache[n] = cb(n);
+    return myCache[n];
   };
 };
+
 /* eslint-enable no-unused-vars */
 
 /* ======================== Recursion Practice ============================ */
@@ -68,17 +68,16 @@ const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
   // let tree;
-  const tree = obj;
   let val;
   let flag = true;
   const checkLeaves = () => {
     // retrieve values for each leaf, and compare for same values, then
-    Object.keys(tree).forEach(key => {
+    Object.keys(obj).forEach(key => {
       if (val === undefined && typeof key !== 'object') {
-        val = tree[key];
+        val = obj[key];
         return true;
-      } else if (typeof tree[key] === 'object') return checkLeaves(obj);
-      if (tree[key] !== val) {
+      } if (typeof obj[key] === 'object') return checkLeaves(obj);
+      if (obj[key] !== val) {
         flag = false;
         return undefined;
       }
