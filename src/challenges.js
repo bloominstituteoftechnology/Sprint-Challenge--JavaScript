@@ -53,9 +53,26 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
-  for (let i = 0; i < obj.length; i++) {
-    return Object.keys[i] === Object.values[i];
+ let val;
+ let flag = true;
+const checkLeaves = (tree) => {
+Object.keys(tree).forEach((keys) =>{
+  if (value == undefined && typeof key !== 'object'){
+    val = tree[key];
+    return undefinded;
   }
+  if (typeof tree[key] === 'object') {
+    return checkLeaves(tree[key]);
+  }
+  if (typeof tree[key] !== val) {
+    flag = false;
+    return undefined;
+  }
+  return undefined;
+})
+}
+checkLeaves(obj);
+  return flag;
 };
 
 const flatten = elements => {
