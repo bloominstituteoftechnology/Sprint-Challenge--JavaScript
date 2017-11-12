@@ -42,6 +42,7 @@ const cacheFunction = cb => {
   // create cached object in outer scope, if argument n is cached, return cached object.
   const myCache = {};
   return n => {
+    // if argument n is already in cached object, return value of cached element
     if (n in myCache) {
       return myCache[n];
     }
