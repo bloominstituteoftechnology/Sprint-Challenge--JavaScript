@@ -60,6 +60,27 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  const flatten = tree => {
+    let flattenArray = [];
+    const treeKeys = Object.keys(tree);
+    treeKeys.forEach(key => {
+      if (typeof tree[key] !== 'object') {
+        flattenArray = flattenArray.concat(tree[key]);
+      } else {
+        flattenArray = flattenArray.concat(flatten(tree[key]));
+      }
+    });
+    return flattenArray;
+  };
+  let flag = true;
+  const keyValues = flatten(obj);
+  const value = keyValues[0];
+  keyValues.forEach(elements => {
+    if (elements !== value) {
+      flag = false;
+    }
+  });
+  return flag;
 };
 
 const flatten = elements => {
