@@ -23,12 +23,11 @@ const map = (elements, cb) => {
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
-  let counter = 0;
-  if (counter > n) {
-    return;
-  }
-  counter++;
-  return limitFunctionCallCount;
+if ( > n) {
+  return cb;
+}
+  cb++;
+return 
 };
 
 const cacheFunction = cb => {
@@ -54,6 +53,9 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  for (let i = 0; i < obj.length; i++) {
+    return Object.keys[i] === Object.values[i];
+  }
 };
 
 const flatten = elements => {
