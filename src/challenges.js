@@ -1,16 +1,30 @@
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
 };
 
 const map = (elements, cb) => {
+  const newArr = [];
+  for (let i = 0; i < elements.length; i++) {
+    newArr.push(cb(elements[i]));
+  }
+  return newArr;
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
 };
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
+  let callCount = 0;
+  return (...args) => {
+    if (callCount === n) return null;
+    callCount++;
+    return cb(...args);
+  };
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
 };
@@ -28,6 +42,11 @@ const cacheFunction = cb => {
 
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => {
+  let newStr = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    newStr += str[i];
+  }
+  return newStr;
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
 };
@@ -38,9 +57,18 @@ const checkMatchingLeaves = obj => {
 };
 
 const flatten = elements => {
+  let flatArr = [];
+  for (let i = 0; i < elements.length; i++) {
+    if (Array.isArray(elements[i])) {
+      flatArr = flatArr.concat(flatten(elements[i]));
+    } else {
+      flatArr.push(elements[i]);
+    }
+  }
+  return flatArr;
+};
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
-};
 
 module.exports = {
   each,
