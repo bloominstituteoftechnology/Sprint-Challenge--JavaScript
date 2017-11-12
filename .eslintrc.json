@@ -1,7 +1,6 @@
 {
   "extends": "airbnb-base",
   "plugins": ["import"],
-  // "consistent-return": 1,
   "rules": {
     "no-param-reassign": 0,
     "no-plusplus": 0,

@@ -67,11 +67,11 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
-  // let tree;
+  let tree;
   let val;
   let flag = true;
   const checkLeaves = () => {
-    // retrieve values for each leaf, and compare for same values, then
+    // retrieve values for each leaf, and compare for same values
     Object.keys(obj).forEach(key => {
       if (val === undefined && typeof key !== 'object') {
         val = obj[key];
@@ -87,6 +87,24 @@ const checkMatchingLeaves = obj => {
   checkLeaves(obj);
   return flag;
 };
+//   let result;
+//   let p;
+//   const findNestedLeaves = (prop, val, returnProp) => {
+//     if (obj === null) return false;
+//     if (obj[prop] === val) {
+//       return (returnProp) ? obj[returnProp] : obj;
+//     }
+//     for (p in obj) {
+//       if (obj.hasOwnProperty(p) && typeof obj[p] === 'object') {
+//         val = obj[key];
+//         result = findNestedLeaves(obj[p], prop, val);
+//          if (result);
+//           return (returnProp) ? result[returnProp] : result;
+//         }
+//       }
+//     }
+//   return (returnProp) ? result[returnProp] : result;
+// };
 
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
