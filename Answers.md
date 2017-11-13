@@ -3,11 +3,10 @@
 
 #1. Describe some of the differences between `.forEach` & `.map`.
 
-While `forEach()` function is a destructive function map is not.
 
-`forEach()` is going to run a call back function on each element in the array and will modify every element that been called with the callback function. 
+`forEach()` is going to run a call back function on each element in the array and will return the callback function's result. 
 
-`map()` meanwhile, will do the same as `forEach()`, but instead of modifying the original array, will create a new array.
+`map()` meanwhile, will do the same as `forEach()`, but in addition it will create a new array to store the callback functions results. 
 
 #2. Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays?
 
