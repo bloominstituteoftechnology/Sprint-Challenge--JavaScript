@@ -2,17 +2,31 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
+  const newArr = [];
+  for (let i = 0; i < elements.length; i++) {
+    newArr.push(cb(elements[i]));
+  }
+  return newArr;
 };
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let callCount = 0;
+  return (...args) => {
+    if (callCount === n) return null;
+    callCount++;
+    return cb(...args);
+  };
 };
 
 const cacheFunction = cb => {
@@ -35,6 +49,24 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  let val;
+  let flag = true;
+  const tree = (objc) => {
+    Object.keys(objc).forEach((key) => {
+      if (val === undefined && typeof key !== 'object') {
+        val = objc[key];
+      }
+      if (typeof objc[key] === 'object') {
+        return tree(objc[key]);
+      }
+      if (objc[key] !== val) {
+        flag = false;
+        return undefined;
+      }
+    });
+  };
+  tree(obj);
+  return flag;
 };
 
 const flatten = elements => {
