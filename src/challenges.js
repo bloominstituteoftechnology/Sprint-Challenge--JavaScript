@@ -68,45 +68,51 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
-  let tree;
-  let val;
-  let flag = true;
-  const checkLeaves = () => {
-    // retrieve values for each leaf, and compare for same values
-    Object.keys(obj).forEach(key => {
-      if (val === undefined && typeof key !== 'object') {
-        val = obj[key];
-        return true;
-      } if (typeof obj[key] === 'object') return checkLeaves(obj);
-      if (obj[key] !== val) {
-        flag = false;
-        return undefined;
+  const flatTree = {};
+  let leaf;
+  let branch;
+  const flattenTree = () => {
+    // check each element "leaf", if it is a nested element flatten it
+    for (leaf in obj) {
+      if (!obj.hasOwnProperty(leaf)) continue;
+      if ((typeof obj[leaf]) === 'object') {
+        const flatObject = flattenTree(obj[leaf]);
+        // for nested elements, rename them with dot format
+        for (branch in flatObject) {
+          if (!flatObject.hasOwnProperty(branch)) continue;
+          flatTree[leaf + '.' + branch] = flatObject[branch];
+        }
+      } else {
+        flatTree[leaf] = obj[leaf];
       }
-      return undefined;
-    });
+    }
+    // check flattened element properties, return false if differences are found.
+    for (var i = 1; i < flatTree.length; i++) {
+      if (flatTree[i] !== flatTree[0]) return false;
+      return true;
   };
-  checkLeaves(obj);
-  return flag;
 };
-//   let result;
-//   let p;
-//   const findNestedLeaves = (prop, val, returnProp) => {
-//     if (obj === null) return false;
-//     if (obj[prop] === val) {
-//       return (returnProp) ? obj[returnProp] : obj;
-//     }
-//     for (p in obj) {
-//       if (obj.hasOwnProperty(p) && typeof obj[p] === 'object') {
-//         val = obj[key];
-//         result = findNestedLeaves(obj[p], prop, val);
-//          if (result);
-//           return (returnProp) ? result[returnProp] : result;
-//         }
-//       }
-//     }
-//   return (returnProp) ? result[returnProp] : result;
-// };
 
+//   let tree;
+//   let val;
+//   let flag = true;
+//   const checkLeaves = () => {
+//     // retrieve values for each leaf, and compare for same values
+//     Object.keys(obj).forEach(key => {
+//       if (val === undefined && typeof key !== 'object') {
+//         val = obj[key];
+//         return true;
+//       } if (typeof obj[key] === 'object') return checkLeaves(obj);
+//       if (obj[key] !== val) {
+//         flag = false;
+//         return undefined;
+//       }
+//       return undefined;
+//     });
+//   };
+//   checkLeaves(obj);
+//   return flag;
+// };
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
