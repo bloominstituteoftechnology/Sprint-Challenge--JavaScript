@@ -36,8 +36,12 @@ const cacheFunction = cb => {
 
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => {
-  return str.split('').reverse().join('');
+  var first = str[0];
+  var last = str[str.length -1];
+  var str1 = reverseStr(str.substring(1, str.length - 1));
+  return last + str1 + first;
 };
+// based on https://stackoverflow.com/questions/4859208/recursive-string-reversal-function-in-javascript
 
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
@@ -45,7 +49,9 @@ const checkMatchingLeaves = obj => {
 };
 
 const flatten = elements => {
-  each()
+  each(elements, element => {       // call each function to iterate over the array
+    elements = flatten([].concat([], ...elements));   // flatten by breaking out nested arrays as we recursively call flatten function
+  });
 };
 
 module.exports = {
