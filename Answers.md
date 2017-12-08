@@ -42,7 +42,17 @@
                 </li>
                 <li>
                     <p>
-                        Y u do dis?
+                        Whenever a function is called by a preceding dot, the object before that dot is this.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Whenever a constructor function is used, this refers to the specific instance of the object that is created and returned by the constructor function.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Whenever JavaScript’s call or apply method is used, this is explicitly defined.
                     </p>
                 </li>
             </ol>
