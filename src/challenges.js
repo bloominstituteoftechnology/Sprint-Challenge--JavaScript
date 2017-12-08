@@ -9,14 +9,18 @@ const map = (elements, cb) => {
   const newArray = [];
   each(elements, (item, index) => {
     newArray.push(cb(item, index));
-  })
+  });
   return newArray;
 };
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
-  // Should return a function that invokes `cb`.
-  // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;   // initialize counter
+  return (...args) => {   // return a function with unknown number of arguments
+    if (n === count) return null;    // limit the counter to a max of n
+    count++;
+    return cb(...args);    // invoke callback with all the arguments
+  };
 };
 
 const cacheFunction = cb => {
