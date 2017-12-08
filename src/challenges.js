@@ -2,17 +2,33 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
+  const newArr = [];
+  each(elements, item => {
+    newArr.push(cb(item));
+  });
+  return newArr;
 };
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  return (...args) => {
+    if (count === n) {
+      return null;
+    }
+    count++;
+    return cb(...args);
+  };
 };
 
 const cacheFunction = cb => {
@@ -22,7 +38,23 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const cache = {};
+  return item => {
+    if (item in cache) {
+      return cache[item];
+    }
+    const result = cb(item);
+    cache[item] = result;
+    return result;
+  };
 };
+
+// const times = (x) => {
+//   return x * x;
+// };
+//  const memoizedTimes = cacheFunction(times);
+// console.log(memoizedTimes(5));
+// console.log(memoizedTimes(5));
 
 /* eslint-enable no-unused-vars */
 
@@ -30,16 +62,52 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  if (str === '') {
+    return '';
+  }
+  return reverseStr(str.substr(1)) + str.charAt(0);
 };
+
+// console.log(reverseStr('Hello'));
 
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  let checkValue;
+  let doAllValuesMatch = false;
+  function checker() {
+    const newArr = Object.values(obj);
+    for (let i = 0; i < newArr.length; i++) {
+      if (typeof newArr[i] === 'object' && checkValue === undefined) {
+        checkValue = newArr[i];
+      }
+      if (checkValue !== 'object') {
+        checkMatchingLeaves(checkValue);
+      }
+      if (newArr[i] !== checkValue) {
+        doAllValuesMatch = false;
+      } else {
+        doAllValuesMatch = true;
+      }
+    }
+    return;
+  }
+  checker(obj);
+  return doAllValuesMatch;
 };
 
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  let output = [];
+  each(elements, num => {
+    if (Array.isArray(num)) {
+      output = output.concat(flatten(num));
+    } else {
+      output.push(num);
+    }
+  });
+  return output;
 };
 
 module.exports = {
