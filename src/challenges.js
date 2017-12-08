@@ -46,7 +46,12 @@ const map = (elements, cb) => {
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
-
+  let count = 0;
+  return (...args) => {
+    if (n === count) return null;
+    count++;
+    return cb(...args);
+  };
 };
 
 const cacheFunction = cb => {
@@ -69,24 +74,7 @@ const reverseStr = str => {
   newStr += str[str.length - 1];
   reverseStr(str.slice(0, -1));
   return newStr;
-};
-
-console.log(reverseStr('hello world!'));
-
-/* Stretch Alogorithm */
-// const checkMatchingLeaves = (obj) => {
-//   // initialize some value...
-//   // initialize some flag.. boolean.
-//   // initialize some helper function and pass obj... leaf checker recursive function
-//     // check all the keys = this is a hint......for loop of some kind
-//     // if a key is an object && initial value is undef
-//       // assign value
-//     // if a value is an object ==> recurse
-//     // if a value is found, and it doesn't match our initial value
-//     // trip our flag to false
-//     // return;
-//   // return true/false
-// };
+};// logs correct thing but not passing test with same strings
 let flag = true;
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
