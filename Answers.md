@@ -31,7 +31,7 @@
             </p>
         </li>
         <li>
-            <p>The 4 rules of this are:</p>
+            <h3>The 4 rules of this are:</h3>
             <ol>
                 <li>
                     <p>
@@ -40,7 +40,7 @@
                 </li>
                 <li>
                     <p>
-                        
+                        Y u do dis?
                     </p>
                 </li>
             </ol>
