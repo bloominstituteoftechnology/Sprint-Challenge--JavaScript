@@ -1,12 +1,10 @@
-# Your responses to the short answer questions should be laid out here using Mark Down.
-### For help with markdown syntax [Go here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-##H2 Describe some of the differences between .forEach & .map.
+## Describe some of the differences between .forEach & .map.
 forEach - take in an array, peforms some action on it, transforms that data in place.
 
 map does the same except returns a new array with the transformed elements.
 
-##H2 Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays?
+## Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays?
 1. string - anything surrounded by quotes "words" "453"
 2. Numbers - integers, floats.
 3. objects - key value pairing the can be used to reference related data;
@@ -23,7 +21,7 @@ object['name'] => 'troy';
 Actually special because they can be iterated through the find or manipulate data. has a bunch of built in methods. forEach. Map length pop push.
 
 
-##H2What is closure? Can you code out a quick example of a closure?
+## What is closure? Can you code out a quick example of a closure?
 
 Closure is a local variable created through a function and scope.
 ```
@@ -47,7 +45,7 @@ the global variable is able to be logged inside of hello because functions inhie
 
 
 
-##H2 Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
+## Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
 
 1. window/ global onclick= console.log(this). log the entire window object;
 2  what ever is to the left to of the method when calling a object. ==>object.method(this)
