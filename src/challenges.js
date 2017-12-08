@@ -52,26 +52,50 @@ const cacheFunction = cb => {
 /* eslint-enable no-unused-vars */
 
 /* ======================== Recursion Practice ============================ */
+let reversed = '';
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
-  let reversed = '';
-  let recurseStr = str;
-  console.log(str);
-  reversed += recurseStr[recurseStr.length - 1];
-  recurseStr = recurseStr.slice(0, -1);
-  if (recurseStr.length > 0) {
-    reverseStr(recurseStr);
+  reversed += str[str.length - 1];
+  str = str.slice(0, -1);
+  if (str.length > 0) {
+    reverseStr(str);
   }
   return reversed;
 };
 
-const x = reverseStr('abcd');
-console.log(x);
-
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  let checkValue;
+  let doAllValuesMatch;
+
+  const newArr = Object.values(obj);
+
+  function checker() {
+    for (let i = 0; i < newArr.length; i++) {
+      if (typeof newArr[i] === 'object' && checkValue === undefined) {
+        checkValue = Object.values(newArr[i]);
+        for (let j = 0; j < checkValue.length; j++) {
+          if (checkValue[j] === newArr[0]) {
+            doAllValuesMatch = true;
+          } else {
+            doAllValuesMatch = false;
+          }
+          checkMatchingLeaves(newArr[i]);
+        }
+      } else if (typeof newArr[i] === 'number') {
+        // checkValue = newArr[0];
+        if (newArr[i] === newArr[0]) {
+          doAllValuesMatch = true;
+        } else {
+          doAllValuesMatch = false;
+        }
+      }
+    }
+  }
+  checker();
+  return doAllValuesMatch;
 };
 
 const flatten = elements => {
