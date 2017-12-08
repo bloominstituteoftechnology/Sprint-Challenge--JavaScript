@@ -39,11 +39,10 @@ const cacheFunction = cb => {
 
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => {
-  if (str === "") {
-    return "";
-  } else {
-    return reverseStr(str.substr(1)) + str.charAt(0);
+  if (str === '') {
+    return '';
   }
+  return reverseStr(str.substr(1)) + str.charAt(0);
 };
 
 const checkMatchingLeaves = obj => {
