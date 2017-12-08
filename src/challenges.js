@@ -2,6 +2,9 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  elements.forEach((element, i) => {
+    cb(element, i);
+  });
 };
 
 const map = (elements, cb) => {
