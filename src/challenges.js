@@ -8,7 +8,7 @@ const each = (elements, cb) => {
 
 const map = (elements, cb) => {
   const arr = [];
-  for(let i = 0; i < elements.length; i++) {
+  for (let i = 0; i < elements.length; i++) {
     arr.push(cb(elements[i]));
   }
   return arr;
@@ -16,8 +16,14 @@ const map = (elements, cb) => {
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
-  // Should return a function that invokes `cb`.
-  // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  return (...args) => {
+    if (count === n) {
+      return null;
+    }
+    count++;
+    return cb(...args);
+  };
 };
 
 const cacheFunction = cb => {
