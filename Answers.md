@@ -45,3 +45,9 @@ function doSomething() {
 
 The compiler must go 'up' one layer in Scope to find the declaration of thing in order to achieve Closure.
 
+## 4. Four rules of the `this` keyword
+
+1. When a function is contained in the Global Scope, `this` refers to Global/console/window.
+2. When a function is called with a preceeding dot, the object before the dot is `this`.
+3. When a Constructor Function is used, `this` refers to the Specific Instance of the object created. 
+4. When `.call` or `.apply` are used, `this` is explicitly defined.
