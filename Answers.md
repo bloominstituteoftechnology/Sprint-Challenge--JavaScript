@@ -12,13 +12,15 @@ then perform the given operation on the new array/string.
 * _Number._
 * _String._
 
-  #### Arrays - _What is so special?_
+## Arrays - _What is so special?_
 
 * _Arrays_ can store different data types. This allows one to copy/clone,
   insert/delete, or search/sort various objects/data.
-  #### Closure - _What is it?_
-  Closure is an inner function that has access to the outer functions within the
-  scope chain. ######Example######
+
+## Closure - _What is it?_
+
+Closure is an inner function that has access to the outer functions within the
+scope chain. ######Example######
 
 ```javascript
 function subtract(a) {
