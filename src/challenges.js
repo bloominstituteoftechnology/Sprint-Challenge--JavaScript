@@ -27,12 +27,15 @@ const limitFunctionCallCount = (cb, n) => {
 };
 
 const cacheFunction = cb => {
-  // Should return a funciton that invokes `cb`.
-  // A cache (object) should be kept in closure scope.
-  // The cache should keep track of all arguments have been used to invoke this function.
-  // If the returned function is invoked with arguments that it has already seen
-  // then it should return the cached result and not invoke `cb` again.
-  // `cb` should only ever be invoked once for a given set of arguments.
+  const cache = {};
+  return (...args) => {
+    const checker = args;
+    if (checker in cache) {
+      return cache.checker;
+    }
+    cache[checker] = cb(checker);
+    return cache[checker];
+  }
 };
 
 /* eslint-enable no-unused-vars */
@@ -46,8 +49,23 @@ const reverseStr = str => {
 };
 
 const checkMatchingLeaves = obj => {
-  // return true if every property on `obj` is the same
-  // otherwise return false
+  let test;
+  let flagger = true;
+  const leafCheck = object => {
+    Object.keys(object).forEach(element => {
+      if (test === undefined && typeof element !== 'object') {
+        test = object[element];
+      }
+      if (typeof object[element] === 'object') {
+        return leafCheck(object[element]);
+      }
+      if (object[element] !== test) {
+        flagger = false;
+      }
+    });
+  };
+  leafCheck(obj);
+  return flagger;
 };
 
 const flatten = elements => {
