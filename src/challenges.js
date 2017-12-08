@@ -61,7 +61,7 @@ const reverseStr = str => {
   if (str.length > 0) {
     reverseStr(str);
   }
-  return reversed;
+  return reversed.slice(5);
 };
 
 const checkMatchingLeaves = obj => {
