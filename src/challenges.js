@@ -57,7 +57,19 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
-
+  const arr = [];  
+  const unnest = (obj) => {
+    const keys = Object.keys(obj);    
+    keys.forEach((item) => {
+      if (typeof obj[item] === 'object' && obj[item] !== null) {
+        unnest(obj[item]);
+        return;
+      }
+      arr.push(obj[item]);
+    });
+  };
+  unnest(obj);
+  return arr.every(x => x === arr[0]);
 };
 
 const flatten = elements => {
