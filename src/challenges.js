@@ -74,6 +74,14 @@ const checkMatchingLeaves = obj => {
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  each(elements, item => {
+    for (let i = 0; i < elements.length; i++) {
+      if (Array.isArray(elements[i])) {
+        elements = flatten(Array.prototype.concat(...elements));
+      }
+    }
+  });
+  return elements;
 };
 
 module.exports = {
