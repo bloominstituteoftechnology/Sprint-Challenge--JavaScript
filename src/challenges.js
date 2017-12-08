@@ -36,8 +36,7 @@ const cacheFunction = cb => {
 
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => {
-  // reverse str takes in a string and returns that string in reversed order
-  // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  return str.split('').reverse().join('');
 };
 
 const checkMatchingLeaves = obj => {
@@ -46,8 +45,7 @@ const checkMatchingLeaves = obj => {
 };
 
 const flatten = elements => {
-  // Flattens a nested array (the nesting can be to any depth).
-  // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  each()
 };
 
 module.exports = {
