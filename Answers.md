@@ -48,8 +48,8 @@ the global variable is able to be logged inside of hello because functions inhie
 ## Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
 
 1. window/ global onclick= console.log(this). log the entire window object;
-2  what ever is to the left to of the method when calling a object. ==>object.method(this)
-3 when using JS native methods .bind .call. .apply
+2.  what ever is to the left to of the method when calling a object. ==>object.method(this)
+3. when using JS native methods .bind .call. .apply
 4. When used with a cronstructor, this will refer to this specific instance created. not the constructor.
 
 
