@@ -61,21 +61,33 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  let cache = {};
+  return (...args) => {
+    if (args in cache) {
+      cache = args;
+      return cache;
+    }
+    cache[args] = cb(cache);
+    cache = cache[args];
+    return cache;
+  };
 };
 
 /* eslint-enable no-unused-vars */
-let newStr = '';
 
 /* ======================== Recursion Practice ============================ */
+let newStr = '';
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!\
-  if (str.length === 0) return;
+  if (str.length === 0) return null;
   newStr += str[str.length - 1];
   reverseStr(str.slice(0, -1));
   return newStr;
 };// logs correct thing but not passing test with same strings
+
 let flag = true;
+
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
@@ -96,12 +108,6 @@ const checkMatchingLeaves = obj => {
   });
   return flag;
 };
-
-console.log(checkMatchingLeaves({
-  x: 1,
-  y: 1,
-  z: 1,
-}));
 
 console.log(checkMatchingLeaves({
   x: 1,
