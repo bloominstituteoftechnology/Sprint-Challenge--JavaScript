@@ -11,6 +11,7 @@
             </p>
         </li>
         <li>
+            <h3>The common data types in JS are: </h3>
             <p>
                 <ol>
                     <li>Boolean</li>
@@ -26,6 +27,7 @@
             </p>
         </li>
         <li>
+            <h3>What is Closure?: </h3>
             <p>
                 Closure is essentially when a function reaches outside of it's scope and uses/accesses either another function or a variable to use within it's own scope.
             </p>
