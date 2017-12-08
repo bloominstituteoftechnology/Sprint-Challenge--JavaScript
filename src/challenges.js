@@ -33,6 +33,10 @@ const limitFunctionCallCount = (cb, n) => {
 };
 
 const cacheFunction = cb => {
+  let cache = {};
+  let cacheDeposit = function(args) {
+    // if ()
+  }
   // Should return a funciton that invokes `cb`.
   // A cache (object) should be kept in closure scope.
   // The cache should keep track of all arguments have been used to invoke this function.
@@ -45,11 +49,33 @@ const cacheFunction = cb => {
 
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => {
+  if (str.length === 0) {
+    return str = '';
+  }
+  let swap = str[str.length - 1] + reverseStr(str.substring(0, (str.length)));
+  return swap;
+  // supposed to freeze last digit and move the others to the end beginning with the first.
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
 };
 
 const checkMatchingLeaves = obj => {
+  let standard;
+  let flag = true;
+  const check = (x) => {
+    Object.keys(x).forEach((y) => {
+      if (standard === undefined && typeof y !== Object) {
+        standard = x[y];
+    } 
+      if (typeof x[y] === Object) {
+        return check(x[y]);
+    }
+      if (x[y] !== standard) {
+        flag = false;
+    }
+  });
+  check (obj);
+  return flag;
   // return true if every property on `obj` is the same
   // otherwise return false
 };
