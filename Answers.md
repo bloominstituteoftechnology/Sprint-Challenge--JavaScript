@@ -8,4 +8,4 @@
 Gathers all of the elements into a collection to create a new array/string and
 then perform the given operation on the new array/string.
 
-`.forEach` `.map`
+.forEach .map
