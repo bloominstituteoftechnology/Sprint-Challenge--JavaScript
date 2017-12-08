@@ -1,8 +1,7 @@
 {
   "name": "Sprint-Challenge--JavaScript",
   "version": "1.0.0",
-  "description":
-    "* The objective of this challenge is to get you used to answering a few questions about JavaScript that are commonly asked in interviews.  * We also have some more reps for you to help hammer in the knowledge you've thus far learned. * Answers to your written questions will be recorded in *Answers.md*  * This is to be worked on alone but you can use outside resources. You can *reference* any old code you may have, and the React Documentation, however, please refrain from copying and pasting any of your answers. Try and understand the question and put your responses in your own words. Be as thorough as possible when explaining something.  * **Just a friendly Reminder** Don't fret or get anxious about this, this is a no-pressure assessment that is only going to help guide you here in the near future. This is NOT a pass/fail situation.  ## Start by forking and cloning this repository. ## Questions - Self Study - You can exercise your Google-Fu for this and any other _Sprint Challenge_ in the future. 1. Describe some of the differences between `.forEach` & `.map`. 2. Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays? 3. What is closure? Can you code out a quick example of a closure? 4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)",
+  "description": "* The objective of this challenge is to get you used to answering a few questions about JavaScript that are commonly asked in interviews.  * We also have some more reps for you to help hammer in the knowledge you've thus far learned. * Answers to your written questions will be recorded in *Answers.md*  * This is to be worked on alone but you can use outside resources. You can *reference* any old code you may have, and the React Documentation, however, please refrain from copying and pasting any of your answers. Try and understand the question and put your responses in your own words. Be as thorough as possible when explaining something.  * **Just a friendly Reminder** Don't fret or get anxious about this, this is a no-pressure assessment that is only going to help guide you here in the near future. This is NOT a pass/fail situation.  ## Start by forking and cloning this repository. ## Questions - Self Study - You can exercise your Google-Fu for this and any other _Sprint Challenge_ in the future. 1. Describe some of the differences between `.forEach` & `.map`. 2. Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays? 3. What is closure? Can you code out a quick example of a closure? 4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)",
   "main": "index.js",
   "scripts": {
     "test": "eslint tests/*.js && eslint src/*.js && jest --verbose",
@@ -10,8 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url":
-      "git+https://github.com/LambdaSchool/Sprint-Challenge--JavaScript.git"
+    "url": "git+https://github.com/LambdaSchool/Sprint-Challenge--JavaScript.git"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +19,8 @@
     "eslint": "^3.17.1",
     "eslint-config-airbnb-base": "^11.1.3",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
     "jest": "^19.0.2",
     "regenerator-runtime": "^0.10.3"
   },
@@ -31,6 +31,5 @@
   "bugs": {
     "url": "https://github.com/LambdaSchool/Sprint-Challenge--JavaScript/issues"
   },
-  "homepage":
-    "https://github.com/LambdaSchool/Sprint-Challenge--JavaScript#readme"
+  "homepage": "https://github.com/LambdaSchool/Sprint-Challenge--JavaScript#readme"
 }
