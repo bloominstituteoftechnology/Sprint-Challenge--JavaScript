@@ -59,17 +59,110 @@ const cacheFunction = cb => {
 };
 
 /* eslint-enable no-unused-vars */
+let newStr = '';
 
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
-  // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  // The only difference between the way you've solved this before and now is that you need to do it recursivley!\
+  if (str.length === 0) return;
+  newStr += str[str.length - 1];
+  reverseStr(str.slice(0, -1));
+  return newStr;
 };
 
+console.log(reverseStr('hello world!'));
+
+/* Stretch Alogorithm */
+// const checkMatchingLeaves = (obj) => {
+//   // initialize some value...
+//   // initialize some flag.. boolean.
+//   // initialize some helper function and pass obj... leaf checker recursive function
+//     // check all the keys = this is a hint......for loop of some kind
+//     // if a key is an object && initial value is undef
+//       // assign value
+//     // if a value is an object ==> recurse
+//     // if a value is found, and it doesn't match our initial value
+//     // trip our flag to false
+//     // return;
+//   // return true/false
+// };
+let flag = true;
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  let check;
+  each(obj, item => {
+    for (let i = 0; i < obj.length; i++) {
+      if (item === Object(item) && !check) {
+        check = item[i];
+      }
+      if (item[i] !== check) {
+        flag = false;
+        return;
+      }
+      if (item.keys) {
+        checkMatchingLeaves(item[i]);
+      }
+    }
+  });
+  return flag;
 };
+
+console.log(checkMatchingLeaves({
+  x: 1,
+  y: 1,
+  z: 1,
+}));
+
+console.log(checkMatchingLeaves({
+  x: 1,
+  y: 1,
+  z: 1,
+  xa: {
+    xx: 1,
+    xy: 1,
+    xz: 1,
+    zz: {
+      a: {
+        b: {
+          z: 1,
+        },
+      },
+    },
+  },
+}));
+
+console.log(checkMatchingLeaves({
+  x: 1,
+  y: 1,
+  z: 1,
+  xa: {
+    xx: 1,
+    xy: 1,
+    xz: 1,
+    zz: {
+      a: {
+        b: {
+          z: 2,
+        },
+      },
+    },
+  },
+  r: 1,
+}));
+
+console.log(checkMatchingLeaves({
+  x: 1,
+  y: 1,
+  z: 1,
+}));
+
+console.log(checkMatchingLeaves({
+  x: 1,
+  y: 1,
+  z: 2,
+}));
 
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
