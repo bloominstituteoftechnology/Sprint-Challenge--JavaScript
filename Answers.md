@@ -2,13 +2,13 @@
 
 ### For help with markdown syntax [Go here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-##### Differences between `.forEach` & `.map`
+### Differences between `.forEach` & `.map`
 
 `.forEach` - Executes an action across all elements in an array/string. `.map` -
 Gathers all of the elements into a collection to create a new array/string and
 then perform the given operation on the new array/string.
 
-##### 5 JavaScript Data Types
+### 5 JavaScript Data Types
 
 * _Boolean._
 * _Null._
