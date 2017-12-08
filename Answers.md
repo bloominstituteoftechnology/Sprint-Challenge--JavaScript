@@ -35,3 +35,13 @@ search additional layers of Scope to find `x`. If the variable declaration is no
 accessible to the function where `x` was called, an error will result. If it is, we have CLOSURE!
 
 ## 3b. Coding Example of Closure
+
+function doSomething() {
+  let thing = 'Play fetch';         // thing is in the local Scope of doSomething
+  function withSomeone(name) {
+      console.log(`I like to ${thing} with ${name}.`);  // thing is called in a different Scope
+    }
+}
+
+The compiler must go 'up' one layer in Scope to find the declaration of thing in order to achieve Closure.
+
