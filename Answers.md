@@ -20,6 +20,7 @@ then perform the given operation on the new array/string.
 ## Closure - _What is it?_
 
 Closure is an inner function that has access to the outer functions within the scope chain. 
+
 _Example_
 ```javascript
 function subtract(a) {
