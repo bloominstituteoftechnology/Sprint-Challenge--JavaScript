@@ -75,17 +75,15 @@ const checkMatchingLeaves = obj => {
   function checker() {
     for (let i = 0; i < newArr.length; i++) {
       if (typeof newArr[i] === 'object' && checkValue === undefined) {
+        checkValue = newArr[i];
+        checkMatchingLeaves(newArr[i]);
+      } else if (typeof newArr[i] === 'object') {
         checkValue = Object.values(newArr[i]);
-        for (let j = 0; j < checkValue.length; j++) {
-          if (checkValue[j] === newArr[0]) {
-            doAllValuesMatch = true;
-          } else {
-            doAllValuesMatch = false;
-          }
+        if (checkValue[0] !== newArr[0]) {
           checkMatchingLeaves(newArr[i]);
         }
       } else if (typeof newArr[i] === 'number') {
-        // checkValue = newArr[0];
+        checkValue = newArr[0];
         if (newArr[i] === newArr[0]) {
           doAllValuesMatch = true;
         } else {
@@ -96,7 +94,20 @@ const checkMatchingLeaves = obj => {
   }
   checker();
   return doAllValuesMatch;
+
+  
 };
+
+const myObj = {
+  a: 1,
+  b: 1,
+  c: {
+    ca: 1,
+    cb: 2,
+  },
+};
+const x = checkMatchingLeaves(myObj);
+console.log(x);
 
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
