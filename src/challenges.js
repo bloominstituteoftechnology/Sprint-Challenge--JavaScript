@@ -19,7 +19,12 @@ const map = (elements, cb) => {
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
-  return () => true;
+  let calls = 0;
+  return () => {
+    if (calls === n) return null;
+    calls += 1;
+    cb(...arguments);
+  };
 };
 
 const cacheFunction = cb => {
@@ -37,6 +42,9 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  const reversed = str.concat(str[0]).slice(1);
+  if (reversed.length === str.length) return reversed;
+  return reverseStr(reversed);
 };
 
 const checkMatchingLeaves = obj => {
