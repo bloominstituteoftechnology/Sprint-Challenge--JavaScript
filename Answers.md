@@ -1,17 +1,19 @@
-#### Differences between `.forEach` & `.map`
+## Differences between `.forEach` & `.map`
 
 `.forEach` - Executes an action across all elements in an array/string. `.map` -
 Gathers all of the elements into a collection to create a new array/string and
 then perform the given operation on the new array/string.
 
-#### 5 _JavaScript_ Data Types
+## 5 _JavaScript_ Data Types
 
 * _Boolean._
 * _Null._
 * _Undefined._
 * _Number._
 * _String._
+
   #### Arrays - _What is so special?_
+
 * _Arrays_ can store different data types. This allows one to copy/clone,
   insert/delete, or search/sort various objects/data.
   #### Closure - _What is it?_
@@ -32,7 +34,7 @@ console.log(subtract2(10));
 console.log(subtract4(10));
 ```
 
-#### These 4 rules for `this`
+## These 4 rules for `this`
 
 * Global/Window Context - **Scope**
 * Implicit - Called by a preceeding **`.`** function
