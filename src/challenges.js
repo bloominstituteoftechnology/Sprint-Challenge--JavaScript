@@ -1,18 +1,26 @@
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
-  // Iterates over a list of elements, yielding each in turn to the `cb` function.
-  // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
 
 const map = (elements, cb) => {
-  // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
-  // Return the new array.
+  const newArray = [];
+  each(elements, (item, index) => {
+    newArray.push(cb(item, index));
+  });
+  return newArray;
 };
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
-  // Should return a function that invokes `cb`.
-  // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;   // initialize counter
+  return (...args) => {   // return a function with unknown number of arguments
+    if (n === count) return null;    // limit the counter to a max of n
+    count++;
+    return cb(...args);    // invoke callback with all the arguments
+  };
 };
 
 const cacheFunction = cb => {
@@ -28,9 +36,12 @@ const cacheFunction = cb => {
 
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => {
-  // reverse str takes in a string and returns that string in reversed order
-  // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  var first = str[0];
+  var last = str[str.length -1];
+  var str1 = reverseStr(str.substring(1, str.length - 1));
+  return last + str1 + first;
 };
+// based on https://stackoverflow.com/questions/4859208/recursive-string-reversal-function-in-javascript
 
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
@@ -38,8 +49,9 @@ const checkMatchingLeaves = obj => {
 };
 
 const flatten = elements => {
-  // Flattens a nested array (the nesting can be to any depth).
-  // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  each(elements, element => {       // call each function to iterate over the array
+    elements = flatten([].concat([], ...elements));   // flatten by breaking out nested arrays as we recursively call flatten function
+  });
 };
 
 module.exports = {
