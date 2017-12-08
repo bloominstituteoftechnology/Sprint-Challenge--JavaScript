@@ -7,9 +7,37 @@
 ## Start by forking and cloning this repository.
 ## Questions - Self Study - You can exercise your Google-Fu for this and any other _Sprint Challenge_ in the future.
 1. Describe some of the differences between `.forEach` & `.map`.
+
+The difference between forEach and map is that map mutates the original Array while forEach creates a new Array and leaves the original Array un-mutated.
+
 2. Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays?
+
+Different Types:
+- String
+- Number
+- Boolean
+- Object
+- Function
+
+An Array is special because it is actually an Object under-the-hood.
+
 3. What is closure? Can you code out a quick example of a closure?
+
+Closure is when a function sees outside its scope (for things such as variables).
+
+An example is:
+
+const foo = 'bar'
+const newFunction = () => {
+    console.log(foo);
+}
+
 4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
+
+- can point to the global variable / Object
+- can point to within a function invokation call between the '()' (implicit binding)
+- can point to when a 'new' constructor is created (e.g. new Object)
+- whenever an explicit binding is used: .call; .apply; .bind;
 
 ## Initializing Project - We have set up a testing environment for you using `Jest`
 * Fork/Clone this project into a directory on your machine.
