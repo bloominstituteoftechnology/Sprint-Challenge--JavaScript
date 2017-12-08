@@ -66,8 +66,8 @@ const checkMatchingLeaves = obj => {
     if (object[leaves] && typeof object[leaves] === 'object') {
       return checke(object[leaves], tree);
     }
-    if (!(value in value)) {
-      value.value = object[leaves];
+    if (!(tree in value)) {
+      tree.tree = object[leaves];
       return true;
     }
     return object[leaves] === tree.tree;
