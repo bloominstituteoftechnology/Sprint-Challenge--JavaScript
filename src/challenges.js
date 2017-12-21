@@ -19,21 +19,31 @@ const map = (elements, cb) => {
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
-  let calls = 0;
-  return () => {
-    if (calls === n) return null;
-    calls += 1;
-    cb(...arguments);
+  let invoked = 0;
+  return (...args) => { // rest params
+    if (invoked < n) {
+      invoked += 1;
+      return cb(...args); // actual cb arguments
+    }
+    return null;
   };
 };
 
 const cacheFunction = cb => {
-  // Should return a funciton that invokes `cb`.
+  // Should return a function that invokes `cb`.
   // A cache (object) should be kept in closure scope.
   // The cache should keep track of all arguments have been used to invoke this function.
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const resultCache = {};
+  return input => {
+    if (Object.hasOwnProperty.call(resultCache, input)) {
+      return resultCache[input];
+    }
+    resultCache[input] = cb(input);
+    return resultCache[input];
+  };
 };
 
 /* eslint-enable no-unused-vars */
@@ -54,6 +64,11 @@ const checkMatchingLeaves = obj => {
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  let result = [];
+  elements.forEach(item => {
+    return Array.isArray(item) ? result = flatten(result.concat(item)) : result.push(item);
+  });
+  return result;
 };
 
 module.exports = {
