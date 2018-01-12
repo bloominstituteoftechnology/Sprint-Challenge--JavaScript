@@ -38,6 +38,10 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  let cache = {};
+  return (...args) => {
+    
+  }
 };
 
 /* eslint-enable no-unused-vars */
@@ -56,6 +60,10 @@ const checkMatchingLeaves = obj => {
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  return elements.reduce((flatArray, toFlatten) => {
+    if (Array.isArray(toFlatten)) return flatArray.concat(flatten(toFlatten));
+    return flatArray.concat(toFlatten);
+  }, []);
 };
 
 module.exports = {
