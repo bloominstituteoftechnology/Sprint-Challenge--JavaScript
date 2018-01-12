@@ -1,47 +1,28 @@
 # Your responses to the short answer questions should be laid out here using Mark Down.
 ### For help with markdown syntax [Go here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-# 1. for (let i = 0; i < elements.length; i++) {
-    cb(elements[i], i);
-  }
-};
-
-# 2. const newArray = [];
-
-  for (let i = 0; i < elements.length; i++) {
-    newArray.push(cb(elements[i], i));
-  }
-  return newArray;
+# 1. forEach loops through the array, but does not create a new
+# array in the process while map does create a new array and pushes
+# the result of that loop to the array
 
 
-# 3.   let counter = 0;
-  return function countUp(...args) {
-    counter += 1;
-    if (counter <= n) {
-      return cb(...args);
+# 2. Boolean, Undefined, Number, Null, String arrays are also objects.
+
+# 3. A closure is a way in which you can give functions memories, an example 
+# of this would be a counter, notice how running the code below keeps track of the counter;
+function counter () {
+    let count = 0
+    return function countUp () {
+        count++
+        return count
     }
-    return null;
-  };
+}
 
-# 4. const cache = {};
+const logger = counter()
 
-  return input => {
-    if (Object.prototype.hasOwnProperty.call(cache, input)) return cache[input];
-    cache[input] = cb(input);
-    return cache[input];
-  };
-
-# 5. if (str === '') {
-    return;
-  }
-  return reverseStr(str.substr(1)) + str.charAt(0);
-
-# 6. Don't know.
-
-
-# 7. return elements.reduce((flat, toFlatten) => {
-    return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
-  }, []);
-
-
-  ?
+# 4. 'this' has 4 rules.
+# - When 'this' is in a function in the global scope
+#   it points to the window objects
+# - Whatever is to the left of the dot
+# - In a constructor this refers to the object that was created by the constructor function
+# - If you use call, apply, or bind you change the way this is defined
