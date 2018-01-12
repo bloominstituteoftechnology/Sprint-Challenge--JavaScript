@@ -2,6 +2,7 @@
 ### For help with markdown syntax [Go here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## Questions - Self Study - You can exercise your Google-Fu for this and any other _Sprint Challenge_ in the future.
+
 1. Describe some of the differences between `.forEach` & `.map`.
   * .map returns a new array of the same length with each element transformed by the callback function, whereas .forEach only passes each element to the callback function without return an array.
 
@@ -10,9 +11,8 @@
   2. Strings
   3. Booleans
   4. Arrays
-    * Arrays can contain any 'types' of data. Each element can be accessed using an index (making it easy to iterate over), and has some very useful built-in methods.
+    * Arrays can contain any type of data. Each element can be accessed using an index (making it easy to iterate over), and has some very useful built-in methods.
   5. Objects
-
 
 3. What is closure? Can you code out a quick example of a closure?
   * Closure is when a callback(inner) function can access a variable in it's outer scope, even after the function has been returned.
