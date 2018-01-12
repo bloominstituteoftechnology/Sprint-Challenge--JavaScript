@@ -10,6 +10,11 @@ const each = (elements, cb) => {
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
+  const array = [];
+  elements.forEach(element => {
+    array.push(cb(element));
+  });
+  return array;
 };
 
 /* ======================== Closure Practice ============================ */
