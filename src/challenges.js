@@ -26,7 +26,7 @@ const limitFunctionCallCount = (cb, n) => {
     if (count === n) return null;
     count += 1;
     return cb(...args);
-  }
+  };
 };
 
 const cacheFunction = cb => {
@@ -37,7 +37,7 @@ const cacheFunction = cb => {
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
   const cache = {};
-  return (arg) => {
+  return arg => {
     if (arg in cache) return cache[arg];
     const entry = cb(arg);
     cache[arg] = entry;
@@ -51,6 +51,8 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  if (str === '') return "";
+  return reverseStr(str.substr(1)) + str.charAt(0);
 };
 
 const checkMatchingLeaves = obj => {
