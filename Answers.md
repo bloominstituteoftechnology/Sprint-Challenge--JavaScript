@@ -21,4 +21,7 @@ function circleArea(r) { 
 circleArea(4); //Result 50.26548245743669
 ```
 4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
-* 
+* 1. if function is defined in the global scope, then 'this' inside the function refers to the global object (window object in web browsers).
+* 2. if function is invoked by a preceding dot, 'this' refers to the object before the dot.
+* 3. in case of a constructor function, 'this' refers to the specific instance of the object created by the constructor function.
+* 4. with .call and .apply methods, 'this' is defined in the methods' parameter.
