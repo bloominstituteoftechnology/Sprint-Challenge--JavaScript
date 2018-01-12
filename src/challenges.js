@@ -63,11 +63,27 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  const property = [Object.keys(obj)[0]];
+  obj.forEach(key => {
+    if (key !== property) {
+      return false;
+    }
+  });
+  return true;
 };
 
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  let resultArray = [];
+  elements.forEach((key, index) => {
+    if(Array.isArray(key) === true) {
+      resultArray.push(flatten(key));
+    } else {
+      resultArray.push(key);
+    }
+  })
+  return resultArray;
 };
 
 module.exports = {
