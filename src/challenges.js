@@ -71,6 +71,9 @@ const checkMatchingLeaves = obj => {
   for (let i = 1; i < array.length; i++) {
     const start = array[0];
     if (array[i] !== start) return false;
+    else if (typeof array[i] === 'object') {
+      array[i].reduce((first, second) => first.concat(second), []);
+    }
   } return true;
   // return true if every property on `obj` is the same
   // otherwise return false
