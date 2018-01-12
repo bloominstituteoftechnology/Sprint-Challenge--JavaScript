@@ -58,9 +58,18 @@ const reverseStr = str => {
   return str.charAt(str.length - 1) + reverseStr(str.slice(0, str.length - 1));
 };
 
-const checkMatchingLeaves = obj => {
+const checkMatchingLeaves = (obj, startVal) => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  const values = Object.values(obj);
+  if (startVal === undefined) startVal = values[0];
+  values.forEach(value => {
+    if (Object(value) === value) {
+      if (!checkMatchingLeaves(value, startVal)) return false;
+    }
+    if (value !== startVal) return false;
+  });
+  return true;
 };
 
 const flatten = elements => {
