@@ -2,9 +2,9 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
-  return elements.forEach((item, i) => {
-    cb(item, i);
-  });
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
 
 const map = (elements, cb) => {
@@ -54,6 +54,10 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  if (str.length <= 1) {
+    return str;
+  }
+  return reverseStr(str.substring(str.length, 1)) + str[0];
 };
 
 const checkMatchingLeaves = obj => {
