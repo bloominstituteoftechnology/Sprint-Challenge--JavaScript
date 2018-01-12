@@ -3,10 +3,9 @@ const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
   for (let i = 0; i < elements.length; i++) {
-    return cb(elements[i]);
+    cb(elements[i], i);
   }
 };
-//-----------------------------
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
@@ -39,6 +38,12 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const cache = {};
+  return (...input) => {
+    if (Object.prototype.hasOwnProperty.call(cache, input)) return cache[input];
+    cache[input] = cb(...input);
+    return cache[input];
+  };
 };
 
 /* eslint-enable no-unused-vars */
@@ -55,18 +60,36 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  const simpl = input => {
+    if (Object(input) !== input) return input;
+    const keys = Object.keys(input);
+    const first = input[keys[0]];
+    return Object(first) === first ? simpl(first) : first;
+  };
+
+  const keys = Object.keys(obj);
+  const first = obj[keys[0]];
+  for (let i = 0; i < keys.length; i++) {
+    const current = obj[keys[i]];
+    if (Object(current) === current && !checkMatchingLeaves(current)) return false;
+    if (simpl(current) !== simpl(first)) return false;
+  }
+  return true;
 };
 
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
-  const flatArr = elements.reduce(elements, (x, item) => {
-    if (Array.isArray(item)) return x.push(flatten(item));
-    return x.push(item);
-  }, []);
-  return flatArr;
+  let i = 0;
+  while (i < elements.length) {
+    elements = elements.reduce((prev, curr) => {
+      return prev.concat(curr);
+    }, []);
+    i++;
+  }
+  return elements;
 };
-//---------------------------------
+// Did not use recursion...
 
 module.exports = {
   each,
