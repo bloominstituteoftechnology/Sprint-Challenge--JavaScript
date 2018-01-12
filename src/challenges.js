@@ -21,16 +21,34 @@ const map = (elements, cb) => {
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
-
+  let counter = 0;
+  return (...args) => {
+    if (counter === n) {
+      return null;
+    }
+    counter++;
+    return cb(...args);
+  };
 };
 
 const cacheFunction = cb => {
-  // Should return a funciton that invokes `cb`.
+  // Should return a function that invokes `cb`.
   // A cache (object) should be kept in closure scope.
   // The cache should keep track of all arguments have been used to invoke this function.
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  // ESSENTIAL --- Key = arg, value = result : previously unclear
+
+  const cache = {};
+  return (...args) => {
+    if (!(Object.prototype.hasOwnProperty.call(cache, args))) {
+      const result = cb(args);
+      cache[args] = result;
+      return result;
+    }
+    return cache[args];
+  };
 };
 
 /* eslint-enable no-unused-vars */
@@ -39,6 +57,7 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+
 };
 
 const checkMatchingLeaves = obj => {
