@@ -45,6 +45,14 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  let nuStr = '';
+  if (str.length === 0) {
+    nuStr = str.charAt(str.length) + nuStr;
+  } else {
+    nuStr = str.charAt(str.length - 1) + nuStr;
+    str = str.splice(0, str.length - 1);
+    reverseStr(str);
+  }
 };
 
 const checkMatchingLeaves = obj => {
