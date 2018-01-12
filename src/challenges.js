@@ -55,9 +55,24 @@ const reverseStr = str => {
   return reverseStr(str.substr(1)) + str.charAt(0);
 };
 
-const checkMatchingLeaves = obj => {
+const checkMatchingLeaves = (obj) => { //This is not passing the final test...will check after lunch
   // return true if every property on `obj` is the same
   // otherwise return false
+  const bank = [];
+  const myRecursion = (arg) => {
+    const arr = Object.values(arg);
+    arr.forEach(val => {
+      if (typeof val === 'object') myRecursion(val);
+      bank.push(val);
+    });
+  };
+  myRecursion(obj);
+  
+  const test = bank[0];
+  for (i = 1; i < bank.length; i += 1) {
+    if (bank[i] !== test) return false;
+  }
+  return true;
 };
 
 const flatten = elements => {
