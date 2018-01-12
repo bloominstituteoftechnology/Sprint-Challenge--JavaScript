@@ -1,4 +1,4 @@
-const challengeMethods = require('../src/challenges');
+nconst challengeMethods = require('../src/challenges');
 /* eslint-disable no-undef */
 describe('challenges', () => {
   describe('each', () => {
