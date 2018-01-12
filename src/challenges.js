@@ -66,7 +66,14 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
-  
+  const firstVal = Object.values(obj)[0];
+
+  for (let i = 1; i < Object.values(obj).length; i++) {
+    if (firstVal !== Object.values(obj)[i]) {
+      return false;
+    }
+  }
+  return true;
 };
 
 const flatten = elements => {
