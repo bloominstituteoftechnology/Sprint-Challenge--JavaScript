@@ -40,7 +40,7 @@ const cacheFunction = cb => {
   // `cb` should only ever be invoked once for a given set of arguments.
   let cache = {};
   return (...args) => {
-    
+
   }
 };
 
@@ -50,11 +50,19 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+
 };
 
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  let areSame = true;
+  const refProp = Object.values(obj)[0];
+  Object.values(obj).forEach(value => {
+    if (value !== refProp) areSame = false;
+    if (typeof value === 'object' && !checkMatchingLeaves(value)) return false;
+  });
+  return areSame;
 };
 
 const flatten = elements => {
