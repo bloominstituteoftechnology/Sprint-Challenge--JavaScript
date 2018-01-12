@@ -10,16 +10,25 @@ const each = (elements, cb) => {
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
-  let newArr = [];
-  for (let i = 0; i <= elements.length; i++) {
-    newArr.push(cb(elements[i]));
+  const newArr = [];
+  for (let i = 0; i < elements.length; i++) {
+    cb(newArr.push(elements[i]));
   }
+  return newArr;
 };
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let i = 0;
+  return (...args) => {
+    if (i < n) {
+      i++;
+      return cb(...args);
+    }
+    return null;
+  };
 };
 
 const cacheFunction = cb => {
