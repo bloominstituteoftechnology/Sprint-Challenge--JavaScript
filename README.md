@@ -15,7 +15,7 @@
 * Fork/Clone this project into a directory on your machine.
 * `cd` into your forked local copy.
 * notice there is a `package.json` file included. remember that a `package.json` file is like a map of instructions for when you run `npm install`
-* run `npm install` to download all the dependancies you need for this project.
+* run to download all the dependancies you need for this project.
 * run `npm run watch` to start your tests in **watch mode**. This command will listen for changes as you work through the problems and save your `challenges.js` file. As soon as you hit save after writing some changes, the linter will run, and the tests will run as well. 
 * As soon as you have a test passing, `commit` your changes to your fork so we can see an active commit stream.
 * Once you're done with all the tests, push your commits to your fork and submit a Pull-Request

@@ -21,7 +21,7 @@ const limitFunctionCallCount = (cb, n) => {
       counter++;
       return cb(...args);
     } return null;
-  }
+  };
 };
 
 const cacheFunction = cb => {
@@ -33,23 +33,22 @@ const cacheFunction = cb => {
   // `cb` should only ever be invoked once for a given set of arguments.
   const cache = {};
   let i = 0;
-  let duplicate = 0;
+  let duplicate = false;
 
   return (...args) => {
     duplicate = Object.keys(cache).forEach(key => {
-      if (cache[key] === args) {
-        return ++duplicate;
-      } else return duplicate;
+      if (cache[key] === args) return true;
     });
-    if (duplicate > 0) {
+
+    if (duplicate === false) {
       cache[i] = args;
       i++;
       cb(...args);
     } else {
-      duplicate = 0;
+      duplicate = false;
       return cache[i];
     }
-  }
+  };
 };
 
 /* eslint-enable no-unused-vars */
@@ -58,7 +57,23 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  let i = str.length--;
+
+  //let reversed = ''; // If it is here as it needs to be, are there one
+                       // too many function wrappings? Is it still closure?
+
+  const closureFunc = function(str) {
+    let reversed = '';
+    return (str, i) => {
+      if (i <= 0) return 0;
+      reversed += str[i];
+      return closureFunc(str, --i);
+    }
+  }
+  closureFunc(str, i);
+  return reversed;
 };
+console.log(reverseStr('qwerty'));
 
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
