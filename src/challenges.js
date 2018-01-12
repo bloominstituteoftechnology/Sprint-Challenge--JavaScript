@@ -12,7 +12,7 @@ const map = (elements, cb) => {
   // Return the new array.
   const newArr = [];
   for (let i = 0; i < elements.length; i++) {
-    cb(newArr.push(elements[i]));
+    cb(newArr.push(elements[i] * 2));
   }
   return newArr;
 };
@@ -46,6 +46,7 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+
 };
 
 const checkMatchingLeaves = obj => {
