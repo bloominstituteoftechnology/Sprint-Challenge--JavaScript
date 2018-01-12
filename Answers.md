@@ -1,4 +1,4 @@
-##Answers
+## Answers
 
 **1.**  The differences between ```.forEach``` and ```.map``` are that while both methods execute a callback function for each element present in an array in ascending order, ```.map``` creates a new array with the results of said function.
 
