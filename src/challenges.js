@@ -2,6 +2,9 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    return cb(elements[i]);
+  }
 };
 
 const map = (elements, cb) => {
@@ -13,6 +16,14 @@ const map = (elements, cb) => {
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  return (...args) => {
+    if (count < n) {
+      count++;
+      return cb(...args);
+    }
+    return null;
+  };
 };
 
 const cacheFunction = cb => {
@@ -22,6 +33,14 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const obj = {};
+  return input => {
+    if (!Object.prototype.hasOwnProperty.call(obj, input)) {
+      obj[input] = cb(input);
+      return obj[input];
+    }
+    return obj[input];
+  };
 };
 
 /* eslint-enable no-unused-vars */
