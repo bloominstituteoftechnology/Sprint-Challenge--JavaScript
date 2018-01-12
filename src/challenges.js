@@ -2,17 +2,31 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  return elements.map(cb);
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
+  let newArr = [];
+  for (let i = 0; i < elements.length; i++) {
+    newArr.push(cb(elements[i]));
+  }
+  return newArr;
 };
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  return(...args) => {
+    if (count < n) {
+      count++;
+      return cb(...args);
+    }
+    return null;
+  };
 };
 
 const cacheFunction = cb => {
@@ -30,6 +44,11 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  if (str === "") {
+    return "";
+  } else {
+    return reverseStr(str.substr(1) + str.charAt(0));
+  }
 };
 
 const checkMatchingLeaves = obj => {
@@ -40,6 +59,7 @@ const checkMatchingLeaves = obj => {
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  
 };
 
 module.exports = {
