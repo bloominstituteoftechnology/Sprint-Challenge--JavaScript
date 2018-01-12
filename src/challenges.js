@@ -61,7 +61,6 @@ const reverseStr = str => {
   reverseStr ('lo') + 'l'
   reverseStr ('o') + 'l'
   reverseStr ('') + 'o'
-  reverseStr ('') + ''
   hit base case
   unwinding begins
   'o' + 'l' + 'l' + 'e' + 'h'
@@ -76,6 +75,7 @@ const checkMatchingLeaves = obj => {
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  //base case: 
 };
 
 module.exports = {
