@@ -58,15 +58,17 @@ const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
   const properties = [];
-
-  (function check(objCheck) {
-    Object.keys(objCheck).forEach((key) => {
-      if (typeof objCheck[key] === 'object') return check(objCheck[key]);
-      properties.push(objCheck[key]);
+  const check = objCheck => {
+    Object.values(objCheck).forEach(value => {
+      if (value === Object(value)) {
+        check(value);
+      } else {
+        properties.push(value);
+      }
     });
-  })(obj);
-
-  return properties.every(x => properties[0] === x);
+  };
+  check(obj);
+  return properties.every(x => x === properties[0]);
 };
 
 const flatten = elements => {
