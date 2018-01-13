@@ -16,19 +16,15 @@
 + Boolean (Bonus)
 
 #### 3. What is closure? Can you code out a quick example of a closure?
-Closure is a function that access the variables of an enclosing function.
-A closure is when you add a function within a function
+Closure is a function that accesses the variables of an enclosing function.
+A closure is when you add a function within a function.
 
 Example:
 
 ```
-function counter(num) {
+function counter() {
     let count = 0;
-    function counting() {
-        count++
-        return count;
-    }
-    return counting;
+    return () => (++count);
 }
 ```
 
