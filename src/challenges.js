@@ -48,7 +48,7 @@ const cacheFunction = cb => {
   // `cb` should only ever be invoked once for a given set of arguments.
 };
 
-/* eslint-enable no-unused-vars */
+/* eslint-enable no-unused-vars *
 
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => {
@@ -58,10 +58,19 @@ const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
 const checkMatchingLeaves = obj => {
-
-  // return true if every property on `obj` is the same
-  // otherwise return false
+  const arr = [];
+  const flatten = obj1 => {
+    const valu = Object.values(obj1);
+    for (let i = 0; i < valu.length; i++) {
+      if (typeof (valu[i]) === 'object') {
+        flatten(valu[i]);
+      } else arr.push(valu[i]);
+    }
+  };
+  flatten(obj);
+  return arr.every(val => val === arr[0]);
 };
+
 const flatten = elements => {
   let result = [];
   for (let i = 0; i < elements.length; i++) {
@@ -75,7 +84,6 @@ const flatten = elements => {
 };
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
-
 module.exports = {
   each,
   map,
