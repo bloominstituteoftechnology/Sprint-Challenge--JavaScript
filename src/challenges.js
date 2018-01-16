@@ -44,18 +44,20 @@ const cacheFunction = cb => {
   // `cb` should only ever be invoked once for a given set of arguments.
   const reduceToBool = (arrayToCheck, givenValue) => {
     if (arrayToCheck.length > 0) {
-      arrayToCheck.reduce((memo, value) => {
+      return arrayToCheck.reduce((memo, value) => {
         if (givenValue === value || memo === true) {
           return true;
         }
         return false;
-      });
+      },
+      false
+      );
     }
   };
   const cache = {};
   return argToCheck => {
     const arrFromCache = Object.keys(cache).map(key => key);
-    if (!reduceToBool(arrFromCache, argToCheck)) {
+    if (!reduceToBool(arrFromCache, argToCheck.toString())) {
       cache[argToCheck] = cb(argToCheck);
     }
     return cache[argToCheck];
@@ -110,11 +112,17 @@ const checkMatchingLeaves = obj => {
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
-  // ran out of time to finish this one properly
-  const newarr = elements.map(elem => {
-    return elem * 1;
+  const resultArr = [];
+  elements.forEach(function recur(elem) {
+    if (!Array.isArray(elem)) {
+      resultArr.push(elem);
+      return elem;
+    }
+    elem.forEach(key => {
+      recur(key);
+    });
   });
-  return newarr;
+  return resultArr;
 };
 
 module.exports = {
