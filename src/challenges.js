@@ -10,6 +10,10 @@ const each = (elements, cb) => {
 const map = (elements, cb) => {
   const arr = [];
 
+  for (let i = 0; i < elements.length; i++) {
+    arr.push(cb(elements[i]));
+  }
+  return arr;
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
 };
