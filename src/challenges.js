@@ -53,14 +53,23 @@ const checkMatchingLeaves = obj => {
 
   _recurse(obj);
 
-  console.log(result);
-
   return !!result.reduce((acc, curr) => { return acc === curr ? acc : false });
 };
 
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  const result = [];
+
+  const _recurse = (arr) => {
+    if (!Array.isArray(arr)) result.push(arr);
+    else for (var a in arr) {
+      _recurse(arr[a])
+    }
+  }
+
+  _recurse(elements);
+  return result;
 };
 
 module.exports = {
