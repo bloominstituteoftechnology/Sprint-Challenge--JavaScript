@@ -11,7 +11,7 @@ const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
   const result = [];
-  each(elements, (e) => result.push(cb(e)));
+  each(elements, e => result.push(cb(e)));
   return result;
 };
 
@@ -22,10 +22,10 @@ const limitFunctionCallCount = (cb, n) => {
   let count = 0;
   return (...args) => {
     if (count < n) {
-      count = count + 1;
+      count++;
       return cb(...args);
-    } else return null;
-  }
+    } return null;
+  };
 };
 
 const cacheFunction = cb => {
@@ -41,12 +41,10 @@ const cacheFunction = cb => {
     const keys = Object.keys(cache);
     const argString = args.toString();
     if (keys.includes(argString)) return cache[argString];
-    else {
-      const result = cb(...args);
-      cache[argString] = result;
-      return result;
-    }
-  }
+    const result = cb(...args);
+    cache[argString] = result;
+    return result;
+  };
 };
 
 /* eslint-enable no-unused-vars */
@@ -57,13 +55,13 @@ const reverseStr = str => {
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
   const result = [];
 
-  const _recurse = (innerStr) => {
+  const recurse = innerStr => {
     if (innerStr.length === 0) return;
     result.push(innerStr[innerStr.length - 1]);
-    _recurse(innerStr.substr(0, innerStr.length - 1));
-  }
+    recurse(innerStr.substr(0, innerStr.length - 1));
+  };
 
-  _recurse(str);
+  recurse(str);
   return result.join('');
 };
 
@@ -72,16 +70,16 @@ const checkMatchingLeaves = obj => {
   // otherwise return false
   const result = [];
 
-  const _recurse = (innerObj) => {
-    Object.keys(innerObj).forEach((key) => {
-      if(typeof innerObj[key] === 'object') _recurse(innerObj[key]);
+  const recurse = innerObj => {
+    Object.keys(innerObj).forEach(key => {
+      if (typeof innerObj[key] === 'object') recurse(innerObj[key]);
       else result.push(innerObj[key]);
     });
-  }
+  };
 
-  _recurse(obj);
+  recurse(obj);
 
-  return !!result.reduce((acc, curr) => { return acc === curr ? acc : false });
+  return !!result.reduce((acc, curr) => { return acc === curr ? acc : false; });
 };
 
 const flatten = elements => {
@@ -89,14 +87,16 @@ const flatten = elements => {
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
   const result = [];
 
-  const _recurse = (arr) => {
+  const recurse = arr => {
     if (!Array.isArray(arr)) result.push(arr);
-    else for (var a in arr) {
-      _recurse(arr[a])
+    else {
+      for (let i = 0; i < arr.length; i++) {
+        recurse(arr[i]);
+      }
     }
-  }
+  };
 
-  _recurse(elements);
+  recurse(elements);
   return result;
 };
 
