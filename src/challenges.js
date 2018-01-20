@@ -58,10 +58,11 @@ const checkMatchingLeaves = obj => {
 };
 
 const flatten = elements => {
-  let newArr = [];
+  const newArr = [];
   for (let i = 0; i < elements.length; i++) {
     if (elements[i] instanceof Array) {
-
+      // what do I want to do if its an array, merge them with what? OH, .CONCAT
+      newArr.concat(flatten(elements[i]));
     } else {
       newArr.push(elements[i]); // does what map does, but does not handle array elements in arrays
     }
@@ -69,6 +70,8 @@ const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
   return newArr;
+  // Flattens a nested array (the nesting can be to any depth).
+  // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
 };
 
 module.exports = {
