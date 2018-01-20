@@ -1,10 +1,15 @@
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], [i]);
+  }
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
 };
 
 const map = (elements, cb) => {
+  const arr = []
+
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
 };
@@ -16,6 +21,17 @@ const limitFunctionCallCount = (cb, n) => {
 };
 
 const cacheFunction = cb => {
+  const cache = {};
+  return (...args) => {
+    const keys = Object.keys(cache);
+    const argsString = args.toString();
+    if (keys.indexOf(argsString) !== -1) {
+      return cache[argsString];
+    }
+    const result = cb(...args);
+    cache[argsString] = result;
+    return result;
+  };
   // Should return a funciton that invokes `cb`.
   // A cache (object) should be kept in closure scope.
   // The cache should keep track of all arguments have been used to invoke this function.
