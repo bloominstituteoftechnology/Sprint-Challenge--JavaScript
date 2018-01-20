@@ -90,8 +90,16 @@ const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
 };
-
 const flatten = elements => {
+  const newArr = [];
+  for (let i = 0; i < elements.length; i++) {
+    if (Array.isArray(elements[i])) {
+      newArr.concat(flatten(elements[i]));
+    } else {
+      newArr.push(elements[i]);
+    }
+  }
+  return newArr;
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
 };
