@@ -3,7 +3,7 @@ const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
   for (let i = 0; i < elements.length; i++) {
-    cb(elements[i]);
+    cb(elements[i], i, elements);
   }
 };
 
@@ -11,7 +11,12 @@ const each = (elements, cb) => {
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
-
+  const newArr = [];
+  for (let i = 0; i < elements.length; i++) {
+    const newElements = cb(elements[i], i, elements);
+    newArr.push(newElements);
+  }
+  return newArr;
 };
 
 /* ======================== Closure Practice ============================ */
@@ -44,13 +49,11 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
-
 };
 
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
-
 };
 
 module.exports = {
