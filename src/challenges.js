@@ -2,17 +2,34 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
+  const values = [];
+  for (let i = 0; i < elements.length; i++) {
+    values.push(cb(elements[i]));
+  }
+  return values;
 };
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  const cbCallLimiter = (...args) => {
+    if (count < n) {
+      count++;
+      return cb(...args);
+    }
+    return null;
+  };
+  return cbCallLimiter;
 };
 
 const cacheFunction = cb => {
@@ -22,6 +39,15 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const cache = {};
+  const invoker = (...args) => {
+    if (cb in cache) {
+      return cache[cb];
+    }
+    cache[cb] = cb(...args);
+    return cb(...args);
+  };
+  return invoker;
 };
 
 /* eslint-enable no-unused-vars */
@@ -30,17 +56,43 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  if (str === "") {
+      return "";
+  } else {
+      return reverseStr(str.substr(1)) + str.charAt(0);
+  }
 };
 
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  const values = [];
+  function valuesBuilder(object) {
+    Object.keys(object).forEach((key) => {
+      if (typeof object[key] === 'object') {
+        return valuesBuilder(object[key]);
+      }
+      values.push(object[key]);
+    });
+  }
+  valuesBuilder(obj);
+  return values.every(x => values[0] === x);
 };
 
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  let flat = [];
+  elements.forEach((value) => {
+    if (Array.isArray(value)) {
+      flat = flat.concat(flatten(value));
+    } else {
+      flat.push(value);
+    }
+  })
+  return flat;
 };
+
 
 module.exports = {
   each,
