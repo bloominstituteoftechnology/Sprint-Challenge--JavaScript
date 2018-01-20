@@ -56,6 +56,14 @@ const cacheFunction = cb => {
 
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => {
+  if (typeof str === 'string') {
+    const strArray = str.split('');
+    return reverseStr(strArray);
+  } else if (typeof str === 'object') {
+    const reverseArray = str.reverse();
+    const returnString = str.join('');
+    return returnString;
+  }
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
 };
