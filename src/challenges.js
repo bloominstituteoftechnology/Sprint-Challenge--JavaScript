@@ -20,7 +20,6 @@ const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
   let count = 0;
-
   return (...args) => {
     if (count < n) {
       count = count + 1;
@@ -36,6 +35,18 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const cache = {};
+
+  return (...args) => {
+    const keys = Object.keys(cache);
+    const argString = args.toString();
+    if (keys.includes(argString)) return cache[argString];
+    else {
+      const result = cb(...args);
+      cache[argString] = result;
+      return result;
+    }
+  }
 };
 
 /* eslint-enable no-unused-vars */
