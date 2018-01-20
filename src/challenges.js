@@ -71,6 +71,18 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  const keys = Object.keys(obj); // have an array of all keys now
+
+  for (let i = 1; i < keys.length; i++) {
+    let firstElement = keys[0];    // iterate over all the keys.
+    const firstTime = keys.indexOf(keys[i]);   // first time that element can be found.
+    // i need to check against each element
+    if (firstElement === firstTime) {    // not sure what i was doing here...i'm trying to check that the first key equals the next
+      firstElement = keys[i++];
+      return true;
+    }
+  }
+  return false;
 };
 
 const flatten = elements => {
@@ -83,10 +95,7 @@ const flatten = elements => {
     } else {
       newArray.push(elements[i]);
     }
-
   }
-
-
   return newArray;
 };
 
