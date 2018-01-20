@@ -61,7 +61,7 @@ const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
 
-  let reverse = '';
+  const reverse = '';
   if (str === '') {
     return '';
   }
@@ -76,6 +76,18 @@ const checkMatchingLeaves = obj => {
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  let newArray = [];
+  for (let i = 0; i < elements.length; i++) {
+    if (Array.isArray(elements[i])) {  // checks if that element is an array....
+      newArray = newArray.concat(flatten(elements[i]));  // concat creates 1 array out of 2, flatten will do the rest
+    } else {
+      newArray.push(elements[i]);
+    }
+
+  }
+
+
+  return newArray;
 };
 
 module.exports = {
