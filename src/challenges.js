@@ -8,8 +8,13 @@ const each = (elements, cb) => {
 };
 
 const map = (elements, cb) => {
+  const newArr = [];// new array to store new data
+  for (let i = 0; i < elements.length; i++) {
+    newArr.push(cb(elements[i]));// push the value returned by cb at element index
+  }
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
+  return newArr;
 };
 
 /* ======================== Closure Practice ============================ */
