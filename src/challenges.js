@@ -2,18 +2,41 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
+  /*
+  //should return an array (5ms)
+  //should pass each item into the transform function (3ms)
+  //should call the callback passed to it for each element in array given (2ms)
+  */
+  let newArr = [];
+  newArr = elements.map(nums => {
+    return cb(nums);
+  });
+  return newArr;
 };
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let counter = 0;
+  function innerFunc() {
+    if (counter <= n) {
+      ++counter;
+      return cb();
+    }
+  }
+  return innerFunc();
 };
+limitFunctionCallCount();
+
 
 const cacheFunction = cb => {
   // Should return a funciton that invokes `cb`.
@@ -30,11 +53,20 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  const splitReverseJoin = str.split('').reverse().join('');
+  return splitReverseJoin;
 };
 
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  obj = {
+    name: 'brandi',
+    age: 35,
+    dob: 122082,
+  };
+  let arr = [];
+  arr = Object.getOwnPropertyNames(obj); // turns object properties into array of properties //how to compare array items?
 };
 
 const flatten = elements => {
