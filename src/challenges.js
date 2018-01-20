@@ -19,6 +19,9 @@ const map = (elements, cb) => {
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
+  return () => {
+    return cb();
+  };
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
 };
@@ -35,7 +38,15 @@ const cacheFunction = cb => {
 /* eslint-enable no-unused-vars */
 
 /* ======================== Recursion Practice ============================ */
-const reverseStr = str => {
+const reverseStr = str => { // how in the hell?
+  // if there are no more values, return no more str chars
+  if (str === '') {
+    return '';// ends recursion returns string
+  } else {
+    return reverse(str.charAt(0));
+    // what to call?
+    // call itself, at the first character
+  }
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
 };
