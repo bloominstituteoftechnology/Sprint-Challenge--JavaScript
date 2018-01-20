@@ -19,8 +19,12 @@ const map = (elements, cb) => {
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
-  return () => {
-    return cb();
+  let counterN = 0;
+  return () => { // need to loop n number of times
+    if (counterN < n) {
+      ++counterN;
+      return cb();
+    }
   };
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
@@ -39,14 +43,11 @@ const cacheFunction = cb => {
 
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => { // how in the hell?
-  // if there are no more values, return no more str chars
   if (str === '') {
     return '';// ends recursion returns string
   } else {
     return reverse(str.charAt(0));
-    // what to call?
-    // call itself, at the first character
-  }
+  // if there are no more values, return no more str chars
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
 };
