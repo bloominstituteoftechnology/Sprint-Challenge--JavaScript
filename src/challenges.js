@@ -19,6 +19,7 @@ const map = (elements, cb) => {
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+
 };
 
 const cacheFunction = cb => {
@@ -41,6 +42,20 @@ const reverseStr = str => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  const result = [];
+
+  const _recurse = (innerObj) => {
+    Object.keys(innerObj).forEach((key) => {
+      if(typeof innerObj[key] === 'object') _recurse(innerObj[key]);
+      else result.push(innerObj[key]);
+    });
+  }
+
+  _recurse(obj);
+
+  console.log(result);
+
+  return !!result.reduce((acc, curr) => { return acc === curr ? acc : false });
 };
 
 const flatten = elements => {
