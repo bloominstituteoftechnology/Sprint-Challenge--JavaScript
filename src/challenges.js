@@ -65,8 +65,8 @@ const checkMatchingLeaves = obj => {
   // otherwise return false
   const result = [];
 
-  const recurse = innerObj => {
-    Object.keys(innerObj).forEach(key => {
+  const recurse = (innerObj) => {
+    Object.keys(innerObj).forEach((key) => {
       if (typeof innerObj[key] === 'object') recurse(innerObj[key]);
       else result.push(innerObj[key]);
     });
