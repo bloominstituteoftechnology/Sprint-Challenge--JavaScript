@@ -2,17 +2,32 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
-// Hello World! 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
+  const newArr = [];
+  for (let i = 0; i < elements.length; i++) {
+    newArr.push(cb(elements[i]));
+  }
+return newArr;
 };
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let callCount = 0;
+    return (...args) => {
+    if (callCount === n) {
+    return null;
+  }
+  callCount++;
+  return cb(...args);
+};
 };
 
 const cacheFunction = cb => {
@@ -22,6 +37,13 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const cache = {};
+    return (x) => {
+    const check = Object.prototype.hasOwnProperty.call(cache, x);
+  if (check) return cache[x];
+  cache[x] = cb[x];
+  return cache[x];
+};
 };
 
 /* eslint-enable no-unused-vars */
@@ -40,7 +62,16 @@ const checkMatchingLeaves = obj => {
 const flatten = elements => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
-};
+  let newArr = [];
+    for (let i = 0; i < elements.length; i++) {
+    if (Array.isArray(elements[i])) {
+    newArr = newArr.concat(flatten(elements[i]));
+  } else {
+    newArr.push(elements[i]);
+  }
+}
+  return newArr;
+  };
 
 module.exports = {
   each,
