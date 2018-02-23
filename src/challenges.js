@@ -1,9 +1,14 @@
+// Additional Notes for this Submit:
+//  // I understand each and map well and reproduce them from scratch
+//  // The rest of them, I can rewrite, and explain step by step, BUT there are key things that I do not understand.
+//  // Overall, I feel like I understand everything on a high level, but very little in depth.
+
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
-  for ( let i = 0; i < elements.length; i++) {
-    cb(elements[i]);
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
   }
 };
 
@@ -11,9 +16,10 @@ const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
   const newArr = [];
-  for ( let i = 0; i < elements.length; i++)
-  newArr.push (cb(elements[i]));
-  return newArr
+  for (let i = 0; i < elements.length; i++) {
+    newArr.push(cb(elements[i]));
+  }
+  return newArr;
 };
 
 /* ======================== Closure Practice ============================ */
@@ -26,7 +32,7 @@ const limitFunctionCallCount = (cb, n) => {
   return (...args) => {
     if (count < n) {
       count++;
-      return cb(...args); 
+      return cb(...args);
     }
     return null;
   };
@@ -36,7 +42,7 @@ const limitFunctionCallCount = (cb, n) => {
 // I can explain what is going on, but still don't feel that comfortable with this.
 // Is there a way to do this with a for loop?
 
-const cacheFunction = cb => { 
+const cacheFunction = cb => {
   // Should return a funciton that invokes `cb`.
   // A cache (object) should be kept in closure scope.
   // The cache should keep track of all arguments have been used to invoke this function.
@@ -45,7 +51,7 @@ const cacheFunction = cb => {
   // `cb` should only ever be invoked once for a given set of arguments.
 
   const cache = {};
-  return (input) => {
+  return input => {
     if (Object.prototype.hasOwnProperty.call(cache, input)) return cache[input];
     cache[input] = cb(input);
     return cache[input];
@@ -62,21 +68,18 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
-
-  function reverse( str ) {
-    if ( str.length <= 1 ) {
-      return str;
-    }
-    return reverse( str.substr( 1 ) ) + str[ 0 ];
+  if (str.length <= 1) {
+    return str;
   }
+  return reverseStr(str.substr(1)) + str[0];
 };
 
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
   const array = [];
-  const flatten = (item) => {
-    Object.keys(item).forEach((value) => { // Object flattened one level into an array of strings (same as objects.js) and iterated over
+  const flatten = item => {
+    Object.keys(item).forEach(value => { // Object flattened one level into an array of strings (same as objects.js) and iterated over
       if (typeof item[value] === 'object') { // If item is an object, then it is recursively passed through 'nestedObject'
         flatten(item[value]);
       } else {
@@ -91,12 +94,18 @@ const checkMatchingLeaves = obj => {
     if (array[i] !== memo) {
       return false; // if any of the elements in the array are not equal to array[0], then return false.
     }
-  } return true;
+  }
+  return true;
 };
 
 const flatten = elements => {
-  // Flattens a nested array (the nesting can be to any depth).
-  // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  const flat = [];
+  elements.forEach(item => {
+    if (Array.isArray(item)) {
+      flat.push(...flatten(item));
+    } else flat.push(item);
+  });
+  return flat;
 };
 
 module.exports = {
