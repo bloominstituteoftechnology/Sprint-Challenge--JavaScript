@@ -3,21 +3,33 @@ const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
   // use forEach and arrow
-  // 2 arguments pass in
+  // 2 arguments for func and pass in cb()
   elements.forEach((element, item) => {
     cb(element, item);
   });
 };
+
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
-
+  const newArr = elements.map(values => {
+    return (cb(values));
+  });
+  return newArr;
 };
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let callCount = 0;
+  return (...args) => {
+    if (callCount === n) {
+      return null;
+    }
+    callCount++;
+    return cb(...args);
+  };
 };
 
 const cacheFunction = (cb) => {
