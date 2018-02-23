@@ -10,7 +10,7 @@ const each = (elements, cb) => {
 const map = (elements, cb) => {
   const newArray = [];
   for (let i = 0; i < elements.length; i++) {
-    return newArray.push(cb(elements[i], i));
+    newArray.push(cb(elements[i]))
   }
   return newArray;
 };
