@@ -32,9 +32,9 @@ A closure is essentially a containing environment for reference to data and loca
 
 function localFunc(adj) {
 
-    const name = 'Daniel';
-    
-    console.log(`{$name} is ${adj}') // Logs Daniel is ${adj}
+const name = 'Daniel';
+
+console.log(`{$name} is ${adj}') // Logs Daniel is ${adj}
 }
 
 console.log(name); // Logs nothing because name is locally stored to localFunc
