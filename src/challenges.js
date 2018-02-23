@@ -21,7 +21,17 @@ const map = (elements, cb) => {
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
-  
+  let counter = 0;
+  const limitedCall = (...arg) => {
+    let memo = cb(...arg);
+    if (counter === n) {
+      memo = null;
+    } else {
+      counter++;
+    }
+    return memo;
+  };
+  return limitedCall;
 };
 
 const cacheFunction = (cb) => {
@@ -31,6 +41,18 @@ const cacheFunction = (cb) => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const cache = {};
+  const cacheCall = (arg) => {
+    let ans = null;
+    if (arg in cache) {
+      ans = cache[arg];
+    } else {
+      ans = cb(arg);
+      cache[arg] = ans;
+    }
+    return ans;
+  };
+  return cacheCall;
 };
 
 /* eslint-enable no-unused-vars */
