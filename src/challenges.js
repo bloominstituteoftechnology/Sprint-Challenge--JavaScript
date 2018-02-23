@@ -1,10 +1,21 @@
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
+  const elements = [];
+  for (let i = 0; i < elements.length; i++);
+  elements.each(function(n));
+  cb(n);
+}
+
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
 };
 
 const map = (elements, cb) => {
+  const elements = [1,2,3,4,5,6,7,8];
+  for (let i = 0; i < elements.legth; i++)
+    map.push(cb(elements[])); 
+  }
+  return elements;
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
 };
