@@ -30,12 +30,11 @@ Arrays are special because they act as a data *set*, allowing us to manipulate t
 A closure is essentially a containing environment for reference to data and local variables in relationship to other global functions, variables, etc. And of course I can!!!
 
 
-function localFunc(adj) {
+function localFunc(adj) {                                                                                                 
+const name = 'Daniel';                                                                                                    
+console.log(`{$name} is ${adj}') // Logs Daniel is ${adj}                                                                 
+}                                                                                                                         
 
-const name = 'Daniel';
-
-console.log(`{$name} is ${adj}') // Logs Daniel is ${adj}
-}
 
 console.log(name); // Logs nothing because name is locally stored to localFunc
 
