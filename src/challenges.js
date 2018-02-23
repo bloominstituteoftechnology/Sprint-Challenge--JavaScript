@@ -10,10 +10,9 @@ const each = (elements, cb) => {
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
-  // no idea why this isn't working
   const arr = [];
   for (let i = 0; i < elements.length; i++) {
-    return arr.push(cb(elements[i], i));
+    arr.push(cb(elements[i], i));
   }
   return arr;
 };
@@ -47,6 +46,10 @@ const cacheFunction = (cb) => {
 const reverseStr = (str) => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  str.split('');
+  str.reverse();
+  str.join('');
+  return reverseStr(str);
 };
 
 const checkMatchingLeaves = (obj) => {
