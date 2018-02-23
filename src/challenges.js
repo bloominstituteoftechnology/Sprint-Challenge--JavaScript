@@ -10,7 +10,11 @@ const each = (elements, cb) => {
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
-  const arr = elements.map(cb);
+  //const arr = elements.map(cb);
+  const arr = [];
+  for (let i = 0; i < elements.length; i++) {
+    arr.push(cb(elements[i]));
+  }
 };
 
 /* ======================== Closure Practice ============================ */
@@ -32,12 +36,12 @@ const cacheFunction = cb => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
-  let memo = {};
+  let note = {};
   return (args) => {
-    if (memo === args) {
-      return memo;
+    if (note === args) {
+      return note;
     }
-    memo = args;
+    note = args;
     return cb(args);
   };
 };
@@ -48,6 +52,11 @@ const cacheFunction = cb => {
 const reverseStr = str => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  let result = str.split('');
+  let output = [];
+  if (result === output) return result;
+  output.push(reverseStr(result.reverse().join('')));
+  return output; 
 };
 
 const checkMatchingLeaves = obj => {
