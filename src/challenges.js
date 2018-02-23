@@ -22,6 +22,7 @@ const map = (elements, cb) => {
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
+
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
 };
@@ -39,16 +40,27 @@ const cacheFunction = cb => {
 
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => {
+  
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
 };
 
 const checkMatchingLeaves = obj => {
+
   // return true if every property on `obj` is the same
   // otherwise return false
 };
 
 const flatten = elements => {
+  const newElements = []
+    for (let i = 0; i < arr.length; i++){
+       if (elements[i] === Array) {
+         newElements = flatten(elements[i])
+       }
+       else {
+         newElements.push(elements[i]); 
+       }
+    }
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
 };
