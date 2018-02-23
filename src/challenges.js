@@ -21,10 +21,10 @@ const map = (elements, cb) => {
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
-  let limitCount = 0;
+  let limitCounter = 0;
   return (...args) => {
-    if (limitCount < n) {
-      ++limitCount;
+    if (limitCounter < n) {
+      ++limitCounter;
       return cb(...args);
     }
     return null;
@@ -56,6 +56,20 @@ const checkMatchingLeaves = (obj) => {
 const flatten = (elements) => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  const flattened = [];
+
+  const makeFlat = (arr) => {
+    if(!Array.isArray(arr)) {
+      flattened.push(arr);
+    } else {
+      for (let i = 0; i < arr.length; i++) {
+        makeFlat(arr[i]);
+      }
+    }
+  };
+
+  makeFlat(elements);
+  return flattened;
 };
 
 module.exports = {
