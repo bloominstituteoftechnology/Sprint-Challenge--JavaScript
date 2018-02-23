@@ -14,7 +14,7 @@
    * Object
    * String
 
-⋅⋅⋅Arrays are objects that have indexed values which gives them a specific order. ⋅⋅⋅This makes them very easy to iterate over (using the Array.prototype methods).
+   Arrays are objects that have indexed values which gives them a specific order.     This makes them very easy to iterate over (using the Array.prototype methods).
 
 3. What is closure? Can you code out a quick example of a closure?
 
