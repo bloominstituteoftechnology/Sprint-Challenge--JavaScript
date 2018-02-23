@@ -4,7 +4,7 @@ describe('challenges', () => {
   describe('each', () => {
     it('should invoke cb on each array element', () => {
       let count = 0;
-      challengeMethods.each([1, 2, 3], element => {
+      challengeMethods.each([1, 2, 3], element) => {
         count += element;
       });
       expect(count).toBe(6);
