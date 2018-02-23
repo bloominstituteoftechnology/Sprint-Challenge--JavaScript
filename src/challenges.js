@@ -34,6 +34,17 @@ const cacheFunction = (cb) => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const cache = [];
+  return (...args) => {
+    const keys = Object.keys(cache);
+    const argString = args.toString();
+    if (keys.indexOf(argString) !== -1) {
+      return cache[argString];
+    }
+    const answer = cb(...args);
+    cache[argString] = answer;
+    return answer;
+  };
 };
 
 /* eslint-enable no-unused-vars */
