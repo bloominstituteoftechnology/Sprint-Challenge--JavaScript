@@ -40,7 +40,7 @@ const cacheFunction = (cb) => {
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
  const cache = [];
- 
+
   return (...args) => {
     
     cb();
@@ -53,8 +53,20 @@ const cacheFunction = (cb) => {
 const reverseStr = (str) => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
-
+const reversedArray = [];
+let count = 0;
+let splitArray = [];
+if (count === splitArray.length - 1) return;
+splitArray = str.split('');
+splitArray.forEach(function(item){
+reversedArray.unshift(item);
+count++;
+});
+ return reversedArray.join('').toString();
 };
+
+
+
 
 const checkMatchingLeaves = (obj) => {
   // return true if every property on `obj` is the same
