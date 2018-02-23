@@ -17,11 +17,19 @@ const map = (elements, cb) => {
   return newArray;
 };
 
-/* ======================== Closure Practice ============================ */
-const limitFunctionCallCount = (cb, n) => {
+const newLocal = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  return function closure() {
+    while (n > count) {
+      count++;
+      cb();
+    }
+  };
 };
+/* ======================== Closure Practice ============================ */
+const limitFunctionCallCount = newLocal;
 
 const cacheFunction = (cb) => {
   // Should return a funciton that invokes `cb`.
