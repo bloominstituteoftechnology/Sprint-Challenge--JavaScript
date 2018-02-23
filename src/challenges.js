@@ -70,16 +70,13 @@ const checkMatchingLeaves = (obj) => {
   let sameObj = 0;
   const data = Object.values(obj);
   const shell = data[0];
-  data.forEach((nestedObject) => {
-    if (sameObj === undefined && typeof Object.values !== 'object') {
-      sameObj = obj;
-    }
-    if (nestedObject === shell) {
+  data.forEach((n) => {
+    if (n === shell) {
       return sameObj += 0;
     }
     return sameObj += 1;
   });
-  return (sameObj > 0) ? false : true;
+  return (sameObj > 0);
 };
 
 const flatten = (elements) => {
