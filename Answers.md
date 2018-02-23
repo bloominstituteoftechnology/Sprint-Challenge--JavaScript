@@ -13,7 +13,7 @@ The difference between .forEach and .map primarily exists in regards to transfor
 
 
 
-##Question 2: Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays?
+## Question 2: Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays?
 
 
 5 Types: Number, String, Boolean, Null, Undefined.
@@ -24,7 +24,7 @@ Arrays are special because they act as a data *set*, allowing us to manipulate t
 
 
 
-##Question 3: What is closure? Can you code out a quick example of a closure?
+## Question 3: What is closure? Can you code out a quick example of a closure?
 
 
 A closure is essentially a containing environment for reference to data and local variables in relationship to other global functions, variables, etc. And of course I can!!!
@@ -38,11 +38,7 @@ function localFunc(adj) {
 console.log(name); // Logs nothing because name is locally stored to localFunc
 
 
-##Question 4: Describe the 4 rules of the 'this' keyword
+## Question 4: Describe the 4 rules of the 'this' keyword
 
 
 the 'this' keyword can be used to bind properties and property values to an object depending on the context in which it is invoked. The four fundamental uses of this are implicit binding (dot notation), explicit binding (using .call or .apply), Window binding (generic reference to the global window object), and new binding (binding to the specific new instance of an object created by the new keyword.)
-
-
-
-##Question 5: 
