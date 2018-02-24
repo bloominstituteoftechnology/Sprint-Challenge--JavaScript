@@ -14,11 +14,7 @@ const map = (arr, cb) => {
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
   let count = 0;
-  return (...args) => {
-    if (count === n) return null;
-    count++;
-    return cb(...args);
-  };
+  return (...args) => (count === n ? null : ++count && cb(...args));
 };
 
 const cacheFunction = (cb) => {
@@ -33,12 +29,11 @@ const checkMatchingLeaves = (obj) => {
   let value;
   let flag = true;
 
-  const checkLeaves = (object) => {
-    Object.keys(object).forEach((key) => {
-      if (value === undefined && typeof object[key] !== 'object') return value = object[key];
-      if (typeof object[key] === 'object') return checkLeaves(object[key]);
-      if (object[key] !== value) return flag = false;
-      return;
+  const checkLeaves = (o) => {
+    Object.keys(o).forEach((k) => {
+      if (typeof o[k] === 'object') return checkLeaves(o[k]);
+      if (value === undefined) return value = o[k];
+      if (o[k] !== value) return flag = false;
     });
   };
   checkLeaves(obj);
