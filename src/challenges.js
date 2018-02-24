@@ -22,15 +22,14 @@ const map = (elements, cb) => {
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
-  let callLimit = n;
-  let counter = 0;
-  return (...args) => {
-    for (let i = 0; i <= n; i++){
-    cb();
-    counter++;
+  let count = 0;
+  const myFunction = (...args) => {
+    if (count === n) return null;
+    count++;
+    return cb(...args);
     }
+    return myFunction;
   };
-};
 
 const cacheFunction = (cb) => {
   // Should return a function that invokes `cb`.
@@ -39,12 +38,10 @@ const cacheFunction = (cb) => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
- const cache = [];
-
+  const cache = {};
   return (...args) => {
-    
     cb();
-  }
+  };
 };
 
 /* eslint-enable no-unused-vars */
@@ -53,24 +50,25 @@ const cacheFunction = (cb) => {
 const reverseStr = (str) => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
-const reversedArray = [];
-let count = 0;
-let splitArray = [];
-if (count === splitArray.length - 1) return;
-splitArray = str.split('');
-splitArray.forEach(function(item){
-reversedArray.unshift(item);
-count++;
-});
- return reversedArray.join('').toString();
-};
-
-
-
+  const reversedArray = [];
+  let count = 0;
+  let splitArray = [];
+  if (count === splitArray.length - 1) return;
+  splitArray = str.split('');
+  splitArray.forEach(function(item) {
+  reversedArray.unshift(item);
+  count++;
+  });
+  return reversedArray.join('').toString();
+  };
 
 const checkMatchingLeaves = (obj) => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  let keys = Object.keys(obj);
+  keys.forEach(function(){
+
+  })
 };
 
 const flatten = (elements) => {
