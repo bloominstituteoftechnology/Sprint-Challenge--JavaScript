@@ -12,7 +12,7 @@
 4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
 
 ## Initializing Project - We have set up a testing environment for you using `Jest`
-* Fork/Clone this project into a directory on your machine.
+* Fork/Clone this project into a directory on your machine. ok
 * `cd` into your forked local copy.
 * notice there is a `package.json` file included. remember that a `package.json` file is like a map of instructions for when you run `npm install`
 * run `npm install` to download all the dependancies you need for this project.
