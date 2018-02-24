@@ -1,3 +1,7 @@
+// TODO: Get checkMatchingLeaves to check nested properties.
+// TODO: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/* Completed! WOOOOO. */
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
   for (let i = 0; i < elements.length; i++) {
@@ -14,6 +18,7 @@ const map = (elements, cb) => {
   return newArray;
 };
 
+/* Completed! WOOOOO. */
 /* ======================== Closure Practice ============================ */
 
 const limitFunctionCallCount = (cb, n) => {
@@ -27,7 +32,6 @@ const limitFunctionCallCount = (cb, n) => {
   };
 };
 
-// -- Fix syntax
 const cacheFunction = cb => {
   const cache = {};
   return input => {
@@ -37,32 +41,15 @@ const cacheFunction = cb => {
   };
 };
 
-/* eslint-enable no-unused-vars */
-
+/* SO CLOSE TO COMPLETION, I CAN TASTE IT ;____; */
 /* ======================== Recursion Practice ============================ */
 const reverseStr = str => {
   if (str === '') return '';
   return reverseStr(str.substr(1)) + str.charAt(0);
 };
 
-// Make beautiful!
-const checkMatchingLeaves = obj => {
-  const index = 0;
-  const objArray = Object.values(obj);
-
-  const testFunction = (arr, i) => {
-    while (i < arr.length - 1) {
-      if (arr[i] !== arr[++i]) {
-        return false;
-      }
-      return testFunction(arr, i++);
-    }
-    return true;
-  };
-
-  return testFunction(objArray, index);
-};
-
+// FRANNKKKK. I swapped flattten and checkMatchingLeaves
+// so that I could use flatten in checkMatchingLeaves. :D
 const flatten = elements => {
   let outPut = [];
   each(elements, num => {
@@ -73,6 +60,25 @@ const flatten = elements => {
   });
   return outPut;
 };
+
+// LOGIC, WHY ;_;
+const checkMatchingLeaves = obj => {
+  const flattenedArray = flatten(Object.values(obj));
+
+  const testFunction = (arr, i) => {
+    while (i < arr.length - 1) {
+      if (arr[i] !== arr[++i]) {
+        return false;
+      }
+      return testFunction(arr, i++);
+    }
+    return true;
+  };
+  return testFunction(flattenedArray, 0);
+};
+
+
+/* eslint-enable no-unused-vars */
 
 module.exports = {
   each,
