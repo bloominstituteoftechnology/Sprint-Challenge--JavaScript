@@ -22,14 +22,15 @@ A closure is when you access data outside of the local scope of an anonymous fun
 #### Example code for a closure
 
 ```
-function sayHello() {
-    const name = "Rob";
-    const greeting = () => {
-      return `${name} says hello!`;
-    };
+function sayHello(name) {
+    const message = `${name} says hello!`;
+    const greet = () => {
+      console.log(message);
+    }
+    greet();
   }
 ```
-sayHello() would then print "Rob says hello", accessing the name variable even though it is not defined within the greeting function.
+sayHello('Rob') would then print "Rob says hello!", accessing the message variable even though it is not defined within the greet function.
 
 #### 4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
 
