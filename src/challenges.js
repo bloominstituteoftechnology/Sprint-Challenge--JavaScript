@@ -54,17 +54,25 @@ const cacheFunction = (cb) => {
 const reverseStr = (str) => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  if (!str) return str;
+  return str.slice(str.length - 1).concat(reverseStr(str.slice(0, str.length - 1)));
 };
 
 const checkMatchingLeaves = (obj) => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  if (Object.entries(obj)[0] ) return false;
+  return ;
 };
 
 const flatten = (elements) => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  if (Array.isArray(elements[0])) return elements;
+  return elements.concat(flatten(elements.pop()));
 };
+const arr = [1, [2], [[3]], [[[4]]]];
+flatten(arr);
 
 module.exports = {
   each,
