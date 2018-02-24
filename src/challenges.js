@@ -35,8 +35,9 @@ const cacheFunction = (cb) => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const cache = {};
+
   return (...args) => {
-    const cache = {};
     if (cache[args] !== undefined) return cache;
     cache[args] = args;
     return cb(...args);
@@ -56,10 +57,31 @@ const reverseStr = (str) => {
 const checkMatchingLeaves = (obj) => {
   // return true if every property on `obj` is the same
   // otherwise return false
-  const pairs = Object.entries(obj);
+  let answer = true;
+  let val = 0;
 
-  if (JSON.stringify(pairs[0]) === JSON.stringify(pairs[1])) delete obj[pairs[1][0]];
-  return checkMatchingLeaves(obj);
+  const checkLeaves = (obj1) => {
+    const daKeys = Object.keys(obj1);
+
+    daKeys.forEach((ele) => {
+      if (val === 0 && typeof ele !== 'object') {
+        val = obj1[ele];
+        return undefined;
+      }
+      if (typeof obj1[ele] === 'object') {
+        return checkLeaves(obj1[ele]);
+      }
+      if (obj1[ele] !== val) {
+        answer = false;
+        return undefined;
+      }
+
+      return undefined;
+    });
+  };
+
+  checkLeaves(obj);
+  return answer;
 };
 
 const flatten = (elements) => {
