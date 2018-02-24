@@ -23,7 +23,7 @@ A closure is when you access data outside of the local scope of an anonymous fun
 
 ```
 function sayHello() {
-    let name = "Rob";
+    const name = "Rob";
     const greeting = () => {
       return `${name} says hello!`;
     };
