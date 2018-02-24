@@ -9,7 +9,7 @@
 
 - because .map returns an array, you can chain functional methods like filter and reduce.
 
-#2. data types
+#2. data types, example, Array thought
 - Number
 - String
 - Boolean
@@ -17,6 +17,10 @@
 - Undefined
 - Object
 - Symbol
+
+example of a string is 'edward'
+
+Arrays are a collection of things stored as indexed items in the collection, example is const letters = ['a','b','c']
 
 #3 Closure
 A way a function can access variables from within, also from the outer function that enclose it and also the global scope

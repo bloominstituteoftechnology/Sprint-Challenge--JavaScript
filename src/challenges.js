@@ -11,8 +11,8 @@ const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
   const newArr = [];
-  each(elements, (element) => {
-    newArr.push(cb(element));
+  each(elements, (element, index) => {
+    newArr.push(cb(element, index));
   });
   return newArr;
 };
@@ -36,12 +36,20 @@ const cacheFunction = (cb) => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
-  let memo = {};
+  /* let memo = {};
 
   return (args) => {
     if (memo === args) return memo;
     memo = args;
     return cb(args);
+  };
+  */
+  const cache = {};
+
+  return (input) => {
+    if (Object.prototype.hasOwnProperty.call(cache, input)) return cache[input];
+    cache[input] = cb(input);
+    return cache[input];
   };
 };
 
@@ -61,21 +69,37 @@ const reverseStr = (str) => {
   return reverseStr(str.substr(1)) + str.charAt(0);
 };
 
-const checkMatchingLeaves = (obj) => {
+const checkMatchingLeaves = (parentObj) => {
   // return true if every property on `obj` is the same
   // otherwise return false
-  const bol = obj.filter((key) => {
-    if (typeof obj[key] === 'object') checkMatchingLeaves(obj[key]);
-    return key === obj[key];
-  });
-
-  return bol;
+  let boolFlag = true;
+  let val = 0;
+  const checkNode = (obj) => {
+    const objKeys = Object.keys(obj);
+    objKeys.forEach((objItem) => {
+      if (val === 0 && typeof objItem !== 'object') {
+        val = obj[objItem];
+        return undefined;
+      }
+      if (typeof obj[objItem] === 'object') {
+        return checkNode(obj[objItem]); // recursive function
+      }
+      if (obj[objItem] !== val) {
+        boolFlag = false;
+        return undefined;
+      }
+      return undefined;
+    });
+  };
+  checkNode(parentObj); // init function
+  return boolFlag;
 };
 
 const flatten = (elements) => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
-  const newArr = [];
+  // const newArr = [];
+  let newArr = [];
 
   /*
   each(elements, (element, index) => {
@@ -87,12 +111,28 @@ const flatten = (elements) => {
   });
   */
 
-  each(elements, (element) => {
-    if (Array.isArray(element)) {
+  each(elements, (element, index) => {
+    /* if (Array.isArray(element)) {
       const nestedArray = flatten(element);
       each(nestedArray, (nestedItem) => {
         newArr.push(nestedItem);
       });
+    } else {
+      newArr.push(element);
+    }
+    */
+    if (Array.isArray(element)) {
+      // double comments superior to block comments, double comments Begins
+      // const nestedArray = flatten(element);
+      /* each(nestedArray, (nestedItem) => {
+        newArr.push(nestedItem);
+      });
+      */
+      // newArr = newArr.concat(flatten(element)); // can you re-write this into a spread operator syntax?
+      // Double comments ends
+      // The is after double comments
+      const nestedArray = flatten(element, index);
+      newArr = newArr.concat(flatten(element, index));
     } else {
       newArr.push(element);
     }
