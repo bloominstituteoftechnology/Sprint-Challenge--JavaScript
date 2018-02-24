@@ -73,7 +73,7 @@ const checkMatchingLeaves = (obj) => {
     if (values[i] === 1) {
       flag = true;
     } else if (typeof values[i] === 'object') {
-      checkMatchingLeaves(values[i]);
+      return checkMatchingLeaves(values[i]);
     } else {
       flag = false;
     }
