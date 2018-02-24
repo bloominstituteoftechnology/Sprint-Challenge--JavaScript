@@ -68,59 +68,23 @@ const reverseStr = (str) => {
 const checkMatchingLeaves = (obj) => {
   // return true if every property on `obj` is the same
   // otherwise return false
-  bool = true;
-  let lastValue;
-  objectLength = Object.values(obj);
-  objectKeys = Object.keys(obj);
-  for(let i = 0; i < objectKeys; i++) {
-    if (typeof(obj[objectKeys[i]]) === "object") checkMatchingLeaves(obj[objectKeys[i]]);
-    else if (typeof(obj[objectKeys[i]]) === "undefined")
-    //if(Object.prototype.toString.call(objectKeys[i]) === "Object")
-  }
-
-  //return bool;
-  //return Object.prototype.toString.call(obj[objectKeys[0]]);
-  return typeof(obj[objectKeys[3]]) === "object";
+  let allMatching = true;
+  let value;
+  const checkLeaves = (object) => {
+    const objectKeys = Object.keys(object);
+    objectKeys.forEach((key) => {
+      if (value === undefined && typeof key !== 'object') {
+        value = object[key];
+        return;
+      }
+      if (typeof (object[key]) === 'object') return checkLeaves(object[key]);
+      if (object[key] !== value) return allMatching = false;
+      return;
+    });
+  };
+  checkLeaves(obj);
+  return allMatching;
 };
-
-const tree1 = {
-        x: 1,
-        y: 1,
-        z: 1,
-        xa: {
-          xx: 1,
-          xy: 1,
-          xz: 1,
-          zz: {
-            a: {
-              b: {
-                z: 1,
-              },
-            },
-          },
-        },
-      };
-const tree2 = {
-  x: 1,
-  y: 1,
-  z: 1,
-  xa: {
-    xx: 1,
-    xy: 1,
-    xz: 1,
-    zz: {
-      a: {
-        b: {
-          z: 2,
-        },
-      },
-    },
-  },
-  r: 1,
-};
-
-console.log(checkMatchingLeaves(tree1));
-console.log(checkMatchingLeaves(tree2));
 
 const flatten = (elements) => {
   // Flattens a nested array (the nesting can be to any depth).
