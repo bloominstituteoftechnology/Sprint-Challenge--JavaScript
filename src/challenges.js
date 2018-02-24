@@ -65,16 +65,16 @@ const flatten = elements => {
 const checkMatchingLeaves = obj => {
   const flattenedArray = flatten(Object.values(obj));
 
-  const testFunction = (arr, i) => {
+  const leafTest = (arr, i) => {
     while (i < arr.length - 1) {
       if (arr[i] !== arr[++i]) {
         return false;
       }
-      return testFunction(arr, i++);
+      return leafTest(arr, i++);
     }
     return true;
   };
-  return testFunction(flattenedArray, 0);
+  return leafTest(flattenedArray, 0);
 };
 
 
