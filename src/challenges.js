@@ -50,7 +50,8 @@ const cacheFunction = (cb) => {
 const reverseStr = (str) => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
-};
+  return (str ? reverseStr(str.substring(1)) + str.charAt(0) : str);
+}
 
 const checkMatchingLeaves = (obj) => {
   // return true if every property on `obj` is the same
