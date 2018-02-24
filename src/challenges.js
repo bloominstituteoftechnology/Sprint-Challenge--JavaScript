@@ -68,19 +68,8 @@ const reverseStr = (str) => {
 const checkMatchingLeaves = (obj) => {
   // return true if every property on `obj` is the same
   // otherwise return false
-  const result = [];
-  let dupCheck = true;
-  const recurse = (innerObj) => {
-    Object.keys(innerObj).forEach((key) => {
-      if (typeof innerObj[key] === 'object') recurse(innerObj[key]);
-      else {
-        result.push(innerObj[key]);
-        if (innerObj[key] !== result[0]) dupCheck = false;
-      }
-    });
-  };
-  recurse(obj);
-  return dupCheck;
+  let value;
+  const flag = true;
 };
 
 const flatten = (elements) => {
