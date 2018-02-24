@@ -51,7 +51,11 @@ const cacheFunction = (cb) => {
 /* eslint-enable no-unused-vars */
 
 /* ======================== Recursion Practice ============================ */
-const reverseStr = str => (str ? reverseStr(str.substr(1)) + str[0] : str);
+const reverseStr = (str) => {
+  if (!str) {
+    return str;
+  } return reverseStr(str.substr(1)) + str[0];
+};
 
 const checkMatchingLeaves = (obj) => {
   // return true if every property on `obj` is the same
