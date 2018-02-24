@@ -20,6 +20,13 @@ const map = (elements, cb) => {
 
 /* ======================== Closure Practice ============================ */
 const limitFunctionCallCount = (cb, n) => {
+let count = 0;
+const checker = (...args) => {
+  if(++count < n) {
+    return cb(...args);
+  } else return null;
+}
+return checker;
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
 };
