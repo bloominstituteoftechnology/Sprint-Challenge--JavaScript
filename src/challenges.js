@@ -23,19 +23,11 @@ const limitFunctionCallCount = (cb, n) => {
 
 const cacheFunction = (cb) => {
   const cache = {};
-  return (arg) => {
-    if (arg in cache) return cache[arg];
-    return cache[arg] = cb(arg);
-  };
+  return arg => (arg in cache ? cache[arg] : cache[arg] = cb(arg));
 };
-
-/* eslint-enable no-unused-vars */
 
 /* ======================== Recursion Practice ============================ */
-const reverseStr = (str) => {
-  if (str.length === 0) return '';
-  return reverseStr(str.substr(1, str.length)) + str[0];
-};
+const reverseStr = str => (str ? reverseStr(str.substr(1)) + str[0] : str);
 
 const checkMatchingLeaves = (obj) => {
   let value;
@@ -53,11 +45,7 @@ const checkMatchingLeaves = (obj) => {
   return flag;
 };
 
-
-const flatten = arr => arr.reduce((a, b) => {
-  if (Array.isArray(b)) return a.concat(flatten(b));
-  return a.concat(b);
-}, []);
+const flatten = arr => arr.reduce((a, b) => (Array.isArray(b) ? a.concat(flatten(b)) : a.concat(b)), []);
 
 module.exports = {
   each,
