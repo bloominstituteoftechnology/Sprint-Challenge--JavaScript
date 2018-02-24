@@ -4,7 +4,7 @@ describe('challenges', () => {
   describe('each', () => {
     it('should invoke cb on each array element', () => {
       let count = 0;
-      challengeMethods.each([1, 2, 3], element => {
+      challengeMethods.each([1, 2, 3], (element) => {
         count += element;
       });
       expect(count).toBe(6);
@@ -19,7 +19,7 @@ describe('challenges', () => {
     it('should call the callback passed to it for each element in array given', () => {
       const callBackMockFn = jest.fn(); // this function is going to act as your callback, if it's not called your test will fail.
       expect(callBackMockFn.mock.calls.length).toBe(0);
-      challengeMethods.each([1, 2, 3, 'four'], callBackMockFn);
+      challengeMethods.each([1, 2, 3, 'four'], (callBackMockFn));
       expect(callBackMockFn.mock.calls.length).toBe(4);
     });
   });
