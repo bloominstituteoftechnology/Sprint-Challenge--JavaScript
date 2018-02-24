@@ -34,4 +34,20 @@ sayHello('Rob') would then print "Rob says hello!", accessing the message variab
 
 #### 4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
 
-The four rules of the this keyword basically refer to how you control the context of 'this'. The first principle is the Window/Global Object binding, which is a reference to the global environment. The second is called the Implicit binding, which is where you place this before a function and precede the function with a dot. (which then binds it implicitly to the property of the object being passed into the function) The third is called the New binding, which is specific to when this is used with a constructor function to create and return an object. The fourth and final principle of this is the Explicit binding, which is where you use the call/apply/bind methods to explicitly reference a particular object (which you pass into the method parameter).
+The four rules of the this keyword basically refer to how you control the context of 'this'.
+
+#### Window/Global Object binding
+
+The first principle is the Window/Global Object binding, which is a reference to the global environment.
+
+#### Implicit binding
+
+The second is called the Implicit binding, which is where you place this before a function and precede the function with a dot. (which then binds it implicitly to the property of the object being passed into the function)
+
+#### New binding
+
+The third is called the New binding, which is specific to when this is used with a constructor function to create and return an object.
+
+#### Explicit binding
+
+The fourth and final principle of this is the Explicit binding, which is where you use the call/apply/bind methods to explicitly reference a particular object (which you pass into the method parameter).
