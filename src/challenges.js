@@ -49,6 +49,9 @@ const reverseStr = (str) => {
   return reverseStr(str.substring(1)) + str.charAt(0);
 };
 
+
+// FULL DISCLOSURE - THIS IS NOT MY ORIGINAL WORK AND I DO NOT TAKE CREDIT FOR THE SOLUTION BELOW
+
 const checkMatchingLeaves = (obj) => {
   // return true if every property on `obj` is the same
   // otherwise return false
