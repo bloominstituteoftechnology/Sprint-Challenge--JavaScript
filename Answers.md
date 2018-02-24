@@ -21,7 +21,8 @@ A closure is when you access data outside of the local scope of an anonymous fun
 
 #### Example code for a closure
 
-```function sayHello() {
+```
+function sayHello() {
     let name = "Rob";
     const greeting = () => {
       return `${name} says hello!`;
