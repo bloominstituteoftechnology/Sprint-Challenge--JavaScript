@@ -1,12 +1,18 @@
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
-  // This only needs to work with arrays.
+  // This only needs to work with arrays
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
-
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
+  const mapped = elements.map((element) => {
+    return cb(element);
+  });
+  return mapped;
 };
 
 /* ======================== Closure Practice ============================ */
@@ -15,7 +21,7 @@ const limitFunctionCallCount = (cb, n) => {
   // The returned function should only allow `cb` to be invoked `n` times.
 };
 
-const cacheFunction = cb => {
+const cacheFunction = (cb) => {
   // Should return a funciton that invokes `cb`.
   // A cache (object) should be kept in closure scope.
   // The cache should keep track of all arguments have been used to invoke this function.
@@ -27,19 +33,34 @@ const cacheFunction = cb => {
 /* eslint-enable no-unused-vars */
 
 /* ======================== Recursion Practice ============================ */
-const reverseStr = str => {
+const reverseStr = (str) => {
   // reverse str takes in a string and returns that string in reversed order
+  let newString = '';
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  for (let i = str.length - 1; i < 0; i--) {
+    newString += str[i];
+  }
+  return newString;
 };
+reverseStr();
 
-const checkMatchingLeaves = obj => {
+const checkMatchingLeaves = (obj) => {
   // return true if every property on `obj` is the same
   // otherwise return false
+ if (Object.keys(obj) === Object.value(obj) {
+   return true;
+ }
+ return false;
 };
 
-const flatten = elements => {
+const flatten = (elements) => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  const flattenarr = elements.reduce((acc, item) => {
+    if (Array.isArray(item)) return acc.concat(flatten(item));
+    return acc.concat(item);
+  });
+  return flattenarr;
 };
 
 module.exports = {
