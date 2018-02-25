@@ -20,3 +20,6 @@
    as its own. A closure has access to variables in three scope chains: its own scope, the outer function's 
    scope, and the global scope.
 4. Describe the four rules of the `this` keyword. 
+   1. In the global scope, `this` will always refer to the window or console object.
+   2. When a function is called by a preceding dot, the object before that dot is `this`.
+   3. 
