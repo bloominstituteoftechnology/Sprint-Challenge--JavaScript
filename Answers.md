@@ -7,5 +7,13 @@
    `.map` on the other hand, also executes a provided function for every item in the array but returns 
     a completely new array with this data mapped to it. 
 2. Name five different Types in JavaScript. A Type is something that can represent data. What is so special about arrays?
+   -Booleans
+   -Objects
+   -Strings
+   -Numbers
+   -Arrays
+   Arrays are special because they allow us to hold multiple values inside of one variable. Furthermore, arrays
+   are mutable objects and have all sorts of useful methods attached to them that allow us to quickly traverse,
+   search, and update them.
 3. What is closure? Can you code out a quick example of a closure?
 4. Describe the four rules of the `this` keyword. 
