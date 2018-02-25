@@ -17,6 +17,6 @@
    search, and update them.
 3. What is closure? Can you code out a quick example of a closure?
    A closure is a function inside another function that has access to the outer function's variables as well
-   as its own. A closure has three scope chains: its own scope, the outer function's scope, and the global 
-   scope.
+   as its own. A closure has access to variables in three scope chains: its own scope, the outer function's 
+   scope, and the global scope.
 4. Describe the four rules of the `this` keyword. 
