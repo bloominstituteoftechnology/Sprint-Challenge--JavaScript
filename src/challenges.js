@@ -2,11 +2,20 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
 
+// from solution video
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
+  const newArray = [];
+  each(elements, (el, i) => {
+    return newArray.push(cb(el, i));
+  });
+  return newArray;
 };
 
 /* ======================== Closure Practice ============================ */
@@ -22,6 +31,13 @@ const cacheFunction = (cb) => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  const cache = {};
+  return (x) => {
+    const check = Object.prototype.hasOwnProperty.call(cache, x);
+    if (check) return cache[x];
+    cache[x] = cb(x);
+    return cache[x];
+  };
 };
 
 /* eslint-enable no-unused-vars */

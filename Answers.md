@@ -18,16 +18,17 @@
 .map returns a new array of the same size.
 
 2. 5 Data Types: number, string, boolean, object, undefined
+    Arrays organize data in tidy formats, allowing them to be manipulated in many ways.
 
 3. A closure is when a function references variable(s) outside of its scope.
 i.e.
 
-const counter = () => {
-    let count = 0;
-    return () => {
-        count++;
-        return count;
-    };
-};
+```const value = 'hello!';
+const returnValue = () => value;
+console.log(returnValue()); // hello!``` 
 
 4. this keyword:
+    window binding: bound to the window scope, i.e. global
+    implicit binding: binds word appended to the right of the period to 
+    new binding: bound to an object being created from a function, declared with 'new'
+    explicit binding: bounds to Object passed into .call or .apply function
