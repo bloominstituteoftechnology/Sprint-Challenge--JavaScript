@@ -52,11 +52,26 @@ const cacheFunction = (cb) => {
 const reverseStr = (str) => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  if (str) return reverseStr(str.substr(1)) + str[0];
+  return str;
 };
 
 const checkMatchingLeaves = (obj) => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  let tmp;
+  let match = true;
+
+  const checkLeaves = (obj) => {
+    Object.entries(obj).forEach((pair) => {
+      const [key, value] = pair;
+      if (typeof  value === 'object') checkLeaves(value);
+      else if (tmp === undefined) tmp = value;
+      else if(tmp != value) match = false;
+    });
+  };
+  checkLeaves(object);
+  return match;
 };
 
 const flatten = (elements) => {
