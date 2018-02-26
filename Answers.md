@@ -12,9 +12,9 @@ Five Data types in Javascript are **Boolean**, **Number**, **Null**, **String**,
 
 3. What is closure? Can you code out a quick example of a closure?
 
-I still need to go back over closure, I have missed much this week and need to review video lesson demos, finish assignments, and study concepts more thoroughly. I wouldn't feel right just winging closure when I feel shaky on coherently expressing my understanding of the topic. :-)
+a closure is when a function is enclosed within another function and then called, either through a return or another function, outside that function from within its function "enclosure", so to speak. A quick example of closure:
+
+
 
 
 4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
-
-See above, need to go over these to know them well enough.
