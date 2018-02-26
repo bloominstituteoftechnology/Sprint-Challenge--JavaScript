@@ -14,7 +14,14 @@ Five Data types in Javascript are **Boolean**, **Number**, **Null**, **String**,
 
 a closure is when a function is enclosed within another function and then called, either through a return or another function, outside that function from within its function "enclosure", so to speak. A quick example of closure:
 
+const mySum = (a, b) => {
+  return {
+    sum: () => a + b;
+  };
+};
 
+mySum(5, 6).sum();
 
+//should return 11
 
 4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
