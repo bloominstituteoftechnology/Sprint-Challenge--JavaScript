@@ -23,4 +23,4 @@
    1. In the global scope, `this` will always refer to the window or console object.
    2. When a function is called by a preceding dot, the object before that dot is `this`.
    3. In a constructor function, `this` refers to the instance of the object created.
-   4. 
+   4. When the `call` or `apply` methods are used, `this` is explicitly defined.
