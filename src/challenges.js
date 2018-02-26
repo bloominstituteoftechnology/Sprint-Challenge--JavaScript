@@ -15,11 +15,12 @@ const map = (elements, cb) => {
 const limitFunctionCallCount = (cb, n) => {
 let count = 0;
 return (...args) => {
-  if (count < n) {
+  if (count === n) {
+    return null;
+  }
     count++;
     return cb(...args);
-  } return null;
-};
+  };
 };
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
