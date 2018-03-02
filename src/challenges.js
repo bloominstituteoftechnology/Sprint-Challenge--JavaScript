@@ -52,7 +52,17 @@ return str.split('').reverse().join(''); };
 
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
-  // otherwise return false
+  const leaves = [];
+  const checkMatching = (object) => {
+  Object.keys(object).forEach(key => {
+  if (key === object(key)) {
+  checkMatching(key);
+  } else { 
+  leaves.push(key);
+  });
+  };
+  checkMatching(obj);
+  return leaves.every(x => x === leaves[0]);
 };
 
 const flatten = elements => {
