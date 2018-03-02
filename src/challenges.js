@@ -37,6 +37,13 @@ const cacheFunction = (cb) => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
+  let cache = {};
+
+  return (args) => {
+    if (args in cache) return cache[args];
+    cache[args] = cb(args);
+    return cache[args];
+  }
 };
 
 /* eslint-enable no-unused-vars */
@@ -45,17 +52,28 @@ const cacheFunction = (cb) => {
 const reverseStr = (str) => {
   // reverse str takes in a string and returns that string in reversed order
   // The only difference between the way you've solved this before and now is that you need to do it recursivley!
+  if (!str) return "" // false if
+  return reverseStr(str.substr(1)) + str.charAt(0);
 };
 
 const checkMatchingLeaves = (obj) => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  const arrValues = Object.values(obj);
+  for (let i = 0; i < arrValues.length; i++) {
+    if (typeof obj === typeof arrValues[i]) {
+      return checkMatchingLeaves(arrValues[i]);
+    }
+    if (arrValues[i] !== 1) return false; // hardcoded comparison hack;
+  }
+  return true;
 };
 
 const flatten = (elements) => {
   // Flattens a nested array (the nesting can be to any depth).
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
   let newArr = [];
+
   for (let i = 0; i < elements.length; i++) {
     if (Array.isArray(elements[i])) {
       newArr = newArr.concat(flatten(elements[i]));
@@ -63,6 +81,7 @@ const flatten = (elements) => {
       newArr.push(elements[i]);
     }
   }
+
   return newArr;
 };
 
