@@ -19,7 +19,7 @@ Type 5: Objects: a set of key:value pairs; unlike Arrays, Objects are not ordere
 
 3.  What is closure? Can you code out a quick example of a closure?
 
-A closure is an inner-function that has access to variables defined outside of its function scope. A closure has access to variable in its inner scope (variables defined within it's own curly brackets), access to variables defined on the outer-calling function and the programs global scope variables.
+A closure is an inner-function that has access to variables defined outside of its function scope. A closure has access to variables defined in its inner scope (variables defined within its own curly brackets), access to variables defined on the outer-calling function and the programs global scope variables.
 
 let count = 0;
 
@@ -34,3 +34,8 @@ increment();
 console.log(count) // 1
 
 4.  Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
+Principle 1, Global binding: When invoked in the global scope, this will refer to the Window/Global Object
+Principle 2, Implicit binding: When invoked by a function called with a preeceding dot, this will refer to the object before the dot.
+Principle 3, New binding: When invoked by the new keyword, this will refer to the instantiated object.
+Principle 4, Explicit binding: When invoked by .call or .apply, this refers to the obj argument passed.
+
