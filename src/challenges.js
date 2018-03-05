@@ -44,7 +44,7 @@ const cacheFunction = (cb) => {
   return arg => (arg in cache ? cache[arg] : cache[arg] = cb(arg));
 };
 
-// b) solution using on operator
+// b) solution using in operator
 // const cacheFunction = (cb) => {
 //   const cache = {};
 //   return (arg) => {
@@ -100,8 +100,8 @@ const checkMatchingLeaves = (object) => {
 //   return match;
 // };
 
-// a) solution using reduce and ternary operator
-const flatten = arr => arr.reduce((a, b) => (Array.isArray(b) ? a.concat(flatten(b)) : a.concat(b)), []);
+// a) solution using reduce, spread, ternary operator
+const flatten = arr => arr.reduce((a, c) => (Array.isArray(c) ? [...a, ...flatten(c)] : [...a, c]), []);
 
 // b) solution using for loop
 // const flatten = (arr) => {
