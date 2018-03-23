@@ -10,6 +10,7 @@ Name five different Types in JavaScript. A Type is something that can represent 
 -strings
 -Null
 -undefined
+-Arrays can hold all data types
 What is closure? Can you code out a quick example of a closure?
 -closure relates to the scope of a variable
 const counter = () => {
