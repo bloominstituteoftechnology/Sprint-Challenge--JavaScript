@@ -32,6 +32,7 @@ const counter = () => {
     count++;
     return count;
   };
+  const newCounter = counter();
 };
 newCounter(); // 1
 newCounter(); // 2
