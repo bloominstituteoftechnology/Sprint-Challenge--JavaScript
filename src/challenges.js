@@ -12,7 +12,6 @@ const each = (elements, cb) => {
   // This only needs to work with arrays.
 };
 
-
 const map = (elements, cb) => {
   const newArr = [];
   for (let i = 0; i < elements.length; i++) {
@@ -34,7 +33,7 @@ const counter = () => {
   let count = 0;
   return () => {
     count++;
-    return count;
+      return count;
   };
   // Return a function that when invoked increments and returns a counter variable.
   // Example: const newCounter = counter();
@@ -52,7 +51,7 @@ const limitFunctionCallCount = (cb, n) => {
       return null;
     }
     limit += 1;
-    return cb(...args);
+      return cb(...args);
   };
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
@@ -121,12 +120,10 @@ class CuboidMaker {
     this.length = dimensions.length;
     this.width = dimensions.width;
     this.height = dimensions.height;
-    }
-
+  }
   volume() {
     return `Volume: ${this.length * this.width * this.height}`;
   }
-
   surfaceArea() {
     return `SurfaceArea: ${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
   }
@@ -136,13 +133,14 @@ class CuboidMaker {
 
 class Cube extends CuboidMaker {
   constructor(dimensions) {
-    super(dimension)
+    super(dimensions)
     this.cubeVolume = dimensions.cubeVolume;
     this.cubeSurfaceArea = dimensions.cubeSurfaceArea;
-    }
+  }
   cubeVolume() {
     return `${this.length * this.width * this.height}`;
-  cubeSurfaceArea()
+  }
+  cubeSurfaceArea() {
     return `${6 * (this.length + this.width)}`;
   }
 }
@@ -154,7 +152,7 @@ class Cube extends CuboidMaker {
 
 // Create a new cube object that has equal values for length, width, and height 
 
-const cube = new CuboidMaker({
+const cube = new Cube({
   length: 2,
   width: 2,
   height: 2,
@@ -169,7 +167,6 @@ const cube = new CuboidMaker({
 // console.log(cube.surfaceArea()); // 24
 
 /* ======================== Stretch Challenges ============================ */
-
 
 // Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax
 
@@ -191,7 +188,7 @@ function Cube(dimensions) {
   CuboidMaker.call(this, dimensions);
 }
 
-Cube.prototype = Object.create(Cube.prototype);
+Cube.prototype = Object.create(CuboidMaker.prototype);
 
 Cube.prototype.cubeVolume = function() {
   return `cubeVolume: ${this.length * this.width * this.height}`;
@@ -207,7 +204,7 @@ const cuboid = new CuboidMaker({
   height: 5,
 });
 
-const cube = new CuboidMaker({
+const cube = new Cube({
   length: 2,
   width: 2,
   height: 2,
@@ -221,6 +218,53 @@ const cube = new CuboidMaker({
 
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
+
+class CuboidMaker {
+  constructor(dimensions) {
+    this.length = dimensions.length;
+    this.width = dimensions.width;
+    this.height = dimensions.height;
+  }
+  volume() {
+    return `Volume: ${this.length * this.width * this.height}`;
+  }
+  surfaceArea() {
+    return `SurfaceArea: ${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
+  }
+}
+
+class Cube extends CuboidMaker {
+  constructor(dimensions) {
+    super(dimensions)
+    this.cubeVolume = dimensions.cubeVolume;
+    this.cubeSurfaceArea = dimensions.cubeSurfaceArea;
+    this.isCube = dimensions.isCube;
+  }
+  cubeVolume() {
+    return `${this.length * this.width * this.height}`;
+  }
+  cubeSurfaceArea() {
+    return `${6 * (this.length + this.width)}`;
+  }
+  checkIfCube() {
+    if(this.isCube){
+      return 'We have a cube!';
+    }
+  }
+}
+
+const cuboid = new CuboidMaker({
+  length: 4,
+  width: 5,
+  height: 5,
+});
+
+const cube = new Cube({
+  length: 2,
+  width: 2,
+  height: 2,
+  isCube: true
+});
 
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
