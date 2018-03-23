@@ -85,7 +85,7 @@ const limitFunctionCallCount = (cb, n) => {
 
 // Cuboids.prototype.surfaceArea = function () {
 //   let area = 1;
-//   area = 2 * ((this.length * this.heigh) + (this.length * this.heigh) + (this.width * this.heigh));
+//   area = 2 * ((this.length * this.width ) + (this.length * this.heigh) + (this.width * this.heigh));
 //   return area;
 // };
 // const cuboid = new Cuboids({
@@ -115,7 +115,7 @@ const limitFunctionCallCount = (cb, n) => {
 //   }
 //   surfaceArea() {
 //     let area = 1;
-//     area = 2 * ((this.length * this.heigh) + (this.length * this.heigh) + (this.width * this.heigh));
+//     area = 2 * ((this.length * this.width ) + (this.length * this.heigh) + (this.width * this.heigh));
 //     return area;
 //   }
 // }
@@ -176,7 +176,7 @@ const limitFunctionCallCount = (cb, n) => {
 
 // Cuboids.prototype.surfaceArea = function () {
 //   let area = 1;
-//   area = 2 * ((this.length * this.heigh) + (this.length * this.heigh) + (this.width * this.heigh));
+//   area = 2 * ((this.length * this.width ) + (this.length * this.heigh) + (this.width * this.heigh));
 //   return area;
 // };
 
@@ -218,7 +218,7 @@ const limitFunctionCallCount = (cb, n) => {
 //   }
 //   surfaceArea() {
 //     let area = 1;
-//     area = 2 * ((this.length * this.heigh) + (this.length * this.heigh) + (this.width * this.heigh));
+//     area = 2 * ((this.length * this.width ) + (this.length * this.heigh) + (this.width * this.heigh));
 //     return area;
 //   }
 // }
