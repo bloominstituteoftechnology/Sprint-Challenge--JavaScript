@@ -212,6 +212,21 @@ console.log(cube.checkIfCube());  // "We have a cube!"
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  let leaf;
+  let status = true;
+  const checkLeaves = (object) => {
+    Object.keys(object).forEach((key) => {
+      if (leaf === undefined && typeof object[key] !== 'object') {
+        leaf = object[key];
+        return;
+      }
+      if (typeof object[key] === 'object') return checkLeaves(object[key]);
+      if (leaf !== object[key]) status = false;
+      return;
+    })
+  }
+  checkLeaves(obj);
+  return status;
 };
 
 
