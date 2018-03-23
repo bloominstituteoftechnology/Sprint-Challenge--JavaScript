@@ -1,15 +1,21 @@
 /* eslint-disable */
-
+// element, index, collection
 
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  elements.forEach(function(elem, index) {
+    cb(elem, index);
+  });
 };
 
 const map = (elements, cb) => {
-  // Produces a new array of values by mapping each value in list through a transformation function.
+  // Produces a new array of values by mapping 
+  // each value in list through a transformation function.
   // Return the new array.
+  const newArray = elements.map(item => cb(item));
+  return newArray;
 };
 
 /* ======================== Closure Practice ============================ */
@@ -19,11 +25,26 @@ const counter = () => {
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
+  let count = 0;
+  return () => {
+    count++;
+    return count;
+  };
 };
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let numIn = 0;
+  return (...arg) => {
+    if (numIn < n) {
+      numIn++;
+      return cb(...arg);
+    }
+    if (numIn === n) {
+      return null;
+    }
+  };
 };
 
 /* ======================== Prototype Practice ============================ */
@@ -49,6 +70,43 @@ const limitFunctionCallCount = (cb, n) => {
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
 
+function CuboidMaker(properties) {
+  this.length = properties.length;
+  this.width = properties.width;
+  this.height = properties.height;
+}
+
+CuboidMaker.prototype.volume = function () {
+  const vol = this.length * this.width * this.height;
+  return vol;
+}
+
+CuboidMaker.prototype.surfaceArea = function () {
+  const a = this.length * this.width;
+  const b = a + (this.length * this.height);
+  const c = b + (this.width * this.height);
+  const sur = 2 * c;
+  return sur;
+} 
+
+function CuboidChild(childProperties) {
+  CuboidMaker.call(this, childProperties);
+} 
+
+CuboidChild.prototype = Object.create(CuboidMaker.prototype);
+
+const cuboid = new CuboidMaker({
+  length: 12,
+  width: 5,
+  height: 17,
+});
+
+const cubey = new CuboidChild({
+  length: 2,
+  width: 4,
+  height: 3,
+});
+
 /* ======================== Class Practice ============================ */
 
 // ***Class Practice does NOT have test cases built.  You must use the console logs provided at the end of this section.***
@@ -71,6 +129,70 @@ const limitFunctionCallCount = (cb, n) => {
 // console.log(cuboid.surfaceArea()); // 130
 // console.log(cube.volume()); // 8
 // console.log(cube.surfaceArea()); // 24
+
+class CuboidMaker{
+  constructor(properties) {
+  this.length = properties.length;
+  this.width = properties.width;
+  this.height = properties.height;
+  }
+  
+  volume() {
+    const vol = this.length * this.width * this.height;
+    return vol;
+  }
+
+  surfaceArea() {
+    const a = this.length * this.width;
+    const b = a + (this.length * this.height);
+    const c = b + (this.width * this.height);
+    const sur = 2 * c;
+    return sur;
+  }
+
+}
+
+class CuboidChild extends CuboidMaker {
+  constructor(childProperties) {
+    super(childProperties);
+  } 
+}
+
+class Cube extends CuboidMaker {
+  constructor(cubeProperties) {
+    super(cubeProperties);
+    this.isCube = cubeProperties.isCube;
+  }
+  cubeVolume() {
+    return (this.length * this.width * this.height);
+  }
+  cubeSurfaceArea(){
+    return 6*(length + width);
+  }
+  checkIfCube(){
+    if (this.isCube === true) {
+      return 'We have a cube!'
+    }
+  }
+}
+
+const cuboid = new CuboidMaker({
+  length: 12,
+  width: 5,
+  height: 17,
+});
+
+const cubey = new CuboidChild({
+  length: 2,
+  width: 4,
+  height: 3,
+});
+
+const cuberton = new Cube({
+  length: 2,
+  width: 2,
+  height: 2,
+})
 
 /* ======================== Stretch Challenges ============================ */
 
