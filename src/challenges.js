@@ -158,12 +158,13 @@ CuboidMaker.prototype = {
 };
 
 function Cube(options) {
-  Object.call(this, options);
+  CuboidMaker.call(this, options);
 }
 Cube.prototype = Object.create(CuboidMaker.prototype);
 Cube.prototype.constructor = Cube;
 
 Cube.prototype.surfaceArea = function() {
+  console.log(this.height);
   return 6 * (this.length + this.height);
 };
 
@@ -187,18 +188,24 @@ console.log(cube.volume()); // 8
 console.log(cube.surfaceArea()); // 24
 console.log(cube.checkIfCube()); // "We have a cube!"
 
-// Challenge 3: Recursion
+// the hard part
+const flattenHelper = (nestedObject, curKey, toReturn) => {
+  // somehow refactor this mess
+  if (typeof nestedObject[curKey] === 'object' && nestedObject[curKey]) {
+    // flatten the object
+    const flatObject = flattenObject(nestedObject[curKey]);
+    // add that flattened object back into the main object
+    Object.keys(flatObject).map(key => (toReturn[key] = flatObject[key]));
+  } else toReturn[curKey] = nestedObject[curKey];
+
+  return toReturn;
+};
+
 const flattenObject = nestedObject => {
-  return Object.keys(nestedObject).reduce((toReturn, curKey) => {
-    // check if current key/val is an object
-    if (typeof nestedObject[curKey] === 'object' && nestedObject[curKey]) {
-      // flatten the object
-      const flatObject = flattenObject(nestedObject[curKey]);
-      // add that flattened object back into the main object
-      Object.keys(flatObject).map(key => (toReturn[key] = flatObject[key]));
-    } else toReturn[curKey] = nestedObject[curKey];
-    return toReturn;
-  }, {});
+  return Object.keys(nestedObject).reduce(
+    (toReturn, curKey) => flattenHelper(nestedObject, curKey, toReturn),
+    {}
+  );
 };
 
 const checkMatchingLeaves = obj => {
@@ -208,7 +215,7 @@ const checkMatchingLeaves = obj => {
   // flatten object
   const flat = flattenObject(Object.assign({}, obj));
 
-  // obj needs to be flattened
+  // Set makes this part easy
   const t = new Set(Object.values(flat));
 
   if (t.size === 1) return true;
