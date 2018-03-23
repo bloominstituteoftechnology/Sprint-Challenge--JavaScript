@@ -38,7 +38,7 @@ const limitFunctionCallCount = (cb, n) => {
 // Formula for cuboid volume: length * width * height
 
 // Create a seperate function property of CuboidMaker that returns the surface area of a given cuboid's length, width, and height. 
-// Formula for cuboid surface area of a cube: 2(length * width + length * height + width * height)
+// Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 
 // Create a cuboid object that inherits from CuboidMaker. 
 // The cuboid object must contain keys for length, width, and height.
