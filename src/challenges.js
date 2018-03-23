@@ -163,52 +163,96 @@ const limitFunctionCallCount = (cb, n) => {
 
 
 // Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax
-function Cuboids(options) {
-  this.length = options.length;
-  this.width = options.width;
-  this.heigh = options.heigh;
+// function Cuboids(options) {
+//   this.length = options.length;
+//   this.width = options.width;
+//   this.heigh = options.heigh;
 
-}
+// }
 
-Cuboids.prototype.volume = function () {
-  return this.heigh * this.width * this.length;
-};
+// Cuboids.prototype.volume = function () {
+//   return this.heigh * this.width * this.length;
+// };
 
-Cuboids.prototype.surfaceArea = function () {
-  let area = 1;
-  area = 2 * ((this.length * this.heigh) + (this.length * this.heigh) + (this.width * this.heigh));
-  return area;
-};
+// Cuboids.prototype.surfaceArea = function () {
+//   let area = 1;
+//   area = 2 * ((this.length * this.heigh) + (this.length * this.heigh) + (this.width * this.heigh));
+//   return area;
+// };
 
-function Cube(options) {
-  Cuboids.call(this, options);
-}
-Cube.prototype = Object.create(Cuboids.prototype);
-Cube.prototype.surfaceArea = function() {
-  return 6 * (this.heigh * this.length);
-};
-const cuboid = new Cuboids({
-  length: 4,
-  width: 5,
-  heigh: 5
-});
+// function Cube(options) {
+//   Cuboids.call(this, options);
+// }
+// Cube.prototype = Object.create(Cuboids.prototype);
+// Cube.prototype.surfaceArea = function() {
+//   return 6 * (this.heigh * this.length);
+// };
+// const cuboid = new Cuboids({
+//   length: 4,
+//   width: 5,
+//   heigh: 5
+// });
 
-const cube = new Cube({
-  length:2,
-  width:2,
-  heigh:2
-});
+// const cube = new Cube({
+//   length:2,
+//   width:2,
+//   heigh:2
+// });
 
-// Use these logs to test your results:
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
-console.log(cube.volume()); // 8
-console.log(cube.surfaceArea()); // 24
+// // Use these logs to test your results:
+// console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
+// console.log(cube.volume()); // 8
+// console.log(cube.surfaceArea()); // 24
 
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
+// class Cuboids {
+//   constructor(options) {
+//     this.length = options.length;
+//     this.width = options.width;
+//     this.heigh = options.heigh;
+//   }
+//   volume() {
+//     return this.heigh * this.width * this.length;
+//   }
+//   surfaceArea() {
+//     let area = 1;
+//     area = 2 * ((this.length * this.heigh) + (this.length * this.heigh) + (this.width * this.heigh));
+//     return area;
+//   }
+// }
 
-// Use these logs to test your results:
+// const cuboid = new Cuboids({
+//   length: 4,
+//   width: 5,
+//   heigh: 5
+// });
+
+// class Cube extends Cuboids {
+//   constructor(options) {
+//     super(options);
+//     this.isCube = options.isCube;
+//   }
+//   volume() {
+//     return this.heigh * this.width * this.length;
+//   }
+//   surfaceArea() {
+//     return 6 * (this.length * this.width);
+//   }
+//   checkIfCube() {
+//     if (this.isCube) return "We have a cube";
+//     else "We do not have a cube";
+//   }
+// }
+// const cube = new Cube({
+//   length:2,
+//   width:2,
+//   heigh:2,
+//   isCube:true
+// });
+
+// // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
 // console.log(cube.volume()); // 8
