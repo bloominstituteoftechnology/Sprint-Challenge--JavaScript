@@ -33,6 +33,7 @@ const counter = () => {
     return ++count;
   };
 };
+let newCounter = counter();
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
