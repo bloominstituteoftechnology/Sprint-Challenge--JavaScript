@@ -66,25 +66,25 @@ const limitFunctionCallCount = (cb, n) => {
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
 
-function CuboidMaker(length, width, height) {
+function CuboidMaker_prototypes(length, width, height) {
   this.length = length;
   this.width = width;
   this.height = height;
 }
 
-CuboidMaker.prototype.volume = function() {
+CuboidMaker_prototypes.prototype.volume = function() {
   return this.length * this.width * this.height;
 }
 
-CuboidMaker.prototype.surfaceArea = function() {
+CuboidMaker_prototypes.prototype.surfaceArea = function() {
   return 2 * (this.length*this.width + this.length*this.height + this.width*this.height);
 };
 
-const cuboid = new CuboidMaker(4, 5, 5);
+const cuboid4prototypes = new CuboidMaker_prototypes(4, 5, 5);
 
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+// console.log(cuboid4prototypes.volume()); // 100
+// console.log(cuboid4prototypes.surfaceArea()); // 130
 
 /* ======================== Class Practice ============================ */
 
@@ -103,7 +103,7 @@ const cuboid = new CuboidMaker(4, 5, 5);
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
-class CuboidMaker {
+class CuboidMaker_classes {
   constructor(length, width, height) {
     this.length = length;
     this.width = width;
@@ -119,36 +119,29 @@ class CuboidMaker {
   }
 }
 
-class Cube extends CuboidMaker {
+class Cube_classes extends CuboidMaker_classes {
   surfaceArea() {
     return 6 * (this.length * this.width);
   }
 }
 
-const cuboid = new CuboidMaker(4, 5, 5);
-const cube = new Cube(2, 2, 2);
+const cuboid4classes = new CuboidMaker_classes(4, 5, 5);
+const cube4classes = new Cube_classes(2, 2, 2);
 
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
+// console.log(cuboid4classes.volume()); // 100
+// console.log(cuboid4classes.surfaceArea()); // 130
+// console.log(cube4classes.volume()); // 8
+// console.log(cube4classes.surfaceArea()); // 24
 
 /* ======================== Stretch Challenges ============================ */
 
-
 // Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax
-
-// Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
 
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
 
-class CuboidMaker {
+class CuboidMaker_stretch {
   constructor(cuboidOptions) {
     this.length = cuboidOptions.length;
     this.width = cuboidOptions.width;
@@ -165,7 +158,7 @@ class CuboidMaker {
 }
 
 
-class Cube extends CuboidMaker {
+class Cube_stretch extends CuboidMaker_stretch {
   constructor(cubeOptions) {
     super(cubeOptions);
     this.isCube = function() {
@@ -181,23 +174,23 @@ class Cube extends CuboidMaker {
   }
 }
 
-const cuboid = new CuboidMaker({
+const cuboid4stretch = new CuboidMaker_stretch({
   length: 4,
   width: 5,
   height: 5
 });
-const cube = new Cube({
+const cube4stretch = new Cube_stretch({
   length: 2,
   width: 2,
   height: 2
 });
 
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
-// console.log(cube.checkIfCube());  // "We have a cube!"
+// console.log(cuboid4stretch.volume()); // 100
+// console.log(cuboid4stretch.surfaceArea()); // 130
+// console.log(cube4stretch.volume()); // 8
+// console.log(cube4stretch.surfaceArea()); // 24
+// console.log(cube4stretch.checkIfCube());  // "We have a cube!"
 
 
 // Challenge 3: Recursion
