@@ -6,8 +6,8 @@ const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
 
-  for(let i in elements) {
-    cb(elements[i]);
+  for(let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
   }
 };
 
@@ -46,8 +46,8 @@ const limitFunctionCallCount = (cb, n) => {
   let count = 0;
   const limit = n;
 
-  return function() {
-    if (count < n) cb(); count++;
+  return function(...args) {
+    return count++ < n ? cb(...args) : null;
   }
 };
 
@@ -104,50 +104,50 @@ Cube.prototype.surfaceArea = function() {
 // ***Class Practice does NOT have test cases built.  You must use the console logs provided at the end of this section.***
 
 // Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
-class CuboidMaker {
-  constructor(length, width, height) {
-    this.length = length;
-    this.width = width;
-    this.height = height;
-  }
+// class CuboidMaker {
+//   constructor(length, width, height) {
+//     this.length = length;
+//     this.width = width;
+//     this.height = height;
+//   }
 
-  volume() {
-    return this.length * this.width * this.height;
-  }
+//   volume() {
+//     return this.length * this.width * this.height;
+//   }
 
-  surfaceArea() {
-    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
-  }
-}
+//   surfaceArea() {
+//     return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+//   }
+// }
 
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
 
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
-class Cube extends CuboidMaker {
-  constructor(lwh) {
-    super(lwh, lwh, lwh);
-    this.isCube = true;
-  }
+// class Cube extends CuboidMaker {
+//   constructor(lwh) {
+//     super(lwh, lwh, lwh);
+//     this.isCube = true;
+//   }
 
-  volume() {
-    return this.length * this.width * this.height;
-  }
+//   volume() {
+//     return this.length * this.width * this.height;
+//   }
 
-  surfaceArea() {
-    return 6 * (this.length * this.width);
-  }
+//   surfaceArea() {
+//     return 6 * (this.length * this.width);
+//   }
 
-  checkIfCube() {
-    if (this.isCube) return 'We have a cube!';
-  }
-}
+//   checkIfCube() {
+//     if (this.isCube) return 'We have a cube!';
+//   }
+// }
 
 // The volume of a cube is: length * width * height
 // The surface area of a cube is: 6 * (length + width)
 
 // Create a new cube object that has equal values for length, width, and height
-const cuboid = new CuboidMaker(4, 5, 5);
-const cube = new Cube(2)
+// const cuboid = new CuboidMaker(4, 5, 5);
+// const cube = new Cube(2)
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
