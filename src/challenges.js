@@ -55,9 +55,17 @@ const limitFunctionCallCount = (cb, n) => {
 
 // Create a CuboidMaker constructor function that accepts properties for length, width, and height
 
+function CuboidMaker (attributes) {
+	this.length = attributes.length;
+	this.width = attributes.width;
+	this.height = attributes.height;
+}
+
 // Create a seperate function property of CuboidMaker that returns the volume of a given cuboid's length, width, and height
 // Formula for cuboid volume: length * width * height
-
+CuboidMaker.prototype.volume = function() {
+	return (this.length * this.width * this.height);
+}
 // Create a seperate function property of CuboidMaker that returns the surface area of a given cuboid's length, width, and height. 
 // Formula for cuboid surface area of a cube: 2(length * width + length * height + width * height)
 
