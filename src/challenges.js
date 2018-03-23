@@ -1,3 +1,6 @@
+/* eslint-disable */
+
+
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
