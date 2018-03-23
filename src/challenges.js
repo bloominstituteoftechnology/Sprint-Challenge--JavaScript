@@ -136,6 +136,10 @@ const limitFunctionCallCount = (cb, n) => {
 //   surfaceArea() {
 //     return `${6 * (this.length + this.width)}`
 //   }
+
+//   checkIfCube() {
+//     if (this.isCube || this instanceof Cube) return 'We have a cube!';
+//   };
 // }
 
 // const cuboid = new CuboidMaker({ length: 4, width: 5, height: 5 });
@@ -168,16 +172,21 @@ CuboidMaker.prototype.surfaceArea = function surfaceArea() {
 
 function Cube(options) {
   CuboidMaker.call(this, options);
+  this.isCube = options.isCube;
 };
 
 Cube.prototype = Object.create(CuboidMaker.prototype);
 
 Cube.prototype.surfaceArea = function surfaceArea() {
   return `${6 * (this.length + this.width)}`
-}
+};
 
-// const cuboid = new CuboidMaker({ length: 4, width: 5, height: 5 });
-// const cube = new Cube({ length: 2, width: 2, height: 2 });
+Cube.prototype.checkIfCube = function checkIfCube() {
+  if (this.isCube) return 'We have a cube!';
+};
+
+const cuboid = new CuboidMaker({ length: 4, width: 5, height: 5 });
+const cube = new Cube({ length: 2, width: 2, height: 2, isCube: true});
 
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
@@ -188,12 +197,16 @@ Cube.prototype.surfaceArea = function surfaceArea() {
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
 
+Cube.prototype.checkIfCube = function checkIfCube() {
+  if (this.isCube || this instanceof Cube) return 'We have a cube!';
+};
+
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
-// console.log(cube.checkIfCube());  // "We have a cube!"
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
+console.log(cube.volume()); // 8
+console.log(cube.surfaceArea()); // 24
+console.log(cube.checkIfCube());  // "We have a cube!"
 
 // Challenge 3: Recursion
 const checkMatchingLeaves = obj => {
