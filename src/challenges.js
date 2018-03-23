@@ -131,14 +131,19 @@ surfaceArea() {
   return `SurfaceArea: ${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
 }
 
-const cuboid = new CuboidMaker({
-  length: 4,
-  width: 5,
-  height: 5,
-});
+// const cuboid = new CuboidMaker({
+//   length: 4,
+//   width: 5,
+//   height: 5,
+// });
 
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
 
+class Cube extends CuboidMaker {
+  constructor(dimensions) {
+    super(dimension)
+  }
+}
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
 
 // The volume of a cube is: length * width * height
