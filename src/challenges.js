@@ -27,8 +27,8 @@ const counter = () => {
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
-  const newCounter = counter();
   let count = 0;
+  const newCounter = counter();
   return newCounter(count++);
 };
 
@@ -88,26 +88,26 @@ function CuboidObject(cuboidDimensions) {
   CuboidMaker.call(this, cuboidDimensions);
 }
 
-Cube.prototype = Object.create(CuboidMaker.prototype);
-
 function Cube(cubeDimensions) {
   CuboidMaker.call(this, cubeDimensions);
+}
+
+Cube.prototype = Object.create(CuboidMaker.prototype);
 
 Cube.prototype.surfaceArea = function() {
   return 6 * this.height * this.width;
 };
-}
 
 let cuboid = new CuboidMaker({
   length: 4,
   width: 5,
-  height: 5,
+  height: 5
 });
 
-let cube = new CuboidMaker({
+let cube = new Cube({
   length: 2,
   width: 2,
-  height: 2,
+  height: 2
 });
 
 console.log(cuboid.volume()); // 100
@@ -147,32 +147,25 @@ class CuboidMaker {
   this.height = dimension.height;
 }
 
-volume() {
-  return this.length * this.width * this.height;
-}
+  volume() {
+    return this.length * this.width * this.height;
+  }
 
-surfaceArea() {
-  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
-}
-}
-
-class CuboidObject extends CuboidMaker {
-  constructor(cuboidDimensions) {
-    super(cuboidDimensions);
+  surfaceArea() {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
   }
 }
 
 class Cube extends CuboidMaker {
   constructor(cubeDimensions) {
     super(cubeDimensions)
+    this.isCube = cubeDimensions.isCube;
   }
-  
-  volume() {
-    return this.length * this.width * this.height;
-  }
-  
-  surfaceArea() {
-    return 2 * (this.length * this.width);
+
+  checkIfCube () {
+    if(this.isCube){
+      return 'We have a cube!';
+    }
   }
 }
 
@@ -180,19 +173,21 @@ class Cube extends CuboidMaker {
 let cuboid = new CuboidMaker({
   length: 4,
   width: 5,
-  height: 5,
+  height: 5
 });
 
-let cube = new CuboidMaker({
+let cube = new Cube({
   length: 2,
   width: 2,
   height: 2,
+  isCube: true
 });
 
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
 console.log(cube.volume()); // 8
 console.log(cube.surfaceArea()); // 24
+console.log(cube.checkIfCube());  // "We have a cube!"
 
 /* ======================== Stretch Challenges ============================ */
 
