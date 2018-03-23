@@ -76,9 +76,22 @@ CuboidMaker.prototype.surfaceArea = function() {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 }
 
+function Cube(lwh) {
+  CuboidMaker.call(this, lwh, lwh, lwh);
+}
+
+Cube.prototype.volume = function() {
+  return this.length * this.width * this.height;
+}
+
+Cube.prototype.surfaceArea = function() {
+  return 6 * (this.length * this.width);
+}
+
 // Create a cuboid object that inherits from CuboidMaker. 
 // The cuboid object must contain keys for length, width, and height.
-const cuboid = new CuboidMaker(4, 5, 5);
+// const cuboid = new CuboidMaker(4, 5, 5);
+// const cube = new Cube(2)
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
 
@@ -128,6 +141,7 @@ class Cube extends CuboidMaker {
 // The surface area of a cube is: 6 * (length + width)
 
 // Create a new cube object that has equal values for length, width, and height
+const cuboid = new CuboidMaker(4, 5, 5);
 const cube = new Cube(2)
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
