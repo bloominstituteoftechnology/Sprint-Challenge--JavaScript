@@ -127,7 +127,7 @@ class Cube extends CuboidMaker {
   }
 
   surfaceArea = function () {
-    return `(${this.length} * ${this.width}) + (${this.length} * ${this.height}) + (${this.width} * ${this.height})`;
+    return `(6 * ${this.length} * ${this.width})`;
   }
 }
 
