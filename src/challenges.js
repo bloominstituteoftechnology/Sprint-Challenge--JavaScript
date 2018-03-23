@@ -1,11 +1,13 @@
-eslint-disable
+/* eslint-disable */
 
 
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
-  
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
 
 const map = (elements, cb) => {
@@ -65,6 +67,33 @@ const limitFunctionCallCount = (cb, n) => {
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
+
+function CuboidMaker(dimension) {
+  this.length = dimension.length;
+  this.width = dimension.width;
+  this.height = dimension.height;
+}
+
+CuboidMaker.prototype.volume = function() {
+  return this.length * this.width * this.height;
+};
+
+CuboidMaker.prototype.surfaceArea = function() {
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+};
+
+function CuboidObject(cuboidDimensions) {
+  CuboidMaker.call(this, cuboidDimensions);
+}
+
+let cuboid = new CuboidMaker({
+  length: 4,
+  width: 5,
+  height: 5,
+});
+
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
 
 /* ======================== Class Practice ============================ */
 
