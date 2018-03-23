@@ -188,6 +188,7 @@ const cube = new Cube ({
   length: 2,
   width: 2,
   height: 2,
+  isCube: true,
 });
 
 const cuboid = new CuboidMaker ({
