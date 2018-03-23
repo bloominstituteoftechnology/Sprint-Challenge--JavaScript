@@ -66,18 +66,19 @@ function CuboidMaker(length, width, height) {
 
 // Create a seperate function property of CuboidMaker that returns the volume of a given cuboid's length, width, and height
 // Formula for cuboid volume: length * width * height
-CuboidMaker.prototype.getVolume = function() {
+CuboidMaker.prototype.volume = function() {
   return this.length * this.width * this.height;
 }
 
 // Create a seperate function property of CuboidMaker that returns the surface area of a given cuboid's length, width, and height. 
 // Formula for cuboid surface area of a cube: 2(length * width + length * height + width * height)
-CuboidMaker.prototype.getSurfaceArea = function() {
+CuboidMaker.prototype.surfaceArea = function() {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 }
 
 // Create a cuboid object that inherits from CuboidMaker. 
 // The cuboid object must contain keys for length, width, and height.
+const cuboid = new CuboidMaker(4, 5, 5);
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
 
