@@ -12,4 +12,4 @@ implicit binding allows you to call the object by name, it is the most common us
 
 the new binding is great for setting a function to a new variable i think it works great when it works for me.
 
-explicit binding seems 
+explicit binding is when we use functions like call bind and apply, to pass in values into are params, very useful

@@ -100,7 +100,7 @@ volume(){
   return this.length * this.width * this.height
 }
 surfaceArea(){
-  return this.length * this.width * this.height + this.width * this.height
+  return 2 + (this.length * this.width * this.height + this.width * this.height)
 }
 
 
@@ -115,31 +115,37 @@ super(cubeDimensions)
 
 
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
-cubeVolume(){
-  return this.length * this
+// dont need this but i can make it.
+// volume(){
+//   return this.length * this.width * this.height
+// }
+surfaceArea(){
+  return 6 * (this.width + this.height)
 }
+
 // The volume of a cube is: length * width * height
 // The surface area of a cube is: 6 * (length + width)
 }
+
 // Create a new cube object that has equal values for length, width, and height 
+
 const cuboid = new CuboidMaker({
+  length: 4,
+  width: 5,
+  height: 5,
+  });
+const cuboid = new Cube({
   length: 2,
   width: 2,
   height: 2,
   });
-
-const cuboid = new CuboidMaker({
-length: 4,
-width: 5,
-height: 5,
-});
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
+console.log(cube.volume()); // 8
+console.log(cube.surfaceArea()); // 24
 
 /* ======================== Stretch Challenges ============================ */
 
