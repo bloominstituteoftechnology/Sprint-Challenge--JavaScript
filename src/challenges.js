@@ -133,25 +133,31 @@ class CuboidMaker {
     return this.length * this.width * this.height;
   }
   surfaceArea() {
-    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height); //cuboid surface area
   }
 }
   class Cube extends CuboidMaker {
     constructor(dimensions) {
-      super(dimensions)
+      super(dimensions);
     }
   volume() {
     return this.length * this.width * this.height;
   }
   surfaceArea() {
-    return 6 * (this.length * this.width);
+    return 6 * (this.length * this.width); //for surface area of cube
   }
 }
 
-const cuboid = new Cube ({
+const cube = new Cube ({
   length: 2,
   width: 2,
   height: 2,
+});
+
+const cuboid = new CuboidMaker ({
+  length: 4,
+  width: 5,
+  height: 5,
 });
 
 /* ======================== Stretch Challenges ============================ */
