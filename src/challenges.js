@@ -1,11 +1,12 @@
 /* ======================== CallBacks Practice ============================ */
-let myArr = [1, 2, 3, 4]
-each(myArr); 
-const each = (elements, cb) => { // the forEach function! 
-  for (let i = 0; i < list.length; i++){// Iterates over a list of elements, yielding each in turn to the `cb` function.
-  cb(elements[i], i)// This only needs to work with arrays.
-};
+// let myArr = [1, 2, 3, 4]
 
+const each = (elements, cb) => { // the forEach function! 
+  for (let i = 0; i < elements.length; i++){// Iterates over a list of elements, yielding each in turn to the `cb` function.
+  cb(elements[i], i);
+}// This only needs to work with arrays.
+};
+// each(myArr); 
 const map = (elements, cb) => { // the map function!
   const newArr = []; // Produces a new array of values by mapping each value in list through a transformation function.
   for (let i = 0; i < elements.length; i++){ // or each(elements, item =>(newArr.push(item)))
@@ -47,11 +48,11 @@ const limitFunctionCallCount = (cb, n) => {
 // Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. 
 
 // Create a CuboidMaker constructor function that accepts properties for length, width, and height
-function CuboidMaker(att) {
-  this.length = att.length;
-  this.height = att.height;
-  this.width = att.width;
-}
+// function CuboidMaker(att) {
+//   this.length = att.length;
+//   this.height = att.height;
+//   this.width = att.width;
+// }
 // Create a seperate function property of CuboidMaker that returns the volume of a given cuboid's length, width, and height
 // Formula for cuboid volume: length * width * height
 CuboidMaker.prototype.cuboidVol = function() {
