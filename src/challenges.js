@@ -32,6 +32,11 @@ const counter = () => {
   // newCounter(); // 1
   // newCounter(); // 2
 
+  let count = 0;
+
+  return function() {
+    return ++count;
+  }
 };
 
 const limitFunctionCallCount = (cb, n) => {
