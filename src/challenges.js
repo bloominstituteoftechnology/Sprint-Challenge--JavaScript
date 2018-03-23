@@ -123,6 +123,20 @@ const limitFunctionCallCount = (cb, n) => {
 // console.log(cube.volume()); // 8
 // console.log(cube.surfaceArea()); // 24
 
+class CuboidMaker {
+  constructor(dimensions) {
+  this.length = dimensions.length;
+  this.width = dimensions.width;
+  this.height = dimensions.height;
+  }
+  volume() {
+    return this.length * this.width * this.height;
+  }
+  surfaceArea() {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  }
+}
+
 /* ======================== Stretch Challenges ============================ */
 
 
