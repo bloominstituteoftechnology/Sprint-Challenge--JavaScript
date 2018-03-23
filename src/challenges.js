@@ -1,26 +1,39 @@
 /* ======================== CallBacks Practice ============================ */
-const each = (elements, cb) => {
-  // Iterates over a list of elements, yielding each in turn to the `cb` function.
-  // This only needs to work with arrays.
+const each = (elements, cb) => { // the forEach function! 
+  for (let i = 0; i < list.length; i++){// Iterates over a list of elements, yielding each in turn to the `cb` function.
+  cb(elements[i], i)// This only needs to work with arrays.
 };
 
-const map = (elements, cb) => {
-  // Produces a new array of values by mapping each value in list through a transformation function.
-  // Return the new array.
+const map = (elements, cb) => { // the map function!
+  const newArr = []; // Produces a new array of values by mapping each value in list through a transformation function.
+  for (let i = 0; i < elements.length; i++){
+    newArr.push(cb(elements[i]));
+  }// Return the new array.
 };
 
 /* ======================== Closure Practice ============================ */
 // No test needed here, just run the newCounter(); and make sure it's counting up
 const counter = () => {
-  // Return a function that when invoked increments and returns a counter variable.
-  // Example: const newCounter = counter();
-  // newCounter(); // 1
-  // newCounter(); // 2
+  let count = 0;
+  return () => {
+    count++;
+    return count;
+  };// Return a function that when invoked increments and returns a counter variable.
 };
+// Example: const newCounter = counter();
+newCounter = counter(); // newCounter declared 
+newCounter(); // 1st call => 1
+newCounter(); // 2nd call => 2
 
 const limitFunctionCallCount = (cb, n) => {
-  // Should return a function that invokes `cb`.
-  // The returned function should only allow `cb` to be invoked `n` times.
+  let timesInvoked = 0;
+  return (...args) => { // Should return a function that invokes `cb`.
+    if (timesInvoked === n) { // The returned function should only allow `cb` to be invoked `n` times.
+      return null;
+    }
+    timesInvoked++;
+    return cb(...args);
+  };
 };
 
 /* ======================== Prototype Practice ============================ */
@@ -30,21 +43,39 @@ const limitFunctionCallCount = (cb, n) => {
 // Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. 
 
 // Create a CuboidMaker constructor function that accepts properties for length, width, and height
-
+function CuboidMaker(att) {
+  this.length = att.length;
+  this.height = att.height;
+  this.width = att.width;
+}
 // Create a seperate function property of CuboidMaker that returns the volume of a given cuboid's length, width, and height
 // Formula for cuboid volume: length * width * height
+CuboidMaker.prototype.cuboidVol = function() {
+  return this.length * this.width * this.height;
+}
 
 // Create a seperate function property of CuboidMaker that returns the surface area of a given cuboid's length, width, and height. 
 // Formula for cuboid surface area of a cube: 2(length * width + length * height + width * height)
-
-// Create a cuboid object that inherits from CuboidMaker. 
+CuboidMaker.prototype.cuboidSurfArea = function() {
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+}
+// Create a cuboid object that inherits from CuboidMaker.
+CuboidObj.prototype = Object.create(CuboidMaker.prototype); 
 // The cuboid object must contain keys for length, width, and height.
+function CuboidObj(cuboidObjAtt) {
+  CuboidMaker.call(this, cuboidObjAtt);
+  this.isCuboidObj = cuboidObjAtt.isCuboidObj;
+}
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
-
+const cuboid = new CuboidObj({
+  length: 4, 
+  width: 5, 
+  height: 5, 
+});
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+ console.log(cuboid.cuboidVol()); // 100
+ console.log(cuboid.cuboidSurfArea()); // 130
 
 /* ======================== Class Practice ============================ */
 
