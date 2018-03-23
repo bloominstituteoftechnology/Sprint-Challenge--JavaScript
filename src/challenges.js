@@ -175,8 +175,8 @@ console.log(cube2.checkIfCube());  // "We have a cube!"
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
-
   const keys = Object.keys(obj);
+
   const key1 = keys.pop()
   const value1 = obj[key1];
 
