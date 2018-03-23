@@ -68,6 +68,26 @@ const limitFunctionCallCount = (cb, n) => {
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
 
+function CuboidMaker(properties) {
+  this.length = properties.length;
+  this.width = properties.width;
+  this.height = properties.height;
+}
+
+CuboidMaker.prototype.volume = function volume() {
+   return this.length * this.width * this.height;
+};
+
+CuboidMaker.prototype.surfaceArea = function surfaceArea() {
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+};
+
+function CuboidObject(properties) {
+  CuboidMaker.call(this, properties);
+}
+
+CuboidObject.prototype = Object.create(CuboidMaker.prototype);
+
 /* ======================== Class Practice ============================ */
 
 // ***Class Practice does NOT have test cases built.  You must use the console logs provided at the end of this section.***
