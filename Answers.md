@@ -20,7 +20,7 @@ function multiplyFunc() {
 
 4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
 
-  1. Window Binding is using the 'this' keyword in a global context, so using console.log(this); would give you every window value there is.
-  2. Implicit Binding is using 'this' with a dot, like 'this.bark', which gives 'this' context on what it's pointing at.
-  3. New Binding is used to create a template for objects, for whenever 'this' is used, it's referring to the object that will be created.
-  4. Explicit Binding is used for .call or .apply with 'this'
+  * Window Binding is using the 'this' keyword in a global context, so using console.log(this); would give you every window value there is.
+  * Implicit Binding is using 'this' with a dot, like 'this.bark', which gives 'this' context on what it's pointing at.
+  * New Binding is used to create a template for objects, for whenever 'this' is used, it's referring to the object that will be created.
+  * Explicit Binding is used for .call or .apply with 'this'
