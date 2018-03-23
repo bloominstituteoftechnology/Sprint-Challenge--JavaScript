@@ -110,8 +110,14 @@ class CuboidMaker {
 class Cube extends CuboidMaker {
   constructor(options) {
   super(options)
+  this.isCube = options.isCube;
   }
 
+  checkifCube() {
+    if(this.isCube){
+      return 'We have a cube!'
+    }
+  }
 
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
 
