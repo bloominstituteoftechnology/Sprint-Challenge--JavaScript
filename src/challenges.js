@@ -5,25 +5,44 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
+  const newArr= [];
+  for (let i = 0; i < elements.length; i++) {
+    newArr.push(cb(elements[i]));
+  }
+  return newArr;
 };
 
-/* ======================== Closure Practice ============================ */
-// No test needed here, just run the newCounter(); and make sure it's counting up
-const counter = () => {
-  // Return a function that when invoked increments and returns a counter variable.
-  // Example: const newCounter = counter();
-  // newCounter(); // 1
-  // newCounter(); // 2
-};
+// /* ======================== Closure Practice ============================ */
+// // No test needed here, just run the newCounter(); and make sure it's counting up
+// const counter = () => {
+//   // Return a function that when invoked increments and returns a counter variable.
+//   // Example: const newCounter = counter();
+//   // newCounter(); // 1
+//   // newCounter(); // 2
+//   let count = 0;
+//   return () => {
+//     count++;
+//     return count;
+//   }
+// };
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  return (...blah) => {
+    count++;
+    if (count < n) return cb(...blah);
+    return null;
+  };
 };
 
 /* ======================== Prototype Practice ============================ */
@@ -44,7 +63,14 @@ const limitFunctionCallCount = (cb, n) => {
 // The cuboid object must contain keys for length, width, and height.
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
-
+let CuboidMaker = (length, width, height) => {
+  this.length = length;
+  this.width = width;
+  this.height = height;
+}
+CuboidMaker.prototype.volume = function() {
+  this.length * this.width * this.height;
+}
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
