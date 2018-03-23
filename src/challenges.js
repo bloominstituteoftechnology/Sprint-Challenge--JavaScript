@@ -110,6 +110,19 @@ class CuboidMaker {
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
 
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
+class Cube extends CuboidMaker {
+  constructor(lwh) {
+    super(lwh, lwh, lwh);
+  }
+
+  volume() {
+    return this.length * this.width * this.height;
+  }
+
+  surfaceArea() {
+    return 6 * (this.length * this.width);
+  }
+}
 
 // The volume of a cube is: length * width * height
 // The surface area of a cube is: 6 * (length + width)
