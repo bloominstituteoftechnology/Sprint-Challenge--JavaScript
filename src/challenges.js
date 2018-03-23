@@ -83,39 +83,39 @@ const limitFunctionCallCount = (cb, n) => {
 // ***Class Practice does NOT have test cases built.  You must use the console logs provided at the end of this section.***
 
 // Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
-class CuboidMaker {
-  constructor(options) {
-    this.length = options.length;
-    this.width = options.width;
-    this.height = options.height;
-  }
+// class CuboidMaker {
+//   constructor(options) {
+//     this.length = options.length;
+//     this.width = options.width;
+//     this.height = options.height;
+//   }
 
-  surfaceArea() {
-    return (
-      2 *
-      (this.length * this.width +
-        this.length * this.height +
-        this.width * this.height)
-    );
-  }
+//   surfaceArea() {
+//     return (
+//       2 *
+//       (this.length * this.width +
+//         this.length * this.height +
+//         this.width * this.height)
+//     );
+//   }
 
-  volume() {
-    return this.length * this.height * this.width;
-  }
-}
+//   volume() {
+//     return this.length * this.height * this.width;
+//   }
+// }
 
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
-class Cube extends CuboidMaker {
-  constructor(options) {
-    super(options);
-  }
-  volume() {
-    return this.length * this.width * this.height;
-  }
-  surfaceArea() {
-    return 6 * (this.length + this.width);
-  }
-}
+// class Cube extends CuboidMaker {
+//   constructor(options) {
+//     super(options);
+//   }
+//   volume() {
+//     return this.length * this.width * this.height;
+//   }
+//   surfaceArea() {
+//     return 6 * (this.length + this.width);
+//   }
+// }
 
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
 
@@ -123,40 +123,96 @@ class Cube extends CuboidMaker {
 // The surface area of a cube is: 6 * (length + width)
 
 // Create a new cube object that has equal values for length, width, and height
-let cuboid = new CuboidMaker({ length: 4, width: 5, height: 5 });
-let cube = new Cube({ length: 2, width: 2, height: 2 });
+// let cuboid = new CuboidMaker({ length: 4, width: 5, height: 5 });
+// let cube = new Cube({ length: 2, width: 2, height: 2 });
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24.
 // Use these logs to test your results:
+// console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
+// console.log(cube.volume()); // 8
+// console.log(cube.surfaceArea()); // 24
+
+/* ======================== Stretch Challenges ============================ */
+
+// Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax
+function CuboidMaker(options) {
+  this.length = options.length;
+  this.width = options.width;
+  this.height = options.height;
+}
+
+CuboidMaker.prototype = {
+  surfaceArea() {
+    return (
+      2 *
+      (this.length * this.width +
+        this.length * this.height +
+        this.width * this.height)
+    );
+  },
+
+  volume() {
+    return this.length * this.height * this.width;
+  }
+};
+
+function Cube(options) {
+  Object.call(this, options);
+}
+Cube.prototype = Object.create(CuboidMaker.prototype);
+Cube.prototype.constructor = Cube;
+
+Cube.prototype.surfaceArea = function() {
+  return 6 * (this.length + this.height);
+};
+
+// Use these logs to test your results:
+let cuboid = new CuboidMaker({ length: 4, width: 5, height: 5 });
+let cube = new Cube({ length: 2, width: 2, height: 2 });
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
 console.log(cube.volume()); // 8
 console.log(cube.surfaceArea()); // 24
 
-/* ======================== Stretch Challenges ============================ */
-
-// Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax
-
-// Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
-
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
-
+Cube.prototype.checkIfCube = function() {
+  return this instanceof Cube ? 'We have a cube!' : '';
+};
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
-// console.log(cube.checkIfCube());  // "We have a cube!"
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
+console.log(cube.volume()); // 8
+console.log(cube.surfaceArea()); // 24
+console.log(cube.checkIfCube()); // "We have a cube!"
 
 // Challenge 3: Recursion
+const flattenObject = nestedObject => {
+  return Object.keys(nestedObject).reduce((toReturn, curKey) => {
+    // check if current key/val is an object
+    if (typeof nestedObject[curKey] === 'object' && nestedObject[curKey]) {
+      // flatten the object
+      const flatObject = flattenObject(nestedObject[curKey]);
+      // add that flattened object back into the main object
+      Object.keys(flatObject).map(key => (toReturn[key] = flatObject[key]));
+    } else toReturn[curKey] = nestedObject[curKey];
+    return toReturn;
+  }, {});
+};
+
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+
+  // flatten object
+  const flat = flattenObject(Object.assign({}, obj));
+
+  // obj needs to be flattened
+  const t = new Set(Object.values(flat));
+
+  if (t.size === 1) return true;
+  return false;
 };
 
 module.exports = {
