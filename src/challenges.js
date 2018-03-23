@@ -104,6 +104,30 @@ const cuboid = new CuboidMaker(4, 5, 5);
 
 // Create a new cube object that has equal values for length, width, and height 
 
+class CuboidMaker {
+  constructor(length, width, height) {
+    this.length = length;
+    this.width = width;
+    this.height = height;
+  }
+}
+
+class Cube extends CuboidMaker {
+  constructor(length, width, height) {
+    super(length, width, height);
+  }
+
+  volume() {
+    return (this.length * this.width * this.height);
+  }
+
+  surfaceArea() {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  }
+}
+
+const cube = new Cube(2, 2, 2);
+
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
 // Use these logs to test your results:
