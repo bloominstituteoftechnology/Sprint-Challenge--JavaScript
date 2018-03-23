@@ -120,10 +120,6 @@ class CuboidMaker {
 }
 
 class Cube extends CuboidMaker {
-  volume() {
-    return this.length * this.width * this.height;
-  }
-  
   surfaceArea() {
     return 6 * (this.length * this.width);
   }
@@ -158,6 +154,50 @@ const cube = new Cube(2, 2, 2);
 // console.log(cube.volume()); // 8
 // console.log(cube.surfaceArea()); // 24
 // console.log(cube.checkIfCube());  // "We have a cube!"
+
+class CuboidMaker {
+  constructor(cuboidOptions) {
+    this.length = cuboidOptions.length;
+    this.width = cuboidOptions.width;
+    this.height = cuboidOptions.height;
+  }
+  
+  volume() {
+    return this.length * this.width * this.height;
+  }
+  
+  surfaceArea() {
+    return 2 * (this.length*this.width + this.length*this.height + this.width*this.height);
+  }
+}
+
+
+class Cube extends CuboidMaker {
+  constructor(cubeOptions) {
+    super(cubeOptions);
+    this.isCube = function() {
+      return this.length === this.width && this.length === this.height;
+    }
+  }
+
+  checkIfCube() {
+    if (this.isCube) {
+      return 'We have a cube!';
+    }
+    return 'This is not a cube.';
+  }
+}
+
+const cuboid = new CuboidMaker({
+  length: 4,
+  width: 5,
+  height: 5
+});
+const cube = new Cube({
+  length: 2,
+  width: 2,
+  height: 2
+});
 
 // Challenge 3: Recursion
 const checkMatchingLeaves = obj => {
