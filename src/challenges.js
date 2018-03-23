@@ -108,8 +108,8 @@ class CuboidMaker {
     return `${this.length * this.width * this.height}`;
   }
 
-  surfaceArea = function () {
-    return `(${this.length} * ${this.width}) + (${this.length} * ${this.height}) + (${this.width} * ${this.height})`;
+  surfaceArea() {
+    return 2 * `${this.length * this.width + this.length * this.height + this.width * this.height}`;
   }
 }
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
@@ -126,7 +126,7 @@ class Cube extends CuboidMaker {
     return `${this.length * this.width * this.height}`;
   }
 
-  surfaceArea = function () {
+  surfaceArea() {
     return 6 * `${this.length + this.width}`;
   }
 }
@@ -170,9 +170,9 @@ CuboidMaker.prototype.surfaceArea = function () {
 }
 
 function Cube(cubeAtt) {
-  this.length = att.length;
-  this.width = att.width;
-  this.height = att.height;
+  this.length = cubeAtt.length;
+  this.width = cubeAtt.width;
+  this.height = cubeAtt.height;
 }
 
 Cube.prototype = Object.create(CuboidMaker.prototype); //psuedo-inheritance
@@ -206,6 +206,55 @@ console.log(cube.surfaceArea()); // 24
 
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!'; NOTE: Comment our your prototype code so you don't have conflicting names!
+
+class CuboidMaker {
+  constructor(att) {
+    this.length = att.length;
+    this.width = att.width;
+    this.height = att.height;
+  }
+
+  volume () {
+    return `${this.length * this.width * this.height}`;
+  }
+
+  surfaceArea = function () {
+    return `(${this.length} * ${this.width}) + (${this.length} * ${this.height}) + (${this.width} * ${this.height})`;
+  }
+}
+
+class Cube extends CuboidMaker {
+  constructor(cubeAtt) {
+    super(cubeAtt)
+    this.isCube = cubeAtt.isCube;
+  }
+
+  volume() {
+    return `${this.length * this.width * this.height}`;
+  }
+
+  surfaceArea = function () {
+    return 6 * `${this.length + this.width}`;
+  }
+
+  checkIfCube () {
+    if(this.isCube) {
+      return `We have a cube!`;
+    }
+  }
+}
+
+const cuboid = new CuboidMaker ({
+  length: 4,
+  width: 5,
+  height: 5,
+});
+
+const cube = new Cube ({
+  length: 2,
+  width: 2,
+  height: 2,
+});
 
 // Use these logs to test your results:
 console.log(cuboid.volume()); // 100
