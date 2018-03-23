@@ -104,7 +104,52 @@ class Cube extends CuboidMaker {
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
 
+/* ======================== Class Practice ============================ */
 
+// ***Class Practice does NOT have test cases built.  You must use the console logs provided at the end of this section.***
+
+// Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
+class CuboidMaker {
+  constructor(options) {
+  this.length = options.length;
+  this.width = options.width;
+  this.height = options.height;
+}
+volume() {
+  return this.length * this.width * this.height;
+}
+
+surfaceArea() {
+  return 2 * (this.length * this.width + this.length + this.height + this.width + this.height)
+}
+}
+
+// Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
+class Cube extends CuboidMaker {
+  constructor(options) {
+      this.length = options.length;
+      this.width = options.width;
+      this.height = options.height;
+
+    };
+ }
+
+// Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
+
+// The volume of a cube is: length * width * height
+volume() {
+  return this.length * this.width * this.height;
+}
+// The surface area of a cube is: 6 * (length + width)
+SurfaceArea() {
+  return 6 * (this.length + this.width);
+}
+
+// Create a new cube object that has equal values for length, width, and height
+const cube = new Cube({
+  length: 2
+  width: 2
+  height: 2 
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
