@@ -23,18 +23,22 @@
     Closure is the ability of functions to create their own scope, function scope, and have access to data in the scopes surrounding them. This means that variables inside a function block can access variables outside their functoin's scope but the reverse is not true. Variables in outer scopes do not have access to function scopes.
 </p>
 
-```function add3(n) {
+```
+    function add3(n) {
         function addMsg() {
             return `The sum of n + 3 is ${n + 3}`;
         }
-```}
-
+    }
 ```
 #<h3>Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)</h3>
-<p></p>
+<p>Rules of 'this':</p>
 <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Global/Window Binding</li>
+    <p>Global Binding of 'this' occurs when context for this is not specified. This is a default behavior when a this context is not a specific scope but the global scope.</p>
+    <li>Implicit Binding</li>
+    <p>Implicit Binding refers to a 'this' context being defined in dot notation by a method. The scope for a this is the object a method will do something with (object.method()).</p>
+    <li>Explicit Binding</li>
+    <p>Explicit Binding refers to the use of the call, apply, and bind methods from Function.prototype to call a function with a 'this' value with another object and some arguments.</p>
+    <li>New Binding</li>
+    <p>New Binding refers to a 'this' context as the scope of a newly created object by a constructor function.</p>
 </ul>
