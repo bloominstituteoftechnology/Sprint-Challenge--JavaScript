@@ -11,3 +11,19 @@ Q2: Name five different Types in JavaScript. A Type is something that can repres
 
 A2: Numbers, Booleans, Strings, Arrays, and Objects
   Arrays are unique because they can be used easilly to compare or iterate through data.
+
+Q3: What is closure? Can you code out a quick example of a closure?\
+
+A3: Closure has to do with scope and javascripts callstack. When you do things in the closure scope of a function that data will be considered part of the execution environment of any other interior function. This lets us create things such as the counter below;
+
+<!-- 
+
+function closureCounter() {
+  let count = 0;
+  
+  return function countUp() {
+    console.log(count++);
+  }
+} 
+
+-->
