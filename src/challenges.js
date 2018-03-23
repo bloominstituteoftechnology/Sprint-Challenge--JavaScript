@@ -13,6 +13,12 @@ const each = (elements, cb) => {
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
+  const newArr = [];
+  for (let i = 0; i < elements.length; i++) {
+    const newVal = cb(elements[i]);
+    newArr.push(newVal);
+  }
+  return newArr;
 };
 
 /* ======================== Closure Practice ============================ */
