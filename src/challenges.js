@@ -97,10 +97,6 @@ function CuboidMaker(dimensions) {
   this.height = dimensions.height;
 }
 
-// function Volume(property) {
-//   (length * width * height)
-// }
-
 CuboidMaker.prototype.volume = function() {
   return `Volume: ${this.length * this.width * this.height}`;
 }
@@ -120,6 +116,26 @@ const cuboid = new CuboidMaker({
 // ***Class Practice does NOT have test cases built.  You must use the console logs provided at the end of this section.***
 
 // Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
+class CuboidMaker {
+  constructor(dimensions) {
+  this.length = dimensions.length;
+  this.width = dimensions.width;
+  this.height = dimensions.height;
+}
+
+volume() {
+  return `Volume: ${this.length * this.width * this.height}`;
+}
+
+surfaceArea() {
+  return `SurfaceArea: ${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
+}
+
+const cuboid = new CuboidMaker({
+  length: 4,
+  width: 5,
+  height: 5,
+});
 
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
 
