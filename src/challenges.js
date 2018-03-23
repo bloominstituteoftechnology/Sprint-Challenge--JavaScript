@@ -37,14 +37,17 @@ const counter = () => {
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
-  return function countCallback () {
-	let count = 1;
-    while (count < n) {
-      cb();
-      count++;
-    }
+  let count = 0;
+  // cb could have more than one arg
+  	// must convert arguments object into an iterable array
+  return (...args) => {
+  	if (count === n) {
+  		return null;
+  	}
+  	count++;
+  	// call cb with less args
+  	return cb(...args);
   }
-  countCallback();
 };
 
 /* ======================== Prototype Practice ============================ */
@@ -192,16 +195,47 @@ const cuboid = new CuboidMaker ({
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
 
 // Use these logs to test your results:
-console.log(`volume: ${cuboid.volume()}`); // 100
-console.log(`surfaceArea: ${cuboid.surfaceArea()}`); // 130
-console.log(`volume: ${cube.volume()}`); // 8
-console.log(`surfaceArea: ${cube.surfaceArea()}`); // 24
-console.log(`isCube: ${cube.checkIfCube()}`);  // "We have a cube!"
+// console.log(`volume: ${cuboid.volume()}`); // 100
+// console.log(`surfaceArea: ${cuboid.surfaceArea()}`); // 130
+// console.log(`volume: ${cube.volume()}`); // 8
+// console.log(`surfaceArea: ${cube.surfaceArea()}`); // 24
+// console.log(`isCube: ${cube.checkIfCube()}`);  // "We have a cube!"
 
 // Challenge 3: Recursion
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
+  	// nested objects can exist
   // otherwise return false
+
+  // gather all obj props in leaves
+  const leaves = [];
+  // iterate through object and compare props
+  const checkBranches = (object) => {
+    let keys = Object.keys(object);
+    keys.forEach((key) => {
+    	// base case: value is not an obj
+    	if (typeof object[key] !== 'object') {
+    		leaves.push(object[key]);
+    	}
+    	// recursive case: nested obj found
+    		// call checkBranches with this obj to pull out its props
+    	else if (typeof object[key] === 'object') {
+    		return checkBranches(object[key]);
+    	}
+    });
+  } 
+  checkBranches(obj);
+  // iterate over leaves arr which contains values from obj
+  let bool = true;
+  // compare vals in leaves to see if they are the same
+  leaves.reduce((a, b) => {
+   if (a !== b) {
+   	bool = false;
+   }
+   return a;
+  });
+  // output: val of bool describing if vals in obj are the same
+  return bool;
 };
 
 
