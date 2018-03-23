@@ -104,7 +104,7 @@ Cube.prototype.volume = function() {
   return this.length * this.width * this.height; //volume of cube
 }
 
-Cube.prototype.surfaceArea {
+Cube.prototype.surfaceArea = function() {
   return 6 * (this.length * this.width); //returns cube surfaceArea
 }
 
