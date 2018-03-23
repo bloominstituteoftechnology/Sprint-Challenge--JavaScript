@@ -1,4 +1,6 @@
 /* ======================== CallBacks Practice ============================ */
+let myArr = [1, 2, 3, 4]
+each(myArr); 
 const each = (elements, cb) => { // the forEach function! 
   for (let i = 0; i < list.length; i++){// Iterates over a list of elements, yielding each in turn to the `cb` function.
   cb(elements[i], i)// This only needs to work with arrays.
@@ -6,20 +8,22 @@ const each = (elements, cb) => { // the forEach function!
 
 const map = (elements, cb) => { // the map function!
   const newArr = []; // Produces a new array of values by mapping each value in list through a transformation function.
-  for (let i = 0; i < elements.length; i++){
+  for (let i = 0; i < elements.length; i++){ // or each(elements, item =>(newArr.push(item)))
     newArr.push(cb(elements[i]));
-  }// Return the new array.
+  }
+  return newArr; // Return the new array.
 };
 
 /* ======================== Closure Practice ============================ */
 // No test needed here, just run the newCounter(); and make sure it's counting up
 const counter = () => {
   let count = 0;
-  return () => {
+  return () => { // or return () => (++count);
     count++;
     return count;
   };// Return a function that when invoked increments and returns a counter variable.
 };
+
 // Example: const newCounter = counter();
 newCounter = counter(); // newCounter declared 
 newCounter(); // 1st call => 1
@@ -51,7 +55,7 @@ function CuboidMaker(att) {
 // Create a seperate function property of CuboidMaker that returns the volume of a given cuboid's length, width, and height
 // Formula for cuboid volume: length * width * height
 CuboidMaker.prototype.cuboidVol = function() {
-  return this.length * this.width * this.height;
+  return this.length * this.width * this.height; // or return `Volume {$this.length*this.height*this.width}`
 }
 
 // Create a seperate function property of CuboidMaker that returns the surface area of a given cuboid's length, width, and height. 
@@ -93,6 +97,7 @@ volume () {
 }
 surfaceArea () {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+}
 }
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
 class Cube extends Cuboid { // << YARN will not run because of this line. Please advise!! Yes, I tried with the prototype section noted out. 
