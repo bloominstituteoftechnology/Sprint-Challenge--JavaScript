@@ -81,7 +81,7 @@ CuboidMaker.prototype.volume = function() {
 CuboidMaker.prototype.surfaceArea = function() {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
 }
-const cuboid = new CuboidMaker({length: 4, width: 5, height: 5});
+const cuboid = new CuboidMaker({length: 4, width: 5, height: 5}); 
 
 /* ======================== Class Practice ============================ */
 
@@ -105,6 +105,7 @@ const cuboid = new CuboidMaker({length: 4, width: 5, height: 5});
 // console.log(cuboid.surfaceArea()); // 130
 // console.log(cube.volume()); // 8
 // console.log(cube.surfaceArea()); // 24
+
 class CuboidMaker {
   constructor(dimensions) {
     this.length = dimensions.length;
@@ -188,6 +189,15 @@ const cube = new Cube({length: 2, width: 2, height: 2, isCube: true});
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  const keys = Object.keys(obj);
+  const newKeysArr = [];
+  for (let i = 0; i < keys.length; i++) {
+    if (newKeysArr.indexOf(keys[i]) === -1) {
+      newKeysArr.push(keys[i]);
+    }
+  }
+  if (keys.length === newKeysArr.length) return false;
+  else return true;
 };
 
 
