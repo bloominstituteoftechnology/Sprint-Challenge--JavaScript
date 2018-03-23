@@ -2,30 +2,53 @@
 
 
 /* ======================== CallBacks Practice ============================ */
-const each = (elements, cb) => {
+const each = (elements, cb) => {  //---------------------------------------------------------------------------------------------------------------completed
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
+  // iterate over the elements array
+  // pass each array element into the call back function
 };
 
-const map = (elements, cb) => {
+const map = (elements, cb) => { //-----------------------------------------------------------------------------------------------------------------completed
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
+  let cbArr = [];
+  for (let i = 0; i < elements.length; i++) {
+    cbArr.push(cb(elements[i]));
+  }
+  return cbArr;
 };
-
 /* ======================== Closure Practice ============================ */
 // No test needed here, just run the newCounter(); and make sure it's counting up
-const counter = () => {
+const counter = () => {  //---------------------------------------------------------------------------------------------------------------------------completed
   // Return a function that when invoked increments and returns a counter variable.
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
+  let total = 0; 
+  return () => ++total;
 };
+const newCounter = counter();
+console.log(newCounter());
+console.log(newCounter());
+console.log(newCounter());
+console.log(newCounter());
 
-const limitFunctionCallCount = (cb, n) => {
+const limitFunctionCallCount = (cb, n) => {  //--------------------------------------------------------------------------------------------------------------completed
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  return (...args) => {
+    if (count < n) {
+      count++;
+      return cb(...args);
+    }
+    return null;
+  };
 };
-
 /* ======================== Prototype Practice ============================ */
 
 // ***Prototypes do NOT have test cases built for them.  You must use the console logs provided at the end of this section.***
@@ -45,9 +68,29 @@ const limitFunctionCallCount = (cb, n) => {
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
 
+function CuboidMaker(length, width, height) { //---------------------------------------------------------------------------- completed
+  this.length = length;
+  this.width = width;
+  this.height = height;
+  this.volume = function() {
+    return (this.length * this.width * this.height);
+  }
+}
+
+CuboidMaker.prototype.Volume = function() {
+  return (this.length * this.width * this.height);
+}
+
+CuboidMaker.prototype.surfaceArea = function() {
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+}
+
+let cuboid = new CuboidMaker(12, 24, 34);
+
+
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+ console.log(cuboid.volume()); // 100
+ console.log(cuboid.surfaceArea()); // 130
 
 /* ======================== Class Practice ============================ */
 
@@ -64,13 +107,42 @@ const limitFunctionCallCount = (cb, n) => {
 
 // Create a new cube object that has equal values for length, width, and height 
 
-// To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
+// To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24.
+class ClassCuboidMaker {
+  constructor(sizes) {
+    this.length = sizes.length;
+    this.width = sizes.width;
+    this.height = sizes.height;
+  }
+  volume(length, width, height) {
+    return (this.length * this.width * this.height);
+  }
+  surfaceArea(length, width, height) {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  }
+};
+
+class ClassCube extends ClassCuboidMaker {
+  constructor(sizes) {
+    super(sizes);
+  }
+  cubeVolume(length, width, height) {
+    return (this.length * this.width * this.height);
+  }
+  cubeSurfaceArea(length, width, height) {
+    return 6 * (this.length + this.width);
+  }
+};
+
+let secondCube = new ClassCube({
+  length: 2, 
+  width: 2,
+  height: 2,
+});
 
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
+ console.log(secondCube.volume()); // 8
+ console.log(secondCube.surfaceArea()); // 24
 
 /* ======================== Stretch Challenges ============================ */
 
@@ -97,8 +169,7 @@ const limitFunctionCallCount = (cb, n) => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
-};
-
+    };
 
 module.exports = {
   each,
