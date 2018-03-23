@@ -113,6 +113,12 @@ const cuboid = new CuboidMaker({
  width: 5,
  height: 5,
 });
+
+const cube = new Cube ({
+  length: 2,
+  width: 5,
+  height: 5,
+});
 /* ======================== PROTOTYPE CODE ENDS  ============================ */
 
 /* ======================== Class Practice ============================ */
