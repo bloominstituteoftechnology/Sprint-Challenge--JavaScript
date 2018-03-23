@@ -70,32 +70,50 @@ const limitFunctionCallCount = (cb, n) => {
 
 // PROTOTYPE ======================================================================================
 
-// function CuboidMaker(dimension) {
-//   this.length = dimension.length;
-//   this.width = dimension.width;
-//   this.height = dimension.height;
-// }
+function CuboidMaker(dimension) {
+  this.length = dimension.length;
+  this.width = dimension.width;
+  this.height = dimension.height;
+}
 
-// CuboidMaker.prototype.volume = function() {
-//   return this.length * this.width * this.height;
-// };
+CuboidMaker.prototype.volume = function() {
+  return this.length * this.width * this.height;
+};
 
-// CuboidMaker.prototype.surfaceArea = function() {
-//   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
-// };
+CuboidMaker.prototype.surfaceArea = function() {
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+};
 
-// function CuboidObject(cuboidDimensions) {
-//   CuboidMaker.call(this, cuboidDimensions);
-// }
+function CuboidObject(cuboidDimensions) {
+  CuboidMaker.call(this, cuboidDimensions);
+}
 
-// let cuboid = new CuboidMaker({
-//   length: 4,
-//   width: 5,
-//   height: 5,
-// });
+Cube.prototype = Object.create(CuboidMaker.prototype);
 
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+function Cube(cubeDimensions) {
+  CuboidMaker.call(this, cubeDimensions);
+
+Cube.prototype.surfaceArea = function() {
+  return 6 * this.height * this.width;
+};
+}
+
+let cuboid = new CuboidMaker({
+  length: 4,
+  width: 5,
+  height: 5,
+});
+
+let cube = new CuboidMaker({
+  length: 2,
+  width: 2,
+  height: 2,
+});
+
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
+console.log(cube.volume()); // 8
+console.log(cube.surfaceArea()); // 24
 
 /* ======================== Class Practice ============================ */
 
