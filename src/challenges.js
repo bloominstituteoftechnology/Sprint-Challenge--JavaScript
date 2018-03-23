@@ -5,11 +5,20 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  return elements.forEach(cb);
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
+  return elements.map(cb);
+
+  // let myMap = [];
+  // for (let i = 0; i < elements.length; i++) {
+  //   myMap = elements[i].push(myMap);
+  // }
+  // return myMap;
+
 };
 
 /* ======================== Closure Practice ============================ */
@@ -17,13 +26,35 @@ const map = (elements, cb) => {
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
   // Example: const newCounter = counter();
-  // newCounter(); // 1
+  // newCounter(); // 1   
   // newCounter(); // 2
-};
+  
+  const counter = () => {
+    let num = 0;
+    return function() 
+    { return num++ }
+  }
+    };
+    
+   //console.log(counter());
+
+    // let num = 0;
+    // return newCounter() 
+    // { return num++ }
+    // };
+    
+    // const newCounter = counter();
+    // newCounter(); // 1   
+    // newCounter(); // 2
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+ newFunction(cb)
+   let x = 5;
+   while (x !== n)
+   limitFunctionCallCount(cb);
+
 };
 
 /* ======================== Prototype Practice ============================ */
