@@ -5,25 +5,47 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+for (let i = 0; i < elements.length; i++) {
+ cb(elements[i])
+  
+}
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
+  const newArray = []
+  for (let i = 0; i < elements.length; i++) {
+   newArray(cb(elements))
+    
+  }
 };
 
 /* ======================== Closure Practice ============================ */
 // No test needed here, just run the newCounter(); and make sure it's counting up
+let count = 0;
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
-  // Example: const newCounter = counter();
-  // newCounter(); // 1
-  // newCounter(); // 2
+    count++;
+  return count;
 };
+// i had to change this because it was not working with the stored function
+counter();
+counter();
+
+// const newCounter = counter();
+//   newCounter(); // 1
+//   newCounter(); // 2
+
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  count = 0;
+  if(count < n){
+    count++;
+    return cb();
+  }
 };
 
 /* ======================== Prototype Practice ============================ */
@@ -33,7 +55,7 @@ const limitFunctionCallCount = (cb, n) => {
 // Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. 
 
 // Create a CuboidMaker constructor function that accepts properties for length, width, and height
-
+function CuboidMaker(dimensions)
 // Create a seperate function property of CuboidMaker that returns the volume of a given cuboid's length, width, and height
 // Formula for cuboid volume: length * width * height
 
