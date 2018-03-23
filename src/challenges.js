@@ -7,7 +7,7 @@ const each = (elements, cb) => {
     cb(elements[i], i);
   } //for loop answer
   
-  // elements.forEach(e => cb(e));  //.foreach answer not working
+  elements.forEach(e => cb(e));  //.foreach answer not working
   // return items.forEach(item =>  alert(item) );
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
@@ -41,11 +41,9 @@ const counter = () => {
 const limitFunctionCallCount = (cb, n) => {
   let value = 0;
   return (...args) => {
-    if (value < n) {
-      value++;
-      return cb(...args);
-    }
-    if (value === n) return null;
+  if (value === n) return null;
+  value++;
+  return cb(...args);
   };
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
@@ -95,12 +93,12 @@ const limitFunctionCallCount = (cb, n) => {
 
 // Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
 class CuboidMaker {
-  constructor(l, w, h) {
-    this.l = l;
-    this.w = w;
-    this.h = h;
+  constructor(x) {
+    this.l = x.l;
+    this.w = x.w;
+    this.h = x.h;
   }
-  value() {
+  volume() {
     return (this.l * this.w * this.h);
   }
   surfaceArea() {
@@ -111,7 +109,7 @@ class CuboidMaker {
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
 class Cube extends CuboidMaker {
   constructor(x){
-    super({l: x.l, w: x.w, h: x.h});
+    super(x);
   }
   volume() {
     return (this.l * this.w * this.h);
@@ -119,7 +117,7 @@ class Cube extends CuboidMaker {
   surfaceArea() {
     return 6 * (this.l * this.w);
   }
-  isCube() {
+  checkIfCube() {
     return (this.l === this.w && this.w === this.h) ? 'We have a cube!' : 'Not a cube';
   }
 }
@@ -129,15 +127,16 @@ class Cube extends CuboidMaker {
 // The surface area of a cube is: 6 * (length + width)
 
 // Create a new cube object that has equal values for length, width, and height 
-const cube = new Cube (2, 2, 2);
+const cube = new Cube ({l:2, w:2, h:2});
+let cuboid = new CuboidMaker({l:4, w:5, h:5});
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
-console.log(cube.volume()); // 8
-console.log(cube.surfaceArea()); // 24
+// console.log(cube.volume()); // 8
+// console.log(cube.surfaceArea()); // 24
 
 /* ======================== Stretch Challenges ============================ */
 
@@ -145,20 +144,20 @@ console.log(cube.surfaceArea()); // 24
 // Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax
 
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
+console.log(cube.volume()); // 8
+console.log(cube.surfaceArea()); // 24
 
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
 
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
-// console.log(cube.checkIfCube());  // "We have a cube!"
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
+console.log(cube.volume()); // 8
+console.log(cube.surfaceArea()); // 24
+console.log(cube.checkIfCube());  // "We have a cube!"
 
 // Challenge 3: Recursion
 const checkMatchingLeaves = obj => {
