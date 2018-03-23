@@ -54,8 +54,9 @@ const limitFunctionCallCount = (cb, n) => {
 // Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. 
 
 // Create a CuboidMaker constructor function that accepts properties for length, width, and height
-
+// Parent object
 function CuboidMaker (attributes) {
+	// properties of a cuboid
 	this.length = attributes.length;
 	this.width = attributes.width;
 	this.height = attributes.height;
@@ -68,7 +69,9 @@ CuboidMaker.prototype.volume = function() {
 }
 // Create a seperate function property of CuboidMaker that returns the surface area of a given cuboid's length, width, and height. 
 // Formula for cuboid surface area of a cube: 2(length * width + length * height + width * height)
-
+CuboidMaker.prototype.surfaceArea = function() {
+	return (2 * ((this.length * this.width) + (this.length * this.height) + (this.width + this.height)));
+}
 // Create a cuboid object that inherits from CuboidMaker. 
 // The cuboid object must contain keys for length, width, and height.
 
