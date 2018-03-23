@@ -124,8 +124,15 @@ class CuboidMaker {
   }
   surfaceArea() {
     let surfaceA = 2 * (this.length * this.width + this.length * this.height + this.height * this.width);
+    return surfaceA;
   }
 }
+
+const cuboid = new CuboidMaker ({
+  length: 4,
+  width: 5,
+  height: 5,
+})
 
 
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
@@ -157,8 +164,8 @@ const cube = new Cube ({
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
 console.log(cube.volume()); // 8
 console.log(cube.surfaceArea()); // 24
 
