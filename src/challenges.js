@@ -104,7 +104,7 @@ let cuboid = new CuboidMaker(12, 24, 34);
 // Create a new cube object that has equal values for length, width, and height 
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24.
-class MyCuboidMaker {
+class ClassCuboidMaker {
   constructor(sizes) {
     this.length = sizes.length;
     this.width = sizes.width;
@@ -118,7 +118,7 @@ class MyCuboidMaker {
   }
 };
 
-class MyCube extends MyCuboidMaker {
+class ClassCube extends ClassCuboidMaker {
   constructor(sizes) {
     super(sizes);
   }
@@ -130,16 +130,11 @@ class MyCube extends MyCuboidMaker {
   }
 };
 
-let testCube = new MyCube(2, 2, 2);
-console.log(testCube.volume());
-
-
+let secondCube = new ClassCube(2, 2, 2);
 
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
+ console.log(secondCube.volume()); // 8
+ console.log(secondCube.surfaceArea()); // 24
 
 /* ======================== Stretch Challenges ============================ */
 
