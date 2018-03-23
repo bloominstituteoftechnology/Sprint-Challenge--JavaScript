@@ -35,8 +35,9 @@ const counter = () => {
 };
 
 const newCounter = counter();
+console.log("Closure practice: counter");
 console.log(newCounter()); // 1
-console.log(newCounter()); // 1
+console.log(newCounter()); // 2
 
 
 const limitFunctionCallCount = (cb, n) => {
@@ -82,8 +83,20 @@ CuboidMaker.prototype.surfaceArea = function() { return 2 * (this.length * this.
 const cuboid = new CuboidMaker(4, 5, 5);
 
 // Use these logs to test your results:
+console.log("\nPrototype practice");
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
+
+// Stretch Challenge:
+
+function Cube(length, width, height) {
+  CuboidMaker.call(this, length, width, height)
+}
+
+Cube.prototype = Object.create(CuboidMaker.prototype);
+
+const cube = new Cube(2, 2, 2);
+
 
 /* ======================== Class Practice ============================ */
 
@@ -98,7 +111,7 @@ class CuboidMaker2 {
   }
 }
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
-class Cube extends CuboidMaker2 {
+class Cube2 extends CuboidMaker2 {
   constructor(length, width, height) {
     super(length, width, height);
   }
@@ -120,13 +133,14 @@ class Cube extends CuboidMaker2 {
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
-const cube = new Cube(2, 2, 2);
+const cube2 = new Cube2(2, 2, 2);
 
 // Use these logs to test your results:
+console.log("\nClass practice");
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
-console.log(cube.volume()); // 8
-console.log(cube.surfaceArea()); // 24
+console.log(cube2.volume()); // 8
+console.log(cube2.surfaceArea()); // 24
 
 /* ======================== Stretch Challenges ============================ */
 
@@ -134,10 +148,11 @@ console.log(cube.surfaceArea()); // 24
 // Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax
 
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
+console.log("\nStretch Challenge 1");
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
+console.log(cube.volume()); // 8
+console.log(cube.surfaceArea()); // 24
 
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
