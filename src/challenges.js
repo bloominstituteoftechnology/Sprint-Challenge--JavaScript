@@ -109,12 +109,6 @@ class CuboidMaker2 {
     this.width = width;
     this.height = height;
   }
-}
-// Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
-class Cube2 extends CuboidMaker2 {
-  constructor(length, width, height) {
-    super(length, width, height);
-  }
 
   volume() { 
     return this.length * this.width * this.height; 
@@ -122,6 +116,18 @@ class Cube2 extends CuboidMaker2 {
 
   surfaceArea() {
      return 2 * (this.length * this.width + this.length * this.height + this.width * this.height); 
+  }
+}
+// Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
+class Cube2 extends CuboidMaker2 {
+  constructor(length, width, height) {
+    super(length, width, height);
+
+    this.isCube = length === width && width === height;
+  }
+
+  checkIfCube() { 
+    return this.isCube ? "We have a cube!" : "No cube for you!";
   }
 }
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
@@ -158,11 +164,12 @@ console.log(cube.surfaceArea()); // 24
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
 
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
-// console.log(cube.checkIfCube());  // "We have a cube!"
+console.log("\nStretch Challenge 2");
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
+console.log(cube2.volume()); // 8
+console.log(cube2.surfaceArea()); // 24
+console.log(cube2.checkIfCube());  // "We have a cube!"
 
 // Challenge 3: Recursion
 const checkMatchingLeaves = obj => {
