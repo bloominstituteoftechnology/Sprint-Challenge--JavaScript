@@ -22,14 +22,14 @@ const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
   let count = 0;
-  function Limit(...args) {
+  function CallCount(...args) {
     if (count < n) {
       count++;
       return cb(...args);
     }
     return null;
   }
-  return Limit;
+  return CallCount;
 };
 
 const cacheFunction = (cb) => {
@@ -39,7 +39,7 @@ const cacheFunction = (cb) => {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
-  const obj = {};
+  const obj = [];
   return (cache) => {
     if (Object.hasOwnProperty.call(obj, cache)) {
       return obj[cache];
@@ -67,19 +67,19 @@ const checkMatchingLeaves = (obj) => {
   // otherwise return false
   let result = true;
   const leaves = [];
-  const recur = (objGiven) => {
+  const check = (objGiven) => {
     Object.keys(objGiven).forEach((key) => {
       if (typeof objGiven[key] === 'number' || typeof objGiven[key] === 'string') {
         leaves.push(objGiven[key]);
       }
       if (typeof objGiven[key] === 'object') {
-        recur(objGiven[key]);
+        check(objGiven[key]);
       }
     });
   };
-  recur(obj);
-  leaves.reduce((memo, i) => {
-    if (memo !== i) {
+  check(obj);
+  leaves.reduce((para, i) => {
+    if (para !== i) {
       result = false;
     }
     return i;
