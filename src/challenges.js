@@ -5,11 +5,19 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
+  const newArray = [];
+  for (let i = 0; i < elements.length; i++) {
+    newArray.push(cb(elements[i]));
+  }
+  return newArray;
 };
 
 /* ======================== Closure Practice ============================ */
@@ -19,11 +27,25 @@ const counter = () => {
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
+  let count = 0;
+  const newCounter = () => {
+    count++;
+    return count;
+  }
+  return newCounter;
 };
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let limit = 0;
+  return (...args) => {
+    if (limit >= n) {
+      return null;
+    }
+    limit++;
+    return cb(...args);
+  };
 };
 
 /* ======================== Prototype Practice ============================ */
@@ -34,7 +56,7 @@ const limitFunctionCallCount = (cb, n) => {
 
 // Create a CuboidMaker constructor function that accepts properties for length, width, and height
 
-// Create a seperate function property of CuboidMaker that returns the volume of a given cuboid's length, width, and height
+// Create a separate function property of CuboidMaker that returns the volume of a given cuboid's length, width, and height
 // Formula for cuboid volume: length * width * height
 
 // Create a seperate function property of CuboidMaker that returns the surface area of a given cuboid's length, width, and height. 
