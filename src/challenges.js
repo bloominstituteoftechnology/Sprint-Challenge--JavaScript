@@ -69,23 +69,21 @@ const limitFunctionCallCount = (cb, n) => {
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
 
-function CuboidMaker(options) {
-  this.length = options.length;
-  this.width = options.width;
-  this.height = options.height;
-};
+// PROTOTYPE SOLUTION  ----------------------------------------------------------------------------
 
-CuboidMaker.prototype.volume = function volume() {
-  return `${this.length * this.width * this.height}`
-};
+// function CuboidMaker(options) {
+//   this.length = options.length;
+//   this.width = options.width;
+//   this.height = options.height;
+// };
 
-CuboidMaker.prototype.surfaceArea = function surfaceArea() {
-  return `${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`
-};
+// CuboidMaker.prototype.volume = function volume() {
+//   return `${this.length * this.width * this.height}`
+// };
 
-function Cuboid(options) {
-  CuboidMaker.call(this, options);
-};
+// CuboidMaker.prototype.surfaceArea = function surfaceArea() {
+//   return `${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`
+// };
 
 // const cuboid = new CuboidMaker({ length: 4, width: 5, height: 5 });
 
@@ -110,7 +108,38 @@ function Cuboid(options) {
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
-// Use these logs to test your results:
+class CuboidMaker {
+  constructor(options) {
+    this.length = options.length;
+    this.width = options.width;
+    this.height = options.height;
+  }
+  volume() {
+    return `${this.length * this.width * this.height}`
+  }
+  surfaceArea() {
+    return `${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`
+  }
+};
+
+class Cube extends CuboidMaker {
+  constructor(options) {
+    super(options);
+  }
+  // Declaring volume method again seems redundant as Cube already inherits it from CuboidMaker
+  volume() {
+    return `${this.length * this.width * this.height}`
+  }
+
+  surfaceArea() {
+    return `${6 * (this.length + this.width)}`
+  }
+}
+
+// const cuboid = new CuboidMaker({ length: 4, width: 5, height: 5 });
+// const cube = new CuboidMaker({ length: 2, width: 2, height: 2 });
+
+// // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
 // console.log(cube.volume()); // 8
