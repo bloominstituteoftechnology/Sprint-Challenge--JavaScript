@@ -76,8 +76,8 @@ function CuboidMaker(obj) {
   this.height = obj.height;
 }
 
-CuboidMaker.prototype.surfaceArea= function () {
-  return 2*(this.length * this.width + this.length * this.height + this.width * this.height);
+CuboidMaker.prototype.surfaceArea = function () {
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 };
 CuboidMaker.prototype.volume = function () {
   return this.length * this.width * this.height;
@@ -124,20 +124,20 @@ console.log(hilal.volume());
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
 
- class CuboidMaker {
-   constructor(obj){
-  this.length = obj.length;
-  this.width = obj.width;
-  this.height = obj.height;
-}
+class CuboidMaker {
+  constructor(obj) {
+    this.length = obj.length;
+    this.width = obj.width;
+    this.height = obj.height;
+  }
 
-   surfaceArea() {
-     return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
-   }
-   volume() {
-     return this.length * this.width * this.height;
-   }
- }
+  surfaceArea() {
+    return 2*(this.length * this.width + this.length * this.height + this.width * this.height);
+  }
+  volume() {
+    return this.length * this.width * this.height;
+  }
+}
 
 let hilal = new CuboidMaker({
   length: 10,
@@ -149,16 +149,16 @@ console.log(hilal.volume());
 
 
 class Cube extends CuboidMaker {
-  constructor(obj){
+  constructor(obj) {
     super(obj);
   }
-    cubeVolume(){
-      return this.length * this.width * this.height;
-    }
+  cubeVolume() {
+    return this.length * this.width * this.height;
+  }
 
-    cubSurfaceArea(){
-      return 6*(this.length + this.width);
-    }
+  cubSurfaceArea() {
+    return 6*(this.length + this.width);
+  }
 }
 
 let aissani = new Cube({
@@ -205,19 +205,19 @@ console.log(hilal.surfaceArea());
 console.log(hilal.volume());
 
 
-function Cube(obj){
-CuboidMaker.call(this,obj);
+function Cube(obj) {
+  CuboidMaker.call(this, obj);
 }
 
 Cube.prototype = Object.create(CuboidMaker.prototype);
 
-Cube.prototype.cubeVolume = function(){
+Cube.prototype.cubeVolume = function () {
   return this.length * this.width * this.height;
 };
 
 
-Cube.prototype.CubeSurfaceArea = function() {
-  return 6 * (this.length + this.width);
+Cube.prototype.CubeSurfaceArea = function () {
+  return 6*(this.length + this.width);
 };
 
 let aissani = new Cube({
@@ -240,7 +240,39 @@ console.log(aissani.surfaceArea());
 
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
+class Cube extends CuboidMaker {
+  constructor(obj) {
+    super(obj);
+    this.shape = obj.shape;
+  }
+  cubeVolume() {
+    return this.length * this.width * this.height;
+  }
 
+  cubSurfaceArea() {
+    return 6*(this.length + this.width);
+  }
+
+  cube() {
+    if (this.shape === 'cube') {
+      return 'we have a cube!';
+    }
+    else {
+      return false;
+    }
+  }
+}
+let aissani = new Cube({
+  length: 30,
+  width: 30,
+  height: 30,
+  shape: 'cube'
+});
+console.log(aissani.CubeSurfaceArea());
+console.log(aissani.cubeVolume());
+console.log(aissani.volume())
+console.log(aissani.surfaceArea())
+console.log(aissani.cube())
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
