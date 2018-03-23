@@ -177,7 +177,7 @@ class CuboidMaker {
   surfaceArea() {
     return 6 * (this.length * this.width); //for surface area of cube
   }
-  isCube() {
+  checkIfCube() {
     if(this.isCube) {
       return 'We have a cube!';
     }
