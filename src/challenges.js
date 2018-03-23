@@ -24,14 +24,30 @@ const map = (elements, cb) => {
 // No test needed here, just run the newCounter(); and make sure it's counting up
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
+  let count = 0;
+  return () => {
+    return ++count;
+  }
+
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
 };
+const newCounter = counter();
+console.log(newCounter()); // 1
+console.log(newCounter()); // 2
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  return (...args) => {
+    if (count < n){
+      count ++;
+      return cb(...args);
+    }
+    return null;
+  }
 };
 
 /* ======================== Prototype Practice ============================ */
