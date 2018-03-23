@@ -77,7 +77,7 @@ const CubeMaker = function CubeMaker(options) {
 // CubeMaker.prototype = null;
 
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
-// Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
+// Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!'; NOTE: Comment our your prototype code so you don't have conflicting names!
 
 // Challenge 3: Recursion
 const checkMatchingLeaves = obj => {
