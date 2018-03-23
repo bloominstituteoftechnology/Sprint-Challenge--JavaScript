@@ -27,3 +27,11 @@ function closureCounter() {
 } 
 
 -->
+
+
+Q4: Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
+
+A4: Implicit: Bind to left of the dot
+  Explocit: Rebind this using .call(), .apply(), and .bind()
+  Window: Bind to outer global object
+  New: Bind to newly created data
