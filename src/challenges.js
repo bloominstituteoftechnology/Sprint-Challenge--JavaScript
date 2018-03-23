@@ -80,7 +80,7 @@ const limitFunctionCallCount = (cb, n) => {
 // console.log(cuboid.surfaceArea()); // 130
 
 /* ======================== PROTOTYPE CODE ============================ */
-function CuboidMaker (dimensions) {
+function CuboidMaker(dimensions) {
   this.length = dimensions.length;
   this.width = dimensions.width;
   this.height = dimensions.height;
@@ -94,7 +94,7 @@ CuboidMaker.prototype.surfaceArea = function() {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height); //returns the surfaceArea of cuboid
 }
 
-function Cube (cubeDimensions) { //stretch goal 1, makin a cube
+function Cube(cubeDimensions) { //stretch goal 1, makin a cube
   CuboidMaker.call(this, cubeDimensions)
 }
 
@@ -109,16 +109,24 @@ Cube.prototype.surfaceArea = function() {
 }
 
 const cuboid = new CuboidMaker({
- length: 4,
- width: 5,
- height: 5,
+  length: 4,
+  width: 5,
+  height: 5,
 });
 
-const cube = new Cube ({
+const cube = new Cube({
   length: 2,
   width: 2,
   height: 2,
 });
+
+/* stretch goal logs
+// console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
+// console.log(cube.volume()); // 8
+// console.log(cube.surfaceArea()); // 24
+*/
+
 /* ======================== PROTOTYPE CODE ENDS  ============================ */
 
 /* ======================== Class Practice ============================ */
