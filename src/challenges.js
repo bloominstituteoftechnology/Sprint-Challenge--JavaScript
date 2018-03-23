@@ -53,7 +53,7 @@ const limitFunctionCallCount = (cb, n) => {
 
 // ***Class Practice does NOT have test cases built.  You must use the console logs provided at the end of this section.***
 
-// Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
+// Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax. NOTE: Comment our your prototype code above so you don't have conflicting names!
 
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
 
@@ -75,7 +75,7 @@ const limitFunctionCallCount = (cb, n) => {
 /* ======================== Stretch Challenges ============================ */
 
 
-// Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax
+// Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax. NOTE: Comment our your class code so you don't have conflicting names!
 
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
@@ -84,7 +84,7 @@ const limitFunctionCallCount = (cb, n) => {
 // console.log(cube.surfaceArea()); // 24
 
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
-// Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
+// Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!'; NOTE: Comment our your prototype code so you don't have conflicting names!
 
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
