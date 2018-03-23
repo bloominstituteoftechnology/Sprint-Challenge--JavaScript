@@ -80,45 +80,45 @@ const limitFunctionCallCount = (cb, n) => {
 // console.log(cuboid.surfaceArea()); // 130
 
 /* ======================== PROTOTYPE CODE ============================ */
-function CuboidMaker(dimensions) {
-  this.length = dimensions.length;
-  this.width = dimensions.width;
-  this.height = dimensions.height;
-}
-
-CuboidMaker.prototype.volume = function() {
-  return this.length * this.width * this.height; //returns the volume of cuboid
-}
-
-CuboidMaker.prototype.surfaceArea = function() {
-  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height); //returns the surfaceArea of cuboid
-}
-
-function Cube(cubeDimensions) { //stretch goal 1, makin a cube
-  CuboidMaker.call(this, cubeDimensions)
-}
-
-Cube.prototype = Object.create(CuboidMaker.prototype); //bridges cube and CuboidMaker
-
-Cube.prototype.volume = function() {
-  return this.length * this.width * this.height; //volume of cube
-}
-
-Cube.prototype.surfaceArea = function() {
-  return 6 * (this.length * this.width); //returns cube surfaceArea
-}
-
-const cuboid = new CuboidMaker({
-  length: 4,
-  width: 5,
-  height: 5,
-});
-
-const cube = new Cube({
-  length: 2,
-  width: 2,
-  height: 2,
-});
+// function CuboidMaker(dimensions) {
+//   this.length = dimensions.length;
+//   this.width = dimensions.width;
+//   this.height = dimensions.height;
+// }
+//
+// CuboidMaker.prototype.volume = function() {
+//   return this.length * this.width * this.height; //returns the volume of cuboid
+// }
+//
+// CuboidMaker.prototype.surfaceArea = function() {
+//   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height); //returns the surfaceArea of cuboid
+// }
+//
+// function Cube(cubeDimensions) { //stretch goal 1, makin a cube
+//   CuboidMaker.call(this, cubeDimensions)
+// }
+//
+// Cube.prototype = Object.create(CuboidMaker.prototype); //bridges cube and CuboidMaker
+//
+// Cube.prototype.volume = function() {
+//   return this.length * this.width * this.height; //volume of cube
+// }
+//
+// Cube.prototype.surfaceArea = function() {
+//   return 6 * (this.length * this.width); //returns cube surfaceArea
+// }
+//
+// const cuboid = new CuboidMaker({
+//   length: 4,
+//   width: 5,
+//   height: 5,
+// });
+//
+// const cube = new Cube({
+//   length: 2,
+//   width: 2,
+//   height: 2,
+// });
 
 /* stretch goal logs
 // console.log(cuboid.volume()); // 100
@@ -153,42 +153,48 @@ const cube = new Cube({
 // console.log(cube.surfaceArea()); // 24
 
 /* ======================== CLASS CODE HERE ============================ */
-// class CuboidMaker {
-//   constructor(dimensions) {
-//   this.length = dimensions.length;
-//   this.width = dimensions.width;
-//   this.height = dimensions.height;
-//   }
-//   volume() {
-//     return this.length * this.width * this.height;
-//   }
-//   surfaceArea() {
-//     return 2 * (this.length * this.width + this.length * this.height + this.width * this.height); //cuboid surface area
-//   }
-// }
-//   class Cube extends CuboidMaker {
-//     constructor(dimensions) {
-//       super(dimensions);
-//     }
-//   volume() {
-//     return this.length * this.width * this.height;
-//   }
-//   surfaceArea() {
-//     return 6 * (this.length * this.width); //for surface area of cube
-//   }
-// }
-//
-// const cube = new Cube ({
-//   length: 2,
-//   width: 2,
-//   height: 2,
-// });
-//
-// const cuboid = new CuboidMaker ({
-//   length: 4,
-//   width: 5,
-//   height: 5,
-// });
+class CuboidMaker {
+  constructor(dimensions) {
+  this.length = dimensions.length;
+  this.width = dimensions.width;
+  this.height = dimensions.height;
+  }
+  volume() {
+    return this.length * this.width * this.height;
+  }
+  surfaceArea() {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height); //cuboid surface area
+  }
+}
+  class Cube extends CuboidMaker {
+    constructor(dimensions) {
+      super(dimensions)
+      this.isCube = dimensions.isCube;
+    }
+  volume() {
+    return this.length * this.width * this.height;
+  }
+  surfaceArea() {
+    return 6 * (this.length * this.width); //for surface area of cube
+  }
+  isCube() {
+    if(this.isCube) {
+      return 'We have a cube!';
+    }
+  }
+}
+
+const cube = new Cube ({
+  length: 2,
+  width: 2,
+  height: 2,
+});
+
+const cuboid = new CuboidMaker ({
+  length: 4,
+  width: 5,
+  height: 5,
+});
 /* ======================== CODE ENDS HERE ============================ */
 
 /* ======================== Stretch Challenges ============================ */
