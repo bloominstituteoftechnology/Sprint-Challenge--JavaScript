@@ -32,9 +32,9 @@ const counter = () => {
     count++;
     return count;
   };
-   newCounter(); // 1
-   newCounter(); // 2
 };
+newCounter(); // 1
+newCounter(); // 2
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
@@ -66,19 +66,52 @@ const limitFunctionCallCount = (cb, n) => {
 // Create a cuboid object that inherits from CuboidMaker. 
 // The cuboid object must contain keys for length, width, and height.
 
+// function CuboidMaker(properties) {
+//   this.length = properties.length;
+//   this.width = properties.width;
+//   this.height = properties.height;
+// }
+// CuboidMaker.prototype.volume = function() {
+//   return `${this.lenght} * ${this.width} * ${this.height}`;
+// }
+// CuboidMaker.prototype.surfaceArea = function() {
+//   return `2(${this.length} * ${this.width} + ${this.length} * ${this.height} + ${this.width} * ${this.height}`;
+// }
+
+function Cuboid(properties) {
+  CuboidMaker.call(this, properties);
+  this.length = properties.length;
+  this.width = properties.width;
+  this.height = properties.height;
+}
+
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
 
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+ console.log(cuboid.volume(4, 5, 5)); // 100
+ console.log(cuboid.surfaceArea(4, 5, 5)); // 130
 
 /* ======================== Class Practice ============================ */
 
 // ***Class Practice does NOT have test cases built.  You must use the console logs provided at the end of this section.***
 
 // Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
+class CuboidMaker {
+  constructor(properties) {
+  this.length = properties.length;
+  this.width = properties.width;
+  this.height = properties.height;
+  }
+  volume() {
+  return `${this.lenght} * ${this.width} * ${this.height}`;
+  }
+  surfaceArea() {
+  return `2(${this.length} * ${this.width} + ${this.length} * ${this.height} + ${this.width} * ${this.height}`;
+  }
+}
 
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
+
 
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
 
