@@ -66,14 +66,14 @@ const limitFunctionCallCount = (cb, n) => {
 // Formula for cuboid volume: length * width * height
 
 CuboidMaker.prototype.volume = function () {
-  return `${this.length} * ${this.width} * ${this.height}`;
+  return `${this.length * this.width * this.height}`;
 }
 
 // Create a seperate function property of CuboidMaker that returns the surface area of a given cuboid's length, width, and height. 
 // Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 
 CuboidMaker.prototype.surfaceArea = function () {
-  return `(${this.length} * ${this.width}) + (${this.length} * ${this.height}) + (${this.width} * ${this.height})`;
+  return 2 * `${this.length * this.width + this.length * this.height + this.width * this.height}`;
 }
 
 // Create a cuboid object that inherits from CuboidMaker. 
@@ -105,7 +105,7 @@ class CuboidMaker {
   }
 
   volume() {
-    return `${this.length} * ${this.width} * ${this.height}`;
+    return `${this.length * this.width * this.height}`;
   }
 
   surfaceArea = function () {
@@ -123,11 +123,11 @@ class Cube extends CuboidMaker {
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
 
   volume() {
-    return `${this.length} * ${this.width} * ${this.height}`;
+    return `${this.length * this.width * this.height}`;
   }
 
   surfaceArea = function () {
-    return `(6 * ${this.length} * ${this.width})`;
+    return 6 * `${this.length + this.width}`;
   }
 }
 
@@ -153,7 +153,13 @@ console.log(cube.surfaceArea()); // 24
 /* ======================== Stretch Challenges ============================ */
 
 
-// Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax. NOTE: Comment our your class code so you don't have conflicting names!
+// Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achieve the same results you built using the ES6 class syntax. NOTE: Comment our your class code so you don't have conflicting names!
+
+function CuboidMaker(att) {
+  this.length = att.length;
+  this.width = att.width;
+  this.height = att.height;
+}
 
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
