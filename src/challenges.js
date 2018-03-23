@@ -122,13 +122,17 @@ class CuboidMaker {
 class Cube extends CuboidMaker {
   constructor(dimensions) {
     super(dimensions);
+    this.isCube = dimensions.isCube
   }
   surfaceArea() {
     return 6 * (this.length + this.width)
   }
+  checkIfCube() {
+    if(this.isCube) return 'We have a cube!';
+  }
 }
 const cuboid = new CuboidMaker({length: 4, width: 5, height: 5});
-const cube = new Cube({length: 2, width: 2, height: 2}) 
+const cube = new Cube({length: 2, width: 2, height: 2, isCube: true}) 
 
 /* ======================== Stretch Challenges ============================ */
 
@@ -163,16 +167,22 @@ CuboidMaker.prototype.volume = function() {
 CuboidMaker.prototype.surfaceArea = function() {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
 }
-const cuboid = new CuboidMaker({length: 4, width: 5, height: 5});
 
 function Cube(dimensions) {
   CuboidMaker.call(this, dimensions)
-}
+  this.isCube = dimensions.isCube;
+  }
+
 Cube.prototype = Object.create(CuboidMaker.prototype);
 Cube.prototype.surfaceArea = function(dimensions) {
   return 6 * (this.length + this.width)
 } 
+Cube.prototype.checkIfCube = function() {
+  if(this.isCube) return 'We have a cube!';
+}
 
+const cuboid = new CuboidMaker({length: 4, width: 5, height: 5});
+const cube = new Cube({length: 2, width: 2, height: 2, isCube: true}); 
 
 // Challenge 3: Recursion
 const checkMatchingLeaves = obj => {
