@@ -5,11 +5,18 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
+  for (let i = 0; i < elements.length; i++) {
+    elements[i] = cb(elements[i]);
+  }
+  return elements;
 };
 
 /* ======================== Closure Practice ============================ */
@@ -19,11 +26,23 @@ const counter = () => {
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
+  let count = 0;
+  return () => {
+    return ++count;
+  };
 };
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  return (...args) => {
+    if (count < n) {
+      count++;
+      return cb(...args);
+    }
+    return null;
+  };
 };
 
 /* ======================== Prototype Practice ============================ */
@@ -45,9 +64,48 @@ const limitFunctionCallCount = (cb, n) => {
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
 
+function CuboidMaker(options) {
+  this.length = options.length;
+  this.width = options.width;
+  this.height = options.height;
+}
+
+CuboidMaker.prototype.volume = function volume() {
+  return this.length * this.width * this.height;
+}
+
+CuboidMaker.prototype.surfaceArea = function surfaceArea() {
+  return 2 * (this.length * this.width + this.width * this.height + this.height * this.length);
+}
+
+function Cube(options) {
+  CuboidMaker.call(this, {
+    length: options.sideLength,
+    width: options.sideLength,
+    height: options.sideLength
+  });
+}
+
+Cube.prototype.surfaceArea = function surfaceArea() {
+  return 6 * this.height * this.width;
+}
+
+Cube.prototype.isCube = function isCube() {
+  if (this.height === this.width && this.width === this.length) {
+    return 'We have a cube!';
+  }
+  return 'No cube here.';
+}
+
+let cuboid = new CuboidMaker({
+  length: 4,
+  width: 5,
+  height: 5
+});
+
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
 
 /* ======================== Class Practice ============================ */
 
@@ -66,11 +124,48 @@ const limitFunctionCallCount = (cb, n) => {
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
+class CuboidMakerClass {
+  constructor(options) {
+    this.length = options.length;
+    this.width = options.width;
+    this.height = options.height;
+  }
+  volume() {
+    return this.length * this.width * this.height;
+  }
+  surfaceArea() {
+    return 2 * (this.length * this.width + this.width * this.height + this.height * this.length);
+  }
+}
+
+class CubeClass extends CuboidMakerClass {
+  constructor(options) {
+    super({
+      length: options.sideLength,
+      width: options.sideLength,
+      height: options.sideLength
+    });
+  }
+  surfaceArea() {
+    return 6 * this.length * this.width;
+  }
+  checkIfCube() {
+    if (this.length === this.width && this.width === this.height) {
+      return 'We have a cube!';
+    }
+    return 'No cube here.';
+  }
+}
+
+let cube = new CubeClass({
+  sideLength: 2
+});
+
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
+console.log(cube.volume()); // 8
+console.log(cube.surfaceArea()); // 24
 
 /* ======================== Stretch Challenges ============================ */
 
@@ -94,9 +189,18 @@ const limitFunctionCallCount = (cb, n) => {
 // console.log(cube.checkIfCube());  // "We have a cube!"
 
 // Challenge 3: Recursion
-const checkMatchingLeaves = obj => {
-  // return true if every property on `obj` is the same
-  // otherwise return false
+const checkMatchingLeaves = (obj, comparator) => {
+  let values = Object.values(obj);
+  if (comparator === undefined) {
+    comparator = values.filter(val => typeof val !== 'object')[0];
+  }
+
+  return Object.values(obj).every(val => {
+    if (typeof val === 'object') {
+      return checkMatchingLeaves(val, comparator);
+    }
+    return val === comparator;
+  });
 };
 
 
