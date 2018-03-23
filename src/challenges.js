@@ -9,8 +9,8 @@ const each = (elements, cb) => {
   return elements;
 };
 
-// const y = each([1, 2, 3, 4, 5, 6], (val) => { return val * val; });
-// console.log(y);
+const y = [1, 2, 3, 4, 5, 6];
+console.log(each(y, (val) => { return val * val; }));
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
@@ -37,8 +37,8 @@ const counter = () => {
     return ++i;
   };
 };
-const newCounter = counter();
 
+// const newCounter = counter();
 // console.log(newCounter());
 // console.log(newCounter());
 // console.log(newCounter());
@@ -47,11 +47,12 @@ const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
   let i = 0;
-  return () => {
+  return (...params) => {
     if (i < n) {
       ++i;
-      return cb();
+      return cb(...params);
     }
+    return null;
   };
 };
 
