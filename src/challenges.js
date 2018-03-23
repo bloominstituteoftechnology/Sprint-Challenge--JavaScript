@@ -39,6 +39,15 @@ const counter = () => {
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let trialRun = 0;
+
+    return function invokesCB(...args) {
+      while (trialRun < n) {
+        trialRun++;
+        return cb(...args);
+    }
+    return null;
+  }
 };
 
 /* ======================== Prototype Practice ============================ */
