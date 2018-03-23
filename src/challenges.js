@@ -5,11 +5,17 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
+  const newArr = [];
+  each(elements, i => newArr.push(cb(i)));
+  return newArr;
 };
 
 /* ======================== Closure Practice ============================ */
@@ -19,11 +25,17 @@ const counter = () => {
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
+  let count = 0;
+  function increment() {
+    return count++;
+  }
+  return increment;
 };
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+
 };
 
 /* ======================== Prototype Practice ============================ */
@@ -34,16 +46,36 @@ const limitFunctionCallCount = (cb, n) => {
 
 // Create a CuboidMaker constructor function that accepts properties for length, width, and height
 
+// function cuboidMaker(options) {
+//   this.length = options.length;
+//   this.width = options.width;
+//   this.height = options.height;
+// }
+
 // Create a seperate function property of CuboidMaker that returns the volume of a given cuboid's length, width, and height
 // Formula for cuboid volume: length * width * height
+
+// cuboidMaker.prototype.volume = function volume() {
+//   return this.length * this.width * this.height;
+// };
 
 // Create a seperate function property of CuboidMaker that returns the surface area of a given cuboid's length, width, and height. 
 // Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 
+// cuboidMaker.prototype.surfacearea = function surfaceArea() {
+//   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+// };
+
 // Create a cuboid object that inherits from CuboidMaker. 
 // The cuboid object must contain keys for length, width, and height.
 
+// function cuboid(options) {
+//   cuboidMaker.call(this, options);
+// }
+
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
+
+// const cuboid = new cuboidMaker({length: 4, width: 5, height: 5});
 
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
