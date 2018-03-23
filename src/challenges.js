@@ -177,12 +177,38 @@ const cube2 = new Cube2({
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
 
+class Cube3 extends CuboidMaker2 {
+  constructor(properties) {
+    super(properties);
+    this.isCube = properties.isCube;
+  }
+
+  volume() {
+    return this.length * this.width * this.height;
+  }
+
+  surfaceArea() {
+    return 6 * (this.length + this.height);
+  }
+
+  checkIfCube(){
+    if (this.isCube) return 'We have a cube!';
+  }
+}
+
+const cube3 = new Cube3({
+  length: 2,
+  width: 2,
+  height: 2,
+  isCube: true
+});
+
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
-// console.log(cube.checkIfCube());  // "We have a cube!"
+// console.log(cube3.volume()); // 8
+// console.log(cube3.surfaceArea()); // 24
+// console.log(cube3.checkIfCube());  // "We have a cube!"
 
 // Challenge 3: Recursion
 const checkMatchingLeaves = obj => {
