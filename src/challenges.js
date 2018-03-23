@@ -77,6 +77,10 @@ function CuboidMaker(length, width, height) { //--------------------------------
   }
 }
 
+CuboidMaker.prototype.Volume = function() {
+  return (this.length * this.width * this.height);
+}
+
 CuboidMaker.prototype.surfaceArea = function() {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 }
@@ -130,7 +134,11 @@ class ClassCube extends ClassCuboidMaker {
   }
 };
 
-let secondCube = new ClassCube(2, 2, 2);
+let secondCube = new ClassCube({
+  length: 2, 
+  width: 2,
+  height: 2,
+});
 
 // Use these logs to test your results:
  console.log(secondCube.volume()); // 8
