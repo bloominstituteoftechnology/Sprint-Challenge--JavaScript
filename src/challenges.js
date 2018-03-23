@@ -95,7 +95,7 @@ surfaceArea () {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 }
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
-class Cube extends Cuboid {
+class Cube extends Cuboid { // << YARN will not run because of this line. Please advise!! Yes, I tried with the prototype section noted out. 
   constructor (cubeAtt){
     super(cubeAtt)
     this.isCube = cubeAtt.isCube; 
@@ -113,9 +113,9 @@ Cube.prototype.surfaceArea = function() {
 }
 // Create a new cube object that has equal values for length, width, and height 
 const cube = new Cube ({
-  length: 3, 
-  width: 3, 
-  height: 3, 
+  length: 2, 
+  width: 2, 
+  height: 2, 
 });
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 

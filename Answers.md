@@ -13,16 +13,16 @@ Five different data types in JavaScript include numbers, 'strings', Boolean valu
 
 Closures are JavaScripts special built in functional ability to access variables through and outside of a function without directly passing in the specific variable arguments needed for those functions. 
 Ex: 
-let you = 'Special One'; 
+`let you = 'Special One'; 
 function goodMorning(){
     console.log('Good morning, ' + you + '!')
 }
-goodMorning(); 
+goodMorning();` 
     
 4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
 
 The 4 rules for 'this' refer to instances of binding to a variable for the evocation of a function.
-    1. Window binding is the default binding of 'this' where no other method is evoked. Here, the 'this' will likely refer to the operating window you are coding in or return an error. 
-    2. Implicit binding is often used to refer to a specific key word value within an object or nested object. It is called by referencing the key word directly before the '.' when called.
-    3. New binding is used to create instances of specific objects with constructors, where 'this' defines and binds the new instance. 
-    4. Explicit binding is calling a function and passing in specific variables or arrays. There are 3 subcategories: .apply, .call, and .bind.  
+..1. Window binding is the default binding of 'this' where no other method is evoked. Here, the 'this' will likely refer to the operating window you are coding in or return an error. 
+..2. Implicit binding is often used to refer to a specific key word value within an object or nested object. It is called by referencing the key word directly before the '.' when called.
+..3. New binding is used to create instances of specific objects with constructors, where 'this' defines and binds the new instance. 
+..4. Explicit binding is calling a function and passing in specific variables or arrays. There are 3 subcategories: .apply, .call, and .bind.  
