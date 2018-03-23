@@ -5,11 +5,16 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }//didnt ask me to return anything...
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
+  let mine = elements.map(elem => cb(elem));
+  return mine;
 };
 
 /* ======================== Closure Practice ============================ */
@@ -19,11 +24,24 @@ const counter = () => {
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
+  let count = 0;
+  return () => {
+    return ++count;
+  }
 };
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  let limit = n; //i didnt have to but i was in the mood to type a little more
+  return (...args) => {
+    if (count === limit) return null;
+    if (count < limit) {
+      count++;
+      return cb(...args);
+    }
+  };
 };
 
 /* ======================== Prototype Practice ============================ */
@@ -42,6 +60,26 @@ const limitFunctionCallCount = (cb, n) => {
 
 // Create a cuboid object that inherits from CuboidMaker. 
 // The cuboid object must contain keys for length, width, and height.
+
+function CuboidMaker(length, width, height) {
+  this.length = length;
+  this.width = width;
+  this.height = height;
+}
+
+CuboidMaker.prototype.volume = function () {
+  return (this.length * this.width * this.height);
+}
+
+CuboidMaker.prototype.surfaceArea = function () {
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+}
+
+
+
+const cuboid = new CuboidMaker(4, 5, 5);
+
+
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
 
@@ -64,6 +102,38 @@ const limitFunctionCallCount = (cb, n) => {
 
 // Create a new cube object that has equal values for length, width, and height 
 
+class CuboidMaker {
+  constructor(length, width, height) {
+    this.length = length;
+    this.width = width;
+    this.height = height;
+  }
+}
+
+class Cube extends CuboidMaker {
+  constructor(length, width, height) {
+    super(length, width, height);
+    this.isCube = true;
+    
+  }
+
+  volume() {
+    return (this.length * this.width * this.height);
+  }
+
+  surfaceArea() {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  }
+
+  checkIfCube() {
+    if (this.isCube) {
+      return 'We have a cube!';
+    }
+  }
+}
+
+const cube = new Cube(2, 2, 2);
+
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
 // Use these logs to test your results:
@@ -76,6 +146,14 @@ const limitFunctionCallCount = (cb, n) => {
 
 
 // Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax. NOTE: Comment our your class code so you don't have conflicting names!
+
+function Cube(length, width, height) {
+  CuboidMaker.call(this, length, width, height);  
+}
+
+Cube.prototype = Object.create(CuboidMaker.prototype);  //adds cuboid functions
+
+const box = new Cube(2, 2, 2);
 
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
