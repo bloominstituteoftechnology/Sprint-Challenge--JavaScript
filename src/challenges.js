@@ -13,6 +13,11 @@ const each = (elements, cb) => {
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
+  let arr = [];
+  for (i = 0; i < elements.length; i++) {
+    arr.map(cb(elements[i]));
+  }
+  return arr;
 };
 
 /* ======================== Closure Practice ============================ */
@@ -41,7 +46,7 @@ const limitFunctionCallCount = (cb, n) => {
 // Formula for cuboid volume: length * width * height
 
 // Create a seperate function property of CuboidMaker that returns the surface area of a given cuboid's length, width, and height. 
-// Formula for cuboid surface area of a cube: 2(length * width + length * height + width * height)
+// Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 
 // Create a cuboid object that inherits from CuboidMaker. 
 // The cuboid object must contain keys for length, width, and height.
@@ -51,6 +56,30 @@ const limitFunctionCallCount = (cb, n) => {
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
+
+class CuboidMaker {
+  constructor(option) {
+    this.length = option.length;
+    this.width = option.width;
+    this.height = option.height;
+  }
+  volume() {
+    return `${this.length} * ${this.width} * ${this.height}`;
+  }
+  surface() {
+    return `2 * (${this.length} * ${this.width} + ${this.length} * ${this.height} + ${this.width} * ${this.height})`
+  }
+}
+
+class CuboidObject extends CuboidMaker {
+  constructor(option) {
+    super(option);
+    this.length = option.length;
+    this.width = option.width;
+    this.height = option.height;
+  }
+}
+
 
 /* ======================== Class Practice ============================ */
 
