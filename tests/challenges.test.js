@@ -63,6 +63,81 @@ describe('challenges', () => {
       expect(limitedFunction()).toBe(null);
     });
   });
+  describe('prototype', () => {
+    const options = {
+      cuboid: {
+        length: 4,
+        height: 3,
+        width: 2
+      },
+      cube: {
+        length: 2,
+        height: 2,
+        width: 2
+      }
+    };
+    it('should allow a CuboidMaker object to be created using the `new` keyword', () => {
+      const cuboid = new challengeMethods.CuboidMaker(options.cuboid);
+      expect(cuboid.__proto__).toBe(challengeMethods.CuboidMaker.prototype);
+      expect(cuboid.height).toBe(options.cuboid.height);
+      expect(cuboid.length).toBe(options.cuboid.length);
+      expect(cuboid.width).toBe(options.cuboid.width);
+    });
+    it('should return the correct volume from a method on CuboidMaker\'s prototype', () => {
+      const cuboid = new challengeMethods.CuboidMaker(options.cuboid);
+      expect(cuboid.volume()).toBe(24);
+    });
+    it('should return the correct surface area from a method on CuboidMaker\'s prototype', () => {
+      const cuboid = new challengeMethods.CuboidMaker(options.cuboid);
+      expect(cuboid.surfaceArea()).toBe(52);
+    });
+    it('STRETCH: should allow a CubeMaker object to be created using the `new` keyword', () => {
+      const cube = new challengeMethods.CubeMaker(options.cube);
+      expect(cube.__proto__).toBe(challengeMethods.CubeMaker.prototype);
+      expect(cube.__proto__.__proto__).toBe(challengeMethods.CuboidMaker.prototype);
+      expect(cube.height).toBe(options.cube.height);
+      expect(cube.width).toBe(options.cube.width);
+      expect(cube.length).toBe(options.cube.length);
+    });
+  });
+  describe('classes', () => {
+    const options = {
+      cuboid: {
+        length: 4,
+        height: 3,
+        width: 2
+      },
+      cube: {
+        length: 2,
+        height: 2,
+        width: 2
+      }
+    };
+    it('should allow a Cuboid to be created with the `new` keyword', () => {
+      const cuboid = new challengeMethods.Cuboid(options.cuboid);
+      expect(cuboid.__proto__).toBe(challengeMethods.Cuboid.prototype);
+      expect(cuboid.height).toBe(options.cuboid.height);
+      expect(cuboid.length).toBe(options.cuboid.length);
+      expect(cuboid.width).toBe(options.cuboid.width);
+    });
+    it('should have volume() and surfaceArea() methods that return correct values', () => {
+      const cuboid = new challengeMethods.Cuboid(options.cuboid);
+      expect(cuboid.volume()).toBe(24);
+      expect(cuboid.surfaceArea()).toBe(52);
+    });
+    it('should allow a Cube to be created using `new`, with Cuboid in its inheritance chain', () => {
+      const cube = new challengeMethods.Cube(options.cube);
+      expect(cube.__proto__).toBe(challengeMethods.Cube.prototype);
+      expect(cube.__proto__.__proto__).toBe(challengeMethods.Cuboid.prototype);
+      expect(cube.height).toBe(options.cube.height);
+      expect(cube.width).toBe(options.cube.width);
+      expect(cube.length).toBe(options.cube.length);
+    });
+    it('STRETCH: should return the correct message if object is a cube', () => {
+      const cube = new challengeMethods.Cube(options.cube);
+      expect(cube.isCube()).toBe('We have a cube!');
+    });
+  });
   describe('checkMatchingLeaves', () => {
     it('should check if all leaves match', () => {
       const tree1 = {
