@@ -17,6 +17,18 @@ const each = (elements, cb) => {
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
+  // .map, like .forEach goes through each value but instead of affecting the original array, it will make a new array
+  // It will iterate through each value, so a for loop is needed
+  // First, a empty array will be made so the values that are passed through are put into the new arrays
+  // Then a for loop is made to go through each value
+  // then it will pass through each value to the new array
+  // Afterwards, it will return the new array
+  const resultArray = [];
+  for (let i = 0; i < elements.length; i++) {
+    const resultValue = cb(elements[i]);
+    resultArray.push(resultValue);
+  }
+  return resultArray;
 };
 
 /* ======================== Closure Practice ============================ */
