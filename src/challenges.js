@@ -100,7 +100,7 @@ surfaceArea () {
 }
 }
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
-class Cube extends Cuboid { // << YARN will not run because of this line. Please advise!! Yes, I tried with the prototype section noted out. 
+class Cube extends Cuboid { 
   constructor (cubeAtt){
     super(cubeAtt)
     this.isCube = cubeAtt.isCube; 
