@@ -27,11 +27,22 @@ const counter = () => {
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
+  let count = 0;
+  return () => {
+    count++;
+    return count;
+  };
 };
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  return (...theArgs) => {
+    if (count === n) return null;
+    count++;
+    return cb(...theArgs);
+  };
 };
 
 /* ======================== Prototype Practice ============================ */
