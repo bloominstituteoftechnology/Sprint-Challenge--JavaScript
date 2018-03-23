@@ -14,9 +14,9 @@ const each = (elements, cb) => {
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
-  const output = [];
+  const mappedArr = [];
   each(elements, item => output.push(cb(item)));
-  return output;
+  return mappedArr;
 };
 
 /* ======================== Closure Practice ============================ */
@@ -51,10 +51,10 @@ const limitFunctionCallCount = (cb, n) => {
 // Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides.
 
 // Create a CuboidMaker constructor function that accepts properties for length, width, and height
-function CuboidMaker {
-    this.length = options.length;
-    this.width = options.width;
-    this.height = options.height;
+function CuboidMaker(numbers) {
+    this.length = numbers.length;
+    this.width = numbers.width;
+    this.height = numbers.height;
 }
 
 
