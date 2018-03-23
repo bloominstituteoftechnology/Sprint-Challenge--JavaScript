@@ -142,11 +142,11 @@ class CuboidMaker {
   }
 }
 
-const cubeoid = new Cube {
-  length: 2
-  width: 2
-  height: 2
-}
+const cuboid = new Cube ({
+  length: 2,
+  width: 2,
+  height: 2,
+});
 
 /* ======================== Stretch Challenges ============================ */
 
