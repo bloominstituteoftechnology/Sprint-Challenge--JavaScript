@@ -126,6 +126,7 @@ class CuboidMaker {
 class Cube extends CuboidMaker {
   constructor(lwh) {
     super(lwh, lwh, lwh);
+    this.isCube = true;
   }
 
   volume() {
@@ -134,6 +135,10 @@ class Cube extends CuboidMaker {
 
   surfaceArea() {
     return 6 * (this.length * this.width);
+  }
+
+  checkIfCube() {
+    if (this.isCube) return 'We have a cube!';
   }
 }
 
