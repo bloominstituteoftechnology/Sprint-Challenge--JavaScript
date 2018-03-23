@@ -78,7 +78,8 @@ const limitFunctionCallCount = (cb, n) => {
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
-// CODE HERE ===================================================================================================
+
+/* ======================== PROTOTYPE CODE ============================ */
 // function CuboidMaker (dimensions) {
 //   this.length = dimensions.length;
 //   this.width = dimensions.width;
@@ -98,7 +99,7 @@ const limitFunctionCallCount = (cb, n) => {
 //  width: 5,
 //  height: 5,
 // });
-// ==================================================================================
+/* ======================== PROTOTYPE CODE ENDS  ============================ */
 
 /* ======================== Class Practice ============================ */
 
@@ -123,7 +124,7 @@ const limitFunctionCallCount = (cb, n) => {
 // console.log(cube.volume()); // 8
 // console.log(cube.surfaceArea()); // 24
 
-// CLASS CODE HERE ===========================================================================================================
+/* ======================== CLASS CODE HERE ============================ */
 // class CuboidMaker {
 //   constructor(dimensions) {
 //   this.length = dimensions.length;
@@ -160,7 +161,7 @@ const limitFunctionCallCount = (cb, n) => {
 //   width: 5,
 //   height: 5,
 // });
-// ==============================================================================================================================
+/* ======================== CODE ENDS HERE ============================ */
 
 /* ======================== Stretch Challenges ============================ */
 
