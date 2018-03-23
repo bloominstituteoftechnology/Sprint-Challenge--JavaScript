@@ -139,16 +139,26 @@ class Cube extends CuboidMaker {
     super(dimension)
     this.cubeVolume = dimensions.cubeVolume;
     this.cubeSurfaceArea = dimensions.cubeSurfaceArea;
+    }
+  cubeVolume() {
+    return `${this.length * this.width * this.height}`;
+  cubeSurfaceArea()
+    return `${6 * (this.length + this.width)}`;
   }
 }
 
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
 
-
 // The volume of a cube is: length * width * height
 // The surface area of a cube is: 6 * (length + width)
 
 // Create a new cube object that has equal values for length, width, and height 
+
+const cube = new CuboidMaker({
+  length: 2,
+  width: 2,
+  height: 2,
+});
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
