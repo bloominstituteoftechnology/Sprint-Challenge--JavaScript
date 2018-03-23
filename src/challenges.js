@@ -104,7 +104,7 @@ class CuboidMaker {
     this.height = att.height;
   }
 
-  volume() {
+  volume () {
     return `${this.length * this.width * this.height}`;
   }
 
@@ -161,21 +161,58 @@ function CuboidMaker(att) {
   this.height = att.height;
 }
 
+CuboidMaker.prototype.volume = function () {
+  return `${this.length * this.width * this.height}`;
+}
+
+CuboidMaker.prototype.surfaceArea = function () {
+  return 2 * `${this.length * this.width + this.length * this.height + this.width * this.height}`;
+}
+
+function Cube(cubeAtt) {
+  this.length = att.length;
+  this.width = att.width;
+  this.height = att.height;
+}
+
+Cube.prototype = Object.create(CuboidMaker.prototype); //psuedo-inheritance
+Cube.prototype.constructor = Cube;
+
+Cube.prototype.volume = function() {
+  return `${this.length * this.width * this.height}`;
+}
+
+Cube.prototype.surfaceArea = function () {
+  return 6 * `${this.length + this.width}`;
+}
+
+const cuboid = new CuboidMaker ({
+  length: 4,
+  width: 5,
+  height: 5,
+});
+
+const cube = new Cube ({
+  length: 2,
+  width: 2,
+  height: 2,
+});
+
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
+console.log(cube.volume()); // 8
+console.log(cube.surfaceArea()); // 24
 
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!'; NOTE: Comment our your prototype code so you don't have conflicting names!
 
 // Use these logs to test your results:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
-// console.log(cube.checkIfCube());  // "We have a cube!"
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
+console.log(cube.volume()); // 8
+console.log(cube.surfaceArea()); // 24
+console.log(cube.checkIfCube());  // "We have a cube!"
 
 // Challenge 3: Recursion
 const checkMatchingLeaves = obj => {
