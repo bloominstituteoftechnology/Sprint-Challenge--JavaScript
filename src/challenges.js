@@ -34,8 +34,8 @@ const counter = () => {
   };
   const newCounter = counter();
 };
-newCounter(); // 1
-newCounter(); // 2
+// newCounter(); // 1
+// newCounter(); // 2
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
@@ -105,8 +105,8 @@ const cuboid = new CuboidMaker ({
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
 
 // Use these logs to test your results:
- console.log(cuboid.volume()); // 100
- console.log(cuboid.surfaceArea()); // 130
+ //console.log(cuboid.volume()); // 100
+ //console.log(cuboid.surfaceArea()); // 130
 
 /* ======================== Class Practice ============================ */
 
@@ -162,10 +162,10 @@ const cube = new Cube ({
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
 // Use these logs to test your results:
- console.log(cuboid.volume()); // 100
- console.log(cuboid.surfaceArea()); // 130
- console.log(cube.volume()); // 8
- console.log(cube.surfaceArea()); // 24
+// console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
+// console.log(cube.volume()); // 8
+// console.log(cube.surfaceArea()); // 24
 
 /* ======================== Stretch Challenges ============================ */
 
@@ -173,20 +173,20 @@ const cube = new Cube ({
 // Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax
 
 // Use these logs to test your results:
- console.log(cuboid.volume()); // 100
- console.log(cuboid.surfaceArea()); // 130
- console.log(cube.volume()); // 8
- console.log(cube.surfaceArea()); // 24
+// console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
+// console.log(cube.volume()); // 8
+// console.log(cube.surfaceArea()); // 24
 
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
 
 // Use these logs to test your results:
- console.log(cuboid.volume()); // 100
- console.log(cuboid.surfaceArea()); // 130
- console.log(cube.volume()); // 8
- console.log(cube.surfaceArea()); // 24
- console.log(cube.checkIfCube());  // "We have a cube!"
+// console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
+// console.log(cube.volume()); // 8
+// console.log(cube.surfaceArea()); // 24
+// console.log(cube.checkIfCube());  // "We have a cube!"
 
 // Challenge 3: Recursion
 const checkMatchingLeaves = obj => {
