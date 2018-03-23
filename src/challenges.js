@@ -129,6 +129,12 @@ class CuboidMaker {
   this.width = dimensions.width;
   this.height = dimensions.height;
   }
+  volume() {
+    return this.length * this.width * this.height;
+  }
+  surfaceArea() {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  }
 }
   class Cube extends CuboidMaker {
     constructor(dimensions) {
