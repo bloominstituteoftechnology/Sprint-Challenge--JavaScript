@@ -23,7 +23,13 @@
     Closure is the ability of functions to create their own scope, function scope, and have access to data in the scopes surrounding them. This means that variables inside a function block can access variables outside their functoin's scope but the reverse is not true. Variables in outer scopes do not have access to function scopes.
 </p>
 
+```function add3(n) {
+        function addMsg() {
+            return `The sum of n + 3 is ${n + 3}`;
+        }
+```}
 
+```
 #<h3>Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)</h3>
 <p></p>
 <ul>
