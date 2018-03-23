@@ -33,7 +33,7 @@ const counter = () => {
     return ++count;
   };
 };
-let newCounter = counter();
+let newCounter = counter();  // newCounter points to what is returned when counter is invoked , in other words, it points to the anonymous function
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
