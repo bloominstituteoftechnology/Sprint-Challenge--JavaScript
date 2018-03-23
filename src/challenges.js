@@ -5,18 +5,19 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
-  elements.forEach(function (element) {
-    cb(element);
+  elements.forEach(function (element, i, elements) {
+    return cb(element, i);
   });
 };
 
 const map = (elements, cb) => {
-  // Produces a new array of values by mapping each value in list through a transformation function.
+  // Produces a new array of values. By mapping each value in list through a transformation function.
   // Return the new array.
+  arr = [];
   elements.map(function (element) {
-    return cb(element);
+    arr.push(cb(element));
   })
-
+  return arr;
 };
 
 /* ======================== Closure Practice ============================ */
@@ -27,28 +28,33 @@ const counter = () => {
   // newCounter(); // 1
   // newCounter(); // 2
   let f = 0;
-  let newCounter = function (f) {
+  let newCounter = function () {
     console.log(b)
     return ++f;
 
   }
   return newCounter();
+
+
 };
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
   let count = 0;
-  ++count;
-  return () => {
 
+  return (...args) => {
+    ++count;
     if (count <= n) {
-      return cb();
+      return cb(...args);
     }
     else {
       return null;
     }
   }
+
+
+
 };
 
 /* ======================== Prototype Practice ============================ */
@@ -83,7 +89,7 @@ CuboidMaker.prototype.volume = function () {
   return this.length * this.width * this.height;
 };
 
-let hilal = new CuboidMaker({
+ hilal = new CuboidMaker({
   length: 30,
   width: 20,
   height: 30,
@@ -132,14 +138,14 @@ class CuboidMaker {
   }
 
   surfaceArea() {
-    return 2*(this.length * this.width + this.length * this.height + this.width * this.height);
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
   }
   volume() {
     return this.length * this.width * this.height;
   }
 }
 
-let hilal = new CuboidMaker({
+ hilal = new CuboidMaker({
   length: 10,
   width: 20,
   height: 30,
@@ -156,20 +162,20 @@ class Cube extends CuboidMaker {
     return this.length * this.width * this.height;
   }
 
-  cubSurfaceArea() {
+  cubeSurfaceArea() {
     return 6*(this.length + this.width);
   }
 }
 
-let aissani = new Cube({
+ aissani = new Cube({
   length: 30,
   width: 30,
   height: 30,
 });
-console.log(aissani.CubeSurfaceArea());
+console.log(aissani.cubeSurfaceArea());
 console.log(aissani.cubeVolume());
-console.log(aissani.volume())
-console.log(aissani.surfaceArea())
+console.log(aissani.volume());
+console.log(aissani.surfaceArea());
 
 
 
@@ -196,7 +202,7 @@ CuboidMaker.prototype.volume = function () {
   return this.length * this.width * this.height;
 };
 
-let hilal = new CuboidMaker({
+ hilal = new CuboidMaker({
   length: 30,
   width: 20,
   height: 30,
@@ -217,7 +223,7 @@ Cube.prototype.cubeVolume = function () {
 
 
 Cube.prototype.CubeSurfaceArea = function () {
-  return 6*(this.length + this.width);
+  return 6 * (this.length + this.width);
 };
 
 let aissani = new Cube({
@@ -250,7 +256,7 @@ class Cube extends CuboidMaker {
   }
 
   cubSurfaceArea() {
-    return 6*(this.length + this.width);
+    return 6 * (this.length + this.width);
   }
 
   cube() {
@@ -262,7 +268,7 @@ class Cube extends CuboidMaker {
     }
   }
 }
-let aissani = new Cube({
+aissani = new Cube({
   length: 30,
   width: 30,
   height: 30,
@@ -284,6 +290,14 @@ console.log(aissani.cube())
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+};
+
+
+module.exports = {
+  each,
+  map,
+  limitFunctionCallCount,
+  checkMatchingLeaves,
 };
 
 
