@@ -144,11 +144,35 @@ const cube = new Cube({
 
 // Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax
 
+function CuboidMaker3(properties) {
+  this.length = properties.length;
+  this.width = properties.width;
+  this.height = properties.height;
+}
+
+function Cube2(properties) {
+  CuboidMaker3.call(this, properties);
+}
+
+Cube2.prototype.volume = function volume() {
+  return this.length * this.width * this.height;
+};
+
+Cube2.prototype.surfaceArea = function surfaceArea() {
+  return 6 * (this.length + this.height);
+};
+
+const cube2 = new Cube2({
+  length: 2,
+  width: 2,
+  height: 2
+})
+
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
-// console.log(cube.volume()); // 8
-// console.log(cube.surfaceArea()); // 24
+// console.log(cube2.volume()); // 8
+// console.log(cube2.surfaceArea()); // 24
 
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
 // Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
