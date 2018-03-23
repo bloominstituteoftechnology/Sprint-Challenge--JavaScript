@@ -141,6 +141,14 @@ const cube = new Cube(2, 2, 2);
 
 // Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax
 
+function Cube(length, width, height) {
+  CuboidMaker.call(this, length, width, height);  
+}
+
+Cube.prototype = Object.create(CuboidMaker.prototype);  //adds cuboid functions
+
+const box = new Cube(2, 2, 2);
+
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
