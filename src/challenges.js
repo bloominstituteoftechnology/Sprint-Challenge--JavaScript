@@ -27,6 +27,13 @@ const counter = () => {
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
+  let counts = 0;
+
+  function newCounter() {
+    counts++;
+    return counts;
+  }
+ return newCounter();
 };
 
 const limitFunctionCallCount = (cb, n) => {
