@@ -194,9 +194,28 @@ const cube4stretch = new Cube_stretch({
 
 
 // Challenge 3: Recursion
+const referenceArray = [];
+
 const checkMatchingLeaves = obj => {
-  // return true if every property on `obj` is the same
-  // otherwise return false
+
+  let sameValue = true;
+
+  const currentObjectValues = Object.values(obj);
+  referenceArray.push(currentObjectValues[0]);
+  const referenceValue = referenceArray[0];
+
+  currentObjectValues.forEach( element => {
+    if (element !== referenceValue && typeof elements !== 'object') {
+      sameValue = false;
+    }
+    if (typeof element === 'object') {
+      const enterRecursion = checkMatchingLeaves(element);
+      enterRecursion === false ? sameValue = false : sameValue = true;
+    }
+  });  
+
+  return sameValue;
+
 };
 
 
