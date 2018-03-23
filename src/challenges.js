@@ -118,33 +118,32 @@ const cuboid = new CuboidMaker({
 // Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
 class CuboidMaker {
   constructor(dimensions) {
-  this.length = dimensions.length;
-  this.width = dimensions.width;
-  this.height = dimensions.height;
-}
+    this.length = dimensions.length;
+    this.width = dimensions.width;
+    this.height = dimensions.height;
+    }
 
-volume() {
-  return `Volume: ${this.length * this.width * this.height}`;
-}
+  volume() {
+    return `Volume: ${this.length * this.width * this.height}`;
+  }
 
-surfaceArea() {
-  return `SurfaceArea: ${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
+  surfaceArea() {
+    return `SurfaceArea: ${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
+  }
 }
-
-// const cuboid = new CuboidMaker({
-//   length: 4,
-//   width: 5,
-//   height: 5,
-// });
 
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
 
 class Cube extends CuboidMaker {
   constructor(dimensions) {
     super(dimension)
+    this.cubeVolume = dimensions.cubeVolume;
+    this.cubeSurfaceArea = dimensions.cubeSurfaceArea;
   }
 }
+
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
+
 
 // The volume of a cube is: length * width * height
 // The surface area of a cube is: 6 * (length + width)
@@ -184,6 +183,24 @@ class Cube extends CuboidMaker {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  let val;
+  let allMatch = true;
+  const checkLeaves = (object) => {
+    Object.keys(object).forEach((key) => {
+      if (val === undefined && typeof key !== 'object') {
+        val = object[key];
+        return undefined;
+      }
+      if (typeof object[key] === 'object') return checkLeaves(object[key]);
+      if (object[key] !== val) {
+        allMatch = false;
+        return undefined;
+      }
+      return undefined;
+    });
+  };
+  checkLeaves(obj);
+  return allMatch;
 };
 
 
