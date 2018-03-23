@@ -70,40 +70,46 @@ const limitFunctionCallCount = (cb, n) => {
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
 
-function CuboidMaker(x) {
-    this.l = x.l;
-    this.w = x.w;
-    this.h = x.h;
-  }
+// function CuboidMaker(x) {
+//     this.l = x.l;
+//     this.w = x.w;
+//     this.h = x.h;
+//   }
 
-CuboidMaker.prototype.volume = function volume() {
-  return (this.l * this.w * this.h);
-};
+// CuboidMaker.prototype.volume = function volume() {
+//   return (this.l * this.w * this.h);
+// };
 
-CuboidMaker.prototype.surfaceArea = function surfaceArea() {
-  return 2 * (this.l * this.w + this.l * this.h + this.w * this.h);
-};
+// CuboidMaker.prototype.surfaceArea = function surfaceArea() {
+//   return 2 * (this.l * this.w + this.l * this.h + this.w * this.h);
+// };
 
-let cuboid = new CuboidMaker({l:4, w:5, h:5});
+// let cuboid = new CuboidMaker({l:4, w:5, h:5});
 // Use these logs to test your results:
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+// console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
 
 /* ======================== Class Practice ============================ */
 
 // ***Class Practice does NOT have test cases built.  You must use the console logs provided at the end of this section.***
 
 // Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
-class CuboidMaker2 {
-  constructor(x) {
-    this.l = x.l;
-    this.w = x.w;
-    this.h = x.h;
+class CuboidMaker {
+  constructor(l, w, h) {
+    this.l = l;
+    this.w = w;
+    this.h = h;
+  }
+  value() {
+    return (this.l * this.w * this.h);
+  }
+  surfaceArea() {
+    return 2 * (this.l * this.w + this.l * this.h + this.w * this.h);
   }
 }
 
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
-class CubeC extends CuboidMaker2 {
+class Cube extends CuboidMaker {
   constructor(x){
     super({l: x.l, w: x.w, h: x.h});
   }
@@ -113,6 +119,9 @@ class CubeC extends CuboidMaker2 {
   surfaceArea() {
     return 6 * (this.l * this.w);
   }
+  isCube() {
+    return (this.l === this.w && this.w === this.h) ? 'We have a cube!' : 'Not a cube';
+  }
 }
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
 
@@ -120,7 +129,7 @@ class CubeC extends CuboidMaker2 {
 // The surface area of a cube is: 6 * (length + width)
 
 // Create a new cube object that has equal values for length, width, and height 
-let cube = new CubeC ({x:5});
+const cube = new Cube (2, 2, 2);
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
