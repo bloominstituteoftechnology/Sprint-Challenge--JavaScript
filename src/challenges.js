@@ -45,7 +45,7 @@ const limitFunctionCallCount = (cb, n) => {
   // The returned function should only allow `cb` to be invoked `n` times.
   let count = 0;
   return (...args) => {
-    if (count > n) {
+    if (count >= n) {
       return null;
     }
     count++;
