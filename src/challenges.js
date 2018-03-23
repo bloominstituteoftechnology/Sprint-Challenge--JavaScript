@@ -66,7 +66,7 @@ CuboidMaker.prototype.volume = function() {
 // Create a seperate function property of CuboidMaker that returns the surface area of a given cuboid's length, width, and height. 
 // Formula for cuboid surface area of a cube: 2(length * width + length * height + width * height)
 CuboidMaker.prototype.surfaceArea = function() {
-  return (this.length * this.width + this.length * this.height + this.width * this.height) * 2;
+  return (this.length * this.width + this.length * this.height + this.width * this.height) * 2; // had to move the 2 and add * to get JS to run it right
 }
 // Create a cuboid object that inherits from CuboidMaker. 
 // The cuboid object must contain keys for length, width, and height.
@@ -85,9 +85,31 @@ Cuboid.prototype = Object.create(CuboidMaker.prototype);
 // ***Class Practice does NOT have test cases built.  You must use the console logs provided at the end of this section.***
 
 // Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
-
+class CuboidMaker {
+  constructor(specs) {
+  this.length = specs.length;
+  this.width = specs.width;
+  this.height = specs.height;
+  }
+  volume() {
+    return this.length * this.width * this.height;
+  }
+  surfaceArea() {
+    return (this.length * this.width + this.length * this.height + this.width * this.height) * 2; // had to move the 2 and add * to get JS to run it right
+  }
+}
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
-
+class Cube extends CuboidMaker {
+  constructor(cubeSpecs) {
+    super(cubeSpecs);
+  }
+  volume() {
+    return this.length * this.width * this.height;
+  }
+  surfaceArea() {
+    return (this.length + this.width) * 6;
+  }
+}
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
 
 // The volume of a cube is: length * width * height
