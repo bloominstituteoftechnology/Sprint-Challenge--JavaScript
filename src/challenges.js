@@ -200,6 +200,13 @@ console.log(cube.checkIfCube());  // "We have a cube!"
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  let arr = Object.values(obj);
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] !== arr[0]){
+      return false;
+    }
+  }
+  return true;
 };
 
 
