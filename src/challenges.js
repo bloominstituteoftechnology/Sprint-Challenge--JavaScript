@@ -27,15 +27,14 @@ const map = (elements, cb) => {
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
   // Example: const newCounter = counter();
+  // newCounter(); // 1
+  // newCounter(); // 2
   let count = 0;
   return () => {
     count++;
     return count;
   };
-  const newCounter = counter();
 };
-// newCounter(); // 1
-// newCounter(); // 2
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
@@ -105,8 +104,8 @@ const cuboid = new CuboidMaker ({
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
 
 // Use these logs to test your results:
- //console.log(cuboid.volume()); // 100
- //console.log(cuboid.surfaceArea()); // 130
+// console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
 
 /* ======================== Class Practice ============================ */
 
