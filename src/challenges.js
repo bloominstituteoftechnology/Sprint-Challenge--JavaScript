@@ -110,20 +110,26 @@ class Cube extends CuboidMaker {
   constructor(cubeAttributes){
     super(cubeAttributes)
   }
-}
+};
 
 const cuteCube = new Cube({
   length: 4,
   width: 5,
   height: 5,
-})
+});
 
-// Create a new cube object that has equal values for length, width, and height 
 const cuterCube = new Cube({
   length: 2,
   width: 2,
   height: 2,
-})
+});
+// Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
+// Extnded from CuboidMaker
+// The volume of a cube is: length * width * height
+// The surface area of a cube is: 6 * (length + width)
+
+// Create a new cube object that has equal values for length, width, and height 
+
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
 // Use these logs to test your results:
