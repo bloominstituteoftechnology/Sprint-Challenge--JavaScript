@@ -1,13 +1,11 @@
-/* eslint-disable */
+eslint-disable
 
 
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
-  for (i = 0, i < elements.length, i++) {
-  cb(elements[i], i);
-  }
+  
 };
 
 const map = (elements, cb) => {
@@ -27,11 +25,22 @@ const counter = () => {
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
+  const newCounter = counter();
+  let count = 0;
+  return newCounter(count++);
 };
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  return (...args) => {
+    if (count < n) {
+      count++;
+      return cb(...args);
+    }
+    return null;
+  };
 };
 
 /* ======================== Prototype Practice ============================ */
