@@ -38,13 +38,24 @@ const counter = () => {
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
+  // Should make a new value to hold the current counted value
+  // the current counted value should then go up every time a count++ or something is used
+  let count = 0;
+  return () => {
+    count++;
+    return count;
+  };
 };
-
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let counterValue = 0;
+  return (...args) => {
+    if (counterValue === n) return null;
+    counterValue++;
+    return cb(...args);
+  };
 };
-
 /* ======================== Prototype Practice ============================ */
 
 // ***Prototypes do NOT have test cases built for them.  You must use the console logs provided at the end of this section.***
@@ -67,6 +78,8 @@ const limitFunctionCallCount = (cb, n) => {
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
+
+
 
 /* ======================== Class Practice ============================ */
 
