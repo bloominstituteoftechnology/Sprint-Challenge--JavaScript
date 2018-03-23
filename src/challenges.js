@@ -5,11 +5,19 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
+  let arr = [];
+  for (let i = 0; i < elements.length; i++) {
+    arr.push(cb(elements[i], i));
+  }
+  return arr;
 };
 
 /* ======================== Closure Practice ============================ */
@@ -19,11 +27,27 @@ const counter = () => {
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
+  let count = 0;
+  function increment() {
+    ++count;
+    return count;
+  }
+  return increment;
 };
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  const limiter = (...args) => {
+    if (count < n) {
+      count++;
+      return cb(...args) 
+  } else {
+      return null;
+    }
+  };
+  return limiter;
 };
 
 /* ======================== Prototype Practice ============================ */
