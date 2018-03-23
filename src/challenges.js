@@ -5,11 +5,20 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
+  for (let index = 0; index < elements.length; index++) {
+    cb(elements[index], index);
+  }
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
+  const list = [];
+  for (let index = 0; index < elements.length; index++) {
+    let item = cb(elements[index]);
+    list.push(item);
+  }
+  return list;
 };
 
 /* ======================== Closure Practice ============================ */
