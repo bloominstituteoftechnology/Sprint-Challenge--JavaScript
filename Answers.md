@@ -6,13 +6,24 @@
     Another difference is that .forEach allows the callback to change the original array while .map preserves the original.
 </p>
 #<h3>Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays?</h3>
+<p>Data Types:</p>
+<ul>
+    <li>Boolean</li>
+    <li>Number</li>
+    <li>String</li>
+    <li>Object</li>
+    <li>undefined</li>
+    <li>Null</li>
+</ul>
 <p>
-    
+    An array is a type of object that holds lists of elements in a certain order using indices. Arrays are special because their elements are ordered and can be manipulated by various methods from the Array.prototype.
 </p>
 #<h3>What is closure? Can you code out a quick example of a closure?</h3>
 <p>
-    
+    Closure is the ability of functions to create their own scope, function scope, and have access to data in the scopes surrounding them. This means that variables inside a function block can access variables outside their functoin's scope but the reverse is not true. Variables in outer scopes do not have access to function scopes.
 </p>
+
+
 #<h3>Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)</h3>
 <p></p>
 <ul>
