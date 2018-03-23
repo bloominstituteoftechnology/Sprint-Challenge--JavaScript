@@ -75,9 +75,9 @@ CuboidMaker.prototype.surfacearea = function surfacearea() {
 // The cuboid object must contain keys for length, width, and height.
 class CuboidMaker {
   constructor(length, width, height) {
-  this.length = options.length;
-  this.width = options.width;
-  this.height = options.height;
+  this.length = dimensions.length;
+  this.width = dimensions.width;
+  this.height = dimensions.height;
   }
 }
 
@@ -114,10 +114,10 @@ console.log(cuboid.surfaceArea()); // 130
 
 // Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
 class CuboidMaker {
-  constructor(options) {
-  this.length = options.length;
-  this.width = options.width;
-  this.height = options.height;
+  constructor(dimensions) {
+  this.length = dimensions.length;
+  this.width = dimensions.width;
+  this.height = dimensions.height;
 }
 volume() {
   return this.length * this.width * this.height;
@@ -130,10 +130,10 @@ surfaceArea() {
 
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
 class Cube extends CuboidMaker {
-  constructor(options) {
-      this.length = options.length;
-      this.width = options.width;
-      this.height = options.height;
+  constructor(dimensions) {
+      this.length = dimensions.length;
+      this.width = dimensions.width;
+      this.height = dimensions.height;
 
     };
  }
