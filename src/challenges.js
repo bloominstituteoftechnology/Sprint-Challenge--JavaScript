@@ -41,7 +41,7 @@ const limitFunctionCallCount = (cb, n) => {
   
   let invokedCount = 0;
   return (...args) => {
-    if (invokedCount === n) return null;
+    if (invokedCount === n) return null; // once the invokedCount equals n, then function will return null and anonymous function will stop executing
     invokedCount++;
     return cb(...args);
   };
