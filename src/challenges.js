@@ -64,6 +64,14 @@ function CuboidMaker(properties) {
   this.height = properties.height;
 }
 
+//stretch
+function Cube(properties) {
+  CuboidMaker.call(this, properties);
+}
+Cube.prototype = Object.create(CuboidMaker.prototype);
+Cube.prototype.surfaceArea = function () { return 6 * (this.length * this.width) };
+//endstretch
+
 // Create a seperate function property of CuboidMaker that returns the volume of a given cuboid's length, width, and height
 // Formula for cuboid volume: length * width * height
 
@@ -83,14 +91,24 @@ const cuboidObject = new CuboidMaker({
   length: 4,
 });
 
+const cube = new Cube({
+  height: 2,
+  width: 2,
+  length: 2,
+});
+
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
 
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
 
+// //Tests for Protype
 // console.log(cuboidObject.volume());
 // console.log(cuboidObject.surfaceArea());
+// console.log(cube.volume());
+// console.log(cube.surfaceArea());
+
 
 /* ======================== Class Practice ============================ */
 
@@ -109,12 +127,17 @@ class CuboidMakerII {
 }
 
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
-class Cube extends CuboidMakerII {
+class CubeII extends CuboidMakerII {
   constructor(properties) {
     super(properties);
+    this.isCube = true;
   }
-  volume() { return this.length * this.height * this.width };
   surfaceArea() { return 6 * (this.length * this.width) };
+  isCubeTrue() {
+    if (this.isCube === true)
+       return 'We have a cube!';
+    return false;
+  }; //stretch function
 }
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
 
@@ -127,7 +150,7 @@ const classCuboid = new CuboidMakerII({
   width: 5,
   length: 4,
 });
-const actualCube = new Cube({
+const classCube = new CubeII({
   height: 2,
   width: 2,
   length: 2,
@@ -140,15 +163,17 @@ const actualCube = new Cube({
 // console.log(cube.volume()); // 8
 // console.log(cube.surfaceArea()); // 24
 
-console.log(classCuboid.volume()); // 100
-console.log(classCuboid.surfaceArea()); // 130
-console.log(actualCube.volume()); // 8
-console.log(actualCube.surfaceArea()); // 24
+// //Tests for Classes
+// console.log(classCuboid.volume()); // 100
+// console.log(classCuboid.surfaceArea()); // 130
+// console.log(classCube.volume()); // 8
+// console.log(classCube.surfaceArea()); // 24
+// console.log(classCube.isCubeTrue());
 
 /* ======================== Stretch Challenges ============================ */
 
 
-// Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achieve the same results you built using the ES6 class syntax
+// Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax. NOTE: Comment our your class code so you don't have conflicting names!
 
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
