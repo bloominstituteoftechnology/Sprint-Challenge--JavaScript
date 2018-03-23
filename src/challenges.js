@@ -79,7 +79,7 @@ Cuboid.prototype = Object.create(CuboidMaker.prototype);
 
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
-const cuboid = new Cuboid( {
+const cuboid = new CuboidMaker( {
   length: 4,
   width: 5,
   height: 5
@@ -123,14 +123,12 @@ surfaceArea() {
 
 
 // Create a new cube object that has equal values for length, width, and height 
-const Cube = new CuboidMaker({
-  length: 3,
-  width: 3,
-  height: 3
-});
-
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
-
+const Cube  = new CuboidMaker({
+  length: 2,
+  width: 2,
+  height: 2
+});
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
