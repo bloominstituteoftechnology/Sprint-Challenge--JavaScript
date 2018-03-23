@@ -7,7 +7,7 @@ const each = (elements, cb) => {
   // This only needs to work with arrays.
   for (let i = 0; i < elements.length; i++) {
     cb(elements[i], i)
-  }
+  };
 };
 
 const map = (elements, cb) => {
@@ -17,7 +17,7 @@ const map = (elements, cb) => {
   for (let i = 0; i < elements.length; i++) {
     const newVal = cb(elements[i]);
     newArr.push(newVal);
-  }
+  };
   return newArr;
 };
 
@@ -35,6 +35,14 @@ const counter = () => {
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
+  let count = 0;
+  return (...args) => {
+    if (count < n) {
+      count++;
+      return cb(...args);
+    }
+    return null;
+  };
 };
 
 /* ======================== Prototype Practice ============================ */
