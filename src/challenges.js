@@ -69,6 +69,26 @@ const limitFunctionCallCount = (cb, n) => {
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
 
+function CuboidMaker(options) {
+  this.length = options.length;
+  this.width = options.width;
+  this.height = options.height;
+};
+
+CuboidMaker.prototype.volume = function volume() {
+  return `${this.length * this.width * this.height}`
+};
+
+CuboidMaker.prototype.surfaceArea = function surfaceArea() {
+  return `${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`
+};
+
+function Cuboid(options) {
+  CuboidMaker.call(this, options);
+};
+
+// const cuboid = new CuboidMaker({ length: 4, width: 5, height: 5 });
+
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
