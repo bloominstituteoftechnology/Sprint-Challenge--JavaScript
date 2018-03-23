@@ -2,7 +2,8 @@
 ### For help with markdown syntax [Go here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 #<h3>Describe some of the differences between .forEach & .map.</h3>
 <p>
-    
+    One difference between .forEach and .map is that the latter returns a new array with the transformed values while the former does not return anything. 
+    Another difference is that .forEach allows the callback to change the original array while .map preserves the original.
 </p>
 #<h3>Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays?</h3>
 <p>
