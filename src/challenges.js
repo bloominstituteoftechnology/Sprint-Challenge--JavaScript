@@ -53,16 +53,40 @@ const limitFunctionCallCount = (cb, n) => {
 
 // Create a CuboidMaker constructor function that accepts properties for length, width, and height
 
+function CuboidMaker(properties) {
+  this.length = properties.length;
+  this.width = properties.width;
+  this.height = properties.height;
+}
+
 // Create a seperate function property of CuboidMaker that returns the volume of a given cuboid's length, width, and height
 // Formula for cuboid volume: length * width * height
+CuboidMaker.prototype.volume = function () {
+  return (this.length * this.width * this.height);
+}
 
 // Create a seperate function property of CuboidMaker that returns the surface area of a given cuboid's length, width, and height. 
 // Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
+CuboidMaker.prototype.surfaceArea = function () {
+  return (2 * ((this.length * this.width) + (this.length * this.height) + (this.width * this.height)));
+}
 
 // Create a cuboid object that inherits from CuboidMaker. 
 // The cuboid object must contain keys for length, width, and height.
+function Cuboid(cuboidProperties) {
+  CuboidMaker.call(this, cuboidProperties);
+}
+
+Cuboid.prototype = Object.create(CuboidMaker.prototype);
+
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
+
+const cuboid = new Cuboid({
+  length: 4,
+  width: 5,
+  height: 5,
+});
 
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
@@ -72,16 +96,49 @@ const limitFunctionCallCount = (cb, n) => {
 
 // ***Class Practice does NOT have test cases built.  You must use the console logs provided at the end of this section.***
 
-// Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax. NOTE: Comment our your prototype code above so you don't have conflicting names!
+// Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
+
+class CuboidMaker {
+  constructor(properties) {
+    this.length = properties.length;
+    this.width = properties.width;
+    this.height = properties.height;
+  }
+}
 
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
+
+class Cube extends CuboidMaker {
+  constructor(options) {
+  super(options)
+  this.isCube = options.isCube;
+  }
+
+  checkifCube() {
+    if(this.isCube){
+      return 'We have a cube!'
+    }
+  }
 
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
 
 // The volume of a cube is: length * width * height
+  volume() {
+    return this.length * this.width * this.height;
+  }
 // The surface area of a cube is: 6 * (length + width)
+  surfaceArea() {
+    return 6 * (this.width + this.height);
+  }
+}
 
-// Create a new cube object that has equal values for length, width, and height 
+// Create a new cube object that has equal values for length, width, and height
+
+const cube = new Cube({
+  length: 3,
+  width: 3,
+  height: 3
+});
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
@@ -94,7 +151,15 @@ const limitFunctionCallCount = (cb, n) => {
 /* ======================== Stretch Challenges ============================ */
 
 
-// Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax. NOTE: Comment our your class code so you don't have conflicting names!
+// Challenge 1: Go back to your prototype CuboidMaker and extend Cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax
+
+CuboidMaker.prototype.volume = function(){
+  return this.length * this.width * this.height;
+}
+
+CuboidMaker.prototype.surfaceArea = function(){
+  return 6 * (this.width + this.height);
+}
 
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
@@ -103,7 +168,7 @@ const limitFunctionCallCount = (cb, n) => {
 // console.log(cube.surfaceArea()); // 24
 
 // Challenge 2: Go back to your class Cube and add the following property: isCube.
-// Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!'; NOTE: Comment our your prototype code so you don't have conflicting names!
+// Create a method inside of Cube that checks for isCube and if it's true, returns a string 'We have a cube!';
 
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
