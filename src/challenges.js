@@ -1,26 +1,33 @@
 /* eslint-disable */
 
 
-/* ======================== CallBacks Practice ============================ */
+/* =========o=============== CallBacks Practice ============================ */
 const each = (elements, cb) => {
-  // Iterates over a list of elements, yielding each in turn to the `cb` function.
-  // This only needs to work with arrays.
+  for(let i = 0;i < elements.length;i++){
+    cb(elements[i], i);
+  }
 };
 
 const map = (elements, cb) => {
-  // Produces a new array of values by mapping each value in list through a transformation function.
-  // Return the new array.
+  const newarr = {}
+object.keys(elements).forEach(x =>(newarr[x]= cb(elements[x])));
+
+return newarr;
 };
 
 /* ======================== Closure Practice ============================ */
 // No test needed here, just run the newCounter(); and make sure it's counting up
 const counter = () => {
-  // Return a function that when invoked increments and returns a counter variable.
-  // Example: const newCounter = counter();
-  // newCounter(); // 1
-  // newCounter(); // 2
+  let newCounter = 0;
+  return () => newCounter += 1;
 };
 const limitFunctionCallCount = (cb, n) => {
+  let timesInvoked = 0;
+  return (...args) =>{
+    if (timesInkoked >=n) return null;
+    timesInoked++;
+    return cb(...args);
+  };
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
 };
