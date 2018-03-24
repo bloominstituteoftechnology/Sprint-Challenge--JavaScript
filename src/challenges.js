@@ -45,7 +45,7 @@ const limitFunctionCallCount = (cb, n) => {
     let count = 0;
   let m = n;
   return (...args) =>{
-  if(count <g m){
+  if(count < m){
     count++;
     console.log(count)
     return cb(...args);
@@ -95,7 +95,7 @@ console.log(cuboid.surfaceArea()); // 130
 // ***Class Practice does NOT have test cases built.  You must use the console logs provided at the end of this section.***
 
 
-Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
+//Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
 class CuboidMaker{
 constructor(dimensions){
   this.length = dimensions.length;
