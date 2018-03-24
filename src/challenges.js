@@ -263,6 +263,11 @@ const limitFunctionCallCount = (cb, n) => {
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  const first = obj[Object.keys(obj)[0]];
+  for(let item in obj) {
+    if (first !== obj[item]) return false;
+  }
+  return true;
 };
 
 
