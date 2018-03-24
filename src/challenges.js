@@ -79,9 +79,10 @@ surfaceArea() {
 }
 
 class cuboidObject extends cuboidMaker {
-  this.length: 4,
-  this.width: 5,
-  this.height: 5,
+  constructor(objectAttributes)
+    this.length: 4,
+    this.width: 5,
+    this.height: 5,
 }
 
 
