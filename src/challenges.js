@@ -13,9 +13,9 @@ const each = (elements, cb) => {
 const map = (elements, cb) => {
   // Produces a new array of values. By mapping each value in list through a transformation function.
   // Return the new array.
-  arr = [];
-  elements.map(function (element) {
-    arr.push(cb(element));
+  
+   let arr = elements.map(function (element) {
+    return cb(element);
   })
   return arr;
 };
@@ -31,18 +31,14 @@ const counter = () => {
   let newCounter = function () {
     console.log(b)
     return ++f;
-
   }
   return newCounter();
-
-
 };
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
   let count = 0;
-
   return (...args) => {
     ++count;
     if (count <= n) {
@@ -52,10 +48,8 @@ const limitFunctionCallCount = (cb, n) => {
       return null;
     }
   }
-
-
-
 };
+
 
 /* ======================== Prototype Practice ============================ */
 
@@ -81,32 +75,19 @@ function CuboidMaker(obj) {
   this.width = obj.width;
   this.height = obj.height;
 }
-
 CuboidMaker.prototype.surfaceArea = function () {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 };
 CuboidMaker.prototype.volume = function () {
   return this.length * this.width * this.height;
 };
-
- hilal = new CuboidMaker({
+hilal = new CuboidMaker({
   length: 30,
   width: 20,
   height: 30,
 });
 console.log(hilal.surfaceArea());
 console.log(hilal.volume());
-
-
-
-
-
-
-
-
-
-
-
 
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
@@ -129,31 +110,26 @@ console.log(hilal.volume());
 
 // To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
 
-
 class CuboidMaker {
   constructor(obj) {
     this.length = obj.length;
     this.width = obj.width;
     this.height = obj.height;
   }
-
   surfaceArea() {
     return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
   }
   volume() {
     return this.length * this.width * this.height;
   }
-}
-
- hilal = new CuboidMaker({
+};
+hilal = new CuboidMaker({
   length: 10,
   width: 20,
   height: 30,
 });
 console.log(hilal.surfaceArea());
 console.log(hilal.volume());
-
-
 class Cube extends CuboidMaker {
   constructor(obj) {
     super(obj);
@@ -161,13 +137,11 @@ class Cube extends CuboidMaker {
   cubeVolume() {
     return this.length * this.width * this.height;
   }
-
   cubeSurfaceArea() {
-    return 6*(this.length + this.width);
+    return 6 * (this.length + this.width);
   }
-}
-
- aissani = new Cube({
+};
+aissani = new Cube({
   length: 30,
   width: 30,
   height: 30,
@@ -176,9 +150,6 @@ console.log(aissani.cubeSurfaceArea());
 console.log(aissani.cubeVolume());
 console.log(aissani.volume());
 console.log(aissani.surfaceArea());
-
-
-
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
@@ -194,38 +165,30 @@ function CuboidMaker(obj) {
   this.width = obj.width;
   this.height = obj.height;
 }
-
 CuboidMaker.prototype.surfaceArea = function () {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 };
 CuboidMaker.prototype.volume = function () {
   return this.length * this.width * this.height;
 };
-
- hilal = new CuboidMaker({
+hilal = new CuboidMaker({
   length: 30,
   width: 20,
   height: 30,
 });
 console.log(hilal.surfaceArea());
 console.log(hilal.volume());
-
-
 function Cube(obj) {
   CuboidMaker.call(this, obj);
-}
-
+};
 Cube.prototype = Object.create(CuboidMaker.prototype);
 
 Cube.prototype.cubeVolume = function () {
   return this.length * this.width * this.height;
 };
-
-
 Cube.prototype.CubeSurfaceArea = function () {
   return 6 * (this.length + this.width);
 };
-
 let aissani = new Cube({
   length: 30,
   width: 30,
@@ -235,9 +198,6 @@ console.log(aissani.CubeSurfaceArea());
 console.log(aissani.cubeVolume());
 console.log(aissani.volume());
 console.log(aissani.surfaceArea());
-
-
-
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
@@ -254,11 +214,9 @@ class Cube extends CuboidMaker {
   cubeVolume() {
     return this.length * this.width * this.height;
   }
-
   cubSurfaceArea() {
     return 6 * (this.length + this.width);
   }
-
   cube() {
     if (this.shape === 'cube') {
       return 'we have a cube!';
@@ -276,9 +234,9 @@ aissani = new Cube({
 });
 console.log(aissani.CubeSurfaceArea());
 console.log(aissani.cubeVolume());
-console.log(aissani.volume())
-console.log(aissani.surfaceArea())
-console.log(aissani.cube())
+console.log(aissani.volume());
+console.log(aissani.surfaceArea());
+console.log(aissani.cube());
 // Use these logs to test your results:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
@@ -301,9 +259,3 @@ module.exports = {
 };
 
 
-module.exports = {
-  each,
-  map,
-  limitFunctionCallCount,
-  checkMatchingLeaves,
-};
