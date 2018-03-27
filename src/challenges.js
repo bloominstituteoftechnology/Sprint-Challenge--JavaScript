@@ -9,8 +9,8 @@ const each = (elements, cb) => {
   return elements;
 };
 
-const y = [1, 2, 3, 4, 5, 6];
-console.log(each(y, (val) => { return val * val; }));
+// const y = [1, 2, 3, 4, 5, 6];
+// console.log(each(y, (val) => { return val * val; }));
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
@@ -119,19 +119,31 @@ class Cuboid {
     return this.length * this.width * this.height;
   }
   surface() {
-    return 6 * (this.length + this.width);
+    return 2 * ((this.length * this.width) + (this.length * this.height) + (this.width * this.height));
   }
 }
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
-
+class Cube extends Cuboid {
+  constructor(properties) {
+    super(properties);
+  }
+  surface() {
+    return 6 * (this.length + this.width);
+  }
+}
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
 
 // The volume of a cube is: length * width * height
 // The surface area of a cube is: 6 * (length + width)
 
 // Create a new cube object that has equal values for length, width, and height
+const cuboid = new Cuboid({
+  length: 4,
+  width: 5,
+  height: 5,
+});
 
-const cube = new Cuboid({
+const cube = new Cube({
   length: 2,
   height: 2,
   width: 2,
