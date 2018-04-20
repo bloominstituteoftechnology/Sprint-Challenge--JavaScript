@@ -111,5 +111,5 @@ let lowerCase = zooAnimals.map(x => x.animal_name.toLowerCase());
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-let populationTotal = [];
+let populationTotal = zooAnimals.reduce((t, x )=> t+=x.population, 0);
 console.log(populationTotal);
