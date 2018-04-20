@@ -31,14 +31,15 @@ function greeting(firstName, lastName) {
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
 console.log(consume(2, 2, add)); // 4
 console.log(consume(10, 16, multiply)); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+console.log(consume('Mary', 'Poppins', greeting)); // Hello Mary Poppins, nice to meet you!
 
 // ==== Closures ====
 // Question 1: Explain in your own words why the example below is a closure.
-
+//A function that remembers other functions
 // Explanation:
 
 // Question 2: Given the example below, what scope is the external variable in?
+//Because its in the global scope
 
 let external = "I'm outside!";
 
@@ -48,7 +49,8 @@ function myFunction() {
 
   function nestedFunction() {
     console.log(internal);
+    console.log(external);
   }
-  nestedFunction();
+  console.log(nestedFunction());
 }
-myFunction();
+console.log(myFunction());
