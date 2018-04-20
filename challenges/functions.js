@@ -39,9 +39,11 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 
-// Explanation: 
+// Explanation: because we are reaching outside of the function to grab the variable
 
 // Question 2: Given the example below, what scope is the external variable in?
+
+// Explanation: Global Scope
 
 let external = "I'm outside!";
 
