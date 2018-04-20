@@ -10,7 +10,7 @@
  - Implicit Binding - "when the function is invoked look to the left of the dot and that is what 'this' keyword is going to reference."
  - new Binding - "when the function is invoked with the new keyword, 'this' keyword inside that function is bound to the new object being constructed."
  - Explicit Binding- when 'call', 'apply', 'bind' methods are used. 
- 
-parentOne.call(child);
+
+
 5. Why do we need super() in an extended class?
 - same as 'call' in prototype: to access parent's class
