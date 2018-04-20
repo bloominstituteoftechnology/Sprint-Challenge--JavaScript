@@ -14,7 +14,7 @@ const tyrannosaurus = {
   length: 12,
   period: 'Cretaceious',
   roar: function() {
-    return "RAWERSRARARWERSARARARRRR!";
+    return "RAWR!!!";
   }
 }
 // stegosaurus, herbivore, 2000kg, 9m, Late Jurassic
