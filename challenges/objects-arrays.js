@@ -15,8 +15,8 @@ const tyrannosaurus = ({
   weight: `${7000}kg`,
   length: `${12}m`,
   period: `Late Cretaceious`,
-  roar: function(obj) {
-    return `${'RAWERSRARARWERSARARARRRR!'}`,
+  roar: function (obj) {
+    return `RAWERSRARARWERSARARARRRR!`;
   }
 })
 
@@ -139,6 +139,9 @@ const graduates = [{
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+for (let i = 0; i < graduates.length; i++) {
+  universities.push(graduates[i].university)
+}
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -148,11 +151,21 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-console.log(contactInfo);
+const formatted = (object) => {
+  for (i = 0, i>,  Array.length, i++)
+  let {
+      first_name,
+      email,
+  } = contactInfo;
+  return `${first_name} ${email}`;
+} 
+
+console.log(contactInfo.formatted());
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+
 console.log(uni);
 
 
