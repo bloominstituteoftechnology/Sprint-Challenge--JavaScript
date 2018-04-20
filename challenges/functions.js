@@ -36,11 +36,12 @@ console.log(consume(10,16,multiply)); // 160
 console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 // ==== Closures ====
+
 // Question 1: Explain in your own words why the example below is a closure.
 
 // Explanation:
 
-// The example below is a closure because the functions myFunction and nestedFunction can both access variables external and internal which are outside of their scope.
+// The example below is a closure because the functions myFunction and nestedFunction can both access the variables external and internal which are outside of their scope.
 
 // Question 2: Given the example below, what scope is the external variable in?
 

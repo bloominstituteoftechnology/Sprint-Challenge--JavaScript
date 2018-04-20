@@ -56,7 +56,7 @@ console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 
-tyrannosaurus.__proto__.roar = function() {
+tyrannosaurus.roar = function() {
   return 'RAWERSRARARWERSARARARRRR!';
 }
 
@@ -83,7 +83,11 @@ Once you have the new array created, sort the universities alphabetically and lo
 
 const universities = [];
 
-graduates.forEach((item) => {universities.push(item.university)});
+for (let i = 0; i < graduates.length; i++) {
+    universities.push(graduates[i].university);
+}
+
+// graduates.forEach((item) => {universities.push(item.university)});
 
 console.log(universities)
 
@@ -96,7 +100,11 @@ Log the result of your new array. */
 
 let contactInfo = [];
 
-contactInfo = graduates.map((item) => {return `${item.first_name} ${item.email}`;});
+for (let i = 0; i < graduates.length; i++) {
+  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
+}
+
+// contactInfo = graduates.map((item) => {return `${item.first_name} ${item.email}`;});
 
 console.log(contactInfo);
 
@@ -104,8 +112,14 @@ console.log(contactInfo);
 
 let uni = [];
 
-uni = graduates.map((item) => {return (item.university.indexOf("Uni") > -1 ? item.university : false)});
-uni = uni.filter((item) => {return item !== false});
+for (let i = 0; i < graduates.length; i++) {
+    if (graduates[i].university.indexOf("Uni") > -1) {
+      uni.push(graduates[i].university);
+    }
+}
+
+// uni = graduates.map((item) => {return (item.university.indexOf("Uni") > -1 ? item.university : false)});
+// uni = uni.filter((item) => {return item !== false});
 
 console.log(uni);
 
