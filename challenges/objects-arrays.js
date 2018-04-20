@@ -87,13 +87,15 @@ const contactInfo = [];
 for (let i = 0; i < contactInfo.length; i++) {
   contactInfo.push(graduates[i].first_name);
 }
-console.log(contactInfo.first_name);
+console.log(contactInfo.slice(2, 3));
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 for (let i = 0; i < uni.length; i++) {
-  uni.push(graduates[i]);
+  if (graduates.university === "uni") {
+    uni.push(graduates[i].university); 
+  }
 }
 console.log(uni);
 
@@ -115,14 +117,10 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 let lowerCase = [];
-for (let i = 0; i < lowerCase.length; i++) {
-  lowerCase.push(zooAnimals[i]);
-}
+lowerCase = zooAnimals.map(zooAnimals => zooAnimals.animal_name);
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 let populationTotal = [];
-for (let i = 0; i < populationTotal.length; i++) {
-  populationTotal.push(zooAnimals[i]);
-}
+// const reducer = (acc, currentValue) => acc + currentValue;
 console.log(populationTotal);
