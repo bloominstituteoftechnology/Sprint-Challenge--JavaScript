@@ -95,7 +95,9 @@ for(let i = 0; i < graduates.length; i++) {
   uni.push(graduates[i].university);
   }
 }
+let nuOfUni = uni.length;
 
+console.log(nuOfUni);
 console.log(uni);
 
 
