@@ -47,7 +47,7 @@ consume(uk, england, london)
 
 // Explanation: Because there is a function nested inside of a function which gives it closure also the inner can grab the outter variable but the outer cant grab the inner.
 
-// Question 2: Given the example below, what scope is the external variable in?
+// Question 2: Given the example below, what scope is the external variable in? => Its in The Global Scope
 
 let external = "I'm outside!";
 
