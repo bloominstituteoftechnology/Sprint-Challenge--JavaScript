@@ -34,21 +34,20 @@ let velociraptor = {
 }
 
 // Using your dinosaur objects, log answers to these questions:
-
 // How much did tyrannosaurus weigh?
-// console.log(tyrannosaurus.weight);
+console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
-// console.log(velociraptor.diet);
+console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
-// console.log(stegosaurus.length);
+console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
-// console.log(tyrannosaurus.period);
+console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-// console.log(tyrannosaurus.roar());
+console.log(tyrannosaurus.roar());
 
 
 // ==== Arrays ====
@@ -70,19 +69,17 @@ const graduates = [
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 
-for(let i = 0; i < graduates.length; i++) {
-  graduates.sort(function(a, b) {
-    if(a.university < b.university) {
-      return -1;
-    }
-    if(a.university > b.university) {
-      return 1;
-    }
-    return 0;
-  });
-  universities.push(graduates);
-}
-// console.log(universities)
+graduates.sort(function(a, b) {
+  if(a.university < b.university) {
+    return -1;
+  }
+  if(a.university > b.university) {
+    return 1;
+  }
+  return 0;
+});
+universities.push(graduates);
+console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 The resulting contact information should have a space between the first name and the email information like this: 
@@ -93,7 +90,7 @@ const contactInfo = [];
 for (let i = 0; i < graduates.length; i++) {
   contactInfo.push(graduates[i].first_name + " " + graduates[i].email);
 }
-// console.log(contactInfo);
+console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
@@ -103,7 +100,7 @@ for (let i = 0; i < graduates.length; i++) {
     uni.push(graduates[i].university);
   }
 }
-// console.log(uni);
+console.log(uni);
 
 // ==== Array Methods ====
 // Given this zoo data from around the United States, follow the instructions below
@@ -124,9 +121,12 @@ zooAnimals = [
 let lowerCase = [];
 let lower = zooAnimals.map(animal => ({name: animal.animal_name.toLowerCase()}));
 lowerCase.push(lower);
-// console.log(lowerCase);
+console.log(lowerCase);
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 let populationTotal = [];
-let population = zooAnimals.reduce(animal => ({population: animal.population}));
+let population = zooAnimals.reduce((total, animal) => {
+  return total += animal.population;
+}, 0);
+populationTotal.push(population);
 console.log(populationTotal);
