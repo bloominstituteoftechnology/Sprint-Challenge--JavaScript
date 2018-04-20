@@ -1,8 +1,44 @@
 // Copy and paste your prototype in here and refactor into class syntax.
 
+// Constructor/Protoype Syntax
+/*function CuboidMaker (length, width, height) {
+  this.length = length;
+  this.width = width;
+  this.height = height
+}
+
+CuboidMaker.prototype.volume = function(length, width, height) {
+  return this.length * this.width * this.height;
+}
+
+CuboidMaker.prototype.surfaceArea = function(length, width, height) {
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+}
+*/
+
+// Class Syntax
+class CuboidMaker  {
+  constructor (length, width, height) {
+    this.length = length;
+    this.width = width;
+    this.height = height;
+  }
+
+  volume (length, width, height) {
+    return this.length * this.width * this.height;
+  }
+
+  surfaceArea (length, width, height) {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  }
+
+}
+
+const cuboid = new CuboidMaker (4, 5, 5);
+
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
 
 /* Stretch Task:
 

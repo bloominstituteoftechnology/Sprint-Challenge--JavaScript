@@ -20,7 +20,7 @@ console.log(CuboidMaker);
   Formula for cuboid volume: length * width * height
 */
 
-CuboidMaker.prototype = Object.create(CuboidMaker.prototype);
+// CuboidMaker.prototype = Object.create(CuboidMaker.prototype);
 
 CuboidMaker.prototype.volume = function(length, width, height) {
   return this.length * this.width * this.height;
