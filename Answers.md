@@ -2,7 +2,7 @@
 1. Describe the biggest difference between `.forEach` & `.map`.
 
 forEach` loops over each element in an array, but does not automatically create a new array; while map does create a new a array corresponsing to
-each eelemnt
+each element
 
 2. What is the difference between a function and a method?
 
@@ -12,7 +12,7 @@ a method refers to a function within an object (an object's functions).
 
 a combination of a function and the lexical environment within which that function was declared.
 
-4. Describe the four rules of the 'this' keywor
+4. Describe the four rules of the 'this' keyword
 
 1. when 'this' is in global scope, it refrences the window or console object.
 2. implicit binding: when object.function is called, 'this' (in the function) refers to the the object preceding the dot.
