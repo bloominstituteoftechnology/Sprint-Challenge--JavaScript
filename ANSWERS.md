@@ -1,6 +1,7 @@
 # Your responses to the short answer questions should be laid out here using Mark Down.
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+
 Our .forEach method executes a provided function once for each array element.
 Our .map method creates a new array with the results of calling a provided function on every element in the calling array.
 One of the major differences between the method is that the .forEach method is allowed to mutate the calling array.
