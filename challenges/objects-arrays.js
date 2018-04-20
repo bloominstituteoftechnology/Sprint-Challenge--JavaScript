@@ -6,12 +6,22 @@
   object name, diet, weight, length, period
 */
 
+class Dinosaur {
+  constructor(name, diet, weight, length, period) {
+    this.name = name;
+    this.diet = diet;
+    this.weight = weight;
+    this.length = length;
+    this.period = period;
+  }
+}
+
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
-
+const tyrannosaurus = new Dinosaur(`Tyrannosaurus`, `carnivorous`, `7000kg`, `12m`, `Late Cretaceious`)
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+const stegosaurus = new Dinosaur(`Stegosaurus`, `herbivorous`, `2000kg`, `9m`, `Late Jurassic`)
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
-
+const velociraptor = new Dinosaur(`Velociraptor`, `carnivorous`, `15kg`, `1.8m`, `Late Cretaceious`)
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
@@ -24,6 +34,10 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+tyrannosaurus.roar = function() {
+  return "RAWERSRARARWERSARARARRRR!";
+}
+
 console.log(tyrannosaurus.roar());
 
 
@@ -46,6 +60,14 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+
+function each(baseArray, baseProperty, newArray) {
+  for (let obj of baseArray) {
+    newArray.push(obj[baseProperty]);
+  }
+  return newArray;
+}
+each(graduates, "university", universities);
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -54,12 +76,35 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
+function dobleEach(baseArray, basePropertyA, basePropertyB, newArray) {
+  for (let obj of baseArray) {
+    newArray.push(`${obj[basePropertyA]} ${obj[basePropertyB]}`);
+  }
+  return newArray;
+}
+
 const contactInfo = [];
+dobleEach(graduates, "first_name", "email", contactInfo);
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+function jankFilter(array, callback) {
+  let holdArray = []
+  for (let element of array) {
+    if (callback(element)) {
+      holdArray.push(element);
+    } else {
+      continue;
+    }
+  }
+  return holdArray;
+}
+
+// My totally robust callback function for my jankFilter.
+const uniFilter = university => university.indexOf('Uni') > -1;
+const uni = jankFilter(universities, uniFilter);
+
 console.log(uni);
 
 
@@ -79,9 +124,9 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-let lowerCase = [];
+let lowerCase = zooAnimals.map(animal => animal.animal_name.toLowerCase());
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-let populationTotal = [];
+let populationTotal = zooAnimals.reduce((acc, animal) => acc + animal.population, 0);
 console.log(populationTotal);
