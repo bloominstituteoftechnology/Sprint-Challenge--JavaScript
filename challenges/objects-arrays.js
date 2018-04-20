@@ -7,11 +7,33 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
+const tyrannosaurus = {
+  "name": "tyrannosaurus",
+  "diet": "carnivorous",
+  "weight": "7000kg",
+  "length": "12m",
+  "perioud": "late cretaceious",
+  "roar" : function() {
+    console.log("RAWERSRARARWERSARARARRRR")
+  }
+}
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+const stegosaurus = {
+  "name": "stegosaurus",
+  "diet": "herbivorous",
+  "weight": "2000kg",
+  "length": "9m",
+  "perioud": "Late Jurassic"
+}
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
-
+const velociraptor = {
+  "name": "velociraptor",
+  "diet": "carnivorous",
+  "weight": "15kg",
+  "length": "1.8m",
+  "perioud": "late cretaceious"
+}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
@@ -46,7 +68,10 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities)
+for(i = 0; i < graduates.length; i++) {
+  universities.push(graduates[i].university)
+}
+console.log(universities.sort())
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -55,14 +80,21 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-console.log(contactInfo);
+for(i = 0; i < graduates.length; i++) {
+  contactInfo.push(graduates[i].first_name)
+  contactInfo.push(graduates[i].email)
+}
+console.log(contactInfo.join(" "));
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+for(var i=0; i<universities.length; i++) {
+  if(universities[i].indexOf("Uni") != -1) {
+    uni.push(universities[i]); 
+  }
+}
 console.log(uni);
-
-
 // ==== Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below
