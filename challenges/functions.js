@@ -1,5 +1,6 @@
 // ==== Callbacks ====  
 
+
 /* Step 1: Create a callback function
   * Create a function named consume that can take 3 parameters.
   * The first two parameteres can accept any argument
