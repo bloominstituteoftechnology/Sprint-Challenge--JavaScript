@@ -76,7 +76,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = []
-
+for(let i = 0; i < graduates.length; i++)
 universities.push(graduates.map((graduates, index, universities) => {
   return graduates.university
 }));
@@ -102,7 +102,7 @@ console.log(contactInfo);
 const uni = [];
 
 for(let i = 0; i < graduates.length; i++){
-  if(graduates[i].university === "Uni"){
+  if(graduates[i].university.substr(0,3) === "Uni"){
       return uni.push((graduates[i].university))
   };
 }; 
@@ -134,10 +134,8 @@ lowerCase.push(zooAnimals.map((zooAnimals, index, animal_name) => {
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-let populationTotal = [];
-
-zooAnimals.reduce((population, total, index, zooAnimals) => {
-  return populationTotal.push(population + zooAnimals.population)
+let populationTotal = zooAnimals.reduce((population, animal) => {
+  return (population + animal.population)
 }, 0)
 
 console.log(populationTotal);

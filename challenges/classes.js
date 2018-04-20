@@ -2,8 +2,15 @@
 //====================================
 //    Base class
 //====================================
-class CuboidMaker{
-  constructor(length, width, height){
+class cuboid{
+  constructor(parentOptions){
+    this.properties = parentOptions;
+  }
+}
+
+class CuboidMaker extends cuboid{
+  constructor(length, width, height, parentOptions){
+    super(parentOptions);
     this.length = length;
     this.width  = width;
     this.height = height;
@@ -16,10 +23,11 @@ class CuboidMaker{
   };
 };
 
-const cuboid = new CuboidMaker(4, 5, 5)
+const cuboidd = new CuboidMaker(4, 5, 5, "string")
 // Test your volume and surfaceArea methods by uncommenting the logs below:
- console.log(cuboid.volume()); // 100
- console.log(cuboid.surfaceArea()); // 130
+ console.log(cuboidd.volume()); // 100
+ console.log(cuboidd.surfaceArea()); // 130
+ console.log(cuboidd)
 
 /* Stretch Task:
 
