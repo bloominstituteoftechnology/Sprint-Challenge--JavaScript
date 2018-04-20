@@ -72,13 +72,19 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
+// const universities = [];
 
-graduates.forEach((alphabetically) => {
-  universities.push(alphabetically.email);
- });
+// graduates.forEach((alphabetize) => {
+//   universities.push(alphabetize.email);
+//  });
 
-console.log(universities.sort());
+// console.log(universities.sort());
+
+const univeristies = [];
+for (let i = 0; i <graduates.length; i++) {
+  univeristies.push(graduates[i].university);
+}
+console.log(univeristies.sort())
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -88,9 +94,9 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 
-graduates.forEach((student)=> {
-  contactInfo.push(`${student.first_name} ${student.email}`);
-});
+for (let i = 0; i<graduates.length; i++) {
+  contactInfo.push(graduates[i].first_name + " " + " " + graduates[i].email);
+}
 
 console.log(contactInfo);
 
@@ -105,7 +111,15 @@ console.log(contactInfo);
 //   return names.uni ('Uni');
 // });
 
-// console.log(uni);
+const uni = [];
+
+for(let i = 0; i<graduates.length; i++) {
+  if(graduates[i].university.includes("Uni")) {
+    uni.push(graduates[i].university);
+  } 
+}
+
+console.log(uni);
 
 
 // ==== Array Methods ====
@@ -133,8 +147,9 @@ console.log(lowerCase);
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 
-let populationTotal = zooAnimals.reduce((theReducer, item) =>{
-  return theReducer += item.population;
+let populationTotal = zooAnimals.reduce((start, totalPopulation) =>{
+  return start + totalPopulation.population;
 }, 0);
 
 console.log(populationTotal);
+

@@ -3,9 +3,11 @@
      .forEach acts as a replacement for a for loop, meaning it iterates over all the objects in an array, where .map creates a new array.
 
 2. What is the difference between a function and a method?
-     A method exists inside an object. 
+     A method exists inside an object.
+
 3. What is closure?
-     Closure is the scope of a Function's usage.
+     Closure is the usage of a Function's scope to manage the interaction of variables.
+
 4. Describe the four rules of the 'this' keyword.
 
      Window/Global Binding is when .this is bound to the entirety of a braowser's window, or a terminal, in the case of global.
@@ -19,4 +21,4 @@
 
 5. Why do we need super() in an extended class?
 
-     super() connects connects the extended class to the Parent, in order to inherit it's properties. 
+     super() connects the extended class to the Parent, in order to inherit it's properties. 
