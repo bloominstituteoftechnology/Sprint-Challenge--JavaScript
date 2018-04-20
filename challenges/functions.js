@@ -39,7 +39,11 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 // Explanation: 
 
+// The below is an example of closure because myFunction is able to access the variable external even though external exists outside of myFunction's private scope.
+
 // Question 2: Given the example below, what scope is the external variable in?
+
+// The global scope.
 
 let external = "I'm outside!";
 
