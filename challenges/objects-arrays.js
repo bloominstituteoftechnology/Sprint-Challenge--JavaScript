@@ -117,7 +117,8 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 let lowerCase = [];
 
 zooAnimals.map(function(item) {
-  lowerCase.push(item.animal_name.toLowerCase())
+  //map must return
+  return lowerCase.push(item.animal_name.toLowerCase())
 })
 
 console.log(lowerCase); 
