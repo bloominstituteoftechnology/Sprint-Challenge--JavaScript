@@ -36,7 +36,7 @@
 
                         sayName.apply(ja, languages); // I am Ja, I'm learning HTML, CSS and JS now.
 
-    New Binding - when we create a base constructor function/class with 'this' keyword and an object with 'new' keyword (ex, function fred = new Parent({}) ), behind the scene JS will create a new object and save it like this = {}.
+    New Binding - when we create a base constructor function/class with 'this' keyword and an object with 'new' keyword (ex, const fred = new Parent({}) ), behind the scene JS will create a new object and save it like this = {}.
     Window Binding - without the above to tell 'this' to refer to, 'this' will default to the window object.
 
 5. Why do we need super() in an extended class?
