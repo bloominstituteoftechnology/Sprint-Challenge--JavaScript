@@ -34,6 +34,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // The example below is a closure because `nestedFunction` has acces to the `internal` var which is outside of `nestedFunction`'s lexical scope. The same can be said for the `myFunction` and `external` variable
 
 // Question 2: Given the example below, what scope is the external variable in?
+// Global scope
 
 let external = "I'm outside!";
 
