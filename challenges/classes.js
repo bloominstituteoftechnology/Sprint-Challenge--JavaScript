@@ -70,7 +70,8 @@ console.log(cuboid.surfaceArea()); // 130
 // In a cube, length, width, & height are the same
 
 /*
-Because all faces are squares and congruent to each other, all 12 edges are the same length. A point formed where three edges meet. A cube has 8 vertices.
+> Because all faces are squares and congruent to each other, all 12 edges are the same length [...].
+
 Cube - math word definition - Math Open Reference
 https://www.mathopenref.com/cube.html
 */
@@ -80,6 +81,15 @@ https://www.mathopenref.com/cube.html
 class Cube extends Cuboid {
   constructor(edge) {
     super(edge, edge, edge);
+    this.edge = edge;
+  }
+  // Wouldn't our existing methods be satisfactory? Hmm
+  // Let's make methods anyways
+  cubeVolume() {
+    return Math.pow(this.edge, 3);
+  }
+  cubeSurfaceArea() {
+    return 6 * Math.pow(this.edge, 2);
   }
 }
 
@@ -88,3 +98,11 @@ const companionCube = new Cube(5);
 console.log(companionCube.length);
 console.log(companionCube.width);
 console.log(companionCube.height);
+
+// Methods from our base class
+console.log(companionCube.volume());
+console.log(companionCube.surfaceArea());
+// Methods from our extended class
+console.log(companionCube.cubeVolume());
+console.log(companionCube.cubeSurfaceArea());
+// Yeah they're the same. What was the point of that? XD
