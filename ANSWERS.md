@@ -15,7 +15,6 @@ functions are regular functions declared outside or not belong to any object, an
 
 Is the property that have the inner functions have to access his own variables, the outer functions variables and the global variables. Cannot access the inner variables of another functions.
 
-
 4. Describe the four rules of the 'this' keyword.
 
 Global Binding: this keyword is a global variable that points to the main window or container.
