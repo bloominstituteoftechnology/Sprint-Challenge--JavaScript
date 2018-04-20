@@ -52,17 +52,39 @@ class Cuboid {
 // Look at Step 1 for the answer!!!
 
 /* == Step 4: Create a new object that uses CuboidMaker ==
-  Create a COMPANION CUBE object that uses the new keyword to use our CuboidMaker constructor
+  Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
 
-const companionCube = new Cuboid(4, 5, 5);
+const cuboid = new Cuboid(4, 5, 5);
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-console.log(companionCube.volume()); // 100
-console.log(companionCube.surfaceArea()); // 130
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
 
 /* Stretch Task:
 
   Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods as well.  Create a new cube object and log out the results of your new cube.
 
 */
+
+// In a cube, length, width, & height are the same
+
+/*
+Because all faces are squares and congruent to each other, all 12 edges are the same length. A point formed where three edges meet. A cube has 8 vertices.
+Cube - math word definition - Math Open Reference
+https://www.mathopenref.com/cube.html
+*/
+
+// So could we do something like this?
+
+class Cube extends Cuboid {
+  constructor(edge) {
+    super(edge, edge, edge);
+  }
+}
+
+const companionCube = new Cube(5);
+
+console.log(companionCube.length);
+console.log(companionCube.width);
+console.log(companionCube.height);
