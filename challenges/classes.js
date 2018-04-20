@@ -29,10 +29,6 @@ class CuboidMaker {
   surfaceArea() {
     return (this.length * this.width + this.length * this.height + this.width * this.height) * 2;
   }
-  surfaceArea() {
-    return (this.length * this.width + this.length * this.height + this.width * this.height) * 2;
-  }
-  
 }
 
 
@@ -42,7 +38,21 @@ console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
 
 /* Stretch Task:
-
-  Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods as well.  Create a new cube object and log out the results of your new cube.
-
+Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods as well.  Create a new cube object and log out the results of your new cube.
 */
+// A cube is a geometric 3-D object which has 12 edges of the same lenght and perpendicular between them.
+class CubeMaker extends CuboidMaker{
+  constructor (param) {
+    super(param, param, param);
+  }
+  volume() {
+    return Math.pow(this.length || this.height || this.width, 3);
+  }
+  surfaceArea() {
+    return Math.pow(this.length || this.height || this.width, 2) * 6;
+  }
+}
+
+const cube = new CubeMaker(10);
+console.log(cube.volume()); // 1000
+console.log(cube.surfaceArea()); // 600
