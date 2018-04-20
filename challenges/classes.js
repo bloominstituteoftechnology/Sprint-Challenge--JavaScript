@@ -4,6 +4,9 @@
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
 
+
+// Original Prototype
+
 // const CuboidMaker = function (options) {
 //   this.length = options.length;
 //   this.width = options.width;
