@@ -48,6 +48,6 @@ You can tell JavaScript what `this` should refer to with `call()`, `apply()`, an
 * `new` Keyword Binding
 When you use the `new` keyword when you use a constructor function, `new` redirects `this` to the new instance of the object, instead of letting it stay directed to the object of the constructor function (*which is probably global*).
 
-5. Why do we need super() in an extended class?
+## 5. Why do we need super() in an extended class?
 
 `super()` is the newer way of saying `ParentClass.call(this, attributes);`. In other words, `super()` calls the base class' constructor function, binds `this` to the extended Class, then uses that constructor function to populate the new object with properties from the base class, assigning values passed as arguments into `super()` in the extended class.
