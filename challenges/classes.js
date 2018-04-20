@@ -39,7 +39,7 @@ console.log(cuboid.surfaceArea()); // 130
 
 */
 
-const championCube = new CubeMaker(5);
+const championCube = new CubeMaker(18);
 
 console.log(championCube.cubeSurfaceArea())
 console.log(championCube.cubeVolume())
