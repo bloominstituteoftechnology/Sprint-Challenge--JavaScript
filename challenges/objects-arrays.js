@@ -151,16 +151,12 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-const formatted = (object) => {
-  for (i = 0, i>,  Array.length, i++)
-  let {
-      first_name,
-      email,
-  } = contactInfo;
-  return `${first_name} ${email}`;
-} 
+  for (i = 0; i < graduates.length; i++) {
+      contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`)
+  }
 
-console.log(contactInfo.formatted());
+
+console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
