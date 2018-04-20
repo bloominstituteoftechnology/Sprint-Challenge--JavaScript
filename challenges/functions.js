@@ -16,15 +16,15 @@ function consume(a, b, cb) {
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-console.log(consume(1, 5, (x, y) => x + y));
-console.log(consume(10, 45, (x, y) => x * y));
-console.log(consume('Brandon', 'Benefield', (a, b) => `Hello ${a} ${b}, nice to meet you!` ));
+const add = (x, y) => x + y;
+const multiply = (x, y) => x * y;
+const greeting = (a, b) => `Hello ${a} ${b}, nice to meet you!`;
 
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-//consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
