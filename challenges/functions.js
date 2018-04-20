@@ -37,10 +37,12 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // ==== Closures ====
 // Question 1: Explain in your own words why the example below is a closure.
+Because there is a function that refers to a variable that is outside its definition.
 
 // Explanation:
 
 // Question 2: Given the example below, what scope is the external variable in?
+Global
 
 let external = "I'm outside!";
 
