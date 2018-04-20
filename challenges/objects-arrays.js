@@ -6,11 +6,24 @@
   object name, diet, weight, length, period
 */
 
+const createDino = function (name, diet, weight, length, period){
+  return {
+    'name':name,
+    'diet': diet,
+    'weight': weight,
+    'length': length,
+    'period': period
+  }
+}
+
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
+const tyrannosaurus = createDino('tyrannosaurus', 'carnivorous', '7000kg', '12m', 'Late Cretaceious');
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+const stegosaurus = createDino('stegosaurus', 'herbivorous', '2000kg', '9m', 'Late Jurassic');
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+const velociraptor = createDino('velociraptor', 'carnivorous', '15kg', '1.8m', 'Late Cretaceious');
 
 // Using your dinosaur objects, log answers to these questions:
 
