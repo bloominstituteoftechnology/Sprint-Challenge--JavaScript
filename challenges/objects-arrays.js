@@ -72,10 +72,10 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 for (let i = 0; i < graduates.length; i++) {
-  let alpha = universities.push(graduates.university);
-  return universities.sort();
+  let alpha = universities.push(graduates[i].university);
+  console.log(universities);
 }  
-console.log(universities)
+console.log(universities.sort());
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -112,7 +112,7 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 let lowerCase = [];
 for (let i = 0; i < zooAnimals.length; i++) {
-  lowerCase.push(zooAnimals).toLowerCase();
+  lowerCase.push(zooAnimals[i]);
 }
 console.log(lowerCase); 
 
