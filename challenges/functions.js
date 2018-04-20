@@ -36,7 +36,7 @@ console.log(consume("Mary", "Poppins", greeting))
 // Question 1: Explain in your own words why the example below is a closure.
 
 // Explanation: 
-// The example below is a closure for two reasons.  One, the function can access variables from outside of the function (the global variale).  Two, the inner function has access to the outer function's variables.
+// The example below is a closure for two reasons.  One, the function can access variables from outside of the function (the global variable).  Two, the inner function has access to the outer function's variables.
 
 // Question 2: Given the example below, what scope is the external variable in?
 //The external variable has global scope.
