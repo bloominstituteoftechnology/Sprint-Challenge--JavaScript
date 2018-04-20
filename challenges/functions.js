@@ -30,7 +30,8 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 
-// Explanation: 
+// Explanation:
+// The example below is a closure because `nestedFunction` has acces to the `internal` var which is outside of `nestedFunction`'s lexical scope. The same can be said for the `myFunction` and `external` variable
 
 // Question 2: Given the example below, what scope is the external variable in?
 
