@@ -80,6 +80,9 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+
+for (let student of graduates) contactInfo.push(`${ student.first_name } ${ student.email }`);
+
 console.log(contactInfo);
 
 
