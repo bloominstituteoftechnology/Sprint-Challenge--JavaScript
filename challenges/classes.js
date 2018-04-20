@@ -12,7 +12,7 @@ CuboidMaker.prototype.volume = function() {
 };
 
 CuboidMaker.prototype.surfaceArea = function() {
-	return (this.length*this.width) + (this.length*this.height) + (this.width*this.height);
+	return 2 * (this.length*this.width) + (this.length*this.height) + (this.width*this.height);
 } 
 
 const cuboid = new CuboidMaker({
@@ -33,7 +33,7 @@ class CuboidMaker {
 		return this.length * this.width * this.height;
 	}
 	surfaceArea() {
-		return (this.length*this.width) + (this.length*this.height) + (this.width*this.height);
+		return 2 * (this.length*this.width) + (this.length*this.height) + (this.width*this.height);
 	}
 }
 
@@ -54,3 +54,24 @@ console.log(cuboid.surfaceArea()); // 130
   Create a new cube object and log out the results of your new cube.
 
 */
+
+class CubeMaker extends CuboidMaker {
+	constructor(attributes) {
+		super(attributes);
+	}
+	volume() {
+		return Math.pow(this.length, 3);
+	}
+	surfaceArea() {
+		return Math.pow(this.length, 2) * 6;
+	}
+}
+
+const cube = new CubeMaker({
+	length: 2,
+	width: 2,
+	height: 2
+});
+
+console.log(cube.volume());
+console.log(cube.surfaceArea());
