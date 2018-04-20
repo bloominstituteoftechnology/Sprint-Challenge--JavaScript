@@ -6,7 +6,9 @@
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
 
-function CuboidMaker(length, width, height) {
+
+
+function CuboidMaker(length, width, height) {   //Not giving options cuz we know cuboids must have all these arguments to form a cuboid
   this.length = length;
   this.width = width;
   this.height = height
