@@ -1,7 +1,22 @@
 // Copy and paste your prototype in here and refactor into class syntax.
+class CuboidMaker {
+  constructor(Demenstions) {
+    this.length = 4;
+    this.width = 5;
+    this.height = 5;
+  }
+  volume() {
+    return this.length * this.width * this.height;
+  }
+}
 
+const cuboid = new CuboidMaker({
+  length: 4,
+  width: 5,
+  height: 5,
+});
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-// console.log(cuboid.volume()); // 100
+console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
 
 /* Stretch Task:
