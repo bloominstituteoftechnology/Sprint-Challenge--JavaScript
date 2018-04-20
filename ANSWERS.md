@@ -15,4 +15,4 @@ A closure is a nested function within another function that can access variables
  Explicit Binding.
 
 5. Why do we need super() in an extended class?
-The super() keyword calls the parent constructor.
+The super() keyword calls the parent constructor
