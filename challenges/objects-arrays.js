@@ -124,7 +124,8 @@ console.log(lowerCase);
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 let populationTotal = [];
-// populationTotal = zooAnimals.reduce((zooAnimals.population) {
-  // return zooAnimals;
-// }, 0)
+let reducer = populationTotal.push(zooAnimals);
+populationTotal.reduce(function (value, elem) {
+  return value + elem.population
+}, 0)
 console.log(populationTotal);
