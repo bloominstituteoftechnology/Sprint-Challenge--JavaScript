@@ -13,7 +13,6 @@ class CuboidMaker {
   }
 }
 
-
 const cuboid = new CuboidMaker({
   length : 4,
   width : 5,
