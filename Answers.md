@@ -32,7 +32,7 @@ foo.bar();
 
 ## 3. What is closure?
 
-Closure is the idea that the engine can look outward and upward to resolve the value of variables. To put it another way, the scope of a function can provide "closure" to other functions inside them, covering them in a warm blanket of variables that the functions themselves may not have in their own scope. 
+Closure is the idea that the engine can look outward and upward to resolve the value of variables. To put it another way, the scope of a function can provide "closure" to other functions inside them, covering them in a warm blanket of variables that the inner functions themselves may not have in their own scope. 
 
 ## 4. Describe the four rules of the 'this' keyword.
 
