@@ -25,7 +25,7 @@
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 
-// Explanation: 
+// Explanation: Because there is a function nested inside of a function which gives it closure also the inner can grab the outter variable but the outer cant grab the inner.
 
 // Question 2: Given the example below, what scope is the external variable in?
 
