@@ -6,7 +6,7 @@
 * Because it doesn't return anything, some kind of mutation is necessary to see its results. If you want to iterate over an array and do the callback function on each element, you'd have to change the array you're iterating over, or initialize a blank new array and change that to see any output.
 
 `.map` takes the each result of the callback functions and returns all of the results into a new array.
-* Because of this, this doesn't need to change the array it is working on, nor do you need to set up an output array of your own. `map()` automatically returns a new array filled with results of the callback function iterating over the original array.
+* Because of this, this doesn't need to change the array it is working on, nor do you need to set up an output array of your own. 
 
 ## 2. What is the difference between a function and a method?
 
@@ -52,6 +52,7 @@ console.log(whatAreTheyDoing());
 In the body of the function definition, we need the values of `personA` and `personB`. But, we only have the value of `personB` available right in that function. Closure allows us to go outside of the function and to the variable environment of the 'parent', which is function `room()`. It does have the value for `personA`, so the engine will proceed to evaluate `personA + personB` => `34 + 35` and return `69`. If it couldn't find `personA` in `room()`, then the engine would continue to look outward until the hits the global scope. If it fails in its search, only then will it throw a `Reference Error`.
 
 This particular snippet points to something a little more esoteric than the above explanation, but I think this works nicely.
+
 ------
 
 ## 4. Describe the four rules of the 'this' keyword.
