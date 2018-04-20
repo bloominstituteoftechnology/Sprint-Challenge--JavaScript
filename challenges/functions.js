@@ -37,8 +37,10 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 // Question 1: Explain in your own words why the example below is a closure.
 
 // Explanation: 
+//  A: The example below is a closure because both myFunction and nestedFunction are able to access and use variables that were defined outside of their local scope. 
 
 // Question 2: Given the example below, what scope is the external variable in?
+// A: The external variable is in the global scope.
 
 let external = "I'm outside!";
 
