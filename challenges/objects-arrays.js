@@ -72,11 +72,12 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-let universities = [];
+const universities = [];
 
-universities = graduates.map( (graduate) => {
-  return graduate.university;
-}).sort()
+for(let i = 0; i < graduates.length ; i++) {
+  universities.push(graduates[i].university)
+}
+universities.sort();
 
 console.log(universities)
 
@@ -86,22 +87,24 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-let contactInfo = [];
+const contactInfo = [];
 
-contactInfo = graduates.map( (graduate) => {
-  return `${graduate.first_name} ${graduate.email}`;
-})
+for(let i = 0; i < graduates.length ; i++) {
+  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`)
+}
 
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. 
 Create a new array called uni that contains them all. Log the result. */
-let uni = [];
+const uni = [];
 
-uni = graduates.filter( (graduate) => {
-  return graduate.university.includes("Uni");
-})
+for(let i = 0; i < graduates.length ; i++) {
+  if(graduates[i].university.includes("Uni"))
+  uni.push(graduates[i].university)
+}
+
 console.log(`${uni.length} universities have the string "Uni"`);
 console.log(uni);
 
