@@ -38,7 +38,7 @@ Closure is the idea that the engine can look outward and upward to resolve the v
 
 When an execution context is established, `this` points to the object the context is associated with. This covers the below principles:
 * Window/Global Binding
-If the context you're working on is the global context, `this` will point to the global object. This is kinda why this:
+If the context you're working on is the global context, `this` will point to the global object.
 * Implicit Binding
 If you call a method, `this` points to the object the method is assocated with.
 
