@@ -1,5 +1,5 @@
 # Your responses to the short answer questions should be laid out here using Mark Down.
-1. Describe the biggest difference between `.forEach` & `.map`.
+## 1. Describe the biggest difference between `.forEach` & `.map`.
 
 `.forEach` simply performs the callback result on each element of the array.
 * Because of this, `.forEach` is great for doing side effects, like `console.log()`, or pushing/popping things from arrays.
@@ -8,9 +8,7 @@
 `.map` takes the each result of the callback functions and returns all of the results into a new array.
 * Because of this, this doesn't need to change the array it is working on, nor do you need to set up an output array of your own. `map()` automatically returns a new array filled with results of the callback function iterating over the original array.
 
-
-
-2. What is the difference between a function and a method?
+## 2. What is the difference between a function and a method?
 
 A function and a method is inherently the same thing: a block of code that does an operation, such as transforming data. The only difference is that **a method is explicitly attached to an object**. 
 
@@ -32,10 +30,12 @@ const foo = {
 foo.bar();
 ```
 
-3. What is closure?
+## 3. What is closure?
 
-Closure is the idea that the engine can look outward and upward to resolve the value of variables. For example, 
+Closure is the idea that the engine can look outward and upward to resolve the value of variables. To put it another way, the scope of a function can provide "closure" to other functions inside them, covering them in a warm blanket of variables that the functions themselves may not have in their own scope. 
 
+------
+*Reconsidering the below example*
 ```js
 function room() {
   let personA = 34;
@@ -52,8 +52,9 @@ console.log(whatAreTheyDoing());
 In the body of the function definition, we need the values of `personA` and `personB`. But, we only have the value of `personB` available right in that function. Closure allows us to go outside of the function and to the variable environment of the 'parent', which is function `room()`. It does have the value for `personA`, so the engine will proceed to evaluate `personA + personB` => `34 + 35` and return `69`. If it couldn't find `personA` in `room()`, then the engine would continue to look outward until the hits the global scope. If it fails in its search, only then will it throw a `Reference Error`.
 
 This particular snippet points to something a little more esoteric than the above explanation, but I think this works nicely.
+------
 
-4. Describe the four rules of the 'this' keyword.
+## 4. Describe the four rules of the 'this' keyword.
 
 When an execution context is established, `this` points to the object the context is associated with. This covers the below principles:
 * Window/Global Binding
