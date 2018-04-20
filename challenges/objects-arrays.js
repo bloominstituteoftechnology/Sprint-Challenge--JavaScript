@@ -4,13 +4,8 @@
   Given the following information about dinosaurs, create 3 objects: 
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
-*/ function Dinosaur(
-  name,
-  diet,
-  weight,
-  length,
-  period
-) {
+*/
+function Dinosaur(name, diet, weight, length, period) {
   this.name = name;
   this.diet = diet;
   this.weight = weight;
