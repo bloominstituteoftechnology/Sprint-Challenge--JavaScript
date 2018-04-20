@@ -12,5 +12,5 @@ Closure is when a function or an object has access to somthing outside its scope
   4. If `apply`, `call`, or `bind` are used to call a function, `this` inside the function is the object that is passed in as the argument.
 
 5. Why do we need super() in an extended class?
-super() gives a child access to its parent's methods
+super() gives a child access to its parent's properties
 
