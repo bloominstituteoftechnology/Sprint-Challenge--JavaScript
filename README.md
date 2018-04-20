@@ -6,18 +6,29 @@
 * **Just a friendly Reminder** Don't fret or get anxious about this, this is a no-pressure assessment that is only going to help guide you here in the near future. This is NOT a pass/fail situation. 
 ## Start by forking and cloning this repository.
 ## Questions - Self Study - You can exercise your Google-Fu for this and any other _Sprint Challenge_ in the future.
-1. Describe some of the differences between `.forEach` & `.map`.
-2. Name five different Types in JavaScript. A Type is something that can represent data. What is so special about Arrays?
-3. What is closure? Can you code out a quick example of a closure?
-4. Describe the four rules of the 'this' keyword. No need to provide examples about it this time :)
+1. Describe the biggest difference between `.forEach` & `.map`.
+2. What is the difference between a function and a method?
+3. What is closure?
+4. Describe the four rules of the 'this' keyword.
+5. Why do we need super() in an extended class?
 
 ## Initializing Project - We have set up a testing environment for you using `Jest`
-* Fork/Clone this project into a directory on your machine.
-* `cd` into your forked local copy.
-* notice there is a `package.json` file included. remember that a `package.json` file is like a map of instructions for when you run `yarn install`
-* run `yarn install` to download all the dependancies you need for this project.
-* run `yarn run watch` to start your tests in **watch mode**. This command will listen for changes as you work through the problems and save your `challenges.js` file. As soon as you hit save after writing some changes, the linter will run, and the tests will run as well. 
-* As soon as you have a test passing, `commit` your changes to your fork so we can see an active commit stream.
-* Once you're done with all the tests, push your commits to your fork and submit a Pull-Request
+* Fork/Clone this repository.
+* Complete all the exercises as described inside each challenge file.
+* Use `console.log()` statements to check to see if your code does what it is supposed to do.
+* To test your `console` statements you can run `node /assignments/<fileName>` and see what prints in your terminal. You can also use an online tool like `JSBin`, `REPL.it`, `JSFiddle`, or even your `Chrome developer console`.
+* Once you finish the challenges in each file, commit your code, and push it to your fork. 
+
+### Challenge 1: Objects and Arrays
+Test your knowledge of objects and arrays. Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
+
+### Challenge 2: Functions
+This challenge takes a look at callbacks and closures as well as scope. Use the [functions.js](challenges/functions.js) link to get started.
+
+### Challenge 3: Prototypes
+Create constructors, bind methods, and create cuboids in this prototypes challenge: [prototypes.js](challenges/prototypes.js).
+
+### Challenge 4: Classes
+Once you have completed the prototypes challenge, it's time to convert all your hard work into classes: [classes.js](challenges/classes.js).
 
 ### Remember you can use any resources you want to solve these problems, but avoid copying/pasting solutions you've previously written. Also if you don't finish all of the challenges, that's fine! Just do what you can and submit your challenges in the end! HAVE FUN!
