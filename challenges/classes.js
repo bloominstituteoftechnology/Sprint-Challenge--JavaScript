@@ -54,3 +54,22 @@ let cuboid = new Cuboid({"length": 4, "width": 5, "height": 5});
 
 
 
+ class CubeMaker extends CuboidMaker {
+  constructor(properties) {
+    super(properties);
+    this.side = properties.side;
+  }
+  surfaceArea() {
+    return  6 * ((this.side) * (this.side));
+  };
+
+  volume() {
+    return  (this.side * this.side * this.side);
+  };
+}
+
+
+let cube = new CubeMaker({"side": 3});
+
+console.log(cube.surfaceArea());
+console.log(cube.volume());
