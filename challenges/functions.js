@@ -11,7 +11,6 @@ const consume = function(param1, param2, cb){
   return cb(param1, param2);
 };
 
-
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
@@ -28,7 +27,6 @@ const multiply = function(x, y){
 const greeting = function(firstName, lastName){
   return `Hello ${firstName} ${lastName}, nice to meet you!`;
 };
-
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
 console.log(consume(2, 2, add)); // 4
