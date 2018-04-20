@@ -12,6 +12,32 @@
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
+tyrannosaurus = {
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: 7000,
+  length: 12,
+  period: "Late Cretaceious",
+  roar: () => {return "RAWERSRARARWERSARARARRRR!";}
+}
+
+stegosaurus = {
+  name: "stegosaurus",
+  diet: "herbivourous",
+  weight: 2000,
+  length: 9,
+  period: "Late Jurassic"
+}
+
+velociraptor = {
+  name: "velociraptor",
+  diet: "carnivorous",
+  weight: 15,
+  length: 1.8,
+  period: "Late Cretaceious"
+}
+
+
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
