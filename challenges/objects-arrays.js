@@ -91,7 +91,7 @@ console.log(contactInfo);
 const uni = [];
 
 for(let i = 0; i < graduates.length; i++) {
-  if(graduates[i].university ===/Uni(,)\1/) {
+  if(graduates[i].university.match(/Uni/g))  {
   uni.push(graduates[i].university);
   }
 }
