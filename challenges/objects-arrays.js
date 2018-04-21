@@ -98,8 +98,8 @@ for (let i = 0; i < graduates.length; i++) {
     if (word.slice(0, 3) === "Uni") {
       included = true;
       console.log(word);
-    } 
-  })
+    }
+  });
   if (included === true) {
   let included = uni.push(graduates[i].university);
   }

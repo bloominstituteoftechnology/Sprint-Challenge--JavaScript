@@ -11,36 +11,34 @@ const consume = function (x, y, cb) {
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-// function consume(num1, num2, cb) {
-//   return cb(num1 * num2);
-// }
-// consume(12, 2, london);
+
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+
 function add(x, y) {
   return x + y;
 }
-consume(36, 14, add);
+console.log(consume(36, 14, add));
 
 function multiply(x, y) {
   return x * y
 }
-consume(12, 12, multiply);
+console.log(consume(12, 12, multiply));
 
 function greeting(x, y) {
   return `Hello ${ x } ${ y} nice to meet you!`
 }
-console.log(consume("uk", "england", greeting))
+console.log(consume("uk", "england", greeting));
 
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-//consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
