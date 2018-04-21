@@ -92,14 +92,19 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 for (let i = 0; i < graduates.length; i++) {
+  // let result = graduates[i].university.search(/.?[U][n][i].?/); // search is a RegEx method
+  let included = false;
+  graduates[i].university.split(" ").forEach(word => {
+    if (word.slice(0, 3) === "Uni") {
+      included = true;
+      console.log(word);
+    } 
+  })
+  if (included === true) {
   let included = uni.push(graduates[i].university);
-  if (graduates[i].university === "Uni") {
-    // let found = uni.some(function (element) {
-      return uni; 
-    // });
   }
 }
-console.log(uni);
+console.log("uni:", uni);
 
 
 // ==== Array Methods ====
@@ -123,12 +128,17 @@ lowerCase = zooAnimals.map(zooAnimals => zooAnimals.animal_name.toLowerCase());
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-const call = function (cb) {
-  console.log(cb);
-}
+
 let populationTotal = [];
-let reducer = populationTotal.push(zooAnimals);
-populationTotal.reduce(function (value, zooAnimals) {
-  return value + zooAnimals.population;
-})
+populationTotal = zooAnimals.reduce((animal, totalPopulation) => {
+  return animal + totalPopulation.population;
+}, 0);
+// zooAnimals.reduce((acc, populationTotal) {
+//   return acc + totalPopulation.population;
+//   console.log(populationTotal);
+// });
+// zooAnimals.reduce((acc, thing) => {
+//   populationTotal[0] += thing.population;
+// });
+
 console.log(populationTotal);
