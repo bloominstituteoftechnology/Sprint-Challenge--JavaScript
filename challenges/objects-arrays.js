@@ -103,14 +103,6 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 
-//moved on so I wouldn't take too much time on this one(couldn't figure out)
-
-// let uni = [];
-
-// graduates.filter((names) => {
-//   return names.uni ('Uni');
-// });
-
 const uni = [];
 
 for(let i = 0; i<graduates.length; i++) {
