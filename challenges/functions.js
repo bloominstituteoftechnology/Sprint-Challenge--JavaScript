@@ -6,7 +6,14 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-
+function ifArrContainsUni(item, list, cb) {
+  for (let i = 0; i < ifArrContainsUni; i++) {
+    if (list[i] === 'Uni') {
+      return cb(true);
+    }
+  }
+  return cb(fasle);
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -24,9 +31,9 @@
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 
-// Explanation: 
+// Explanation: since its taking an extrenal variable and printing it in the scope of myFucntion, also the internal variable in myFunction gets called inside of the nested function hence closure. 
 
-// Question 2: Given the example below, what scope is the external variable in?
+// Question 2: Given the example below, what scope is the external variable in? Ans: global since its not inside of any function. 
 
 let external = "I'm outside!";
 

@@ -12,7 +12,7 @@ const tyrannosaurus = {
   "diet": "carnivorous",
   "weight": "7000kg",
   "length": "12m",
-  "perioud": "late cretaceious",
+  "period": "late cretaceious",
   "roar" : function() {
     console.log("RAWERSRARARWERSARARARRRR")
   }
