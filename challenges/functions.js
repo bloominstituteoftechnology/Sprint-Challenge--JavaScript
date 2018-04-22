@@ -18,19 +18,22 @@ let consume = function(param1, param2, callback) {
 let add = function(param1, param2) {
   return param1 + param2;
 }
+// let add = (param1, param2) => a + b;
 
 let multiply = function(param1, param2) {
   return param1 * param2;
 }
+// let multiply = (param1, param2) => param1 * param2;
 
 let greeting = function(param1, param2) {
   return `Hello ${param1} ${param2}, nice to meet you!`;
 }
+// let greeting = (param1, param2) => `${param1} ${param2}, nice to meet you!`; 
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
 console.log(consume(2,2,add)); // 4
 console.log(consume(10,16,multiply)); // 160
-console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume("SpoonFullOfSugar","MakesTheMedicineGoDown", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -39,8 +42,8 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 // Explanation: The code below contains a function within a function and
 // the inner nestedFunction() also has access to the let external = "I'm outside!";
 
-// Question 2: Given the example below, what scope is the external variable in? global/external scope since both
-// the outer and inner functions have access to the let external.
+// Question 2: Given the example below, what scope is the external variable in? 
+// Global scope since both the outer and inner functions have access to the let external.
 
 let external = "I'm outside!";
 
@@ -50,7 +53,7 @@ function myFunction() {
 
   function nestedFunction() {
     // console.log(external);
-    // console.log(internal);
+    console.log(internal);
   };
   nestedFunction();
 }

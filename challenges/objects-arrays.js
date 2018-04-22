@@ -6,32 +6,24 @@
   object name, diet, weight, length, period
 */
 
-// tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
-let tyrannosaurus = {
-  "diet": "carnivorous",
-  "weight": 7000,
-  "length": 12,
-  "period": "Late Cretaceious",
-  roar() {
-    return "RAWERSRARARWERSARARARRRR";
+class Dino {
+  constructor(name, diet, weight, length, period) {
+    this.name = name;
+    this.diet = diet;
+    this.weight = weight;
+    this.length = length;
+    this.period = period;
   }
 }
 
+// tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
+const tyrannosaurus = new Dino("Tyrannosaurus", "carnivorous", "7,000 kg", "12 meters", "Late Cretaceius");
+
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-let stegosaurus = {
-  "diet": "herbivorous",
-  "weight": 2000,
-  "length": 9,
-  "period": "Late Jurassic"
-}
+const stegosaurus = new Dino("Stegasaurus", "herbivore", "2,000 kg", "9 meters", "Late Jurassic");
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
-let velociraptor = {
-  "diet": "carnivorous",
-  "weight": 15,
-  "length": 1.8,
-  "period": "Late Cretaceious"
-}
+const velociraptor = new Dino("Velociraptor", "carnivorous", "15 kg", "1.8 meters", "Late Cretaceius");
 
 // Using your dinosaur objects, log answers to these questions:
 // How much did tyrannosaurus weigh?
@@ -47,8 +39,8 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+tyrannosaurus.roar = () => {return "RAWERSRARARWERSARARARRRR!"}
 console.log(tyrannosaurus.roar());
-
 
 // ==== Arrays ====
 // Given an array of college graduates.  Complete the following requests without using any array methods like .forEach(), .map(), .reduce(), .filter()
@@ -118,15 +110,9 @@ zooAnimals = [
 ]
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-let lowerCase = [];
-let lower = zooAnimals.map(animal => ({name: animal.animal_name.toLowerCase()}));
-lowerCase.push(lower);
+let lowerCase = zooAnimals.map(animal => animal.animal_name.toLowerCase());
 console.log(lowerCase);
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-let populationTotal = [];
-let population = zooAnimals.reduce((total, animal) => {
-  return total += animal.population;
-}, 0);
-populationTotal.push(population);
+let populationTotal = zooAnimals.reduce((total, animal) => total += animal.population, 0);
 console.log(populationTotal);
