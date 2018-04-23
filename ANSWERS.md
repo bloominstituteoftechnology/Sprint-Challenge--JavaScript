@@ -1,4 +1,5 @@
 # Your responses to the short answer questions should be laid out here using Mark Down.
+change here
 1. Describe the biggest difference between `.forEach` & `.map`.
 2. What is the difference between a function and a method?
 3. What is closure?
