@@ -20,8 +20,7 @@ function CuboidMaker(attributes){
 */
 
 CuboidMaker.prototype.volume = function(){
-  let cubeVolume = (this.length)*(this.width)*(this.height);
-   return cubeVolume;
+  return (this.length)*(this.width)*(this.height);
 };
 
 /* == Step 3: Surface Area Method ==
@@ -31,8 +30,7 @@ CuboidMaker.prototype.volume = function(){
 */
 
 CuboidMaker.prototype.surfaceArea = function(){
-  let surfaceAr = 2*((this.length)*(this.width)+(this.length)*(this.height)+(this.width)*(this.height));
-  return surfaceAr;
+  return  2*((this.length)*(this.width)+(this.length)*(this.height)+(this.width)*(this.height));
 };
 
 /* == Step 4: Create a new object that uses CuboidMaker ==
