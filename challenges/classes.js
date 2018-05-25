@@ -6,10 +6,10 @@ class CuboidMaker {
     this.height = height;
   }
   volume() {
-  return this.length * this.width * this.height;    
+    return this.length * this.width * this.height;
   }
   surfaceArea() {
-  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);    
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
   }
 }
 const cuboid = new CuboidMaker(4, 5, 5);
@@ -26,7 +26,7 @@ console.log(cuboid.surfaceArea()); // 130
 
 class CubeMaker extends CuboidMaker {
   constructor(sideLen) {
-    super();
+    super(sideLen, sideLen, sideLen);
     this.sideLen = sideLen;
   }
   volume() {
@@ -40,3 +40,4 @@ class CubeMaker extends CuboidMaker {
 const cube = new CubeMaker(5);
 console.log(cube.volume()); //?
 console.log(cube.surfaceArea());
+console.log(cube.length);
