@@ -6,7 +6,7 @@
     A: a method is a function inside of an object
 
 3. What is closure?
-    A: 
+    A: A function that has access to its parents variables.
 
 4. Describe the four rules of the 'this' keyword.
     A: 1. Window Binding 2. Implicit Binding 3. Explicit Binding 4. New Binding
