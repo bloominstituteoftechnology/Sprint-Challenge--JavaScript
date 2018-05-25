@@ -1,8 +1,8 @@
 # Your responses to the short answer questions should be laid out here using Mark Down.
 1. Describe the biggest difference between `.forEach` & `.map`. <br>
-   `.forEach` mutates the original array by executing the provided function on each item in the array. <br> `.map does` not mutate the original array but returns a new array after executing the provided function on each item in the orginal array. <br>
+   `.forEach` mutates the original array by executing the provided function on each item in the array. <br> `.map does` not mutate the original array but returns a new array after executing the provided function on each item in the orginal array. <br> <br>
 2. What is the difference between a function and a method? <br>
-    A function is its own object. A method is a function stored inside of an object. <br>
+    A function is its own object. A method is a function stored inside of an object. <br> <br>
 3. What is closure? <br>
     Closure is a way for a function to make data available to another function outside of its original scope. <br> <br>
 4. Describe the four rules of the 'this' keyword. <br>
