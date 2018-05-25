@@ -6,10 +6,10 @@
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
 
-function CuboidMaker(length, width, height) {
-  this.length = length;
-  this.width = width;
-  this.height = height;
+function CuboidMaker(props) {
+  this.length = props.length;
+  this.width = props.width;
+  this.height = props.height;
 }
 
 
@@ -37,7 +37,11 @@ CuboidMaker.prototype.surfaceArea = function() {
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
 
-let cuboid = new CuboidMaker(4, 5, 5);
+let cuboid = new CuboidMaker({
+  length: 4, 
+  width: 5,
+  height: 5
+});
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
