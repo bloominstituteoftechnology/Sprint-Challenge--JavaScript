@@ -43,5 +43,29 @@ const cuboid = new CuboidMaker({
 // Test your volume and surfaceArea methods by uncommenting the logs below:
  console.log(cuboid.volume()); // 100
  console.log(cuboid.surfaceArea()); // 130
+ 
+ 
+ //stretch??
+ 
+function CubeMaker(options){
+    CuboidMaker.call(this, options);
+    this.volume = function() {
+        return Math.pow(this.length, 3);
+    };
+}
+CubeMaker.prototype.surfaceArea = function() {
+        return 6 * (this.length * this.length);
+    };
+CuboidMaker.prototype = Object.create(CubeMaker.prototype);
+
+
+const cube = new CubeMaker({
+    length: 8,
+    width: 8,
+    height: 8
+});
+
+console.log(cube.volume());
+console.log(cube.surfaceArea());
 
 
