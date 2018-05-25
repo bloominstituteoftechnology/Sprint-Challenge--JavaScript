@@ -7,9 +7,10 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 Const items = ["Tyrannosaurus", "Stegasaurus", "Velociraptor"];
-Function firstItem(arr, cb) {
-  cb(arr[3]);
-}
+function consume(x, y, callback){
+  return callback(x, y);
+};
+
 Const Item(item, function(firstItem) {
   console.log(firstItem);
 });
