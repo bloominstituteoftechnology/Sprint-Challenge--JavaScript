@@ -41,9 +41,13 @@ consume("Mary","Poppins", greeting); //?
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 
+// the myFunction execution context remembers the environment in which it was created, which includes the 'external' variable === closure. Same for nestedFunction, it remembers its outer execution context environment, and is able to access the 'internal' variable.
+
 // Explanation: 
 
 // Question 2: Given the example below, what scope is the external variable in?
+
+// global scope
 
 let external = "I'm outside!";
 
