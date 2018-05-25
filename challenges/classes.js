@@ -35,7 +35,7 @@ class CubeMaker extends CuboidMaker{
   isCube() {
     //If only 1 number in input, takes it as the size of the cube. 
     //If 3 number are input, check if they're equal. If they're not return statement this is not a cube.
-    return (this.length || (this.length === this.width && this.width === this.height)) ? true : false;
+    return ((this.length && !this.width && !this.height) || (this.length === this.width && this.width === this.height)) ? true : false;
   }
 
   cubeVolume() {
@@ -49,10 +49,15 @@ class CubeMaker extends CuboidMaker{
 //3 inputs
 const cube = new CubeMaker(4,4,4);
 
-console.log(cube.cubeVolume()); // 100
-console.log(cube.cubeSurfaceArea()); // 130
+console.log(cube.cubeVolume()); // 64
+console.log(cube.cubeSurfaceArea()); // 48
 
 //1 inputs
 const cube2 = new CubeMaker(2);
-console.log(cube2.cubeVolume()); // 100
-console.log(cube2.cubeSurfaceArea());
+console.log(cube2.cubeVolume()); // 8
+console.log(cube2.cubeSurfaceArea()); // 12
+
+//wrong inputs
+const cube3 = new CubeMaker(2,3,4);
+console.log(cube3.cubeVolume()); // 8
+console.log(cube3.cubeSurfaceArea()); // 12
