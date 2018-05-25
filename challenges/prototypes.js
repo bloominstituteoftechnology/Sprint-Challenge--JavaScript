@@ -6,12 +6,10 @@
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
 
-class CuboidMaker {
-  constructor(atts) {
+function CuboidMaker (atts) {
     this.length = atts.length;
     this.width = atts.width;
     this.height = atts.height;
-  }
 }
 
 /* == Step 2: Volume Method ==
