@@ -30,7 +30,12 @@ console.log(stegosaurus.length); //9m
 console.log(tyrannosaurus.period); //Late Cretaceious
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(tyrannosaurus.roar());
+
+tyrannosaurus.roar = function(){
+  return "RAWERSRARARWERSARARARRRR!";
+};
+
+console.log(tyrannosaurus.roar()); //RAWERSRARARWERSARARARRRR!
 
 
 // ==== Arrays ====
