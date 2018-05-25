@@ -30,6 +30,25 @@ let cuboid = new CuboidMaker({
   height: 5
 })
 
+class CubeMaker{
+  constructor(props){
+    this.length = props.length;
+  }
+  volume(){
+    return this.length*this.length*this.length;
+  }
+  surfaceArea(){
+    return 6*this.length*this.length;
+  }
+}
+
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
+
+let cube = new CubeMaker({
+  length:3
+})
+
+console.log(cube.volume()); // 27
+console.log(cube.surfaceArea());
