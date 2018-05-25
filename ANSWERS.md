@@ -1,4 +1,4 @@
-#  Your responses to the short answer questions should be laid out here using Mark Down.
+# Your responses to the short answer questions should be laid out here using Mark Down.
 1. Describe the biggest difference between `.forEach` & `.map`.
 Answer: .map will return the entire array and .forEach doesn't return an array. 
 
