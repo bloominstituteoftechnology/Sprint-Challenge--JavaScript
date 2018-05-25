@@ -7,10 +7,18 @@
 ## Start by forking and cloning this repository.
 ## Questions - Self Study - You can exercise your Google-Fu for this and any other _Sprint Challenge_ in the future.
 1. Describe the biggest difference between `.forEach` & `.map`.
+.forEach mutates array while .map creates a new one.
 2. What is the difference between a function and a method?
+a method is a function in an object while a function is not.
 3. What is closure?
+when a an outer function is called and an inner function has closure over the outermost function so it can access variables regardless of when and where it was called.
 4. Describe the four rules of the 'this' keyword.
+-- default binding if globally defined
+-- implicit depends on where and how the function/method is called.
+-- explicit binding forcefully applies the reference of 'this' to the function it calls
+-- the 'new' keyword applies 'this' to each instance created with the 'new' keyword.
 5. Why do we need super() in an extended class?
+-- it magically replaces the need to use call and use object.create to inherit methods from the parent's prototype
 
 ## Initializing Project
 * Fork/Clone this repository.
