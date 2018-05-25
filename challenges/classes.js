@@ -17,7 +17,7 @@ class cuboidMaker {
 
 class cubeMaker extends cuboidMaker {
   volumeCube() {
-    return this.length * this.length * this.length;
+    return (this.length**3) + 'ft cubed';
   }
   surfaceAreacube() {
     return 6 * (this.length**2) + 'ft. squared' ;
