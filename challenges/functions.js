@@ -29,10 +29,12 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 
-// Explanation: 
+// Explanation: The function is using a variable that is declared in the global and the nested function is using a variable declared
+//              inside of its parent function which is still in it's closure scope.
 
 // Question 2: Given the example below, what scope is the external variable in?
 
+// Global
 let external = "I'm outside!";
 
 function myFunction() {
