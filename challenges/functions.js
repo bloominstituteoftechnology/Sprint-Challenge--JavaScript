@@ -25,15 +25,14 @@ const multiply = function(a, b) {
 }
 
 const greeting = function(a, b) {
-  return `Hello ${a} ${b}, nice to meet you!`;
+  return `Hello ${a} ${b} nice to meet you!`;
 }
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
 consume(2,2,add); //? 4
 consume(10,16,multiply); //? 160
 consume("Mary","Poppins", greeting); //? Hello Mary Poppins, nice to meet you!
-console.log(consume("Mary","Poppins", greeting)) //?
-
+console.log(consume("Mary","Poppins", greeting));
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 // With the nestedFunction being called, it's using the internal variable outside of its function scope, so yes it is an example of closure. 
