@@ -6,8 +6,8 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-function consume (arg1, arg2, cb) {
-  cb(arg1, arg2)
+function consume(arg1, arg2, callback) {
+ return callback(arg1, arg2)
 }
 
 /* Step 2: Create several functions to callback with consume();
@@ -23,11 +23,11 @@ let multiply = function(num1, num2) {
   return num1 * num2
 }
 
-function greeting (firstname, lastname) {
+let greeting = function(firstname, lastname) {
   `Hello ${firstname} ${lastname}, nice to meet you!`
 }
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-consume(2,2,add);   // 4
+consume(2,2,add);// 4
 consume(10,16,multiply); // 160
 consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
