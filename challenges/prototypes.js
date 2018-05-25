@@ -39,13 +39,8 @@ CuboidMaker.prototype.surfaceArea = function() {
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
 
-function Cuboid(cuboidProps) {
-  CuboidMaker.call(this, cuboidProps);
-};
 
-Cuboid.prototype = Object.create(CuboidMaker.prototype);
-
-const cuboid = new Cuboid({
+const cuboid = new CuboidMaker({
   length: 4,
   width: 5,
   height: 5
