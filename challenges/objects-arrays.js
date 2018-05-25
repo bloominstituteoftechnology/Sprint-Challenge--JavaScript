@@ -5,7 +5,7 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
-class Dinos {
+class Dino {
   constructor(attributes){
     this.name = attributes.name;
     this.diet = attributes.diet;
@@ -13,11 +13,26 @@ class Dinos {
     this.length = attributes.length;
     this.period = attributes.period;
   }
-}
+} //Dinos
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
-
+const tyrannosaurus = new Dino ({
+  "name": "tyrannosaurus",
+  "diet": "carnivorous",
+  "weight": "7000kg",
+  "length": "12m",
+  "period": "Late Cretaceious"
+})
+console.log(tyrannosaurus)
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+const stegosaurus = new Dino ({
+  "name": "stegosaurus",
+  "diet": "herbivorous",
+  "weight": "2000kg",
+  "length": "9m",
+  "period": "Late Jurassic"
+})
+console.log(stegosaurus)
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
