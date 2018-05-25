@@ -6,7 +6,13 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
+function speak(param1, param2) {
+  return `returning ${param1} and ${param2}`;
+}
 
+function consume(arg1, arg2, cb){
+  return cb(arg1, arg2);
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
