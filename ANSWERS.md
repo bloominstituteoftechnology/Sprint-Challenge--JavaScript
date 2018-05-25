@@ -12,7 +12,10 @@
 2.  They are very much the same except that a function is called a method when the function/method is associated to a object.
 3.  Closures are inner functions (a functions inside a function) that have access its outer functions variables.
 4.  * **Window Binding:** is when `this` refers to the global window.
-    * **Implicit Binding:** is when a function is called, the object directly left of the dot is what `this` will refer to. -->`javascript myObj.sayName('Dan');`
+    * **Implicit Binding:** is when a function is called, the object directly left of the dot is what `this` will refer to. -->
+    ```javascript
+    myObj.sayName("Dan");
+    ```
     * **New Binding:** is when `this` refers to the object that is created by a `constructor function`.
     * **Explicit Binding:** is when `this` is explicitly defined using `.call` and `.apply`.
 5.  We need to use `super()` so that it passes the child attributes back up to the constructor of the parent.
