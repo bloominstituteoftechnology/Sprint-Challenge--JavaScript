@@ -43,9 +43,10 @@ Logged correct results on the console
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 
-// Explanation: 
+// Explanation: The example below is a closure because nestedFunction() which is an inner function has access to the outter function's [myFunction()] variables. NestedFunction() has access to internal variable since it is nested inside of myFunction. This is called closure. 
 
 // Question 2: Given the example below, what scope is the external variable in?
+//Answer: global scope.
 
 let external = "I'm outside!";
 
