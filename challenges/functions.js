@@ -2,10 +2,14 @@
 
 /* Step 1: Create a callback function
   * Create a function named consume that can take 3 parameters.
-  * The first two parameteres can accept any argument
+  * The first two parameters can accept any argument
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
+
+function consume(arg1, arg2, cb) {
+    return cb(arg1,arg2);
+}
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -14,11 +18,22 @@
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function add(a, b) {
+  return a + b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function greeting(firstName, lastName) {
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
+}
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-//consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add); // 4 
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
