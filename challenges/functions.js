@@ -39,7 +39,8 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // Explanation: It is a closure because nestedFunction is nested inside of myFunction, so we can reference myFunction inside of nedtedFunction.
 
 // Question 2: Given the example below, what scope is the external variable in?
-// external variable is in the global scope because it is not nested inside of any function.
+// Explanation: The external variable is in the global scope because it is not nested inside of any function. 
+//              The internal variable is in the local function scope because it is inside the function `myFunction`. 
 
 let external = "I'm outside!";
 

@@ -7,9 +7,9 @@
     3a. Used when nesting functions inside of functions. You can reference the parent's variable inside the child function. 
 4. Describe the four rules of the 'this' keyword.
     4a.
-    Window/Global Binding - "this" is bound to the window.
+    Window/Global Binding - "this" is bound to the window. the value of “this” will be the window/console Object.
     Implicit Binding - Function called by a preceeding dot. Whatever is directly left to the dot is being referenced.
-    Explicit Binding - using .call .apply and .bind
-    New Binding - Using constructor classes. "this" is correllated to "new"
+    Explicit Binding - using .call .apply and .bind, "this" is explicitly defined.
+    New Binding - Using constructor functions. "this" is correllated to "new"
 5. Why do we need super() in an extended class?
     5a. To pass any new attributes back up to the constructor of the parent object.
