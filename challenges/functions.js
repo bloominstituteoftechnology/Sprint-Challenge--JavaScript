@@ -40,9 +40,9 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 // Question 1: Explain in your own words why the example below is a closure.
 
 // Explanation: 
-The nestedFunction will always have access to internal even after myFunction has finished executing.
+//The nestedFunction will always have access to internal even after myFunction has finished executing.
 // Question 2: Given the example below, what scope is the external variable in?
-global scope.
+//global scope.
 
 let external = "I'm outside!";
 

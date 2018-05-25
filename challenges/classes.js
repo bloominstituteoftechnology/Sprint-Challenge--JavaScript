@@ -20,7 +20,7 @@ class cubeMaker extends cuboidMaker {
     return this.length * this.length * this.length;
   }
   surfaceAreacube() {
-    return this.length * this.length * this.length * this.length * this.length * this.length ;
+    return 6 * (this.length**2) + 'ft. squared' ;
   }
 }
 
