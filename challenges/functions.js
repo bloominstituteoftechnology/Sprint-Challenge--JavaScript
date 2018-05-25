@@ -34,6 +34,7 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 //We are creating and using a function inside of a function.
 // Question 2: Given the example below, what scope is the external variable in?
 //Global
+
 let external = "I'm outside!";
 
 function myFunction() {
