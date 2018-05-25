@@ -22,7 +22,15 @@ const tyrannosaurus = new Dino ({
   "weight": "7000kg",
   "length": "12m",
   "period": "Late Cretaceious"
+  //kennan.speak = function(){
+    //console.log("Hello, my name is Kennan!");
+       //};
+       //roar () {
+    //return "RAWERSRARARWERSARARARRRR!"
+    
+  
 })
+
 console.log(tyrannosaurus)
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const stegosaurus = new Dino ({
@@ -35,6 +43,14 @@ const stegosaurus = new Dino ({
 console.log(stegosaurus)
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+const velociraptor = new Dino ({
+  "name": "velociraptor",
+  "diet": "carnivorous",
+  "weight": "15kg",
+  "length": "1.8m",
+  "period": "Late Cretaceious"
+})
+console.log(stegosaurus)
 
 // Using your dinosaur objects, log answers to these questions:
 
@@ -48,6 +64,9 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+tyrannosaurus.roar = function() {
+  return "RAWERSRARARWERSARARARRRR!"
+ } 
 console.log(tyrannosaurus.roar());
 
 
