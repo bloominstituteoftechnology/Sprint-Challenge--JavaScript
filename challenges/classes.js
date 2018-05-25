@@ -40,13 +40,34 @@ class CuboidMaker{
     return 2*((this.length)*(this.width)+(this.length)*(this.height)+(this.width)*(this.height));
   }
 }
-  
-const cuboid = new CuboidMaker({length: 4, width: 5,height: 5}); 
+ 
+//Stretch Task
 
+class CubeMaker extends CuboidMaker{
+  constructor(cubeattributes){
+    super(cubeattributes);
+  }
+
+  volumeCube() {
+  return (this.length)*(this.width)*(this.height);
+  }
+
+  surfaceAreaCube() {
+    return 6*(Math.pow(this.length, 2));
+  }
+}
+
+
+
+const cuboid = new CuboidMaker({length: 4, width: 5,height: 5});
+const cube = new CubeMaker({length: 5, width: 5, height: 5}); 
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
  console.log(cuboid.volume()); // 100
  console.log(cuboid.surfaceArea()); // 130
+
+console.log(cube.volumeCube()); // 125
+console.log(cube.surfaceAreaCube()); //150
 
 Tested and logged correct results
 
