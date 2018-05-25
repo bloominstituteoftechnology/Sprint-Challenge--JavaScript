@@ -107,9 +107,9 @@ const uni = [];
 console.log(uni);
 
 
-for(let i =0; i < graduates.length; i++){
+/*for(let i =0; i < graduates.length; i++){
     if graduates[i].universities.length
-}
+}*/
 
 
 // ==== Array Methods ====
