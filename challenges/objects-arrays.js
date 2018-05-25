@@ -86,8 +86,22 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-console.log(contactInfo);
+for(let i=0; i<graduates.length; i++) {
+  contactInfo[i] = `${graduates[i]["first_name"]} ${graduates[i]["email"]}`;  
+}
 
+console.log(contactInfo);
+//Result
+[ 'Cynde ctorry0@macromedia.com',
+  'Saundra swhal1@state.gov',
+  'Lambert lparham2@techcrunch.com',
+  'Modestine mdolder3@symantec.com',
+  'Chick camorts4@google.com.au',
+  'Jakob jharken5@spiegel.de',
+  'Robbi rbrister6@redcross.org',
+  'Colline cbrosh7@alibaba.com',
+  'Michail mrome8@shinystat.com',
+  'Hube hlethbrig9@foxnews.com' ]
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
