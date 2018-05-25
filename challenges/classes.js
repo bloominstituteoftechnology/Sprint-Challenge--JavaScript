@@ -30,3 +30,28 @@ const cuboid = new CuboidMaker({
   Find out the formulas for volume and surface area for cubes and create those methods as well.  Create a new cube object and log out the results of your new cube.
 
 */
+
+class CubeMaker extends CuboidMaker {
+  constructor (cubedimensions) {
+    super (cubedimensions);
+    this.length = cubedimensions.length;
+    this.width = cubedimensions.width;
+    this.height = cubedimensions.height;
+  }
+  volume() {
+    return this.length * this.length * this.length
+  }
+  surfaceArea() {
+    return 6 * (this.length * this.length)
+  }
+}
+
+
+const cube = new CubeMaker({
+ length: 5,
+ width: 5,
+ height: 5
+})
+
+console.log(cube.volume());
+console.log(cube.surfaceArea());
