@@ -28,6 +28,8 @@
 
 // Question 2: Given the example below, what scope is the external variable in?
 
+// Glohal
+
 let external = "I'm outside!";
 
 function myFunction() {
