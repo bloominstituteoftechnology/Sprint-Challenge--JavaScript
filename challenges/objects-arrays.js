@@ -106,18 +106,32 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-///still need to get the email in there...
 const contactInfo = [];
 
 for(let i = 0; i < graduates.length; i++) {
-contactInfo.push(graduates[i].first_name);
+contactInfo.push(`${graduates[i]['first_name']} ${graduates[i]['email']}`);
 }
 
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
+
+//THIS ISN'T WORKING, I KNOW. I'LL COME BACK TO IT
+
 const uni = [];
+
+results = graduates.filter(function (v) {
+  return /uni/.test(v);
+});
+
+// for(let i = 0; i <graduates.length; i++) {
+//   value = graduates[i];
+//   if (value.substring(0) === "uni") {
+//     result = value;
+// break;
+//   }
+// }
 console.log(uni);
 
 
