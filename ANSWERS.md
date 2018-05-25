@@ -8,7 +8,7 @@
 **Methods belong to an object while functions are called by name and can choose to return values.**
 
 3. What is closure? 
-The availability of certain values even after the function has executed to nested functions.
+**The availability of certain values even after the function has executed to nested functions.**
 4. Describe the four rules of the 'this' keyword.
 
 If the function is in the global scope, this will point to the window object.

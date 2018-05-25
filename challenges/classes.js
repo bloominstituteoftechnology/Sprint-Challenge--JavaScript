@@ -16,18 +16,27 @@ class cuboidMaker {
 }
 
 class cubeMaker extends cuboidMaker {
-  
+  volumeCube() {
+    return this.length * this.length * this.length;
+  }
+  surfaceAreacube() {
+    return this.length * this.length * this.length * this.length * this.length * this.length ;
+  }
 }
 
-const cube = new cuboidMaker({
+const cuboid = new cuboidMaker({
   length: 4,
   width: 5,
   height: 5
 });
 
-console.log(cube.volume()); // 100
-console.log(cube.surfaceArea()); // 130
-
+const cube = new cubeMaker({
+  length: 10
+})
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
+console.log(cube.volumeCube());
+console.log(cube.surfaceAreacube());
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
