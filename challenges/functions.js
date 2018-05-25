@@ -37,9 +37,11 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 
-// Explanation: 
+// Explanation 1: A closure is when it has access of data outside of itself. The nestedFunction is a closure because it can access the internal variable outside of its scope for reference plus it has its own enclosed private scope that belongs to itself and myFunction works the same way as nestedFunction.
 
 // Question 2: Given the example below, what scope is the external variable in?
+
+// Explanation 2: The external variable is on the global scope or the outermost scope
 
 let external = "I'm outside!";
 
