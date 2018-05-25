@@ -84,18 +84,18 @@ Name email@example.com
 Log the result of your new array. */
 let contactInfo = [];
 for(let i = 0; i < graduates.length; i++){
-  contactInfo.push('First Name: ' + graduates.first_name + ', ' + 'Email: ' + graduates.email);
+  contactInfo.push(graduates[i].first_name + ' ' + graduates[i].email);
 }
-console.log(contactInfo); //Need to debug
+console.log(contactInfo); //Completed
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 let uni = [];
-for(let i = 0; i < universities.length; i++){
-  if(universities[i].substring(0, 3) === universities[i].substring(0, 3)){
-    uni.push(universities[i]);
+for(let i = 0; i < graduates.length; i++){
+  if(graduates[i].university.indexOf('Uni') > -1){
+    uni.push(graduates[i].university);
   }
 }
-console.log(uni); //Need to finish
+console.log(uni); //Completed
 
 
 // ==== Array Methods ====
