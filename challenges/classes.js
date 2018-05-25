@@ -22,6 +22,7 @@ class CuboidMaker {
     let str = `\nWelcome to 3d geometry time! For a ${
       this.type
     } with dimensions `;
+
     if (this.type == 'cuboid') {
       str += `${this.length} x ${this.width} x ${this.height}`;
     } else if ((this.type = 'cube')) {
