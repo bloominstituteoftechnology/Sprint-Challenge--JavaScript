@@ -20,6 +20,18 @@ function consume(arg1, arg2, cb){
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function add (a, b){
+  return a + b;
+}
+
+function multiply (a, b){
+  return a * b;
+}
+
+function greeting (firstName, lastName){
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
+}
+
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
 //consume(2,2,add); // 4
