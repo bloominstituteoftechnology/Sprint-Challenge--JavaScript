@@ -15,6 +15,10 @@ class cuboidMaker {
   }
 }
 
+class cubeMaker extends cuboidMaker {
+  
+}
+
 const cube = new cuboidMaker({
   length: 4,
   width: 5,
