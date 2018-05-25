@@ -137,7 +137,22 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 let lowerCase = [];
+for(let i=0; i<zooAnimals.length; i++) {
+  lowerCase[i] = zooAnimals[i]["animal_name"].toLowerCase();  
+}
+
 console.log(lowerCase); 
+//Result
+[ 'jackal, asiatic',
+  'screamer, southern',
+  'white spoonbill',
+  'white-cheeked pintail',
+  'black-backed jackal',
+  'brolga crane',
+  'common melba finch',
+  'pampa gray fox',
+  'hawk-eagle, crowned',
+  'australian pelican' ]
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 let populationTotal = [];
