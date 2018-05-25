@@ -28,8 +28,9 @@ function consume(x, y, cb){
 // Question 1: Explain in your own words why the example below is a closure.
 
 // Explanation:
-
+var a1 = "it is a closure because it contains two namespaces. Global and one that is local with in the myFunction, there reside variables and functions in separate domains, in this case external(global) and internal(local) & myFunction(global) nested function(local)."
 // Question 2: Given the example below, what scope is the external variable in?
+var a2 = " Global"
 
 let external = "I'm outside!";
 
