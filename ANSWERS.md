@@ -1,9 +1,6 @@
 # Your responses to the short answer questions should be laid out here using Mark Down.
 1. Describe the biggest difference between `.forEach` & `.map`.<br>
-<blockquote>
-	`.forEach`: The forEach method is great for going through an array and using index to manipulate the data
-
-	`.map`: Like `.forEach`, but .map will return a new array without mutating the original one.<br><br>
+<blockquote> 	`.forEach`: The forEach method is great for going through an array and using index to manipulate the data <br>`.map`: Like `.forEach`, but .map will return a new array without mutating the original one.<br><br>
 </blockquote>
 
 2. What is the difference between a function and a method?<br>
