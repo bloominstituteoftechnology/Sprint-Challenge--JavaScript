@@ -7,9 +7,9 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-const consume = function(param1, param2, callback) {
-  return callback(param1, param2);
-};
+const consume = (x, y, cb) => {
+    return cb(x, y);
+}
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -18,16 +18,16 @@ const consume = function(param1, param2, callback) {
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-const add = function (x, y) {
-  return callback(x + y);
+const add = (x, y) => {
+  return x + y;
 }
 
-const multiply = function(x, y, cb) {
-  return callback(x * y);
+const multiply = (x, y) => {
+  return x * y
 }
 
-const greeting = function(firstName, lastName, cb){
-  return `Hello ${firstName} ${lastName}, nice to meet you!`;
+const greeting = (x, y) => {
+  return `Hello ${x} ${y}, nice to meet you!`
 }
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
