@@ -14,10 +14,10 @@
 // }
 
 class CuboidMaker {
-  constructor(length, width, height) {
-    this.length = length;
-    this.width = width;
-    this.height = height;
+  constructor(params) {
+    this.length = params.length;
+    this.width = params.width;
+    this.height = params.height;
   }
   volume() {
     return this.length * this.width * this.height;
@@ -27,7 +27,11 @@ class CuboidMaker {
   }
 }
 
-let cuboid = new CuboidMaker(4,5,5);
+let cuboid = new CuboidMaker({
+  "length" : 4,
+  "width" : 5,
+  "height" : 5
+});
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
@@ -39,10 +43,10 @@ console.log(cuboid.surfaceArea()); // 130
 */
 
 class CubeMaker extends CuboidMaker {
-  constructor(length, width, height, name) {
-    super(length, width, height);
+  constructor(paramsCuboid) {
+    super(paramsCuboid);
     // Let's give our cube a name
-    this.name = name;
+    this.name = paramsCuboid.name;
   }
   volume() {
     console.log("Child element");
@@ -53,7 +57,12 @@ class CubeMaker extends CuboidMaker {
   }
 }
 
-let bob = new CubeMaker(5,5,5, "Bob");
+let bob = new CubeMaker({
+  "length" : 4,
+  "width" : 5,
+  "height" : 5,
+  "name" : "Bob"
+});
 
 console.log(bob.volume());
 console.log(bob.surfaceArea());
