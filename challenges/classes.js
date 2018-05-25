@@ -28,14 +28,18 @@ class CubeMaker extends CuboidMaker{
         super(cProps);
     }
     cVolume(){
-        return 'still gotta finish other stuff, just wanted to use Extend/super';
+        return this.length * this.width * this.height;
     }
     cSurfaceArea(){
         return 'later';
     }
 }
 
-
+const cube = new CubeMaker({
+    length : 4,
+    width : 4,
+    height : 4
+});
 
 
 
