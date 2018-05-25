@@ -17,7 +17,7 @@ class CuboidMaker {
     this.height = props.height;
   }
   volume() {
-  if ( this.length === 0 || this.width === 0 || this. height === 0 ) {
+    if (this.length === 0 || this.width === 0 || this.height === 0) {
       return 'Sorry, all sides must be non-zero values.'
     } else return (this.length * this.width * this.height);
   }
@@ -38,30 +38,34 @@ const testCuboid = new CuboidMaker({
 
 class CubeMaker extends CuboidMaker {
   constructor(props) {
-  super(props);
+    super(props);
   }
   volume() {
-    if (this.length != this.width || this.length != this.height || this.width != this.height){
-    return 'This is not a cube, please try the CuboidMaker next time';
-    }else if ( this.length === 0 || this.width === 0 || this. height === 0 ) {
+    if (this.length === 0 || this.width === 0 || this.height === 0) {
       return 'Sorry, all sides must be non-zero values.'
-    } else return (this.length **=3);
+    } else if (this.length != this.width || this.length != this.height || this.width != this.height) {
+      return 'This is not a cube, please try the CuboidMaker next time';
+    } else {
+      return (this.length ** 3);
+    }
   }
   surfaceArea() {
-     if (this.length != this.width || this.length != this.height || this.width != this.height) {
-       return 'This is not a cube, please try the CuboidMaker next time';
-     } else if (this.length === 0 || this.width === 0 || this.height === 0) {
-       return 'Sorry, all sides must be non-zero values.'
-     } else return (6 * (this.length **= 2));
+    if (this.length === 0 || this.width === 0 || this.height === 0) {
+      return 'Sorry, all sides must be non-zero values.'
+    } else if (this.length != this.width || this.length != this.height || this.width != this.height) {
+      return 'This is not a cube, please try the CuboidMaker next time';
+    } else {
+      return (6 * (this.length ** 2));
+    }
   }
 
 }
 
 const testCube = new CubeMaker({
-  'length': 5,
-  'width': 5,
-  'height': 5,
-});
+  'length': 2,
+  'width': 2,
+  'height': 2,
+})
 const anotherCube = new CubeMaker({
   'length': 5,
   'width': 5,
@@ -71,4 +75,6 @@ const anotherCube = new CubeMaker({
 console.log(testCuboid.volume());
 console.log(testCuboid.surfaceArea());
 console.log(testCube.volume());
+console.log(testCube.surfaceArea());
 console.log(anotherCube.surfaceArea());
+console.log(anotherCube.volume());
