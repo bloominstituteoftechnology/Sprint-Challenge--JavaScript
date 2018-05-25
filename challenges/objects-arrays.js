@@ -5,6 +5,15 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
+class Dinos {
+  constructor(attributes){
+    this.name = attributes.name;
+    this.diet = attributes.diet;
+    this.weight = attributes.weight;
+    this.length = attributes.length;
+    this.period = attributes.period;
+  }
+}
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
