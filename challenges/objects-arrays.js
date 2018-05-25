@@ -57,7 +57,27 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities)
+
+for(let i=0; i<graduates.length; i++) {
+  universities[i] = graduates[i]["university"];  
+}
+
+universities.sort();
+
+console.log(universities); 
+
+//Result
+//[ 'Coastal Carolina University',
+  'Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft',
+  'International Medical & Technological University',
+  'Marian College',
+  'Missouri Southern State College',
+  'Salem University',
+  'Sultan Salahuddin Abdul Aziz Shah Polytechnic',
+  'The School of the Art Institute of Chicago',
+  'Universidad Católica de Ávila',
+  'Universitat Rovira I Virgili Tarragona' ]
+
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
