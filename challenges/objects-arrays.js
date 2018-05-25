@@ -68,7 +68,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array. */
 const universities = [];
-for (i in graduates) {
+for (let i in graduates) {
   if (graduates[i].university) {
     universities.push(graduates[i].university);
   }
@@ -86,7 +86,7 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-for (i in graduates) {
+for (let i in graduates) {
   let grad = graduates[i];
   let str = grad.first_name + ' ' + grad.email;
   contactInfo.push(str);
@@ -96,7 +96,7 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-for (i in universities) {
+for (let i in universities) {
   if (RegExp('.*Uni.*').test(universities[i])) {
     uni.push(universities[i]);
   }
@@ -108,7 +108,7 @@ console.log(uni);
 
 // Given this zoo data from around the United States, follow the instructions below
 
-zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
+let zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
 {"animal_name":"Screamer, southern","population":1,"scientific_name":"Chauna torquata","state":"Alabama"},
 {"animal_name":"White spoonbill","population":8,"scientific_name":"Platalea leucordia","state":"Georgia"},
 {"animal_name":"White-cheeked pintail","population":1,"scientific_name":"Anas bahamensis","state":"Oregon"},
