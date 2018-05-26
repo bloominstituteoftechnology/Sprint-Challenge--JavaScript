@@ -25,4 +25,5 @@
         * `bind` takes the context and parameters
 
 5.  Why do we need super() in an extended class?
-    * `super()` is syntactic sugar (short hand) for linking the child object to the parent object via `Parent.call(this)` in the child constructor and `Child.prototype = Object.Create(Parent.prototype); Child.prototype.constructor = Child;` immediately after declaration
+    * `super()` is syntactic sugar (short hand) for linking the child object to the parent object via `Parent.call(this)` in the child constructor and `Child.prototype = Object.Create(Parent.prototype); Child.prototype.constructor = Child;` immediately after declaration.
+      * This gives the Child the Parent's properties and methods
