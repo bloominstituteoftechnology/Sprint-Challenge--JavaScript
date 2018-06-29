@@ -23,14 +23,14 @@
 ### Challenge 1: Objects and Arrays
 Test your knowledge of objects and arrays. Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
-### Challenge 2: Functions
-This challenge takes a look at callbacks and closures as well as scope. Use the [functions.js](challenges/functions.js) link to get started.
+<!-- ### Challenge 2: Functions
+This challenge takes a look at callbacks and closures as well as scope. Use the [functions.js](challenges/functions.js) link to get started. -->
 
-### Challenge 3: Prototypes
-Create constructors, bind methods, and create cuboids in this prototypes challenge: [prototypes.js](challenges/prototypes.js).
+<!-- ### Challenge 3: Prototypes
+Create constructors, bind methods, and create cuboids in this prototypes challenge: [prototypes.js](challenges/prototypes.js). -->
 
-### Challenge 4: Classes
-Once you have completed the prototypes challenge, it's time to convert all your hard work into classes: [classes.js](challenges/classes.js).
+<!-- ### Challenge 4: Classes
+Once you have completed the prototypes challenge, it's time to convert all your hard work into classes: [classes.js](challenges/classes.js). -->
 
 ### Remember you can use any resources you want to solve these problems, but avoid copying/pasting solutions you've previously written. Also if you don't finish all of the challenges, that's fine! Just do what you can and submit your challenges in the end! HAVE FUN!
-//Change for Pull Request
+<!-- //Change for Pull Request -->
