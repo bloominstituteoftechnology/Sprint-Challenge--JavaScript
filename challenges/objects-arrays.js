@@ -13,7 +13,7 @@
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
 // Using your dinosaur objects, log answers to these questions:
-
+start
 // How much did tyrannosaurus weigh?
 console.log(tyrannosaurus.weight);
 // What was the diet of a velociraptor?
