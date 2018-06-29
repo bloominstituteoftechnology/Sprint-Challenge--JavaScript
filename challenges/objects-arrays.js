@@ -8,14 +8,39 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
+const tyrannosaurus = {
+  objectname: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: "7000kg",
+  length: "12m",
+  period: "Late Cretaceous",
+  roar: function(){return "RAWERSRARARWERSARARARRRR!";
+}
+}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
+const stegosaurus = {
+  objectname: "stegosaurus",
+  diet: "herbivorous",
+  weight: "2000kg",
+  length: "9m",
+  period: "Late Jurassic"
+}
+
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+
+const velociraptor = {
+  objectname: "velociraptor",
+  diet: "carnivorous",
+  weight: "15kg",
+  length: "1.8",
+  period: "Late Cretaceious"
+}
 
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(tyrannosaurus.weight);
+console.log(tyrannosaurus.weight)
 // What was the diet of a velociraptor?
 console.log(velociraptor.diet);
 // How long was a stegosaurus?
