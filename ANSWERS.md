@@ -16,4 +16,4 @@
 - new- Creating a new constant by using `this` in a constructor function. 
 
 5. Why do we need super() in an extended class?
-- `super()` is needed in order to have access to the methods defined for the parent class from which the child class was extended. 
+- `super()` is needed in order to have access to the attributes and methods defined for the parent class from which the child class was extended. 
