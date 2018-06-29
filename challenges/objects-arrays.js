@@ -73,7 +73,12 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities)
+graduates.sort(function(a, b) {
+  var textA = a.first_name.toUpperCase();
+  var textB = b.first_name.toUpperCase();
+  return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+});
+console.log(graduates) //Saundra should be last.
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
