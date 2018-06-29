@@ -6,7 +6,9 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
+function consume (param1, param2, callback) {
 
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -24,9 +26,12 @@
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 
-// Explanation: 
+// Explanation: The inner functions and variables(let) all have access within the 
+//functional scope and to any variables outside which is it's global scoper. All of this
+// is within it's lexical scope. 
 
 // Question 2: Given the example below, what scope is the external variable in?
+// Global Scope
 
 let external = "I'm outside!";
 
