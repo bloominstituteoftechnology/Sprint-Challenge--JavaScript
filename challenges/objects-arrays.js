@@ -13,9 +13,7 @@
     'weight': '7000kg',
     'length': '12m',
     'period': 'Late Cretaceious',
-    'roar': function(sound){
-      console.log(sound);
-    },
+
   };
   
 
@@ -47,7 +45,13 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(tyrannosaurus.roar("RAWERSRARARWERSARARARRRR!"));
+
+//why is prototype not needed in this function?
+tyrannosaurus.roar = function() {
+  return "RAWERSRARARWERSARARARRRR!";
+};
+
+tyrannosaurus.roar();
 
 
 // ==== Arrays ====
@@ -71,17 +75,14 @@ Once you have the new array created, sort the universities alphabetically and lo
 
 
 //Answer is giving errors
-// let univeristies = [];
-
-
+const univeristies = [];
 for (let i = 0; i < graduates.length; i++){
-  
   console.log(graduates[i].university);
-//   universities.push(graduates[i].university);
+  universities.push(graduates[i].university);
   
 };
 
-// console.log(universities);
+console.log(universities.sort());
 
 
 
@@ -92,12 +93,19 @@ Name email@example.com
 
 Log the result of your new array. */
 
-
 const contactInfo = [];
-let emailName = graduates.forEach(function(i){
+for( let i = 0; i < graduates.length; i++){
   contactInfo.push(i.first_name+ " " + i.email );
-})
+}
 console.log(contactInfo);
+
+
+
+//used forEach
+// let emailName = graduates.forEach(function(i){
+//   contactInfo.push(i.first_name+ " " + i.email );
+// })
+// console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
