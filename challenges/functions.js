@@ -48,8 +48,15 @@ function myFunction() {
   console.log(external);
 
   function nestedFunction() {
+    let nested = "xx";
+    console.log(nested + " this is in nested")
     console.log(internal);
   };
-  nestedFunction();
+  return nestedFunction;
 }
+
 myFunction();
+const rabbit = myFunction();//also return nested function
+rabbit()//console logs all the things
+console.log(internal)
+console.log(nestedFunction())

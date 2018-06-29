@@ -135,19 +135,46 @@ const zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
+          //
+          // let ES5 = function (){
+          //   console.log('this is a ES5 function');
+          // }
+          //
+          // let ES6 = () => {
+          //   console.log('this is a ES6 function');
+          // }
+          //
+          // let ES5 = function (parameter) {
+          //   return (`this is a ES5 function` + parameter);
+          // }
+          //
+          // let ES5 = function (parameter) {return (`this is a ES5 function ${parameter}` + parameter);
+          // }
+          //
+          // let ES6 = (parameter) => {(`this is a ES5 function ${parameter}`);
+          // }
+          //
+          // let ES6 = (object) => {('this is a ES5 function' + object.key);
+          // }
+
 
 let lowerCase = [];
-for (let i = 0; i < zooAnimals.length; i++){
-   lowerCase.push(zooAnimals[i].animal_name.toLowerCase());
-}
 
-// lowerCase = zooAnimals.map(function(){
-//   animal_name.toLowerCase();
-// })
+// for (let i = 0; i < zooAnimals.length; i++){
+//    lowerCase.push(zooAnimals[i].animal_name.toLowerCase());
+// }
+
+lowerCase = zooAnimals.map(function(zooAnimal){
+  return zooAnimal.animal_name.toLowerCase();
+}) //changes and creates new
+
+lowerCase = zooAnimals.map(zooAnimal => zooAnimal.animal_name.toLowerCase())// only need parenthese around parameter if there is more than one.
+
+//forEach doesnt return a new array it doesn't change. it refrences, doesn't take or mutate
 
 console.log(lowerCase);
 
-// The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
+// The zoos need to know their total animal population across the United States. Add up all the population numbers from all the zoos using the .reduce() method.
 let populationTotal = []
  for (let i = 0; i<zooAnimals.length; i++){
     populationTotal.push(zooAnimals[i].population);
@@ -157,4 +184,23 @@ let populationTotal = []
    return total + species;
  });//coming back to later
 
+
+// let populationTotal2 = zooAnimals.reduce(function (x, y) {
+//    return x + y.population;
+//  }
+//  ,0//total starts wih 0 otherwise will default to first element in the array , in this case an object.
+// );
+
+let populationTotal2 = zooAnimals.reduce(function (x, y) {
+   return x + y.population;
+ },0);
+
+ let populationTotal3 = zooAnimals.reduce((x, y) => x + y.population, 0);
+
+
+ //total starts wih 0 otherwise will default to first element in the array , in this case an object.
+
+
 console.log(reducedPopulation);
+console.log(populationTotal2);
+console.log(populationTotal3);
