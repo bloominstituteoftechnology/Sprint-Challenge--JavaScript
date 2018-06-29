@@ -7,12 +7,32 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
+function consume(param1, param2, cb) {
+  let food = (param1 + param2);
+  cb(food);
+}
+
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+
+function add(num1, num2, consume) {
+  let sum = num1 + num2;
+  consume(sum);
+}
+
+function multiply(x, y, consume) {
+  let product = x * y;
+  consume(product);
+}
+
+function greeting(firstName, lastName, consume) {
+  let fullName = firstName + '' + lastName;
+  return `Hello ${fullName}, nice to meet you!`;
+}
 
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
