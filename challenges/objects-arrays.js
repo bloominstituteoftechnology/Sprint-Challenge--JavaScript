@@ -14,6 +14,9 @@
 
 // Using your dinosaur objects, log answers to these questions:
 
+
+
+
 // How much did tyrannosaurus weigh?
 console.log(tyrannosaurus.weight);
 // What was the diet of a velociraptor?
@@ -44,8 +47,11 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
+
 Once you have the new array created, sort the universities alphabetically and log the result. */
+
 const universities = [];
+
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
