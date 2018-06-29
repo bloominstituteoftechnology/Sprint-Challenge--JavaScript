@@ -57,3 +57,9 @@ function myFunction() {
   nestedFunction();
 }
 myFunction();
+
+// == Answer ==
+/**
+ * Question 1:
+ * The myFunction exemplifies a closure because it contains multiple scope contexts.  While the value of 'external' is accessible to all scope contects in the example, any variable declared either within myFunction or nestedFunction will not be accessible to the global scope unless the value is returned from one of the functions.  The same is true with the relationship between myFunction and nestedFunction.  In that, any variable declared within nestedFunction will not be accessible to myFunction, unless that variable is returned from nestedFunction and referenced within myFunction.
+ */
