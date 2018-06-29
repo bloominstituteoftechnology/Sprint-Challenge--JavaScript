@@ -29,7 +29,7 @@ class CubeMaker extends CuboidMaker {
   constructor(len) {
     super(len, len, len);
   }
-  // inherits Cuboid's methods (and those work for cubes!)
+  // inherits CuboidMaker's methods (and those work for cubes!)
 }
 
 const cube = new CubeMaker(5);

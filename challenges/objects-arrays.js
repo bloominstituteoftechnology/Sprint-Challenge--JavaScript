@@ -10,8 +10,8 @@
 const tyrannosaurus = {
   name: 'tyrannosaurus',
   diet: 'carnivorous',
-  weight: `${7000}kg`,
-  length: `${12}m`,
+  weight: `${7000}kg`, // assuming these values are likely to usually come from elsewhere,
+  length: `${12}m`, // which is the reason for the template literals
   period: 'Late Cretaceious',
   roar: () => {
     return 'RAWERSRARARWERSARARARRRR!';
