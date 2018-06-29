@@ -68,8 +68,22 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-console.log(universities)
+
+
+//Answer is giving errors
+// let univeristies = [];
+
+
+for (let i = 0; i < graduates.length; i++){
+  
+  console.log(graduates[i].university);
+//   universities.push(graduates[i].university);
+  
+};
+
+// console.log(universities);
+
+
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -77,14 +91,23 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
+
+
 const contactInfo = [];
+let emailName = graduates.forEach(function(i){
+  contactInfo.push(i.first_name+ " " + i.email );
+})
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
-console.log(uni);
-
+let universityUni = [];
+let stringUni = graduates.forEach(function(i){
+  if(i.university.includes("Uni")){
+          universityUni.push(i.university);  
+     };
+})
+console.log(universityUni);
 
 // ==== Array Methods ====
 
@@ -102,8 +125,12 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-let lowerCase = [];
+
+let lowerCase =  zooAnimals.map(function(animal){
+  return animal.animal_name.toLowerCase(animal);
+})
 console.log(lowerCase); 
+
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 let populationTotal = [];
