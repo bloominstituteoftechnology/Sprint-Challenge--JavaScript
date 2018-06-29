@@ -7,14 +7,8 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-function consume(param1,param2,param3){
-  console.log(arguments.length);
-  console.log(arguments[2]);
-
-  var func = newFunction(param3)
-  func();
-
-return consume(param1,param2);
+function consume(cherry,orange,callback){
+return callback(cherry,orange);
 }
 
 
@@ -26,15 +20,15 @@ return consume(param1,param2);
 */
 
 function add(x , y ) {
-  return '';
+  return x + y;
 }
 
-function multiply(x,y) {
-  return (x * y);
+function multiply(x , y) {
+  return x * y;
 }
 
-function greeting(first-name,'' ,last-name){
-  return "Hello first-name  last-name, nice to meet you!";
+function greeting(a , b){
+  return `Hello ${a} ${b} , nice to meet you!`;
 }
 
 

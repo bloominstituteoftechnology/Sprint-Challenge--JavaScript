@@ -20,7 +20,7 @@ function CuboidMaker(obj) {
 */
 
 CuboidMaker.prototype.volume = function(){
-  return `length * width * height`;
+  return ` Volume ${this.length * this.width * this.height}`;
 };
 
 
@@ -31,7 +31,7 @@ CuboidMaker.prototype.volume = function(){
 */
 
 CuboidMaker.prototype.surfaceArea = function(){
-  return `length * width + length * height + width * height`;
+  return `Surface area :${ 2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
 };
 
 
