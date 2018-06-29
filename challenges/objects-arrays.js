@@ -10,8 +10,8 @@ const tyrannosaurus = {
   name: 'tyrannosaurus',
   diet: 'carnivorous',
   weight: '7000kg',
-  height: '12m',
-  age: 'Late Cretaceious',
+  length: '12m',
+  period: 'Late Cretaceious',
   roar: function() {
     return("RAWERSRARARWERSARARARRRR!");
   }
@@ -21,16 +21,16 @@ const stegosaurus = {
   name: 'stegasaurus',
   diet: 'herbivorous',
   weight: '2000kg',
-  height: '9m',
-  age: 'Late Jurassic'
+  length: '9m',
+  period: 'Late Jurassic'
 }
 
 const velociraptor = {
 name: 'velociraptor',
 diet: 'carnivorous',
 weight: '15kg',
-height: '1.8m',
-age: 'Late Cretaceious'
+length: '1.8m',
+period: 'Late Cretaceious'
 } 
 // Using your dinosaur objects, log answers to these questions:
 
