@@ -6,12 +6,30 @@
   object name, diet, weight, length, period
 */
 
-// tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
-
+// tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
+const tyrannosaurus = { 
+  'diet' : 'carnivorous',
+  'weight' : '7000kg',
+  'length' : '12m',
+  'period' : 'Late Cretaceous',
+  'roar' : function() {
+    return 'RAWERSRARARWERSARARARRRR!'
+  }
+}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
-// velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
-
+const stegosaurus = { 
+  'diet' : 'herbivorous',
+  'weight' : '2000kg',
+  'length' : '9m',
+  'period' : 'Late Jurassic'
+}
+// velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
+const velociraptor = { 
+  'diet' : 'carnivorous',
+  'weight' : '15g',
+  'length' : '1.8m',
+  'period' : 'Late Cretaceous'
+}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
@@ -46,7 +64,14 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities)
+function uniSort() {
+  for (i = 0; i < graduates.length; i++) {
+    universities.push(graduates[i].university);
+  }
+  universities.sort();
+  return universities;
+};
+console.log(uniSort())
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -55,12 +80,26 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-console.log(contactInfo);
+let contactSort = function() { 
+for (i = 0; i < graduates.length; i++) {
+  contactInfo.push(graduates[i].first_name + ' ' + graduates[i].email);
+}
+return contactInfo
+}
+console.log(contactSort());
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-console.log(uni);
+function univSort() {
+for (i = 0; i < graduates.length; i++) {
+  if (graduates.university.includes('uni') === true) {
+    uni.push(graduates[i].university)
+  }
+}
+return uni
+}
+console.log(univSort());
 
 
 // ==== Array Methods ====
