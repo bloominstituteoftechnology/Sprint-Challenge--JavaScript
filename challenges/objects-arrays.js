@@ -12,9 +12,9 @@ const tyrannosaurus ={
   weight: '7000kg',
   length: '12m',
   period: 'Late Cretaceious'
-  'roar': function() {
-    return "RAWERSRARARWERSARARARRRR!" 
-  },
+  // roar: function()  {
+  //   return "RAWERSRARARWERSARARARRRR!" 
+  // },
 }
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const stegosaurus={
@@ -63,13 +63,13 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  */
 let universities = [];
 for (let i=0; i<graduates.legnth; i++) {
-  universities.push(graduates[i].university);
-}
+  universities.push(graduates[i].university)
+};
 
 
 /*Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-onsole.log(universities.sort())
+// const universities = [];
+console.log(universities.sort());
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -115,8 +115,13 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 let lowerCase = [];
+let lower = zooAnimals.map(animal =>{
+  return animal.animal_name.toLowerCase()
+})
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-let populationTotal = [];
+let populationTotal = zooAnimals.reduce((population, animal, index, zooAnimals) => {
+  return population +=animal.population
+}, 0)
 console.log(populationTotal);
