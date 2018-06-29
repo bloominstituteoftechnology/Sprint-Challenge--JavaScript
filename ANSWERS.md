@@ -10,4 +10,6 @@
 # Answers
 1. The biggest difference is that .map returns a new array, .forEach doesn't. This just means that you have to give .map a variable for the array to be returned into. .forEach you can just straight up mess with the original array.
 2. Basically the same thing, it's just where they're located at. A function inside of an object is a method. 
-3. Closure is where the invokation of your function ends. Like if you have return value pushed to a global variable 
+3. Closure is where the invokation of your function ends. Like if you have return value pushed to a global variable, your closure would end with that variable.
+4. Explicit(methods), Implicit(.chaining), New(constructor), Window(global window).
+5. super() functions as the 'gut connector' between the two objects you are linking. It lets you connect the methods between two objects. 
