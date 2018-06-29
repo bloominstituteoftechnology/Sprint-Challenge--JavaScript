@@ -74,11 +74,13 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 graduates.sort(function(a, b) {
-  var textA = a.first_name.toUpperCase();
-  var textB = b.first_name.toUpperCase();
+  var textA = a.university.toUpperCase();
+  var textB = b.university.toUpperCase();
   return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
 });
-console.log(graduates) //Saundra should be last.
+console.log(graduates) //org array sorted
+console.log(universities.push(graduates.map(x => x.university))) // pushing just universites to new array using map
+console.log(universities) // array of just universities, sorted
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -87,11 +89,32 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+let firstNamesArr = []
+let emailsArr = [];
+
+console.log(firstNamesArr.push(graduates.map(x => x.first_name)))
+console.log(emailsArr.push(graduates.map(x => x.email)))
+
+console.log(emailsArr)
+console.log(firstNamesArr)
+contactInfo.push(
+  firstNamesArr, emailsArr)
+
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+console.log(graduates[0].university)
+console.log(graduates[0].university.includes('Uni'))
+for (let i = 0; i < graduates.length; i++){
+  if(graduates[i].university.includes('Uni')) {
+    console.log(graduates[i]);
+    console.log('Yes');
+    uni.push(graduates[i])
+  }
+  
+}
 console.log(uni);
 
 
