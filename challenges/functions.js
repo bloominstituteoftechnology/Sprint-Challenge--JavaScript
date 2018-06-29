@@ -50,6 +50,8 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // I'd say that external exists globally.
 // I'd say the internal exists inside of the function.
 // I'm not usure about the third level though and that is where some confusion comes (or the secodn level if global is considered the third and last level, etc.)
+// Further research tells me three levels of scope are: 1: global 2: function 3: block
+// I'd still say that the external variable has global scope for it's not in a function nor a block of code (between curly braces).
 
 let external = "I'm outside!";
 
