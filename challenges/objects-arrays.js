@@ -13,6 +13,9 @@ const tyrannosaurus = {
   "weight": "7000kg",
   "length": "12m",
   "period": "Late Cretaceious",
+  // roar: function() {
+  //   return `"RAWERSRARARWERSARARARRRR!"`; // Used return instead of console.log because console.log returned undefined in addition to what I wanted
+  // }
 }
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -45,6 +48,9 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+tyrannosaurus.roar = function() {
+  return `"RAWERSRARARWERSARARARRRR!"`; // Used return instead of console.log because console.log returned undefined in addition to what I wanted
+}
 console.log(tyrannosaurus.roar());
 
 
