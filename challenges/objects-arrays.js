@@ -55,7 +55,7 @@ console.log(velociraptor.diet);
 console.log(stegosaurus.length);
 // What time period did tyrannosaurus live in?
 console.log(tyrannosaurus.period);
-// Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+// Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result
 console.log(tyrannosaurus.roar());
 
 
@@ -101,7 +101,7 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 for (let i of graduates) {
-  if (Object.keys(i.university === 'Uni')) {
+  if (i.university.includes("Uni")) {
     uni.push(i.university);
   }
 }
