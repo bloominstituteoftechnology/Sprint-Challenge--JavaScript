@@ -4,32 +4,33 @@
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
 
-class CuboiMaker {
+
+class CuboidMaker {
   constructor(prop){
-    this.length = prop.length;
-    this.width = prop.width;
-    this.length = prop.length;
+  this.length = prop.length;
+  this.width = prop.width;
+  this.height = prop.height;
   }
-
-  volume(L,W,H) {
-    console.log(L * W * H);
-  }
-
-  surfaceArea(L,W,H) {
-    console.log(2 * (L * W + L * H + W * H));
+  volume (){
+  return `Volume ${this.length * this.width * this.height}`;
+  } 
+  surfaceArea() {
+    return `Surface ${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
   }
 }
 
-
-const cube1 = new CuboiMaker({
+const cube1 = new CuboidMaker({
   'length':4,
   'width': 5,
   'height':5,
 });
 
+console.log(cube1.volume());
+console.log(cube1.surfaceArea());
+
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-cube1.volume(4,5,5); // 100
-cube1.surfaceArea(4,5,5); // 130
+console.log(cube1.volume()); // 100
+console.log(cube1.surfaceArea()); // 130
 
 
 
