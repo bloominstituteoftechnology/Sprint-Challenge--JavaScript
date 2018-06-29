@@ -6,10 +6,11 @@ class CuboidMaker {
       this.height = baseAttributes.height;
   }
   volume () {
-    return this.length * this.width * this.height;
+    // return this.length * this.width * this.height;
+    return `Volume = ${this.length * this.width * this.height}`;
   }
   surfaceArea () {
-    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+    return `Surface Area = ${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
   }
 }// End of Parent
 
