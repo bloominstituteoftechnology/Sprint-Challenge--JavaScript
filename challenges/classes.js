@@ -1,9 +1,9 @@
 // Copy and paste your prototype in here and refactor into class syntax.
 class CuboiMaker {
-  constructor(length, width, height) {
-    this.length = length;
-    this.width = width;
-    this.height = height;
+  constructor(dimensions) {
+    this.length = dimensions.length;
+    this.width = dimensions.width;
+    this.height = dimensions.height;
   }
   volume() {
     return this.length * this.width * this.height;
@@ -28,8 +28,8 @@ console.log(cuboid.surfaceArea()); // 130
 */
 
 class CubeMaker extends CuboiMaker {
-  constructor(length, width, height){
-    super(length, width, height);
+  constructor(cubeDimensions){
+    super(cubeDimensions);
     }
 }
 

@@ -110,8 +110,7 @@ for (let i in universities){
   if (university.indexOf('Uni') !== -1){
     uni.push(university);
   }
-}
-
+};
 console.log(uni);
 
 
