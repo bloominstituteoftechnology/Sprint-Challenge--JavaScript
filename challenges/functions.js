@@ -56,4 +56,4 @@ function myFunction() {
   };
   nestedFunction();
 }
-console.log(myFunction());
+myFunction();

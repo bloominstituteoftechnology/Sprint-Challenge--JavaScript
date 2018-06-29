@@ -14,7 +14,7 @@ const tyrannosaurus = {
   "length": "12m",
   "period": "Late Cretaceious",
   // roar: function() {
-  //   return `"RAWERSRARARWERSARARARRRR!"`; // Used return instead of console.log because console.log returned undefined in addition to what I wanted
+  //   return `"RAWERSRARARWERSARARARRRR!"`; 
   // }
 }
 

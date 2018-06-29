@@ -34,10 +34,10 @@ class CubeMaker extends CuboidMaker {
   //     super(cubeMakerProps);
       
   // } // Don't need the constructor since it takes the same dimensions as the cuboid
-  volumeCube (subject) {
+  volumeCube () {
       return Math.pow(this.length, 3) ;
   }
-  surfaceAreaCube (subject) {
+  surfaceAreaCube () {
       return 6 * (Math.pow(this.length, 2));
   }
 }// End of CubeMaker
