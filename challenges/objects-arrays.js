@@ -102,11 +102,12 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = graduates.filter( uni => uni.university === 'uni')
-console.log(uni);
-
-
-
+const uni = []
+for(let i = 0; i<graduates.length;i++) {
+  if(graduates[i].university.includes("Uni")){
+uni.push(graduates[i].university)}
+}
+console.log(uni)
 // ==== Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below
@@ -123,14 +124,9 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-let lowerCase = [];
-lowerCase = zooAnimals
-.map(animal => animal.animal_name.toLowerCase())
+let lowerCase = zooAnimals.map(animal => animal.animal_name.toLowerCase())
 console.log(lowerCase); 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-let populationTotal = [];
-
-
-populationTotal = zooAnimals.reduce((total,population) => total + population.population
+let populationTotal = zooAnimals.reduce((total,population) => total + population.population
 ,0)
 console.log(populationTotal);

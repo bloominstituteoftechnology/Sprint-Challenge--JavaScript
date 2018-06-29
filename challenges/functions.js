@@ -6,8 +6,9 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-function createCB (par1,par2,cb){
-return (cb(par1, par2))}
+function consume (a,b,cb){
+return cb(a,b);
+};
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -16,7 +17,7 @@ return (cb(par1, par2))}
 */
 
 
-let adds = function(x, y) {
+let add = function(x, y) {
   return (x+y);
 }
 let multiply=function(x, y) {
@@ -26,18 +27,15 @@ let multiply=function(x, y) {
 let greeting = function(x, y){
   return (`Hello ${x} ${y}, nice to meet you!`);
 } 
-let consume = function(x,y,cb) {
-  return cb(x,y);
-}
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-consume(2,2,adds); // 4
+consume(2,2,add); // 4
 consume(10,16,multiply); // 160
 consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
-// ==== Closures ==== 
-// Question 1: Explain in your own words why the example below is a closure.
+==== Closures ==== 
+Question 1: Explain in your own words why the example below is a closure.
 
 // Explanation: 
 closure gives access to an outer functions scope from an inner function
@@ -58,4 +56,4 @@ function myFunction() {
 myFunction();
 
 
-external is within the myFunction scope
+external variable is within the global scope
