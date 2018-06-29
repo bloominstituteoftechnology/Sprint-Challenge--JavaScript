@@ -20,7 +20,7 @@
 
 class Cuboid{
   constructor(CuboidMaker){
-    this.length = CubiodMaker.length;
+    this.length = CuboidMaker.length;
     this.width = CuboidMaker.width;
     this.height = CuboidMaker.height;
   }
@@ -32,9 +32,12 @@ class Cuboid{
   }
 }
 
-class LilCuiboid extends Cuiboid{
-  
-}
+const Cubey = new Cuboid({
+  'length': 4,
+  'width' : 5,
+  'height': 5
+})
+
 
 
 /* == Step 4: Create a new object that uses CuboidMaker ==
