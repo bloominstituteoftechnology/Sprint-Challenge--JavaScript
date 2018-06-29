@@ -18,16 +18,18 @@ let consume = function(param1, param2, callback) {
 */
 
 function add(num1, num2) {
-  console.log(num1 + num2);
-};
+  // console.log(num1 + num2);
+  return num1 + num2;
+}
 
 function multiply(x, y) {
-  console.log(x * y);
-};
+  // console.log(x * y);
+  return x * y;
+}
 
 function greeting(firstName, lastName) {
   console.log(`Hello ${firstName} ${lastName}, nice to meet you!`);
-};
+}
 
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
