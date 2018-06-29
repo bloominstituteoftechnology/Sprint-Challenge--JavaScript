@@ -80,14 +80,13 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-// NOT DONE / Might still need help with Array's cause my first idea was to write another for loop that started at 1 and incremented by 2 using the new contact info array but idk 
-//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ READ THIS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 const contactInfo = [];
 for (let i = 0; i < graduates.length; i++) {
-  contactInfo.push(graduates[i].first_name) + contactInfo.push(graduates[i].email);
+  contactInfo.push(`${graduates[i].first_name}  ${graduates[i].email}`)
 }
 console.log(contactInfo);
-// NOT DONE ============================================================>
+// Thanks josh!
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
@@ -116,8 +115,8 @@ zooAnimals = [{ "animal_name": "Jackal, asiatic", "population": 5, "scientific_n
 { "animal_name": "Australian pelican", "population": 5, "scientific_name": "Pelecanus conspicillatus", "state": "West Virginia" }];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-let lowerCase = [];
-lowerCase = zooAnimals.map((animal) => {
+
+let lowerCase = zooAnimals.map((animal) => {
   return animal.animal_name.toLowerCase();
 });
 
