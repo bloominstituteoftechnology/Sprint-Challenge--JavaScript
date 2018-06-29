@@ -34,6 +34,10 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 
+//Answer 1: It is a closure because when invoked in line 56, myFunction is returning nestedFunction,
+//which soley console.logs the internal variable which it has access to due to being invoked in line 54.
+//external var is console logged procedurally in myFunction before nestedfunction is invoked.
+
 // Explanation: 
 
 // Question 2: Given the example below, what scope is the external variable in?
