@@ -30,13 +30,23 @@ console.log(cuboid.surfaceArea()); // 130
 */
 
 class CubeMaker extends CuboidMaker {
-  constructor(cubeMakerProps) {
-      super(cubeMakerProps);
-  }
+  // constructor(cubeMakerProps) {
+  //     super(cubeMakerProps);
+      
+  // } // Don't need the constructor since it takes the same dimensions as the cuboid
   volumeCube (subject) {
-      return ``;
+      return Math.pow(this.length, 3) ;
   }
   surfaceAreaCube (subject) {
-      return ``;
+      return 6 * (Math.pow(this.length, 2));
   }
 }// End of CubeMaker
+
+const cube = new CubeMaker({
+  length: 5,
+  width: 5,
+  height: 5,
+});
+
+console.log(cube.volumeCube()); // 125
+console.log(cube.surfaceAreaCube()); // 150
