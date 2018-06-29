@@ -36,7 +36,7 @@ CuboidMaker.prototype.surfaceArea = function(l, w, h) {
   l = this.length;
   w = this.width;
   h = this.height;
-  return l*w+l*h+w*h;
+  return 2*(l*w+l*h+w*h);
 }
 
 
@@ -49,4 +49,4 @@ const myCuboid = new CuboidMaker(4, 5, 5);
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(myCuboid.volume()); // 100
-console.log(myCuboid.surfaceArea()); // 130 <----this should be 65>
+console.log(myCuboid.surfaceArea()); // 130
