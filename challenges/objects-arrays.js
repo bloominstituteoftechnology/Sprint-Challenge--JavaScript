@@ -80,7 +80,8 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-// NOT DONE / Might still need help with Array's ============================================================>
+// NOT DONE / Might still need help with Array's cause my first idea was to write another for loop that started at 1 and incremented by 2 using the new contact info array but idk 
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ READ THIS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 const contactInfo = [];
 for (let i = 0; i < graduates.length; i++) {
   contactInfo.push(graduates[i].first_name) + contactInfo.push(graduates[i].email);
