@@ -12,13 +12,15 @@ class CuboidMaker {
     this.width = cuboidMaker.width;
     this.height = cuboidMaker.height;
   }
-  volume () {
-    return (this.length * this.width * this.height)
-  }
+}
 
-  surfaceArea (){
+CuboidMaker.prototype.volume = function (){
+    return (this.length * this.width * this.height)
+
+}
+CuboidMaker.prototype.surfaceArea = function (){
     return 2 * (this.length * this.width + this.length * this.height + this.height * this.width)
-  }
+
 }
 
 
