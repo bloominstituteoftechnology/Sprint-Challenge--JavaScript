@@ -82,7 +82,11 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
+let universities = [];
+for(x of graduates ) {
+  universities.push(x.university);
+}
+universities = universities.sort();
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -92,11 +96,34 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+let array1 = []; 
+for (x of graduates){
+  array1 = []; 
+  contactInfo.push(array1= [x.first_name, x.email].join(" "));
+}
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+const uni = []; 
+let array2 = [];
+for(x of graduates){
+  array2 =x.university.split(' ');
+  // console.log(array2); 
+  if (array2.includes('university')|| array2.includes("University")){
+    uni.push(x.university); 
+  } else {
+    for (o of array2){
+      for(let i = 1; i<o.length; i++)
+          if((o[i-1] === 'u' || o[i-1] === 'U') && o[i] === 'n' && o[i+1] === 'i'){
+            uni.push(x.university);
+            break; 
+          }
+    }
+  }
+}
+
 console.log(uni);
 
 
@@ -117,8 +144,21 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 let lowerCase = [];
+
+for (x of zooAnimals){
+  lowerCase.push(x["animal_name"].toLowerCase()); 
+}
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 let populationTotal = [];
+
+let populationTotal = [];
+for (x of zooAnimals){
+  populationTotal.push(x.population)
+}
+
+populationTotal = populationTotal.reduce((acc, ccv)=> acc + ccv); 
+
+console.log(populationTotal);
 console.log(populationTotal);
