@@ -7,10 +7,10 @@ class CuboidMaker {
   }
   volume () {
     // return this.length * this.width * this.height;
-    return `Volume = ${this.length * this.width * this.height}`;
+    return `Volume of the Cuboid = ${this.length * this.width * this.height}`;
   }
   surfaceArea () {
-    return `Surface Area = ${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
+    return `Surface Area of the Cuboid = ${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
   }
 }// End of Parent
 
@@ -36,10 +36,10 @@ class CubeMaker extends CuboidMaker {
       
   // } // Don't need the constructor since it takes the same dimensions as the cuboid
   volumeCube () {
-      return Math.pow(this.length, 3) ;
+      return `Volume of the Cube = ${Math.pow(this.length, 3)}`;
   }
   surfaceAreaCube () {
-      return 6 * (Math.pow(this.length, 2));
+      return `Surface Area of the Cube = ${6 * (Math.pow(this.length, 2))}`;
   }
 }// End of CubeMaker
 
