@@ -47,11 +47,25 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 
-for (i=0; i<graduates.length; i++){
-universities = graduates[i].university
-console.log(universities)
+let universities = [];
+
+graduates.sort(function(a, b){
+    var universityA=a.university.toLowerCase(), universityB=b.university.toLowerCase()
+    if (universityA < universityB) //sort string ascending
+        return -1 
+    if (universityA > universityB)
+        return 1
+    return 0 //default return value (no sorting)
+})
+
+
+for(i=0; i<graduates.length; i++){
+universities[i] = graduates[i].university
 }
-console.log(universities)
+
+for(i=0; i<universities.length; i++){
+  console.log(universities[i])
+}
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -60,6 +74,13 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+for(i=0; i<graduates.length; i++){
+contactInfo[i] = graduates[i].first_name + " " + graduates[i].email
+}
+
+for(i=0; i<contactInfo.length; i++){
+  console.log(contactInfo[i])
+}
 console.log(contactInfo);
 
 
@@ -85,8 +106,17 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 let lowerCase = [];
+let lowerCase = [];
+for(i=0; i<zooAnimals.length; i++){
+lowerCase[i] = (zooAnimals[i].scientific_name).toLowerCase()
+}
+
+console.log(lowerCase); 
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 let populationTotal = [];
+initialValue = 0
+populationTotal = zooAnimals.reduce(function(accumulator, currentValue){return accumulator + currentValue.population;
+}, initialValue )
 console.log(populationTotal);
