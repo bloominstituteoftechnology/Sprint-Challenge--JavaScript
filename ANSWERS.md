@@ -4,3 +4,5 @@
 3. What is closure?
 4. Describe the four rules of the 'this' keyword.
 5. Why do we need super() in an extended class?
+   super() is the ES6 version of .call(). It basically goes a level above the
+   inheritance chain and links the attributes between the child and parent class.
