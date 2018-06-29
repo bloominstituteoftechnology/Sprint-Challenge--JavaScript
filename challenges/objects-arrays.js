@@ -127,20 +127,28 @@ zooAnimals = [{
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-let lowerCase = [];
 
-lowerCase = zooAnimals.map(function (){
-  for (let each of zooAnimals){
-    return each.animal_name.toLowerCase(); //debugging
-  }
-})
+let names = [];
+for (let each of zooAnimals){
+  names.push(each.animal_name);
+}
 
-console.log(lowerCase); 
+let lowerCase = names.map(function(x) {
+  return x.toLowerCase()});
+
+console.log(lowerCase)
+
+
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-let populationTotal = [];
+// let populationTotal = [];
 
-const sum = zooAnimals.population.reduce((acc, c) => acc + c);
+let numArray = [];
 
+for (let each of zooAnimals){
+  numArray.push(each.population);
+  let populationTotal = numArray.reduce(function( acc, c) {
+    return acc + c });
+}
 
-console.log(populationTotal);
+console.log(populationTotal)
