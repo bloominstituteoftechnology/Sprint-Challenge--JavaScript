@@ -47,16 +47,18 @@ const cuboid = new CuboidMaker({
 });
 
 const cuboid1 = new CubeMaker({
-  length: 4,
+  length: 8,
   width: 5,
   height: 6,
 })
 
 
-console.log(cuboid1.volume());
+
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid1.volume());
+console.log(cuboid1.surfaceArea());
 
 /* Stretch Task:
 
