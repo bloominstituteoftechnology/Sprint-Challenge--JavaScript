@@ -14,7 +14,7 @@ class Cuboid{
   }
 }
 
-const Cubey = new Cuboid({
+const Cube = new Cuboid({
   'length': 4,
   'width' : 5,
   'height': 5
