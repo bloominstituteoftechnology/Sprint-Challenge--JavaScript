@@ -83,7 +83,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 let universities = [];
-for(x of graduates ) {
+for(let x of graduates ) {
   universities.push(x.university);
 }
 universities = universities.sort();
@@ -97,7 +97,7 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 let array1 = []; 
-for (x of graduates){
+for (let x of graduates){
   array1 = []; 
   contactInfo.push(array1= [x.first_name, x.email].join(" "));
 }
@@ -106,15 +106,14 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-const uni = []; 
 let array2 = [];
-for(x of graduates){
+for(let x of graduates){
   array2 =x.university.split(' ');
   // console.log(array2); 
   if (array2.includes('university')|| array2.includes("University")){
     uni.push(x.university); 
   } else {
-    for (o of array2){
+    for (let o of array2){
       for(let i = 1; i<o.length; i++)
           if((o[i-1] === 'u' || o[i-1] === 'U') && o[i] === 'n' && o[i+1] === 'i'){
             uni.push(x.university);
@@ -153,12 +152,11 @@ console.log(lowerCase);
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 let populationTotal = [];
 
-let populationTotal = [];
+
 for (x of zooAnimals){
   populationTotal.push(x.population)
 }
 
 populationTotal = populationTotal.reduce((acc, ccv)=> acc + ccv); 
 
-console.log(populationTotal);
 console.log(populationTotal);
