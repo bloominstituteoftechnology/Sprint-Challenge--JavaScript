@@ -37,9 +37,9 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // Question 1: Explain in your own words why the example below is a closure.
 
 // Explanation: 
-The nested curly braces close off and create blocks of limited scope
+//The nested curly braces close off and create blocks of limited scope
 // Question 2: Given the example below, what scope is the external variable in?
-global
+//global
 let external = "I'm outside!";
 
 function myFunction() {
