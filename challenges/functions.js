@@ -36,7 +36,7 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 // Question 1: Explain in your own words why the example below is a closure.
 
 // Explanation: 
-//A: Its and example of closure because innermost function can reach out and access everything above it, but the external functions cannot access anything below them.
+//A: Its an example of closure because innermost function can reach out and access everything above it, but the external functions cannot access anything below them.
 // Question 2: Given the example below, what scope is the external variable in?
 //A: Global
 let external = "I'm outside!";
