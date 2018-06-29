@@ -157,6 +157,7 @@ console.log(lowerCase);
 // }
 // console.log(popTotal)
 
-let populationTotal = zooAnimals.reduce((total, population) => {
-  return total += zooAnimals.population;
+let populationTotal = zooAnimals.reduce((total, animal) => {
+  return total + animal.population;
 }, 0);
+console.log(populationTotal);
