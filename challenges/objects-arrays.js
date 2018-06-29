@@ -1,8 +1,8 @@
 // ==== Objects ====
 
-/* 
-  Given the following information about dinosaurs, create 3 objects: 
-  Use this pattern to create your objects: 
+/*
+  Given the following information about dinosaurs, create 3 objects:
+  Use this pattern to create your objects:
   object name, diet, weight, length, period
 */
 
@@ -13,6 +13,33 @@
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
 // Using your dinosaur objects, log answers to these questions:
+
+const tyrannosaurus={
+  "name":"tyrannosaurus",
+  'diet':"carnivorous",
+  "weight":7000,
+  "length":12,
+  "period": "Late Cretaceious",
+}
+
+const stegosaurus={
+  "name":"stegosaurus",
+  'diet':"herbivorous",
+  "weight":2000,
+  "length":9,
+  "period": "Late Jurassic",
+}
+
+const velociraptor={
+  "name":"tyrannosaurus",
+  'diet':"carnivorous",
+  "weight":15,
+  "length":1.8,
+  "period": "Late Cretaceious",
+}
+
+
+
 
 // How much did tyrannosaurus weigh?
 console.log(tyrannosaurus.weight);
@@ -42,15 +69,15 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":9,"first_name":"Michail","university":"Universidad Católica de Ávila","email":"mrome8@shinystat.com"},
 {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
 
-/* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
+/* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 console.log(universities)
 
-/* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
+/* Request 2: Create a new array called contactInfo that contains both first name and email of each student.
 
-The resulting contact information should have a space between the first name and the email information like this: 
+The resulting contact information should have a space between the first name and the email information like this:
 Name email@example.com
 
 Log the result of your new array. */
@@ -80,7 +107,7 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 let lowerCase = [];
-console.log(lowerCase); 
+console.log(lowerCase);
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 let populationTotal = [];
