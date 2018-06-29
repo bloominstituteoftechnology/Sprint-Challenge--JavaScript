@@ -35,9 +35,12 @@ function greeting(x, y){
 // ==== Closures ====
 // Question 1: Explain in your own words why the example below is a closure.
 
-// Explanation:
+// Explanation:The example below is a closure because it is access an outside object, in this
+// case function myFunction is console.logging external.
 
 // Question 2: Given the example below, what scope is the external variable in?
+// ================ external is a global scope
+
 
 let external = "I'm outside!";
 
