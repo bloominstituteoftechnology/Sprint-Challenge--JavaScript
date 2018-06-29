@@ -13,7 +13,11 @@ class CuboiMaker {
   }
 }
 
-const cuboid = new CuboiMaker(4, 5, 5);
+const cuboid = new CuboiMaker({
+  length: 4,
+  width: 5,
+  height: 5
+});
 
 
 
@@ -30,10 +34,20 @@ console.log(cuboid.surfaceArea()); // 130
 class CubeMaker extends CuboiMaker {
   constructor(cubeDimensions){
     super(cubeDimensions);
+    this.side = cubeDimensions.side;
     }
-}
+    volume() {
+      return this.side * this.side * this.side;
+    }
+    surfaceArea() {
+      return 6 * (this.side*this.side);
+    }
 
-const cube = new CubeMaker (2, 2, 2);
+};
 
-console.log(cube.volume()); 
-console.log(cube.surfaceArea());
+const Cube = new CubeMaker ({
+  side: 3
+});
+
+console.log(Cube.volume());
+console.log(Cube.surfaceArea());
