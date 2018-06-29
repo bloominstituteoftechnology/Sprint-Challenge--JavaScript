@@ -17,7 +17,7 @@ function CuboidMaker(props) {
   
   Formula for cuboid volume: length * width * height
 */
-CuboidMaker.prototype.volume = function(cuboidObj) {
+CuboidMaker.prototype.volume = function volume(cuboidObj) {
   let volume = cuboidObj.length * cuboidObj.width * cuboidObj.height;
   return volume;
 }
@@ -28,7 +28,7 @@ CuboidMaker.prototype.volume = function(cuboidObj) {
 
   Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 */
-CuboidMaker.prototype.surfaceArea = function(cuboidObj) {
+CuboidMaker.prototype.surfaceArea = function surfaceArea (cuboidObj) {
   let surfaceArea = 2 * (cuboidObj.length * cuboidObj.width + cuboidObj.length * cuboidObj.height + cuboidObj.width * cuboidObj.height);
   return surfaceArea;
 }
