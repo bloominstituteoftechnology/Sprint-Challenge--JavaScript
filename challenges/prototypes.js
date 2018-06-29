@@ -18,21 +18,20 @@
   Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 */
 
-class Cuboid{
-  constructor(CuboidMaker){
+function Cuboid(CuboidMaker){
     this.length = CuboidMaker.length;
     this.width = CuboidMaker.width;
     this.height = CuboidMaker.height;
   }
-  volume(){
+  Cuboid.prototype.volume = function(){
     return (this.length * this.width * this.height);
   }
-  surfaceArea(){
+  Cuboid.prototype.surfaceArea = function(){
     return ((this.length * this.width) + (this.length * this.height) + (this.width * this.height))
   }
-}
 
-const Cubey = new Cuboid({
+
+const Cube = new Cuboid({
   'length': 4,
   'width' : 5,
   'height': 5
