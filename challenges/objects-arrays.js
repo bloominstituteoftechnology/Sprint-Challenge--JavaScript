@@ -10,7 +10,7 @@
 let tyrannosaurus = {
   name: 'tyrannosaurus',
   diet: 'carnivorous',
-  weight:`{7000}kg`,
+  weight:`${7000}kg`,
   length: `${12}m`,
   period: 'Late Cretaceious',
   roar: function() {
@@ -22,8 +22,8 @@ let tyrannosaurus = {
 let stegosaurus = {
   name: 'stegosaurus',
   diet: 'herbivorous',
-  weight: `{2000}kg`,
-  length: `{9}m`,
+  weight: `${2000}kg`,
+  length: `${9}m`,
   period: 'Late Jurassic'
 }
 
@@ -31,8 +31,8 @@ let stegosaurus = {
 let velociraptor = {
   name: 'velociraptor',
   diet: 'carnivorous',
-  weight: `{15}kg`,
-  length: `{1.8}m`,
+  weight: `${15}kg`,
+  length: `${1.8}m`,
   period: 'Late Cretaceious'
 }
 
