@@ -89,16 +89,7 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-let firstNamesArr = []
-let emailsArr = [];
-
-console.log(firstNamesArr.push(graduates.map(x => x.first_name)))
-console.log(emailsArr.push(graduates.map(x => x.email)))
-
-console.log(emailsArr)
-console.log(firstNamesArr)
-contactInfo.push(
-  firstNamesArr, emailsArr)
+console.log(contactInfo.push(graduates.map(x => x.first_name + " " + x.email)));
 
 console.log(contactInfo);
 
