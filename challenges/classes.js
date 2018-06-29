@@ -27,3 +27,13 @@ console.log(cuboid.surfaceArea()); // 130
 
 */
 
+class CubeMaker extends CuboiMaker {
+  constructor(length, width, height){
+    super(length, width, height);
+    }
+}
+
+const cube = new CubeMaker (2, 2, 2);
+
+console.log(cube.volume()); 
+console.log(cube.surfaceArea());
