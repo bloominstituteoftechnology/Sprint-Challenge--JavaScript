@@ -7,7 +7,7 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 const consume = (param1, param2, cb) => {
-  cb(param1, param2);
+  return cb(param1, param2);
 }
 
 
@@ -18,17 +18,14 @@ const consume = (param1, param2, cb) => {
 */
 
 const add = (x, y) => {
-  console.log(x + y);
   return x + y;
 }
 
 const multiply = (x, y) => {
-  console.log(x * y);
   return x * y;
 }
 
 const greeting = (firstName, lastName) => {
-  console.log(`Hello, ${firstName} ${lastName}, nice to meet you!`);
   return `Hello, ${firstName} ${lastName}, nice to meet you!`;
 }
 
