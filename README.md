@@ -17,7 +17,7 @@
 * Complete all the exercises as described inside each challenge file.
 * Use `console.log()` statements to check to see if your code does what it is supposed to do.
 * To test your `console` statements you can run `node /assignments/<fileName>` and see what prints in your terminal. You can also use an online tool like `JSBin`, `REPL.it`, `JSFiddle`, or even your `Chrome developer console`.
-* Once you finish the challenges in each file, commit your code, and push it to your fork. 
+* Once you finish the challenges in each file, commit your code, and push it to your fork.
 
 ### Challenge 1: Objects and Arrays
 Test your knowledge of objects and arrays. Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
