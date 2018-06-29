@@ -5,13 +5,13 @@
 * This is to be worked on alone but you can use outside resources. You can *reference* any old code you may have, however, please refrain from copying and pasting any of your answers. Try and understand the question and put your responses in your own words. Be as thorough as possible when explaining something.
 * **Just a friendly Reminder** Don't fret or get anxious about this, this is a no-pressure assessment that is only going to help guide you here in the near future. This is NOT a pass/fail situation.
 ## Start by forking and cloning this repository. -->
-
+<!--
 ## Questions - Self Study - You can exercise your Google-Fu for this and any other _Sprint Challenge_ in the future.
 1. Describe the biggest difference between `.forEach` & `.map`.
 2. What is the difference between a function and a method?
 3. What is closure?
 4. Describe the four rules of the 'this' keyword.
-5. Why do we need super() in an extended class?
+5. Why do we need super() in an extended class? -->
 
 ## Initializing Project
 <!-- * Fork/Clone this repository. -->
