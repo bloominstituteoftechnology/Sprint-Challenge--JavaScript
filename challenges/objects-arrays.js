@@ -74,16 +74,12 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
   for (let i = 0; i < graduates.length; i++) {
-    // if (u1.university > u2.university) {
-    //   return 1;
-    // } else {
-    //   return -1;
-    // }
      universities.push(graduates[i].university);
   };
-  // Still need this sorted alphabetically.
 
 console.log(universities);
+// sort with .sort() would work:
+console.log(universities.sort());
 
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -155,9 +151,9 @@ const animalPopulationTotalTwo = zooAnimals.reduce((total, population) => total 
 console.log(animalPopulationTotalTwo);
 
 // For some reason I can't get it to work correctly written like this. I'm not sure how to push it into the array.
-let populationTotalThree = [];
-zooAnimals.reduce(function(x, y) {
-  populationTotalThree.push(x + y.population);
-}, 0);
-console.log(populationTotalThree);
+// let populationTotalThree = [];
+// zooAnimals.reduce(function(x, y) {
+//   populationTotalThree.push(x + y.population);
+// }, 0);
+// console.log(populationTotalThree);
 
