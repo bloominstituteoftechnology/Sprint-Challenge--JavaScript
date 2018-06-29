@@ -70,8 +70,9 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-console.log(universities)
+// const universities = [];
+// let schools = .values(university);
+// console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -104,9 +105,37 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
+
+let animalName = [];
+zooAnimals.forEach(function (arrItem) {
+animalName.push(arrItem.animal_name);
+});
+console.log(animalName);
+
 let lowerCase = [];
-console.log(lowerCase); 
+animalName.map(function(arrItem){
+lowerCase.push(arrItem.toLowerCase())
+})
+console.log(lowerCase)
+
+
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-let populationTotal = [];
+
+let ticketPriceTotal = [];
+let eachPopulation = []
+zooAnimals.forEach(function (arrItem) {
+    eachPopulation.push(arrItem.population);
+    });
+let populationTotal = eachPopulation.reduce((acc, val) => {
+    return acc + val;
+})
+
 console.log(populationTotal);
+
+
+
+
+
+
+
