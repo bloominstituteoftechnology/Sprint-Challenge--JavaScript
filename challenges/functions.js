@@ -26,7 +26,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 // Explanation: It's not this is just lexical scope lookup rules being used. myFunction is executed from the global execution context then myFunction declares
-//internal and console.log(external) by looking up the scope chain to global scope then declares nestedFunction and executes that afterwards console.logging internal which is found in the scope of myFunction
+//internal variable and console.log(external) by looking up the scope chain to global scope then declares nestedFunction and executes that afterwards console.logging internal which is found in the scope of myFunction
 // if this function was assigned to a variable, that variable would not be able to execute the nestedFunction meaning nestedFunction wouldn't be able to remember and access its lexical scope
 
 
