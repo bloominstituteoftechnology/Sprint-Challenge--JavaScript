@@ -8,10 +8,31 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
+let tyrannosaurus = {
+  name: 'Tyrannosaurus',
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceious',
+}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
+let stegosaurus = {
+  name: 'Stegosaurus',
+  diet: 'herbivorous',
+  weight: '2000kg',
+  length: '9m',
+  period: 'Late Jurassic',
+}
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
+let velociraptor = {
+  name: 'Velociraptor',
+  diet: 'carnivorous',
+  weight: '15kg',
+  length: '1.8m',
+  period: 'Late Cretaceious',
+}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
@@ -24,7 +45,8 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(tyrannosaurus.roar());
+// console.log(tyrannosaurus.roar());
+//Still need to figure this out.
 
 
 // ==== Arrays ====
@@ -44,9 +66,21 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
+
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities)
+  for (let i = 0; i < graduates.length; i++) {
+    // if (u1.university > u2.university) {
+    //   return 1;
+    // } else {
+    //   return -1;
+    // }
+     universities.push(graduates[i].university);
+  };
+  // Still need this sorted alphabetically.
+
+console.log(universities);
+
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -55,6 +89,10 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+  for (let i = 0; i < graduates.length; i++) {
+    contactInfo.push(graduates[i].first_name + " " + graduates[i].email);
+  }
+
 console.log(contactInfo);
 
 
