@@ -45,8 +45,12 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-// console.log(tyrannosaurus.roar());
-//Still need to figure this out.
+tyrannosaurus.roar = function () {
+  return ("RAWERSRARARWERSARARARRRR!");
+}
+
+console.log(tyrannosaurus.roar());
+
 
 
 // ==== Arrays ====
@@ -98,6 +102,11 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+  for (let i = 0; i < graduates.length; i++) {
+    if (graduates[i].university.includes("Uni")) {
+      uni.push(graduates[i].university);
+    }
+  }
 console.log(uni);
 
 
@@ -118,8 +127,37 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 let lowerCase = [];
+zooAnimals.map(function(x) {
+  lowerCase.push(x.animal_name.toLowerCase());
+});
+
 console.log(lowerCase); 
 
+const animalName = zooAnimals.map(function(x) {
+  return x.animal_name.toLowerCase();
+})
+
+console.log(animalName);
+
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-let populationTotal = [];
+let populationTotal = zooAnimals.reduce((x, y) => x + y.population, 0);
+
 console.log(populationTotal);
+
+const animalPopulationTotal = zooAnimals.reduce(function(x, y) {
+  return x + y.population;
+}, 0);
+
+console.log(animalPopulationTotal);
+
+const animalPopulationTotalTwo = zooAnimals.reduce((total, population) => total + population.population, 0);
+
+console.log(animalPopulationTotalTwo);
+
+// For some reason I can't get it to work correctly written like this. I'm not sure how to push it into the array.
+let populationTotalThree = [];
+zooAnimals.reduce(function(x, y) {
+  populationTotalThree.push(x + y.population);
+}, 0);
+console.log(populationTotalThree);
+
