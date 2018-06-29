@@ -42,9 +42,14 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 
-// Explanation: 
+// Explanation: Closure is when functions have access to variables outside their scope/chain/code block.
 
 // Question 2: Given the example below, what scope is the external variable in?
+// I'd say, and I'm none to confident here, that the scope of the external varialbe is gloabal??? 
+// It's not inside of the function, for the varialble exists outside of it.
+// I'd say that external exists globally.
+// I'd say the internal exists inside of the function.
+// I'm not usure about the third level though and that is where some confusion comes (or the secodn level if global is considered the third and last level, etc.)
 
 let external = "I'm outside!";
 
