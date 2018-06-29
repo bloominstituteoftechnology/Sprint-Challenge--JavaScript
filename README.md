@@ -1,10 +1,11 @@
-# Assessing your JavaScript Fundamentals
+<!-- # Assessing your JavaScript Fundamentals
 * The objective of this challenge is to get you used to answering a few questions about JavaScript that are commonly asked in interviews.
 * We also have some more reps for you to help hammer in the knowledge you've thus far learned.
 * Answers to your written questions will be recorded in *ANSWERS.md*
 * This is to be worked on alone but you can use outside resources. You can *reference* any old code you may have, however, please refrain from copying and pasting any of your answers. Try and understand the question and put your responses in your own words. Be as thorough as possible when explaining something.
 * **Just a friendly Reminder** Don't fret or get anxious about this, this is a no-pressure assessment that is only going to help guide you here in the near future. This is NOT a pass/fail situation.
-## Start by forking and cloning this repository.
+## Start by forking and cloning this repository. -->
+
 ## Questions - Self Study - You can exercise your Google-Fu for this and any other _Sprint Challenge_ in the future.
 1. Describe the biggest difference between `.forEach` & `.map`.
 2. What is the difference between a function and a method?
@@ -13,7 +14,7 @@
 5. Why do we need super() in an extended class?
 
 ## Initializing Project
-* Fork/Clone this repository.
+<!-- * Fork/Clone this repository. -->
 * Complete all the exercises as described inside each challenge file.
 * Use `console.log()` statements to check to see if your code does what it is supposed to do.
 * To test your `console` statements you can run `node /assignments/<fileName>` and see what prints in your terminal. You can also use an online tool like `JSBin`, `REPL.it`, `JSFiddle`, or even your `Chrome developer console`.
