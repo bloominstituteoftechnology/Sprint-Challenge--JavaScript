@@ -68,29 +68,30 @@ Once you have the new array created, sort the universities alphabetically and lo
 const universities = [];
 for (let uni of graduates) {
   universities.push(uni.university);
+  universities.sort();
 }
 
-console.log(universities.sort())
+console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
 The resulting contact information should have a space between the first name and the email information like this: 
 Name email@example.com
 
-// NEed to finsih this
+I did not know you could push template literals into an array like this?
 Log the result of your new array. */
 const contactInfo = [];
 for (let grad of graduates) {
-  contactInfo.push(grad.first_name, grad.email);
+  contactInfo.push(`${grad.first_name} ${grad.email}`);
 }
-console.log(contactInfo);
+console.log(contactInfo)
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 for (let grad of graduates) {
   if (grad.university.includes('Uni')) {
-    uni.push(grad.university)
+    uni.push(grad.university);
   }
 } 
 console.log(uni);
@@ -117,6 +118,6 @@ let lowerCase = zooAnimals.map(animal => animal.animal_name.toLowerCase());
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-let populationTotal = zooAnimals.map(animal => animal.population)
-populationTotal = populationTotal.reduce((acc, curr) => acc + curr);
+let populationTotal = zooAnimals.map(animal => animal.population).reduce((acc, curr) => acc + curr);
+
 console.log(populationTotal);
