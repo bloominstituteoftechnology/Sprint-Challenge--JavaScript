@@ -121,3 +121,8 @@ console.log(lowerCase);
 let populationTotal = zooAnimals.map(animal => animal.population).reduce((acc, curr) => acc + curr);
 
 console.log(populationTotal);
+
+// Pure reduce without map. the O is index of the current element being processed in the array. Do we always need the initial index when reducing an array of objects? Why?
+let popTotal = zooAnimals.reduce((acc, animal) => acc += animal.population, 0);
+
+console.log(popTotal)
