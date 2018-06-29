@@ -20,6 +20,12 @@
 
         The four rules, or contexts, of the `this` keyword are:
                 1. Global scope: wherein `this` refers to the global scope.
-                2. Implicit scope: wherein `this` refers to the function within which `this` is used.
-                3. Explicit scope: wherein `this` refers to the application of the methods `apply()`, `call()`, or `bind()`.  
+                2. Implicit scope: wherein `this` refers to the function/object within which `this` is used or method is called.
+                3. Explicit scope: wherein `this` refers to the application of the methods `apply()`, `call()`, or `bind()`.  The latter of which are used to apply an the scope of one function to another function when calling the latter function.
+                4. "new" scope: wherein `this` refers to the instance of the new object created via a constructor.
+
+
+
 5. Why do we need super() in an extended class?
+
+            We need `super()`, in an extended class, so as to apply the arguments of the child class to the extended/parent class. 
