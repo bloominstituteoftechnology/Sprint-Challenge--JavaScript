@@ -1,9 +1,9 @@
 # Assessing your JavaScript Fundamentals
-* The objective of this challenge is to get you used to answering a few questions about JavaScript that are commonly asked in interviews. 
+* The objective of this challenge is to get you used to answering a few questions about JavaScript that are commonly asked in interviews.
 * We also have some more reps for you to help hammer in the knowledge you've thus far learned.
-* Answers to your written questions will be recorded in *ANSWERS.md* 
-* This is to be worked on alone but you can use outside resources. You can *reference* any old code you may have, however, please refrain from copying and pasting any of your answers. Try and understand the question and put your responses in your own words. Be as thorough as possible when explaining something. 
-* **Just a friendly Reminder** Don't fret or get anxious about this, this is a no-pressure assessment that is only going to help guide you here in the near future. This is NOT a pass/fail situation. 
+* Answers to your written questions will be recorded in *ANSWERS.md*
+* This is to be worked on alone but you can use outside resources. You can *reference* any old code you may have, however, please refrain from copying and pasting any of your answers. Try and understand the question and put your responses in your own words. Be as thorough as possible when explaining something.
+* **Just a friendly Reminder** Don't fret or get anxious about this, this is a no-pressure assessment that is only going to help guide you here in the near future. This is NOT a pass/fail situation.
 ## Start by forking and cloning this repository.
 ## Questions - Self Study - You can exercise your Google-Fu for this and any other _Sprint Challenge_ in the future.
 1. Describe the biggest difference between `.forEach` & `.map`.
@@ -17,7 +17,7 @@
 * Complete all the exercises as described inside each challenge file.
 * Use `console.log()` statements to check to see if your code does what it is supposed to do.
 * To test your `console` statements you can run `node /assignments/<fileName>` and see what prints in your terminal. You can also use an online tool like `JSBin`, `REPL.it`, `JSFiddle`, or even your `Chrome developer console`.
-* Once you finish the challenges in each file, commit your code, and push it to your fork. 
+* Once you finish the challenges in each file, commit your code, and push it to your fork.
 
 ### Challenge 1: Objects and Arrays
 Test your knowledge of objects and arrays. Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
@@ -32,3 +32,4 @@ Create constructors, bind methods, and create cuboids in this prototypes challen
 Once you have completed the prototypes challenge, it's time to convert all your hard work into classes: [classes.js](challenges/classes.js).
 
 ### Remember you can use any resources you want to solve these problems, but avoid copying/pasting solutions you've previously written. Also if you don't finish all of the challenges, that's fine! Just do what you can and submit your challenges in the end! HAVE FUN!
+//Change for Pull Request
