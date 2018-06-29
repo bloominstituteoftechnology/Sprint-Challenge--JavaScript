@@ -60,9 +60,16 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.
 
+
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities)
+
+for(i=0; i<graduates.length; i++) {
+  universities.push(graduates[i].university);
+  universities.sort();
+}
+
+console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student.
 
@@ -71,11 +78,24 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+
+for(i=0; i<graduates.length; i++) {
+  contactInfo.push(graduates[i].first_name + " " + graduates[i].email);
+  contactInfo.sort();
+}
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+
+for(i=0; i<graduates.length; i++) {
+  if(graduates[i].university.search("Uni") !== -1) {
+    uni.push(graduates[i].university);
+  }
+  uni.sort();
+};
+
 console.log(uni);
 
 
@@ -96,8 +116,20 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 let lowerCase = [];
+
+lowerCase = zooAnimals.map(x => x.animal_name.toLowerCase());
+
 console.log(lowerCase);
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 let populationTotal = [];
+
+const populationNumbers = zooAnimals.map(x=> x.population);
+
+function getSum(total, num) {
+  return total + num;
+};
+
+populationTotal = populationNumbers.reduce(getSum, 0);
+
 console.log(populationTotal);
