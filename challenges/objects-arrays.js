@@ -102,6 +102,16 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+
+//some experimentation with .indexOf
+console.log('university'.indexOf('uni') !== -1);
+console.log("The School of the Art Institute of Chicago".indexOf('uni') !== -1);
+
+for(let i=0; i<graduates.length; i++){
+  if(graduates[i].university.indexOf('Uni') !== -1){
+    uni.push(graduates[i].university)};
+}
+
 console.log(uni);
 
 
