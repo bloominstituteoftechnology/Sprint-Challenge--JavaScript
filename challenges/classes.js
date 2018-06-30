@@ -20,15 +20,15 @@ class CuboidMaker {
   }
 }
 
-class CubeMaker {
+class CubeMaker extends CuboidMaker {
   constructor(values) {
     super(values);
   }
-  volumeCube () {
-    return Math.pow(this.side, 3);
+  volumeCube (length) {
+    return Math.pow(this.length, 3);
   }
-  surfaceAreaCube () {
-    return 6 * Math.pow(this.side, 2);
+  surfaceAreaCube (length) {
+    return 6 * Math.pow(this.length, 2);
   }
 }
 
@@ -40,8 +40,6 @@ const cuboid = new CuboidMaker ({
 
 const cube = new CubeMaker ({
   "length": 4,
-  "width": 4,
-  "height": 4,
 });
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
