@@ -48,3 +48,71 @@ const cube = new CubeMaker({
 
 console.log(cube.volume());//125
 console.log(cube.surfaceArea());//150
+
+//Let's have some fun
+//pyramid extends off cuboidmaker
+
+class PyramidMaker extends CuboidMaker {
+  constructor(props){
+    super(props);
+  }
+  volume() {
+    return Math.floor((this.length * this.width * this.height) / 3);
+  }
+  surfaceArea() {
+    return Math.floor((this.length * this.width) + (this.length * Math.sqrt(Math.pow((this.width/2), 2) + Math.pow(this.height, 2))) + (this.width * Math.sqrt(Math.pow((this.length/2), 2) + Math.pow(this.height, 2))));
+  }
+}
+
+const pyramid = new PyramidMaker({
+  length: 5,
+  width: 7,
+  height: 10,
+});
+
+console.log(pyramid.volume());//116
+console.log(pyramid.surfaceArea());//160
+
+//conemaker extends off cuboidmaker, adding radius
+
+class ConeMaker extends CuboidMaker{
+  constructor(props){
+    super(props);
+    this.radius = props.radius;
+  }
+  volume(){
+    return Math.floor(Math.PI * Math.pow(this.radius, 2) * (this.height/3));
+  }
+  surfaceArea(){
+    return Math.floor(Math.PI * this.radius * (this.radius + Math.sqrt(Math.pow(this.height, 2) + Math.pow(this.radius, 2))));
+  }
+}
+
+const cone = new ConeMaker({
+  height: 5,
+  radius: 8,
+});
+
+console.log(cone.volume());//335
+console.log(cone.surfaceArea());//438
+
+//spheremaker extends off conemaker which extends off cuboidmaker
+
+class SphereMaker extends ConeMaker {
+  constructor(props){
+    super(props);
+  }
+  volume(){
+    return Math.floor((4/3) * Math.PI * Math.pow(this.radius, 3));
+  }
+  surfaceArea(){
+    return Math.floor(4 * Math.PI * Math.pow(this.radius, 2));
+  }
+}
+
+const sphere = new SphereMaker({
+  radius: 9,
+});
+
+console.log(sphere.volume()); //3053
+console.log(sphere.surfaceArea()); //1017
