@@ -1,17 +1,17 @@
 /* ===== Prototype Practice ===== */
 
 // Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area.
- Cuboids are similar to cubes but do not have even sides. 
- Follow the steps in order to accomplish this challenge.
+//  Cuboids are similar to cubes but do not have even sides. 
+//  Follow the steps in order to accomplish this challenge.
 
 /* == Step 1: Base Constructor ==
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
-function Cuboid(cuboidAttr){
+function cuboidMaker(cuboidAttr){
 	this.length = cuboidAttr.length;
 	this.width = cuboidAttr.width;
 	this.height = cuboidAttr.height;
-	:
+}
 
 /* == Step 2: Volume Method ==
   Create a method using CuboidMaker's prototype that returns the 
@@ -19,10 +19,9 @@ function Cuboid(cuboidAttr){
   
   Formula for cuboid volume: length * width * height
 */
-Cuboid.prototype.volumme =function(length,width,height){
+cuboidMaker.prototype.volume = function(length,width,height){
 
-return length * width *height;
-
+return this.length * this.width * this.height;
 }
 	
 
@@ -33,9 +32,9 @@ return length * width *height;
 
   Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 */
-cuboid.prototype.surfaceArea(length,width,height){
+cuboidMaker.prototype.surfaceArea = function(length,width,height){
 
-surface = 2 * (length * width + length * height + width * height);
+surface = 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 return surface
 }
 
@@ -44,14 +43,17 @@ return surface
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
 
-const newCube = new Cuboid({
+const newCube = new cuboidMaker({
   'length': 4,
   'width': 5,
   'height': 5,
 });
+console.log(newCube.volume())
+console.log(newCube.surfaceArea())
+
+
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-// console.log(cuboid.volume()); // 100
+ console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
-
 

@@ -47,24 +47,34 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 
-let universities = [];
+/* let universities = [];
 
-graduates.sort(function(a, b){
-    var universityA=a.university.toLowerCase(), universityB=b.university.toLowerCase()
-    if (universityA < universityB) //sort string ascending
-        return -1 
-    if (universityA > universityB)
-        return 1
-    return 0 //default return value (no sorting)
-})
+//graduates.sort(function(a, b){
+//    var universityA=a.university.toLowerCase(), universityB=b.university.toLowerCase()
+//    if (universityA < universityB) //sort string ascending
+//        return -1 
+//    if (universityA > universityB)
+//        return 1
+//    return 0 //default return value (no sorting)
+//})
 
 
-for(i=0; i<graduates.length; i++){
-universities[i] = graduates[i].university
+//for(i=0; i<graduates.leng//th; i++){
+//universities[i] = graduates[i].university
+//}
+
+//for(i=0; i<universities.length; i++){
+ // console.log(universities[i] */
+  
+ const universities = [];
+for (i=0; i<graduates.length; i++){
+universities.push(graduates[i].university)
+
 }
 
-for(i=0; i<universities.length; i++){
-  console.log(universities[i])
+console.log(universities.sort())
+  
+  
 }
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -86,6 +96,13 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+
+for (i=0; i<graduates.length; i++){
+  if((graduates[i].university).includes("Uni")){
+    uni.push(graduates[i].university)
+  }
+  
+}
 console.log(uni);
 
 
@@ -105,13 +122,13 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-let lowerCase = [];
+
 let lowerCase = [];
 for(i=0; i<zooAnimals.length; i++){
 lowerCase[i] = (zooAnimals[i].scientific_name).toLowerCase()
 }
 
-console.log(lowerCase); 
+ 
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.

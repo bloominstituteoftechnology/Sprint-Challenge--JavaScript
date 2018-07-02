@@ -8,11 +8,10 @@
 */
 
 See Below
-   consume(x,y,cb)
-   {
-	   
-	   
-	   
+   function consume(x,y,cb)
+   {   
+	  temp=cb(x,y);
+	   return temp
    }
 
 /* Step 2: Create several functions to callback with consume();
@@ -22,24 +21,10 @@ See Below
 */
 
 
-function consume(x, y, cb) {
-  // sumNums adds two numbers (x, y) and passes the result to the callback.
-  const sum = cb(x,y);
-  console.log (sum);
-}
-
 function add(x,y){
 	return x+y;
 	]
 	
-function consume(x, y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
-
-  const mult = cb(x,y);
-  console.log (mult);
-}
-
-
 
 function multiply(x,y){
 	return x*y;
@@ -47,11 +32,14 @@ function multiply(x,y){
 	
 ;
 
-
+ function greeting (str1,str2){
+    return `Hello ${str1} ${str2}, nice to meet you!`
+  }
+  
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-//consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
