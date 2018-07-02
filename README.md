@@ -12,7 +12,7 @@
 4. Describe the four rules of the 'this' keyword.
 5. Why do we need super() in an extended class?
 
-## Initializing Project
+#### Initializing Project
 * Fork/Clone this repository.
 * Complete all the exercises as described inside each challenge file.
 * Use `console.log()` statements to check to see if your code does what it is supposed to do.
