@@ -1,6 +1,6 @@
 ### JAVASCRIPT FUNDAMENTALS SPRINT
 
-- [] Objects and Arrays
-- [] Functions 
+- [x] Objects and Arrays
+- [x] Functions 
 - [] Prototypes
 - [] Classes
