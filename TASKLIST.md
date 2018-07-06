@@ -3,4 +3,4 @@
 - [x] Objects and Arrays
 - [x] Functions 
 - [x] Prototypes
-- [] Classes
+- [x] Classes
