@@ -2,5 +2,5 @@
 
 - [x] Objects and Arrays
 - [x] Functions 
-- [] Prototypes
+- [x] Prototypes
 - [] Classes
