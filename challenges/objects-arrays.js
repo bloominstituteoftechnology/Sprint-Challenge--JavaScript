@@ -8,6 +8,29 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
+tyrannosaurus = {
+  weight: "7000kg",
+  diet: "carnivorous",
+  length: "12m",
+  period: "Late Cretaceious",
+  roar : () => {
+    return console.log("RAWERSRARARWERSARARARRRR!");
+  }
+}
+
+velociraptor = {
+  "weight": "4000kg",
+  "diet": "carnivorous",
+  "length": "8m",
+  "period": "Early Cretaceious"
+}
+
+stegosaurus = {
+  "weight": "3500kg",
+  "diet": "carnivorous",
+  "length": "4m",
+  "period": "Mid Cretaceious"
+}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
