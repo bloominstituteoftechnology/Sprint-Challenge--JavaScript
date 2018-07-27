@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 /* ======================== CallBacks Practice ============================ */
-const each = (elements, cb) => {
+function each(elements, cb) {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
   for (let i = 0; i < elements.length; i++) {
