@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 /* ======================== CallBacks Practice ============================ */
-function each(elements, cb) {
+const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
   for (let i = 0; i < elements.length; i++) {
@@ -38,11 +38,12 @@ const limitFunctionCallCount = (cb, n) => {
   // make a counter to compare to n.
   // As long as counter is less than or equal to n, invoke cb.
   let callcount = 0;
-  return () => {
+  return (...params) => {
     if (callcount < n) {
       ++callcount;
-      return cb();  
+      return cb(...params);  
     }
+    return null;
   };
 };
 
@@ -135,3 +136,8 @@ console.log(cuboid.surfaceArea()); // 130
 console.log(cube.volume()); // 8
 console.log(cube.surfaceArea()); // 24
 
+module.exports = {
+  each,
+  map,
+  limitFunctionCallCount,
+};
