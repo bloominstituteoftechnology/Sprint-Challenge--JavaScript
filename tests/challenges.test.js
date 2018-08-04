@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const challengeMethods = require('../src/challenges');
 /* eslint-disable no-undef */
 describe('challenges', () => {
