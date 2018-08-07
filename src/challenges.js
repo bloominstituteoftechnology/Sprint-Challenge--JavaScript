@@ -88,19 +88,19 @@ const cuboid = new CuboidMaker({
 // ***Class Practice does NOT have test cases built.  You must use the console logs provided at the end of this section.***
 
 // Task 1: // Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax. NOTE: Comment our your prototype code above so you don't have conflicting names!
-class CuboidMaker {
-  constructor(properties) {
-    this.length = properties.length;
-    this.width = properties.width;
-    this.height = properties.height;
-  }
-  volume() {
-    return this.length * this.width * this.height;
-  }
-  surfaceArea() {
-    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
-  }
-}
+// class CuboidMaker {
+//   constructor(properties) {
+//     this.length = properties.length;
+//     this.width = properties.width;
+//     this.height = properties.height;
+//   }
+//   volume() {
+//     return this.length * this.width * this.height;
+//   }
+//   surfaceArea() {
+//     return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+//   }
+// }
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
 
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
@@ -202,6 +202,21 @@ const cube = new Cube({
 const checkMatchingLeaves = obj => {
   // return true if every property on `obj` is the same
   // otherwise return false
+  let tmp;
+  let match = true;
+
+  const checkLeaves = (object) => {
+    const keys = Object.keys(object);
+
+    for (let i = 0; i < keys.length; i++) {
+      if (typeof object[keys[i]] === 'object') checkLeaves(object[keys[i]]);
+      else if (tmp === undefined) tmp = object[keys[i]];
+      else if (tmp !== object[keys[i]]) match = false;
+    }
+  };
+
+  checkLeaves(obj);
+  return match;
 };
 
 
