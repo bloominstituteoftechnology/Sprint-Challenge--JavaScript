@@ -7,12 +7,39 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
+function consume(a,b, callback){
+  return callback(a,b)
+};
+
+function callback(){
+  const c = "Hello ";
+  const d = "I am a callback";
+  return c + d;
+}
+consume(3,4,callback);
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+
+function add(a,b){
+  return a+b;
+}
+
+//multiply function
+function multiply(x,y){
+  return x*y;
+}
+
+
+//greeting function
+function greeting(first, last) {
+  return `Hello ${first} ${last}, nice to meet you!`; 
+}
+greeting("Vance","Leon")
+
 
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
@@ -24,7 +51,8 @@
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 
-// Explanation: 
+// Explanation: external is a global variable that is in the lexcial scope of the functions declared in this example.
+//Lexical scope is variables that are declared outside of the function
 
 // Question 2: Given the example below, what scope is the external variable in?
 
