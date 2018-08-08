@@ -6,6 +6,9 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
+function consume(x, y, cb) {
+  return cb(x, y);
+}
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -13,7 +16,17 @@
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+function add(num1, num2){
+  return num1 + num2;
+}
 
+function multiply(num1, num2){
+  return num1 * num2;
+}
+
+function greeting(firstName, lastName){
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
+}
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
 //consume(2,2,add); // 4
@@ -24,9 +37,9 @@
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 
-// Explanation: 
+// Explanation: The following is a closure because there is an inner function that has access to a variable (internal) in the parent function. This variable is outside of the local scope of the inner function.
 
-// Question 2: Given the example below, what scope is the external variable in?
+// Question 2: Given the example below, what scope is the external variable in? the global scope
 
 let external = "I'm outside!";
 
