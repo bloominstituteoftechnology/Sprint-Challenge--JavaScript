@@ -6,27 +6,41 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-
+let consume = function(a, b, callback) {
+  return callback(a, b);
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+function add(a, b) {
+  return a + b;
+}
+
+function multiply(a,b) {
+  return a * b;
+}
+
+function greeting(firstName, lastName) {
+ return `Hello ${firstName} ${lastName}, nice to meet you!`
+}
 
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-//consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
-
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // ==== Closures ==== 
 // Question 1: Explain in your own words why the example below is a closure.
 
-// Explanation: 
+// Explanation: It is a closure because nestedFunction is nested inside of myFunction, so we can reference myFunction inside of nedtedFunction.
 
 // Question 2: Given the example below, what scope is the external variable in?
+// Explanation: The external variable is in the global scope because it is not nested inside of any function. 
+//              The internal variable is in the local function scope because it is inside the function `myFunction`. 
 
 let external = "I'm outside!";
 
