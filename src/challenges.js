@@ -5,13 +5,19 @@
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
   // This only needs to work with arrays.
-  return elements.forEach(cb);
+  for (let i = 0; i < elements.length; i++) {
+    cb(elements[i], i);
+  }
 };
 
 const map = (elements, cb) => {
   // Produces a new array of values by mapping each value in list through a transformation function.
   // Return the new array.
-  return elements.map(cb);
+  const newArr = [];
+  for (let i = 0; i < elements.length; i++) {
+    newArr.push(cb(elements[i]));
+  }
+  return newArr;
 };
 
 /* ======================== Closure Practice ============================ */
@@ -22,21 +28,24 @@ const counter = () => {
   // newCounter(); // 1
   // newCounter(); // 2
   let newCount = 0;
-  return newCount++; 
+  return () => {
+    count++;
+    return count;
+  };
 };
 
 
 const limitFunctionCallCount = (cb, n) => {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
-    let count = 0;
-    return (...args) => {
-      if (count === n) {
-        return null;
-      }
-      count += 1;
-      return cb (...args);
+  let count = 0;
+  return (...args) => {
+    if (count === n) {
+      return null;
     }
+    count += 1;
+    return cb(...args);
+  }
 };
 
 /* ======================== Prototype Practice ============================ */
@@ -68,20 +77,20 @@ class cuboidMaker {
     this.width = attributes.width;
     this.height = attributes.height;
   }
-  volume() {
-    return (this.length * this.width * this.height);
-  }
+  cuboidMaker.prototype.volume = function volume() {
+    return this.length * this.width * this.height;
+  };
 
-  surfaceArea() {
+  cuboidMaker.prototype.surfaceArea = function surfaceArea() {
     return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
-  }
+  };
 }
 
 
 class cuboidObject extends cuboidMaker {
   constructor(objectAttributes)
     this.length: 4,
-    this.width: 5,
+  this.width: 5,
     this.height: 5,
 }
 
@@ -115,12 +124,12 @@ class Cube extends cuboidMaker {
   constructor(attributes) {
     super(attributes);
   }
-  volume(){
+  volume() {
     return (this.length * this.width * this.height);
-    }
+  }
   surfaceArea() {
-    return 6 * (this.length * this.width + this.length * this.height + this.width * this.height);
-  }  
+    return 6 * (this.length * this.width);
+  }
 }
 
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
