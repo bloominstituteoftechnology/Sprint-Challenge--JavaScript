@@ -7,11 +7,27 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
-
+const tyrannosaurus = {
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceious',
+  roar: () => 'RAWERSRARARWERSARARARRRR!'
+}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+const stegosaurus = {
+  diet: 'herbivorous',
+  weight: '2000kg',
+  length: '9m',
+  period: 'Late Jurassic'
+}
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
-
+const velociraptor = {
+  diet: 'carnivorous',
+  weight: '15kg',
+  length: '1.8m',
+  period: 'Late Cretaceious'
+}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
@@ -45,8 +61,15 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-console.log(universities)
+const getUniversities = grads => {
+  const unis = [];
+  for (grad of graduates) {
+    unis.push(grad.university);
+  }
+  return unis;
+}
+const universities = getUniversities(graduates).sort();
+console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -54,12 +77,28 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = [];
+const getContactInfo = grads => {
+  const contacts = [];
+  for (grad of graduates) {
+    contacts.push(`${grad.first_name} ${grad.email}`);
+  }
+  return contacts;
+}
+const contactInfo = getContactInfo(graduates);
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+const findUni = graduates => {
+  matches = [];
+  for (grad of graduates) {
+    if (grad.university.includes('Uni')) {
+      matches.push(grad.university);
+    }
+  }
+  return matches;
+}
+const uni = findUni(graduates);
 console.log(uni);
 
 
@@ -79,9 +118,9 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-let lowerCase = [];
+const lowerCase = zooAnimals.map(animal => animal.animal_name.toLowerCase());
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-let populationTotal = [];
+const populationTotal = zooAnimals.reduce((total, animal) => total += animal.population, 0);
 console.log(populationTotal);
