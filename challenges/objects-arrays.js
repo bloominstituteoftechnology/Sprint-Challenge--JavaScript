@@ -7,10 +7,30 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
+let tyrannosaurus = {
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceious',
+  roar: function() {
+    return `RAWERSRARARWERSARARARRRR!`;
+  }
+}
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+let stegosaurus = {
+  diet: 'herbivorous',
+  weight: '2000kg',
+  length: '9m',
+  period: 'Late Jurassic',
+}
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+let velociraptor = {
+  diet: 'carnivorous',
+  weight: '15kg',
+  length: '1.8m',
+  period: 'Late Cretaceious',
+}
 
 // Using your dinosaur objects, log answers to these questions:
 
@@ -46,6 +66,11 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+for (let uni of graduates) {
+  universities.push(uni.university);
+  universities.sort();
+}
+
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -53,13 +78,22 @@ console.log(universities)
 The resulting contact information should have a space between the first name and the email information like this: 
 Name email@example.com
 
+I did not know you could push template literals into an array like this?
 Log the result of your new array. */
 const contactInfo = [];
-console.log(contactInfo);
+for (let grad of graduates) {
+  contactInfo.push(`${grad.first_name} ${grad.email}`);
+}
+console.log(contactInfo)
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+for (let grad of graduates) {
+  if (grad.university.includes('Uni')) {
+    uni.push(grad.university);
+  }
+} 
 console.log(uni);
 
 
@@ -79,9 +113,16 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-let lowerCase = [];
+let lowerCase = zooAnimals.map(animal => animal.animal_name.toLowerCase());
+
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-let populationTotal = [];
+let populationTotal = zooAnimals.map(animal => animal.population).reduce((acc, curr) => acc + curr);
+
 console.log(populationTotal);
+
+// Pure reduce without map. the O is index of the current element being processed in the array. Do we always need the initial index when reducing an array of objects? Why?
+let popTotal = zooAnimals.reduce((acc, animal) => acc += animal.population, 0);
+
+console.log(popTotal)
