@@ -76,7 +76,7 @@ CuboidMaker.prototype.surfaceArea = function surfaceArea() {
 // };
 // Task 1: Copy and paste your prototype CuboidMaker here and proceed to convert it into ES6 Class syntax
 class Cuboid {
-  constructor(options) {
+  constructor(Cuboidoptions) {
     this.length = options.length;
     this.width = options.width;
     this.height = options.height;
@@ -90,12 +90,12 @@ class Cuboid {
     return `${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
     // Implement this function
   }
-}
+};
 // Task 2: Create a new class called Cube. Extend the Cube class with the CuboidMaker class.
 // Create two new methods on the Cube class to calculate the volume and surface area of a cube given the same values passed in from CuboidMaker.
 class Cube extends Cuboid{
-  constructor(options) {
-    super(cubeOptions)
+  constructor(Cubeoptions) {
+    super(Cuboidoptions)
     // Use the parent constructor
   }
   volume() {
@@ -106,7 +106,7 @@ class Cube extends Cuboid{
     return `${(this.length * this.width + this.length * this.height + this.width * this.height) * 2}`;
     // Implement this function
   }
-}
+};
 
 /* ======================== Stretch Challenges ============================ */
 
