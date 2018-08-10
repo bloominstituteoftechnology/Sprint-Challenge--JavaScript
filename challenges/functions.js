@@ -6,7 +6,13 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
+ function consume(param1, param2, cb) {
+   cb(param1, param2);
+}
 
+consume('burgers', 'pizza', function(param1, param2) {
+   console.log(param1, param2);
+});
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
