@@ -28,7 +28,7 @@ CuboidMaker.prototype.volume = function () {
 */
 
 CuboidMaker.prototype.surfaceArea = function () {
-  return ;
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 };
 
 
