@@ -1,6 +1,6 @@
 // ==== Callbacks ====  
 
-/* Step 1: Create a callback function
+/* Step 1: Create a function that accepts a callback
   * Create a function named consume that can take 3 parameters.
   * The first two parameteres can accept any argument
   * The last parameter accepts a callback 
@@ -22,17 +22,16 @@
 
 
 // ==== Closures ==== 
-// Question 1: Explain in your own words why the example below is a closure.
+// Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
 
-// Question 2: Given the example below, what scope is the external variable in?
 
-let external = "I'm outside!";
+const external = "I'm outside the function";
 
 function myFunction() {
-  let internal = "Hello! I'm inside the function";
   console.log(external);
+  const internal = "Hello! I'm inside myFunction!";
 
   function nestedFunction() {
     console.log(internal);
