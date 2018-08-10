@@ -55,7 +55,8 @@ greeting('Michelle', 'Paredes',function(first_name, last_name) {
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: Because Closure is from bottom to top.
+
 
 
 const external = "I'm outside the function";
