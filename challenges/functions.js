@@ -1,7 +1,7 @@
 // ==== Callbacks ====  
 
 /* Step 1: Create a function that accepts a callback
-  * Create a function named consume that can take 3 parameters.
+  * Create a function naSmed consume that can take 3 parameters.
   * The first two parameteres can accept any argument
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
@@ -16,7 +16,8 @@ function consume(param1, param2, callback){
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 function add (param1, param2, callback){
-  return callback (param1 + param2);
+  sum = param1 + param2;
+  callback (sum);
 }
 
 add(2, 3);
@@ -37,8 +38,7 @@ function greeting (first_name, last_name, callback){
 
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
-
-// Explanation: 
+// Explanation: nestedFunction() has access to `internal` because it is an independant variable that remembers it's environment.
 
 
 const external = "I'm outside the function";
