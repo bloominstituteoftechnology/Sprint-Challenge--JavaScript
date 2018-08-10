@@ -60,13 +60,13 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
+const gradLen = graduates.length;
 const universities = []
-const len = graduates.length;
-for(let i = 0; i < len; i++){
+for(let i = 0; i < gradLen; i++){
   universities[i] = graduates[i].university;
 }
 universities.sort();
-console.log(universities)
+console.log('Universities Alphabatized', universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -75,20 +75,20 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-for(let i = 0; i < len; i++){
+for(let i = 0; i < gradLen; i++){
   contactInfo[i] = `${graduates[i].first_name} ${graduates[i].email}`
 }
-console.log(contactInfo);
+console.log('Contact Info', contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-for(let i = 0; i < len; i++){
+for(let i = 0; i < gradLen; i++){
   if(graduates[i].university.includes('Uni') ){
     uni.push(graduates[i]);
   }
 }
-console.log(uni);
+console.log('Strings with Uni', uni);
 
 
 // ==== Array Methods ====
@@ -120,6 +120,5 @@ console.log('LowerCase', lowerCase);
 console.log('LowerCaseWithMap', lowerCaseWithMap);
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-const populationTotal = [];
-populationTotal.push(zooAnimals.reduce((count, curr) => count + curr.population, 0))
-console.log(populationTotal);
+const populationTotal = (zooAnimals.reduce((count, curr) => count + curr.population, 0));
+console.log('Population Total', populationTotal);
