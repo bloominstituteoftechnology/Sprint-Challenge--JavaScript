@@ -61,13 +61,13 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":9,"first_name":"Michail","university":"Universidad Católica de Ávila","email":"mrome8@shinystat.com"},
 {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
 
-/* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
+/* Request 1: Create a new array called universities that contains all the univeristies in the graduates array. Once you have the new array created, sort the universities alphabetically and log the result. */
+let universities = [];
+for (i = 0; i < graduates.length - 1; i++) {
+    universities.push(graduates[i]["university"]);
+}
 
-Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-graduates.forEach(function (graduate) {
-    universities.push(graduate["university"]);
-})
+universities.sort();
 
 console.log(universities);
 
@@ -78,9 +78,9 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-graduates.forEach(function (graduate) {
-    contactInfo.push(graduate["first_name"] + " " + graduate["email"]);
-})
+for (i = 0; i < graduates.length - 1; i++) {
+    contactInfo.push(graduates[i]["first_name"] + " " + graduates[i]["email"]);
+}
 
 console.log(contactInfo);
 
@@ -89,12 +89,11 @@ let uni = [];
 const string = "University";
 const substring = string.substring(0, 3);
 
-const uniObjs = graduates.filter(graduate => graduate["university"].includes(substring));
-
-uniObjs.forEach(function (university) {
-    uni.push(university["university"]);
-    console.log(university);
-});
+for (i = 0; i < graduates.length; i++) {
+    if (graduates[i]["university"].includes(substring)) {
+        uni.push(graduates[i]["university"]);
+    }
+}
 
 console.log(uni);
 
@@ -126,14 +125,13 @@ const lowerCase = names.map(zooAnimal => zooAnimal.toLowerCase());
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-let populationTotal = [];
 let animalPop = [];
 
 zooAnimals.forEach(function (animal) {
     animalPop.push(animal["population"]);
 })
 
-populationTotal = animalPop.reduce(function (accumulator, currentValue) {
+const populationTotal = animalPop.reduce(function (accumulator, currentValue) {
     return accumulator + currentValue;
 }, 0);
 
