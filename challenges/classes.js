@@ -32,3 +32,6 @@ console.log(cuboidsRevenge.area()); // 130
 
 */
 
+class CubeMaker extends CuboidMaker {
+  cosntructor()
+}
