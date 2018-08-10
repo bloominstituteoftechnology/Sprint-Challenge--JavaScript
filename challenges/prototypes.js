@@ -28,6 +28,7 @@ CuboidMaker.prototype.volume = function() {
 */
 CuboidMaker.prototype.surfaceArea = function() {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+}
 
 
 /* == Step 4: Create a new object that uses CuboidMaker ==
@@ -40,10 +41,10 @@ const cuboid = new CuboidMaker({
   'height': 5
 });
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
-//console.log(cuboid.volume()); // 100
-//console.log(cuboid.surfaceArea()); // 130
-// Test your volume and surfaceArea methods by uncommenting the logs below:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+ console.log(cuboid.volume()); // 100
+ console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
+ //Test your volume and surfaceArea methods by uncommenting the logs below:
+ console.log(cuboid.volume()); // 100
+ console.log(cuboid.surfaceArea()); // 130
