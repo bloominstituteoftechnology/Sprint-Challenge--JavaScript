@@ -13,7 +13,7 @@ const tyrannosaurus = {
   weight: '7000kg',
   length: '12m',
   period: 'Late Cretaceious',
-  roar: function() {
+  roar: () => {
     return 'RAWERSRARARWERSARARARRRR!';
   }
 };
