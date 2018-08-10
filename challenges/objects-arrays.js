@@ -92,8 +92,17 @@ console.log(universities.sort());
 The resulting contact information should have a space between the first name and the email information like this: 
 Name email@example.com
 
-Log the result of your new array. */
-const contactInfo = [];
+Log the result of your new array. */    //GO BACK TO THIS
+const contactInfo = [];   
+
+for (let i = 0; i < graduates.length; i++) {
+  if (graduates[i].first_name) {
+    contactInfo.push(graduates[i]);
+  } else if(graduates[i].email) {
+    contactInfo.push(graduates[i]);
+  }
+}
+
 console.log(contactInfo);
 
 
@@ -118,9 +127,19 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-const lowerCase = [];
+//const lowerCase = [];
+
+ let lowerCase = zooAnimals.map((animal) => {
+  return animal.animal_name.toLowerCase();
+});
+
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-const populationTotal = [];
+//const populationTotal = [];
+
+let populationTotal = zooAnimals.reduce((zoosTotal, populationAmount) => {
+  return zoosTotal + populationAmount.population;
+}, 0);
+
 console.log(populationTotal);
