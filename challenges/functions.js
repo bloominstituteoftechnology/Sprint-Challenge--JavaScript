@@ -28,7 +28,7 @@ function multiply(param1, param2) {
 }
 
 function greeting(param1, param2) {
-    console.log(`Hello ${param1} ${param2}, nice to meet you`);
+    console.log(`Hello ${param1} ${param2}, nice to meet you!`);
 }
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
@@ -40,7 +40,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: nestedfunction() uses the closure to access variables outside its scope.
+// Explanation: nestedfunction() is called ourside of its function. It uses the closure to access variables outside its scope.
 
 
 const external = "I'm outside the function";
