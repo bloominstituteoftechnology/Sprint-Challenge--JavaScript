@@ -22,7 +22,7 @@ This sprint you worked really hard on learning the fundamentals of JavaScript! T
 
 ## Task 3: Objects and Arrays
 Test your knowledge of objects and arrays. 
-* [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
+* [x] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 4: Functions
 This challenge takes a look at callbacks and closures as well as scope. 
