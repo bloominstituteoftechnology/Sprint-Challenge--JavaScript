@@ -12,9 +12,16 @@ const tyrannosaurus = {
           weight: '7000kg', 
           length: '12m', 
           period: 'Late Cretaceious',
-          roar: function () { 
-            return 'RAWERSRARARWERSARARARRRR!';}
+        //   roar: function () { 
+        //     return 'RAWERSRARARWERSARARARRRR!';}
+
+        roar: function() {
+            return 'RAWERSRARARWERSARARARRRR!';
+        }
 }
+
+
+
 
 const stegosaurus = {
           name : 'stegosaurus', 
@@ -87,26 +94,20 @@ Log the result of your new array. */
 const contactInfo = [];
             for (let i = 0; i < graduates.length; i++) {
                 
-                console.log(contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
+                contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`
             }
         
 console.log(contactInfo);
-
-///////
-
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 
             for (let i = 0; i < graduates.length; i++) {
-                if (graduates[i].university === Object.values(graduates[i])[2])
-                return universities.push(graduates[i].university)
-            }
-                return uni.push(uni.includes('Uni'));
+
+                uni.push(graduates[i].university.uncludes('Uni'));
+            };
             
-
-console.log(uni);
-
+            console.log(uni);
 
 // ==== Array Methods ====
 
@@ -128,12 +129,6 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 //Iterate over array, locate animal names, convert to lowercase, push into new array...log.
 
 const lowerCase = [];
-            
-            toLower = function(arr) {
-                return arr[0].toLowerCase();
-            };
-            console.log(lowerCase.push().map(toLower));
-
 
 
 
