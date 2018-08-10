@@ -6,8 +6,7 @@
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
 
-class CuboidMaker  {
-  constructor(inputs){
+function CuboidMaker(inputs) {
   this.length = inputs.length;
   this.width = inputs.width;
   this.height = inputs.height;
@@ -21,9 +20,10 @@ class CuboidMaker  {
   Formula for cuboid volume: length * width * height
 */
 
-volume(){
+CuboidMaker.prototype.volume = function() {
   return this.length * this.width * this.height;
 }
+
 
 /* == Step 3: Surface Area Method ==
   Create another method using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
@@ -31,10 +31,11 @@ volume(){
   Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 */
 
-surfaceArea(){
+CuboidMaker.prototype.surfaceArea = function() {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 }
-};
+
+
 
 /* == Step 4: Create a new object that uses CuboidMaker ==
   Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
