@@ -5,6 +5,11 @@
 /* == Step 1: Base Constructor ==
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
+function CuboidMaker(dimensions) {
+  this.length = dimensions.length;
+  this.width = dimensions.width;
+  this.height = dimensions.height;
+}
 
 
 /* == Step 2: Volume Method ==
