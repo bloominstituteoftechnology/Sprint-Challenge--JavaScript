@@ -9,4 +9,4 @@
      3. New binding refers to a specific instance or version of an object. This is due to there potentially a few versions of this object existing.
      4. Whenever the call or apply method is used, the binding is explicitly defined meaning you only want this context to apply() or call().
 
-5. super() is used to pass any new attributes back to the contructor of the parent object
+5. super() is used to pass any new attributes back to the contructor of the parent object by binding this keyword to the child class
