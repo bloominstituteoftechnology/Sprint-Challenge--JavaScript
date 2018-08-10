@@ -19,9 +19,10 @@ class CubeMaker extends CuboidMaker  {
     constructor(moreInputs){
     super(moreInputs)
     this.length = moreInputs.length;
-    this.width = moreInputs.width;
     this.height = moreInputs.height;
 }
+
+///Something in my subclass is not pointong to the correct source....I think it has to do with my subclass object.
 cubeVolume(){
   return Math.pow((this.length * this.height), 3);
 }
@@ -39,8 +40,8 @@ const cuboid = new CuboidMaker({
 });
 
 const coldCube = new CubeMaker({
-    length:5,
-    height:7
+    leng:5,
+    heig:7
 });
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
