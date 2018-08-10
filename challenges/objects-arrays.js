@@ -94,8 +94,8 @@ Log the result of your new array. */
 const contactInfo = [];
             for (let i = 0; i < graduates.length; i++) {
                 
-                contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`
-            }
+                contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`)
+            };
         
 console.log(contactInfo);
 
@@ -124,12 +124,16 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Hawk-eagle, crowned","population":10,"scientific_name":"Spizaetus coronatus","state":"Florida"},
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
-// The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-
 //Iterate over array, locate animal names, convert to lowercase, push into new array...log.
 
 const lowerCase = [];
 
+let kiki = (zooAnimals.map((smallName) => {
+    return smallName.animal_name.toLowerCase();
+});
+
+
+lowerCase.push(kiki);
 
 
 console.log(lowerCase); 
@@ -138,20 +142,21 @@ console.log(lowerCase);
 
 //Iterate over array locate population numbers....reduce and return.
 
-
-const populationTotal = [];
-
-const filtered = zooAnimals.filter((value,index,array) => {
-    return zooAnimals[index].population;
-});
-console.log('filtered', filtered);
-
-const reduced = filtered.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue;
-});
-
-populationTotal.push(reduced);
-
-
+let populationTotal = zooAnimals/reduce.((animal, totalPopulation) => {
+    return animal + totalPopulation.population;
+}, 0);
 
 console.log(populationTotal);
+
+// const populationTotal = [];
+
+// const filtered = zooAnimals.filter((value,index,array) => {
+//     return zooAnimals[index].population;
+// });
+// console.log('filtered', filtered);
+
+// const reduced = filtered.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+// });
+
+// populationTotal.push(reduced);
