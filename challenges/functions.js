@@ -40,6 +40,9 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
+///Nested function can access internal because of scope chain. Specifically, it has access to its own scope. Additionally
+// `nestedfunction()` has access to `myFunction()` and global scope.
+
 // Explanation: 
 
 
