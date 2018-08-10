@@ -32,9 +32,6 @@ class CuboidMaker {
 class CubeMaker extends CuboidMaker {
   constructor(makeAttr) {
     super(makeAttr);
-    this.length = makeAttr.length;
-    this.width = makeAttr.width;
-    this.height = makeAttr.height;
   }
   volume() {
     return this.length * this.width * this.height;
