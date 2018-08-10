@@ -17,11 +17,11 @@ function consume(param1, param2, callback) {
 */
 
 function add(x, y) {
-	return x + y;
+	console.log(x + y);
 }
 
 function multiply(x, y) {
-	return x * y;
+	console.log(x * y);
 }
 
 function greeting(first, last) {
@@ -30,6 +30,7 @@ function greeting(first, last) {
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
 consume(2, 2, add); // 4
+consume(10, 25, add); // 35
 consume(10, 16, multiply); // 160
 consume('Mary', 'Poppins', greeting); // Hello Mary Poppins, nice to meet you!
 
