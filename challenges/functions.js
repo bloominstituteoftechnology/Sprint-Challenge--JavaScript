@@ -6,7 +6,20 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
+function consume(light, make, callback){
+  return callback(light, make);
+}
 
+function add(light, make) {
+  return light + make;
+}
+function multiply(light, make){
+  return light * make;
+}
+function greeting(light, make){
+  return `Hello ${light} ${make}, nice to meet you!`
+}
+//console.log(greeting("Sam", "Winston"));
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -16,15 +29,15 @@
 
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-//consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: because when you invoke the function nested inside of a 'parent' function so to speak... it has access to the variables that get stored in that function. it looks inside itself first then to the functions nested above it for the variable it needs. it cannot access past the original function to a global varible. only the original function can do that.
 
 
 const external = "I'm outside the function";
