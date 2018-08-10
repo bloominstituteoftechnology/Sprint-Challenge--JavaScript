@@ -120,12 +120,14 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
+Array.prototype.toLowerCase = function() {
+    for (var i = 0; i < this.length; i++) {
+        this[i] = this[i].toString().toLowerCase();
+    }
+}
 
-
-let lowerCase = [];
-zooAnimals.forEach(animal_name => {
-  lowerCase.push(zooAnimals)
-})
+const lowerCase = zooAnimals.map(animal =>
+animal.animal_name.toLowerCase());
 
 
 console.log(lowerCase);
