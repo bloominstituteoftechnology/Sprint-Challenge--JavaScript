@@ -6,8 +6,10 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-function consume(param1, param2, callback){
-  return callback(`${param1} and ${param2}!`);
+
+function consume(param1, param2, cb) {
+  // firstItem passes the first item of the given array to the callback function.
+  console.log(cb(`${param1} and ${param2}!`));
 }
 
 /* Step 2: Create several functions to callback with consume();
@@ -15,19 +17,21 @@ function consume(param1, param2, callback){
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add (param1, param2, callback){
-  sum = param1 + param2;
-  callback (sum);
-}
 
+
+function add (param1, param2, cb){
+  return cb(param1 + param2);
+}
 add(2, 3);
 
-function multiply (param1, param2, callback){
-  return callback (param1 * param2);
-}
 
-function greeting (first_name, last_name, callback){
-  return callback (`Hello ${first_name} ${last_name}, nice to meet you!`);
+function multiply (param1, param2, cb){
+  return cb(param1 * param2);
+}
+multiply(2, 3);
+
+function greeting (first_name, last_name, cb){
+  return cb (`Hello ${first_name} ${last_name}, nice to meet you!`);
 }
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
