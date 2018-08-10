@@ -96,9 +96,9 @@ Log the result of your new array. */    //GO BACK TO THIS
 
 const contactInfo = [];   
 
-  graduates.forEach(function(i){
-  contactInfo.push(i.first_name + " " + i.email);
-  });
+  for (let i = 0; i < graduates.length; i++) {
+    contactInfo.push(graduates[i].first_name + " " + graduates[i].email);
+  }
 
 console.log(contactInfo);
 
