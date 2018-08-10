@@ -87,6 +87,17 @@ console.log(contactInfo);
     return (item.university).includes('Uni');
     });
     console.log(uni);
+
+    // const uni = graduates.map(function(item) {
+    //   if ((item.university).includes('Uni')) {
+    //     return item.university;
+    //  } else {
+    //    return null;
+    //  }
+      
+    // });
+    //   console.log(uni);
+
 // the "uni" 4, 7, 8, 9,10;
 // ^^^ this confused me a lot i want to talk about this later // 
 
