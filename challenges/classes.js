@@ -6,6 +6,14 @@
 //   this.height = cubAttr.height;
 // }
 
+// CuboidMaker.prototype.volume = function() {
+//   return this.length * this.width * this.height;
+// }
+
+// CuboidMaker.prototype.surfaceArea = function() {
+//   return 2 * ((this.length * this.width) + (this.length * this.height) + (this.width * this.height));
+// }
+
 class CuboidMaker {
   constructor(cubAttr) {
     this.length = cubAttr.length;
@@ -20,13 +28,21 @@ class CuboidMaker {
   }
 }
 
-// CuboidMaker.prototype.volume = function() {
-//   return this.length * this.width * this.height;
-// }
 
-// CuboidMaker.prototype.surfaceArea = function() {
-//   return 2 * ((this.length * this.width) + (this.length * this.height) + (this.width * this.height));
-// }
+class CubeMaker extends CuboidMaker {
+  constructor(makeAttr) {
+    super(makeAttr);
+    this.length = makeAttr.length;
+    this.width = makeAttr.width;
+    this.height = makeAttr.height;
+  }
+  volume() {
+    return this.length * this.width * this.height;
+  }
+  surfaceArea() {
+    return 2 * ((this.length * this.width) + (this.length * this.height) + (this.width * this.height));
+  }
+}
 
 
 const cuboid = new CuboidMaker({
@@ -35,9 +51,18 @@ const cuboid = new CuboidMaker({
   height: 5
 })
 
+const cube = new CubeMaker({
+  length: 5,
+  width: 7,
+  height: 6
+})
+
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
+
+console.log(cube.volume());
+console.log(cube.surfaceArea());
 
 /* Stretch Task:
 
