@@ -35,7 +35,7 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation:Because a nested object can access anything inside of its block. 
+// Explanation: A nested object can access anything inside of its block. 
 // Function nestedFunction() can access it because it is also inside the scope of function myFunction().
 // I hope I explained that clearly enough. lol
 
