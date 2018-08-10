@@ -72,10 +72,8 @@ const universities = [];
 
             for (let i = 0; i < graduates.length; i++) 
     {
-      if (graduates[i].university === Object.values(graduates[i])[2]) {
-        console.log(universities.push(graduates[i].university));
-      }
-    }
+        universities.push(graduates[i].university);
+      };
     
 
 console.log(universities.sort());
@@ -88,12 +86,13 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
             for (let i = 0; i < graduates.length; i++) {
-                if (graduates[i].first_name === Object.values(graduates[i])[1] && graduates[i].email === Object.values(graduates[i])[3]){
-                        return contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
-                    }
-                }
+                
+                console.log(contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
+            }
         
 console.log(contactInfo);
+
+///////
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
