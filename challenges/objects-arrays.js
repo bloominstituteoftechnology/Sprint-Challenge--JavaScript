@@ -66,7 +66,7 @@ for(let i = 0; i < gradLen; i++){
   universities[i] = graduates[i].university;
 }
 universities.sort();
-console.log('Universities Alphabatized', universities);
+console.log('Universities Alphabetized', universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 

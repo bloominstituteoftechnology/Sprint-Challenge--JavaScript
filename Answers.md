@@ -1,8 +1,8 @@
 1. Describe the biggest difference between .forEach & .map.
-  
-  a.) .map is a method on the Array object that creates a new array, and allows you to make changes to the old array to a new array by using a callback function on each element in the original array; furthermore, it returns a brand new array. A good example of when to use .map() is when you want to copy an array into a variable and also make changes to the new array. .map() does not mutate the original array.
-  
-  b.) performs an operation based on the provided callback function, but does not return a new array or *hardly anything at all, it infact returns the undefined keyword". A good example of when it could be used is when you need to make changes to array values and store them into a new array using the .push() method and don't want to generate a new array automatically. .forEach does not mutate the original array.
+
+    a.) .map is a method on the Array object that creates a new array, and allows you to make changes to the old array to a new array by using a callback function on each element in the original array; furthermore, it returns a brand new array. A good example of when to use .map() is when you want to copy an array into a variable and also make changes to the new array. .map() does not mutate the original array.
+
+    b.) performs an operation based on the provided callback function, but does not return a new array or *hardly anything at all, it infact returns the undefined keyword". A good example of when it could be used is when you need to make changes to array values and store them into a new array using the .push() method and don't want to generate a new array automatically. .forEach does not mutate the original array.
 
 2. What is the difference between a function and a method?
 
