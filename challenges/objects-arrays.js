@@ -14,6 +14,36 @@
 
 // Using your dinosaur objects, log answers to these questions:
 
+let tyrannosaurus = {
+  name: 'tyrannosaurus',
+  diet : 'Meat',
+  weight : '17989lbs',
+  length : '40ft',
+  period : 'Cretaceous',
+  roar : function() {
+    return 'RAWERSRARARWERSARARARRRR!'; 
+  },
+}
+
+let velociraptor = {
+  name: 'velociraptor',
+  diet : 'Meat',
+  weight : '33lbs',
+  length : '6ft',
+  period : 'Cretaceous'
+
+
+}
+
+let stegosaurus = {
+  name: 'stegosaurus',
+  diet : 'Plants',
+  weight : '11023lbs',
+  length : '30ft',
+  period : 'Jurassic'
+
+}
+
 // How much did tyrannosaurus weigh?
 console.log(tyrannosaurus.weight);
 // What was the diet of a velociraptor?
@@ -22,7 +52,6 @@ console.log(velociraptor.diet);
 console.log(stegosaurus.length);
 // What time period did tyrannosaurus live in?
 console.log(tyrannosaurus.period);
-
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 console.log(tyrannosaurus.roar());
 
