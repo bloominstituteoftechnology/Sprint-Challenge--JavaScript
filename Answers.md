@@ -1,1 +1,5 @@
-
+The .forEach method is undefined, and calls a function on each element in the array. It is also allowed to mutate the calling array (changing the original element). The .map method creates a new array by calling a function on every element in the array, will use return values, and return a new array.
+The major difference is that a method is a function that's defined as a property of an object. 
+A closure contains the variables that are in the scope when the function is created. 
+Window Binding - when this defaults to referencing the Window Object. Implicit Binding - this references the object to the left of the dot. Explicit Binding - this references an argument that is passed with 'call' when a function is invoked. New Binding - A new object is created and this references the new object that was created.
+super() allows us to access/call functions on an object's parent. It is used to avoid dupllicating the parts of the constructor that are similar.
