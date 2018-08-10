@@ -69,8 +69,35 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
+// helper function to sort an array
+function sortArray(arr) {
+  //define the variables for count and itterators
+  var count = arr.length - 1, temp, x, y;
+
+  //decided to mix it up a bit and do the swap function as part of the code to be refactored later
+  for (x = 0; x < count; x++) {
+    for (y = 0; y < count; y++) {
+      if (arr[y] > arr[y + 1]) {
+        // swap items
+        temp = arr[y + 1];
+        arr[y + 1] = arr[y];
+        arr[y] = temp;
+      }
+    }
+  }
+}
+
 const universities = [];
-console.log(universities)
+
+//extract the universities from the graduates array
+for (let i = 0; i < graduates.length; i++) {
+  universities[i] = graduates[i].university;
+}
+
+// sort the universities
+sortArray(universities);
+
+console.log(...universities); // used spread opperator to make the items look cleaner
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -104,8 +131,24 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 const lowerCase = [];
+
+// initially done with a for loop
+// for(let i = 0; i < zooAnimals.length; i++) {
+//     lowerCase.push(zooAnimals[i].animal_name.toLowerCase());
+// }
+// doing same with a map()
+lowerCase.push(zooAnimals.map((x) => {
+  return x.animal_name.toLowerCase();
+}));
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-const populationTotal = [];
+let populationTotal = 0;
+//extract the population from the zooAnimals array
+const population = [];
+for (let i = 0; i < zooAnimals.length; i++) {
+    population[i] = zooAnimals[i].population;
+}
+// use reduce to add al numbers in the population array and assgin the result to populationTotal
+populationTotal = population.reduce((total, amount) => total + amount);
 console.log(populationTotal);
