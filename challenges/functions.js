@@ -1,7 +1,7 @@
 // ==== Callbacks ====  
 
 /* Step 1: Create a function that accepts a callback
-  * Create a function naSmed consume that can take 3 parameters.
+  * Create a function named consume that can take 3 parameters.
   * The first two parameteres can accept any argument
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
@@ -9,7 +9,7 @@
 
 function consume(param1, param2, cb) {
   // firstItem passes the first item of the given array to the callback function.
-  console.log(cb(`${param1} and ${param2}!`));
+  return cb(param1, param2);
 }
 
 /* Step 2: Create several functions to callback with consume();
@@ -19,20 +19,21 @@ function consume(param1, param2, cb) {
 */
 
 
-function add (param1, param2, cb){
-  return cb(param1 + param2);
+function add (param1, param2){
+  return (param1 + param2);
 }
-add(2, 3);
+consume (2, 3, add);
 
 
-function multiply (param1, param2, cb){
-  return cb(param1 * param2);
+function multiply (param1, param2,){
+  return (param1 * param2);
 }
-multiply(2, 3);
+consume(2, 3, multiply);
 
-function greeting (first_name, last_name, cb){
-  return cb (`Hello ${first_name} ${last_name}, nice to meet you!`);
+function greeting (first_name, last_name){
+  return (`Hello ${first_name} ${last_name}, nice to meet you!`);
 }
+consume (first_name, last_name, greeting)
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
 //consume(2,2,add); // 4
