@@ -25,8 +25,8 @@ function multiply(x,y) {
   return (x * y);
 }
 
-function greeting (firstName, lastName) {
-  return `Hello ${firstName} ${lastName}, nice to meet you!`
+function greeting(firstName, lastName) {
+  console.log("Hello, " + firstName + " " + lastName + ", nice to meet you!")
 }
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
@@ -40,9 +40,9 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // Explanation: 
 
-
 //nestedfunction can access the variable because it is within the scope of the function myFunction which first declares the variable.
 //When it is in the internal scope of the variable it has access to it or if the variable is global it has access to it.
+
 
 
 const external = "I'm outside the function";
