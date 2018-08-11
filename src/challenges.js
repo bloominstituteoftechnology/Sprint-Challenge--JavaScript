@@ -1,6 +1,5 @@
 /* eslint-disable */
 
-
 /* ======================== CallBacks Practice ============================ */
 const each = (elements, cb) => {
   // Iterates over a list of elements, yielding each in turn to the `cb` function.
@@ -31,7 +30,7 @@ const counter = () => {
   return () => {
     count++;
     return count;
-  }
+  };
 };
 
 const limitFunctionCallCount = (cb, n) => {
@@ -44,27 +43,27 @@ const limitFunctionCallCount = (cb, n) => {
       return cb(...args);
     }
     return null;
-  }
+  };
 };
 
 /* ======================== Prototype Practice ============================ */
 
 // ***Prototypes do NOT have test cases built for them.  You must use the console logs provided at the end of this section.***
 
-// Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. 
+// Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides.
 
 // Create a CuboidMaker constructor function that accepts properties for length, width, and height
 
 // Create a seperate function property of CuboidMaker that returns the volume of a given cuboid's length, width, and height
 // Formula for cuboid volume: length * width * height
 
-// Create a seperate function property of CuboidMaker that returns the surface area of a given cuboid's length, width, and height. 
+// Create a seperate function property of CuboidMaker that returns the surface area of a given cuboid's length, width, and height.
 // Formula for cuboid surface area of a cube: 2(length * width + length * height + width * height)
 
-// Create a cuboid object that inherits from CuboidMaker. 
+// Create a cuboid object that inherits from CuboidMaker.
 // The cuboid object must contain keys for length, width, and height.
 
-// To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130. 
+// To test your formulas, pass these key/value pairs into your constructor: length: 4, width: 5, and height: 5. When running your logs, you should get Volume: 100 with a Surface Area of 130.
 
 // Use these logs to test your results:
 
@@ -101,9 +100,9 @@ const limitFunctionCallCount = (cb, n) => {
 // The volume of a cube is: length * width * height
 // The surface area of a cube is: 6 * (length + width)
 
-// Create a new cube object that has equal values for length, width, and height 
+// Create a new cube object that has equal values for length, width, and height
 
-// To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24. 
+// To test your formulas, pass these key/value pairs into your constructor: length: 2, width: 2, and height: 2. You should get Volume: 8 with a Surface Area of 24.
 
 // Use these logs to test your results:
 
@@ -123,7 +122,7 @@ const limitFunctionCallCount = (cb, n) => {
 
 // class Cube extends CuboidMaker{
 //   constructor(optionsCube) {
-//     super(optionsCube);    
+//     super(optionsCube);
 //   }
 //   surfaceArea() {
 //     return 6 * (this.length * this.width);
@@ -148,7 +147,6 @@ const limitFunctionCallCount = (cb, n) => {
 // console.log(cube.surfaceArea()); // 24
 
 /* ======================== Stretch Challenges ============================ */
-
 
 // Challenge 1: Go back to your prototype CuboidMaker and extend cube using psuedo-classical inheritance to achiveve the same results you built using the ES6 class syntax
 
@@ -197,29 +195,34 @@ const limitFunctionCallCount = (cb, n) => {
 
 class CuboidMaker {
   constructor(options) {
-  this.length = options.length;
-  this.width = options.width;
-  this.height = options.height;
+    this.length = options.length;
+    this.width = options.width;
+    this.height = options.height;
   }
   volume() {
     return this.length * this.width * this.height;
   }
   surfaceArea() {
-    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+    return (
+      2 *
+      (this.length * this.width +
+        this.length * this.height +
+        this.width * this.height)
+    );
   }
 }
 
-class Cube extends CuboidMaker{
+class Cube extends CuboidMaker {
   constructor(optionsCube) {
-    super(optionsCube);    
-    this.isCube = optionsCube.isCube
+    super(optionsCube);
+    this.isCube = optionsCube.isCube;
   }
   surfaceArea() {
     return 6 * (this.length * this.width);
   }
   checkIfCube() {
-    if(this.isCube) {
-      return 'We have a cube!';
+    if (this.isCube) {
+      return "We have a cube!";
     }
   }
 }
@@ -242,25 +245,53 @@ console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
 console.log(cube.volume()); // 8
 console.log(cube.surfaceArea()); // 24
-console.log(cube.checkIfCube());  // "We have a cube!"
+console.log(cube.checkIfCube()); // "We have a cube!"
 
 // Challenge 3: Recursion
 const checkMatchingLeaves = obj => {
-  // return true if every property on `obj` is the same
-  // otherwise return false
-  for (let i = 0; i < obj.length; i++) {
-    if (obj[i] === obj[i + 1]  ) {
-      ++i;
-      return checkMatchingLeaves();
+  // const array = Object.values(obj);
+
+	// // look at first element of array
+	// if (typeof array[0] !== 'object') {
+	// 	shifted = array.shift();
+	// }
+
+	// // check if object
+	// if (typeof array[0] === 'object') {
+	// 	// check if object is single-indexed
+	// 	if (Object.values(array[0]).length === 1) {
+	// 		array[0] = Object.values(array[0])[0]
+	// 		shifted = array[0]
+	// 	} else {
+	// 		array[0] = checkMatchingLeaves(array[0])
+	// 	}
+	// }
+
+	// if (shifted !== array[0] && array[0] !== undefined && array[0] !== true) {
+	// 	console.log('shifted:', shifted, array[0])
+	// 	return false;
+	// }
+
+
+	// if (array.length === 0) return true;
+
+  // return checkMatchingLeaves(array);
+
+  /* REGEX WAY */
+  array = JSON.stringify(obj).replace(/[^0-9]*/gm, ',').split(',').filter(v => v);
+  while (array.length > 1) {
+    if (array[0] === array[1]) {
+      array.shift()
+    } else {
+      return false
     }
   }
-}
-
-
+  return true
+};
 
 module.exports = {
   each,
   map,
   limitFunctionCallCount,
-  checkMatchingLeaves,
+  checkMatchingLeaves
 };
