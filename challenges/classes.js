@@ -18,10 +18,11 @@ CuboidMaker.prototype.surfaceArea = function() {
 */
 class CuboidMaker {
   constructor (cuboid) {
-    this.length=cuboid.length;
     this.width=cuboid.width;
     this.height=cuboid.height;
-  };
+    this.length=cuboid.length;
+  }
+  
   volume () {
     var vol = (this.height*this.length*this.width);
     return vol;
@@ -44,3 +45,20 @@ console.log(cuboid.surfaceArea()); // 130
   Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods as well.  Create a new cube object and log out the results of your new cube.
 
 */
+
+class CubeMaker extends CuboidMaker {
+  constructor(cubemaker) {
+    super(cubemaker); 
+  }
+  Cvolume(cubemaker) {
+    var volume = this.width*this.width*this.width;
+    return volume;
+  };
+  CsurfaceArea(cubemaker) {
+    var surfacearea= 6*(this.width*this.width);
+    return surfacearea;
+  };
+}
+
+var Cubicle = new CubeMaker ({width:5, length:3, height:6});
+console.log(`Volume:${Cubicle.Cvolume()} Surface Area:${Cubicle.CsurfaceArea()}.`);
