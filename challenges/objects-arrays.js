@@ -86,11 +86,13 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = graduates.reduce (((count, item) => {
-    
-  return count + (item.university.includes("Uni"))
-}), 0)
-console.log(uni);
+
+const uni = [];
+graduates.filter((item) => {
+    if(item.university.includes('Uni')) 
+   uni.push(`${item.university}`)
+})
+console.log(uni, `Universites that have Uni in the name Counted: ${uni.length}`);
 
 
 // ==== Array Methods ====
