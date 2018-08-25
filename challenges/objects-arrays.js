@@ -6,11 +6,22 @@
   object name, diet, weight, length, period
 */
 
+function dinosaur(name, diet, weight, length, period) {
+	this.name = name;
+	this.diet = diet;
+	this.weight = weight;
+	this.length	= length;
+	this.period = period;
+}
+
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
+var tyrannosaurus = new dinosaur('tyrannosaurus', 'carnivorous', '000kg', '12m', 'Late Cretaceious');
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+var stegosaurus = new dinosaur('stegosaurus', 'herbivorous', '2000kg', '9m', 'Late Jurassic');
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+var velociraptor = new dinosaur('velociraptor', 'carnivorous', '15kg', '1.8m', 'Late Cretaceious');
 
 // Using your dinosaur objects, log answers to these questions:
 
@@ -24,6 +35,9 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+dinosaur.prototype.roar = function() {
+	return 'RAWERSRARARWERSARARARRRR!'
+};
 console.log(tyrannosaurus.roar());
 
 
