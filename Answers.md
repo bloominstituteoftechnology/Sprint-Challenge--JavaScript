@@ -14,10 +14,13 @@ Closure has three scope chains, it has its own scope variables defined between {
 
 4. Describe the four rules of the 'this' keyword.
 
-New binding,
-Explicit binding,
-Implicit binding,
-Window binding
+New binding - Uses the new keyword to create a variable which uses the context of the class it is derived from.
+
+Explicit binding - Anytime you use .apply() or .call() / .bind()
+
+Implicit binding - When you reference the object property to the left while calling.
+
+Window binding - Anything related to the window itself, Global is basically the same but in CLI form.
 
 5. Why do we need super() in an extended class?
 
