@@ -58,6 +58,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 
+// map to return array of university from graduates array
 graduates.map((element,index) => {
   return element.university;
 })
@@ -91,7 +92,13 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
+
+
 const contactInfo = [];
+
+graduates.map((element, index) =>{
+  contactInfo.push(`${element.first_name} ${element.email}`) 
+});
 console.log(contactInfo);
 
 
