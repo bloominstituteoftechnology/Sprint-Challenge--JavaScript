@@ -11,10 +11,10 @@ Function refers to any function in the global scope, whereas method refers to a 
 Closure is when we have access to a function's scope after the function is created.
 
 #### Describe the four rules of the 'this' keyword.
-Window/Global - The value of `this` is window when in the global scope
-Implicit - The value of `this` is the object preceding the function call with a dot or the object passed in as a function argument.
-New - The value of `this` is the object created when the `new` keyword is used to create it.
-Explicit - The value of `this` is the object we explicitly pass in to .apply(), .bind() or .call(). 
+Window/Global - The value of `this` is window when in the global scope  
+Implicit - The value of `this` is the object preceding the function call with a dot or the object passed in as a function argument.  
+New - The value of `this` is the object created when the `new` keyword is used to create it.  
+Explicit - The value of `this` is the object we explicitly pass in to .apply(), .bind() or .call().  
 
 #### Why do we need super() in an extended class?
 super() is used to call the parent constructor with the parameters of the subclass.
