@@ -130,6 +130,7 @@ const sorted = (arr, i) => {
   for (var i = 0; i < graduates.length; i++) {
     universities.push(graduates[i].university);
   }
+  universities.sort();
 };
 sorted(graduates);
 console.log(universities);
