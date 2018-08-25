@@ -37,7 +37,7 @@ class CubeMaker extends CuboidMaker  {
             width: info.length,
             height: info.length,
         })  //Used super to inherit length, width, height. However didn't pass the same object
-            //as I would to CuboidMaker since cubes should be equal on all sides.
+            //as I would to CuboidMaker since cubes should be equal length on all edges.
 
     }
     volume()    {
