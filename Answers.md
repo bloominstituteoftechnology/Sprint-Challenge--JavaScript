@@ -36,5 +36,17 @@ function outerScope(){
     }
 }
 
-Describe the four rules of the 'this' keyword.
-Why do we need super() in an extended class?
+4. Describe the four rules of the 'this' keyword.
+
+Rule 1: when in global scope, 'this' will bind to the window.object.
+
+Rule 2: Implicit Binding, when a function is called by a preceding dot, the object before the dot serves as the 'context' for 'this'.
+
+Rule 3: When we use a constructor function to create 'new' objects, the specific instance of the object (the new object) is the 'context' for 'this'.
+
+Rule 4: When using the .call or .apply method, 'this' is defined. The object being called on is the new context:
+
+jerry.speak.call(newman) --> jerry is the context for 'this'
+
+5. Why do we need super() in an extended class?
+
