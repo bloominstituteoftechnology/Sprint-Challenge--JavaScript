@@ -27,10 +27,6 @@ const tyrannosaurus = new dinosaur ({
   'length': '12m',
   'period': 'Late Cretaceious'
 
-  roar function() {
-
-  }
-
 });
 
 const stegosaurus = new dinosaur ({
