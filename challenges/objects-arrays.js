@@ -147,8 +147,16 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 const lowerCase = [];
+
+let lower = zooAnimals.map((item) => {
+    lowerCase.push(item.animal_name.toLowerCase())
+    })
+
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 const populationTotal = [];
+
+let totalTally = zooAnimals.reduce(population = (accum, total)=>{return accum += total.population}, 0)
+populationTotal.push(totalTally)
 console.log(populationTotal);
