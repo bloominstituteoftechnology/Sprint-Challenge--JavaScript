@@ -7,11 +7,29 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
-
+const tyrannosaurus = {
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: "7000kg",
+  length: "12m",
+  period: "Late Cretaceious",
+}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+const stegosaurus = {
+  name: "stegosaurus",
+  diet: "herbivorous",
+  weight: "2000kg",
+  length: "9m",
+  period: "Late Jurassic",
+}
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
-
+const velociraptor = {
+  name: "velociraptor",
+  diet: "carnivorous",
+  weight: "15kg",
+  length: "1.8m",
+  period: "Late Cretaceious",
+}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
@@ -24,8 +42,10 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+tyrannosaurus.roar = function() {
+  return "RAWERSRARARWERSARARARRRR!";
+}
 console.log(tyrannosaurus.roar());
-
 
 // ==== Arrays ====
 
@@ -45,6 +65,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
+let universities = ["Missouri Southern State College","The School of the Art Institute of Chicago","Marian College","International Medical & Technological University","Sultan Salahuddin Abdul Aziz Shah Polytechnic","Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft","Salem University","Coastal Carolina University","Universidad Católica de Ávila","Universitat Rovira I Virgili Tarragona"];
 const universities = [];
 console.log(universities)
 
