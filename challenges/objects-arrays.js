@@ -90,8 +90,10 @@ const grabUni = (arr) =>  {
 		universities.push(`${arr[i].university}`)
 	}
 }
+// grabUni takes an array and puts only each objects university value into a new array 
 grabUni(graduates);
 universities.sort();
+// sorts the array in alphabetical order
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -107,6 +109,7 @@ const grabContactInfo = (arr) => {
 		contactInfo.push(`${arr[i].first_name} ${arr[i].email}`)
 	}
 }
+// grabContactInfo takes an array and pushes each objects first_name and email into a new array
 grabContactInfo(graduates);
 console.log(contactInfo);
 
@@ -120,6 +123,7 @@ const stringCheck = (arr) => {
 		}
 	}
 }
+// stringCheck takes an array and pushes the value of arr[i].university to a new array only if that value includes 'Uni'
 stringCheck(graduates);
 console.log(uni);
 

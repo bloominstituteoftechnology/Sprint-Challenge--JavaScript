@@ -6,7 +6,7 @@
         are defined outside of objects and classes.
 
 3. What is closure?
-    Closure is when a function first looks inside of its own scope.  If it doesn't find what it is looking for from inside
+    Closure is when a function first looks inside of its own internal scope.  If it doesn't find what it is looking for from inside
         the function, it will look outside of the function.  If it still hasn't found what it is looking for it will look in
         at the window/global variables.
 

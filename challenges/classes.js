@@ -15,6 +15,8 @@ class CuboidMaker{
 		return 2 * ((this.length * this.width) + (this.length * this.height) + (this.width * this.height));
 	}
 }
+// CuboidMaker creates a cuboid with the properties length, width, and height
+// It also has the methods volume and surfaceArea.
 
 class CubeMaker extends CuboidMaker {
 	constructor(cube) {
@@ -30,6 +32,8 @@ class CubeMaker extends CuboidMaker {
 		return 6 * Math.pow(this.side, 2);
 	}
 }
+//CubeMaker creates a cube with the only property being side since all the sides are the same length
+// It also has its own volume and surface Area methods.
 
 const cube = new CubeMaker ({
 	side: 4,

@@ -28,9 +28,9 @@ const greeting = (var1, var2) => {
 }
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-console.log(consume(2,2,add)); // 4
-console.log(consume(10,16,multiply)); // 160
-console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
