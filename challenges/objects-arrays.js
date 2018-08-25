@@ -91,12 +91,20 @@ Name email@example.com
 Log the result of your new array. */
 
 
-const contactInfo = [];
+function cl(element, index, array) {
+  return `${element.first_name} ${element.email}`;
+}
 
-graduates.map((element, index) =>{
-  contactInfo.push(`${element.first_name} ${element.email}`) 
-});
-console.log(contactInfo);
+function grabUniversity(arr, callback) {
+let universities = [];
+for (i = 0; i < arr.length; i++) {
+  const returnFromCallback = callback(arr[i], i, arr);
+  universities.push(returnFromCallback);
+}
+return universities;
+}
+
+console.log(grabUniversity(graduates, cl))
 
 /* contactInfo = [ 'Cynde ctorry0@macromedia.com',​​​​​
 ​​​​​  'Saundra swhal1@state.gov',​​​​​
