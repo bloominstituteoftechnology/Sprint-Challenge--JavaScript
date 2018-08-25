@@ -15,6 +15,9 @@ class Dinosaur {
     this.weight = obj.weight;
     this.length = obj.length;
     this.period = obj.period;
+    this.roar = function() {
+      return "RAWERSRARARWERSARARARRRR!";
+    }
   }
 }
 
@@ -62,9 +65,9 @@ console.log(tyrannosaurus.period);
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 
 //FIX THIS
-let roar = () => {
-    return "RAWERSRARARWERSARARARRRR!"
-}
+// let roar = () => {
+//     return "RAWERSRARARWERSARARARRRR!"
+// }
 
 // tyrannosaurus.roar()
 
