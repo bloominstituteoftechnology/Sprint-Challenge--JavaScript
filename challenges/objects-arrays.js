@@ -80,8 +80,6 @@ for (let i = 0; i < graduates.length; i++) {
   universities.push(graduates[i].university);
 }
 
-console.log(universities)
-
 function sortedUni(array) {
   return array.sort();
 }
