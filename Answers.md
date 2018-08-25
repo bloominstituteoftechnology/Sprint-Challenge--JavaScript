@@ -10,4 +10,4 @@
      3. New binding: When you use a constructor function this will refer to the object created and return with the constructor function 
      4. Explicit Binding: Whenever you use a call or apply method
 5. Why do we need super() in an extended class?
-    * super will bind a different class with the current class giving access to the values inside. This is important when you have multiple objects that are a bit different but have a common trait.
+    * super will bind a different class with the current class giving access to the values inside. This is important when you have multiple objects that are a bit different but have a common trait. It will also inherit the prototypes from the parent object.
