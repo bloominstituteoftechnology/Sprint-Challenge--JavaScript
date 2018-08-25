@@ -55,4 +55,4 @@ class CuboidMaker {
   
   const Cube = new CubeMaker ({width:8, length:8, height:8});
   console.log(Cube.CubeVol()); // 512
-  console.log(Cube.CubeSArea()); // 384
+  console.log(Cube.CubeSArea()); // 384git
