@@ -84,8 +84,24 @@ const universities = [];
 for (i=0; i<graduates.length; i++) {
   universities.push(graduates[i].university);
 }
-universities.sort();
-console.log(universities)
+function swap(array, i, j) {
+  let temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
+}
+
+function alphaUni (array) {
+  for (i=0; i<array.length; i++) {
+    for (j=1; j < array.length; j++){
+      if (array[j-1] > array[j]) {
+        swap(array, j-1, j);
+      }
+    }
+  }
+  return array;
+};
+
+console.log(alphaUni(universities));
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
