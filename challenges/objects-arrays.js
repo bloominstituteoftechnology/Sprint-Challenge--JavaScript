@@ -101,11 +101,36 @@ graduates.map((element, index) =>{
 });
 console.log(contactInfo);
 
+/* contactInfo = [ 'Cynde ctorry0@macromedia.com',​​​​​
+​​​​​  'Saundra swhal1@state.gov',​​​​​
+​​​​​  'Lambert lparham2@techcrunch.com',​​​​​
+​​​​​  'Modestine mdolder3@symantec.com',​​​​​
+​​​​​  'Chick camorts4@google.com.au',​​​​​
+​​​​​  'Jakob jharken5@spiegel.de',​​​​​
+​​​​​  'Robbi rbrister6@redcross.org',​​​​​
+​​​​​  'Colline cbrosh7@alibaba.com',​​​​​
+​​​​​  'Michail mrome8@shinystat.com',​​​​​
+​​​​​  'Hube hlethbrig9@foxnews.com' ]​​​​​ */
+
+
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
+
 const uni = [];
+
+graduates.filter((element, index) => {
+  if(element.university.includes('Uni')){
+    uni.push(element.university);
+  }
+});
+
 console.log(uni);
 
+/* uni = [ 'International Medical & Technological University',​​​​​
+​​​​​  'Salem University',​​​​​
+​​​​​  'Coastal Carolina University',​​​​​
+​​​​​  'Universidad Católica de Ávila',​​​​​
+​​​​​  'Universitat Rovira I Virgili Tarragona' ]​​​​​ */
 
 // ==== Array Methods ====
 
