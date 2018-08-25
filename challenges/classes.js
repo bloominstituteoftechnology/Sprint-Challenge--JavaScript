@@ -42,7 +42,7 @@ class CubeMaker extends CuboidMaker {
   }
 
   surfaceAreaOfCube () {
-    return 6 * Math.pow((this.length * this.height), 2)
+    return 6 * Math.pow(this.length, 2)
   }
 }
 
