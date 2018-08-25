@@ -96,7 +96,9 @@ for (i = 0; i < graduates.length; i++) {
     uni.push(graduates[i].university);
   }
 }
-console.log(uni.length);
+
+console.log(uni); // to return a list of Universities containing the Uni string
+console.log(uni.length); // to find the number of Universities containing the Uni string
 
 // ==== Array Methods ====
 
