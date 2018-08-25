@@ -8,20 +8,30 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
+const tyrannosaurus = {name: "tyrannosaurus", diet: "carnivorous", weight: "7000kg", length: "12m", period: "Late Cretaceious", 
+roar() {
+  return "RAWERSRARARWERSARARARRRR!";
+}};
+
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
+const stegosaurus = {name: "stegosaurus", diet: "herbivorous", weight: "2000kg", length: "9m", period: "Late Jurassic"};
+
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+
+const velociraptor = {name: "velociraptor", diet: "carnivorous", weight: "15kg", length: "1.8m", period: "Late Cretaceious"};
+
 
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(tyrannosaurus.weight);
+console.log(tyrannosaurus.weight); // answer 7000kg
 // What was the diet of a velociraptor?
-console.log(velociraptor.diet);
+console.log(velociraptor.diet);  // answer carnivorous
 // How long was a stegosaurus?
-console.log(stegosaurus.length);
+console.log(stegosaurus.length); // answer 9m
 // What time period did tyrannosaurus live in?
-console.log(tyrannosaurus.period);
+console.log(tyrannosaurus.period); // answer Late Cretaceious
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 console.log(tyrannosaurus.roar());
@@ -45,8 +55,33 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-console.log(universities)
+
+function cl(element, index, array) {
+  return element.university;
+}
+
+function grabUniversity(arr, callback) {
+let universities = [];
+for (i = 0; i < arr.length; i++) {
+  const returnFromCallback = callback(arr[i], i, arr);
+  universities.push(returnFromCallback);
+}
+return universities;
+}
+
+console.log(grabUniversity(graduates, cl));           // all universities
+console.log(grabUniversity(graduates, cl).sort());    // all universities sorted
+
+/* Sorted university array = ​​​​​[ 'Coastal Carolina University',​​​​​
+​​​​​  'Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft',​​​​​
+​​​​​  'International Medical & Technological University',​​​​​
+​​​​​  'Marian College',​​​​​
+​​​​​  'Missouri Southern State College',​​​​​
+​​​​​  'Salem University',​​​​​
+​​​​​  'Sultan Salahuddin Abdul Aziz Shah Polytechnic',​​​​​
+​​​​​  'The School of the Art Institute of Chicago',​​​​​
+​​​​​  'Universidad Católica de Ávila',​​​​​
+​​​​​  'Universitat Rovira I Virgili Tarragona' ]​​​​​ */ 
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -54,14 +89,64 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = [];
-console.log(contactInfo);
+
+
+function cl(element, index, array) {
+  return `${element.first_name} ${element.email}`;
+}
+
+function grabUniversity(arr, callback) {
+let universities = [];
+for (i = 0; i < arr.length; i++) {
+  const returnFromCallback = callback(arr[i], i, arr);
+  universities.push(returnFromCallback);
+}
+return universities;
+}
+
+console.log(grabUniversity(graduates, cl))
+
+/* contactInfo = [ 'Cynde ctorry0@macromedia.com',​​​​​
+​​​​​  'Saundra swhal1@state.gov',​​​​​
+​​​​​  'Lambert lparham2@techcrunch.com',​​​​​
+​​​​​  'Modestine mdolder3@symantec.com',​​​​​
+​​​​​  'Chick camorts4@google.com.au',​​​​​
+​​​​​  'Jakob jharken5@spiegel.de',​​​​​
+​​​​​  'Robbi rbrister6@redcross.org',​​​​​
+​​​​​  'Colline cbrosh7@alibaba.com',​​​​​
+​​​​​  'Michail mrome8@shinystat.com',​​​​​
+​​​​​  'Hube hlethbrig9@foxnews.com' ]​​​​​ */
+
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
-console.log(uni);
 
+
+function cl(element, index, array) {
+  // return 'Hello ' + WHAT + ' I am located at index: ' + WHERE;
+  if(element.university.includes('Uni')){
+    return element.university;
+  } else {
+    return null;
+  }
+}
+
+function grabUniversity(arr, callback) {
+let universities = [];
+for (i = 0; i < arr.length; i++) {
+  const returnFromCallback = callback(arr[i], i, arr);
+  universities.push(returnFromCallback);
+}
+return universities;
+}
+
+console.log(grabUniversity(graduates, cl))
+
+/* uni = [ 'International Medical & Technological University',​​​​​
+​​​​​  'Salem University',​​​​​
+​​​​​  'Coastal Carolina University',​​​​​
+​​​​​  'Universidad Católica de Ávila',​​​​​
+​​​​​  'Universitat Rovira I Virgili Tarragona' ]​​​​​ */
 
 // ==== Array Methods ====
 
@@ -80,8 +165,35 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 const lowerCase = [];
+
+zooAnimals.map((element, index) => {
+  lowerCase.push(element.animal_name.toLowerCase());
+});
+
 console.log(lowerCase); 
 
+/* lowerCase = [ 'jackal, asiatic',​​​​​
+​​​​​  'screamer, southern',​​​​​
+​​​​​  'white spoonbill',​​​​​
+​​​​​  'white-cheeked pintail',​​​​​
+​​​​​  'black-backed jackal',​​​​​
+​​​​​  'brolga crane',​​​​​
+​​​​​  'common melba finch',​​​​​
+​​​​​  'pampa gray fox',​​​​​
+​​​​​  'hawk-eagle, crowned',​​​​​
+​​​​​  'australian pelican' ]​​​​​*/
+
+
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
+
 const populationTotal = [];
-console.log(populationTotal);
+
+function addPopulation(arr) {
+  let totalPop = arr.reduce((accumulator, value) =>{
+    return accumulator += value.population;
+  },0);
+  return totalPop;
+}
+
+console.log(addPopulation(zooAnimals)); 
+console.log(populationTotal); // answer 56
