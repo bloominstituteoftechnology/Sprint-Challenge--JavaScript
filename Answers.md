@@ -11,5 +11,19 @@ In a simple response, a function is when there is no object associated with it (
 
 
 3) What is closure?
+
+Also in simplest terms an example of a closure would be a function within a function, for example:
+
+function greet() {
+    var name = 'Ken';
+    function sayHello() { // this is considered a closure.
+        console.log(`Hello ${name}`);
+    }
+    sayHello();
+}
+
+greet();
+
+
 4) Describe the four rules of the 'this' keyword.
 5) Why do we need super() in an extended class?
