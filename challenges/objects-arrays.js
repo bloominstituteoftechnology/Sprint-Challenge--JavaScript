@@ -123,11 +123,20 @@ console.log(contactInfo);
 const uni = [];
 
 function checkStr(str, obj) {
-  str = new RegExp([str]);
-  
+  let searchStr = new RegExp([str]);
+  // console.log(`str is ${searchStr}`)
+  for (let i = 0; i < obj.length; i++){
+    // console.log(obj[i].university);
+    if (searchStr.test(obj[i].university)) {
+      uni.push(obj[i]);
+      // console.log(obj[i].university)
+    }
+  }
+  return uni;
 }
-console.log(uni);
+// console.log(`Universities:\n ${uni}`);
 
+console.log(checkStr("Uni", graduates));
 
 // ==== Array Methods ====
 
