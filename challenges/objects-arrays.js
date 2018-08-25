@@ -84,7 +84,7 @@ function sortArray(arr, type='old') {
     while( sorted === false ) {
       if( tempArray.length == 0 )
         break;
-      let lowest = '';
+      let lowest = tempArray[0];
       for( let i = 0; i < tempArray.length; i++ ){
         for( let k = 0; k < tempArray.length; k++ ) {
           if( tempArray[i] < tempArray[k] )
