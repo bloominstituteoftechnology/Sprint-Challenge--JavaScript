@@ -143,11 +143,11 @@ console.log();
 let lowerCase = [];
 
 function LowIt(arr){
-	lowerCase = arr.map(obj=>obj.first_name.toLowerCase());
+	lowerCase = arr.map(obj=>obj.animal_name.toLowerCase());
 	return lowerCase;
 }
 
-console.log(LowIt(graduates)); 
+console.log(LowIt(zooAnimals)); 
 
 console.log();
 console.log("Request 5");
@@ -157,8 +157,8 @@ console.log();
 let populationTotal = [];
 
 function AddEm(arr){
-	populationTotal = arr.reduce((a,b) => a + b,0);
+	populationTotal = arr.reduce((a,b) => a + b.population,0);
 	return populationTotal;
 }
 
-console.log(AddEm(graduates));
+console.log(AddEm(zooAnimals));
