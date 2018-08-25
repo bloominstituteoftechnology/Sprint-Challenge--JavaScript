@@ -91,6 +91,27 @@ alphabetizeUnis(allUniversities);
 
 console.log(universities)
 
+//**Stretch - sort without the sort method
+
+function sortWithoutSort(arr){
+  var minIndex, temporary, length = arr.length;
+
+  for (i=0; i<length; i++){
+    minIndex = i;
+    for (j=i+1; j<length; j++){
+      if(arr[j]<arr[minIndex]){
+        minIndex = j;
+      }
+    }
+    temporary = arr[i];
+    arr[i] = arr[minIndex];
+    arr[minIndex] = temporary;
+  }
+  return arr;
+}
+
+console.log(sortWithoutSort(allUniversities));
+
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
 The resulting contact information should have a space between the first name and the email information like this: 
