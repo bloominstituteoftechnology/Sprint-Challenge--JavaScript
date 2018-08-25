@@ -99,10 +99,44 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-for (let graduate of graduates) {
-    if (graduate.university) universities.push(graduate.university);
+function quickSort(arr, left, right) {
+    let len = arr.length,
+        pivot,
+        partitionIndex;
+
+
+    if (left < right) {
+        pivot = right;
+        partitionIndex = partition(arr, pivot, left, right);
+
+        //sort left and right
+        quickSort(arr, left, partitionIndex - 1);
+        quickSort(arr, partitionIndex + 1, right);
+    }
+    return arr;
 }
+
+function partition(arr, pivot, left, right) {
+    let pivotValue = arr[pivot].university.toLowerCase(),
+        partitionIndex = left;
+
+    for (let i = left; i < right; i++) {
+        if (arr[i].university.toLowerCase() < pivotValue) {
+            swap(arr, i, partitionIndex);
+            partitionIndex++;
+        }
+    }
+    swap(arr, right, partitionIndex);
+    return partitionIndex;
+}
+
+function swap(arr, i, j) {
+    let temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
+
+const universities = quickSort(graduates, 0, graduates.length - 1);
 
 console.log(universities);
 
