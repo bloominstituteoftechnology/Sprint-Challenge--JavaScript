@@ -112,6 +112,27 @@ function sortWithoutSort(arr){
 
 console.log(sortWithoutSort(allUniversities));
 
+//*** Sprint Review: Would like to go over how to create a sort function that calls in the character code (charCodeAt) to give numerical value to the strings we're sorting in this function
+// I tried to console.log() through the function but can't figure out where to add charCodeAt to visibly compare the code values
+
+// function sortWithoutSort(arr){
+//   var minIndex, temporary, length = arr.length;
+
+//   for (i=0; i<length; i++){
+//     minIndex = i; console.log(`First ${minIndex}`);
+//     for (j=i+1; j<length; j++){
+//       if(arr[j]<arr[minIndex]){
+//         minIndex = j;
+//         console.log(`Now ${arr[j]}`);console.log(`Next ${arr[j]}`)
+//       }
+//     }
+//     temporary = arr[i]; console.log(`This is temporary ${temporary}`);
+//     arr[i] = arr[minIndex]; console.log(`This is arr[i]: ${arr[i]}`);
+//     arr[minIndex] = temporary; console.log(`This is arr[minIndex]: ${minIndex}`);
+//   }
+//   return arr;
+// }
+
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
 The resulting contact information should have a space between the first name and the email information like this: 
