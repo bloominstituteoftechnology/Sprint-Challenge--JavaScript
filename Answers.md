@@ -10,8 +10,31 @@ The only thing is, .map iterates and generates a new array.
 
 A function is a block of code with its own scope and takes an input (parameter) and returns a value. A method, is when a function is called on an object. 
 
+Example:
+
+// This .forEach() is a function declared with three parameters
+function forEach(element, index, array) {
+    return // something;
+}
+
+// This .forEach() is not a method, explicitly called on 'someArray'
+someArray.forEach()
 
 
-What is closure?
+3. What is closure?
+
+Closure is when an inner function has access to it's own scope; the outer function's scope; AND global scope.
+
+let name = 'Paul';               //global scope
+
+function outerScope(){
+
+    let hobby = 'basketball';     // outer scope
+
+    function innerScope(sibling) {
+        return `${name} plays ${hobby} with ${sibling}`;      // own scope
+    }
+}
+
 Describe the four rules of the 'this' keyword.
 Why do we need super() in an extended class?
