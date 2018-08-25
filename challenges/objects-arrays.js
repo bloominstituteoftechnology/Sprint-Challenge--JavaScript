@@ -56,7 +56,7 @@ console.log(tyrannosaurus.roar());
 // Given an array of college graduates.  Complete the following requests without using any array methods like .forEach(), .map(), .reduce(), .filter()
 
 const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern State College","email":"ctorry0@macromedia.com"},
-{"id":2,"first_name":"Saundra","university":"The School of the Art Institute of Chicago","email":"swhal1@state.gov"},
+{"id":2,"first_name":"Saundra","university":"Missouri Southern State College","email":"swhal1@state.gov"},
 {"id":3,"first_name":"Lambert","university":"Marian College","email":"lparham2@techcrunch.com"},
 {"id":4,"first_name":"Modestine","university":"International Medical & Technological University","email":"mdolder3@symantec.com"},
 {"id":5,"first_name":"Chick","university":"Sultan Salahuddin Abdul Aziz Shah Polytechnic","email":"camorts4@google.com.au"},
@@ -69,7 +69,19 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
+const universities = ["Missouri Southern State College",
+"Missouri Southern State College",
+"Marian College",
+"International Medical & Technological University",
+"Sultan Salahuddin Abdul Aziz Shah Polytechnic",
+"Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft",
+"Salem University",
+"Coastal Carolina University",
+"Universidad Católica de Ávila",
+"Universitat Rovira I Virgili Tarragona"];
+
+universities.sort();
+
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -78,12 +90,25 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = [];
+const contactInfo = ["Cynde","ctorry0@macromedia.com",
+"Saundra","swhal1@state.gov",
+"Lambert","lparham2@techcrunch.com",
+"Modestine","mdolder3@symantec.com",
+"Chick","camorts4@google.com.au",
+"Jakob","jharken5@spiegel.de",
+"Robbi","rbrister6@redcross.org",
+"Colline","cbrosh7@alibaba.com",
+"Michail","mrome8@shinystat.com",
+"Hube","hlethbrig9@foxnews.com"];
 console.log(contactInfo);
-
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+for(let i = 0; i < universities.length; i++) {
+  if (universities[i].includes('Uni')){
+    uni.push(universities[i]);
+  }
+}
 console.log(uni);
 
 
@@ -103,9 +128,9 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-const lowerCase = [];
+const lowerCase = zooAnimals.map(name => name.animal_name.toLowerCase());
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-const populationTotal = [];
+const populationTotal = zooAnimals.reduce((accumulator, currentValue) => accumulator + currentValue.population, 0) ;
 console.log(populationTotal);
