@@ -5,6 +5,11 @@
 /* == Step 1: Base Constructor ==
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
+function  CuboidMaker(cuboidInfo) = {
+  this.length = cuboidInfo.length;
+  this.width = cuboidInfo.width;
+  this.height = cuboidInfo.height;
+}
 
 
 /* == Step 2: Volume Method ==
@@ -12,6 +17,9 @@
   
   Formula for cuboid volume: length * width * height
 */
+CuboidMaker.prototype.volume = function() {
+  return this.lenght * this.width * this.height
+}
 
 
 /* == Step 3: Surface Area Method ==
