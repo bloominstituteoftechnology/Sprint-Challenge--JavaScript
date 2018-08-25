@@ -121,15 +121,26 @@ console.log(grabUniversity(graduates, cl))
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 
-const uni = [];
 
-graduates.filter((element, index) => {
+function cl(element, index, array) {
+  // return 'Hello ' + WHAT + ' I am located at index: ' + WHERE;
   if(element.university.includes('Uni')){
-    uni.push(element.university);
+    return element.university;
+  } else {
+    return null;
   }
-});
+}
 
-console.log(uni);
+function grabUniversity(arr, callback) {
+let universities = [];
+for (i = 0; i < arr.length; i++) {
+  const returnFromCallback = callback(arr[i], i, arr);
+  universities.push(returnFromCallback);
+}
+return universities;
+}
+
+console.log(grabUniversity(graduates, cl))
 
 /* uni = [ 'International Medical & Technological University',​​​​​
 ​​​​​  'Salem University',​​​​​
