@@ -73,7 +73,24 @@ const universities = [];
 for(let i = 0; i < graduates.length; i++){
   universities.push(graduates[i].university);
 }
-universities.sort();
+let marker = universities.length;
+while(marker){
+  for(let i = 0; i < marker - 1; i++){
+    for(let char = 0; char < universities[i].length && char < universities[i + 1].length; char++){
+      if(universities[i].charCodeAt(char) > universities[i + 1].charCodeAt(char)){
+        let temp = universities[i];
+        universities[i] = universities[i + 1];
+        universities[i + 1] = temp;
+        break;
+      }
+
+      else if(universities[i].charCodeAt(char) < universities[i + 1].charCodeAt(char)){
+        break;
+      }
+    }
+  }
+  marker--;
+}
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
