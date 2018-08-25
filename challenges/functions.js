@@ -6,7 +6,7 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-function sampleFunc(param1, param2, cb) {
+function consume(param1, param2, cb) {
   return cb(param1, param2);
 }
 
