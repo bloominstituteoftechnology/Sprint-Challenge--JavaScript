@@ -41,17 +41,17 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
+// It's directly related to scope. In this case internal is declared in the myFunction() along with the nestedFunction() also being declared in the myFunction() scope.  If we switched this around and declared internal in nestedFunction() then the myFunction() would NOT be able to access internal. Nested functions can reach up to the originating scope however, the opposite is not possible. myFunction() cannot reach into nestedFunction() and access it's members.
 
+const external = "I'm outside the function";
 
-// const external = "I'm outside the function";
+function myFunction() {
+  console.log(external);
+  const internal = "Hello! I'm inside myFunction!";
 
-// function myFunction() {
-//   console.log(external);
-//   const internal = "Hello! I'm inside myFunction!";
-
-//   function nestedFunction() {
-//     console.log(internal);
-//   };
-//   nestedFunction();
-// }
-// myFunction();
+  function nestedFunction() {
+    console.log(internal);
+  };
+  nestedFunction();
+}
+myFunction();
