@@ -9,7 +9,7 @@ A Function is a piece of code that takes in info (stings, numbers, Booleans, ext
 Closures make it possible for us to make other variable 'private'. Basically, we want our function to have access to the parent scope even if the parent scope has closed. closure makes that possibe.
 
 4. Describe the four rules of the 'this' keyword.
-Implicit>left of the'.' Explict> .apply .call .bind New> New keyword  Window> window binding
+Implicit>left of the'.' Explict> .apply .call .bind New> New keyword  Window> window binding.
 
 5. Why do we need super() in an extended class?
 <blockquote>	used to call the parent class 'constructor'  function and to inherit attributes from the parent. 
