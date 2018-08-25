@@ -28,3 +28,21 @@ let cuboid = new CuboidMaker(4,5,5);
 
 */
 
+class CubeMaker extends CuboidMaker {
+  constructor (length) {
+    super(length, length, length);
+  }
+
+  cubeVolume () {
+    return this.length * this.length * this.length;
+  }
+
+  cubeSurfaceArea () {
+    return 6 * (this.length * this.length);
+  }
+}
+
+let cube = new CubeMaker(3);
+
+cube.cubeVolume(); // logs 27
+cube.cubeSurfaceArea(); // logs 54
