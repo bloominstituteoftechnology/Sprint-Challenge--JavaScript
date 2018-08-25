@@ -50,3 +50,4 @@ jerry.speak.call(newman) --> jerry is the context for 'this'
 
 5. Why do we need super() in an extended class?
 
+When extending from a base class to a new sub-class, the super() serves two purposes: a) it allows the sub-class to get the context from the base class automatically (i.e., constructor function) and b) it calls on the original base class so the sub-class can inherit all attributes from the base class. 
