@@ -1,1 +1,5 @@
-
+1. .forEach executes the callback function on each item in the array without returning anything. .map executes the callback function on each item in the array and returns an array containing the results of that function.
+2. A method is a function that is defined as part of an object. All methods are functions, but not all functions are methods.
+3. Closure refers to the practice of defining a variable within a function and then nesting another function in order for the variable to have local (private)scope instead of global scope. 
+4. a. Window/Global binding occurs when the 'this' keyword is invoked outside of the context of a defined object. b. Implicit binding occurs when 'this' is invoked as part of a function that is called using dot notation. The context is the object to the left of the dot. c. Explicit binding occurs when 'this' is invoked as part of a function upon which .call, .apply, or .bind are used. d. New binding occurs when a constructor function is used to create a new object. The context is the specific instance of the object that is created by the constructor function.
+5. super() calls the constructor function from the parent so that the parent properties are inherited by the child class.
