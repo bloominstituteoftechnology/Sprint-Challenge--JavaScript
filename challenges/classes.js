@@ -1,6 +1,6 @@
 // Copy and paste your prototype in here and refactor into class syntax.
 class CuboidMaker {
-  constructor(cuboidInfo);{
+  constructor(cuboidInfo) {
     this.length = cuboidInfo.length;
     this.width = cuboidInfo.width;
     this.height = cuboidInfo.height;
