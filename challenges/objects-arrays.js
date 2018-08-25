@@ -96,7 +96,7 @@ for (i = 0; i < graduates.length; i++) {
     uni.push(graduates[i].university);
   }
 }
-console.log(uni);
+console.log(uni.length);
 
 // ==== Array Methods ====
 
