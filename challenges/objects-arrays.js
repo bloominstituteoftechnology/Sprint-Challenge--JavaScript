@@ -8,9 +8,36 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
+const tyrannosaurus = {
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceious',
+  roar(){
+    return `RAWERSRARARWERSARARARRRR!`;
+  }
+};
+
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
+const stegosaurus = {
+  name: 'stegosaurus',
+  diet: 'herbivorous',
+  weight: '2000kg',
+  length: '9m',
+  period: 'Late Jurassic',
+};
+
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+
+const velociraptor = {
+  name: 'velociraptor',
+  diet: 'carnivorous',
+  weight: '15kg',
+  length: '1.8m',
+  period: 'Late Cretaceious',
+};
 
 // Using your dinosaur objects, log answers to these questions:
 
@@ -45,8 +72,66 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
+const allUniversities = [];
+
+const getUnis= (arr)=> {for (let i=0; i<arr.length;i++) {
+  allUniversities.push(arr[i].university);
+  }
+}
+getUnis(graduates);
+console.log(allUniversities);
+
 const universities = [];
+
+const alphabetizeUnis = (arr)=>{
+  universities.push(arr.sort());
+}
+
+alphabetizeUnis(allUniversities);
+
 console.log(universities)
+
+//**Stretch - sort without the sort method
+
+function sortWithoutSort(arr){
+  var minIndex, temporary, length = arr.length;
+
+  for (i=0; i<length; i++){
+    minIndex = i;
+    for (j=i+1; j<length; j++){
+      if(arr[j]<arr[minIndex]){
+        minIndex = j;
+      }
+    }
+    temporary = arr[i];
+    arr[i] = arr[minIndex];
+    arr[minIndex] = temporary;
+  }
+  return arr;
+}
+
+console.log(sortWithoutSort(allUniversities));
+
+//*** Sprint Review: Would like to go over how to create a sort function that calls in the character code (charCodeAt) to give numerical value to the strings we're sorting in this function
+// I tried to console.log() through the function but can't figure out where to add charCodeAt to visibly compare the code values
+
+// function sortWithoutSort(arr){
+//   var minIndex, temporary, length = arr.length;
+
+//   for (i=0; i<length; i++){
+//     minIndex = i; console.log(`First ${minIndex}`);
+//     for (j=i+1; j<length; j++){
+//       if(arr[j]<arr[minIndex]){
+//         minIndex = j;
+//         console.log(`Now ${arr[j]}`);console.log(`Next ${arr[j]}`)
+//       }
+//     }
+//     temporary = arr[i]; console.log(`This is temporary ${temporary}`);
+//     arr[i] = arr[minIndex]; console.log(`This is arr[i]: ${arr[i]}`);
+//     arr[minIndex] = temporary; console.log(`This is arr[minIndex]: ${minIndex}`);
+//   }
+//   return arr;
+// }
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -55,11 +140,35 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+
+const getInfo = (arr) => {
+  for (let i=0; i<arr.length; i++) {
+    contactInfo.push(`${arr[i].first_name} ${arr[i].email}`)
+  }
+}
+
+getInfo(graduates);
+
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+
+const findUni = (arr) => {
+  const stringGrads = [];
+  for (let i=0; i<arr.length; i++) {
+    stringGrads.push(arr[i].university.toString())
+    }
+  for (let i=0; i<stringGrads.length; i++) {
+    if (stringGrads[i].includes('Uni') === true) {
+      uni.push(stringGrads[i])
+    }
+  }
+  }
+
+findUni(graduates);
+
 console.log(uni);
 
 
@@ -80,8 +189,16 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 const lowerCase = [];
+
+let lower = zooAnimals.map((item) => {
+    lowerCase.push(item.animal_name.toLowerCase())
+    })
+
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 const populationTotal = [];
+
+let totalTally = zooAnimals.reduce(population = (accum, total)=>{return accum += total.population}, 0)
+populationTotal.push(totalTally)
 console.log(populationTotal);
