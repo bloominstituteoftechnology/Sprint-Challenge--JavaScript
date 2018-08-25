@@ -71,7 +71,8 @@ const universities = [];
 for (let i = 0; i < graduates.length; i++) {
   universities.push(graduates[i].university)
 }
-console.log(universities.sort())
+universities.push(universities.sort())
+console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
