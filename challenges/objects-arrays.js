@@ -6,6 +6,41 @@
   object name, diet, weight, length, period
 */
 
+class Dinosaur { 
+  constructor(dinosaur) {
+    this.name = dinosaur.name;
+    this.diet = dinosaur.diet;
+    this.weight = dinosaur.weight;
+    this.length = dinosaur.length; 
+    this.timePeriod = dinosaur.timePeriod;
+    this.roar = dinosaur.roar;
+  }
+}
+
+var tyrannosaurus = new Dinosaur ({
+    name: "tyrannosaurus",
+    diet: "carnivorous",
+    weight: 7000,
+    length: 12,
+    timePeriod: "Late Cretaceious",
+
+    roar: () => {
+      return `RAWERSRARARWERSARARARRRR`
+    }
+})
+
+var stegosaurus = new Dinosaur ({
+  name: "stegosaurus", diet: "herbivorous", weight: 2000, length: 9, timePeriod: "Late Jurassic",
+})
+
+var velociraptor = new Dinosaur ({
+  name: "velociraptor", diet: "carnivorous", weight: 15, length: 1.8, timePeriod: "Late Cretaceious",
+})
+
+
+
+
+
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -21,7 +56,7 @@ console.log(velociraptor.diet);
 // How long was a stegosaurus?
 console.log(stegosaurus.length);
 // What time period did tyrannosaurus live in?
-console.log(tyrannosaurus.period);
+console.log(tyrannosaurus.timePeriod);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 console.log(tyrannosaurus.roar());
