@@ -7,24 +7,44 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
+function consume(callback) {
+  var a =  1
+  var b =  2
+  return callback(a, b);
+}
+
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
+  * 
+  * 
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function add(a, b) {
+  console.log(a + b);
+}
 
-/* Step 3: Check your work by uncommenting the following calls to consume(): */
-//consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+function multiply(a, b) {
+  console.log(a * b);
+
+}
+
+function greeting(a, b) {
+  console.log('Hello ' + a + b + ' nice to meet you!');
+
+}
+
+consume(2,2,add); 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: Internal is within its function scope
 
 
 const external = "I'm outside the function";
