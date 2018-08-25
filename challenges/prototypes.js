@@ -40,7 +40,7 @@ const cuboid = new CuboidMaker ({
   length: 4,
   width: 5,
   height: 5,
-})
+});
   
 
 
