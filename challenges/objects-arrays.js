@@ -85,10 +85,12 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 
-function grabUni (item) {
-	universities.push(`${item.university}`)
+const grabUni = (arr) =>  {
+	for(let i = 0; i < arr.length; i++) {
+		universities.push(`${arr[i].university}`)
+	}
 }
-graduates.forEach(grabUni);
+grabUni(graduates);
 universities.sort();
 console.log(universities)
 
@@ -100,20 +102,25 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 
-graduates.map(function(item) {
-	contactInfo.push(`${item.first_name} ${item.email}`);
-})
+const grabContactInfo = (arr) => {
+	for(let i = 0; i < arr.length; i++) {
+		contactInfo.push(`${arr[i].first_name} ${arr[i].email}`)
+	}
+}
+grabContactInfo(graduates);
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-
-for(let i = 0; i < graduates.length; i++) {
-	if (graduates[i].university.includes('Uni')) {
-		uni.push(graduates[i].university);
+const stringCheck = (arr) => {
+	for(let i = 0; i < arr.length; i++) {
+		if (arr[i].university.includes('Uni')) {
+			uni.push(arr[i].university);
+		}
 	}
 }
+stringCheck(graduates);
 console.log(uni);
 
 
