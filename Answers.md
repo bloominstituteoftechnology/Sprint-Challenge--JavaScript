@@ -37,3 +37,5 @@ greet();
 
 
 5) Why do we need super() in an extended class?
+
+This is quite standard in programming and allows you to access the objects parent including variables, functions etc.
