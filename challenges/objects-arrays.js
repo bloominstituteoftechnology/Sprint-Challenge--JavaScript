@@ -5,9 +5,22 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
+function Dino(obj) {
+  this.name = obj.name;
+  this.diet = obj.diet;
+  this.weight = obj.weight;
+  this.length = obj.length;
+  this.period = obj.period;
+  };
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
-
+let tyrannosaurus = new Dino({
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceious',
+  })
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
