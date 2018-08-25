@@ -26,7 +26,7 @@ Answer the following questions to the best of your ability. You can exercise you
 
 Test your knowledge of objects and arrays.
 
-- [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started. Read the instructions carefully!
+- [x] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started. Read the instructions carefully!
 
 ## Task 4: Functions
 
