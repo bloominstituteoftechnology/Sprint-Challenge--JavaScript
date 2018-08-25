@@ -88,12 +88,12 @@ Log the result of your new array. */
 const contactInfo = [];
 
 
-var i;
-for (i = 0; i < graduates.length; i++) {
-    contactInfo.push(graduates.first_name + ' ' + graduates.email);
-}
+// var i;
+// for (i = 0; i < graduates.length; i++) {
+//     console.log(contactInfo.push(graduates.first_name + ' ' + graduates.email));
+// }
 
-console.log(contactInfo);
+// console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
@@ -103,7 +103,7 @@ const uni = [];
 //   if(graduates['university'].includes('Uni')){
 //     uni.push(graduates[i])};
 // }
-console.log(uni);
+// console.log(uni);
 
 
 // ==== Array Methods ====
@@ -122,11 +122,17 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-const lowerCase = [];
+const lowerCase =[];
 
 
-console.log(lowerCase);
+// Object.keys(zooAnimals).map(e => {
+//     console.log(lowerCase.push(`key= ${e} value = ${zooAnimals[e]}`))
+// });
+//
+
+
+// console.log(lowerCase);
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 const populationTotal = [];
-console.log(populationTotal);
+// console.log(populationTotal);
