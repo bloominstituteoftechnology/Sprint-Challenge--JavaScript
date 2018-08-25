@@ -52,7 +52,7 @@ class Cube extends CuboidMaker  {
         let radius = this.length/2
         return this.volume() - (4/3)*(Math.PI*radius*radius*radius);
     }
-    //this is essentially the volume of the cube that would not be taken up by the
+    //this is the volume of the cube that would not be taken up by the
     //volume of a sphere that sits in the center of a cube with sides that are tangent
     //to the center of the cubes sides.
 }
