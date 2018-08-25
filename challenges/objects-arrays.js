@@ -89,8 +89,6 @@ function sortArray(arr, type='old') {
         for( let k = 0; k < tempArray.length; k++ ) {
           if( tempArray[i] < tempArray[k] )
             lowest = tempArray[i];
-          else
-            lowest = tempArray[k];
         } // End 'k' loop
       } // End 'i' loop
       sortedArray.unshift(lowest);
