@@ -38,7 +38,7 @@ function greeting (firstName, lastName) {
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: Since it's nested in myFunction, and since inner functions have access to the variables defined in outer functions, nestedFunction has access to all of the variables (including internal) defined above it.
 
 
 const external = "I'm outside the function";
