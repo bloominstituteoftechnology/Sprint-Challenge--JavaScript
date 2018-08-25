@@ -56,36 +56,21 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 
-function grabUniversity(arr, callback) {
-  let universities = [];
-  for (i = 0; i < arr.length; i++) {
-    const returnFromCallback = callback(arr[i], i, arr);
-    universities.push(returnFromCallback);
-  }
-  return universities;
+function cl(element, index, array) {
+  return element.university;
 }
 
-console.log(grabUniversity())
+function grabUniversity(arr, callback) {
+let universities = [];
+for (i = 0; i < arr.length; i++) {
+  const returnFromCallback = callback(arr[i], i, arr);
+  universities.push(returnFromCallback);
+}
+return universities;
+}
 
-
-// map to return array of university from graduates array
-// graduates.map((element,index) => {
-//   return element.university;
-// })
-
-// const universities = ['Missouri Southern State College',
-// 'The School of the Art Institute of Chicago',
-// 'Marian College',
-// 'International Medical & Technological University',
-// 'Sultan Salahuddin Abdul Aziz Shah Polytechnic',
-// 'Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft',
-// 'Salem University',
-// 'Coastal Carolina University',
-// 'Universidad Católica de Ávila',
-// 'Universitat Rovira I Virgili Tarragona'];
-
-
-console.log(universities.sort())
+console.log(grabUniversity(graduates, cl));           // all universities
+console.log(grabUniversity(graduates, cl).sort());    // all universities sorted
 
 /* Sorted university array = ​​​​​[ 'Coastal Carolina University',​​​​​
 ​​​​​  'Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft',​​​​​
