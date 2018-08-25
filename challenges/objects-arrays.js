@@ -68,10 +68,21 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universitiesSort = function()  {
     const arr = []
-    for(i = 0; i < graduates.length; i++)    {
-            arr[i] = graduates[i].university
+    for(x = 0; x < graduates.length; x++)    {
+            arr[x] = graduates[x].university
     }
-    return arr.sort();
+    let i = 1;
+    while( i < arr.length)  {
+        let j = i;
+        while (j > 0 && arr[j-1] > arr[j]) {
+            let save = arr[j];
+            arr[j] = arr[j-1];
+            arr[j-1] = save;
+            j = j - 1;
+        }
+        i += 1;
+    }
+    return arr;
 }
 const universities = universitiesSort();
 
