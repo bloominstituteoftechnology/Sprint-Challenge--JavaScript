@@ -48,3 +48,27 @@ console.log(cuboid.surfaceArea()); // 130
     Create a new cube object and log out the results of your new cube.
 
 */
+
+class CubeMaker extends CuboidMaker{
+  constructor(attributes){
+    super(attributes);
+    this.child = attributes.child;
+  }
+  cubeVolume(){
+    return Math.pow(this.length,3)
+  }
+  cubeSurfaceArea(){
+    return 6 * (Math.pow(this.length,2))
+  }
+}
+
+const cube = new CubeMaker({
+  length:4,
+  width:4,
+  height:4,
+  child:"I am a child!"
+})
+
+console.log(cube.cubeVolume());
+console.log(cube.cubeSurfaceArea());
+console.log(cube.child)
