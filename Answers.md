@@ -26,4 +26,14 @@ greet();
 
 
 4) Describe the four rules of the 'this' keyword.
+
+    0 - In the context of using a constructor 'this' refers to the instance of the object.
+
+    1 - To start off, when  you use the 'this' keyword in a global scope you're referring to the window.
+
+    2 - Using call or apply the first item that is set is what 'this' is referring to.
+
+    3 - When you use a method inside a function the object before the dot is defined as 'this'
+
+
 5) Why do we need super() in an extended class?
