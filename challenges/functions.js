@@ -41,7 +41,7 @@ ${consume("Mary","Poppins", cbGreeting)}`)
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation:
-
+Because `nestedFunction` exists within the function scope of `myFunction`, it can access the variable `internal`, which exists in both the function scope where it was created as well as the lexical scope in which it is executed. 
 
 const external = "I'm outside the function";
 
