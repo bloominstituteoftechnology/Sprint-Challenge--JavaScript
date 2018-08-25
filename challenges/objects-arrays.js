@@ -7,6 +7,7 @@
 */
 
 const tyrannosaurus = {
+    name: 'tyrannosaurus',
     diet: 'carnivorous', 
     weight: '7000kg', 
     length: '12m', 
@@ -14,13 +15,15 @@ const tyrannosaurus = {
 }
 
 const stegosaurus = {
+    name: 'stegosaurus',
     diet: 'herbivorous', 
     weight: '2000kg', 
     length: '9m', 
     period: 'Late Jurassic'
 }
 
-const velociraptor = { 
+const velociraptor = {
+    name: 'velociraptor',
     diet: 'carnivorous', 
     weight: '15kg', 
     length: '1.8m', 
@@ -43,7 +46,7 @@ tyrannosaurus.roar = function() {
     return "RAWERSRARARWERSARARARRRR!"
 }
 console.log(tyrannosaurus.roar());
-
+// You can also add roar: function () {return "RAWERSRARARWERSARARARRRR!" } in the object but I like doing the above.
 
 // ==== Arrays ====
 
