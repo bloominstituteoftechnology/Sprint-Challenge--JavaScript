@@ -81,5 +81,5 @@ const notACube = new CubeMaker({
   height: 5,
 })
 
-console.log(notACube.volume()); // 
-console.log(notACube.surfaceArea()); //
+console.log(notACube.volume()); // You have not created a cube!
+console.log(notACube.surfaceArea()); // You have not created a cube!

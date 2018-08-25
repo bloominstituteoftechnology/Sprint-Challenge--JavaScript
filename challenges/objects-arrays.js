@@ -8,32 +8,32 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 const tyrannosaurus = {
-name: "tyrannosaurus",
-diet: "carnivorous",
-weight: "7000kg",
-length: "12m",
-period: "Late Cretaceious",
-roar() {
-	return "RAWERSRARARWERSARARARRRR!"
-},
+	name: "tyrannosaurus",
+	diet: "carnivorous",
+	weight: "7000kg",
+	length: "12m",
+	period: "Late Cretaceious",
+	roar() {
+		return "RAWERSRARARWERSARARARRRR!"
+	},
 };
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const stegosaurus = {
-name: "stegosaurus",
-diet: "herbivorous",
-weight: "2000kg",
-length: "9m",
-period: "Late Jurassic",
+	name: "stegosaurus",
+	diet: "herbivorous",
+	weight: "2000kg",
+	length: "9m",
+	period: "Late Jurassic",
 };
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 const velociraptor = {
-name: "velociraptor",
-diet: "carnivorous",
-weight: "15kg",
-length: "1.8m",
-period: "Late Cretaceious",
+	name: "velociraptor",
+	diet: "carnivorous",
+	weight: "15kg",
+	length: "1.8m",
+	period: "Late Cretaceious",
 };
 
 // Using your dinosaur objects, log answers to these questions:
@@ -91,7 +91,6 @@ for (let i = 0; i < graduates.length; i++) {
 
 console.log(contactInfo);
 
-
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 
@@ -102,7 +101,6 @@ for (let i = 0; i < graduates.length; i++) {
 }
 
 console.log(uni);
-
 
 // ==== Array Methods ====
 
@@ -128,7 +126,6 @@ lowerCase = zooAnimals.map(animal => {
 });
 
 console.log(lowerCase); 
-
 
 // The zoos need to know their total animal population across the United States.  
 // Add up all the population numbers from all the zoos using the .reduce() method.
