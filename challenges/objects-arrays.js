@@ -90,6 +90,8 @@ for (let i = 0; i < graduates.length; i++){
 
 console.log(universities.sort())
 
+// myRepl https://repl.it/@d2rd/Sprint-Challenge-JavaScriptcspt2-University-Array  
+
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student.
 
 The resulting contact information should have a space between the first name and the email information like this:
@@ -97,8 +99,26 @@ Name email@example.com
 
 Log the result of your new array.
 */
-const contactInfo = []
-console.log(contactInfo)
+const contactInfo = [
+  {'id': 1, 'firstName': 'David', 'email': 'david@fake.com'},
+  {'id': 2, 'firstName': 'Dimwit', 'email': 'dimwit@fake.com'},
+  {'id': 3, 'firstName': 'fancy', 'email': 'fancy@phony.com'},
+  {'id': 4, 'firstName': 'pretty', 'email': 'pretty@poser.com'},
+  {'id': 5, 'firstName': 'smarty', 'email': 'smarty@fake.com'},
+]
+
+let contactList = []
+for (let i = 0; i < contactInfo.length; i++){
+  contactList.push(contactInfo[i].firstName + ' ' + contactInfo[i].email)
+  console.log(contactList[i])
+}
+
+let contactList = []
+for (let i = 0; i < contactInfo.length; i++){
+  contactList.push(contactInfo[i].firstName + ' ' + contactInfo[i].email)
+  console.log(contactList[i])
+}
+// myRepl https://repl.it/@d2rd/Sprint-Challenge-JavaScriptcspt2-ContactInfo-Array
 
 /* Request 3: Find out how many universities have the string 'Uni' included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = []
