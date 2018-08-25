@@ -37,7 +37,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.s
 
-// Explanation: 
+// Explanation: Since the internal variable existed at the time that the nestedfunction was created, the variable was within the scope of the function.
 
 
 const external = "I'm outside the function";
