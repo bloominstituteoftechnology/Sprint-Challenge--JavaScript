@@ -14,15 +14,34 @@ function CuboidMaker(attributes) {
 */
 class CuboidMaker {
   constructor(cuboid_attributes) {
+    this.dimensions = cuboid_attributes.dimensions;
+    /*
     this.length = cuboid_attributes.length;
     this.width = cuboid_attributes.width;
     this.height = cuboid_attributes.height;
+    */
   }
   volume() {
-    return this.length * this.width * this.height;
+   let vol = 0;
+                // test if dimensions is not an empty  { }
+          if(Object.keys(this.dimensions).length !== 0) {
+            vol = 1;
+            for(var key in this.dimensions) {    // iterate over dimensions to provide volume
+            vol *= this.dimensions[key];
+          }
+        }
+
+   return vol;
+
+   /*   if(Object.keys(this.dimensions).length !==0 ){    // easier way if dimensions are static
+        let dim = this.dimensions;
+        return dim.length * dim.width * dim.height;
+      }
+      return 0; */
   }
   surfaceArea() {
-    return (2* (this.length * this.width + this.length * this.height + this.width * this.height) );
+    let dim = this.dimensions;
+    return (2* (dim.length * dim.width + dim.length * dim.height + dim.width * dim.height) );
   }
 }
 
@@ -53,16 +72,22 @@ CuboidMaker.prototype.surfaceArea = function() {
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.
 */
 var cuboid = new CuboidMaker({
-  length: 4,
-  width: 5,
-  height: 5
+  dimensions: {
+    length: 4,
+    width: 5,
+    height: 5
+  }
+});
+
+var cuboid2 = new CuboidMaker({
+  dimensions: { }
 });
 
 
-
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid.volume());
+//console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
 
 
 /* Stretch Task:
@@ -88,5 +113,5 @@ class CubeMaker extends CuboidMaker {
 
 var cube = new CubeMaker({sideLength: 2});
 
-console.log(cube.cubeVolume());
-console.log(cube.cubeSurfaceArea());
+// console.log(cube.cubeVolume());
+// console.log(cube.cubeSurfaceArea());
