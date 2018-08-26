@@ -64,7 +64,7 @@ console.log(tyrannosaurus.doRoar())
 
 // ==== Arrays ====
 
-// Given an array of college graduates.  Complete the following requests without using any array methods like .forEach(), .map(), .reduce(), .filter()
+// Given an array of college graduates.  Complete the following requests WITHOUT using any array methods like .forEach(), .map(), .reduce(), .filter()
 
 const graduates = [
   {'id': 1, 'first_name': 'Cynde', 'university': 'Missouri Southern State College', 'email': 'ctorry0@macromedia.com'},
@@ -92,6 +92,8 @@ console.log(universities.sort())
 
 // myRepl https://repl.it/@d2rd/Sprint-Challenge-JavaScriptcspt2-University-Array  
 
+
+
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student.
 
 The resulting contact information should have a space between the first name and the email information like this:
@@ -99,6 +101,9 @@ Name email@example.com
 
 Log the result of your new array.
 */
+
+/*  THIS SOLUTION IS WRONG MISREAD THE PROBLEM 
+WILL REFACTOR TO USE THE GIVEN ARRAY */
 const contactInfo = [
   {'id': 1, 'firstName': 'David', 'email': 'david@fake.com'},
   {'id': 2, 'firstName': 'Dimwit', 'email': 'dimwit@fake.com'},
@@ -123,6 +128,18 @@ for (let i = 0; i < contactInfo.length; i++){
 /* Request 3: Find out how many universities have the string 'Uni' included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = []
 console.log(uni)
+/*  WIP */
+let uni = []
+// console.log(uni)
+
+// let universities = []
+for (let i = 0; i < graduates.length; i++){
+  uni.push(graduates[i].university.match(/Uni/))
+  console.log(uni[i])
+}
+
+
+
 
 // ==== Array Methods ====
 
