@@ -72,11 +72,21 @@ const universities = [];
 for(let i = 0; i < graduates.length; i++) {
 	  universities[i] = graduates[i].university;
 }
-								// graduates.forEach(function(obj){
-								//       universities.push(obj.university);
-								// });
-universities.sort();
-console.log(universities)
+								
+function arraySorter(arr) {
+	for(let i = 0; i < arr.length; i++) {
+		for(let j=0; j < arr.length-1; j++) {
+			if(arr[j] > arr[j+1]) {
+				 var temp = arr[j];
+				 arr[j] = arr[j+1];
+				 arr[j+1] = temp
+			}
+		}
+	}
+	return arr;
+}
+
+console.log(arraySorter(universities));
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -88,9 +98,7 @@ const contactInfo = [];
 for(let i = 0; i < graduates.length; i++) {
 	  contactInfo[i] = `${graduates[i].first_name} ${graduates[i].email}`;
 }
-// graduates.forEach(function(obj){
-// 	  contactInfo.push(`${obj.first_name} ${obj.email}`);
-// });
+
 console.log(contactInfo);
 
 
@@ -105,11 +113,7 @@ for(let i = 0; i<graduates.length; i++) {
 	 	        count++;
 	 } 
 }
-// graduates.forEach(function(obj){
-// 	 if(obj.university.includes('Uni')) {
-// 	 	uni.push(obj.university);
-// 	 }
-// })
+
 console.log(uni);
 
 
@@ -145,3 +149,8 @@ let total = zooAnimals.map(function(obj){
 });
 populationTotal.push(total);
 console.log(populationTotal);
+
+
+
+ 
+
