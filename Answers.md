@@ -15,10 +15,12 @@
         foo is a function or method that is contained within myObject.  The this keyword within foo() is assigned to myObject.
 
 * **Explicit Binding**
-        This can occur using one of three methods:  Call(), Apply(), or Bind().  For each of these the object that we want to assign to the
-        this keyword is explicitly given.
+        This can occur using one of three methods:  Call(), Apply(), or Bind().  For each of these the object that we want to assign to the this keyword is explicitly given.
+
         .call() example:  foo().call(myObject) - foo function is called and this is assigned to myObject.
+
         .apply() example: foo().apply(myObject) -  Same as .call()  - the two methods differ in how they pass parameters to the function
+
         .bind example:   const newFoo = foo.bind(myObject);
             When using the .bind method, a new function is created.  The new function's 'this' is explicitly bound to the object that is listed in the .bind argument list (myObject).  Anytime the new function is called, such as newFoo(), 'this' will be equal to myObject.
 
