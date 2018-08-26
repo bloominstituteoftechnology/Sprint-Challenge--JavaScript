@@ -12,27 +12,26 @@
 //   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 // }
 
-class CuboidMaker{
-  constructor(length,width,height){
-    this.length = length;
-    this.width  = width;
-    this.height = height;
-  }
-  
-  volume(){
-    return this.length * this.width * this.height;
+class CuboidMaker {
+  constructor (length, width, height) {
+    this.length = length
+    this.width = width
+    this.height = height
   }
 
-  surfaceArea(){
-    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  volume () {
+    return this.length * this.width * this.height
+  }
+
+  surfaceArea () {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
   }
 }
 
-
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-const cuboid = new CuboidMaker(4,5,5)
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+const cuboid = new CuboidMaker(4, 5, 5)
+console.log(cuboid.volume()) // 100
+console.log(cuboid.surfaceArea()) // 130
 
 /* Stretch Task:
 
@@ -40,19 +39,19 @@ console.log(cuboid.surfaceArea()); // 130
 
 */
 
-class CubeMaker extends CuboidMaker{
-  constructor(length,width,height){
-    super(length,width,height);
-  }
-  volume(){
-    return 6 * (this.length * this.height * this.width);
-  }
-  surfaceArea(){
-    return 6 *(this.length * this.length)
-  }
-}
+// class CubeMaker extends CuboidMaker {
+//   constructor (length, width, height) {
+//     super(length, width, height)
+//   }
+//   volume () {
+//     return 6 * (this.length * this.height * this.width)
+//   }
+//   surfaceArea () {
+//     return 6 * (this.length * this.length)
+//   }
+// }
 
-const cubic = new CubeMaker(5,6,7)
-console.log(cubic);
-console.log(cubic.volume());
-console.log(cubic.surfaceArea());
+// const cubic = new CubeMaker(5, 6, 7)
+// console.log(cubic)
+// console.log(cubic.volume())
+// console.log(cubic.surfaceArea())
