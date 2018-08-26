@@ -125,6 +125,15 @@ for (let i = 0; i < contactInfo.length; i++){
 }
 // myRepl https://repl.it/@d2rd/Sprint-Challenge-JavaScriptcspt2-ContactInfo-Array
 
+
+// ====== REFACTOR TO USE GRADUATES ARRAY ====
+let contactGrads = []
+
+for (let i = 0; i < graduates.length; i++){
+  contactGrads.push(graduates[i].first_name + ' ' + graduates[i].email)
+  console.log(contactGrads[i])
+}
+
 /* Request 3: Find out how many universities have the string 'Uni' included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = []
 console.log(uni)
