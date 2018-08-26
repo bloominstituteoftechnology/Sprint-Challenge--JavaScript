@@ -155,7 +155,7 @@ const uni = [];
 console.log(uni);
 const includesFunction = (arr, i) => {
   for (var i = 0; i < graduates.length; i++) {
-    if (graduates[i].university.indexOf("uni")) {
+    if (graduates[i].university.includes("Uni")) {
       uni.push(graduates[i].university);
     }
   }
