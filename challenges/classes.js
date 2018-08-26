@@ -39,3 +39,20 @@ console.log(cuboid.surfaceArea()); // 130
   Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods as well.  Create a new cube object and log out the results of your new cube.
 
 */
+
+class CubeMaker extends CuboidMaker{
+  constructor(length,width,height){
+    super(length,width,height);
+  }
+  volume(){
+    return 6 * (this.length * this.height * this.width);
+  }
+  surfaceArea(){
+    return 6 *(this.length * this.length)
+  }
+}
+
+const cubic = new CubeMaker(5,6,7)
+console.log(cubic);
+console.log(cubic.volume());
+console.log(cubic.surfaceArea());
