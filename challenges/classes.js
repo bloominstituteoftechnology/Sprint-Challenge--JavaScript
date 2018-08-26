@@ -30,5 +30,28 @@ class CuboidMaker {
   }
   });
 
+  class CubeMaker extends CuboidMaker {
+    constructor(options) {
+        super(options)
+        this.side = options.side;
+    }
+    cubeVolume() {
+      return Math.pow(this.side,3);
+    }
+    cubeSurface() {
+      return (this.side * this.side) * 6;
+    }
+  }
+
+const cube = new CubeMaker ({
+    length: 4,
+    width: 5,
+    height: 5,
+   side: 6,
+  });
+
+
   console.log(cuboid.volume()); // 100
  console.log(cuboid.surfaceArea()); // 130
+ console.log(cube.cubeVolume());
+ console.log(cube.cubeSurface());
