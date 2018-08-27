@@ -94,7 +94,7 @@ console.log(contactInfo);
 const uni = [];
 
 for (let i = 0; i < graduates.length; i++) {
-    if (graduates[i].university.indexOf('Uni') >= 0 ) {
+    if (graduates[i].university.indexOf('Uni') !== -1) {
         uni.push(graduates[i].university);
     }
 }
