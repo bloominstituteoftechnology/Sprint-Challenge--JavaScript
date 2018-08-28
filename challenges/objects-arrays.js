@@ -6,13 +6,13 @@
   object name, diet, weight, length, period
 */
 
-const makeDino = function (name, diet, weight, length, period){
+const makeDino = function (obj){
 
-  this.name = name ;
-  this.diet = diet;
-  this.weight = weight;
-  this.length = length ;
-  this.period = period;
+  this.name = obj.name ;
+  this.diet = obj.diet;
+  this.weight = obj.weight;
+  this.length = obj.length ;
+  this.period = obj.period;
 
 }
 
@@ -34,6 +34,7 @@ console.log(vRaptor.diet);
 console.log(Stego.length);
 // What time period did tyrannosaurus live in?
 console.log(tRex.period);
+
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 
