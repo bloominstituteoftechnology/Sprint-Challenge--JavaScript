@@ -14,4 +14,7 @@
     Explicit binding 
         You explicitly set what 'this' refers to by using .call, .apply, or .bind
 
+    Window binding
+        'this' refers to the Window in this case.
+
 5. you need super() to bring the parent constructor functions parameters into the child. Extends will set the childs prototype equal to that of     the partents
