@@ -16,15 +16,17 @@ class CuboidMaker {
     this.width = cuboidObj.width;
     this.height = cuboidObj.height;
   } //cuboidObj
-} //CuboidMaker
 
-cuboidMaker.prototype.volume = function() {
+
+volume() {
   return this.length * this.width * this.height;
-}
+};
 
-cuboidMaker.prototype.surfaceArea = function(){
-  return 2*(this.length * this.width + this.width * this.height + this.width * this.height);
-}
+surfaceArea() {
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+};
+
+} //CuboidMaker
 
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
