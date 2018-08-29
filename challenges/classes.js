@@ -7,18 +7,18 @@ class CuboidMaker {
 		this.height = data.height;
 	}
 	volume() {
-		let anw = this.length * this.width * this.height;
-		return anw;
-		console.log(anw);
+		let answer = this.length * this.width * this.height;
+		return answer;
+		console.log(answer);
 	}
 	surfaceArea() {
-		let anw =
+		let answer =
 			2 *
 			(this.length * this.width +
 				this.length * this.height +
 				this.width * this.height);
-		return anw;
-		console.log(anw);
+		return answer;
+		console.log(answer);
 	}
 }
 

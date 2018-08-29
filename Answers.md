@@ -1,6 +1,6 @@
 # 1. Describe the biggest difference between `.forEach` & `.map`.
 
-'.forEach' does something to every element in an array and you tell it what to do with those elements. Therefore, it will return whatever you specify. '.map' does something to every element but always returns a new array with each item edited in the manner you specified.
+'.forEach' executes a given function on each element of an array. '.map' also takes a function to execute upon every element, and automatically returns a new array which is the result of calling that function on each element. Therefore forEach does not automatically return anything, but map always returns an array.
 
 # 2. What is the difference between a function and a method?
 
@@ -9,6 +9,8 @@ A method is a function. It's just a function which lives on an object. You call 
 # 3. What is closure?
 
 Javascript is like a russian nesting doll, or an onion, or a series of boxes enclosing each other. Every time you make a new scope (signified by use of brackets) you move one level 'in' the nesting. Closure refers to the current scope you are in. A closure has access to all the variables outside of itself, but cannot go further in to get a value (although something further in can purposely return something up to a higher closure, such as in recursion... but to that lower function, the closure we are in is "higher").
+
+A closure refers to any function inside another function which has access to the variables of the function it is inside, as well as global variables or variables inside additional enclosing functions.
 
 # 4. Describe the four rules of the 'this' keyword.
 

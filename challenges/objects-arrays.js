@@ -125,12 +125,11 @@ const graduates = [
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 function makeUniversities(graduates) {
-	for (i = 1; i < graduates.length; i++) {
+	for (i = 0; i < graduates.length; i++) {
 		universities.push(graduates[i].university);
 	}
 }
 makeUniversities(graduates);
-universities = Array.sort(universities);
 universities.sort();
 console.log(universities);
 
@@ -142,7 +141,7 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 function makeContactInfo(graduates) {
-	for (i = 1; i < graduates.length; i++) {
+	for (i = 0; i < graduates.length; i++) {
 		contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
 	}
 }

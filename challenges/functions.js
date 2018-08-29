@@ -22,13 +22,13 @@
 //nestedfunction() can access the variable internal because internal is housed in the myFunction scope which encloses nestedFunction.  nestedFunction() can look"up" to get the value of variables which are are in closures around it.  But it cannot look "down" to get variables it itself encloses.
 
 function consume(paramOne, paramTwo, callback) {
-	let answ = callback(paramOne, paramTwo);
-	console.log(answ);
+	let answer = callback(paramOne, paramTwo);
+	console.log(answer);
 }
 
 function add(paramOne, paramTwo) {
 	let answ = paramOne + paramTwo;
-	return answ;
+	return answer;
 }
 
 function multiply(paramOne, paramTwo) {
