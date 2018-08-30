@@ -1,1 +1,5 @@
-
+The difference between .forEach and .map are that .forEach doesn't return a new array where as .map does. .forEach and .map will call a function to each element of your array.
+I think the biggest difference between a method and a function is location, location, location. A method is a defined function that is a property of an object. a function is defined outside of the object.
+A closure is an inner function that has access to the information of its outer function/parent function. It has three scopes in that it has access to its own variables, it's parents variables, and global variables.
+The 'this' keywords four rules or types are implicit, explicit, new and window/global. implicit is where your this refers to whatever is left of the dot. explicit works when you use .call, .apply. or .bind.when using new, javascript will create a new object where the 'this' keyword is bound to the new object being made.when this keyword isn't specified to a function its considered to be global/or on the window.
+We need super() in an extends class because thats how we access and call functions on the objects parents, instead of having to duplicate code.
