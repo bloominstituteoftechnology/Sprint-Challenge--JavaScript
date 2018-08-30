@@ -1,4 +1,4 @@
-# Assessing your JavaScript Fundamentals
+# Assessing your JavaScript Fundamentals (Jen)
 This sprint you worked really hard on learning the fundamentals of JavaScript! This sprint challenge will touch on each concept covered throughout this week.  Follow each task in order but feel free to skip something if you're struggling and come back to it later.
 
 * This project is to be worked on alone but you can use outside resources. You can _reference_ any old code you may have and the training kit content.
