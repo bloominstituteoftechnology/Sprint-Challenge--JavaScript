@@ -24,7 +24,7 @@ let dinosaur = {
     weight: '15 kg',
     length: '1.8 m', 
     period: 'Late Cretaceious',
-    roar: null
+    
 
   },
 
@@ -34,7 +34,7 @@ let dinosaur = {
     weight: '2000 kg',
     length: '9 m',
     period: 'Late Jurassic',
-    roar: null
+    
 
   }
 }
@@ -76,46 +76,60 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array. 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 
-const universities = ["The School of the Art Institute of Chicago", "Missouri Southern State College", "Marian College", "International Medical & Technoligical Univeristy", 
-"Sultan Salahuddin Abdul Aziz Shah Polytechnic", "Fachhochschule Rosenheim", "Salem University ", "Coastal Carolina University", 
-"Universidad Catolica de Avila", "Universitat Rovira I Virgili Tarragona"];
-console.log(universities)
+const universities = [];
+for(let i = 0; i < graduates.length ; i++){
+
+  universities.push(graduates[i].university);
+console.log(universities);
+}
+
+
+
+universities.sort();
+
+console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 The resulting contact information should have a space between the first name and the email information like this: 
 Name email@example.com
 Log the result of your new array. */
-const contactInfo = [
-];
+const contactInfo = [];
 
-function callCard (name){
+function callCard (array){
   for(let i = 0; i < graduates.length; i++){
-  let mail = graduates.email;
-  let first = graduates.first_name;
+  let mail = graduates[i].email;
+  let first = graduates[i].first_name;
 
   contactInfo.push(`${first} : ${mail}`);
 
 }
 }
 
+callCard(graduates);
+
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
-console.log(uni);
 
-function filterSchools (str) {
-for(i = 0; i < graduates.length; i++){
-  x = str.startsWith('Uni');
 
-uni.push(x);
 
+function filterSchools (array) {
+  const uni = [];
+for(i = 0; i < array.length; i++){
+  let finder = 'Uni';
+  let schools = array[i].university;
+ if(schools.includes(finder)){
+
+  uni.push(schools);
+ }
+ 
 }
-  
-
+return uni;
 }
-console.log(uni);
+console.log(filterSchools(graduates));
+//console.log(uni);
+
 
 // ==== Array Methods ====
 
@@ -133,28 +147,26 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-const lowerCase = [];
+//const lowerCase = [];
 
 
-function inLowerCase(name){
-  var grabName = zooAnimals.animal_name; //grab first names
-  var toString = grabName.toString(); // change to string
- var convert = toString.toLowerCase(); // convert to Uppercase
+// function inLowerCase(array){
+//   this.animal_name = animal_name;
+//   //var grabName = animal_name[0]; //grab first names
+//   //console.log(grabName);
+//   var result = array.map(grabName => grabName[0].toLowerCase()); // change to lowercase
+// console.log(result);
  
 
-return convert; //returning the converted first_name
+// return result; //returning the converted first_name
 
 
-}
+// }
 
- let allLowerCase = lowerCase.map(inLowerCase); // mapping function to object
+const lowerCase = zooAnimals.map(item => item.animal_name.toLowerCase());
 
+console.log(lowerCase);
 
-
-
-console.log(allLowerCase); 
-
-console.log(lowerCase); 
 
 
 
@@ -170,7 +182,7 @@ populationTotal.push(x.population);
 
 zooAnimals.forEach(push); //loop the push through the whole object
 
-let total = populationTotal.reduce(function (init, num){ init + num;}); //add up all values
+let total = populationTotal.reduce((start, finish) => start + finish); //add up all values
 console.log(total);
 
 
