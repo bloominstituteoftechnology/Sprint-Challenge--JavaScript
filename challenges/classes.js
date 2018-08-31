@@ -31,25 +31,27 @@ Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out t
 class CubeMaker extends CuboidMaker {
   constructor(obj) {
     super(obj);
-    this.length = obj.length;
-    this.width = obj.width;
-    this.height = obj.height;
+    this.side = obj.side;
   }
   volume() {
-    return this.length * this.width * this.height;
-  }
+    return Math.pow(this.side, 3);
+  };
   surfaceArea() {
-    return 2 * (this.length * this.width + (this.length * this.height) + (this.width * this.height));
-  }
+    return 6 * Math.pow(this.side, 2);
+  };
 }
 
 const cuber = new CubeMaker ({
   length: 6,
   width: 9,
   height: 2,
+  side: 4,
 })
 
 console.log(cuber.height);
 console.log(cuber.width);
 console.log(cuber.volume());
 console.log(cuber.surfaceArea());
+
+
+
