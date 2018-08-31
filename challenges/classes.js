@@ -8,11 +8,11 @@ class CuboidMaker{
   this.height = cuboid.height;
   };
   volume() {
-  return this.length * this.width * this.height;
-};
+    return this.length * this.width * this.height;
+  };
   surfaceArea() {
-  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
-};
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  };
 }
 
 const cuboid = new CuboidMaker({

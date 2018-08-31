@@ -7,7 +7,7 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-let consume = (arg1, arg2, cb) => {
+const consume = (arg1, arg2, cb) => {
   return cb(arg1, arg2);
 };
 
@@ -18,15 +18,15 @@ let consume = (arg1, arg2, cb) => {
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-let add = (num1, num2) => {
+const add = (num1, num2) => {
   return num1 + num2;
 };
 
-let multiply = (num1, num2) => {
+const multiply = (num1, num2) => {
   return num1 * num2;
 };
 
-let greeting = (firstName, lastName) => {
+const greeting = (firstName, lastName) => {
   return `Hello ${firstName} ${lastName}, nice to meet you!`;
 };
 
