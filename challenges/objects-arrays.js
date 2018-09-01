@@ -86,22 +86,23 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo2 = [];
 for (let i = 0; i < graduates.length; i++) {
-	const f = graduates[i].first_name
-	const e = graduates[i].email
-	const fe = f + " " + e
-	return (fe)
+const f = graduates[i].first_name;
+const e = graduates[i].email;
+const fe = `${f} ${e}`;
+contactInfo2.push(fe);
 }
 console.log(contactInfo2);
 
 
+
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+const uni = []
 for (let i = 0; i < graduates.length; i++){
-  const has = graduates.university
-  const num = has.search('uni')
-  return num
-}
-  
+	const unix = graduates[i].university;
+	const included = 'Uni';
+  	const result = unix.match(included);
+  	uni.push(result);
+} 
 console.log(uni);
 
 
@@ -127,4 +128,5 @@ console.log(lowerCase);
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 const populationTotal = [];
+
 console.log(populationTotal);
