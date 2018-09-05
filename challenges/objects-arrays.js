@@ -6,6 +6,34 @@
   object name, diet, weight, length, period
 */
 
+
+const tyrannosaurus = {
+	diet: "carnivorous",
+	weight: "7000kg",
+	length: "12m",
+	period: "Late Cretaceious",
+};
+
+const stegosaurus = {
+	diet: "herbivorous",
+	weight: "2000kg",
+	length: "9m",
+	period: "Late Jurassic",
+};
+
+const velociraptor = {
+	diet: "carnivorous",
+	weight: "15kg", 
+	length: "1.8m",
+	period: "Late Cretaceious",
+};
+
+
+tyrannosaurus.roar = function() {
+	return "RAWERSRARARWERSARARARRRR!";
+}
+
+
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -42,11 +70,129 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":9,"first_name":"Michail","university":"Universidad Católica de Ávila","email":"mrome8@shinystat.com"},
 {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
 
-/* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
+/* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-console.log(universities)
+
+/* Didn't really need to do all this.. self challenge? */
+/* Never got this functioning 100%. I'll get back to this.
+const arrayLength = function(arrayToCheck) {
+	let item;
+	let arrayLength = 0;
+	for(let i = 0; i <= arrayLength; i++) {
+		item = arrayToCheck[i];
+		if (item === undefined) {
+			return arrayLength;
+		}
+		else {
+			arrayLength += 1;
+		}
+	}
+}
+
+let alphabetWeight = {
+	// English alphabet weighting
+	'A': 1,
+	'a': 1,
+	'B': 2,
+	'b': 2,
+	'C': 3,
+	'c': 3,
+	'D': 4,
+	'd': 4,
+	'E': 5,
+	'e': 5,
+	'F': 6,
+	'f': 6,
+	'G': 7,
+	'g': 7,
+	'H': 8,
+	'h': 8,
+	'I': 9,
+	'i': 9,
+	'J': 10,
+	'j': 10,
+	'K': 11,
+	'k': 11,
+	'L': 12,
+	'l': 12,
+	'M': 13,
+	'm': 13,
+	'N': 14,
+	'n': 14,
+	'O': 15,
+	'o': 15,
+	'P': 16,
+	'p': 16,
+	'Q': 17,
+	'q': 17,
+	'R': 18,
+	'R': 18,
+	'S': 19,
+	's': 19,
+	'T': 20,
+	't': 20,
+	'U': 21,
+	'u': 21,
+	'V': 22,
+	'v': 22,
+	'W': 23,
+	'w': 23,
+	'X': 24,
+	'x': 24,
+	'Y': 25,
+	'y': 25,
+	'Z': 26,
+	'z': 26,
+};
+
+
+const compareItems = function(item1, item2) {
+	let biggerString;
+	if (item1.length > item2.length) {
+		biggerString = item1;
+	}
+	else {
+		biggerString = item2;
+	}
+	for (let strIndex = 0; strIndex < biggerString.length; strIndex++) {
+		if (alphabetWeight[item1[strIndex]] < alphabetWeight[item2[strIndex]]) {
+			return true;
+		}
+		else if(alphabetWeight[item1[strIndex]] > alphabetWeight[item2[strIndex]]) {
+			return false;
+		}
+	}
+}
+*/
+/* END self challenge */
+
+
+const sortArray = function(items) {
+	for (let i = 0; i < items.length; i++) {
+		
+		let value = items[i];
+		
+		for (var j = i - 1; j > -1 && items[j] > value; j--) {
+			items[j + 1] = items[j];
+		}
+		
+		items[j + 1] = value;
+	}
+	return items;
+}
+
+let universities = [];
+
+for(let item of graduates) {
+	let university = item.university;
+	universities.push(item.university);
+}
+
+universities = sortArray(universities);
+
+console.log(universities);
+
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -54,12 +200,21 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = [];
+let contactInfo = [];
+for (let item of graduates) {
+	contactInfo.push(`${item.first_name} ${item.email}`);
+}
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+let uni = [];
+for (let item of graduates) {
+	if (item.university.includes('Uni')) {
+		uni.push(item.university);
+	}
+}
+
 console.log(uni);
 
 
@@ -79,9 +234,15 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-const lowerCase = [];
+const lowerCase = zooAnimals.map((item) => {
+	return item.animal_name.toLowerCase();
+});
+
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-const populationTotal = [];
+const populationTotal = zooAnimals.reduce((accumulator, item) => {
+	return accumulator += item.population;
+}, 0);
+
 console.log(populationTotal);
