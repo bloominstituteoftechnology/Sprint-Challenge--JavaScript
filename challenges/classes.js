@@ -1,4 +1,4 @@
-// Copy and paste your prototype in here and refactor into class syntax.
+// 1. Copy and paste your prototype in here and refactor into class syntax.
 
 class CuboidMaker {
   constructor(attributes) {
@@ -24,6 +24,7 @@ const cuboid = new CuboidMaker({
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
 
+<<<<<<< HEAD
 /* Stretch Task:
 
   Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods as well.  Create a new cube object and log out the results of your new cube.
@@ -51,3 +52,6 @@ const cube = new CubeMaker({
 
 console.log(cube.cubeVolume()); // 64
 console.log(cube.cubeSurfaceArea()); // 96 
+=======
+// Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area.
+>>>>>>> d8ebbccdbd17e98156a2dd72eb778de1d6ef190e
