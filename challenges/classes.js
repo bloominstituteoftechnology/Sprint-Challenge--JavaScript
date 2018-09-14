@@ -21,7 +21,7 @@ class CubeMaker extends CuboidMaker{
     }
 
     cubeVolume() {
-        return this.length * this.width * this.height;
+        return this.length ** 3
     }
     
     cubeSurfaceArea() {
