@@ -1,0 +1,19 @@
+{
+  "name": "jssprint",
+  "version": "1.0.0",
+  "description": "Javascript Sprint Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssmodish/Sprint-Challenge--JavaScript.git"
+  },
+  "author": "Steve Smodish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssmodish/Sprint-Challenge--JavaScript/issues"
+  },
+  "homepage": "https://github.com/ssmodish/Sprint-Challenge--JavaScript#readme"
+}
