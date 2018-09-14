@@ -6,8 +6,8 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-function consume(a, b, callback) {
-  console.log(callback(a,b));
+function consume(a, b, cb) {
+  console.log(cb(a,b));
 };
 
 /* Step 2: Create several functions to callback with consume();
@@ -31,7 +31,7 @@ function greeting(firstName, lastName) {
   return `Hello ${firstName} ${lastName}, nice to meet you!`
 }
 
-// Call em back
+// Calling it back
 function consume(a, b, cb) {
   console.log(cb(a, b));
 };
