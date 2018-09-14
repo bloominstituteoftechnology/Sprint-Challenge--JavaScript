@@ -1,12 +1,12 @@
 1. Describe the biggest difference between `.forEach` & `.map`.
 
-forEach repeats a set of task for each item in the given array and returns nothing without specific instructions console.log() or return statement. It also mutates the original array.
+forEach repeats a set of task for each item in the given array and returns nothing without specific instructions console.log() or return statement.
 
 map also iterates over each item in the given array, but by default returns whatever you're looking for into a new array
 
 
 
-2. What is the difference between a function and a method?
+1. What is the difference between a function and a method?
   functions are named blocks of code (objects) that need to be invoked.
 
 A method is also a named block of code but it's associated with an object. In most respects it is identical to a function except for two key differences:

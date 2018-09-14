@@ -49,7 +49,7 @@ console.log(tyrannosaurus.period);
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 
 
-console.log(tyrannosaurus.roar);
+console.log(tyrannosaurus.roar());
 
 
 
@@ -222,14 +222,14 @@ zooAnimals = [{
 let lowerCase = [];
 zooAnimals.forEach(each => {
   lowerCase.push(
-    each.animal_name
-
-    .map(each => animal_name.toLowerCase())
-
+    each.animal_name.toLowerCase()
   )
 });
 console.log(lowerCase);
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-const populationTotal = [];
+const populationTotal = zooAnimals.reduce((total, current) => {
+  return total + current.population
+}, 0);
+
 console.log(populationTotal);
