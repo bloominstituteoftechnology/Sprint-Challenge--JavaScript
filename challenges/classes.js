@@ -47,7 +47,8 @@ console.log(cube.cubeSurfaceArea()); // 54
 console.log(cube.volume()); // 27
 console.log(cube.surfaceArea()); // 54
 
-
+//I don't believe making new functions was necessary... The cuboidMaker's functions will give the same answer and the child CubeMaker has access to those functions anyway.
+// unless i keep interpreting the stretch goal instructions incorrectly
 
 
 /*
@@ -56,5 +57,4 @@ Find out the formulas for volume and surface area for cubes and create those met
 dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area.
 */
 
-//I don't believe making new functions was necessary... The cuboidMaker's functions will give the same answer and the child CubeMaker has access to those functions anyway. 
 
