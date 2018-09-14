@@ -19,6 +19,7 @@ tyrannosaurus.roar = function() {
   return "RAWERSRARARWERSARARARRRR!";
 }
 console.log(tyrannosaurus.roar());
+
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 let stegosaurus = {
   'name': 'Stegosaurus',
@@ -45,13 +46,13 @@ let velociraptor = {
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(tyrannosaurus.weight); 
+console.log(tyrannosaurus.weight); // 7000kg
 // What was the diet of a velociraptor?
-console.log(velociraptor.diet);
+console.log(velociraptor.diet); // Carnivorus
 // How long was a stegosaurus?
-console.log(stegosaurus.length);
+console.log(stegosaurus.length); // 9m
 // What time period did tyrannosaurus live in?
-console.log(tyrannosaurus.period);
+console.log(tyrannosaurus.period); // Late Cretaceious
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 tyrannosaurus.roar = function() {
