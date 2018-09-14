@@ -98,8 +98,8 @@ console.log(contactInfo);
 const uni = [];
 
 for (let i = 0; i < graduates.length; i++) {
-  if (graduates[i].university == "Uni") {
-    console.log(graduates[i].university);
+  if (graduates[i].university.includes("Uni")) {
+    uni.push(graduates[i].university)
   }
 
 }
