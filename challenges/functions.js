@@ -37,7 +37,9 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
-
+/* A closure is an inner function that has access to the outer (enclosing) function's variables—scope chain. 
+   As nestedFunction() is an function inside myFunction().  nestedFunction() will have access to variables declared in  outer function which 
+   is here myFunction().. so nestedfunction() can access the variable internal*/
 // Explanation: 
 
 
