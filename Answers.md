@@ -1,4 +1,5 @@
 Chad Jemmett
+Finished 11:50 Sept 9, 2018
 
 1. Describe the biggest difference between `.forEach` & `.map`.
   The largest difference between `.forEach` and  `.map` is what they return. `.forEach` only alters the items in the array based on the criteria you provide. For example, if you call `.forEach` on a names array you can capitalize each name in the array. It returns the array with the name capitalized. The `.map` method returns a new array. You can do the same thing with an array full of names. Only instead of maintaining the original array, you get a new one. You can do this with an array `const newArray = oldArray.map(// do some thing to the array);` What you get back is the newArray with the changes you made with the `.map` method.
