@@ -7,7 +7,7 @@
         return 'this is a function';
     }
 
-    const anObj {
+    const anObj = {
         'key': 'value',
         method: function() {
             return 'this is a method';
