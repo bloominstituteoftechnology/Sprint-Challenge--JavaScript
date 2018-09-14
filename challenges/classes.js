@@ -1,5 +1,20 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
+const CuboidMaker = cuboid({
+  createdAt: new Date(),
+  dimensions: {
+    length: 2,
+    width: 1,
+    height: 1,
+  },
+  constructor(dimensions) {
+    this.length = dimensions.length;
+    this.width = dimensions.length;
+    this.height = this.height;
+  }
 
+CuboidMaker.prototype.make = function () {
+  return `Hello, I havea length, height, and width of ${this.name}`;
+};
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
