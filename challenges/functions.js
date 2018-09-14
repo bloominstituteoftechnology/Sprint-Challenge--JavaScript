@@ -40,7 +40,7 @@ function greeting(first_name, last_name) {
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: On the first pass over the compiler sees that internal is used again in the inner most function, for this reason it saves its value in a closure so that it can be accessed by the inner most function.
+// Explanation: On the first pass over the compiler sees that the variable internal is used again in the inner most function, for this reason it saves its value in a closure so that it can be accessed by the inner most function.
 
 
 
