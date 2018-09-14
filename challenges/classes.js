@@ -33,29 +33,38 @@ console.log(cuboid.surfaceArea()); // 130
 class CubeMaker extends CuboidMaker {
   constructor(properties) {
     super(properties);
+    this.length = properties.length;
   }
   volume() {
     return this.length * this.length * this.length;
   }
   surfaceArea() {
-      return 6 * (this.length * this.length);
+      return 6 * (Math.pow(this.length, 2));
+  }
+  isCube() {
+    if(this.width === this.height && this.width === this.length) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 
 const cube = new CubeMaker({
   length: 10,
   height: 10,
-  width: 10,
+  width: 10
 });
 
-const isCube = cubeParam => {
-    if (cubeParam.length === cubeParam.width && cubeParam.length === cubeParam.height){
-        return true;
-    } else {
-        return false;
-    }
-}
+// const isCube = cubeParam => {
+//     if (cubeParam.length === cubeParam.width && cubeParam.length === cubeParam.height){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-cube.isCube = isCube(cube);
+// cube.isCube = isCube(cube);
 console.log(cube.surfaceArea())
 console.log(cube);
+console.log(cube.isCube());
