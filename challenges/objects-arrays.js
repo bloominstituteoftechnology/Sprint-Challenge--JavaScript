@@ -93,7 +93,17 @@ let tyrannosaurus = {
   
   for (let i = 0; i < graduates.length; i++){
     let splt= (graduates[i].university.split())
-    
+    console.log(splt);
+    for (let i = 0; i < splt.length; i++){
+      console.log(splt[i]);
+      if (splt[i].substring(0, 3) == 'Uni'){
+        uni.push(splt[i]);
+      }else{
+        uni.pop(splt)
+      }
+      console.log(uni);
+    }
+
     
   }
   console.log(uni);
