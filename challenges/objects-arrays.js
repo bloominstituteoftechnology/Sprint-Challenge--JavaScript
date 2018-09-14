@@ -138,5 +138,4 @@ const populationTotal = zooAnimals.reduce((total, pop) => {
   return total += pop.population;
 }, 0);
 
-
 console.log(populationTotal);
