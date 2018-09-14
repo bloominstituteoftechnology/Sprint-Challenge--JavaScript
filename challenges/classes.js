@@ -10,8 +10,15 @@ class CuboidMaker {
     return this.length * this.width * this.height;
   }
 
-  surfaceArea() {
-    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  surfaceArea(shape) { // string "cuboid" or "cube"
+    if (shape.toLowerCase() === 'cuboid') {
+      return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+    } else if (shape.toLowerCase() === 'cube') {
+      return 6 * (this.length * this.length);
+    } else {
+      return 'Invalid shape. Cuboid or Cube only.'
+    }
+
   }
 }
 
@@ -23,7 +30,7 @@ const cuboid = new CuboidMaker({
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid.surfaceArea('cuboid')); // 130
 
 // Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area.
 
@@ -36,9 +43,7 @@ class CubeMaker extends CuboidMaker {
   // volume formula of cube and cuboid are the same
   // cube only has equal sides
 
-  surfaceAreaCube() {
-    return 6 * (this.length * this.length);
-  }
+  // modified surfaceArea() of CuboidMaker to also get cube's surface area
 }
 
 const cube = new CubeMaker({
@@ -48,4 +53,5 @@ const cube = new CubeMaker({
 });
 
 console.log(cube.volume()); // 125
-console.log(cube.surfaceAreaCube()); // 150
+console.log(cube.surfaceArea('Cube')); // 150
+console.log(cube.surfaceArea('rectangle')); // "Invalid shape. Cuboid or Cube only."
