@@ -5,4 +5,4 @@
     * Implicit binding--value of "this" becomes the object on the left side of a function call. 
     * New binding--value of "this" becomes an object created by the constructor function containg the "this" keyword.
     * Explicit binding--"this" is defined by a call or apply method.
-5. `super()` sort of replaces `call` When we're using classes instead of prototype. It gives the parent object access to the attributes of the child object.
+5. `super()` sort of replaces `call` When we're using classes instead of prototype. It gives the parent object access to the attributes of the child object and allows `this` to work properly.
