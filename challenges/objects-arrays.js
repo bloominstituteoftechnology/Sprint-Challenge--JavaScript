@@ -68,7 +68,7 @@ Once you have the new array created, sort the universities alphabetically and lo
 const universities = [];
 
 for(let i=0;i<=graduates.length-1;i++){
-universities.push(graduates[i].university)
+  universities.push(graduates[i].university)
 }
 universities.sort();
 console.log(universities)
@@ -81,7 +81,7 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 for(let i=0;i<=graduates.length-1;i++){
-contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`)
+  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`)
 }
 console.log(contactInfo);
 
@@ -89,7 +89,7 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 for(let i=0;i<=graduates.length-1;i++){
-if(graduates[i].university.includes('Uni')){uni.push(graduates[i].university)}
+  if(graduates[i].university.includes('Uni')){uni.push(graduates[i].university)}
 }
 
 console.log(uni);
@@ -115,7 +115,7 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 const lowerCase = [];
 
 zooAnimals.map(function(element){
-lowerCase.push(element.animal_name.toLowerCase())
+  lowerCase.push(element.animal_name.toLowerCase())
 })
 
 console.log(lowerCase); 
@@ -124,7 +124,7 @@ console.log(lowerCase);
 const populationTotal = [];
 
 populationTotal.push(zooAnimals.reduce(function(acc,currentValue){
-return acc + currentValue.population;
+  return acc + currentValue.population;
 },0))
 
 console.log(populationTotal);

@@ -5,7 +5,6 @@ class CuboidMaker {
       this.width = obj.width;
       this.height = obj.height
     }
-
     volume(){return(this.length * this.width * this.height)}    
     surfaceArea(){return(2 *(this.length * this.width + this.length * this.height + this.width*this.height))}
 }
@@ -15,7 +14,6 @@ class CubeMaker extends CuboidMaker{
   }
     volume(){return(this.length * this.width * this.height)}    
     surfaceArea(){return(6 *(this.height * this.width))}
-  
 }
 
 
