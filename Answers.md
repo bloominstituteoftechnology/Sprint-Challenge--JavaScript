@@ -6,4 +6,5 @@ rules of this keyword:
     b) explicit: when we explicity state what this is using call, apply, bind, ie what comes after call in parentheses.
     c) new: the new keyword must be used in conjunction with a constructor function for an object, so this refers to the newly created object.
     d)window: defaults to global scope. 
+
 a super provides acces to a parent and call functions on it. 

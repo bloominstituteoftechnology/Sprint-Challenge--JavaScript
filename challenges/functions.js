@@ -36,7 +36,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-nestedFunctioncan access the variable internal because it is in the same lexical environment and as functions are nested data is stored in memory and internal functions can access function outside, but within the overall function scope. 
+nestedFunctioncan can access the variable internal because it is in the same lexical environment and since the functions are nested, data is stored in memory.  internal functions can access functions outside themselves, but within the overall function scope. 
 // Explanation: 
 
 
