@@ -5,6 +5,30 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
+const tyrannosaurus = {
+  'name': 'tyrannosaurus',
+  'diet': 'carnivorous',
+  'weight': '7000kg',
+  'length': '12m',
+  'period': 'Late Cretaceious',
+  roar: function() {
+    return 'RAWERSRARARWERSARARARRRR!';
+  }
+}
+const stegosaurus = {
+  'name': 'stegosaurus',
+  'diet': 'herbivorous',
+  'weight': '2000kg',
+  'length': '9m',
+  'period': 'Late Jurassic'
+}
+const velociraptor = {
+  'name': 'velociraptor',
+  'diet': 'carnivorous',
+  'weight': '15kg',
+  'length': '1.8m',
+  'period': 'Late Cetaceious'
+}
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
