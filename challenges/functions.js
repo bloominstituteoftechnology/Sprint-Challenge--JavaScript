@@ -26,8 +26,8 @@ function multiply (x, y) {
   return (x * y)
 }
 
-function greeting () {
-  return (`Hello ${this.x} ${this.y}, nice to meet you!`)
+function greeting (x, y) {
+  return (`Hello ${x} ${y}, nice to meet you!`)
 }
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
