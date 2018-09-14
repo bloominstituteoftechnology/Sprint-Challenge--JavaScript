@@ -109,12 +109,17 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 let uni = [];
 
+//With for loop
 for (let i = 0; i < graduates.length; i++) {
-    if (graduates[i].university.includes("uni")) {
-      uni.push(graduates[i].university);
+    if (graduates[i].university.includes("Uni")) {
+      uni2.push(graduates[i].university);
     } 
   
 }
+// with array methods
+uni = graduates
+  .filter(graduate => graduate.university.includes("Uni"))
+  .map(graduate => graduate.university);
 
 console.log(uni);
 
@@ -141,7 +146,7 @@ lowerCase = zooAnimals.map(animal => animal.toLowerCase())
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-let populationTotal = 0;
+let populationTotal = [];
 
 populationTotal = zooAnimals.reduce((total, animal) => total + animal.population, 0);
 
