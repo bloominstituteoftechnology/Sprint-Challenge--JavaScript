@@ -18,12 +18,15 @@ It is like having multiple one way mirrors surrounding the blocks of code. The f
 4. Describe the four rules of the 'this' keyword.
 There is window binding:
 window binding occurs when the function that is being called is contained within the global scope and the "this" keyword is inside of that function.
-Implicit Binding
+
+Implicit Binding:
+Using object lierals
+
 Whenever a function is called by a preceding dot, the object before that dot is this.
 Whenever a constructor function is used, this refers to the specific instance of the object that is created and returned by the constructor function.
 Whenever JavaScript’s call or apply method is used, this is explicitly defined.
-New Binding
-Explicit Binding
+New Binding: constructor functions and classes
+Explicit Binding: function methods
 
 5. Why do we need super() in an extended class?
 
