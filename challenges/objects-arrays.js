@@ -5,12 +5,45 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
+class Dino {
+  constructor(property) {
+    this.name = property.name;
+    this.diet = property.diet;
+    this.weight = property.weight;
+    this.length = property.length;
+    this.period = property.period;
+  }
+  roar() {
+    return `RAWERSRARARWERSARARARRRR!`;
+  }
+}
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
+const tyrannosaurus = new Dino({
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceious'
+});
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+const stegosaurus = new Dino({
+  name: 'stegosaurus',
+  diet: 'herbivorous',
+  weight: '2000kg',
+  length: '9m',
+  period: 'Late Jurassic'
+});
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+const velociraptor = new Dino({
+  name: 'velociraptor',
+  diet: 'carnivorous',
+  weight: '15kg',
+  length: '1.8m',
+  period: 'Late Cretaceious'
+});
 
 // Using your dinosaur objects, log answers to these questions:
 
@@ -46,6 +79,10 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+for (let i=0; i<graduates.length; i++) {
+  universities.push(graduates[i].university);
+}
+universities.sort();
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -55,6 +92,9 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+for (let i=0; i<graduates.length; i++) {
+  contactInfo.push(graduates[i].first_name, graduates[i].email);
+}
 console.log(contactInfo);
 
 
