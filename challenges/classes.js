@@ -6,7 +6,12 @@ class CuboidMaker{
         this.width = cubeProp.width;
         this.height = cubeProp.height; 
     }
-    
+    volume () {
+      return `volume ${this.length * this.width * this.height}`;
+    }
+    surfaceArea () {
+      return `surfaceArea ${2 * (this.length * this.width * this.length * this.height * this.width * this.height)}`;
+    }
   }
   
   /* == Step 2: Volume Method ==
@@ -14,27 +19,21 @@ class CuboidMaker{
     
     Formula for cuboid volume: length * width * height
   */
-  class Volume extends CuboidMaker{
-      constructor(volProp){
-          super(volProp);
-      }
+  
  
- volume (){
-    return (this.length * this.width * this.height);
-  }}
+//  volume () {
+//     return `volume ${this.length * this.width * this.height}`;
+//   }
   
   /* == Step 3: Surface Area Method ==
     Create another method using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
   
     Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
   */
-  class SurfaceArea extends Volume{
-    constructor(surfaceProp) {
-        super(surfaceProp);
-    }
-  surfaceArea () {
-    return (2 * (this.length * this.width * this.length * this.height * this.width * this.height))
-  }}
+ 
+  // surfaceArea () {
+  //   return `surfaceArea ${2 * (this.length * this.width * this.length * this.height * this.width * this.height)}`
+  // }
   /* == Step 4: Create a new object that uses CuboidMaker ==
     Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
     Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
