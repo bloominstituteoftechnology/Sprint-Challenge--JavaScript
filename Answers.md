@@ -1,7 +1,7 @@
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
-  `.forEach` is basically short hand for a for loop.
+  `.forEach` is basically short hand for a for loop, but it only executes the function once.
 
   `.map` creates a new array
 
@@ -15,7 +15,7 @@
 
   In lexical scope closure works.  If there is a function inside of a function and something is called that isn't in the (inside) function, it will look outward to the function it lives in for what it needs.
 
-  Or if the child need a car and doesn't have one, they can go to their parent and ask for a car.
+  AKA if the child need a car and doesn't have one, they can go to their parent and ask for a car.
 
 4. Describe the four rules of the 'this' keyword.
 
