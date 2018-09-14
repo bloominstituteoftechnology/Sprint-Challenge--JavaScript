@@ -7,6 +7,12 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
+let tyrannosaurus = {
+    "diet" : "carnivorous",
+    "weight" : 7000+'kg',
+    "length": 12+'m',
+    "period": "Late Cretaceious"
+}
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
