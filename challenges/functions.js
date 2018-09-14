@@ -39,7 +39,7 @@ Because the compiler notices that `nestedFunction()` is accessing `internal`, a 
 that is neither in the global scope nor within the local scope of `nestedFunction()`, 
 but rather the scope of the enclosing parent function `myFunction`. To allow 
 `nestedFunction()` access to `internal`, the compiler creates a closure which preserves 
-the variable and makes it accessable to `nestedFunction()`.
+the variable and makes it accessible to `nestedFunction()`.
 
 */
 
