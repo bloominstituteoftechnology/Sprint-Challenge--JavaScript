@@ -7,12 +7,28 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
+function consume(a, b, cb) {
+  return cb(a, b);
+}
+
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+
+function add(a, b) {
+  return a + b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function greeting(first_name, last_name) {
+  return `Hello ${first_name} ${last_name}, nice to meet you!`;
+}
 
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
@@ -24,7 +40,9 @@
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: On the first pass over the compiler sees that the variable internal is used again in the inner most function, for this reason it saves its value in a closure so that it can be accessed by the inner most function.
+
+
 
 
 const external = "I'm outside the function";
