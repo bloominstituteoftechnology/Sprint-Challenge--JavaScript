@@ -102,25 +102,53 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-function stringContains(str, check) {
-  for (let i = 0; i < str.length - check.length; i++) {
-    if (str.substring(i, str.length-1 + i).toLowerCase() === check) {
-      return true;
+// function stringContains(str, check) {
+//   for (let i = 0; i < str.length - check.length; i++) {
+//     if (str.substring(i, str.length-1 + i).toLowerCase() === check.toLowerCase()) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+function findString(mainString, subString) {
+  // found at: https://crunchify.com/java-how-to-check-if-a-string-contains-a-substring-implement-your-own-method/
+  let foundme = false;
+  let max = mainString.length - subString.length;
+
+  checkrecusion: for (let i = 0; i <= max; i++) {
+    let n = subString.length;
+
+    let j = i;
+    let k = 0;
+
+    while (n-- != 0) {
+        if (mainString.charAt(j++) != subString.charAt(k++)) {
+            continue checkrecusion;
+        }
     }
+    foundme = true;
+    break checkrecusion;
   }
-  return false;
+  return foundme;
 }
+
 function filter(arr, condition) {
   let outputArr = []
   for (let i = 0; i < arr.length; i++) {
-    if (condition(arr[i])) {
-      objectArr.push(arr[i])
+    if ( condition( arr[i] ) ) {
+      outputArr.push( arr[i] )
     }
   }
   return outputArr;
-} 
-
-const uni = filter(universities, s => stringContains(s, 'uni'));
+}
+// let outputArr = [];
+// for (let i = 0; i < universities.length; i++) {
+//   if ( universities[i].toLowerCase().includes('uni') ) {
+//     outputArr.push( universities[i] );
+//   }
+// }
+const uni = filter(universities, s => findString(s.toLowerCase(), 'uni'));
 console.log(uni);
 
 
