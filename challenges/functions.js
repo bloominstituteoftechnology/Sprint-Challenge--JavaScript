@@ -1,4 +1,4 @@
-// ==== Callbacks ====  
+// ==== Callbacks ====
 
 /* Step 1: Create a function that accepts a callback
   * Create a function named consume that can take 3 parameters.
@@ -15,11 +15,11 @@ function consume(a, b, cb) {
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add(a,b) {
+function add(a, b) {
   return a + b;
 }
 
-function multiply(a,b) {
+function multiply(a, b) {
   return a * b;
 }
 
@@ -28,16 +28,14 @@ function greeting(firstName, lastName) {
 }
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-consume(2,2,add); // 4
-consume(10,16,multiply); // 160
-consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(2, 2, add); // 4
+consume(10, 16, multiply); // 160
+consume("Mary", "Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
-
-// ==== Closures ==== 
+// ==== Closures ====
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: because it is a closure so because it is inside of another function it go outside of its scope
-
 
 const external = "I'm outside the function";
 
@@ -47,7 +45,7 @@ function myFunction() {
 
   function nestedFunction() {
     console.log(internal);
-  };
+  }
   nestedFunction();
 }
 myFunction();
