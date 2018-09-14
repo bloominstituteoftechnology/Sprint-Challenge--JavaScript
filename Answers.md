@@ -1,1 +1,1 @@
-
+1. The biggest difference between .forEach and .map is that .forEach doesn't return anything while .map does.
