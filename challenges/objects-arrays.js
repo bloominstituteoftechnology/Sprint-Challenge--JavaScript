@@ -73,7 +73,7 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 for (let i = 0; i < graduates.length; i++) {
-  contactInfo.push(graduates[i].first_name )
+  contactInfo.push(graduates[i].first_name)
   contactInfo.push(graduates[i].email);
 })
 console.log(contactInfo);
@@ -110,10 +110,12 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-const lowerCase = [animal_name.lowerCase];
+let lowerCase =zooAnimals.map((animal_name) => {
+  return zooAnimals.animal_name.toLowerCase();
+});
 console.log(lowerCase);
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 const populationTotal = [];
-
-console.log(populationTotal);
+let populationTotal = zooAnimals.reduce(population)
+{return populationTotal};
