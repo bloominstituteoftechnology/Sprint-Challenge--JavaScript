@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4324dd63-16f5-4a82-b3b8-4f753ec520e2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/challenges/classes.js" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/classes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/prototypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/prototypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/objects-arrays.js" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/objects-arrays.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,25 +35,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="453" />
+          <entry key="js" value="1146" />
           <entry key="md" value="1162" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="453" />
+          <entry key="JavaScript" value="1146" />
           <entry key="PLAIN_TEXT" value="1162" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.vcs.git.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/challenges/classes.js">
+        <entry file="file://$PROJECT_DIR$/challenges/objects-arrays.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            <state relative-caret-position="577">
+              <caret line="119" column="29" lean-forward="true" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -65,8 +66,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/challenges/objects-arrays.js">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/challenges/classes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -92,6 +97,7 @@
         <option value="$PROJECT_DIR$/Answers.md" />
         <option value="$PROJECT_DIR$/challenges/prototypes.js" />
         <option value="$PROJECT_DIR$/challenges/classes.js" />
+        <option value="$PROJECT_DIR$/challenges/objects-arrays.js" />
       </list>
     </option>
   </component>
@@ -150,12 +156,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.objects-arrays.js">
+    <configuration name="objects-arrays.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="objects-arrays.js" working-dir="$PROJECT_DIR$/challenges">
+      <method v="2" />
+    </configuration>
     <configuration name="prototypes.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="prototypes.js" working-dir="$PROJECT_DIR$/challenges">
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Node.js.prototypes.js" />
+      <item itemvalue="Node.js.objects-arrays.js" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.objects-arrays.js" />
         <item itemvalue="Node.js.prototypes.js" />
       </list>
     </recent_temporary>
@@ -170,12 +184,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536948350140</updated>
-      <workItem from="1536948351269" duration="1724000" />
+      <workItem from="1536948351269" duration="3430000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1724000" />
+    <option name="totallyTimeSpent" value="3430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1616" height="1216" extended-state="6" />
@@ -233,12 +247,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/challenges/objects-arrays.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenges/functions.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/challenges/prototypes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -249,10 +257,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/challenges/functions.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/challenges/classes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        <state relative-caret-position="629">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenges/objects-arrays.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="119" column="29" lean-forward="true" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="29" />
         </state>
       </provider>
     </entry>
