@@ -13,6 +13,9 @@ const tyrannosaurus = {
   'weight' : '7000' + 'kg',
   'length' : '12' + 'm',
   'period' : 'Late Cretaceious',
+  roar: function() {
+    return 'RAWERSRARARWERSARARARRRR';
+  }
 };
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const stegosaurus = {
