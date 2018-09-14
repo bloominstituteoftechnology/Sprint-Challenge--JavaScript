@@ -12,7 +12,7 @@ const tyrannosaurus = {
   'diet' : 'carnivorous',
   'weight' : '7000' + 'kg',
   'length' : '12' + 'm',
-  'time_period' : 'Late Cretaceious',
+  'period' : 'Late Cretaceious',
 };
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const stegosaurus = {
@@ -20,10 +20,16 @@ const stegosaurus = {
   'diet' : 'herbivorous',
   'weight' : '2000' + 'kg',
   'length' : '9' + 'm',
-  'time_period' : 'Late Jurassic',
+  'period' : 'Late Jurassic',
 };
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
-
+const velociraptor = {
+  'species' : 'velociraptor',
+  'diet' : 'carnivorous',
+  'weight' : '15' + 'kg',
+  'length' : '1.8' + 'm',
+  'period' : 'Late Cretaceious',
+};
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
