@@ -16,6 +16,9 @@ let consume = function(a,b,cb) {
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+let add = function(a,b,cb) {
+  
+}
 
 
 
