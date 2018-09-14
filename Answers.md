@@ -10,3 +10,15 @@ A function is a firts-class object that can have properties and methods, values 
 
 3.What is closure?
 
+Closures are functions that refer to free variables(variables that are neither locally declared nor passed as parameter).
+
+4. Describe the 4 rules of the 'this' keyword.
+
+    Principle 1. Window/Global: When in the global scope, the value of 'this' will be the window/console object.
+    Principle 2. Implicit Binding: Whenever a function is called by a preceding dot, th obj before the dot is 'this'.
+    Principle 3. Explicit Binding: When using .call(), .apply(), or .bind().
+    Principle 4. New Binding: Whenever a constructor function is used, 'this' refers to the specific instance of the object that is created and returned by the constructor function.
+
+5. Why do we need super() in an extended class?
+
+Using super() in a child element allows us to access and call functions/methods on an object's parent.
