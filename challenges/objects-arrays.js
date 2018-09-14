@@ -98,11 +98,11 @@ console.log(contactInfo);
 graduates.sort(grads => contactInfo.push(`${grads.first_name} '' + ${grads.email}`));
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+const college = [];
 console.log(uni);
 for (let i = 0; i < universities.length; i++) {
   if (universities[i].includes("Uni")) {
-    uni.push(universities[i])
+    college.push(universities[i])
   }
 }
 
