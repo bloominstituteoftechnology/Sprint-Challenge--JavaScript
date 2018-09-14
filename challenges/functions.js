@@ -17,10 +17,10 @@ function consume(x, y, callback) {
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 function add(x, y){
-  return x+y;
+  return x + y;
 }
 function multiply(x, y){
-  return x*y;
+  return x * y;
 }
 function greeting(x, y){
   return `Hello ${x} ${y}, nice to meet you!`;
@@ -34,7 +34,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: nesterFunction's parent contains internal. Because of the scope, it is able to take take internal as a closure.
 
 
 const external = "I'm outside the function";
