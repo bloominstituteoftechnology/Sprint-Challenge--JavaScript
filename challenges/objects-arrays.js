@@ -5,9 +5,23 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
-
+class Dinosaur {
+  constructor(attributes) {
+    this.createdAt = attributes.createdAt;
+    this.features = attributes.features;
+  }
+}
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
-
+const tyrannosaurus = new Dinosaur({
+  createdAt: new Date(),
+  features: {
+    name: 'tyrannosaurus',
+    diet: 'carnivorous',
+    weight: 7000'kg',
+    length: 12'm',
+    period: 'Late Cretaceious'
+  }
+});
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
