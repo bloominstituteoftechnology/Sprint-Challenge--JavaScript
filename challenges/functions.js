@@ -24,7 +24,7 @@ function multiply(a, b) {
 }
 
 function greeting(firstName, lastName) {
-  return `Hello ${firstName} ${lastName}, nice to meet you!`;
+  return `Hello ${firstName} + " " + ${lastName}, nice to meet you!`;
 }
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
