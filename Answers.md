@@ -11,8 +11,9 @@ A function is a closure. It is where a local scope is created the the global sco
 #Describe the four rules of the 'this' keyword.
 Window/Global binding 'this' will bubble up. So, if using this in javascript, it will look for the object it is bound to. Thus bubbling up looking for what 'this' refers to. If not bound to an object it selects the window object in the browser and the global object in node.js. 
 
-Implicit binding Using
-New binding Using the new keyword to create a new instance of an object.
+Implicit binding is the object before the dot.
+
+New binding Uses the new keyword to create a new instance of an object.
 Explicit binding Having the parent object/class .call or .apply this to the child class/object.
 
 #Why do we need super() in an extended class?
