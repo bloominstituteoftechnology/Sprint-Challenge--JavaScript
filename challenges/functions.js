@@ -36,7 +36,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-// When the compiler enters nestedFunction, the variables (internal) from myFunction are passed to it in a closure
+// When the compiler enters nestedFunction, the variables (external) from myFunction are passed to it in a closure
 
 const external = "I'm outside the function";
 
