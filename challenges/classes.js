@@ -29,7 +29,7 @@ class CubeMaker extends CuboidMaker {
     super(dimensions);
   }
   volume() {
-    return this.length * 3;
+    return this.length * this.length * this.length;
   }
   surfaceArea() {
     return 6 * this.length * this.length;
