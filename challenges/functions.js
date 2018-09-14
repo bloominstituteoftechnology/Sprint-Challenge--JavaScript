@@ -40,8 +40,9 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // Explanation:
 
-
-
+/*
+when nested funtions are created, they have access to the variables in the calling scope (which in this case would be the function myFunction.) If you comment out the line that calls nestedFunction, you will only see "I'm outside the function". That variable was created outside of myFunction, in the global scope. So when myFunction runs, it looks for the external variable. It doesn't find it in the local function scope, so it reaches to the little backpack it has of all the variables that were available to it at creation (in this case, the variables in the global scope). It finds that it's assigned "I'm outside the function" and logs that. But included in the function definition for myFunction we have a second variable, internal and the second function, nestedFunction. In order to see what that does, we have to make sure that myFunction actually calls it, and when nestedFunction is called and executes it knows that it is supposed to log the variable internal. That variable doesn't exist within its own little private scope, but since it existed in myFunction before nestedFunction was defined, nestedFunction has stored it in its backpack and can pull it out and log it. 
+*/
 const external = "I'm outside the function";
 
 function myFunction() {
