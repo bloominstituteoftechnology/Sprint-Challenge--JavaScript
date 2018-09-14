@@ -86,7 +86,7 @@ const contactInfo = [];
 //   contactInfo.push(`${x.first_name} ` + `${x.email}`);
 // })
 for(i = 0; i < graduates.length; i++){
-  contactInfo.push(`${graduates[i].first_name} ` + `${graduates[i].email}`);
+  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
 }
 console.log(contactInfo);
 
@@ -94,7 +94,7 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 for(i = 0; i < graduates.length; i++){
-  if (graduates[i].university.includes("Uni", 0) === true){
+  if (graduates[i].university.includes("Uni", 0)){
     uni.push(graduates[i].university);
   }
 }
@@ -127,4 +127,4 @@ console.log(lowerCase);
 const populationTotal = [];
 let zooReduction = zooAnimals.reduce((totalPopulation, population) => totalPopulation + (population.population), 0);
 populationTotal.push(zooReduction);
-console.log(populationTotal);
+console.log(populationTotal[0]);

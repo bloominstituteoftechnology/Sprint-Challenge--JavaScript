@@ -9,14 +9,14 @@
 
 function doPoetry (subject, phrase, callback){
   console.log(`This a poem about ${subject} and ${phrase}`);
-  callback;
+  callback();
 }
 
 function speakPoem (){
-  console.log(`Unravel the prototype of your brain to find the corpus collosum does not mind the voltage gates ion channels and pseudoclassical inheritance.`)
+  console.log(`Unravel the prototype of your brain to find the corpus collosum does not mind the voltage gated ion channels and pseudoclassical inheritance.`)
 }
 
-doPoetry("science", "unraveling the code of the universe", speakPoem())
+doPoetry("science", "unraveling the code of the universe", speakPoem);
 
 
 
@@ -58,14 +58,15 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 //outside any blocks.
 //function scope, and block scope.
 //example:
+var declaredVariable = "What happens if I am declared outside the block?"
 var outsideVariable = "Can I, a global variable be retrieved from the inside?"
 {
 var declaredVariable = "I am contained within this block and can only be modified in here."
 console.log(declaredVariable);
 console.log(`${outsideVariable} Yes I can.`)
-{"I am a deeper block scope"}
+{var whatami = "I am a deeper block scope"}
 }
-var declaredVariable = "What happens if I am declared outside the block?"
+
 //  Any variables outside of the function does not have access to the deeper function scope.
 //  On the other hand, the function is able to reach outside of its scope and retrieve defined variables.
 //On these functions they act as "one way mirrors" in interrogation rooms. 

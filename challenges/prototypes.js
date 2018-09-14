@@ -10,7 +10,6 @@ function CuboidMaker (cuboidAttributes) {
   this.length = cuboidAttributes.length;
   this.width = cuboidAttributes.width;
   this.height = cuboidAttributes.height;
-  
 }
 
 /* == Step 2: Volume Method ==
