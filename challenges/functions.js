@@ -16,20 +16,20 @@ function consume(param1, param2, callback) {
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 function add(num1, num2) {
-  // console.log(num1 + num2);
-  return num1 + num2;
+  console.log(num1 + num2);
+  // return num1 + num2;
 }
 
 
 function multiply(num1, num2) {
-  //console.log(num1 * num2);
-  return num1 * num2;
+  console.log(num1 * num2);
+  // return num1 * num2;
 }
 
 
 function greeting(firstName, lastName) {
-  // console.log(`Hello ${firstName} ${lastName}, nice to meet you!`);
-  return `Hello ${firstName} ${lastName}, nice to meet you!`;
+  console.log(`Hello ${firstName} ${lastName}, nice to meet you!`);
+  // return `Hello ${firstName} ${lastName}, nice to meet you!`;
 }
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
 consume(2,2,add); // 4
