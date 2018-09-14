@@ -6,6 +6,9 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
+let consume = function(a,b,cb) {
+  return(a,b);
+}
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -13,6 +16,7 @@
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+
 
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
@@ -24,6 +28,7 @@
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
+nestedFunctioncan access the variable internal because it is in the same lexical environment and as functions are nested data is stored in memory and internal functions can access function outside, but within the overall function scope. 
 // Explanation: 
 
 
