@@ -6,6 +6,44 @@
   object name, diet, weight, length, period
 */
 
+class Dinosaur {
+  constructor(attr) {
+    this.name = attr.name;
+    this.diet = attr.diet;
+    this.weight = attr.weight;
+    this.length = attr.length;
+    this.period = attr.period;
+  }
+  roar() {
+    return `RAWERSRARARWERSARARARRRR!`;
+  }
+}
+
+const tyrannosaurus = new Dinosaur({
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceious'
+});
+
+const stegosaurus = new Dinosaur({
+  name: 'stegosaurus',
+  diet: 'herbivorous',
+  weight: '2000kg',
+  length: '9m',
+  period: 'Late Jurassic'
+});
+
+const velociraptor = new Dinosaur({
+  name: 'velociraptor',
+  diet: 'carnivorous',
+  weight: '15kg',
+  length: '1.8m',
+  period: 'Late Cretaceious'
+});
+
+
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -47,6 +85,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 console.log(universities)
+graduates.sort(grads => universities.push(`${grads.University}`));
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -56,19 +95,23 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 console.log(contactInfo);
-
+graduates.sort(grads => contactInfo.push(`${grads.first_name} '' + ${grads.email}`));
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 console.log(uni);
-
+for (let i = 0; i < universities.length; i++) {
+  if (universities[i].includes("Uni")) {
+    uni.push(universities[i])
+  }
+}
 
 // ==== ADVANCED Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below.  You should use .map() and .reduce() to solve the problems below.
 
 
-zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
+let zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
 {"animal_name":"Screamer, southern","population":1,"scientific_name":"Chauna torquata","state":"Alabama"},
 {"animal_name":"White spoonbill","population":8,"scientific_name":"Platalea leucordia","state":"Georgia"},
 {"animal_name":"White-cheeked pintail","population":1,"scientific_name":"Anas bahamensis","state":"Oregon"},
@@ -82,7 +125,13 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 const lowerCase = [];
 console.log(lowerCase); 
+zooAnimals.map(zoo => zoo.animal_name.toLowerCase());
+
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 const populationTotal = [];
 console.log(populationTotal);
+zooAnimals.reduce((curr, acc) => {
+  return curr + acc.populationTotal
+});
+
