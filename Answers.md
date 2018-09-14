@@ -14,4 +14,4 @@ Closure is when a nested function has access to variables that are outside of it
 4. The 'new' keyword is used to bind 'this' to a new instance of a constructor function.
 
 <!-- Question 5 -->
-super() is used to access and call functions on an object's parent.
+super() is used to access and call functions on an object's parent. It ensures that the properties and methods of the parent will be accessible to the child.
