@@ -7,6 +7,10 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
+function consume(p1,p2,cb){
+  return cb(p1,p2);
+}
+
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -14,17 +18,32 @@
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+const add = function(p1,p2){
+  return p1 + p2;
+}
+const greeting = function(fName,lName){
+  return `Hello ${fName} ${lName}, nice to meet you!`;
+}
+const multiply = function(p1,p2){
+  return p1 * p2;
+}
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-//consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+let a = consume(2,2,add); // 4
+let b = consume(10,16,multiply); // 160
+let c = consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+
+console.log(a);
+console.log(b);
+console.log(c);
 
 
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: nestedFunction can access the variable 'internal' because when it was created, its surrounding 'sibling elements/variables' were logged in memory which created a new 
+// kind of 'closure scope' within the parent function that allows the nested function to access the variables declared on its same level. 
+
 
 
 const external = "I'm outside the function";
