@@ -5,6 +5,31 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
+const tyrannosaurus = {
+  name : "Tyrannosaurus",
+  diet : "carnivorous",
+  weight : "7000kg",
+  length : "12m",
+  period : "Late Cretaceious",  // <== This stupid comma messed my whole life up for a good 30 minutes
+  roar : function(){
+    return("RAWERSRARARWERSARARARRRR!");
+  }
+}
+
+const stegosaurus = {
+  name : "stegosaurus",
+  diet : "herbivorous",
+  weight : "2000kg",
+  length : "9m",
+  period : " Late Jurassic"
+};
+const velociraptor = {
+  name : "velociraptor",
+  diet : "carnivorous",
+  weight : "15kg",
+  length : "1.8m",
+  period : " Late Cretaceious"
+};
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
@@ -29,7 +54,7 @@ console.log(tyrannosaurus.roar());
 
 // ==== Arrays ====
 
-// Given an array of college graduates.  Complete the following requests without using any array methods like .forEach(), .map(), .reduce(), .filter()
+// Given an array of college graduates.  Complete the following requests WITHOUT using any array methods like .forEach(), .map(), .reduce(), .filter()
 
 const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern State College","email":"ctorry0@macromedia.com"},
 {"id":2,"first_name":"Saundra","university":"The School of the Art Institute of Chicago","email":"swhal1@state.gov"},
@@ -43,23 +68,33 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
-
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+for(let i = 0; i<graduates.length; i++){
+  universities.push(graduates[i].university);
+  universities.sort();
+}
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
-
 The resulting contact information should have a space between the first name and the email information like this: 
 Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+for(let i = 0; i<graduates.length; i++){
+  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`)
+}
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+for(let i = 0; i < graduates.length; i++){
+  if(graduates[i].university.includes("Uni")){
+    uni.push(graduates[i].university);
+  }
+}
 console.log(uni);
 
 
