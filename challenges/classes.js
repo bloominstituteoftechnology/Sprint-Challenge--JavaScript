@@ -8,13 +8,11 @@ class CuboidMaker {
         this.height = params.height;
   }
     volume(length, width, height) {
-    let formula = length * width * height;
-    return formula
+    return this.length * this.width * this.height
   }  
  
     surfaceArea(length, width, height) {
-    let formula = (2 * (length * width + length * height + width * height));
-    return formula
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
   }  
 }
 
