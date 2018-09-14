@@ -89,11 +89,17 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":7,"first_name":"Robbi","university":"Salem University","email":"rbrister6@redcross.org"},
 {"id":8,"first_name":"Colline","university":"Coastal Carolina University","email":"cbrosh7@alibaba.com"},
 {"id":9,"first_name":"Michail","university":"Universidad Católica de Ávila","email":"mrome8@shinystat.com"},
-{"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
+{"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}];
 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
+var universities =['university'];
+graduates.foreach(function(graduates){
+  console.log(`${graduates[university]}');
+});
+
+
 const universities = [];
 console.log(universities)
 
@@ -135,3 +141,7 @@ console.log(lowerCase);
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 const populationTotal = [];
 console.log(populationTotal);
+
+function newFunction() {
+  return 'graduates';
+}
