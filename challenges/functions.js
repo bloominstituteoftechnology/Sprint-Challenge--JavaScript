@@ -5,7 +5,17 @@
   * The first two parameteres can accept any argument
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
+
 */
+
+function myCallback(x, y, cb){
+  return cb(x, y);
+}
+
+console.log(myCallback(3, 4, function(x, y){
+  return (x + y);
+}));
+
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -14,6 +24,9 @@
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function add(x, y){
+  return x + y;
+}
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
 //consume(2,2,add); // 4
