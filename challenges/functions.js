@@ -7,7 +7,7 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 function consume(a,b,cb){
-  console.log(cb(a,b));
+  console.log(cb(a,b)); // I did console.log instead of return so I could see the final results
 }
 
 /* Step 2: Create several functions to callback with consume();
