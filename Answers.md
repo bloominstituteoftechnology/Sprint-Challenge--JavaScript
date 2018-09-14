@@ -11,4 +11,4 @@
      3. Explicit Binding - when call or apply or used, this is explicitly bound. 
      4. New Binding - when using a function to create an object, the new keyword is used and this will refer to the specific instance of the newly created object. 
 
-5. super() replaces the Parent.call syntax and gives te child object access to functions on the parent object.
+5. super() replaces the Parent.call syntax and gives the child object access to functions on the parent object.

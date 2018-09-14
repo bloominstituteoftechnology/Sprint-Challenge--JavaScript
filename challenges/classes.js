@@ -19,8 +19,8 @@ class CuboidMaker{
       constructor(cubeDimensions){
           super(cubeDimensions);
       }//methods here:
-      cubeVolume(){
-          return this.length * this.width * this.height  ;
+      volume(){
+          return this.length**3 ;
       }
       cubeSurfaceArea(){
           return (6 * (this.length * this.length))
@@ -42,7 +42,7 @@ class CuboidMaker{
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
-console.log(cube.cubeVolume()); // 27
+console.log(cube.volume()); // 27
 console.log(cube.cubeSurfaceArea()); // 54
 console.log(cube.volume()); // 27
 console.log(cube.surfaceArea()); // 54
