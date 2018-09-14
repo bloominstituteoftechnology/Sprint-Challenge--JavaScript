@@ -68,9 +68,18 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = graduates.map(function(element) {
-	return element.university;
-});
+// const universities = graduates.map(function(element) {
+// 	return element.university;
+// });
+// WITHOUT  ARRAY-METHODS
+const universities = [];
+for(let i = 0; i < graduates.length; i++) {
+	let universityName = "";
+	for(key in graduates[i]) {
+		universityName = graduates[i].university;
+	}
+	universities.push(universityName);
+}
 
 console.log(universities);
 
@@ -78,10 +87,21 @@ console.log(universities);
 The resulting contact information should have a space between the first name and the email information like this: 
 Name email@example.com
 Log the result of your new array. */
-const contactInfo = graduates.map(function(element) {
-	let firstNameAndEmail = element.first_name + " " + element.email;
-	return firstNameAndEmail;
-});
+// const contactInfo = graduates.map(function(element) {
+// 	let firstNameAndEmail = element.first_name + " " + element.email;
+// 	return firstNameAndEmail;
+// });
+const contactInfo = [];
+//WITHOUT ARRAY-METHOD
+
+for(let i = 0; i < graduates.length; i++) {
+	let firstNameAndEmail = "";
+	for(key in graduates[i]) {
+		firstNameAndEmail = graduates[i].first_name + " " + graduates[i].email;
+	}
+	contactInfo.push(firstNameAndEmail);
+}
+
 console.log(contactInfo);
 
 
