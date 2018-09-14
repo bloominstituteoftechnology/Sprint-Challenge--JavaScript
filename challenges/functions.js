@@ -42,7 +42,7 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
   Because the nestedFunction() does not have the internal variable defined within its own
   scope, it will look outside the scope chain and look for the internal variable referenced
   in the outer scope. This is closure. Closure basically gives a function body access to the
-  scope outside of it. 
+  scopes outside of it. 
 */
 
 const external = "I'm outside the function";
