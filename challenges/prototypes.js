@@ -53,24 +53,3 @@ let cuboid = new CuboidMaker({
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
-
-
-function consume(param1, param2, cb) {
-  return cb(param1, param2);
-}
-
-function add(a, b) {
-  return a + b;
-}
-
-function multiply(a, b) {
-  return a * b;
-}
-
-function greeting(firstName, lastName) {
-  return `Hello ${firstName} ${lastName}, nice to meet you.`;
-}
-
-consume(2, 2, add);
-consume(10, 16, multiply);
-consume("Mary", "Poppins", greeting);
