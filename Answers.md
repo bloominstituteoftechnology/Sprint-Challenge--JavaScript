@@ -3,7 +3,7 @@
 3. When a function is called, closure allows a variable inside that function's local scope to be stored in memory in order to be used in a context outside that function's local scope when that function is invoked.
 4. 
 #### Window Binding:
-If not binded to anything else, JS will default the binding to the "Window" object.
+If not bound to anything else, JS will default the binding to the "Window" object.
  
 #### Implicit Binding:
 Implicit binding means when you call a function and the function is invoked, whatever is left of the dot is referenced by the "this" keyword.
