@@ -34,7 +34,7 @@ function SurfaceArea (surfaceProp){
 }
 SurfaceArea.prototype = Object.create(Volume.prototype)
 SurfaceArea.prototype.surfaceArea = function(){
-  return 2 * (this.lenght * this.width * this.length * this.height * this.width * this.height)
+  return 2 * (this.length * this.width * this.length * this.height * this.width * this.height)
 }
 /* == Step 4: Create a new object that uses CuboidMaker ==
   Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
