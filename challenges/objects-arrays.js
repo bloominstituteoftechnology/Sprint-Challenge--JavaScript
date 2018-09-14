@@ -1,4 +1,16 @@
 // ==== Objects ====
+class dinosaur{
+  constructor(attributes){
+      this.name=attributes.name;
+      this.diet=attributes.diet;
+      this.weight=attributes.weight;
+      this.length=attributes.length;
+      this.period=attributes.period;
+  }
+  speak(){
+      return '"RAWERSRARARWERSARARARRRR! ${this.name}';
+  }
+} 
 
 /* 
   Given the following information about dinosaurs, create 3 objects: 
@@ -7,24 +19,61 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
+const tyrannosaurus= new dinosaur({
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period:'late cretaceious'
+});
+
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+const stegosaurus= new dinosaur({
+  name: 'stegosaurus',
+  diet: 'herbivorous',
+  weight: '2000kg',
+  length: '9m',
+  period:'Late Jurassic'
+});
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+const velociraptor= new dinosaur({
+  name: 'carnivorous',
+  diet: 'herbivorous',
+  weight: '15kg',
+  length: '1.8m',
+  period:'Late Cretaceious'
+});
 
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(tyrannosaurus.weight);
+function attributes(weight){
+console.log(tyrannosaurus.weight);}
+
 // What was the diet of a velociraptor?
-console.log(velociraptor.diet);
+function attributes(diet){
+console.log(velociraptor.diet);}
+
 // How long was a stegosaurus?
-console.log(stegosaurus.length);
+function attributes (length){
+console.log(stegosaurus.length);}
+
 // What time period did tyrannosaurus live in?
-console.log(tyrannosaurus.period);
+function attributes (period){
+console.log(tyrannosaurus.period);}
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(tyrannosaurus.roar());
+function roar()
+console.log(tyrannosaurus.roar())
+
+
+
+
+
+
+
 
 
 // ==== Arrays ====
@@ -40,11 +89,17 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":7,"first_name":"Robbi","university":"Salem University","email":"rbrister6@redcross.org"},
 {"id":8,"first_name":"Colline","university":"Coastal Carolina University","email":"cbrosh7@alibaba.com"},
 {"id":9,"first_name":"Michail","university":"Universidad Católica de Ávila","email":"mrome8@shinystat.com"},
-{"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
+{"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}];
 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
+var universities =['university'];
+graduates.foreach(function(graduates){
+  console.log(`${graduates[university]}');
+});
+
+
 const universities = [];
 console.log(universities)
 
@@ -86,3 +141,7 @@ console.log(lowerCase);
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
 const populationTotal = [];
 console.log(populationTotal);
+
+function newFunction() {
+  return 'graduates';
+}
