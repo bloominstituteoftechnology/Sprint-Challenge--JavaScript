@@ -11,11 +11,17 @@ const tyrannosaurus = {
   'species' : 'tyrannosaurus',
   'diet' : 'carnivorous',
   'weight' : '7000' + 'kg',
-  'height' : '12' + 'm',
-  'time_period' : 'Late Cretaceious';
+  'length' : '12' + 'm',
+  'time_period' : 'Late Cretaceious',
 };
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+const stegosaurus = {
+  'species' : 'stegosaurus',
+  'diet' : 'herbivorous',
+  'weight' : '2000' + 'kg',
+  'length' : '9' + 'm',
+  'time_period' : 'Late Jurassic',
+};
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
 // Using your dinosaur objects, log answers to these questions:
