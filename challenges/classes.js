@@ -17,10 +17,10 @@ class CubeMaker extends CuboidMaker {
         super(cubeAttributes);
     };
     cubeVolume() {
-        return Math.pow(this.length, 3);
+        return this.length ** 3;
     };
     cubeSurfaceArea() {
-        return 6 * (Math.pow(this.length, 2));
+        return 6 * (this.length ** 2);
     };
 };
 
