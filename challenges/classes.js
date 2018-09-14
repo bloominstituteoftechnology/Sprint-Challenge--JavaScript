@@ -10,11 +10,12 @@ const CuboidMaker = cuboid({
     this.length = dimensions.length;
     this.width = dimensions.length;
     this.height = this.height;
+
   }
 
-CuboidMaker.prototype.make = function () {
-  return `Hello, I havea length, height, and width of ${this.name}`;
-};
+  CuboidMaker.prototype.make = function () {
+    return `Hello, I havea length, height, and width of ${this.length} , ${this.height} , ${this.width}`;
+  };
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
