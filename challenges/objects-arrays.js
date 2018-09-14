@@ -7,7 +7,13 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
-
+const tyrannosaurus = {
+  'species' : 'tyrannosaurus',
+  'diet' : 'carnivorous',
+  'weight' : '7000' + 'kg',
+  'height' : '12' + 'm',
+  'time_period' : 'Late Cretaceious';
+};
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
