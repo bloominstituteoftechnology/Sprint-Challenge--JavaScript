@@ -18,18 +18,33 @@ myFunc(1, 2, function(call){
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+const add = function add(x, y) {
+  console.log(x+y); 
+}
+
+const multiply = function multiply(x, y) {
+  console.log(x*y);
+}
+const greeting = function greeting(x, y) {
+  console.log(`Hello ${x} ${y}, nice to meet you!`);
+}
+
+function consume(x, y, callback) {
+  return callback(x, y);
+}
 
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-//consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: Internal is within the scope of myFunction which also includes nestedFunction. Because of the scope, nestedFunction can use internal.
+// If there was a function where I put the 'here' comment or outside of myFunction alltogether, it wouldn't be able to access internal.
 
 
 const external = "I'm outside the function";
@@ -43,4 +58,6 @@ function myFunction() {
   };
   nestedFunction();
 }
+//here
 myFunction();
+//or here
