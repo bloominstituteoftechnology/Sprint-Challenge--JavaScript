@@ -1,1 +1,5 @@
-
+1. .forEach runs code for each element in the array but returns undefined. .map returns a new array created by the callback function.
+2. A function is a group of code that is called independently. A method is a group of a code that is a property of an object and can only be invoked using an object.
+3. A closure is a reference to an outer function's scope and is made accessible to inner functions.
+4. The four principles of the this keyword are window binding, implicit binding, new keyword binding, and explicit binding. Within the global scope, this will be the window. Within an object's method, this will be the object. Within a constructor or class, this will refer to each instance. In the function methods call(), apply(), and bind(), this will be bound to the first argument passed in.
+5. super() allows an object to access it's parent's properties by calling the parent's constructor. Without super(), extend would define the child as a child, but none of the parent's properties could be referenced.
