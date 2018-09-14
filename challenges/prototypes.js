@@ -29,7 +29,7 @@ CuboidMaker.prototype.cubeVolume = function () {
 
 CuboidMaker.prototype.surfaceArea = function () { 
 
-  return 2 *  (this.length * this.width + this.length * this.height + this.width * this.height);
+  return 2 *  ((this.length * this.width) + (this.length * this.height) + (this.width * this.height));
 
 }
 
