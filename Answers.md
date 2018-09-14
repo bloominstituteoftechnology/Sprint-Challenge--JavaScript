@@ -2,7 +2,8 @@
 
 
 1. Describe the biggest difference between `.forEach` & `.map`.
-    One of the biggest differences is that .foreach, does not have a return type and .map returns an array.
+    One of the biggest differences is that .foreach, does not have a return type and .map returns an array. another big difference is that foreach will run over each item in the collection and can't be stopped
+    unless you throw an exception.
 
 2. What is the difference between a function and a method?
     both are blocks of executable code however a method lives inside an object.
