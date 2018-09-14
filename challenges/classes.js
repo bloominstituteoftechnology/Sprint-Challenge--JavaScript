@@ -33,20 +33,22 @@ console.log(cuboid.surfaceArea()); // 130
 class CubeMaker extends CuboidMaker {
   constructor(properties) {
     super(properties);
-    this.isCube = properties.isCube;
   }
   volume() {
     return this.length * this.length * this.length;
   }
+  surfaceArea() {
+      return 6 * (this.length * this.length);
+  }
 }
 
 const cube = new CubeMaker({
-  length: 4,
-  height: 4,
-  width: 4,
+  length: 10,
+  height: 10,
+  width: 10,
 });
 
-function isCube(cubeParam) {
+const isCube = cubeParam => {
     if (cubeParam.length === cubeParam.width && cubeParam.length === cubeParam.height){
         return true;
     } else {
@@ -55,4 +57,5 @@ function isCube(cubeParam) {
 }
 
 cube.isCube = isCube(cube);
+console.log(cube.surfaceArea())
 console.log(cube);
