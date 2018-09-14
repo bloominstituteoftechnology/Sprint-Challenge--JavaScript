@@ -8,7 +8,7 @@
 */
 
 function consume (x, y, cb) {
-  console.log(cb(x, y));
+  return cb(x, y);
 }
 
 
