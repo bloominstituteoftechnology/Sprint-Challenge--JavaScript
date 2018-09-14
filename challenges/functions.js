@@ -25,7 +25,7 @@
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-
+// In JavaScript's two pass interpretation, in the first pass the invocation of nestedfunction() tells the interpreter to store the contents of the variable "internal" in memory to be used outside its local scope.
 
 const external = "I'm outside the function";
 
@@ -39,3 +39,23 @@ function myFunction() {
   nestedFunction();
 }
 myFunction();
+
+function consume(param1, param2, cb) {
+  return cb(param1, param2)
+}
+
+function add(param1, param2) {
+  return param1 + param2
+}
+
+function multiply(param1, param2) {
+  return param1 * param2
+}
+
+function greeting(param1, param2) {
+  return `Hello ${param1} ${param2}, nice to meet you!`
+}
+
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
