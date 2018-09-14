@@ -41,5 +41,6 @@ const cuboid = new cuboidMaker({
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); 
 console.log(cuboid.surfaceArea()); 
+// I am pretty sure that surface area is supposed to be 65 because there is no way that it could be 130 with what they gave us
 
 
