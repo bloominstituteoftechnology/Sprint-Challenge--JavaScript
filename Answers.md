@@ -10,5 +10,3 @@
     new -- this is bound to a new instance of a class using the new keyword
 
 5. super() allows an object to access the functions and properties of its parent
-
- 
