@@ -33,9 +33,20 @@ class CubeMaker extends CuboidMaker{
         super(cubeMakerAttributes);
     }
     cubeVolume() {
-        console.log(`${this.length}` * `${this.width}` * `${this.height}`);
+        return `${this.length}` * `${this.width}` * `${this.height}`;
     }
     cubeSurfaceArea() {
-        console.log(`${this.length}` * `${this.width}` + `${this.length}` * `${this.height}` + `${this.width}` * `${this.height}`);
+        return 2 * (`${this.length}` * `${this.width}` + `${this.length}` * `${this.height}` + `${this.width}` * `${this.height}`);
     }
 }
+
+  const cuboidOne = new CubeMaker({
+    'length': 7,
+    'width': 7,
+    'height': 7
+  })
+
+console.log(cuboidOne.volume());
+console.log(cuboidOne.surfaceArea());
+console.log(cuboidOne.cubeSurfaceArea());
+console.log(cuboidOne.cubeVolume());
