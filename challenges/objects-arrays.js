@@ -52,7 +52,7 @@ console.log(tyrannosaurus.roar());
 
 // ==== Arrays ====
 
-// Given an array of college graduates.  Complete the following requests without using any array methods like .forEach(), .map(), .reduce(), .filter()
+// Given an array of college graduates.  Complete the following requests WITHOUT using any array methods like .forEach(), .map(), .reduce(), .filter()
 
 const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern State College","email":"ctorry0@macromedia.com"},
 {"id":2,"first_name":"Saundra","university":"The School of the Art Institute of Chicago","email":"swhal1@state.gov"},
@@ -98,9 +98,9 @@ for (i = 0; i < graduates.length; i++) {
 console.log(uni);
 
 
-// ==== Array Methods ====
+// ==== ADVANCED Array Methods ====
 
-// Given this zoo data from around the United States, follow the instructions below
+// Given this zoo data from around the United States, follow the instructions below. You should use .map() and .reduce() to solve the problems below.
 
 zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
 {"animal_name":"Screamer, southern","population":1,"scientific_name":"Chauna torquata","state":"Alabama"},
