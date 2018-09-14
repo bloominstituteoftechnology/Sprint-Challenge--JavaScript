@@ -6,7 +6,10 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-
+function getLength(arr, str, cb) {
+  // getLength passes the length of the array into the callback.
+  return cb(`The array is ${arr.length} entries long. The string is ${str.length} characters long`);
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
