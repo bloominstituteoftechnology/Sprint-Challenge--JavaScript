@@ -135,11 +135,11 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities);
+
 for(let i=0; i<graduates.length; i++) {
   universities.push(graduates[i].university);
 }
-
+console.log(universities);
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
 The resulting contact information should have a space between the first name and the email information like this: 
@@ -147,19 +147,29 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-console.log(contactInfo);
 for(let i=0; i<graduates.length; i++) {
   contactInfo.push(graduates[i].first_name + " " + graduates[i].email);
 }
-
+console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const college = [];
-console.log(college);
+
+let uni = [];
 for (let i = 0; i < universities.length; i++) {
   if (universities[i].includes("Uni")) {
-    college.push(universities[i]);
+    uni.push(universities[i]);
   }
 }
+console.log(uni);
+
+
+let lol = graduates.map(grads => {
+  if (grads.university.includes("Uni")) {
+    return `${grads.university}`;
+  }
+});
+
+console.log(lol);
+
 
 // ==== ADVANCED Array Methods ====
 
@@ -229,13 +239,17 @@ const zooAnimals = [
 ];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-const lowerCase = [];
-console.log(lowerCase);
+
+const lowerCase = 
 zooAnimals.map(zoo => zoo.animal_name.toLowerCase());
 
+console.log(lowerCase);
+
+
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-const populationTotal = [];
+const populationTotal = 
+zooAnimals.reduce((acc, curr) => 
+  acc + curr.population, 0
+);
 console.log(populationTotal);
-zooAnimals.reduce((curr, acc) => {
-  return curr + acc.populationTotal;
-});
+
