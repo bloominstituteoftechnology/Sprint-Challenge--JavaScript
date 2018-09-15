@@ -77,7 +77,7 @@ function findUnique(arr, prop) {
   return Object.keys(uniqueObj);
 }
 
-const universities = findUnique(graduates, 'university');
+const universities = findUnique(graduates, 'university').sort();
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
