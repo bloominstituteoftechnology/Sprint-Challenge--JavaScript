@@ -23,7 +23,8 @@ doPoetry("science", "unraveling the code of the universe", speakPoem);
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
-  * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
+  * Create a function named greeting that accepts a first and last name and returns
+  *  "Hello first-name last-name, nice to meet you!"
 */
 function consume(arg1, arg2, callback){
   console.log(callback(arg1, arg2));
