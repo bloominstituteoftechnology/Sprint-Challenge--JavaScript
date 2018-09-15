@@ -6,12 +6,31 @@
   object name, diet, weight, length, period
 */
 
+function Dinosaur(dinoAttributes) {
+  Object.assign(this, dinoAttributes)
+}
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
+const tyrannosaurus = {
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceious'
+}
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+const stegosaurus = {
+  diet: 'herbivorous',
+  weight: '2000kg',
+  length: '9m',
+  period: 'Jurassic'
+}
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
-
+const velociraptor = {
+  diet: 'carnivorous',
+  weight: '15kg',
+  length: '1.8m',
+  period: 'Late Cretaceious'
+}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
@@ -24,6 +43,9 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+tyrannosaurus.roar = function() {
+  return "RAWERSRARARWERSARARARRRR!";
+}
 console.log(tyrannosaurus.roar());
 
 
@@ -45,7 +67,17 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
+function findUnique(arr, prop) {
+  let uniqueObj = {};
+  for (let i = 0; i < arr.length; i++) {
+    if (!uniqueObj.hasOwnProperty(prop)) {
+      uniqueObj[arr[i][prop]] = 0;
+    }
+  }
+  return Object.keys(uniqueObj);
+}
+
+const universities = findUnique(graduates, 'university').sort();
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -54,12 +86,69 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = [];
+function concatProps(arr, props) {
+  let outputArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let concatStr = '';
+    for (let p = 0; p < props.length; p++) {
+      concatStr = concatStr + arr[i][props[p]] + ' ';
+    }
+    outputArr.push(concatStr.substring(0, concatStr.length-1));
+  }
+  return outputArr;
+}
+const contactInfo = concatProps(graduates, ['first_name', 'email']);
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+// function stringContains(str, check) {
+//   for (let i = 0; i < str.length - check.length; i++) {
+//     if (str.substring(i, str.length-1 + i).toLowerCase() === check.toLowerCase()) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+function findString(mainString, subString) {
+  // found at: https://crunchify.com/java-how-to-check-if-a-string-contains-a-substring-implement-your-own-method/
+  let foundme = false;
+  let max = mainString.length - subString.length;
+
+  checkrecusion: for (let i = 0; i <= max; i++) {
+    let n = subString.length;
+
+    let j = i;
+    let k = 0;
+
+    while (n-- != 0) {
+        if (mainString.charAt(j++) != subString.charAt(k++)) {
+            continue checkrecusion;
+        }
+    }
+    foundme = true;
+    break checkrecusion;
+  }
+  return foundme;
+}
+
+function filter(arr, condition) {
+  let outputArr = []
+  for (let i = 0; i < arr.length; i++) {
+    if ( condition( arr[i] ) ) {
+      outputArr.push( arr[i] )
+    }
+  }
+  return outputArr;
+}
+// let outputArr = [];
+// for (let i = 0; i < universities.length; i++) {
+//   if ( universities[i].toLowerCase().includes('uni') ) {
+//     outputArr.push( universities[i] );
+//   }
+// }
+const uni = filter(universities, s => findString(s.toLowerCase(), 'uni'));
 console.log(uni);
 
 
@@ -80,9 +169,9 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-const lowerCase = [];
+const lowerCase = zooAnimals.map( animal => animal.animal_name.toLowerCase() );
 console.log(lowerCase); 
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-const populationTotal = [];
+const populationTotal = zooAnimals.map( animal => animal.population ).reduce( (total, a) => total + a );
 console.log(populationTotal);
