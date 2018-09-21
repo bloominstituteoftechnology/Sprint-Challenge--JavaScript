@@ -18,13 +18,13 @@ function consume ( any1 , any2 , callback){
     * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
   */
   function add(num1 , num2){
-     console.log(num1 + num2);
+  return (num1 + num2);
   }
   function multiply (num1,num2){
-  console.log (num1 * num2 );
+  return (num1 * num2 );
   }
   function greeting(firstname, lastname){
-  console.log( "Hello, "+ firstname +' ' +lastname + ",nice to meet you! ");
+  return `Hello ${firstname} ,${lastname} ,nice to meet you!`;
   }
   
   
@@ -36,7 +36,7 @@ function consume ( any1 , any2 , callback){
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation:Becuase its inside the body of the main function.
+// Explanation: because nestedfucntion() has access to the lexical scope of myFunction and can access the internal variable 
 
 
 
