@@ -19,7 +19,7 @@ function cuboidMAker(properties){
   Formula for cuboid volume: length * width * height
 */
 cuboidMAker.prototype.volume = function(){
-  return `${this.length} * ${this.width} * ${this.height}`;
+  return this.length * this.width *this.height;
 }
 
 
@@ -29,7 +29,7 @@ cuboidMAker.prototype.volume = function(){
   Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 */
 cuboidMAker.prototype.surfaceArea = function(){
-  return `2 * (${length} * ${width} + ${length} * ${height} + ${width} * ${height})`;
+  return 2 *( this.length * this.width + this.length * this.height + this.width * this.height);
 }
 
 
