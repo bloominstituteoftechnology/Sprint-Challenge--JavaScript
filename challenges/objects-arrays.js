@@ -6,9 +6,32 @@
   object name, diet, weight, length, period
 */
 
+const tyrannosaurus = {
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: "7000kg",
+  length: "12m",
+  period: "Late Cretaceious",
+}
+
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
+const stegosaurus = {
+  name: "stegosaurus",
+  diet: "herbivorous",
+  weight: "2000kg",
+  length: "9m",
+  period: "Late Jurassic"
+}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+
+const velociraptor = {
+  name: "velociraptor",
+  diet: "carnivorous",
+  weight: "15kg",
+  length: "1.8m",
+  period: "Late Cretaceious"
+}
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
@@ -24,6 +47,10 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+tyrannosaurus.roar = function() {
+  return "RAWERSRARARWERSARARARRRR"
+}
+
 console.log(tyrannosaurus.roar());
 
 
@@ -109,7 +136,7 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal;
+// const populationTotal;
 console.log(populationTotal);
 
 
