@@ -104,22 +104,6 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Hawk-eagle, crowned","population":10,"scientific_name":"Spizaetus coronatus","state":"Florida"},
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
-<<<<<<< HEAD
-// The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-const lowerCase = zooAnimals.map(animal => {
-  return animal.animal_name.tolowerCase();
-})
-console.log(lowerCase);
-
-
-
-// The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-const populationTotal = zooAnimals.reduce((animal, totalPopulation) => {
-  return animal + totalPopulation.population
-}, 0);
-console.log(populationTotal);
-
-=======
 /* Request 1: .forEach()
 
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
@@ -134,7 +118,10 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
+const lowerCase = zooAnimals.map(animal => {
+  return animal.animal_name.toLowerCase();
+})
+
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -150,8 +137,11 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal;
+const populationTotal=zooAnimals.reduce((animal,totalpopulation) =>{
+  return animal + totalpopulation.population
+}, 0 );
 console.log(populationTotal);
+
 
 
 /* 
@@ -160,4 +150,3 @@ Stretch: If you haven't already, convert your array methods callbacks into arrow
 
 */
 
->>>>>>> f247f6f2ed62567b5095fa375a7aaf650ee7b02d
