@@ -6,14 +6,21 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-
+function consume(w,e,callback) {
+  return callback(w,e);
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-
+function add(w,e) {
+  return w + e;
+}
+function multiply(w,e) {
+  return w * e;
+}
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
 //consume(2,2,add); // 4
