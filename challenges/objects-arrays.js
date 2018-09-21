@@ -7,9 +7,9 @@
 */
 const dinos = [{"id":1,"name":"tyrannosaurus","diet":"carnivorous",
 "weight":"7000kg","length":"12m","period":"Late Cretaceious"}
-{"id":2,name:"stegosaurus","diet":"herbivorous",
+,{"id":2,name:"stegosaurus","diet":"herbivorous",
 "weight":"2000kg","length":"9m","period":"Late Jurassic"}
-{"id":3,"name":"velociraptor","diet":"carnivorous",
+,{"id":3,"name":"velociraptor","diet":"carnivorous",
 "weight":"15kg","length":"1.8m","period":"Late Cretaceious"}];
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
@@ -36,8 +36,10 @@ console.log(`The ${dinos[1].name} is about  ${dinos[1].length} long`);
 console.log(`The ${dinos[0].name} lived in the  ${dinos[0].period} era`);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-let roar = [`The ${dinos[0].name} says RAWERSRARARWERSARARARRRR!`];
-console.log(tyrannosaurus.roar());
+dinos[0].roar= function(){
+ return "RAWERSRARARWERSARARARRRR!";
+}
+console.log(dinos[0].roar())
 
 
 // ==== Arrays ====
@@ -58,7 +60,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
+let universities = [];
 for (let i = 0; i < graduates.length; i++) {
   univeristies.push(graduates[i].university);
 }
@@ -71,16 +73,15 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = [];
+let contactInfo = [];
 for (let i = 0; i < graduates.length; i++) {
-  contactInfo.push(graduates[i].first_name)
-  contactInfo.push(graduates[i].email);
-})
+  contactInfo.push(graduates[i].first_name, graduates[i].email);
+}
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+
 let uni = [];
 for (let i = 0; i < graduates.length; i++) {
   if (graduates[i].university == "uni") {
@@ -91,6 +92,7 @@ for (let i = 0; i < graduates.length; i++) {
 }
 console.log("This is a list of all the universities with uni in the name: " + JSON.stringify(uni));
 console.log(uni);
+
 
 
 // ==== ADVANCED Array Methods ====
@@ -110,12 +112,12 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
 // The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-let lowerCase =zooAnimals.map((animal_name) => {
+let lowerCase = zooAnimals.map((animal_name) => {
   return zooAnimals.animal_name.toLowerCase();
 });
 console.log(lowerCase);
 
 // The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-const populationTotal = [];
+
 let populationTotal = zooAnimals.reduce(population)
-{return populationTotal};
+console.log(populationTotal)
