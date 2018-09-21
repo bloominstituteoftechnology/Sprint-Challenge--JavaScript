@@ -5,7 +5,7 @@
 /* == Step 1: Base Constructor ==
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
-function cuboid(attributes){
+function CuboidMaker (attributes){
   this.length=attributes.length;
   this.width=attributes.width;
   this.height=attributes.height;
@@ -15,8 +15,9 @@ function cuboid(attributes){
   
   Formula for cuboid volume: length * width * height
 */
+const cuboid= new CuboidMaker
 cuboid.prototype.volume = function volume() {
-  return (length * width * height);
+  return (this.length * this.width * this.height);
 };
 
 
@@ -26,7 +27,7 @@ cuboid.prototype.volume = function volume() {
   Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 */
 cuboid.prototype.surface = function surface() {
-return  2 * (length * width + length * height + width * height)
+return  2 * (this.length *this.width + this.length * this.height + this.width *this. height);
 }
 
 /* == Step 4: Create a new object that uses CuboidMaker ==
