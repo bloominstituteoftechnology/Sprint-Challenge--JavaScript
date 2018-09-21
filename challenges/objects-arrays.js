@@ -17,7 +17,7 @@ const tyrannosaurus ={
 const stegosaurus ={
   'name': 'Stegosaurus',
   'diet': 'herbivorous',
-  'weight':'200kg',
+  'weight':'2000kg',
   'length': '9m',
   'period': 'Late Jurassic' 
 } 
