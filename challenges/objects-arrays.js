@@ -120,3 +120,40 @@ const populationTotal = zooAnimals.reduce ((animal, populationTotal)=>{
 return animal + populationTotal.population
 },0);
 console.log(populationTotal);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
+
+*/
+const animalNames = [];
+console.log(animalNames);
+
+/* Request 2: .map()    
+
+The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
+
+*/
+const animalNames = [];
+console.log(animalNames);
+/* Request 3: .filter() 
+
+The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
+
+*/
+const largerPopulation = [];
+console.log(largerPopulation);
+
+/* Request 4: .reduce() 
