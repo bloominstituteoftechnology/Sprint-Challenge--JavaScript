@@ -7,7 +7,7 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-function consume ( any1 , any2 , callback){
+function consume( any1 , any2 , callback){
 
   return callback(any1,any2);
   }
@@ -18,13 +18,13 @@ function consume ( any1 , any2 , callback){
     * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
   */
   function add(num1 , num2){
-  return (num1 + num2);
+  console.log  (num1 + num2);
   }
   function multiply (num1,num2){
-  return (num1 * num2 );
+  console.log (num1 * num2 );
   }
   function greeting(firstname, lastname){
-  return `Hello ${firstname} ,${lastname} ,nice to meet you!`;
+  console.log( `Hello ${firstname}  ${lastname} ,nice to meet you!`);
   }
   
   
