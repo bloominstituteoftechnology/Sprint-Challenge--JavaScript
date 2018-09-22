@@ -1,14 +1,23 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
-function CuboidMaker (attributes){
-  this.length=attributes.length;
-  this.width=attributes.width;
-  this.height=attributes.height;
+class CuboidMaker {
+  constructor(attributes) {
+    this.length = attributes.length;
+    this.width = attributes.width;
+    this.height
+      = attributes.height;
+  }
 }
 /* == Step 2: Volume Method ==
   Create a method using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   
   Formula for cuboid volume: length * width * height
 */
+
+
+
+
+
+
 const cuboid= new CuboidMaker
 cuboid.prototype.volume = function volume() {
   return (this.length * this.width * this.height);
