@@ -7,9 +7,9 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-function consume(attributes, a, b, c) {
+function consume(b, c,num ) {
 
-  return attributes (a,b,c);
+  return num(b,c);
 
 }
 
@@ -18,11 +18,11 @@ function consume(attributes, a, b, c) {
   * Create a function named multiply that returns the product of two numbers
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add (d,e) {
+function add(d,e) {
 
-return ( d + e )
+return (d+e)
 }
-function multiply (f, g)
+function multiply (f,g)
 {
   return (f*g)
 }
@@ -42,17 +42,17 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation:
-nestedFunction is the innermost function, but outer stuff is "less exclusive" whereas the internal stuff is "more exclusive"
+// nestedFunction is the innermost function, but outer stuff is "less exclusive" whereas the internal stuff is "more exclusive"
 
-const external = "I'm outside the function";
+// const external = "I'm outside the function";
 
-function myFunction() {
-  console.log(external);
-  const internal = "Hello! I'm inside myFunction!";
+// function myFunction() {
+//   console.log(external);
+//   const internal = "Hello! I'm inside myFunction!";
 
-  function nestedFunction() {
-    console.log(internal);
-  };
-  nestedFunction();
-}
-myFunction();
+//   function nestedFunction() {
+//     console.log(internal);
+//   };
+//   nestedFunction();
+// }
+// myFunction();
