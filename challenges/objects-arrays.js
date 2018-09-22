@@ -1,17 +1,31 @@
-// ==== Objects ====
-
+// ==== Objects ===//
 /* 
   Given the following information about dinosaurs, create 3 objects: 
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
-*/
-
+*/                 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
-
+const tyrannosaurus = {
+  'diet' : 'carnivorous',
+  'weight' : '7000kg',
+  'length' :  '12m',
+  'period' : 'Late Cretaceious',
+  
+}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+const stegosaurus = {
+'diet' : 'herbivorous',
+'weight' : '2000kg',
+'length' :'9m',
+'period' : 'Late Jurassic'
+}
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
-
+const velociraptor = {
+'diet' : 'carnivorous',
+'weight' : '15kg',
+'length' :  '1.8m',
+ 'period' :'Late Cretaceious'  
+}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
@@ -22,10 +36,11 @@ console.log(velociraptor.diet);
 console.log(stegosaurus.length);
 // What time period did tyrannosaurus live in?
 console.log(tyrannosaurus.period);
-
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+tyrannosaurus.roar = function(){
+return "RAWERSRARARWERSARARARRRR!";
+}
 console.log(tyrannosaurus.roar());
-
 
 // ==== Arrays ====
 
@@ -46,23 +61,34 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities)
+for(let i = 0 ; i < graduates.length ; i++){
+  universities.push(graduates[i].university);
+}
+universities.sort()
+console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
 The resulting contact information should have a space between the first name and the email information like this: 
 Name email@example.com
+og the result of your new array. */
 
-Log the result of your new array. */
+
 const contactInfo = [];
+for (let i = 0 ; i < graduates.length ;  i++){
+  contactInfo.push(graduates[i].first_name + ' ' + graduates[i].email);
+}
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+for(let i = 0; i < graduates.length; i++ ) {
+   if (graduates[i].university.includes('Uni')) {
+     uni.push(graduates[i].university);
+   }
+ }
 console.log(uni);
-
-
 // ==== ADVANCED Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
@@ -85,6 +111,9 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+for (let i = 0 ; i < zooAnimals.length ; i++){
+  animalNames.push(zooAnimals[i].animal_name , zooAnimals[i].scientific_name);
+}
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -93,7 +122,10 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
+const lowerCase = zooAnimals.map(animal => {
+  return animal.animal_name.toLowerCase();
+})
+
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -102,6 +134,11 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const largerPopulation = [];
+for(let i = 0; i < zooAnimals.length; i++ ) {
+   if (zooAnimals[i].population <= 5) {
+     largerPopulation.push(zooAnimals[i]);
+   }
+}
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -109,13 +146,15 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal;
+const populationTotal=zooAnimals.reduce((animal,totalpopulation) =>{
+  return animal + totalpopulation.population
+}, 0 );
 console.log(populationTotal);
+
 
 
 /* 
 
 Stretch: If you haven't already, convert your array methods callbacks into arrow functions.
 
-*/
-
+*///
