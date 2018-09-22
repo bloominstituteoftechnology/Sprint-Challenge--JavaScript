@@ -1,5 +1,4 @@
-// ==== Objects ====
-
+// ==== Objects ===//
 /* 
   Given the following information about dinosaurs, create 3 objects: 
   Use this pattern to create your objects: 
@@ -83,11 +82,13 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-//const uni = [];
-
-//console.log(uni);
-
-
+const uni = [];
+for(let i = 0; i < graduates.length; i++ ) {
+   if (graduates[i].university.includes('Uni')) {
+     uni.push(graduates[i].university);
+   }
+ }
+console.log(uni);
 // ==== ADVANCED Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
@@ -110,6 +111,9 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+for (let i = 0 ; i < zooAnimals.length ; i++){
+  animalNames.push(zooAnimals[i].animal_name , zooAnimals[i].scientific_name);
+}
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -130,6 +134,11 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const largerPopulation = [];
+for(let i = 0; i < zooAnimals.length; i++ ) {
+   if (zooAnimals[i].population <= 5) {
+     largerPopulation.push(zooAnimals[i]);
+   }
+}
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -148,5 +157,4 @@ console.log(populationTotal);
 
 Stretch: If you haven't already, convert your array methods callbacks into arrow functions.
 
-*/
-
+*///
