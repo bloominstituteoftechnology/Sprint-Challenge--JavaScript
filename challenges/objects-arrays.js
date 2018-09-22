@@ -96,7 +96,7 @@ console.log(uniSchools);
 
 // ==== ADVANCED Array Methods ====
 
-// Given this zoo data from around the United States, follow the instructions below.  You should use .map() and .reduce() to solve the problems below.
+// Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
 
 zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
@@ -109,16 +109,3 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Pampa gray fox","population":10,"scientific_name":"Pseudalopex gymnocercus","state":"Connecticut"},
 {"animal_name":"Hawk-eagle, crowned","population":10,"scientific_name":"Spizaetus coronatus","state":"Florida"},
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
-
-// The zoos need a list of all their animal's names converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-let lowerCase = zooAnimals.map((animal_name) => {
-  return zooAnimals.animal_name.toLowerCase();
-});
-console.log(lowerCase);
-
-
-// The zoos need to know their total animal population across the United States.  Add up all the population numbers from all the zoos using the .reduce() method.
-
-let populationTotal = zooAnimals.reduce(population)
-
-console.log(populationTotal);
