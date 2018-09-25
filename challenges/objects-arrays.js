@@ -93,7 +93,7 @@ const uni = [];
 
 for(x = 0; x < graduates.length; x++){
 	graduates[x].university;
-	if(graduates[x].university === 'Uni'){
+	if(graduates[x].university.includes('Uni')){
 		uni.push(graduates[x].university);
 	}
 }
