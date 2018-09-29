@@ -15,7 +15,7 @@ function dinosaur(name, diet, weight, length, period) {
 }
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
-var tyrannosaurus = new dinosaur('tyrannosaurus', 'carnivorous', '000kg', '12m', 'Late Cretaceious');
+var tyrannosaurus = new dinosaur('tyrannosaurus', 'carnivorous', '7000kg', '12m', 'Late Cretaceious');
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 var stegosaurus = new dinosaur('stegosaurus', 'herbivorous', '2000kg', '9m', 'Late Jurassic');
@@ -74,7 +74,7 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 for (i = 0; i < graduates.length; i++) {
-	contactInfo.push(graduates[i].first_name + " " + graduates[i].university)
+	contactInfo.push(graduates[i].first_name + " " + graduates[i].email)
 }
 console.log(contactInfo);
 
