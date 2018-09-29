@@ -10,4 +10,6 @@
 	2. Implicit binding -
 	When this is followed by a dot, the object before 'this' is this.
 	3. When used inside of a constructor function, 'this' refers to the object that is being created by the constructor.
-	4. 
+	4. When used by the 'call' or 'apply' function, 'this' is explictly tied to the object which calls it.
+
+5. Super is used to access a object's parent.
