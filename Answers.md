@@ -12,13 +12,13 @@ can access a variable from the function that contains when the nested function r
 ##### Window/Global object binding
 The keyword 'this' in the global scope refers to the Window/Global object binding
 
-##### Implicit object binding
+#### Implicit object binding
 The keyword 'this' when using implicit binding refers to the object's properites and methods that object that used 'this' contains. Thus if the name of the object changed, this would still refer to the object's new name.
 
-##### new object binding
+#### new object binding
 The keyword 'this' refers to the constructor function's properties and methods
 
-##### explicit object binding
+#### explicit object binding
 The keyword 'this' is explicitly defined by using .call() .apply() or .bind()
 
 ### 5. Why do we need `super()` in an extended class?
