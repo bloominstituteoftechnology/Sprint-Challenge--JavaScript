@@ -4,7 +4,7 @@
 
 3. A closure is a backpack like storage mechanism used to carry data that will be used later down the nested scope chain as need by other structures like functions in this case. This is facilitated by the two pass compiler used by  javascript. The compiler learns it will need the  internal variable beyond its currently scoped execution context the nested function and stores it module a closure.
 
-4.
+4. A-D
 a
 Principle 1 This is the global / window object, if there are no other objects the this keyword always refers to the window.all objects and properties cascade down in inheritance from the global window object.
 
@@ -19,4 +19,4 @@ Principle 4 Explicit allows us to use the call or apply method to direct the thi
 
 
 
-5.
+5.The super() is an important part of inheritance chain for an extended class because it allows the class to appropriate and utilize the methods and properties of the class it is extending  to its own class. And therefore the objects it creates and possibly any sub-classed extended from it.
