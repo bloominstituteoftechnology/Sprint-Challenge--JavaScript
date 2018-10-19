@@ -6,11 +6,43 @@
   object name, diet, weight, length, period
 */
 
-// tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
+function Dinosaur(dinoAtt){
+  this.name = dinoAtt.name;
+  this.diet = dinoAtt.diet;
+  this.weight = dinoAtt.weight;
+  this.length = dinoAtt.length;
+  this.period = dinoAtt.period;
+}
+
+// tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
+
+const tyrannosaurus = new Dinosaur({
+  name: 'Tyrannosaurus',
+  diet: 'carnivorous',
+  weight: 7000 + 'kg',
+  length: 12 + 'm',
+  period: 'Late Cretaceous'
+})
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
-// velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+const stegosaurus = new Dinosaur({
+  name: 'Stegosaurus',
+  diet: 'herbivorous',
+  weight: 2000 + 'kg',
+  length: 9 + 'm',
+  period: 'Late Jurassic'
+})
+
+// velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
+
+const velociraptor = new Dinosaur({
+  name: 'Velociraptor',
+  diet: 'carnivorous',
+  weight: 15 + 'kg',
+  length: 1.8 + 'm',
+  period: 'Late Cretaceous'
+})
 
 // Using your dinosaur objects, log answers to these questions:
 
@@ -24,6 +56,11 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+
+Dinosaur.prototype.roar = function(){
+  return "RAWERSRARARWERSARARARRRR!";
+}
+
 console.log(tyrannosaurus.roar());
 
 
@@ -46,6 +83,12 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+function uniSort(){
+  for(let i=0; i<graduates.length; i++){
+    universities.push(graduates[i].university).sort()
+  }
+}
+
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
