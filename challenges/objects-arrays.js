@@ -231,8 +231,8 @@ const animalNames = [];
 zooAnimals.forEach(function(item) {
     let bothName = item.animal_name + ' ' + item.scientific_name;
     animalNames.push(bothName);
+    console.log(animalNames);
 });
-console.log(animalNames);
 
 /* Request 2: .map()    
 
