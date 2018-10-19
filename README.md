@@ -1,4 +1,4 @@
-# Assessing your JavaScript Fundamentals
+<!-- # Assessing your JavaScript Fundamentals
 This sprint you worked really hard on learning the fundamentals of JavaScript! This sprint challenge will touch on each concept covered throughout this week.  Follow each task in order but feel free to skip something if you're struggling and come back to it later.
 
 * This project is to be worked on alone but you can use outside resources. You can _reference_ any old code you may have and the training kit content.
@@ -7,7 +7,7 @@ This sprint you worked really hard on learning the fundamentals of JavaScript! T
 
 * [ ] Fork the project into your GitHub user account
 * [ ] Clone the forked project into a directory on your machine
-* [ ] You are now ready to build this project with your preferred IDE
+* [ ] You are now ready to build this project with your preferred IDE -->
 
 ## Task 2: Comprehension Questions
 Answer the following questions to the best of your ability. You can exercise your Googling skills and use training kit.  Open up the [Answers.md](Answers.md) file and record your responses there.
