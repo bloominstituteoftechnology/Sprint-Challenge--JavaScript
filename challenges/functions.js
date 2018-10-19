@@ -36,7 +36,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // Explanation: 
 /*`nestedfunction()` can access the variable `internal` becuase it references an 
-object that is not its local scope. When my function is called, it also calls 
+object that is not its local scope. When myFunction() is called, it also calls 
 `nestedfunction()` and nested function requires the variable `internal` but
 does not find in its local scope. `nestedfunction()` will check if the variable `internal` 
 exists the closure scope from which it was called. It will also check the global scope. */
