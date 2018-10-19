@@ -48,7 +48,3 @@ cuboid.prototype = new Object(CuboidMaker.prototype);
 
 console.log(cuboid.volume());
 console.log(cuboid.surfaceArea());
-
-// Test your volume and surfaceArea methods by uncommenting the logs below:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
