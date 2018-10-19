@@ -33,20 +33,26 @@ console.log(cuboid.surfaceArea()); // 130
 class CubeMaker extends CuboidMaker {
     constructor(cubeProps) {
         super(cubeProps);
-        this.side = cubeProps.side
+        this.allSides = cubeProps.allSides
     }
     cubeVolume() { //V=a^3
-        return Math.pow(this.side, 3);
+        return Math.pow(this.allSides, 3);
     }
 
     cubeSurfaceArea() { // A=6a^2
-        return  6 * (Math.pow(this.side, 2));
+        return  6 * (Math.pow(this.allSides, 2));
     }
 }
 
 const cube = new CubeMaker({
-    side : 5,
+    // allSides : 5,
+    length: 5,
+    width: 5,
+    height: 5
 });
 
-console.log(cube.cubeVolume()); // 125
-console.log(cube.cubeSurfaceArea()); //150
+console.log(cube.volume());
+console.log(cube.surfaceArea()); 
+
+// console.log(cube.cubeVolume()); // 125
+// console.log(cube.cubeSurfaceArea()); //150
