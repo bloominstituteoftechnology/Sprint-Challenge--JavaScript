@@ -34,6 +34,6 @@ Create constructors, bind methods, and create cuboids in this prototypes challen
 
 ## Task 6: Classes
 Once you have completed the prototypes challenge, it's time to convert all your hard work into classes.
-* [ ] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
+* [ x ] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
 
 **Congratulations, you completed the sprint challenge!**
