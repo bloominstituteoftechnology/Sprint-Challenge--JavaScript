@@ -55,3 +55,5 @@ const cube = new CubeMaker({
   
 console.log(cube.volume());
 console.log(cube.surfaceArea());
+
+//stretch over. yay.
