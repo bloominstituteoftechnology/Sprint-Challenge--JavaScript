@@ -16,16 +16,16 @@ function consume(item1, item2, cb) {
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-const add = function(item1, item2) {
-  return item1 + item2;
+const add = function(addNum1, addNum2) {
+  return addNum1 + addNum2;
 }
 
-const multiply = function(item1, item2) {
-  return item1 * item2;
+const multiply = function(multiNum1, multiNum2) {
+  return multiNum1 * multiNum2;
 }
 
-const greeting = function(item1, item2) {
-  return `Hello ${item1} ${item2}, nice to meet you!`
+const greeting = function(firstName, lastName) {
+  return `Hello ${firstName} ${lastName}, nice to meet you!`
 }
 
 
