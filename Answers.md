@@ -16,5 +16,5 @@
     4. Explicit binding. When call or apply methods are used, 'this' is explicitly defined. 
 
 5. Why do we need super() in an extended class?
-    It is used to access and call functions on an object's parent. 
-    If we didn't use super(), 'this' wouldn't work in child objects.
+    It is used to access and call functions on an constructor object's parent. 
+    If we didn't use super(), 'this' wouldn't work in child constructors.
