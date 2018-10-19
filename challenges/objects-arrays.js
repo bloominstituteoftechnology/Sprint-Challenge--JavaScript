@@ -27,6 +27,14 @@ const stegosaurus = {
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
+const velociraptor = {
+    objectName: 'velociraptor',
+    diet: 'carnivorous',
+    weight: '15kg',
+    length: '1.8m',
+    period: 'Late Cretaceious'
+}
+
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
