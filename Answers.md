@@ -10,16 +10,17 @@ can access a variable from the function that contains when the nested function r
 
 ### 4. Describe the four rules of the 'this' keyword.
 #### Window/Global object binding
-The keyword 'this' in the global scope refers to the Window/Global object binding
+The keyword 'this' in the global scope will reference the propertites and methods defined by Window/Global object.
 
 #### Implicit object binding
-The keyword 'this' when using implicit binding refers to the object's properites and methods that object that used 'this' contains. Thus if the name of the object changed, this would still refer to the object's new name.
+The keyword 'this' when using implicit binding will reference the object that called it.
 
 #### new object binding
-The keyword 'this' refers to the constructor function's properties and methods
+The keyword 'this' will referece the constructor function's properties and methods.
 
 #### explicit object binding
-The keyword 'this' is explicitly defined by using .call() .apply() or .bind()
+The keyword 'this' is explicitly defined by using .call() .apply() or .bind().
+'this' will reference the object contained in call() .apply() or .bind(). 
 
 ### 5. Why do we need `super()` in an extended class?
 `super()` allows properties to be added and defined to a child object that has existing properties from a parent object.
