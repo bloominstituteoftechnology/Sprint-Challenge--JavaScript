@@ -16,16 +16,16 @@ function consume(parameter1, parameter2, callback) {
  * Create a function named multiply that returns the product of two numbers 
  * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
  */
-function add(parameter1, parameter2) {
-    return (parameter1 + parameter2);
+const add = function(parameter1, parameter2) {
+    console.log(parameter1 + parameter2);
 }
 
-function multiply(parameter1, parameter2) {
-    return (parameter1 * parameter2);
+const multiply = function(parameter1, parameter2) {
+    console.log(parameter1 * parameter2);
 }
 
-function greeting(parameter1, parameter2) {
-    return (`Hello ${parameter1} ${parameter2}, nice to meet you!`);
+const greeting = function(parameter1, parameter2) {
+    console.log(`Hello ${parameter1} ${parameter2}, nice to meet you!`);
 }
 
 
