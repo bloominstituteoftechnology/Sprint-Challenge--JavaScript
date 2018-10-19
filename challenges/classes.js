@@ -50,3 +50,21 @@ const iAmALittleCube = new CubeMaker({
 });
 console.log(iAmALittleCube.volume());
 console.log(iAmALittleCube.surfaceArea());
+
+// random doodles
+class Students{
+  constructor(baseAttr){
+    this.hp = baseAttr.hp;
+    this.mp = baseAttr.mp;
+  }  
+  learn(subject){
+    this.skills = subject;
+    console.log(`I learned ${subject} today, or did I ??`);
+  }
+}
+const ben = new Students ({
+  hp: 100,
+  mp: 100
+});
+
+ben.learn('JS');
