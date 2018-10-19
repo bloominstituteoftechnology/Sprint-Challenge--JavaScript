@@ -32,13 +32,13 @@ Test your knowledge of objects and arrays.
 
 This challenge takes a look at callbacks and closures as well as scope.
 
--   [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
+-   [x] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 5: Prototypes
 
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
 
--   [ ] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
+-   [x] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
 
 ## Task 6: Classes
 
