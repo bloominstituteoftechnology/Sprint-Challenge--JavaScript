@@ -9,7 +9,7 @@ Closure is scope, similar to local and global scope. A function within a functio
 can access a variable from the function that contains when the nested function references an variable outside outside of its local scope. When a function is called that contains a nested function is called invokes or returns the nested function, the nested function will attempt to run. If a variable is needed for the nested function to run, it will look in its local scope. If it is not present, it will search for the variable in the closure scope. If it is not present in the closure scope, it will try to find it in the global scope. 
 
 ### 4. Describe the four rules of the 'this' keyword.
-##### Window/Global object binding
+#### Window/Global object binding
 The keyword 'this' in the global scope refers to the Window/Global object binding
 
 #### Implicit object binding
