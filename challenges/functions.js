@@ -2,7 +2,7 @@
 
 /* Step 1: Create a function that accepts a callback
   * Create a function named consume that can take 3 parameters.
-  * The first two parameteres can accept any argument
+  * The first two parameters can accept any argument
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
@@ -21,7 +21,7 @@ function add(a,b){
 function  multiply(a, b) {
   return a*b;
 }
-console.log(add(1,2));
+// console.log(add(1,2));
 function greeting(firstName, lastName) {
   return `Hello ${firstName} ${lastName}, nice to meet you!`
 }

@@ -14,4 +14,4 @@ a function is a named set of operations that can be explicitly passed data to pe
   iv.  New Binding = when the new word is used to create a new object from a constructor.
 
 5. Why do we need super() in an extended class?
-  suoper replaces the .call method and grants access the the parent constructors properties and methods, need to accompany the extends keyword.
+  super replaces the .call method and grants access the the parent constructors properties and methods, need to accompany the extends keyword.
