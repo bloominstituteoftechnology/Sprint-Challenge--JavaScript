@@ -233,7 +233,9 @@ The individual values in the array should look like this "Name: Jackal, asiatic,
 
 */
 let animalNames = zooAnimals.forEach(animal => {
-  `Name: ${animal['animal_name']}, Scientific: ${animal['scientific_name']}`;
+  console.log(
+    `Name: ${animal['animal_name']}, Scientific: ${animal['scientific_name']}`
+  );
 });
 
 console.log(animalNames);
