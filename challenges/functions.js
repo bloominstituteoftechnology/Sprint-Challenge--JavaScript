@@ -39,7 +39,8 @@ consume("Mary", "Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-// With closures the innerFunction can have access to the outerFunction but the outerFunction does not have access to the innerFunction. The innerFunction has access to variables outside of it's function even global variables.
+
+/* With closures the innerFunction can have access to the outerFunction but the outerFunction does not have access to the innerFunction. The innerFunction has access to variables outside of it's function even global variables.*/
 
 
 
