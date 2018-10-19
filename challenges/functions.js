@@ -20,15 +20,18 @@ function consume(a, b, callback) {
 */
 
 const add = function(num1, num2){
+  console.log(num1 + num2); //Log for testing purposes.
   return num1 + num2;
 }
 
 const multiply = function(num1, num2){
+  console.log(num1 * num2); //Log for testing purposes.
   return num1 * num2;
 }
 
 const greeting = function(firstName, lastName){
-  return `Hello ${firstName} ${lastName}, nice to meet you!`
+  console.log(`Hello ${firstName} ${lastName}, nice to meet you!`); //Log for testing purposes.
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
 }
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
