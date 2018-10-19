@@ -112,52 +112,103 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Hawk-eagle, crowned","population":10,"scientific_name":"Spizaetus coronatus","state":"Florida"},
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
+
+
+
 /* Request 1: .forEach()
 
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
 const animalNames = [];
-zooAnimals.forEach(function(item) {
-  animalNames.push(`Name: ${item.animal_name}, Scientific: ${item.scientific_name}`);
-});
+
+// Normal Syntax:
+// zooAnimals.forEach(function(item) {
+//   animalNames.push(`Name: ${item.animal_name}, Scientific: ${item.scientific_name}`);
+// });
+
+// Arrow Function Syntax:
+zooAnimals.forEach(item => animalNames.push(`Name: ${item.animal_name}, Scientific: ${item.scientific_name}`))
+
 console.log(animalNames);
+
+
+
+
+
+
 
 /* Request 2: .map()    
 
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
+// Normal Synatx:
+// const lowerCase = zooAnimals.map(function(animalName) {
+//   return animalName.animal_name.toLowerCase();
+// })
 
-const lowerCase = zooAnimals.map(function(animalName) {
-  return animalName.animal_name.toLowerCase();
-})
+
+// Arrow Function Syntax:
+const lowerCase = zooAnimals.map(animalName => animalName.animal_name.toLowerCase());
+
 console.log(lowerCase); 
+
+
+
+
+
+
+
 
 /* Request 3: .filter() 
 
 The zoos are concerned about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = zooAnimals.filter(function(animals) {
-  return animals.population < 5;
-})
+// Normal Syntax:
+// const largerPopulation = zooAnimals.filter(function(animals) {
+//   return animals.population < 5;
+// })
+
+// Arrow Function Syntax:
+const largerPopulation = zooAnimals.filter(animals => animals.population < 5);
+
 console.log(largerPopulation);
+
+
+
+
+
+
+
+
 
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = zooAnimals.reduce(function(totalAnimals, item) {
-  return totalAnimals + item.population;
-}, 0);
+// Normal Syntax:
+// const populationTotal = zooAnimals.reduce(function(totalAnimals, item) {
+//   return totalAnimals + item.population;
+// }, 0);
+
+// Arrow Function Syntax:
+const populationTotal = zooAnimals.reduce((totalAnimals, item) => {return totalAnimals + item.population}, 0);
+
 console.log(populationTotal);
+
+
+
+
+
+
 
 
 /* 
 
 Stretch: If you haven't already, convert your array methods callbacks into arrow functions.
-
+// Done converting.
 */
 
