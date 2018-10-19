@@ -22,7 +22,7 @@ const multiply = function(x, y) {
   return x*y;
 }
 const greeting = function(x, y) {
-  return `Hello ${x} ${y}, nice to meet you!`
+  return `Hello ${x} ${y}, nice to meet you!`;
 }
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
