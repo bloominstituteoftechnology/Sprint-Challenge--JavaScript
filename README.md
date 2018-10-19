@@ -37,3 +37,4 @@ Once you have completed the prototypes challenge, it's time to convert all your 
 * [ ] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
 
 **Congratulations, you completed the sprint challenge!**
+
