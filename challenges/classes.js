@@ -40,10 +40,10 @@ class CubeMaker extends CuboidMaker {
     this.sides = attributes.sides;
   }
   volume() {
-    return this.sides * 3;
+    return this.sides * this.sides * this.sides;
   }
   surfaceArea() {
-    return 2 * (this.sides * 2 * 6);
+    return 2 * (this.sides * this.side * 3);
   }
 }
 
