@@ -24,10 +24,10 @@ class CubeMaker extends CuboidMaker {
         super(param);
     }
     cubeVol() {
-        return this.length ^ 3;
+        return this.length ** 3;
     }
     cubeSurface() {
-        return (6 * this.length) ^ 2;
+        return 6 * this.length ** 2;
     }
 }
 
