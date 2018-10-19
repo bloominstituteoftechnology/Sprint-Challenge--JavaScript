@@ -89,14 +89,13 @@ console.log(contactInfo);
 const uni = [];
 
 for(let i = 0; i < graduates.length; i++){
-  if (graduates[i].university = 'uni'){
-    uni.push(graduates.[i]);
-  } else {
-    return Hello;
+  if (graduates[i].university.includes('Uni')){
+    uni.push(graduates[i]);
   }
 }
 
-console.log(JSON.stringify(uni);
+
+console.log(JSON.stringify(uni));
 
 
 // ==== ADVANCED Array Methods ====
@@ -122,8 +121,8 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 const animalNames = [];
 
-let names = zooAnimals.forEach(function(i){
-  animalNames.push("Name: " + i.animal_name + ", Scientific: " + i.scientific_name);
+let names = zooAnimals.forEach(function(e){
+  animalNames.push("Name: " + e.animal_name + ", Scientific: " + e.scientific_name);
 })
 
 console.log(animalNames);
