@@ -6,7 +6,7 @@
 > As long as we are talking about JS, a funciton is a standalone construct which performas an action. A method is a function inside an object.
 
 3. What is closure?
-> Closer refers to the variable access granted to sub functions, and denied from enclosing fucntion. 
+> Closer refers to the variable access granted to sub functions, and denied to enclosing functions. 
 
 4. Describe the four rules of the 'this' keyword.
 >1. window binding: when nonothing else applies, this points to the window. 
@@ -15,4 +15,4 @@
 4. explicet binding: telling a function what the context of this is going to be using 'call', 'apply', or 'bind'
 
 5. Why do we need super() in an extended class?
-> it alows us to to map the this keyword to constructors in an inherited class
+> it allows us to to map the this keyword to constructors in an inherited class
