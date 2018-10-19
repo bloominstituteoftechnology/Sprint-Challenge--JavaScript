@@ -1,5 +1,5 @@
 ### 1. Describe the biggest difference between `.forEach` & `.map`.
-The biggest difference between the `.forEach` and `.map` is that .forEach returns one element at a time, like a for loop. Map returns an array when it finished running. 
+The biggest difference between the `.forEach` and `.map` is that .forEach can either iterates\ one element at a time, like a for loop, or change the array in place. Map returns an array when it is finished running. 
 
 ### 2. What is the difference between a function and a method?
 A function is an object that performs a task and can be declared in the global scope. A method is a function that is defined like a property in an object. An object, like an array, has predifined methods that are specific for the object type and can be called with dot notation.
