@@ -143,10 +143,16 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
+// ES5 syntax
+// const animalNames = [];
+// zooAnimals.forEach(function(zooAnimals){
+//   animalNames.push(`Name: ${zooAnimals.animal_name}, Scientific: ${zooAnimals.scientific_name}.`)
+// });
+// console.log(animalNames);
+
+// Arrow syntax (stretch goals)
 const animalNames = [];
-zooAnimals.forEach(function(zooAnimals){
-  animalNames.push(`Name: ${zooAnimals.animal_name}, Scientific: ${zooAnimals.scientific_name}.`)
-});
+zooAnimals.forEach(zooAnimals => animalNames.push(`Name: ${zooAnimals.animal_name}, Scientific: ${zooAnimals.scientific_name}.`));
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -154,10 +160,15 @@ console.log(animalNames);
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
-const lowerCase = [];
-zooAnimals.map(function(zooAnimals){
-    lowerCase.push((zooAnimals.animal_name).toLowerCase());
-})
+// ES5 syntax
+// const lowerCase = zooAnimals.map(zooAnimals =>
+//     lowerCase.push((zooAnimals.animal_name).toLowerCase())
+// )
+// console.log(lowerCase); 
+
+// Arrow syntax (stretch goals)
+const lowerCase = []
+    zooAnimals.map(zooAnimals => lowerCase.push((zooAnimals.animal_name).toLowerCase()))
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
