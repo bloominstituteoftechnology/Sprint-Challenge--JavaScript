@@ -39,7 +39,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-// nestedFunction can access the variable internal because of lexical scoping, the two pass compiler and closure. Lexical scoping is a "belonging" pattern. Whatever variable was in function when called belongs to it. So when the two pass compiler reads the code goes from top to bottom and sees that it needs to put "internal" into the backpack(memory) to use later because the "nestedFunction" will be using "internal" later in the code, and thus closure is created.
+// nestedFunction can access the variable internal because of lexical scoping, the two pass compiler and closure. Lexical scoping is a "belonging" pattern. Whatever variable was in function when called belongs to it. So when the two pass compiler reads the code goes from bottom to top then and sees that it needs to put "internal" into the backpack(memory) to use later because the "nestedFunction" will be using "internal" later in the code, and thus closure is created.
 
 const external = "I'm outside the function";
 
