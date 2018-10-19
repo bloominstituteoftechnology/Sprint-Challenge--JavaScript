@@ -94,7 +94,7 @@ for (let i = 0; i<graduates.length; i++){
     uni.push(graduates[i].university);
   }
 }
-console.log(uni); //need to finish ******************************************************
+console.log(uni); 
 
 
 // ==== ADVANCED Array Methods ====
