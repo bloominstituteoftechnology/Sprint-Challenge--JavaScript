@@ -4,4 +4,4 @@
 
 3. When a function is declared and created a new scope is created, any variables declared within that function's scope will be enclosed in a private scope that belongs to that function.
 
-4. To pass any new attributes back up to the constructor of the parent object.
+4. Has to be called from within the constructor function, this is to pass any new attributes back up to the constructor of the parent object.
