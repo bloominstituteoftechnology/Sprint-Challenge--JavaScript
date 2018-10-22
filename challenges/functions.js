@@ -7,43 +7,23 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
+
 function consume(param1, param2, cb) {
   return cb(param1, param2)
 }
 
-consume('consume', 'all', function(first, sec) {
-  console.log(first, sec )
-})
 
-/* Step 2: Create several functions to callback with consume();
-  * Create a function named add that returns the sum of two numbers
-  * Create a function named multiply that returns the product of two numbers 
-  * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
-*/
+const add = function(param1, param2){
+   console.log(param1 + param2)
+ }
 
-function add(num1, num2, cb) {
-  return cb(num1+num2)
-}
+ const multiply = function(param1, param2){
+   console.log(param1 * param2)
+ }
 
-add(4, 8, function(sum){
-  console.log(sum)
-})
-
-function multiply(multi1, multi2, cb) {
-  return cb(multi1, multi2)
-}
-
-multiply(10, 4, function(multi){
-  console.log(multi)
-})
-
-function greeting(firstName, lastName, cb) {
-  return cb(firstName, lastName)
-}
-
-greeting('Latifah', 'President', function(greet){
-  console.log(`Hello, ${greet} nice to meet you!`)
-})
+ const greeting = function(param1, param2){
+   console.log(` Hello, ${param1} ${param2} nice to meet you`)
+ }
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
 consume(2,2,add); // 4
@@ -56,6 +36,9 @@ consume(2,2,add); // 4
 
 // Explanation: 
 
+//nestedFunction can access the internal variable because it is in the function scope and has access to 
+//it. When the function runs it first looks inside its self for a refrence to internal and if it isn't found it then looks out into the 
+//myFunction to find the internal variable.
 
 const external = "I'm outside the function";
 

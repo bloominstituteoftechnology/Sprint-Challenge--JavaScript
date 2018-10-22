@@ -16,7 +16,7 @@ function CuboidMaker(attributes) {
   
   //Formula for cuboid volume: length * width * height
 CuboidMaker.prototype.volume = function (length, width, height) {
-  return `${length} * ${width} * ${height}`
+   return length * width * height
 }
 
 
@@ -27,7 +27,7 @@ CuboidMaker.prototype.volume = function (length, width, height) {
 */
 
 CuboidMaker.prototype.surfaceArea = function (length, width, height) {
-  return `2 * ${length} * ${width} + ${length} * ${height} + ${width} * ${height} `
+  return 2 * (length * width + length * height + width * height) 
 }
 
 
@@ -37,7 +37,7 @@ CuboidMaker.prototype.surfaceArea = function (length, width, height) {
 */
 
 
-const cuboid = new cuboid ({
+const cuboid = new CuboidMaker ({
   length: 4,
   width: 5,
   height: 5

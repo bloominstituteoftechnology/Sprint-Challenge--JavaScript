@@ -7,12 +7,18 @@ class CuboidMaker {
         this.height = attributes.height;
     }
     volume(length, width, height) {
-        return `${length} * ${width} * ${height}` 
+        return length * width * height
     }
-    surfaceArea(length, width, height) {
-        return `2 * ${length} * ${width} + ${length} * ${height} + ${width} * ${height} `
+    surfaceArea(length, width, height) {  //in must use this in replit, but why?
+        return 2 * (length * width + length * height + width * height)
     }
 }
+
+class Cubiod extends CuboidMaker {
+    constructor(cubiodAtts) {
+      super(cubiodAtts);
+    }
+  }
 
 class CubeMaker extends CuboidMaker {
     constructor(CubeMakerAtts) {
@@ -21,7 +27,7 @@ class CubeMaker extends CuboidMaker {
 
 }
 
-const cuboid = new cuboid ({
+const cuboid = new CuboidMaker ({
     length: 4,
     width: 5,
     height: 5
