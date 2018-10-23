@@ -5,9 +5,9 @@ This sprint you worked really hard on learning the fundamentals of JavaScript! T
 
 ## Task 1: Set Up The Project With Git
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] You are now ready to build this project with your preferred IDE
+* [ X] Fork the project into your GitHub user account
+* [ X] Clone the forked project into a directory on your machine
+* [ X] You are now ready to build this project with your preferred IDE
 
 ## Task 2: Comprehension Questions
 Answer the following questions to the best of your ability. You can exercise your Googling skills and use training kit.  Open up the [Answers.md](Answers.md) file and record your responses there.

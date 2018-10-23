@@ -6,7 +6,7 @@ class CuboidMaker {
       this.height = dimensions.height;
     }
     
-    Volume(){
+    volume(){
         return this.length * this.width * this.height;
     }
 
