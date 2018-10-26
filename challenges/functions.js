@@ -14,6 +14,21 @@
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function consume (arg1, arg2, cb) {
+  return cb(arg1, arg2);
+}
+
+function add (arg1, arg2) {
+  return arg1 + arg2;
+}
+
+function multiply (arg1, arg2) {
+  return arg1 * arg2;
+}
+
+function greeting (arg1, arg2) {
+  return `Hello ${arg1} ${arg2}, nice to meet you`
+}
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
 //consume(2,2,add); // 4
@@ -25,7 +40,7 @@
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-
+//Being nested inside gives it inheritance, as a sibling function, due to lexical scope.
 
 const external = "I'm outside the function";
 
