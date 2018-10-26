@@ -51,7 +51,7 @@ const add = function(param1, param2){
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: the nestedFunction can access the internal variable because of it's lexical scope. 
 
 
 const external = "I'm outside the function";
