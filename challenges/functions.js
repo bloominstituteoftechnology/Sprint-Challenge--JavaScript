@@ -19,17 +19,22 @@ const consume = function(param1, param2, cb){
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-const add = function(num1, num2){
-  return num1 + num2;
+function consume(param1, param2, cb) {
+  return cb(param1, param2)
 }
 
-const multiply = function(num1, num2){
-  return num1 * num2;
-}
+const add = function(param1, param2){
+   console.log(param1 + param2)
+ }
 
-const greeting = function(firstName, lastName){
-  return `Hello ${firstName} ${lastName}, nice to meet you!`;
-}
+ const multiply = function(param1, param2){
+   console.log(param1 * param2)
+ }
+
+ const greeting = function(param1, param2){
+   console.log(` Hello, ${param1} ${param2} nice to meet you`)
+ }
+
 
 
 
@@ -37,6 +42,10 @@ const greeting = function(firstName, lastName){
 //consume(2,2,add); // 4
 // consume(10,16,multiply); // 160
 // consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+
+ consume(2,2,add); // 4
+ consume(10,16,multiply); // 160
+ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
