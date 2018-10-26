@@ -47,8 +47,8 @@ consume(2,2,add); // 4
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-It is a function nested inside of another function which are closures and through lexical 
-scoping can be accessed.
+//It is a function nested inside of another function which are closures and through lexical 
+//scoping can be accessed.
 
 
 const external = "I'm outside the function";
