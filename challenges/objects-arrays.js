@@ -153,7 +153,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const largerPopulation = [];
-let lowerPopVar = zooAnimals.filter(function(i) {
+let lowerPopVar = zooAnimals.filter(function() {
   return i.population > 5;
 });
 
@@ -176,3 +176,8 @@ Stretch: If you haven't already, convert your array methods callbacks into arrow
 
 */
 
+let lowerPopVar = zooAnimals.filter((i) => {i.population > 5}); 
+
+let lowerCaseVar = zooAnimals.map((i) => {
+  lowerCase.push(i.animal_name.toLowerCase())
+});
