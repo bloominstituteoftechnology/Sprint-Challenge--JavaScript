@@ -22,4 +22,4 @@ A closure is when everything that was stored and called in memory for a function
 
 5. Why do we need super() in an extended class?
 
-`super()` allows us to gain access to `.this` items in the calss its extended from.
+`super()` allows us to gain access to `.this` items in the class its extended from.

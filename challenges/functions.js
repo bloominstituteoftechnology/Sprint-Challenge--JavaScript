@@ -51,6 +51,7 @@ function myFunction() {
 
   function nestedFunction() {
     console.log(internal);
+
   };
   nestedFunction();
 }
