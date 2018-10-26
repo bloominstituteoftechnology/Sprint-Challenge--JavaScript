@@ -6,6 +6,9 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
+function consume(x, y, cb) {
+  return cb(x, y);
+}
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -13,18 +16,39 @@
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+const add = function(x, y) {
+  console.log(x + y);
+}
+consume(2, 2, add);
 
+function multiply(x, y, cb) {
+return cb(x, y);
+}
+  const multiplyNums = function(x, y) {
+  console.log(x * y);
+}
+multiplyNums(10, 16, multiply);
+
+function greeting(first, last, cb) {
+  return cb(first, last);
+}
+  consume = function(first, last) {
+    console.log(`Hello ${first} ${last}, nice to meet you!`);
+  }
+  consume('Mary', 'Poppins', greeting);
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-//consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add); // 4
+ consume(10,16,multiply); // 160
+ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
+It is a function nested inside of another function which are closures and through lexical 
+scoping can be accessed.
 
 
 const external = "I'm outside the function";
