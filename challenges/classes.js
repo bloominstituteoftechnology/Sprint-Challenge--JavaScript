@@ -18,7 +18,7 @@ class CuboidMaker {
           super(cubeAttrs);
       } 
       cubeSurfaceArea(){
-          return 4 * (this.length * this.width + this.length * this.height + this.width * this.height)
+          return 6 * (this.length * this.length)
       }
   }
 
@@ -51,8 +51,8 @@ class CuboidMaker {
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
 
-console.log(cube.volume()); // 64 
-console.log(cube.cubeSurfaceArea()); // 192
+console.log(cube.volume()); // 100
+console.log(cube.cubeSurfaceArea()); // 96
 
 
 // Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker. 
