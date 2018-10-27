@@ -50,7 +50,8 @@ console.log(tyrannosaurus.roar());
 
 // ==== Arrays ====
 
-// Given an array of college graduates.  Complete the following requests WITHOUT using any array methods like .forEach(), .map(), .reduce(), .filter()
+// Given an array of college graduates. 
+// Complete the following requests WITHOUT using any array methods like .forEach(), .map(), .reduce(), .filter()
 
 const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern State College","email":"ctorry0@macromedia.com"},
 {"id":2,"first_name":"Saundra","university":"The School of the Art Institute of Chicago","email":"swhal1@state.gov"},
@@ -81,20 +82,31 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-graduates.forEach((grads) => {
-  contactInfo.push(`${grads.first_name} ${grads.email}`)
-})
+
+// graduates.forEach((grads) => {
+//   contactInfo.push(`${grads.first_name} ${grads.email}`)
+// })
+
+for (let i = 0; i < graduates.length; i++){
+  contactInfo.push(graduates[i].first_name, graduates[i].email)
+}
 
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-graduates.filter(str =>{ 
-  if (str.university.includes("Uni")){
-    uni.push(str.university)
+// graduates.filter(str =>{ 
+//   if (str.university.includes("Uni")){
+//     uni.push(str.university)
+//   }
+// })
+for (let i = 0; i < graduates.length; i++){
+  if (graduates[i].university.includes("Uni")){
+  uni.push(graduates[i].university)
   }
-})
+}
+
 console.log(uni);
 
 
