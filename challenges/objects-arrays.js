@@ -75,8 +75,6 @@ for(let i = 0; i < graduates.length; i ++) {
   universities.push(graduates[i].university);
 }
 
-console.log(universities);
-
 /*Once you have the new array created, sort the universities alphabetically and log the result. */
 const universitiesSorted = universities.sort();
 console.log(universitiesSorted)
@@ -88,6 +86,9 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+for (let i = 0; i < graduates.length; i++) {
+  contactInfo.push(graduates[i].first_name + " " + graduates[i].email);
+}
 console.log(contactInfo);
 
 
