@@ -12,16 +12,43 @@
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
+const tyrannosaurus = {
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: 7000,
+  length: 12,
+  period: 'Late Cretaceious',
+  roar: function() {
+    return 'RAWERSRARARWERSARARARRRR!'
+  }
+};
+
+const stegosaurus = {
+  name: 'stegosaurus',
+  diet: 'herbivorous',
+  weight: 2000,
+  length: 9,
+  period: 'Late Jurassic'
+};
+
+const velociraptor = {
+  name: 'velociraptor',
+  diet: 'carnivorous',
+  weight: 15,
+  length: 1.8,
+  period: 'Late Cretaceious'
+};
+
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(tyrannosaurus.weight);
+console.log(tyrannosaurus.weight); //7000
 // What was the diet of a velociraptor?
-console.log(velociraptor.diet);
+console.log(velociraptor.diet); // "carnivorous"
 // How long was a stegosaurus?
-console.log(stegosaurus.length);
+console.log(stegosaurus.length); //9
 // What time period did tyrannosaurus live in?
-console.log(tyrannosaurus.period);
+console.log(tyrannosaurus.period);//"Late Cretaceious"
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 console.log(tyrannosaurus.roar());
@@ -109,7 +136,7 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal;
+const populationTotal = 0;
 console.log(populationTotal);
 
 
