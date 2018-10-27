@@ -4,10 +4,10 @@ class CuboidMaker {
         this.width = qualities.width;
         this.height = qualities.height;
     }
-    volume = function () {
+    volume() {
         return this.length * this.width * this.height;
     }
-    surfaceArea = function () {
+    surfaceArea() {
         return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
     }
 }
@@ -26,11 +26,11 @@ class CubeMaker extends CuboidMaker {
     constructor(qualities) {
         super(qualities);
     }
-    cubeVolume = function () {
-        return this.length^3;
+    cubeVolume() {
+        return Math.pow(this.length,3);
     }
-    cubeSurfaceArea = function () {
-        return 6*this.length^2;
+    cubeSurfaceArea() {
+        return 6*Math.pow(this.length,2);
     }
 }
 
@@ -40,5 +40,5 @@ const cube = new CubeMaker({
     height: 2
 });
 
-console.log(cube.volume()); // 8
-console.log(cube.surfaceArea()); // 24
+console.log(cube.cubeVolume()); // 8
+console.log(cube.cubeSurfaceArea()); // 24
