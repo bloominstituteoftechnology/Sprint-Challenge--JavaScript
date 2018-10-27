@@ -91,15 +91,17 @@ Log the result of your new array. */
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-// const uni = [];
-// const university = [];
+const uni = [];
 
-// for (i = 0; i < graduates.length; i++) {
-//   graduates[i].university;
-//   if (university === "Uni")
-//     uni.push(graduates[i].university);
-// }
-// console.log(uni);
+for (var i = 0; i<graduates.length; i++) {
+  if (graduates[i].university.indexOf('Uni') > -1) {
+    uni.push(graduates[i].university);
+  }
+}
+console.log(uni);
+
+
+
 
 
 // ==== ADVANCED Array Methods ====
