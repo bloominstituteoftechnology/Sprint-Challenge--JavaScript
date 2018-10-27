@@ -12,4 +12,4 @@
   3. Explicit Binding
   4. New Binding
 
-5. We need super() allows us to gain access to this items located the base class. Basically it allows us to call on parent's constructor
+5. super() allows us to gain access to this items located the base class. Basically it allows us to call on parent's constructor
