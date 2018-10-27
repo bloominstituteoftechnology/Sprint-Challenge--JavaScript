@@ -38,3 +38,8 @@
   * New binding
       If this is used in a constructor function, this will be bound to whatever
       object is return by that constructor function.
+
+5. Why do we need super() in an extended class?
+  super() allows the extended class' constructor to pass up parameters needed by
+  the parent class(es)' constructor to allow the it to return a new object
+  correctly.
