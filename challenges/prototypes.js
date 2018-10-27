@@ -1,23 +1,23 @@
-function CuboidMaker (qualities) {
+function CuboidMakerP (qualities) {
   this.length = qualities.length;
   this.width = qualities.width;
   this.height = qualities.height;
 }
 
-CuboidMaker.prototype.volume = function() {
+CuboidMakerP.prototype.volume = function() {
   return this.length*this.width*this.height;
 }
 
-CuboidMaker.prototype.surfaceArea = function() {
+CuboidMakerP.prototype.surfaceArea = function() {
   return 2*(this.length*this.width+this.length*this.height+this.width*this.height);
 }
 
-const cuboid = new CuboidMaker ({
+const cuboidP = new CuboidMaker ({
   length: 4,
   width: 5,
   height: 5
 
 });
 
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+console.log(cuboidP.volume()); // 100
+console.log(cuboidP.surfaceArea()); // 130
