@@ -182,8 +182,8 @@ console.log(populationTotal);
 
 
 /* 
-
 Stretch: If you haven't already, convert your array methods callbacks into arrow functions.
-
 */
+
+// Stretch goals completed during completion of the original assignment
 
