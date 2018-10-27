@@ -25,6 +25,15 @@ class CuboidMaker {
   }
 }
 
+class CubeMaker extends CuboidMaker {
+  constructor(cubeProps) {
+    super(cubeProps);
+    this.cubeSurfaceArea = function() {
+      return 6 * (this.length * this.width);
+    };
+  }
+}
+
 // function CuboidMaker(cuboidProps) {
 //   this.length = cuboidProps.length;
 //   this.width = cuboidProps.width;
@@ -49,6 +58,15 @@ const cuboid = new CuboidMaker({
   width: 5,
   height: 5,
 });
+
+const cube = new CubeMaker({
+  length: 5,
+  width: 5,
+  height: 5,
+});
+
+console.log(cube.volume());
+console.log(cube.surfaceArea());
 
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
