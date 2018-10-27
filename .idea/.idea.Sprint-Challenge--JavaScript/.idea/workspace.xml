@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="705e7385-1dbc-4bc0-a394-08f9c1cad87b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Sprint-Challenge--JavaScript/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Answers.md" beforeDir="false" afterPath="$PROJECT_DIR$/Answers.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challenges/classes.js" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/classes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/functions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challenges/objects-arrays.js" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/objects-arrays.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/prototypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/prototypes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,13 +33,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="2461" />
+          <entry key="js" value="2721" />
           <entry key="md" value="783" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="2461" />
+          <entry key="JavaScript" value="2721" />
           <entry key="Markdown" value="783" />
         </counts>
       </usages-collector>
@@ -54,54 +50,28 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Answers.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="289">
-                <caret line="17" column="82" selection-start-line="17" selection-start-column="82" selection-end-line="17" selection-end-column="82" />
-              </first_editor>
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/challenges/objects-arrays.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="128" column="2" selection-start-line="128" selection-start-column="2" selection-end-line="128" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/challenges/classes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+            <state relative-caret-position="175">
+              <caret line="130" column="18" selection-start-line="130" selection-start-column="18" selection-end-line="130" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/challenges/classes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/challenges/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="243">
+              <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -127,10 +97,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Answers.md" />
-        <option value="$PROJECT_DIR$/challenges/objects-arrays.js" />
         <option value="$PROJECT_DIR$/challenges/prototypes.js" />
-        <option value="$PROJECT_DIR$/challenges/classes.js" />
         <option value="$PROJECT_DIR$/challenges/functions.js" />
+        <option value="$PROJECT_DIR$/challenges/objects-arrays.js" />
+        <option value="$PROJECT_DIR$/challenges/classes.js" />
       </list>
     </option>
   </component>
@@ -193,7 +163,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.functions.js">
+  <component name="RunManager" selected="Node.js.classes.js">
     <configuration name="classes.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="classes.js" working-dir="$PROJECT_DIR$/challenges">
       <method v="2" />
     </configuration>
@@ -214,10 +184,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.functions.js" />
         <item itemvalue="Node.js.classes.js" />
-        <item itemvalue="Node.js.prototypes.js" />
         <item itemvalue="Node.js.objects-arrays.js" />
+        <item itemvalue="Node.js.functions.js" />
+        <item itemvalue="Node.js.prototypes.js" />
       </list>
     </recent_temporary>
   </component>
@@ -231,12 +201,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540656058930</updated>
-      <workItem from="1540656062117" duration="5500000" />
+      <workItem from="1540656062117" duration="6159000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5500000" />
+    <option name="totallyTimeSpent" value="6159000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -295,6 +265,23 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/challenges/prototypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="36" selection-start-line="36" selection-end-line="40" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenges/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -308,8 +295,8 @@
     <entry file="file://$PROJECT_DIR$/Answers.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="289">
-            <caret line="17" column="82" selection-start-line="17" selection-start-column="82" selection-end-line="17" selection-end-column="82" />
+          <first_editor relative-caret-position="85">
+            <caret line="5" selection-start-line="5" selection-end-line="14" selection-end-column="52" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -319,32 +306,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/challenges/objects-arrays.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="128" column="2" selection-start-line="128" selection-start-column="2" selection-end-line="128" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenges/prototypes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="36" selection-start-line="36" selection-end-line="40" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="175">
+          <caret line="130" column="18" selection-start-line="130" selection-start-column="18" selection-end-line="130" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/challenges/classes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenges/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="328">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
         </state>
       </provider>
     </entry>
