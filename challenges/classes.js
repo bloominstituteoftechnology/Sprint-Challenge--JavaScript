@@ -32,7 +32,7 @@ class CubeMaker extends CuboidMaker {
     super(props);
   }
   volume() {
-    // volume: v = x^3
+    // volume: v = s^3
     return this.length * this.width * this.height;
   }
 
