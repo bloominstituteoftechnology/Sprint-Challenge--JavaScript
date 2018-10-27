@@ -7,11 +7,29 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
-
+const tyrannosaurus = {
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: 7000kg,
+  length: 12m,
+  period: "Late Cretaceious",
+}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+const stegosaurus = {
+  name: "stegosaurus",
+  diet: "herbivorous",
+  weight: 2000kg,
+  length: 9m,
+  period: "Late Jurassic",
+}
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
-
+const velociraptor = {
+  name: "velociraptor",
+  diet: "carnivorous",
+  weight: 15kg,
+  length: 1.8m,
+  period: "Late Cretaceious",
+}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
@@ -24,6 +42,9 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+roar: function() {
+  return "RAWERSRARARWERSARARARRRR!";
+}
 console.log(tyrannosaurus.roar());
 
 
@@ -85,6 +106,9 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+zooAnimals.forEach(names => {
+  animalNames.push("Name: names.animal_name, scientific: names.scientific_name.");
+})
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -94,6 +118,9 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+lowerCase = zooAnimals.map(zoo => {
+  zoo.animal_name = zoo.animal_name.toLowerCase();
+})
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -102,6 +129,11 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const largerPopulation = [];
+largerPopulation = zooAnimals.filter(large = {
+  if(large.population < 5) {
+    return true;
+  }
+})
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -110,6 +142,8 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal;
+populationTotal = animals.reduce((total, animals) =>
+  total + animals.population, 0);
 console.log(populationTotal);
 
 
