@@ -5,9 +5,9 @@
 3. What is closure?
   _A closure is the combination of a function and the lexical environment within which that function was declared. It's how an inner function is able to refer to any outside variables that are in-scope when that function was crated._
 4. Describe the four rules of the 'this' keyword.
-  _1) window - global
-  2)implicit - this refers to the left of the dot
-  3)explicit - when using call, apply or bind
-  4)new - when creating new objects._
+  _1) window - global_
+  _2)implicit - this refers to the left of the dot_
+  _3)explicit - when using call, apply or bind_
+  _4)new - when creating new objects._
 5. Why do we need super() in an extended class?
   _it's used to access and call function to an objects' parent._
