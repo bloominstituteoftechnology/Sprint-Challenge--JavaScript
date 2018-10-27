@@ -32,7 +32,6 @@ class CuboidMaker {
     */
     surfaceArea() {
         return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
-        // return result;
     }
 }
 
@@ -49,6 +48,7 @@ const cuboid = new CuboidMaker({
 });
 
 
+
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
@@ -63,3 +63,12 @@ class CubeMaker extends CuboidMaker {
         super(cuboidDimension);
     }
 }
+
+const cube = new CubeMaker({
+    length: 5,
+    width: 5,
+    height: 5
+});
+
+console.log(cube.volume());
+console.log(cube.surfaceArea());
