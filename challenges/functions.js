@@ -6,8 +6,6 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-
-
 function consume(item1, item2, cb) {
   console.log( cb(item1, item2));
 }

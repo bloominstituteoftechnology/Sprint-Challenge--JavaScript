@@ -197,8 +197,6 @@ let total = populationTotal.reduce(function(accumulator, currentValue, currentIn
 
 console.log(total)
 
-
-
 /* 
 
 Stretch: If you haven't already, convert your array methods callbacks into arrow functions.
