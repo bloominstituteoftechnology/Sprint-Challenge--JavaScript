@@ -51,95 +51,117 @@ console.log(tyrannosaurus.period);
 console.log(tyrannosaurus.roar());
 
 
-// // ==== Arrays ====
+// ==== Arrays ====
 
-// // Given an array of college graduates.  Complete the following requests WITHOUT using any array methods like .forEach(), .map(), .reduce(), .filter()
+// Given an array of college graduates.  Complete the following requests WITHOUT using any array methods like .forEach(), .map(), .reduce(), .filter()
 
-// const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern State College","email":"ctorry0@macromedia.com"},
-// {"id":2,"first_name":"Saundra","university":"The School of the Art Institute of Chicago","email":"swhal1@state.gov"},
-// {"id":3,"first_name":"Lambert","university":"Marian College","email":"lparham2@techcrunch.com"},
-// {"id":4,"first_name":"Modestine","university":"International Medical & Technological University","email":"mdolder3@symantec.com"},
-// {"id":5,"first_name":"Chick","university":"Sultan Salahuddin Abdul Aziz Shah Polytechnic","email":"camorts4@google.com.au"},
-// {"id":6,"first_name":"Jakob","university":"Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft","email":"jharken5@spiegel.de"},
-// {"id":7,"first_name":"Robbi","university":"Salem University","email":"rbrister6@redcross.org"},
-// {"id":8,"first_name":"Colline","university":"Coastal Carolina University","email":"cbrosh7@alibaba.com"},
-// {"id":9,"first_name":"Michail","university":"Universidad Católica de Ávila","email":"mrome8@shinystat.com"},
-// {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
+const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern State College","email":"ctorry0@macromedia.com"},
+{"id":2,"first_name":"Saundra","university":"The School of the Art Institute of Chicago","email":"swhal1@state.gov"},
+{"id":3,"first_name":"Lambert","university":"Marian College","email":"lparham2@techcrunch.com"},
+{"id":4,"first_name":"Modestine","university":"International Medical & Technological University","email":"mdolder3@symantec.com"},
+{"id":5,"first_name":"Chick","university":"Sultan Salahuddin Abdul Aziz Shah Polytechnic","email":"camorts4@google.com.au"},
+{"id":6,"first_name":"Jakob","university":"Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft","email":"jharken5@spiegel.de"},
+{"id":7,"first_name":"Robbi","university":"Salem University","email":"rbrister6@redcross.org"},
+{"id":8,"first_name":"Colline","university":"Coastal Carolina University","email":"cbrosh7@alibaba.com"},
+{"id":9,"first_name":"Michail","university":"Universidad Católica de Ávila","email":"mrome8@shinystat.com"},
+{"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
 
-// /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
+/* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
-// Once you have the new array created, sort the universities alphabetically and log the result. */
-// const universities = [];
-// console.log(universities)
+Once you have the new array created, sort the universities alphabetically and log the result. */
+const universities = [];
+  for (let i = 0; i < graduates.length; i++){
+    universities.push(graduates[i].university);
+  }
+  console.log(universities.sort());
 
-// /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
+/* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
-// The resulting contact information should have a space between the first name and the email information like this: 
-// Name email@example.com
+The resulting contact information should have a space between the first name and the email information like this: 
+Name email@example.com
 
-// Log the result of your new array. */
-// const contactInfo = [];
-// console.log(contactInfo);
-
-
-// /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-// const uni = [];
-// console.log(uni);
-
-
-// // ==== ADVANCED Array Methods ====
-
-// // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
+Log the result of your new array. */
+const contactInfo = [];
+for (let i = 0; i < graduates.length; i++){
+  contactInfo.push(graduates[i].first_name +' '+ graduates[i].email);
+}
+console.log(contactInfo);
 
 
-// zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
-// {"animal_name":"Screamer, southern","population":1,"scientific_name":"Chauna torquata","state":"Alabama"},
-// {"animal_name":"White spoonbill","population":8,"scientific_name":"Platalea leucordia","state":"Georgia"},
-// {"animal_name":"White-cheeked pintail","population":1,"scientific_name":"Anas bahamensis","state":"Oregon"},
-// {"animal_name":"Black-backed jackal","population":2,"scientific_name":"Canis mesomelas","state":"Washington"},
-// {"animal_name":"Brolga crane","population":9,"scientific_name":"Grus rubicundus","state":"New Mexico"},
-// {"animal_name":"Common melba finch","population":5,"scientific_name":"Pytilia melba","state":"Pennsylvania"},
-// {"animal_name":"Pampa gray fox","population":10,"scientific_name":"Pseudalopex gymnocercus","state":"Connecticut"},
-// {"animal_name":"Hawk-eagle, crowned","population":10,"scientific_name":"Spizaetus coronatus","state":"Florida"},
-// {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
+/* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
+const uni = [];
+  
+for (let i = 0; i < graduates.length; i++){
+  let splt= (graduates[i].university.split())
+  console.log(splt);
+  for (let i = 0; i < splt.length; i++){
+    console.log(splt[i]);
+    if (splt[i].substring(0, 3) == 'Uni'){
+      uni.push(splt[i]);
+    }else{
+      uni.pop(splt)
+    }
+    console.log(uni);
+  }
 
-// /* Request 1: .forEach()
+  
+}
+console.log(uni);
 
-// The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
-// */
-// const animalNames = [];
-// console.log(animalNames);
+// ==== ADVANCED Array Methods ====
 
-// /* Request 2: .map()    
+// Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
-// The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
-// */
+zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
+{"animal_name":"Screamer, southern","population":1,"scientific_name":"Chauna torquata","state":"Alabama"},
+{"animal_name":"White spoonbill","population":8,"scientific_name":"Platalea leucordia","state":"Georgia"},
+{"animal_name":"White-cheeked pintail","population":1,"scientific_name":"Anas bahamensis","state":"Oregon"},
+{"animal_name":"Black-backed jackal","population":2,"scientific_name":"Canis mesomelas","state":"Washington"},
+{"animal_name":"Brolga crane","population":9,"scientific_name":"Grus rubicundus","state":"New Mexico"},
+{"animal_name":"Common melba finch","population":5,"scientific_name":"Pytilia melba","state":"Pennsylvania"},
+{"animal_name":"Pampa gray fox","population":10,"scientific_name":"Pseudalopex gymnocercus","state":"Connecticut"},
+{"animal_name":"Hawk-eagle, crowned","population":10,"scientific_name":"Spizaetus coronatus","state":"Florida"},
+{"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
-// const lowerCase = [];
-// console.log(lowerCase); 
+/* Request 1: .forEach()
 
-// /* Request 3: .filter() 
+The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
-// The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
+*/
+const animalNames = [];
+console.log(animalNames);
 
-// */
-// const largerPopulation = [];
-// console.log(largerPopulation);
+/* Request 2: .map()    
 
-// /* Request 4: .reduce() 
+The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
-// The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
+*/
 
-// */
+const lowerCase = [];
+console.log(lowerCase); 
+
+/* Request 3: .filter() 
+
+The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
+
+*/
+const largerPopulation = [];
+console.log(largerPopulation);
+
+/* Request 4: .reduce() 
+
+The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
+
+*/
 // const populationTotal;
 // console.log(populationTotal);
 
 
-// /* 
+/* 
 
-// Stretch: If you haven't already, convert your array methods callbacks into arrow functions.
+Stretch: If you haven't already, convert your array methods callbacks into arrow functions.
 
-// */
+*/
 
