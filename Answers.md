@@ -16,30 +16,32 @@
 3. What is closure?
   Closure refers to the way in which functions can access data outside of their
   local scope.  If a function is nested inside of another function, the nested
-  function can access any data from the outside function.  This is done with
-  lexical scoping, which means that the function will remember that data as it
-  was in the original function declaration, not the state of that data at the
-  time of invoking.
+  function can access any data from the outside function.  If the inner function
+  is returned, and it has a reference to data in the outer function, that data
+  will be remembered as it was at the moment the inner function was returned.  
+  That data can then be accessed and changed by that instance without effecting
+  the same data in another instance of the same function.  If this explanation
+  looks like a mess, I apologized, I still find this hard to articulate properly.
 
 4. Describe the four rules of the 'this' keyword.
   * Global/Window binding
-      When used outside of an object, this will refer to the global, or window
+      When used outside of an object, `this` will refer to the global, or window
       scope object.
   * Implicit binding
-      When this is used inside of an object, it is bound to that object.  When
-      a this property or method is invoked, it is bound to the object to the
+      When `this` is used inside of an object, it is bound to that object.  When
+      a `this` property or method is invoked, it is bound to the object to the
       left of the dot in the invocation statement.
   * Explicit binding
-      this can be bound to any object you choose by using the `.apply`, `.call`,
-      or `.bind` methods.  `.apply` and `.call` will invoke a function, with this
+      `this` can be bound to any object you choose by using the `.apply`, `.call`,
+      or `.bind` methods.  `.apply` and `.call` will invoke a function, with `this`
       bound to the item(s) used as arguments, while `.bind` will return a new
-      instance of the function it is called on with this bound to the argument
+      instance of the function it is called on with `this` bound to the argument
       passed into `.bind`.
   * New binding
-      If this is used in a constructor function, this will be bound to whatever
+      If `this` is used in a constructor function, `this` will be bound to whatever
       object is return by that constructor function.
 
 5. Why do we need super() in an extended class?
   super() allows the extended class' constructor to pass up parameters needed by
-  the parent class(es)' constructor to allow the it to return a new object
+  the parent class(es)' constructor to allow it to return a new object
   correctly.
