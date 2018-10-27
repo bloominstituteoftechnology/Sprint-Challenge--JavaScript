@@ -13,7 +13,7 @@ function has no object associated with it.
 
 3. What is closure?
 
-Ans3:Closure gives the access to an outer function’s scope from an inner function.
+Ans3: Closure gives the access to an outer function’s scope from an inner function.
  In JavaScript, closures are created every time a function is created, at function creation time.
  The inner function will have access to the variables in the outer function scope,
  even after the outer function has returned.
@@ -40,6 +40,8 @@ returned by the constructor function.
 RULE4:
 WE have to explicitly define "this" when we are using  methods like call, apply and bind on functions.
 
+
 5. Why do we need super() in an extended class?
+
 Ans5: Because of the super() keyword  extended class inherits all the methods and property from the Parent class.
 
