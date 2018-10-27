@@ -141,10 +141,11 @@ console.log(lowerCase);
 
 /* Request 3: .filter() 
 
-The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
+The zoos are concerned about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
+let largerPopulation = [];
+largerPopulation = zooAnimals.filter(animal => animal.population < 5);
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
