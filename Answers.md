@@ -12,3 +12,11 @@
   and object, usually by being declared inside of that object, or attached to
   that object's prototype.  Methods must be invoked through an object, while
   functions can be invoked independently.
+
+3. What is closure?
+  Closure refers to the way in which functions can access data outside of their
+  local scope.  If a function is nested inside of another function, the nested
+  function can access any data from the outside function.  This is done with
+  lexical scoping, which means that the function will remember that data as it
+  was in the original function declaration, not the state of that data at the
+  time of invoking.
