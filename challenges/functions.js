@@ -37,7 +37,7 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-
+//This is an example of lexical scoping where nested function is able to have access to the variables declared out of it's scope
 
 const external = "I'm outside the function";
 
