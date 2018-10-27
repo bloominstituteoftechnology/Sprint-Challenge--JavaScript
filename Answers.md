@@ -1,15 +1,18 @@
 
 1. Describe the biggest difference between .forEach & .map.
+
 Ans1: .forEach  executes a provided function once for each array element. It does not return anything. Whereas,
       .map processes each element in the array but also and gives a new  processedArray of same size where the
       original array is intact. It will return the new array that it created consisting of return values of
       function for each element.
 
 2. What is the difference between a function and a method?
+
 Ans2:A function inside an Object is called method. Method is a function when object is associated with it, while
 function has no object associated with it.
 
 3. What is closure?
+
 Ans3:Closure gives the access to an outer function’s scope from an inner function.
  In JavaScript, closures are created every time a function is created, at function creation time.
  The inner function will have access to the variables in the outer function scope,
@@ -17,6 +20,7 @@ Ans3:Closure gives the access to an outer function’s scope from an inner funct
 
 
 4. Describe the four rules of the 'this' keyword.
+
 Ans4:
 
 Rule1:
