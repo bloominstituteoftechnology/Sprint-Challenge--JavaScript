@@ -157,7 +157,7 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 const animalNames = [];
 
-zooAnimals.forEach(function(x) {
+zooAnimals.forEach((x) => {
   animalNames.push('Name: ' + x.animal_name + ' ' + 'Scientific: ' + x.scientific_name);
 })
 
@@ -199,3 +199,6 @@ largerPopulation = zooAnimals.filter((x) => x.population < 5);
 
 
 /*// Stretch: If you haven't already, convert your array methods callbacks into arrow function.*/
+
+
+//DONE ALREADY
