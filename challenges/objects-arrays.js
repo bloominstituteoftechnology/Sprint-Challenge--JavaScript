@@ -159,6 +159,7 @@ const containUni = graduates => {
     if (graduates[i].university.includes('Uni')) {
       uni.push(graduates[i]);
     }
+    console.log(uni.length);
   }
 };
 
@@ -249,7 +250,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = zooAnimals.map(n => {
+const lowerCase = animalNames.map(n => {
   return n.animal_name.toLowerCase();
 });
 console.log(lowerCase);
