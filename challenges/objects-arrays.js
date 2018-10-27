@@ -13,7 +13,10 @@ const tyrannosaurus = {
   diet: 'Carnivorous',
   weight: '7000kg',
   length: '12m',
-  period: 'Late Cretaceious'
+  period: 'Late Cretaceious',
+  roar: function() {
+    return "RAWERSRARARWERSARARARRRR!" 
+  }
 }
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -40,12 +43,20 @@ const velociraptor = {
 
 // How much did tyrannosaurus weigh?
 console.log(tyrannosaurus.weight);
+// 7000kg
+
 // What was the diet of a velociraptor?
 console.log(velociraptor.diet);
+//Carnivorous
+
 // How long was a stegosaurus?
 console.log(stegosaurus.length);
+// 9m
+
 // What time period did tyrannosaurus live in?
 console.log(tyrannosaurus.period);
+// Late Cretaceious
+
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 console.log(tyrannosaurus.roar());
