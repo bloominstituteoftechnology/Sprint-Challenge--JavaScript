@@ -170,4 +170,7 @@ console.log(JSON.stringify(populationTotal));
 Stretch: If you haven't already, convert your array methods callbacks into arrow functions.
 
 */
-
+const largerPopulation = zooAnimals.filter((info) => {
+  return info.population < 5;
+});
+console.log(JSON.stringify(largerPopulation));
