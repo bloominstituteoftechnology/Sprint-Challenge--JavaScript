@@ -101,6 +101,7 @@ const uni = [];
 //     uni.push(str.university)
 //   }
 // })
+
 for (let i = 0; i < graduates.length; i++){
   if (graduates[i].university.includes("Uni")){
   uni.push(graduates[i].university)
