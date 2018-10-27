@@ -7,4 +7,8 @@
 
 2. What is the difference between a function and a method?
 
-  
+  A function is a block of code that be declared in a program, and then re-used,
+  throughout a program by invoking it.  A method is a function that is bound to
+  and object, usually by being declared inside of that object, or attached to
+  that object's prototype.  Methods must be invoked through an object, while
+  functions can be invoked independently.
