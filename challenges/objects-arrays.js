@@ -102,22 +102,20 @@ console.log(contactInfo);
 
 
 // /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-// const uni = [];
+const uni = [];
 
-// function uniClipper(array) {
-//   let splitUp = []
-//   for (let i = 0; i < array.length; i++) {
-//     array[i].split('uni')
+function uniClipper(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].includes('Uni')) {
+    uni.push(array[i])
+    }
+  }
+}
+uniClipper(universities)
+console.log(uni);
 
-//     if ()
-//   }
-//   for (let i = 0; i < array.length; i++) {
-    
-//   }
+//Almost forgot.
 
-// }
-// console.log(uni);
-//Was spending too much time on this one.
 
 // ==== ADVANCED Array Methods ====
 
