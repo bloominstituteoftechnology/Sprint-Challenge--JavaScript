@@ -17,7 +17,7 @@ const consume = function(x, y, callback) {
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-const add = function(x,y, ) {
+const add = function(x,y) {
   console.log(x + y);
 }
 
@@ -39,7 +39,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-
+// nestedFunction is inner functions, therefore it has access to the variables of outer function, myFunction()
 
 const external = "I'm outside the function";
 
