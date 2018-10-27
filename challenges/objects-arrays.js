@@ -64,8 +64,11 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+for (let i of graduates) {
+  universities.push(i.university);
+}
 console.log(universities)
-
+console.log(universities.sort());
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student.
 
 The resulting contact information should have a space between the first name and the email information like this:
