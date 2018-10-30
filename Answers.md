@@ -1,5 +1,5 @@
-The difference is that '.map' returns a new array, while '.forEach' returns nothing.
-Functions are defined outside of classes, while methods are defined inside of classes.
-Closures are a combination of a function and the environment the function was declared.
-The four rules are window, implicit, explicit and new.
+The difference is that '.map' creates a new array while calling on a provided function on every element within the called array, while '.forEach' returns nothing but performs a provided function for each array element.
+Functions can be called and are first-class objects because they can have properties and methods, while methods can be defined on built-in or user-defined objects that aide the addition of new properties.
+Closures are a combination of a function and the environment the function was declared. It consist of any variables within the scope the closure was created.
+The four rules are window, implicit, explicit and new. Window binding is the default value of "this". Implicit binding "this" value is determined by what precedes on the left of the dot. Explicit binding value can be called using call, apply and bind. New creates a new object from the parent constructor.
 We need super() in an extended class to bind the parent and child classes.
