@@ -56,7 +56,11 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [ ];
+const universities = [];
+for (let i = 0; i < graduates.length; i++) {
+  universities.push(graduates[i].university)
+}
+universities.sort()
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -96,6 +100,9 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+zooAnimals.forEach((element, i) => {
+  animalNames.push(`Name: ${zooAnimals[i].animal_name} Scientific: ${zooAnimals[i].scientific_name}`)
+});
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -113,6 +120,10 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const largerPopulation = [];
+zooAnimals.filter((element, i) =>  {
+  zooAnimals[i].popultion < 5;
+  largerPopulation.push(zooAnimals[i].animal_name)
+}) 
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -120,13 +131,14 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal;
+const populationTotal = zooAnimals.reduce((total, zooAnimals)=> {
+  return total += zooAnimals.population
+}, 0);
 console.log(populationTotal);
-
 
 /* 
 
 Stretch: If you haven't already, convert your array methods callbacks into arrow functions.
-
+zooAnimals[i].population.reduce()
 */
 
