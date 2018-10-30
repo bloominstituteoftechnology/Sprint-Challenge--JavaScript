@@ -1,19 +1,19 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
-function CuboidMaker(measure) {
-    this.length = measure.length;
-    this.width = measure.width;
-    this.height = measure.height;
-    CuboidMaker.prototype.cuboid = function() {
-      console.log(2 * ${this.length} * ${this.width} * ${this.height})
-    }
-  }
+// function CuboidMaker(measure) {
+//     this.length = measure.length;
+//     this.width = measure.width;
+//     this.height = measure.height;
+//     CuboidMaker.prototype.cuboid = function() {
+//         return 2 * (this.length * this.width * this.height);
+//     }
+//   }
   
-  const cuboid = new value(
-    this.length:4;
-    this.width:5;
-    this.height:5;
-  )
-
+//   const cuboid = new Cuboid ({
+//       length:4,
+//       width:5,
+//       height:5,
+//   })
+    
   class CuboidMaker {
       constructor(cuboid) {
           this.length = cuboid.length;
@@ -21,12 +21,19 @@ function CuboidMaker(measure) {
           this.height = cuboid.height;
       }
       volume() {
-          return (${this.length} * ${this.width} * ${this.height});
+          return (this.length * this.width * this.height);
       }
       surfaceArea(){
-          return (2 * ${this.length} * ${this.width} * ${this.height});
+          return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
       }
   }
+
+  const cuboid = new CuboidMaker ({
+          length:4,
+          width:5,
+          height:5,
+      })
+        
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
