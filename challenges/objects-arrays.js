@@ -75,6 +75,7 @@ const universities = [];
 for (let i = 0; i < graduates.length; i++) {
   universities.push(graduates[i].university)
 }
+universities.sort()
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -157,14 +158,18 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const numbersArray =[];
-zooAnimals.map(element => {
-  return numbersArray.push(element.population)
-})
-const populationTotal = numbersArray.reduce(function(accum, currentNum){
-  return accum + currentNum;
-}, 0);
-console.log(populationTotal);
+// const numbersArray =[];
+// zooAnimals.map(element => numbersArray.push(element.population))
+
+// const populationTotal = numbersArray.reduce((accum, currentNum) =>
+//   accum + currentNum, 0);
+// console.log(populationTotal);
+
+const populationTotal = zooAnimals.reduce((accum, currentNum) => {
+  return accum + currentNum.population
+},0)
+
+console.log(populationTotal)
 
 
 /* 
