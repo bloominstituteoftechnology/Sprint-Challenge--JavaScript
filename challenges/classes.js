@@ -12,7 +12,7 @@ class CuboidMaker{
     return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
     };
   }
-  const sponge = new CuboidMaker({length: 4, width:5, height: 5})
+  const cuboid = new CuboidMaker({length: 4, width:5, height: 5})
 
   
 // Test your volume and surfaceArea methods by uncommenting the logs below:

@@ -71,14 +71,14 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 for (let i = 0; i < graduates.length; i++) {
-  contactInfo.push(graduates[i].first_name, graduates[i].email)
+  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`)
 }
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [ ];
 for (let i = 0; i < graduates.length; i++) {
-  if(graduates[i].university >= 'Uni'){
+  if(graduates[i].university.includes("Uni")){
     uni.push(graduates[i].university);
   }
   }
@@ -119,6 +119,9 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+zooAnimals.map((element, i) => {
+  lowerCase.push(`Name: ${zooAnimals[i].animal_name.toLowerCase()}`)
+});
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -128,8 +131,10 @@ The zoos are concenred about animals with a lower population count. Find out whi
 */
 const largerPopulation = [];
 zooAnimals.filter((element, i) =>  {
-  zooAnimals[i].popultion < 5;
-  largerPopulation.push(zooAnimals[i].animal_name)
+  if(zooAnimals[i].population < 5){
+    largerPopulation.push(zooAnimals[i].animal_name)
+  }
+  
 }) 
 console.log(largerPopulation);
 
