@@ -15,16 +15,20 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(tyrannosaurus.weight);
+console.log();
+
 // What was the diet of a velociraptor?
-console.log(velociraptor.diet);
+console.log();
+
 // How long was a stegosaurus?
-console.log(stegosaurus.length);
+console.log();
+
 // What time period did tyrannosaurus live in?
-console.log(tyrannosaurus.period);
+console.log();
+
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(tyrannosaurus.roar());
+console.log();
 
 
 // ==== Arrays ====
@@ -109,13 +113,13 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal;
+const populationTotal = 0;
 console.log(populationTotal);
 
 
 /* 
 
-Stretch: If you haven't already, convert your array methods callbacks into arrow functions.
+Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
 
