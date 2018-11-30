@@ -31,21 +31,21 @@
 class CubeMaker extends CuboidMaker {
     constructor(cubeAttrs) {
         super(cubeAttrs);
-        this.side = cubeAttrs.side
+        this.side = cubeAttrs.side;
     }
     cubeVolume () {
-        return Math.pow(this.side, 3);
+        return (Math.pow(this.side, 3));
     }
     cubeSurface () {
-        return 6 * Math.pow(this.side, 2);
+        return (6 * (this.side * this.side));
     }
 }
 const cube = new CubeMaker ({
-    side: 6
+    side: 10,
 })
 
-console.log(cube.cubeVolume);
-console.log(cube.cubeSurface)
+console.log(cube.cubeVolume());
+console.log(cube.cubeSurface())
 
 const cuboid = new CuboidMaker({
     length: 4,
