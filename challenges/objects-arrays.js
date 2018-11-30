@@ -120,6 +120,9 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+zooAnimals.forEach(item => {
+  animalNames.push(`Name: ${item.animal_name}, Scientific: ${item.scientific_name}`)
+})
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -128,7 +131,9 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
+const lowerCase = zooAnimals.map(item => {
+  return item.animal_name.toLowerCase();
+})
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -136,7 +141,9 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
+const largerPopulation = zooAnimals.filter(item => {
+  return item.population < 5
+})
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -144,7 +151,9 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+populationTotal = zooAnimals.reduce((total, item) => {
+  return total + item.population;
+}, 0)
 console.log(populationTotal);
 
 
