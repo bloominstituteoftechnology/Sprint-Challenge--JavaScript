@@ -107,7 +107,6 @@ class Cylinder extends Sphere {
 class Cone extends Cylinder {
   constructor(cone) {
     super(cone);
-    const slantHeight = Math.sqrt(Math.pow(this.height,2) + Math.pow(this.radius, 2));
   }
   slantHeight() {
     let sh = Math.sqrt(Math.pow(this.height,2) + Math.pow(this.radius, 2));
