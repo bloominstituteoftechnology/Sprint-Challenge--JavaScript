@@ -129,10 +129,19 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
+//==========Non-arrow function
+// const animalNames = [];
+// zooAnimals.forEach(function(zooAnimals) {
+//   animalNames.push(`Name: ${zooAnimals.animal_name}, Scientific: ${zooAnimals.scientific_name}.`)
+// })
+
+
+//==========Arrow function
 const animalNames = [];
-zooAnimals.forEach(function(zooAnimals) {
-  animalNames.push(`Name: ${zooAnimals.animal_name}, Scientific: ${zooAnimals.scientific_name}.`)
-})
+zooAnimals.forEach(zooAnimals => {
+  animalNames.push(`Name: ${zooAnimals.animal_name}, Scientific: ${zooAnimals.scientific_name}.`);
+});
+
 console.log(animalNames);
 
 
@@ -141,10 +150,17 @@ console.log(animalNames);
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
+//==========Non-arrow function
+// const lowerCase = zooAnimals.map(function(zooAnimals) {
+//   return zooAnimals.animal_name.toLowerCase()
+// });
 
-const lowerCase = zooAnimals.map(function(zooAnimals) {
-  return zooAnimals.animal_name.toLowerCase()
+
+//==========Arrow function
+const lowerCase = zooAnimals.map(zooAnimals => {
+  return zooAnimals.animal_name.toLowerCase();
 });
+
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -152,11 +168,20 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */ 
+////==========Non-arrow function
 //!!!!!!So this question is kind of misleading, it said largerPopulation as the empty array, but it's asking for the animals with the smallest population numbers.
 //!!!!!!So I changed the const name to smallerPopulation, because that made more sense for what the question was asking...since it wanted animals with less than 5...???
-const smallerPopulation = zooAnimals.filter(function(zooAnimals) {
+
+// const smallerPopulation = zooAnimals.filter(function(zooAnimals) {
+//   return zooAnimals.population < 5;
+// });
+
+
+//==========Arrow function
+const smallerPopulation = zooAnimals.filter(zooAnimals => {
   return zooAnimals.population < 5;
 });
+
 console.log(smallerPopulation);
 
 /* Request 4: .reduce() 
@@ -164,9 +189,18 @@ console.log(smallerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = zooAnimals.reduce(function(population, zooAnimals) {
+
+////==========Non-arrow function
+// const populationTotal = zooAnimals.reduce(function(population, zooAnimals) {
+//   return population += zooAnimals.population
+// },0);
+
+
+//==========Arrow function
+const populationTotal = zooAnimals.reduce((population, zooAnimals) => {
   return population += zooAnimals.population
 },0);
+
 console.log(populationTotal);
 
 
