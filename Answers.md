@@ -1,6 +1,6 @@
 ##### 1. Describe the biggest difference between `.forEach` & `.map`.
 
-The biggest difference between these two array methods is that .forEach simply loops through and performs an action (and potentially alters the original array), while .map loops through, performs a task, and returns a NEW array.
+The biggest difference between these two array methods is that `.forEach()` simply loops through and performs an action (and potentially alters the original array), while `.map()` loops through, performs a task, and returns a NEW array. Also, `.forEach()` cannot be chained with other array methods.
 
 ##### 2. What is the difference between a function and a method?
 
