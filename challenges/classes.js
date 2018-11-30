@@ -5,14 +5,14 @@ class CuboidMaker {
         this.width = attributes.width;
         this.height = attributes.height;
     }
-  }
 
-CuboidMaker.prototype.returnVolume = function() {
-    return(this.length * this.width * this.height);
-  }
+    returnVolume () {
+        return(this.length * this.width * this.height);
+    }
 
-  CuboidMaker.prototype.returnSurfaceArea = function() {
-    return(2 * (this.length * this.width + this.length * this.height + this.width * this.height));
+    returnSurfaceArea () {
+        return(2 * (this.length * this.width + this.length * this.height + this.width * this.height));
+    }
   }
 
 const newCuboid = new CuboidMaker({
