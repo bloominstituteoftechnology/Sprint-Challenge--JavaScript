@@ -14,10 +14,11 @@ const tyrannosaurus = {
   weight: "7000kg",
   length: "12m",
   period: "Late Cretaceious", 
-  roar: function() {
-    return "RAWERSRARARWERSARARARRRR!";
+}
 
-  }
+tyrannosaurus.roar = () => {
+  return "RAWERSRARARWERSARARARRRR!";
+
 }
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -78,7 +79,14 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities)
+
+for (let i = 0; i < graduates.length; i++){
+  universities.push(graduates[i].university)
+};
+
+universities.sort();
+
+console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -87,11 +95,18 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+
+for (i = 0; i < graduates.length; i++) {
+  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
+};
+
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+
+
 console.log(uni);
 
 
@@ -117,6 +132,12 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+
+// array1.forEach(function(element) {
+//   console.log(element);
+// });
+
+
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -126,6 +147,9 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+
+
+
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
