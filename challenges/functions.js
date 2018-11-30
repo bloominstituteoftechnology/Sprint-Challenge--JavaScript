@@ -38,7 +38,8 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-
+/*  Closure works in a bottom-up manner, meaning that all nested scopes have access to the variables of anything above it, including global scope. However, something higher on the inheritance chain will not have access to 
+anything nested within it. For example, in the window scope, you could not use the internal variable, but in the netedFunction, you could. */
 
 const external = "I'm outside the function";
 
