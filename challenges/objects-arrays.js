@@ -5,17 +5,33 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
+const trex = {
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: 7000,
+  length: 12,
+  period: "Late Cretaceious",
+}
+const steg = {
+  name: "stegosaurus",
+  diet: "herbivorous",
+  weight: 2000,
+  length: 9,
+  period: "Late Jurassic",
+}
+const velo = {
+  name: "velociraptor",
+  diet: "carnivorous",
+  weight: 15,
+  length: 1.8,
+  period: "Late Cretaceious",
+}
 
-// tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
-
-// stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
-// velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(`${trex.weight}kg`);
 
 // What was the diet of a velociraptor?
 console.log();
