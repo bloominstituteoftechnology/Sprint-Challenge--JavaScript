@@ -1,1 +1,5 @@
-
+1. .forEach will mutate the original array it's attached to, while .map will create a new array based on the argument you pass it.
+2. Functions can exist as independent objects, while methods are specifically the properties of other objects.
+3. Closure is the ability of functions to read the variables from within other functions that are larger in scope, rather than those variables being protected from the inner functions.
+4. Window/Implicit binding will check against the properties of the whole object. Implicit binding will check against the properties of the immediate object it's contained in. New binding will check against the properties of the object created by the constructor function. Explicit binding will check against the properties of whatever object it's specifically directed to look at.
+5. Super() is where you direct the child class which properties to pull from its parent class, similar to a callback variable.
