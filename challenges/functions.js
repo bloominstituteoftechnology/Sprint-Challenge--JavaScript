@@ -21,20 +21,34 @@ console.log (runfunc)
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+function add(x, y) {
+  console.log(x + y);
+}
+
+function multiply(x,y) {
+  console.log(x*y)
+}
+
+function greeting(firstname, lastname) {
+  console.log(`Hello ${firstname} ${lastname}, nice to meet you!`)
+}
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
 
+// Explanation: 
+// When nested function is first declared within myFunction(), it is not created just as itself. It contains a reference to its own local data. 
+// This causes any invocation of nestedFunction outside of its scope to refer to variables within its original scope. Therefore, it can refer to variables
+// in both nestedFunction() itself, or variables within its parent scope of myFunction(), which is where internal is defined.
 
 // const external = "I'm outside the function";
 
