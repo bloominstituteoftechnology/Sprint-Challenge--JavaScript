@@ -135,7 +135,7 @@ let tittle = zooAnimals.forEach(function(i){
 
 console.log(animalNames);
 
-console.log(animalNames);
+
 
 /* Request 2: .map()    
 
@@ -144,6 +144,10 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+let lowerCase = zooAnimals.map(function(i) {
+  return zooAnimals.animal_name.toLowerCase();
+});
+
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
