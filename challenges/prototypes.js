@@ -5,6 +5,7 @@
 /* == Step 1: Base Constructor ==
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
+CuboidMaker
 
 
 /* == Step 2: Volume Method ==
