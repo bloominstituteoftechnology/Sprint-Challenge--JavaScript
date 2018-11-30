@@ -41,7 +41,7 @@ consume("Mary", "Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-// nestedFunction() can reference a variable scoped in the parent function (in this case myFunction()). This is called closure. If nestedFunction() tries to reference a variable in a scope outside of it's parent function, it will not have access. In this example, nestedFunction() has access to it's parent's variable (internal) and the global variable (external).
+// nestedFunction() can reference a variable scoped in the parent function (in this case myFunction()). This is called closure. If nestedFunction() tries to reference a variable in a scope outside of it's parent function, it will not have access unless it is a globally scoped variable. In this example, nestedFunction() has access to it's parent's variable (internal) and the global variable (external).
 
 
 const external = "I'm outside the function";
