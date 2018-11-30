@@ -49,3 +49,20 @@ const cube = new CubeMaker(3);
 console.log(cube);
 console.log(cube.volume());
 console.log(cube.surfaceArea());
+
+
+// I thought about it more, below is how I would write the Cube class. I would omit rewriting Cuboid's methods because they should work, simply assign side length to length, width, height to make creating a cube only require one argument. Of course this doesn't satisfy the requirements of the stretch since volume and surfaceArea methods are not refactored.
+
+class CubeMakerK extends CuboidMakerClassSyntax {
+  constructor (side) {
+    super (side);
+    this.length = side;
+    this.width = side;
+    this.height = side;
+  }
+}
+
+const cubeK = new CubeMakerK(3);
+console.log(cube);
+console.log(cube.volume());
+console.log(cube.surfaceArea());

@@ -1,5 +1,5 @@
 1. The biggest difference between `.forEach` and `.map` is that `.forEach` can mutate the array it is called on (via its callback) while `.map` returns a new array.
-2. A function is independent (or belongs to the scope of the function in which it is nested). A method belongs to an object and lives in it's __proto__
+2. A function is independent (or belongs to the scope of the function in which it is nested). A method belongs to an object and lives in its __proto__
 3. A closure is created by the two pass compiler executing the code. It is like a backpack that a function can use to "carry" a variable from outside its own scope and use that variable. 
 ```js
 function myFunc(){
