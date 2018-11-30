@@ -34,16 +34,18 @@ class CubeMaker extends CuboidMaker2 {
         super(props);
         this.vol = this.volume();
         this.area = this.surfaceArea();
+        this.amICube();
     }
+
     amICube(){
         if(this.len === this.width && this.len === this.height){
-            return `Yup, I'm a cube!`;
+            console.log(`Yup, I'm a cube!`);
         } else {
             this.width = this.len;
             this.height = this.len;
             this.vol = this.volume();
             this.area = this.surfaceArea();
-            return `Not a cube, yo! Don't worry I made you a cube based on your length(${this.len})!`;
+            console.log(`Not a cube, yo! Don't worry I made you a cube based on your length(${this.len})!`);
         }
     };
 }
@@ -62,6 +64,5 @@ const notCube = new CubeMaker({
 
 console.log(cube.vol);
 console.log(cube.area);
-console.log(cube.amICube());
-console.log(notCube.amICube());
-console.log(notCube.amICube());
+cube.amICube();
+notCube.amICube();
