@@ -14,7 +14,7 @@ CuboidMaker.prototype.surfaceArea = function() {return 2*(this.length*this.width
  ========================== prototype copy and paste  ======================= */
 
  class Cuboidmaker {
-     constructor(attriubutes) {
+     constructor(attributes) {
         this.length = attributes.length;
         this.width = attributes.width;
         this.height = attributes.height;
@@ -31,3 +31,19 @@ const newCuboid = new CuboidMaker({
 
 newCuboid.volume();
 newCuboid.surfaceArea();
+
+
+class CubeMaker extends Cuboidmaker {
+    constructor(attributes) {
+        super(attributes);
+    };
+    volume() {console.log(this.width*this.width*this.width)};
+    surfaceArea() {console.log(6*this.width*this.width)};
+};
+
+const newCube = new CubeMaker ({
+    width: 5
+})
+
+newCube.volume();
+newCube.surfaceArea();
