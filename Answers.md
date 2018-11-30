@@ -1,1 +1,5 @@
-
+.forEach iterates over an array and invokes a callback function once on each element in the array.  .map actually creates a brand new array from the return vallue of it's callback function.
+A function is a block of code that performs a task when invoked.  A method is just a function inside an object.
+A closure is what allows nested functions to access data in the outer function nesting scope.  It is created when you build a function inside another function and then call data from the base function.
+Window Binding is Where if not given parameters to work in, 'this' will point back to the window on global scope.  Implicit Binding is where 'this' is used inside of an object or function to refer directly to the object or function it's in.  New Binding is where you use 'this' is used as a key in constructor functions.  And explicit Binding is where 'this' is passed down from inherited objects.
+super() is what pulls the 'this' keyword and the keys attached to it from the constructor function we are extending from.
