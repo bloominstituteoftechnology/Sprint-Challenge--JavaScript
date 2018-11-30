@@ -97,7 +97,7 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
- uni = [];
+ const uni = [];
  for(let i = 0; i < graduates.length; i++){
    if(graduates[i].university.includes("Uni")){
    uni.push(graduates[i])
@@ -131,7 +131,7 @@ The individual values in the array should look like this "Name: Jackal, asiatic,
 */
 const animalNames = [];
 zooAnimals.forEach(function(element){
-  animalNames.push('Name: ' + element.animal_name + ', Scientific: ' + element.scientific_name)
+  animalNames.push(`Name: ${element.animal_name}, Scientific: ${element.scientific_name}`)
 });
 console.log(animalNames);
 
@@ -141,9 +141,10 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-let lowerCase = [];
-lowerCase = zooAnimals.map(function(element){
-  return element.animal_name.toLowerCase();
+const lowerCase = [];
+let x = []
+x = zooAnimals.map(function(element){
+  return lowerCase.push(element.animal_name.toLowerCase());
 })
 console.log(lowerCase); 
 
@@ -176,3 +177,24 @@ Stretch: If you haven't already, convert your array method callbacks into arrow 
 
 */
 
+console.log('===== Request 1: Stretch =====');
+// Not sure why this one isn't working
+let animalNamesStretch = [];
+zooAnimals.forEach = element => animalNamesStretch.push(`Name: ${element.animal_name}, Scientific: ${element.scientific_name}`);
+console.log(animalNamesStretch);
+
+console.log('===== Request 2: Stretch =====');
+let lowerCaseStrech = [];
+lowerCaseStrech = zooAnimals.map = element => element.animal_name.toLowerCase();
+console.log(lowerCase); 
+
+console.log('===== Request 3: Stretch =====');
+let largerPopulationStrech = [];
+largerPopulationStrech = zooAnimals.filter = element => element.population < 5
+console.log(largerPopulation);
+
+
+console.log('===== Request 4: Stretch =====');
+let populationTotalStrech = 0;
+populationTotalStrech = zooAnimals.reduce = (total, currentValue) => total + currentValue.population,0
+console.log(populationTotal);

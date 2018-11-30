@@ -11,7 +11,7 @@ function consume(a, b, cb){
 };
 
 function multiply(a,b){
-  return a*b
+  return a * b
 };
 
 console.log(consume(5, 26, multiply));
@@ -48,13 +48,15 @@ consume(2,2,add); // 4
 consume(10,16,multiply); // 160
 consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
+console.log(consume(2,2,add)); // 4
+console.log(consume(10,16,multiply)); // 160
+console.log(consume("Mary","Poppins", greeting));
 
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: The first pass the compiler does checks to see where variables(key in the key/value pair) are in the function and nested functions. Since internal is being used within nestedFunction it 
-// passes the variable into the nestedFunction as a closure(aka backpack).
+// Explanation: The first pass the compiler does checks to see where variables(key in the key/value pair) are in the function and nested functions. Since internal is being used within nestedFunction it passes the variable into the nestedFunction as a closure(aka backpack).
 
 
 const external = "I'm outside the function";
