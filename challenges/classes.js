@@ -31,8 +31,8 @@ const cuboidClass = new CuboidMakerClass({
 });
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+console.log(cuboidClass.volume()); // 100
+console.log(cuboidClass.surfaceArea()); // 130
 
 // =========================================== Stretch Task ==========================================
 //============ Cube Maker
