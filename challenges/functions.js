@@ -7,13 +7,26 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
+function HOF(x,y,cb){
+  cb(x,y);
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+function add(x,y){
+  return x + y;
+}
 
+function multiply(x,y){
+  return x * y;
+}
+
+function greeting (first, last){
+  return `Hello ${first} ${last}, nice to meet you!`
+}
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 // consume(2,2,add); // 4
@@ -27,6 +40,7 @@
 
 // Explanation: 
 
+//nestedfunction() can acess the internal variable because nestedFunction is called within the myfunction so once you call myfunction it will run through both functions looking for the variable within closure (easier to see this hapening in console with debugger)
 
 const external = "I'm outside the function";
 
