@@ -43,7 +43,7 @@ class CubeMaker extends CuboidMaker {
   }
 
   cubeSurfaceArea() {
-    return 6 * this.length * this.length;
+    return 6 * this.length * this.length; // Cube surface area = 6 *length^2, where it is assumed that it's a perfect cube
   }
 }
 
