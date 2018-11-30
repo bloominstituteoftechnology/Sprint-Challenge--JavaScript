@@ -97,12 +97,21 @@ class Cylinder extends Sphere {
     let sa = 2 * Math.PI * this.radius * this.height + 2 * Math.PI * Math.pow(this.radius, 2);
     return sa.toFixed(2);
   }
+  baseArea() {
+    let ba = Math.PI * Math.pow(this.radius, 2);
+    return ba.toFixed(2);
+  }
 
 }
 
 class Cone extends Cylinder {
   constructor(cone) {
     super(cone);
+    const slantHeight = Math.sqrt(Math.pow(this.height,2) + Math.pow(this.radius, 2));
+  }
+  slantHeight() {
+    let sh = Math.sqrt(Math.pow(this.height,2) + Math.pow(this.radius, 2));
+    return sh.toFixed(2);
   }
   volume() {
     let vol = Math.PI * Math.pow(this.radius, 2) * (this.height / 3);
@@ -133,4 +142,7 @@ console.log(sphere.surfaceArea());
 console.log(cylinder.surfaceArea());
 console.log(cylinder.volume());
 console.log(cone.volume());
+console.log(cone.slantHeight());
 console.log(cone.surfaceArea());
+console.log(cylinder.baseArea());
+console.log(cone.baseArea());
