@@ -178,9 +178,8 @@ Stretch: If you haven't already, convert your array method callbacks into arrow 
 */
 
 console.log('===== Request 1: Stretch =====');
-// Not sure why this one isn't working
 let animalNamesStretch = [];
-zooAnimals.forEach = element => animalNamesStretch.push(`Name: ${element.animal_name}, Scientific: ${element.scientific_name}`);
+zooAnimals.forEach(element => animalNamesStretch.push(`Name: ${element.animal_name}, Scientific: ${element.scientific_name}.`) );
 console.log(animalNamesStretch);
 
 console.log('===== Request 2: Stretch =====');
@@ -192,7 +191,6 @@ console.log('===== Request 3: Stretch =====');
 let largerPopulationStrech = [];
 largerPopulationStrech = zooAnimals.filter = element => element.population < 5
 console.log(largerPopulation);
-
 
 console.log('===== Request 4: Stretch =====');
 let populationTotalStrech = 0;
