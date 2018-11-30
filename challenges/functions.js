@@ -15,11 +15,24 @@
 */
 
 
-/* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+function consume(arg1, arg2, cb) {
+  console.log(cb(arg1, arg2));
+}
 
+const add = function(a, b){
+  return a + b;
+}
+const multiply = function(a, b){
+  return a * b;
+}
+const greeting = function(firstName, lastName){
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
+}
+
+/* Step 3: Check your work by un-commenting the following calls to consume(): */
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // ==== Closures ==== 
 
