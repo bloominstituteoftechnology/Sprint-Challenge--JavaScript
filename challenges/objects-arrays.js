@@ -124,7 +124,7 @@ const graduates = [{
     "university": "Universitat Rovira I Virgili Tarragona",
     "email": "hlethbrig9@foxnews.com"
   }
-]
+];
 
 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.
@@ -169,7 +169,6 @@ console.log(uni);
 // ==== ADVANCED Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
-
 
 zooAnimals = [{
     "animal_name": "Jackal, asiatic",
@@ -232,6 +231,8 @@ zooAnimals = [{
     "state": "West Virginia"
   }
 ];
+//  "animal_name", "population", "scientific_name", "state"
+
 
 /* Request 1: .forEach()
 
@@ -239,6 +240,11 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+
+zooAnimals.forEach(function (arr) {
+  animalNames.push(`Name: ${arr.animal_name}, Scientific: ${arr.scientific_name}`);
+})
+
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -247,7 +253,8 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
+const lowerCase = zooAnimals.map(arr => arr.animal_name.toLowerCase());
+
 console.log(lowerCase);
 
 /* Request 3: .filter() 
