@@ -52,7 +52,8 @@ class PyramidMaker extends NewCuboidMaker {
     super(cyl);
   }
   volume() {
-    return (this.length * this.width * this.height) / 3;
+    let vol = (this.length * this.width * this.height) / 3;
+    return vol.toFixed(2);
   }
   surfaceArea() {
     let sa = this.length * this.width + this.length * Math.sqrt(Math.pow(this.width*.5, 2) + Math.pow(this.height, 2))  + this.width * Math.sqrt(Math.pow(this.length*.5, 2) + Math.pow(this.height, 2));
@@ -68,3 +69,68 @@ const pyramid = new PyramidMaker({
 
 console.log(pyramid.volume());
 console.log(pyramid.surfaceArea());
+
+class Sphere {
+  constructor(sphere) {
+    this.radius = sphere.radius;
+  }
+  volume() {
+    let vol = (4/3) * Math.PI * Math.pow(this.radius, 3);
+    return vol.toFixed(2);
+  }
+  surfaceArea() {
+    let sa = 4 * Math.PI * Math.pow(this.radius, 2);
+    return sa.toFixed(2);
+  }
+}
+
+class Cylinder extends Sphere {
+  constructor(cyl) {
+    super(cyl);
+    this.height = cyl.height;
+  }
+  volume() {
+    let vol = Math.PI * Math.pow(this.radius, 2) * this.height;
+    return vol.toFixed(2);
+  }
+  surfaceArea() {
+    let sa = 2 * Math.PI * this.radius * this.height + 2 * Math.PI * Math.pow(this.radius, 2);
+    return sa.toFixed(2);
+  }
+
+}
+
+class Cone extends Cylinder {
+  constructor(cone) {
+    super(cone);
+  }
+  volume() {
+    let vol = Math.PI * Math.pow(this.radius, 2) * (this.height / 3);
+    return vol.toFixed(2);
+  }
+  surfaceArea() {
+    let sa = Math.PI * this.radius * (this.radius + Math.sqrt(Math.pow(this.height,2) + Math.pow(this.radius, 2)));
+    return sa.toFixed(2);
+  }
+}
+
+const sphere = new Sphere({
+  radius: 3
+})
+
+const cylinder = new Cylinder({
+  radius: 2,
+  height: 8
+})
+
+const cone = new Cone({
+  radius: 5,
+  height: 9
+});
+
+console.log(sphere.volume());
+console.log(sphere.surfaceArea());
+console.log(cylinder.surfaceArea());
+console.log(cylinder.volume());
+console.log(cone.volume());
+console.log(cone.surfaceArea());
