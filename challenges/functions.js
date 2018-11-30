@@ -7,6 +7,14 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
+function consume (x, y, cb) {
+  return cb(x, y);
+}
+const runfunc = consume('cats', 'dogs', function(x, y) {
+  return `${x} and ${y}`
+})
+console.log (runfunc)
+
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -28,15 +36,15 @@
 // Explanation: 
 
 
-const external = "I'm outside the function";
+// const external = "I'm outside the function";
 
-function myFunction() {
-  console.log(external);
-  const internal = "Hello! I'm inside myFunction!";
+// function myFunction() {
+//   console.log(external);
+//   const internal = "Hello! I'm inside myFunction!";
 
-  function nestedFunction() {
-    console.log(internal);
-  };
-  nestedFunction();
-}
-myFunction();
+//   function nestedFunction() {
+//     console.log(internal);
+//   };
+//   nestedFunction();
+// }
+// myFunction();
