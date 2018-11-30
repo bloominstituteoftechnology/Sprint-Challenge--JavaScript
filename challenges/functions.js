@@ -7,8 +7,8 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-function HOF(x,y,cb){
-  cb(x,y);
+function consume(x,y,cb){
+  return cb(x,y);
 }
 
 /* Step 2: Create several functions to callback with consume();
