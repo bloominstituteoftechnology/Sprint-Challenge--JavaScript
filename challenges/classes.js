@@ -1,27 +1,25 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
 class CuboidMaker {
-    constructor (options){
-        this.dimensions=options.dimensions;
+    constructor (dimensions){
+        this.length=dimensions.length;
+        this.width =dimensions.width;
+        this.height= dimensions.height;
     }
-    volume(lenght, width, height){
-        return (length*width*height);
-    }
-    surfaceArea(){
-        return (2 * (length*width + length * height + width * height));
-    }
-}
-class cuboid extends CuboidMaker{
-    constructor(options){
-        super (options);
-        options.length= 4,
-        options.width = 5,
-        options.height = 5
+    volume() {
+       return `volume ${this.length * this.width * this.height}`;
+    };
+    surfaceArea() {
+        return `surface area: ${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
     }
 }
+const cuboid = new CuboidMaker ({
+    length:4,
+    width: 5,
+    height: 5
+});
   // Test your volume and surfaceArea methods by uncommenting the logs below:
   console.log(cuboid.volume()); // 100
   console.log(cuboid.surfaceArea()); // 130
-cuboid.volume();  
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 
 
