@@ -106,7 +106,8 @@ console.log(uni);
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
 
-zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
+zooAnimals = [
+{"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
 {"animal_name":"Screamer, southern","population":1,"scientific_name":"Chauna torquata","state":"Alabama"},
 {"animal_name":"White spoonbill","population":8,"scientific_name":"Platalea leucordia","state":"Georgia"},
 {"animal_name":"White-cheeked pintail","population":1,"scientific_name":"Anas bahamensis","state":"Oregon"},
@@ -123,6 +124,9 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+zooAnimals.forEach(element => {
+  animalNames.push(`Name: ${element.animal_name}, Scientific: ${element.scientific_name}`);
+});
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -132,6 +136,9 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+  zooAnimals.map((animal) => {
+    return lowerCase.push(animal.animal_name.toLowerCase());
+})
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -139,7 +146,9 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
+const largerPopulation = zooAnimals.filter((animal) => {
+  return animal.population < 5;
+});
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -147,7 +156,9 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+const populationTotal = zooAnimals.reduce((animals, population) =>{
+  return animals + population.population
+}, 0);
 console.log(populationTotal);
 
 
@@ -155,5 +166,6 @@ console.log(populationTotal);
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
+Completed 
 */
 
