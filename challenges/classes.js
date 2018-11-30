@@ -43,7 +43,7 @@ class CubeMaker extends Cuboidmaker {
 
 const newCube = new CubeMaker ({
     width: 5
-})
+});
 
 newCube.volume();
 newCube.surfaceArea();
