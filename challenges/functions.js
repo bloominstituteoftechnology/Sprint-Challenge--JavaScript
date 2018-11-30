@@ -40,7 +40,7 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 /* 
 
 The compiler looks for internal in nestedFunctions scope first, doesn't find it, 'looks up',
-and finds it in myFunctions. Looking at the debugger we can see internal is passed to
+and finds it in myFunctions. Uncommenting the debugger we can see internal is passed to
 nestedFunction via Closure.
 
 */
@@ -54,7 +54,7 @@ function myFunction() {
   const internal = "Hello! I'm inside myFunction!";
 
   function nestedFunction() {
-    debugger;
+    // debugger;
     console.log(internal);
   };
   nestedFunction();
