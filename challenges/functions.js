@@ -37,7 +37,10 @@ console.log(consume("Matt", "Basile", greeting));
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: They both are a part of the myFunction scope, so when nestedFunction is invoked, and proceeds to attempt to locate it's internal variable within its own scope
+//it fails. But thanks to closure, the nestFunction can proceed to step out of its function locate the proper variable and "borrow" it to excute their function. However, if
+//myFunction() need a variable within nestedFunction() that would not be possible because the inheritence of variables only goes downwards. It is not a two way street, but
+//myFunction() would be able to access the "global" scope as we see when it console.logs external.
 
 
 const external = "I'm outside the function";
