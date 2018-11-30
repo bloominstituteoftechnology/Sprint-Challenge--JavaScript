@@ -14,11 +14,10 @@
 // });
 // console.dir(consume());
 function consume(x, y, cb) {
-  // sumNums adds two numbers (x, y) and passes the result to the callback.
   return cb(x, y);
 }
-consume(5, 10, function add(callBack) {
-  console.log(callBack);
+consume(x, y, function add(callBack) {
+  console.log(x + y);
 });
 /* Step 2: Create several functions to callback with consume();
  * Create a function named add that returns the sum of two numbers
