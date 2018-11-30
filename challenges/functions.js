@@ -24,12 +24,12 @@ const add = function(arr, randomThing) {
 }
 
 
-const multiply = function(arr,randomThing) {
+const multiply = function(arr, randomThing) {
   console.log(arr * randomThing);
 }
 
 const greeting = function(arr, randomThing){
-  console.log
+  console.log (`Hello ${arr} ${randomThing}! , nice to meet you!`)
 }
 
 
@@ -46,7 +46,8 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: A nested function is considered a closure. A nested function inherits an arguement variables 
+//contain tin the function that accessed fron statements in the outer function.
 
 
 const external = "I'm outside the function";
