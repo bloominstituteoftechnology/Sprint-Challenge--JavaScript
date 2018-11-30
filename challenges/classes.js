@@ -14,6 +14,13 @@ class CuboidMakerES6 {
   surfaceArea() {
     return `Surface Area: ${((this.length*this.width) + (this.length*this.height) + (this.width*this.height))*2}`
   }
+
+  display2DCuboid(){
+    const theCuboid = document.createElement('DIV');
+    theCuboid.style.cssText = `width: ${this.length}px; height: ${this.height}px; background-color: red`;
+    document.querySelector('body').appendChild(theCuboid);
+    console.log(`Displaying 2D rectangle using length and height property`)
+  }
 }
 
 const cuboidES6 = new CuboidMakerES6({
@@ -22,9 +29,18 @@ const cuboidES6 = new CuboidMakerES6({
   height: 5
 });
 
+const cuboid2 = new CuboidMakerES6({
+  length: 200,
+  width: 5,
+  height: 50
+});
+
 // Test your volume and surfaceArea methods by uncommenting the logs below:
  console.log(cuboidES6.volume()); // 100
  console.log(cuboidES6.surfaceArea()); // 130
+cuboid2.display2DCuboid();
+
+
 
 // Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area.
 
