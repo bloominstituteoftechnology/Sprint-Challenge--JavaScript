@@ -15,12 +15,22 @@ function consume(a, b, cb) {
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+function add(a,b) {
+  console.log(a + b);
+}
 
+function multiply(a,b) {
+  console.log(a * b);
+}
+
+function greeting(a, b) {
+  console.log(`Hello ${a} ${b}, nice to meet you!`);
+}
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
  consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+ consume(10,16,multiply); // 160
+ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -29,6 +39,10 @@ function consume(a, b, cb) {
 
 // Explanation: 
 
+// nestedFunction can access the variable because of closure. A function will first look inside its own Scope
+// to find the information it needs to perform whatever task it was made to do.  If it can not find the information
+// it needs in its scope it will look one level up.  If the inside function is in another function it will look in
+// that enclosing functions scope for the information it needs.  If it doesn't find what it needs there it will look in the global scope.
 
 const external = "I'm outside the function";
 
