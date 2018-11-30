@@ -11,6 +11,9 @@ const trex = {
   weight: 7000,
   length: 12,
   period: "Late Cretaceious",
+  roar: function(){
+    return "RAWERSRARARWERSARARARRRR!"
+  }
 }
 const steg = {
   name: "stegosaurus",
@@ -34,17 +37,16 @@ const velo = {
 console.log(`${trex.weight}kg`);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(velo.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(`${steg.length}m`);
 
 // What time period did tyrannosaurus live in?
-console.log();
-
+console.log(trex.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+console.log(trex.roar());
 
 
 // ==== Arrays ====
