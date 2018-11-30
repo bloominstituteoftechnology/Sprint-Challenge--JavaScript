@@ -1,19 +1,19 @@
-// 1. Copy and paste your prototype in here and refactor into class syntax.
-// function CuboidMaker(att) {
-// 	this.length = att.length;
-// 	this.width = att.width;
-// 	this.height - att.height;
-// }
-
 class CuboidMaker {
-	constuctor(att) {
+	constructor(att) {
 		this.length = att.length;
 		this.width = att.width;
-		this.height - att.height;
+		this.height = att.height;
 	}
 
+	// volume() {
+	// 	return `${this.length * this.width * this.height}`;
+	// }
+
 	volume() {
-		return this.length * this.width * this.height;
+		console.log(this.length);
+		console.log(this.height);
+		console.log(this.width);
+		return `Volume ${this.length * this.width * this.height}`;
 	}
 
 	surfaceArea() {
