@@ -97,7 +97,12 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+ uni = [];
+ for(let i = 0; i < graduates.length; i++){
+   if(graduates[i].university.includes("Uni")){
+   uni.push(graduates[i])
+   }
+ }
 
 console.log(uni);
 
@@ -125,7 +130,6 @@ The individual values in the array should look like this "Name: Jackal, asiatic,
 
 */
 const animalNames = [];
-// console.log(zooAnimals[0].animal_name);
 zooAnimals.forEach(function(element){
   animalNames.push('Name: ' + element.animal_name + ', Scientific: ' + element.scientific_name)
 });
