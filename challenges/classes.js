@@ -56,6 +56,14 @@ class CubeMaker extends CuboidMaker2 {
     surfaceArea(){
         return 6 * this.len ** 2;
     }
+
+    faceDiagonal(){
+        return Math.sqrt(2) * this.len; 
+    }
+
+    spaceDiagonal(){
+        return Math.sqrt(3) * this.len; 
+    }
 }
 
 const cube = new CubeMaker({
@@ -76,3 +84,5 @@ console.log(notCube.vol);
 console.log(notCube.area);
 cube.amICube();
 notCube.amICube();
+console.log(cube.faceDiagonal());
+console.log(cube.spaceDiagonal());
