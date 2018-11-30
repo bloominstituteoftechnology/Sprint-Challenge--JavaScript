@@ -7,3 +7,4 @@ a: Window is the main container of objects, when looking at a forest, this is th
 b. Implicit binding is when you create an object with static props that you input for each individual object.
 c: A new binding is an object with props that can be variable and added when using the new keyword, this is a constructor.
 d. Explicit binding is a way we can control specific properties on an object and add bindings as we want using create and call.
+5. super(props) is needed when we want to copy over props and methods from another constructor (inherit). This is kind of like the create and call methods where as you need both create and call in es5, when using es6 syntax you also need both extends Parent and super()
