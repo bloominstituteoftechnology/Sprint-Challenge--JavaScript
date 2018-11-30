@@ -119,9 +119,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
-zooAnimals.forEach(function(animal){
-  animalNames.push(`Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}.`)
-});
+zooAnimals.forEach(animal => animalNames.push(`Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}.`));
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -129,9 +127,7 @@ console.log(animalNames);
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
-const lowerCase = zooAnimals.map(function(animal){
-   return animal.animal_name.toLowerCase();
-});
+const lowerCase = zooAnimals.map(animal => animal.animal_name.toLowerCase());
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -147,9 +143,7 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = zooAnimals.reduce(function(totalPop, currentValue){
-  return totalPop + currentValue.population
-},0);
+const populationTotal = zooAnimals.reduce((totalPop, currentValue) => totalPop + currentValue.population, 0);
 console.log(populationTotal);
 
 
