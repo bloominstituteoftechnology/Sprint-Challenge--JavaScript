@@ -34,11 +34,13 @@ consume(2,2,add); // 4
 consume(10,16,multiply); // 160
 consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
+
+
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: since nestedFunction is essential an object of it's parent myFunction, it inherits all of the variables within myFunction. A way I visualize it in my own words is myFunction is the `main scope` of all code within the function. all variables declared within the `main scope` can be accessed from what I call a `child scope`(a function that is nested in another function).
 
 
 const external = "I'm outside the function";
