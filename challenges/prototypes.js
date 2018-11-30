@@ -20,7 +20,7 @@ function CuboidMaker(length, width, height) {
 */
 
 CuboidMaker.prototype.volume = function() {
-  return this.length * this.width * this.height;
+  return (this.length * this.width * this.height);
 }
 
 
