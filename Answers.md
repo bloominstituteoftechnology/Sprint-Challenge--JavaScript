@@ -9,4 +9,5 @@
    Explicit Binding : Explicitly stating what the this keyword should be using one of the three methods : .call(), .apply(), .bind() 
    new Binding : when a function is invoked with the "new" keyword, the "this" keyword inside that functions is bound to the new object that is being constructed.
    window Bindind : when the this keyword defaults to the window Object. 
-  
+
+5. We use the super() to  call the objects parent constructor, giving us access to all of the features of the parent.
