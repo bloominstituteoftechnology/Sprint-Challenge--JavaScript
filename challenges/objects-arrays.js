@@ -6,6 +6,8 @@
   object name, diet, weight, length, period
 */
 
+
+
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
