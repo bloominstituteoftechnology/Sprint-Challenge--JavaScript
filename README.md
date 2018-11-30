@@ -12,7 +12,7 @@ This sprint you worked really hard on learning the fundamentals of JavaScript! T
 
 ## Task 2: Comprehension Questions
 
-Answer the following questions to the best of your ability. You can exercise your Googling skills and use training kit. Open up the [Answers.md](Answers.md) file and record your responses there.
+- [x] Answer the following questions to the best of your ability. You can exercise your Googling skills and use training kit. Open up the [Answers.md](Answers.md) file and record your responses there.
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 2. What is the difference between a function and a method?
