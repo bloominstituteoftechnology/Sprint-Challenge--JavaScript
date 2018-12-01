@@ -127,6 +127,8 @@ console.log(result);
 const uni = [];
 console.log(uni);
 
+//ask Erinc how to use: .includes() method on Monday, December 3, 2018.
+
 
 // ==== ADVANCED Array Methods ====
 
