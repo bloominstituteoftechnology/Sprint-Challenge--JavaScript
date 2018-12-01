@@ -6,7 +6,7 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-function higherOrderFunction(a,b,cb) {
+function consume(a,b,cb) {
   return cb(a,b);
 }
 /* Step 2: Create several functions to callback with consume();
@@ -37,7 +37,7 @@ function greeting (firstName, lastName) {
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: nestedfunction can access the variable 'internal' because the closure gives it access to the 
-//outer function's scope.
+//outer function's scope. In other words, it is a part of 'internal's' lexical environment.
 
 
 const external = "I'm outside the function";

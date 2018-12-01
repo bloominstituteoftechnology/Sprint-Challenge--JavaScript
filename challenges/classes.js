@@ -8,38 +8,45 @@
 
 
 function CuboidMaker(attributes) {
-    this.length = attributes.length;
-    this.width = attributes.width;
-    this.height = attributes.height;
-    
-  }
+  this.length = attributes.length;
+  this.width = attributes.width;
+  this.heigth = attributes.heigth;
+  
+}
 
-  CuboidMaker.prototype=  function (volume) {
-    return length * width * height;
-  };
+CuboidMaker.prototype.volume =  function(length, width, heigth) {
+  return (this.length * this.width * this.heigth);
+};
 
-  const cuboid = new CuboidMaker({
-    length: 4,
-    width: 5,
-    height: 5
-  });
+const cuboid = new CuboidMaker({
+  length: 4,
+  width: 5,
+  heigth: 5
+});
+
+cuboid.volume();
 
 
   //refactor
 
   class CuboidMaker {
-      constructor(CubAttributes) {
-        this.length = CubAttributes.length;
-        this.width = CubAttributes.width;
-        this.height = CubAttributes.height;
-      }
-      volume() {
-          console.log(length * width * height);
-      }
-  }
+    constructor(CubAttributes) {
+      this.length = CubAttributes.length;
+      this.width = CubAttributes.width;
+      this.heigth = CubAttributes.heigth;
+    }
+    volume(length, width, heigth) {
+        return (this.length * this.width * this.heigth);
+    }
+}
 
-  const cuboid = new CuboidMaker({
-    length: 4,
-    width: 5,
-    height: 5
-  });
+const cuboid = new CuboidMaker({
+  length: 4,
+  width: 5,
+  heigth: 5
+});
+
+
+cuboid.volume();
+
+
