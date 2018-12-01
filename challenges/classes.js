@@ -29,13 +29,15 @@ console.log(cuboid.surfaceArea()); // 130
 class CubeMaker extends CuboidMaker {
     constructor(properties) {
         super(properties);
-        this.hasValidDimensions = this.length && !this.width && !this.height 
-                                  || !this.length && this.width && !this.height 
-                                  || !this.length && !this.width && this.height 
-                                  || !this.width && this.length == this.height
-                                  || !this.height && this.length == this.width
-                                  || !this.length && this.width == this.height
-                                  || this.length === this.width && this.width === this.height;
+
+        // Boolean variable to check validity (a cube's dimensions must all be equal)
+        this.hasValidDimensions = this.length && !this.width && !this.height    // if only one argument given
+                                  || !this.length && this.width && !this.height // if only one argument given
+                                  || !this.length && !this.width && this.height // if only one argument given
+                                  || !this.width && this.length == this.height // two arguments -> must both be equal
+                                  || !this.height && this.length == this.width // two arguments -> must both be equal
+                                  || !this.length && this.width == this.height // two arguments -> must both be equal
+                                  || this.length === this.width && this.width === this.height; // all 3 must be equal
     }
     volume() {
         return this.hasValidDimensions ?
