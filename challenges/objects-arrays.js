@@ -72,7 +72,7 @@ const universities = [];
 for (let i = 0; i < graduates.length; i++) {
   universities.push(graduates[i].university);
 }
-console.log(universities)
+console.log(universities.sort());
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -119,7 +119,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
-let newNames = zooAnimals.forEach((i)=>{
+let newNames = zooAnimals.forEach((i) => {
   animalNames.push(`Name: ${i.animal_name}, Scientific: ${i.scientific_name}`);
 });
 console.log(animalNames);
@@ -137,7 +137,7 @@ console.log(lowerCase);
 
 /* Request 3: .filter() 
 
-The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
+The zoos are concerned about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
 const largerPopulation = zooAnimals.filter((animal) => {

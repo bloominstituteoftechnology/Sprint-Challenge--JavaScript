@@ -1,7 +1,7 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
 
 //======================  Parent Class  ========================//
-class CuboidMaker{
+class CuboidMakerTwo{
     constructor(stats){
     this.length = stats.length;
     this.width = stats.width;
@@ -17,7 +17,7 @@ class CuboidMaker{
 
 //=========================  Child Class  ========================//
 
-class CubeMaker extends CuboidMaker{
+class CubeMaker extends CuboidMakerTwo{
     constructor(dimensions){
         super(dimensions);
         this.edge = dimensions.edge;
@@ -26,7 +26,7 @@ class CubeMaker extends CuboidMaker{
         return this.edge ** 3;
     }
     cubeSA(){
-        return 6 * (this.edge ** 2)
+        return 6 * (this.edge ** 2);
     }
 }
 
@@ -47,7 +47,7 @@ class rightCylinderMaker extends CubeMaker{
 
 //======================  Parent Object  ========================//
 
-const cuboid = new CuboidMaker({
+const cuboidTwo = new CuboidMakerTwo({
     length: 4,
     width: 5,
     height: 5
@@ -64,11 +64,11 @@ const cuboid = new CuboidMaker({
 const rightCylinder = new rightCylinderMaker ({
     height: 5,
     radius: 3
-})
+});
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
- console.log(cuboid.volume()); // 100
- console.log(cuboid.surfaceArea()); // 130
+ console.log(cuboidTwo.volume()); // 100
+ console.log(cuboidTwo.surfaceArea()); // 130
  console.log(cube.cubeVolume()); // 27
  console.log(cube.cubeSA()); //54
  console.log(rightCylinder.rightCylinderVolume()); //~141.37
