@@ -29,23 +29,24 @@ console.log(cuboid.surfaceArea()); // 130
 class CubeMaker extends CuboidMaker {
     constructor(properties) {
         super(properties);
-
-        // Boolean variable to check validity (a cube's dimensions must all be equal)
-        this.hasValidDimensions = this.length && !this.width && !this.height    // if only one argument given
-                                  || !this.length && this.width && !this.height // if only one argument given
-                                  || !this.length && !this.width && this.height // if only one argument given
-                                  || !this.width && this.length == this.height // two arguments -> must both be equal
-                                  || !this.height && this.length == this.width // two arguments -> must both be equal
-                                  || !this.length && this.width == this.height // two arguments -> must both be equal
-                                  || this.length === this.width && this.width === this.height; // all 3 must be equal
+    }
+    // Boolean variable to check validity (a cube's dimensions must all be equal)
+    checkValidArgs() {
+        return this.length && !this.width && !this.height    // if only one argument given
+               || !this.length && this.width && !this.height // if only one argument given
+               || !this.length && !this.width && this.height // if only one argument given
+               || !this.width && this.length == this.height // two arguments -> must both be equal
+               || !this.height && this.length == this.width // two arguments -> must both be equal
+               || !this.length && this.width == this.height // two arguments -> must both be equal
+               || this.length === this.width && this.width === this.height; // all 3 must be equal
     }
     volume() {
-        return this.hasValidDimensions ?
+        return this.checkValidArgs() ?
             Math.pow(this.length || this.width || this.height, 3) :
             "Incorrect dimensions - this is not a real cube!";
     }
     surfaceArea() {
-        return this.hasValidDimensions ?
+        return this.checkValidArgs() ?
             6 * (this.length || this.width || this.height) * (this.length || this.width || this.height) :
             "Incorrect dimensions - this is not a real cube!";
     }
@@ -55,6 +56,8 @@ const cube = new CubeMaker({
     length: 5,
     width: 5
 });
+
+cube.width = 5;
 
 console.log(cube.volume()); // 64
 console.log(cube.surfaceArea()); // 96
