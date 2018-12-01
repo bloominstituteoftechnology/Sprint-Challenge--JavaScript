@@ -29,14 +29,15 @@ console.log(cuboid.surfaceArea()); // 130
 class CubeMaker extends CuboidMaker {
     constructor(properties) {
         super(properties);
+        this.hasValidDimensions = this.length === this.width && this.width === this.height;
     }
     volume() {
-        return this.length === this.width && this.width === this.height ?
+        return this.hasValidDimensions ?
             Math.pow(this.length, 3) :
             "Incorrect dimensions - this is not a real cube!";
     }
     surfaceArea() {
-        return this.length === this.width && this.width === this.height ?
+        return this.hasValidDimensions ?
             6 * this.length * this.length :
             "Incorrect dimensions - this is not a real cube!";
     }
