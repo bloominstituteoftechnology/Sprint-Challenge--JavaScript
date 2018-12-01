@@ -82,12 +82,7 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 for(let i = 0; i < graduates.length; i++){
-  function getValue(object, key) {
-    if(graduates.first_name){
-      contactInfo.push()
-    }
-  }
-}
+  
 console.log(contactInfo);
 
 
@@ -122,11 +117,11 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const animalNames = zooAnimals.forEach(function(a, b){
-  console.log(`Name: ${a.animal_name}, Scientific: ${b.scientific_name}`); 
+const animalNames = [];
+let namSci = zooAnimals.forEach(function(i){
+  animalNames.push(`Name: ${i.animal_name}, Scientific: ${i.scientific_name}`);
 })
-
-// console.log(animalNames);
+console.log(animalNames);
 
 
 /* Request 2: .map()    
@@ -160,7 +155,7 @@ The zoos need to know their total animal population across the United States.  F
 const populationTotal = zooAnimals.reduce(function(totalPop, currentValue){
   return totalPop + currentValue.population;
 }, 0);
-console.log(populationTotal);
+console.log(populationTotal)
 
 
 /* 
