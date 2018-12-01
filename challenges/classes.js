@@ -42,11 +42,13 @@ class CubeMaker extends CuboidMaker {
     }
     volume() {
         return this.checkValidArgs() ?
+            // short-circuit evaluation of || operator is used to determine the first property with an existing value
             Math.pow(this.length || this.width || this.height, 3) :
             "Incorrect dimensions - this is not a real cube!";
     }
     surfaceArea() {
         return this.checkValidArgs() ?
+            // short-circuit evaluation of || operator is used to determine the first property with an existing value
             6 * (this.length || this.width || this.height) * (this.length || this.width || this.height) :
             "Incorrect dimensions - this is not a real cube!";
     }
