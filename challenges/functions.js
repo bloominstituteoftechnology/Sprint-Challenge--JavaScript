@@ -62,7 +62,7 @@ subtract(param1,param2);
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-
+/* nestedFunction can access internal because in order to console log internal it has to reach outside it's own scope in order to complete it's job. */
 
 const external = "I'm outside the function";
 
