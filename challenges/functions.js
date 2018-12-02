@@ -16,7 +16,7 @@ function consume(x,y,cb){
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 const add = function(num1,num2){
-console.log(num1 + num2)
+return (num1 + num2)
 }
 add(param1,param2);
 
