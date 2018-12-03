@@ -25,30 +25,50 @@ const limitFunctionCallCount = (cb, n) => {
   const cbfunction = (...args) => {
     if (count < n) {
       count++;
-      cb(...args);
+      return cb(...args);
     }
-    return null;
+    if (count === n) {
+      return null;
+    }
   };
   return cbfunction;
 };
 
-const cacheFunction = cb => {
-  const cache = {
+/*
+const expensiveFunc = () => {
+  console.log('Expensive Function called');
+  return 'called';
+}
 
-  };
-  const funct = (...args) => {
-    let str = '';
-    for (let i = 0; i < args.length; i++) {
-      str += args[i].tostring();
+const cachedExpensiveCall = cacheFunction(expensiveFunc);
+cachedExpensiveCall(true);
+cachedExpensiveCall(true);
+cachedExpensiveCall(true);
+cachedExpensiveCall(true);
+cachedExpensiveCall(true);
+cachedExpensiveCall(true);
+cachedExpensiveCall(true);
+cachedExpensiveCall(true);
+cachedExpensiveCall('ABC');
+cachedExpensiveCall(true);
+
+This and other tests work as intended, but jest.fn() test does not.
+
+*/
+const cacheFunction = cb => {
+  const cache = {};
+  return (...args) => {
+    const key = JSON.stringify(...args);
+    if (cache[key]) {
+      return cache[key];
     }
-    if (cache.str !== undefined) {
-      return cache.str;
-    }
-    cache.str = cb(...args);
-    cb(...args);
+    const val = cb(...args);
+    cache[key] = val;
+    return val;
   };
-  return funct;
 };
+
+
   // Should return a funciton that invokes `cb`.
   // A cache (object) should be kept in closure scope.
   // The cache should keep track of all arguments have been used to invoke this function.
@@ -70,10 +90,18 @@ const reverseStr = str => {
 };
 
 const checkMatchingLeaves = obj => {
-  const matched = false;
-  const values = Object.values(obj);
-  // return true if every property on `obj` is the same
-  // otherwise return false
+  const leaves = [];
+  const checkLeaves = tree => {
+    Object.values(tree).forEach(value => {
+      if (value === Object(value)) {
+        checkLeaves(value);
+      } else {
+        leaves.push(value);
+      }
+    });
+  };
+  checkLeaves(obj);
+  return leaves.every(x => x === leaves[0]);
 };
 
 const flatten = elements => {

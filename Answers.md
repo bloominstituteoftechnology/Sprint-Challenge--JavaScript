@@ -17,3 +17,10 @@ Arrays are a collection of other types, also possibly other arrays.
          count++;
      }
  }
+ ```
+
+4. Javascript this can have four behaviors.
+   Default Binding - not bound to any particular object or prototype, usually defaulting to window in the browser.
+   Implicit Binding - bound to an object throught dot notation
+   Explicit Binding - Forcing a function call to use a particular object for this binding. (Call,apply,bind)
+   New Binding - When the new operator is called, this is bound the newly created instance.
