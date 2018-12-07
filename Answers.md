@@ -1,1 +1,5 @@
-
+While .forEach() iterates the same method over an each object in an array, it doesn't return a new array like .map() does.
+ A function is a code that can return or log a certain value given parameters. A method is the same, however it is only applicable inside of a class.
+ Closure is the product of nesting a function inside of another function. With it the function that is nested inside of another function can reach into its parent function and access any variables declared there.
+ 1. 'this' is used globally when it is in the global scope, being called to the global object. 2. A function that is called and is left of the dot is 'this'. 3. When a new object is made using a constructor function the 'this' being referred to is that function. 4. When the .apply() and .call() methods are invoked 'this' is implied for those objects. 
+ The super() allows programmers to gain access to the parent class and all of its properties.
