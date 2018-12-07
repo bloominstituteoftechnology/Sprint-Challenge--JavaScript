@@ -40,20 +40,32 @@ let dinosaur3 = {
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(dinosaur1.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(dinosaur3.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(dinosaur2.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(dinosaur1.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+let dinosaur1 = {
+  name: "tyrannosaurus",
+  diet: "carnivorus",
+  weight: "7000kg",
+  length: "12m",
+  period: "Late Cretaeious",
+  roar: "RRSRARAAWERWERSARARARRRR!",
+  speak() {
+    console.log(`${this.roar}`);
+  }
+
+}
+console.log(dinosaur1.roar);
 
 
 // ==== Arrays ====
