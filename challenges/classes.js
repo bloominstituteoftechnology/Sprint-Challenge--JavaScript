@@ -16,6 +16,15 @@ class CubiodMakerClass {
 
 }
 
+// class CubeMaker extends CubiodMakerClass {
+//     constructor(cube){
+//         super(cube);
+//         this.volume = cube.volume;
+//         this.height = cube.height;
+//     }
+    
+// }
+
   const cuboidNew = new CubiodMaker({
     length: 4,
     width: 5,
