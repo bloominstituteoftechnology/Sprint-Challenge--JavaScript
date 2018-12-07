@@ -33,7 +33,7 @@ consume(4,5,(add) => {
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: Simply becuause it is nested within the myFunction(). So it inherits it's attrs. It doesn't have to look outside on global scope for internal.
 
 
 const external = "I'm outside the function";
