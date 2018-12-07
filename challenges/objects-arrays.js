@@ -18,8 +18,24 @@ let dinosaur1 = {
 }
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+let dinosaur2 = {
+  name: "stegosaurus",
+  diet: "herbivorus",
+  weight: "2000kg",
+  length: "9m",
+  period: "Late Jurrasic"
+}
+
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+
+let dinosaur3 = {
+  name: "velociraptor",
+  diet: "carnivorus",
+  weight: "15kg",
+  length: "1.8m",
+  period: "Late Cretaceious"
+}
 
 // Using your dinosaur objects, log answers to these questions:
 
