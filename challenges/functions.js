@@ -1,6 +1,6 @@
 // ==== Callbacks ====  
 
-/* Step 1: Create a higher-order function that accepts a callback
+/* .Step 1: Create a higher-order function that accepts a callback
   * Create a higher-order function named consume that can take 3 parameters.
   * The first two parameters can accept any argument
   * The last parameter accepts a callback 
