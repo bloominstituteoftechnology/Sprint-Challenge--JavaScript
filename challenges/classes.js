@@ -12,6 +12,7 @@ function CuboidMaker(attr) {
           this.width = 5;
           this.height = 5;
       }
+      
   }
   
   CuboidMaker.prototype.volume = function () {
@@ -22,6 +23,26 @@ function CuboidMaker(attr) {
     CuboidMaker.prototype.surfaceArea = function () {
       return 2 * (`${this.length}` * `${this.width}` + `${this.length}` * `${this.height}` + `${this.width} ` *  `${this.height} `);
     }
+
+
+    class CubeMaker extends CuboidMaker {
+        constructor(attr) {
+            super(attr);
+            this.length = 4;
+            this.width = 5;
+            this.height = 5;
+
+        }
+    }
+
+    CubeMaker.prototype.volume = function () {
+        return (`${this.length}` * `${this.width} ` *  ` ${this.height}`)
+    }
+
+    const prism = new CubeMaker ("cube");
+    prism.volume();
+    console.log(prism.volume());
+
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
