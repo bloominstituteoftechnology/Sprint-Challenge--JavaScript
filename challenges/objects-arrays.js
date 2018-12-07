@@ -91,12 +91,25 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
+
 const contactInfo = [];
+for (let i = 0; i < graduates.length; i++) {
+  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
+}
+
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
+
 const uni = [];
+
+for (let i = 0; i < universities.length; i++) {
+  if (universities[i].includes("Uni")) {
+    uni.push(universities[i]);
+  }
+}
+
 console.log(uni);
 
 
@@ -118,7 +131,8 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 /* Request 1: .forEach()
 
-The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
+The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this 
+"Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
 const animalNames = [];
