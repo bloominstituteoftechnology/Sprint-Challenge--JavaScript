@@ -30,13 +30,13 @@ function multiply(x, y, cb) {
     console.log(multiply);
   });
 
-  const greeting = function(first, last,cb) {
-    console.log(`Hello ${first}, ${last} nice to meet you`)
+  const greeting = function(x,y) {
+    console.log(`Hello ${x} ${y}, nice to meet you!`)
 };
 greeting(function(greeting) {
     console.log(greeting)
 });
-consume('Mary','Poppins', greeting)
+consume('Mary','Poppins', greeting);
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */

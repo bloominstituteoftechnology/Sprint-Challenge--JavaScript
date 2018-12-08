@@ -13,9 +13,13 @@ let dinosaur1 = {
   weight: "7000kg",
   length: "12m",
   period: "Late Cretaeious",
-
+  speak() {
+    console.log(`${this.roar}`);
+  }
 
 }
+
+
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 let dinosaur2 = {
@@ -53,18 +57,7 @@ console.log(dinosaur1.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-let dinosaur1 = {
-  name: "tyrannosaurus",
-  diet: "carnivorus",
-  weight: "7000kg",
-  length: "12m",
-  period: "Late Cretaeious",
-  roar: "RRSRARAAWERWERSARARARRRR!",
-  speak() {
-    console.log(`${this.roar}`);
-  }
 
-}
 console.log(dinosaur1.roar);
 
 
@@ -109,79 +102,78 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const school = [];
 for (let i = 0; i < graduates.length; i++) {
+  if ( graduates[i].university.includes("Uni"))  {
+    school.push(graduates[i].university);
+    
+  }}
+  console.log(school)
+
+  // ==== ADVANCED Array Methods ====
+
+  // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
+
+
+  zooAnimals = [{ "animal_name": "Jackal, asiatic", "population": 5, "scientific_name": "Canis aureus", "state": "Kentucky" },
+  { "animal_name": "Screamer, southern", "population": 1, "scientific_name": "Chauna torquata", "state": "Alabama" },
+  { "animal_name": "White spoonbill", "population": 8, "scientific_name": "Platalea leucordia", "state": "Georgia" },
+  { "animal_name": "White-cheeked pintail", "population": 1, "scientific_name": "Anas bahamensis", "state": "Oregon" },
+  { "animal_name": "Black-backed jackal", "population": 2, "scientific_name": "Canis mesomelas", "state": "Washington" },
+  { "animal_name": "Brolga crane", "population": 9, "scientific_name": "Grus rubicundus", "state": "New Mexico" },
+  { "animal_name": "Common melba finch", "population": 5, "scientific_name": "Pytilia melba", "state": "Pennsylvania" },
+  { "animal_name": "Pampa gray fox", "population": 10, "scientific_name": "Pseudalopex gymnocercus", "state": "Connecticut" },
+  { "animal_name": "Hawk-eagle, crowned", "population": 10, "scientific_name": "Spizaetus coronatus", "state": "Florida" },
+  { "animal_name": "Australian pelican", "population": 5, "scientific_name": "Pelecanus conspicillatus", "state": "West Virginia" }];
+
+  /* Request 1: .forEach()
   
-    school.push(graduates[i].university.includes( "Uni"));
-  }
+  The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
+  
+  */
+  const animalNames = [];
+  let tittle = zooAnimals.forEach(function (i) {
+    animalNames.push(i.animal_name + " :" + i.scientific_name);
+  });
 
 
-console.log(school);
+  console.log(animalNames);
 
-// ==== ADVANCED Array Methods ====
+  /* Request 2: .map()    
+  
+  The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
+  
+  */
+  const lowerCase = zooAnimals.map((animals) => {
+    return animals.animal_name.toLowerCase();
+  });
 
-// Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
-
-
-zooAnimals = [{ "animal_name": "Jackal, asiatic", "population": 5, "scientific_name": "Canis aureus", "state": "Kentucky" },
-{ "animal_name": "Screamer, southern", "population": 1, "scientific_name": "Chauna torquata", "state": "Alabama" },
-{ "animal_name": "White spoonbill", "population": 8, "scientific_name": "Platalea leucordia", "state": "Georgia" },
-{ "animal_name": "White-cheeked pintail", "population": 1, "scientific_name": "Anas bahamensis", "state": "Oregon" },
-{ "animal_name": "Black-backed jackal", "population": 2, "scientific_name": "Canis mesomelas", "state": "Washington" },
-{ "animal_name": "Brolga crane", "population": 9, "scientific_name": "Grus rubicundus", "state": "New Mexico" },
-{ "animal_name": "Common melba finch", "population": 5, "scientific_name": "Pytilia melba", "state": "Pennsylvania" },
-{ "animal_name": "Pampa gray fox", "population": 10, "scientific_name": "Pseudalopex gymnocercus", "state": "Connecticut" },
-{ "animal_name": "Hawk-eagle, crowned", "population": 10, "scientific_name": "Spizaetus coronatus", "state": "Florida" },
-{ "animal_name": "Australian pelican", "population": 5, "scientific_name": "Pelecanus conspicillatus", "state": "West Virginia" }];
-
-/* Request 1: .forEach()
-
-The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
-
-*/
-const animalNames = [];
-let tittle = zooAnimals.forEach(function (i) {
-  animalNames.push(i.animal_name + " :" + i.scientific_name);
-});
+  console.log(lowerCase);
 
 
-console.log(animalNames);
-
-/* Request 2: .map()    
-
-The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
-
-*/
-const lowerCase = zooAnimals.map((animals) => {
-  return animals.animal_name.toLowerCase();
-});
-
-console.log(lowerCase);
+  /* Request 3: .filter() 
+  
+  The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
+  
+  */
+  const largerPopulation = zooAnimals.filter((pop) => {
+    return pop.population < 5;
+  })
 
 
-/* Request 3: .filter() 
-
-The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
-
-*/
-const largerPopulation = zooAnimals.filter((pop) => {
-  return pop.population < 5;
-})
+  console.log(largerPopulation);
 
 
-console.log(largerPopulation);
+  /* Request 4: .reduce() 
+  
+  The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
+  
+  */
 
+  const populationTotal = zooAnimals.reduce((popTotal, sum) => {
+    return popTotal + sum.population;
 
-/* Request 4: .reduce() 
+  }, 0);
 
-The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
-
-*/
-
-const populationTotal = zooAnimals.reduce((popTotal, sum) => {
-  return popTotal + sum.population;
- 
- }, 0);
- 
- console.log(populationTotal);
+  console.log(populationTotal);
 
 
 /* 
