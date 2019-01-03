@@ -10,7 +10,6 @@ function consume(param1, param2, cb) {
   return cb(param1, param2);
 }
 
-consume();
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -18,24 +17,29 @@ consume();
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
  function add(x, y, consume){
-    consume(x + y)
-    return consume;
+    return x + y;
+   
  }
 
  function multiply(x, y, consume){
-  consume(x * y)
-  return consume;
+  return x * y;
  }
 
- function greeting(x, y, comsume){
-  return consume(`Hello ${x} ${y}, nice to meet you!`)
+ function greeting(x, y, consume){
+  return `Hello ${x} ${y}, nice to meet you!`;
  }
 
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-consume(2,2,add); // 4
-consume(10,16,multiply); // 160
-consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add);
+console.log(consume(2,2,add));// 4
+
+consume(10,16,multiply); 
+console.log(consume(10,16,multiply));// 160
+
+consume("Mary","Poppins", greeting); 
+console.log(consume("Mary","Poppins", greeting));// Hello Mary Poppins, nice to meet you!
+
 
 
 // ==== Closures ==== 
