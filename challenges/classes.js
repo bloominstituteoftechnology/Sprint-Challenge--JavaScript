@@ -2,7 +2,6 @@
 
 // class CuboidMaker {
 //   constructor(measurement){
-//     // super(measurement)
 //     this.length = measurement.length;
 //     this.width = measurement.width;
 //     this.height = measurement.height;
