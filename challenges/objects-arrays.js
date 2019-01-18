@@ -60,20 +60,20 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.*/
-let univeristies = [];
-for (i=0; i<graduates.length; i++){
-    univeristies.push(graduates[i].university);
-}
-for (i=0; i<univeristies.length; i++){
-    console.log(univeristies[i]);
-}
-/* you have the new array created, sort the universities alphabetically and log the result. */
 let universities = [];
-for(i=0; ui < universities.length; i++){
+for (i=0; i< graduates.length; i++){
     universities.push(graduates[i].university);
 }
-universities.sort;
-console.log(universities[i]);
+for (i=0; i< universities.length; i++){
+    console.log(universities[i]);
+}
+/* you have the new array created, sort the universities alphabetically and log the result. */
+let newUniversities = [];
+for(i=0; i < newUniversities.length; i++){
+    newUniversities.push(graduates[i].newUniversity);
+}
+newUniversities.sort;
+console.log(newUniversities[i]);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student.*/
 let contactInfo = [];
@@ -86,12 +86,12 @@ console.log(contactInfo);
 /*The resulting contact information should have a space between the first name and the email information like this:
 Name email@example.com
 Log the result of your new array. */
-let contactInfo = [];
+let contactNewInfo = [];
 for (i=0; i<graduates.length; i++){
     contactInfo.push(graduates[i].first_name + ' ' + graduates[i].email);
 }
 
-console.log(contactInfo);
+console.log(contactNewInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];//missing something

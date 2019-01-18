@@ -7,7 +7,7 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 function consume(x,y,cb){
-  return(x,y);
+  console.log(cb(x,y));
 };
 
 /* Step 2: Create several functions to callback with consume();
@@ -19,25 +19,33 @@ function add(x,y){
   return x + y;
 }
 
-let multiply = funtion(x,y) {
+let multiply = function(x,y) {
   return x*y;
 }
- function greeting(x,y) {
-   return 'Hello first-name last-name, nice to meet you!'
- }
+
+function greeting(x,y) {
+  return ('Hello'+ ' '+ x + ' ' + y + ' ' + 'nice to meet you!')
+}
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-//consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2,2,add)); // 4
+console.log(consume(10,16,multiply)); // 160
+console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ====
 // Question 1: Explain in your own words why the example below is a closure.
-you can get outside scope from inside scope
-// Explanation:
+// you can get outside scope from inside scope
+
+// // =====Explanation:====================================================
+//  because the variable internal is within the myFunction function and   ||
+//  since the variable external is global it can be accessed even outside ||
+// ========================================================================
 
 // Question 2: Given the example below, what scope is the external variable in?
-global
+
+// =====Answer=====
+//  global        ||
+//=================
 let external = "I'm outside!";
 
 function myFunction() {
