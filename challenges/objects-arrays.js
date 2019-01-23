@@ -68,12 +68,14 @@ for (i=0; i< universities.length; i++){
     console.log(universities[i]);
 }
 /* you have the new array created, sort the universities alphabetically and log the result. */
-let newUniversities = [];
-for(i=0; i < newUniversities.length; i++){
-    newUniversities.push(graduates[i].newUniversity);
-}
-newUniversities.sort;
-console.log(newUniversities[i]);
+
+const newUniversities = universities.sort(function(a,b){
+    if (a<b) return -1;
+    else if (a>b) return 1;
+    return 0;
+})
+console.log('newUniversities!!!', newUniversities);
+
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student.*/
 let contactInfo = [];
