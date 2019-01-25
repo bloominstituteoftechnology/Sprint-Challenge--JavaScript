@@ -38,12 +38,25 @@ Edit this document to include your answers after each question. Make sure to lea
 
 5. Why do we need super() in an extended class?
 
-### Git Set up
+## Project Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-* [ ] You are now ready to build this project with your preferred IDE
+Follow these steps to set up and work on your project:
+
+- [ ] Create a forked copy of this project.
+- [ ] Add PM as collaborator on Github.
+- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+- [ ] You are now ready to build this project with your preferred IDE
+- [ ] Implement the project on your Branch, committing changes regularly.
+- [ ] Push commits: git push origin `<firstName-lastName>`.
+
+Follow these steps for completing your project:
+
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [ ] Add your Project Manager as a Reviewer on the Pull-request
+- [ ] PM then will count the HW as done by  merging the branch back into master.
+
 
 ## Minimum Viable Product
 
