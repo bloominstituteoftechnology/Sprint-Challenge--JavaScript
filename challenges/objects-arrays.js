@@ -100,10 +100,10 @@ const uni = [];//missing something
 
 for (i=0; i<graduates.length; i++){
     if (graduates[i].university.includes('Uni')) {
-        uni.push(graduates[i]);
+        uni.push(graduates[i].university);
     }
 }
-console.log(uni);
+console.log('UNI!!!', uni);
 
 
 // ==== Array Methods ====
