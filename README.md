@@ -30,6 +30,10 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+'forEach' executes a provided function once for each array element.
+'map' creates a new array with the results of calling a provided function on every element in the calling array.
+
+
 2. What is the difference between a function and a method?
 
 3. What is closure?
