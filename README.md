@@ -36,11 +36,24 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. What is the difference between a function and a method?
 
+A function explicitly passes all the data passed to it.
+A method is implicitly passed on the object which it was called.
+
 3. What is closure?
+
+A closure is the combination of a function and the lexical environment within which that function was declared.
 
 4. Describe the four rules of the 'this' keyword.
 
+
+1. Window/Global Object Binding - In the gobal scope "this" will be the window/console object.
+2. Implicit Binding - When a function is called using a dot(.) the object before dot is "This".
+3. New Binding -  If a constructor function is used "This" refers to specific instance of created object that it returns.
+4. Explicit Binding - If javascript call \ method used then "This" is explicitly defined.
+
 5. Why do we need super() in an extended class?
+
+super is needed to tell a parent’s constructor to be concerned with the child’s attributes and vis versa
 
 ### Git Set up
 
