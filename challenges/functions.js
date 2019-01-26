@@ -6,14 +6,11 @@
   * The last parameter accepts a callback
   * In the body of the function return the callback with the two parameters that you created
 */
-
-function consume(a, b, fn){
-  let a = "Words"
+let a = "Words"
   let b = "Stuff"
-  return("Say " + a + " and " + b);
-  consume(a, b, function(consume) {
-    console.log(consume);
-  });
+function consume(a, b, callback){
+
+  callback("Say " + a + " and " + b);
 }
 
 /* Step 2: Create several functions to callback with consume();
@@ -32,7 +29,7 @@ function consume(a, b, fn){
 // ==== Closures ====
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation:
+// Explanation: because nestedFunction is called in myFunction
 
 
 const external = "I'm outside the function";
