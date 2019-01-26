@@ -84,6 +84,7 @@ const universities = [];
   for (i=0; i < graduates.length; i++) {
     universities.push(graduates[i]["university"])
   }
+
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -161,6 +162,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 const largerPopulation = zooAnimals.filter(function(pop){ 
   return pop.population < 5
 })
+
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
