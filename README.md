@@ -30,11 +30,19 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+the forEach() method does actually return anything undefined. It simply calls a provided function on each element in your array. The difference is that map() utilizes return values and actually returns a new Array of the same size
+
 2. What is the difference between a function and a method?
+
+A function is something that takes a bunch of inputs and returns one or more values. A method is similar, but is internal to part of a class
 
 3. What is closure?
 
+Is where an inner function has access to the outer (enclosing) functions variables. 
+
 4. Describe the four rules of the 'this' keyword.
+
+
 
 5. Why do we need super() in an extended class?
 
@@ -42,10 +50,10 @@ Edit this document to include your answers after each question. Make sure to lea
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [X ] Create a forked copy of this project.
+- [X ] Add PM as collaborator on Github.
+- [ X] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [ X] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
 - [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
 - [ ] You are now ready to build this project with your preferred IDE
 - [ ] Implement the project on your Branch, committing changes regularly.
