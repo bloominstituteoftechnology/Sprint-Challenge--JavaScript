@@ -13,14 +13,21 @@ class CuboidMaker {
     this.height = attributes.height
     
   }
-}
-  CuboidMaker.prototype.volume = function volume() {
+
+  volume() { 
     return (this.length * this.width * this.height)
+      
   }
+
+
+}
+  //CuboidMaker.prototype.volume = function volume() {
+  //  return (this.length * this.width * this.height)
+  //}
    
-  CuboidMaker.prototype.surfaceArea = function surfaceArea() {
-    return 2 * (this.length * this.width )+ (this.length * this.height) + (this.width * this.height)
-  }
+ // CuboidMaker.prototype.surfaceArea = function surfaceArea() {
+ //   return 2 * (this.length * this.width )+ (this.length * this.height) + (this.width * this.height)
+ // }
   
 
   const cuboid = new CuboidMaker ( {
