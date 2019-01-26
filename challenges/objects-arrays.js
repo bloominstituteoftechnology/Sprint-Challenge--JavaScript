@@ -60,15 +60,16 @@ console.log(tyrannosaurus.weight)
 
 // What was the diet of a velociraptor?
 console.log(dinosaurs[2].diet); 
-
+console.log(velociraptor.diet)
 
 // How long was a stegosaurus?
 console.log(dinosaurs[1].weight);
+console.log(stegosaurus.length);
 
 
 // What time period did tyrannosaurus live in?
 console.log(dinosaurs[0].period);
-
+console.log(tyrannosaurus.period); 
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
