@@ -23,8 +23,8 @@ class CuboidMaker {
   };
 
   class CubeMaker extends CuboidMaker {
-      constructor (dim) {
-          super(dim);
+      constructor (dimensions) {
+          super(dimensions);
       }
       cubeVolume() {
           return (this.height * this.height * this.height)

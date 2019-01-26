@@ -14,7 +14,7 @@ const tyrannosaurus = {
   "length": "12m",
   "period":  "Late Cretaceious",
   roar: function() {
-     return "RAWERSRARARWERSARARARRRR!";
+     return "Roarrrrrr!";
   }
 };
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -26,7 +26,7 @@ const stegosaurus = {
   "length": "9m",
   "period":  "Late Jurassic",
   speak: function() {
-     return "RAWERSRARARWERSARARARRRR!";
+     return "Gobble Gobble!";
   }
 };
 
@@ -102,7 +102,6 @@ for (let i=0; i < graduates.length; i++) {
     uni.push(graduates[i].university)
   }
 }
-
 console.log(uni);
 
 
@@ -139,7 +138,6 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 
 let lowerCase = zooAnimals.map(x => x.animal_name.toLowerCase())
-
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -150,7 +148,6 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 
 let largerPopulation = zooAnimals.filter(x => x.population < 5);
-
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -161,7 +158,6 @@ The zoos need to know their total animal population across the United States.  F
 
 
 let populationTotal = zooAnimals.reduce((a,b) => a + b.population, 0)
-
 console.log(populationTotal);
 
 

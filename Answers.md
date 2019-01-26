@@ -1,5 +1,5 @@
 1. Describe the biggest difference between `.forEach` & `.map`.
-Map creates a new array. forEach doesnt
+Map creates a new array. forEach is an iterator
 
 
 
