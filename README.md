@@ -58,8 +58,10 @@ Edit this document to include your answers after each question. Make sure to lea
     New Binding — constructed new object and set the new object as the this that will be called.
 
 5. Why do we need super() in an extended class?
-
     A: super is used to get access and call functions on a parent object. when constructing a new object use super to get also allows access to the values/attributes to the child from the parent without duplicating.
+
+
+
 ## Project Set up
 
 Follow these steps to set up and work on your project:
