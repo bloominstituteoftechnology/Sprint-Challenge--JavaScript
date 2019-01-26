@@ -12,7 +12,7 @@
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
-const try = {
+const ty = {
   name: 'tyrannosaurus', 
   diet: 'carnivorius',
   weight: '7000kg',
@@ -21,7 +21,7 @@ const try = {
 
 }
 
-const ste = {
+const st = {
   name: 'stegosaurus', 
   diet: 'herbivorous',
   weight: '2000kg',
@@ -30,7 +30,7 @@ const ste = {
 
 }
 
-const vel = {
+const ve = {
   name: 'velociraptor', 
   diet: 'carnivorius',
   weight: '15kg',
@@ -42,16 +42,16 @@ const vel = {
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(ty.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(ve.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(st.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(ty.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
