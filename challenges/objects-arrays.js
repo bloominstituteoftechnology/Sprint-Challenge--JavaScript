@@ -88,6 +88,10 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+for (let i=0; i < graduates.length; i++){
+  universities.push(graduates[i].university);
+  universities.sort();
+}
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -97,6 +101,9 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+for (let i = 0; i < graduates.length; i++) {
+  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
+}
 console.log(contactInfo);
 
 
@@ -127,6 +134,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+zooAnimals.forEach(animal => animalNames.push(`Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}.`));
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -136,6 +144,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+zooAnimals.map(animal => lowerCase.push((animal.animal_name).toLowerCase()));
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -144,6 +153,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const largerPopulation = [];
+largerPopulation.push(zooAnimals.filter(animal => animal.population < 5));
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -152,7 +162,11 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = 0;
-console.log(populationTotal);
+const populationInfo = []
+populationInfo.push(zooAnimals.map(item => item.population).reduce((total, item) => total + item));
+
+// you cannot use Population Total with array functions as it is not an array some issue here? I have used another object instead 
+console.log(populationInfo.toString());
 
 
 /* 
