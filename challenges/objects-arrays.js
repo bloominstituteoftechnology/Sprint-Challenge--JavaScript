@@ -12,6 +12,15 @@
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
+const try = {
+  name: 'tyrannosaurus', 
+  diet: 'carnivorius',
+  weight: '7000kg',
+  length:  '12m', 
+  period: 'Late Cretaceious'
+
+}
+
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
