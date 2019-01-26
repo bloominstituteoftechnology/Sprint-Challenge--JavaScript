@@ -1,4 +1,4 @@
-# Sprint Challenge: JavaScript Fundamentals--Kristea Gamel
+# Sprint Challenge: JavaScript Fundamentals--Kristea Gamel.
 
 This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a survey of problems. This Sprint explored JavaScript Fundamentals. During this Sprint, you studied variables, functions, object literals, arrays, this keyword, prototypes, and class syntax. In your challenge this week, you will demonstrate proficiency by completing a survey of JavaScript problems.
 
@@ -27,6 +27,7 @@ In meeting the minimum viable product (MVP) specifications listed below, you sho
 Demonstrate your understanding of this week's concepts by answering the following free-form questions.
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
+
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
@@ -59,7 +60,6 @@ Edit this document to include your answers after each question. Make sure to lea
 5. Why do we need super() in an extended class?
 
     A: super is used to get access and call functions on a parent object. when constructing a new object use super to get also allows access to the values/attributes to the child from the parent without duplicating.
-
 ## Project Set up
 
 Follow these steps to set up and work on your project:
