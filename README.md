@@ -1,4 +1,4 @@
-# Sprint Challenge: JavaScript Fundamentals
+# Sprint Challenge: JavaScript Fundamentals--Kristea Gamel.
 
 This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a survey of problems. This Sprint explored JavaScript Fundamentals. During this Sprint, you studied variables, functions, object literals, arrays, this keyword, prototypes, and class syntax. In your challenge this week, you will demonstrate proficiency by completing a survey of JavaScript problems.
 
@@ -28,15 +28,39 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
+
 1. Describe the biggest difference between `.forEach` & `.map`.
+
+    A: The forEach() method doesn't actually return anything (undefined). It simply calls a provided function on each element in your array. This callback is allowed to mutate the calling array.  Map() utilizes return values and actually returns a new Array of the same size.
 
 2. What is the difference between a function and a method?
 
-3. What is closure?
+    A: A function is a piece of code that is called by name. It can be passed data to operate on (i.e. the parameters) and can optionally return data (the return value). All data that is passed to    a function is explicitly passed.
+
+    A method is a piece of code that is called by a name that is associated with an object
+
+
+3. What is closure? 
+
+    A: A closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function’s variables — a scope chain.
+
+    The closure has three scope chains:
+
+    it has access to its own scope — variables defined between its curly brackets
+    it has access to the outer function’s variables
+    it has access to the global variables
 
 4. Describe the four rules of the 'this' keyword.
 
+    A: Default Binding— window object
+    Implicit Binding— to the left of the dot
+    explicit binding— force this by .bind and use call/apply to execute. declare this and use later
+    New Binding — constructed new object and set the new object as the this that will be called.
+
 5. Why do we need super() in an extended class?
+    A: super is used to get access and call functions on a parent object. when constructing a new object use super to get also allows access to the values/attributes to the child from the parent without duplicating.
+
+
 
 ## Project Set up
 
