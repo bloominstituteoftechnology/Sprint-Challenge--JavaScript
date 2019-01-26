@@ -122,9 +122,10 @@ The individual values in the array should look like this "Name: Jackal, asiatic,
 
 */
 const animalNames = [];
-zooAnimals.forEach(function(ohsonowwecanuseforeacharraymethod) {
-  animalNames.push({Name: ohsonowwecanuseforeacharraymethod.animal_name, Scientific: ohsonowwecanuseforeacharraymethod.scientific_name});
-})
+// zooAnimals.forEach(function(ohsonowwecanuseforeacharraymethod) {
+//   animalNames.push({Name: ohsonowwecanuseforeacharraymethod.animal_name, Scientific: ohsonowwecanuseforeacharraymethod.scientific_name});
+// });
+zooAnimals.forEach(thisismyfirstarrowfunction => animalNames.push({Name: thisismyfirstarrowfunction.animal_name, scientific: thisismyfirstarrowfunction.scientific_name}));
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -134,10 +135,10 @@ Create a new array named lowerCase and map over each name to convert them all to
 Log the resut.
 
 */
-
-const lowerCase = zooAnimals.map(function(checkoutthehookwhilemyDJrevolvesit) {
-  return checkoutthehookwhilemyDJrevolvesit.animal_name.toLowerCase();
-});
+// const lowerCase = zooAnimals.map(function(checkoutthehookwhilemyDJrevolvesit) {
+//   return checkoutthehookwhilemyDJrevolvesit.animal_name.toLowerCase();
+// });
+const lowerCase = zooAnimals.map(thisismysecondarrowfunction => thisismysecondarrowfunction.animal_name.toLowerCase());
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -146,9 +147,10 @@ The zoos are concenred about animals with a lower population count.
 Find out which animals have a population less than 5.
 
 */
-const largerPopulation = zooAnimals.filter(function(anythinglessthanthebestisafelony) {
-  if(anythinglessthanthebestisafelony.population < 5) return anythinglessthanthebestisafelony;
-});
+// const largerPopulation = zooAnimals.filter(function(anythinglessthanthebestisafelony) {
+//   if(anythinglessthanthebestisafelony.population < 5) return anythinglessthanthebestisafelony;
+// });
+const largerPopulation = zooAnimals.filter(thisismythirdarrowfunction => thisismythirdarrowfunction.population < 5);
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -157,9 +159,10 @@ The zoos need to know their total animal population across the United States.
 Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = zooAnimals.reduce(function(rollininmyfivepointoh, withmyragtopdownsomyhaircanblow) {
-  return rollininmyfivepointoh + withmyragtopdownsomyhaircanblow.population;
-}, 0);
+// const populationTotal = zooAnimals.reduce(function(rollininmyfivepointoh, withmyragtopdownsomyhaircanblow) {
+//   return rollininmyfivepointoh + withmyragtopdownsomyhaircanblow.population;
+// }, 0);
+const populationTotal = zooAnimals.reduce((thisismyfourtharrowfunction, thisisnotmyfiftharrowfunction) => thisismyfourtharrowfunction + thisisnotmyfiftharrowfunction.population, 0);
 console.log(populationTotal);
 
 
