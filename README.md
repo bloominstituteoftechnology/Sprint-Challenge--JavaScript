@@ -29,15 +29,20 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
-
+foreach is an iterator that goes overv the existing array
+map is an iterator creates a new array
 2. What is the difference between a function and a method?
-
+a function is a variable that can be called upon on its own and be used in other variables.
+a method is a function whose scope is limited to the variable in which it is located
 3. What is closure?
-
+Closure is when nested functions can call on variables of the variable that they are located.
 4. Describe the four rules of the 'this' keyword.
-
+    (1) when used globally it applies to the window
+    (2) when preceded by a dot its implicityly bound to the function in which it is located
+    (3) wwhen used in class functions it applies to the specific instance in which it was used
+    (4) if call or apply is ued than this is explicitly bound
 5. Why do we need super() in an extended class?
-
+super gives us access to the variables of the parent class
 ## Project Set up
 
 Follow these steps to set up and work on your project:
