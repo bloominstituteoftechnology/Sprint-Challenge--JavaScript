@@ -35,8 +35,9 @@ Edit this document to include your answers after each question. Make sure to lea
 
 ANSWER: 
 
-.forEach - runs a specific function once "for Each" array element, mutating the original array
-.map - creates a NEW array with the results of the function provided on each element of the array
+- .forEach - runs a specific function once "for Each" array element, mutating the original array
+
+- .map - creates a NEW array with the results of the function provided on each element of the array
 
 
 
