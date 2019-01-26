@@ -1,35 +1,73 @@
 // ==== Objects ====
-
+class Dinosaur {
+  constructor(prop) {
+    this.name = prop.name,
+    this.diet = prop.diet,
+    this.weight = prop.weight,
+    this.length = prop.length,
+    this.period = prop.period,
+    this.roar = function() {
+      return "RAWERSRARARWERSARARARRRR!"
+    }
+  }
+}
 /* 
   Given the following information about dinosaurs, create 3 objects: 
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
 
+
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
+let tyrannosaurus = new Dinosaur ({
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: "7000kg",
+  length: "12m",
+  period: "Late Cretaceious",
+ });
+
+ function roar(dinosaur) {
+   return `${dinosaur.name} RAWERSRARARWERSARARARRRR!`;
+ }
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+let stegosaurus = new Dinosaur ({
+  name: "stegosaurus",
+  diet: "herbivorous",
+  weight: "2000kg",
+  length: "9m",
+  period: "Late Jurassic"
+ })
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+let velociraptor = new Dinosaur ({
+  name: "velociraptor",
+  diet: "carnivorous",
+  weight: "15kg",
+  length: "1.8m",
+  period: "Late Cretaceious"
+ })
 
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(velociraptor.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
-
+// One way
+console.log(roar(tyrannosaurus));
+console.log(tyrannosaurus.roar());
 
 // ==== Arrays ====
 
@@ -50,6 +88,10 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+for (let i=0; i < graduates.length; i++){
+  universities.push(graduates[i].university);
+  universities.sort();
+}
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -59,6 +101,9 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+for (let i = 0; i < graduates.length; i++) {
+  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
+}
 console.log(contactInfo);
 
 
@@ -89,6 +134,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+zooAnimals.forEach(animal => animalNames.push(`Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}.`));
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -98,6 +144,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+zooAnimals.map(animal => lowerCase.push((animal.animal_name).toLowerCase()));
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -106,6 +153,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const largerPopulation = [];
+largerPopulation.push(zooAnimals.filter(animal => animal.population < 5));
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -114,7 +162,11 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = 0;
-console.log(populationTotal);
+const populationInfo = []
+populationInfo.push(zooAnimals.map(item => item.population).reduce((total, item) => total + item));
+
+// you cannot use Population Total with array functions as it is not an array some issue here? I have used another object instead 
+console.log(populationInfo.toString());
 
 
 /* 
