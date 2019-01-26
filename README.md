@@ -30,13 +30,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+	.forEach just takes inputs and inserts them back into the original array while .map creates a whole new array
+
 2. What is the difference between a function and a method?
+
+	A function is called by name while a method is implicitly passed onto the object
 
 3. What is closure?
 
+	A closure is just simply a function that uses another function as a parameter
+
 4. Describe the four rules of the 'this' keyword.
 
+	1. this in the default definition refers to the global object 'object window'
+	2. implicit binding means it is using dot notation and refers to whatever is left of the dot
+	3. explicit binding means explicity passing this to a call() or apply()
+	4. new binding means that an object is created and this refers to attributes
+
 5. Why do we need super() in an extended class?
+
+	We need a super to pass on the the properties from the parent
 
 ## Project Set up
 
