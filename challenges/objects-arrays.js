@@ -93,6 +93,11 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+   for (i=0; i < graduates.length; i++) {
+    contactInfo.push(graduates[i]["first_name"]);
+    contactInfo.push(graduates[i]["email"]);
+  }
+
 console.log(contactInfo);
 
 
