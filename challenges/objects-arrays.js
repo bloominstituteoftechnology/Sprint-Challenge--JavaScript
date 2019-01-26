@@ -21,6 +21,24 @@ const try = {
 
 }
 
+const ste = {
+  name: 'stegosaurus', 
+  diet: 'herbivorous',
+  weight: '2000kg',
+  length:  '9m', 
+  period: 'Late Jurassic'
+
+}
+
+const vel = {
+  name: 'velociraptor', 
+  diet: 'carnivorius',
+  weight: '15kg',
+  length:  '1.8m', 
+  period: 'Late Cretaceious'
+
+}
+
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
