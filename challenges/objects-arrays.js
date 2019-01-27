@@ -161,11 +161,21 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
+
 const animalNames = [];
-zooAnimals.forEach(function (array) {
+
+//ES5 function
+// zooAnimals.forEach(function (array) {
+//   let name = `Name: ${array.animal_name}, Scientific: ${array.scientific_name}`
+//   animalNames.push(name)
+// });
+
+//arrow function
+zooAnimals.forEach((array) => {
   let name = `Name: ${array.animal_name}, Scientific: ${array.scientific_name}`
   animalNames.push(name)
 });
+
 console.log(animalNames);
 
 
@@ -181,10 +191,19 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
-zooAnimals.map(function(array) {
+
+//ES5function
+// zooAnimals.map(function(array) {
+//   let name = `${array.animal_name}`
+//   lowerCase.push(name.toLowerCase());
+// });
+
+//arrow function
+zooAnimals.map((array) => {
   let name = `${array.animal_name}`
   lowerCase.push(name.toLowerCase());
 });
+
 console.log(lowerCase); 
 
 
@@ -200,10 +219,16 @@ The zoos are concenred about animals with a lower population count. Find out whi
 */
 let largerPopulation = [];
 
-let lowPop = function (animal) {
-  return animal.population < 5;
-};
+//ES5 function
+// let lowPop = function (animal) {
+//   return animal.population < 5;
+// };
+
+//arrowfunction
+let lowPop =(animal) => animal.population < 5;
+
 largerPopulation = zooAnimals.filter(lowPop)
+
 console.log(largerPopulation);
 
 
@@ -215,7 +240,15 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 let populationTotal = [];
-zooAnimals.forEach(function (total) {
+
+//ES5 function
+// zooAnimals.forEach(function (total) {
+//   let totalPop = total.population;
+//   populationTotal.push(totalPop)
+// });
+
+//arrow function
+zooAnimals.forEach((total) => {
   let totalPop = total.population;
   populationTotal.push(totalPop)
 });
