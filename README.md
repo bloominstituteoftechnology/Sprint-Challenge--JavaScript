@@ -30,7 +30,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`. Map returns a new array, forEach does not.
 
-2. What is the difference between a function and a method?
+2. What is the difference between a function and a method? functions have return type but method has no return type
 
 3. What is closure?  A closure is a chain of scope, allowing a function to have access to variables
     declared outside of it's scope.
