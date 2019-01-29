@@ -9,7 +9,7 @@
 const dinosaurs = [{"name": "tyrannosaurus", "diet": "carnivorous", "weight": "7000kg", "length": "12m", "period": "Late Cretaceious"}, //?
                   {"name": "stegosaurus", "diet":"herbivorous", "weight":"2000kg", "length":"9m", "period":"Late Jurassic"}, //?
                   {"name": "velociraptor", "diet":"carnivorous", "weight":"15kg", "length": "1.8m", "period":"Late Cretaceious"}]; //?
-// example
+                  
 function Dinosaur(object){
   this.name = object.name,
   this.diet = object.diet,
@@ -155,7 +155,7 @@ const animalNames = [];
 
 zooAnimals.forEach(animal => animalNames.push(`Name: ${animal.animal_name} Scientific: ${animal.scientific_name}`)); //?
 
-console.log(animalNames);
+return animalNames//?
 
 /* Request 2: .map()    
 
@@ -167,7 +167,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 const lowerCase = zooAnimals.map(animal => animal.animal_name.toLowerCase()); //?
 
-console.log(lowerCase); 
+console.log(lowerCase); //?
 
 /* Request 3: .filter() 
 
@@ -192,6 +192,7 @@ console.log(populationTotal);//?
 /* 
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
+
 
 */
 
