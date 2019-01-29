@@ -6,10 +6,10 @@
   object name, diet, weight, length, period
 */
 
-const dinosaurs = [{"name": "tyrannosaurus", "diet": "carnivorous", "weight": "7000kg", "length": "12m", "period": "Late Cretaceious"}, //?
-                  {"name": "stegosaurus", "diet":"herbivorous", "weight":"2000kg", "length":"9m", "period":"Late Jurassic"}, //?
-                  {"name": "velociraptor", "diet":"carnivorous", "weight":"15kg", "length": "1.8m", "period":"Late Cretaceious"}]; //?
-                  
+// const dinosaurs = [{"name": "tyrannosaurus", "diet": "carnivorous", "weight": "7000kg", "length": "12m", "period": "Late Cretaceious"}, //?
+//                   {"name": "stegosaurus", "diet":"herbivorous", "weight":"2000kg", "length":"9m", "period":"Late Jurassic"}, //?
+//                   {"name": "velociraptor", "diet":"carnivorous", "weight":"15kg", "length": "1.8m", "period":"Late Cretaceious"}]; //?
+
 function Dinosaur(object){
   this.name = object.name,
   this.diet = object.diet,
@@ -56,11 +56,11 @@ const velociraptor = new Dinosaur({
 // How much did tyrannosaurus weigh?
 
 console.log(dinosaurs[0].weight); 
-console.log(tyrannosaurus.weight)
+console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
 console.log(dinosaurs[2].diet); 
-console.log(velociraptor.diet)
+console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
 console.log(dinosaurs[1].weight);
@@ -99,9 +99,10 @@ const universities = [];
 
 for (let i = 0; i < graduates.length; i++) {
   universities.push(graduates[i].university);
+  universities.sort(graduates[i].university);
 }
 
-console.log(universities)
+console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
