@@ -30,13 +30,28 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.forEach and .map are pretty similar except for .map actually returns an array. 
+
 2. What is the difference between a function and a method?
+
+Functions can be passed data(paramenters) to operate on, and return data(return value).
+Methods can only operate on the data within the class. 
 
 3. What is closure?
 
+The combination of a bundled function, in which access is given to another function's scope from an inner function. 
+
 4. Describe the four rules of the 'this' keyword.
 
+-Is the function called by `new`
+-Is the function called by `call()` , `apply()` , or `bind()`
+-Is the function called as a method
+-Is the function called in the global scope
+
 5. Why do we need super() in an extended class?
+
+If a constructor is present, `super()` must be called. 
+`super()` must be called in order to initialize `this`.
 
 ## Project Set up
 
@@ -85,3 +100,7 @@ In your solutions, it is essential that you follow best practices and produce cl
 ## Stretch Problems
 
 There are a few stretch problems found throughout the files, don't work on them until you are finished with MVP requirements!
+
+
+**Branched, pulled, and pushed**
+**MVP Completed**
