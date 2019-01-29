@@ -7,10 +7,13 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 let a = "Words"
-  let b = "Stuff"
+let b = "Stuff"
 function consume(a, b, callback){
+  return callback(a, b);
+}
 
-  callback("Say " + a + " and " + b);
+function add(a, b){
+  return a + b;
 }
 
 /* Step 2: Create several functions to callback with consume();
@@ -21,7 +24,7 @@ function consume(a, b, callback){
 
 
 /* Step 3: Check your work by uncommenting the following calls to consume(): */
-//consume(2,2,add); // 4
+console.log(consume(2,2,add)); // 4
 // consume(10,16,multiply); // 160
 // consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
