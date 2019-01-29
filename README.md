@@ -28,15 +28,17 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
-1. Describe the biggest difference between `.forEach` & `.map`.
+1. Describe the biggest difference between `.forEach` & `.map`. Map returns a new array, forEach does not.
 
-2. What is the difference between a function and a method?
+2. What is the difference between a function and a method? functions have return type but method has no return type
 
-3. What is closure?
+3. What is closure?  A closure is a chain of scope, allowing a function to have access to variables
+    declared outside of it's scope.
 
-4. Describe the four rules of the 'this' keyword.
+4. Describe the four rules of the 'this' keyword.  Globalally binds to window console.log(this) in codepen will display codepen, implicity binds to object to the left of a dot operator, explicity binds when used with .call, .apply, or .bind, and newly binds to objects created with the "new" keyword.
 
-5. Why do we need super() in an extended class?
+5. Why do we need super() in an extended class? super() calls the constructor function of the extended class on the object being passed into it.
+
 
 ## Project Set up
 
@@ -66,11 +68,11 @@ Your finished project must include all of the following requirements:
 
 ## Task 1: Objects and Arrays
 Test your knowledge of objects and arrays. 
-* [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
+* [X] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
 This challenge takes a look at callbacks and closures as well as scope. 
-* [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
+* [X] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
