@@ -24,7 +24,7 @@
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
-
+// Because internal is declared inside of myFunction
 // Explanation: 
 
 
