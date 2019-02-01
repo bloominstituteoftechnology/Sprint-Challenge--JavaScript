@@ -90,7 +90,7 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 for(let i = 0; i < graduates.length; i++) {
-  contactInfo.push(universities[i].first_name, universities[i].email);
+  contactInfo.push(graduates[i].first_name, graduates[i].email);
 }
 console.log(contactInfo);
 
@@ -98,8 +98,8 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 for(let i = 0; i < graduates.length; i++) {
-  if(universities[i].univeristy == 'Uni') {
-    uni.push(universities[i])
+  if(graduates[i].univeristy == 'Uni') {
+    uni.push(graduates[i])
   }
 }
 console.log(uni);
@@ -128,7 +128,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 const animalNames = [];
 zooAnimals.forEach(function(name) {
-  animalNames.push(`${animal_name} ${scientific_name}`);
+  animalNames.push(`${this.animal_name} ${this.scientific_name}`);
 })
 console.log(animalNames);
 

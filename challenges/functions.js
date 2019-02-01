@@ -19,15 +19,15 @@ function consume(param1, param2, cb) {
   return cb(param1, param2);
 }
 
-const add = function(x, y, cb) {
-  return cb(x + y);
+function add(x, y) {
+  return (x + y);
 }
 
-const multiply = function(x, y, cb) {
-  return cb(x * y);
+function multiply(x, y) {
+  return (x * y);
 }
 
-const greeting = function(first, last,) {
+function greeting(first, last,) {
   return `Hello ${first} ${last}, nice to meet you!`;
 }
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
@@ -40,7 +40,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: `nestedFuncton()` is nested within myFunction so it has access to its function scope and since internal is not defined in nestedfunction it goes to myFunction scope to define internal.
+// Explanation: `nestedFuncton()` is nested within myFunction so it has access to its function scope and since 'internal' is not defined in nestedfunction it goes to myFunction scope to define internal.
 
 
 const external = "I'm outside the function";
