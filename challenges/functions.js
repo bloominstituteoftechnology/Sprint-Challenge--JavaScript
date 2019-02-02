@@ -14,22 +14,20 @@
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 const consume = function(arg1, arg2, add) {
-  return(`Sum: ${arge} + ${arg2}`);
+  add(arg1 + arg2);
 }
 
-const multiply =  function (arg1, arg2, callback) {
-
+const consume =  function (arg1, arg2, multiply) {
+  multiply(arg1 * arg2);
 }
 
-consume((arg1, arg2, add) => {
-  return(arg1 + arg2);
-});
-
-
+const consume = function (arg1, arg2, callback) {
+  multiply(`Hello ${arg1} ${arg2}, nice to meet you!`);
+}
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 consume(2,2,add); // 4
 consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
