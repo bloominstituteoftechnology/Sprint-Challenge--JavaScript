@@ -7,14 +7,8 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-function consume(it, li, cb) {
-
-for(let i=0; i < li.length; i++) {
-  if (li[i] === item) {
-    return cb(true);
-  } 
-  }
-return cb(false);
+function consume (arg1, arg2, cb) {
+  cb(arg1, arg2);
 }
 
 /* Step 2: Create several functions to callback with consume();
@@ -23,19 +17,22 @@ return cb(false);
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-//work on later
+function add(a, b) {
+  console.log(a + b );
+}
 
-// const consume = function (cb) { 
-//   cb (it, li);
-// };
-//   consume (function(add) {
-//     console.log(add);
-//   });
+function multiply(a, b) {
+  console.log(a * b );
+}
 
+function greeting(firstName, lastName) {
+    console.log(`Hello ${firstName} ${lastName}, nice to meet you!`);
+}
+  
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
