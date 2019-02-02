@@ -21,8 +21,8 @@ const consume =  function (arg1, arg2, multiply) {
   multiply(arg1 * arg2);
 }
 
-const consume = function (arg1, arg2, callback) {
-  multiply(`Hello ${arg1} ${arg2}, nice to meet you!`);
+const consume = function (arg1, arg2, greeting) {
+ greeting(`Hello ${arg1} ${arg2}, nice to meet you!`);
 }
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 consume(2,2,add); // 4
