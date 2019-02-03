@@ -13,21 +13,39 @@
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-const consume = function(arg1, arg2, add) {
-  add(arg1 + arg2);
+const consume = function(arg1, arg2, callback) {
+  if (callback){
+    console.log(arg1 + arg2);
+    
+  }
+  
+  if (callback){
+    console.log(arg1 * arg2);
+    
+  }
+  
+  if (callback){
+    console.log(`Hello ${arg1} ${arg2}, nice to meet you!`)
+  }
+}
+function finishedSum() {
+  console.log(`The numbers have been summed:`);
 }
 
-const consume =  function (arg1, arg2, multiply) {
-  multiply(arg1 * arg2);
+function finishedProduct() {
+  console.log(`The multiplication of the numbers has finished`);
 }
 
-const consume = function (arg1, arg2, greeting) {
- greeting(`Hello ${arg1} ${arg2}, nice to meet you!`);
+function finishedGreeting() {
+  console.log("Greetings Deliverd!")
 }
+consume(5, 5, finishedSum);
+consume(10, 16, finishedProduct);
+consume("Mary", "Poppins", finishedGreeting);
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-consume(2,2,add); // 4
-consume(10,16,multiply); // 160
-consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+//consume(2,2,add); // 4
+//consume(10,16,multiply); // 160
+//consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -35,7 +53,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 // Because internal is declared inside of myFunction
 // Explanation: 
-// Because internal is Implicit
+// Because internal is Implicit and is functioned scoped
 
 const external = "I'm outside the function";
 
