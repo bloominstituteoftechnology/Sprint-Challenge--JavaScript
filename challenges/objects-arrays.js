@@ -23,6 +23,9 @@ const tyrannosaurus = new Dinosaur({
   weight: '7000kg',
   length: '12m',
   period: 'Late Cretaceious',
+  roar: function() {
+    return "RAWER!!!"
+  }
 });
 
 // const roar = function(sound){
@@ -88,7 +91,34 @@ for(let i = 0; i < graduates.length; i++){
   universities.push(graduates[i]['university'])
 }
 
-console.log(universities);
+function sortArray(arr, type='old') {
+  if( type === 'sort' )
+    return arr.sort();
+  else {
+    const tempArray = arr;
+    const sortedArray = [];
+    let sorted = false;
+    while( sorted === false ) {
+      if( tempArray.length == 0 )
+        break;
+      let lowest = tempArray[0];
+      for( let i = 0; i < tempArray.length; i++ ){
+        for( let k = 0; k < tempArray.length; k++ ) {
+          if( tempArray[i] < tempArray[k] )
+            lowest = tempArray[i];
+        } // End 'k' loop
+      } // End 'i' loop
+      sortedArray.unshift(lowest);
+      tempArray.pop(lowest);
+    } // End while.
+    return sortedArray;
+  }
+}
+
+sortArray( universities, 'sort' );
+//universities.sort();
+console.log(universities)
+console.log( sortArray( universities ) );
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
