@@ -18,31 +18,33 @@
 // {'name': 'stegosaurus', 'diet': 'herbivorous', 'weight': '2000kg', 'length': '9m', 'period': 'Late Jurassic'},
 // {'name': 'velociraptor', 'diet': 'carnivorous', 'weight': '15kg', 'length': '1.8m', 'period': 'Late Cretaceious'}];
 
-const dinosaurs = [{
-    'name': 'tyrannosaurus',
-    'diet': 'carnivorous',
-    'weight': '7000kg',
-    'length': '12m',
-    'period': 'Late Cretaceious',
-    roar: function() {
-    console.log(`RAWERSRARARWERSARARARRRR!`);
-    }
-  },
-  {
-    'name': 'stegosaurus',
-    'diet': 'herbivorous',
-    'weight': '2000kg',
-    'length': '9m',
-    'period': 'Late Jurassic'
-                     
-   },
-   {
-    'name': 'velociraptor',
-    'diet': 'carnivorous',
-    'weight': '15kg',
-    'length': '1.8m',
-    'period': 'Late Cretaceious'
-  }];
+const tyrannosaurus = {
+    diet: 'carnivorous',
+    weight: '7000kg',
+    length: '12m',
+    period: 'Late Cretaceious',
+    // roar: function() {
+    //   return 'RAWERSRARARWERSARARARRRR!';
+    // }
+  };
+  
+  // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+  
+  const stegosaurus = {
+    diet: 'herbivorous',
+    weight: '2000kg',
+    length: '9m',
+    period: 'Late Jurassic'
+  };
+  
+  // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+  
+  const velociraptor = {
+    diet: 'carnivorous',
+    weight: '15kg',
+    length: '1.8m',
+    period: 'Late Cretaceious'
+  };
   
 
 // How much did tyrannosaurus weigh?
@@ -56,12 +58,17 @@ console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 
-let roar = [];
- roar = dinosaurs.map(function(item) {
-    return item.name();
-});
+// let roar = [];
+//  roar = dinosaurs.map(function(item) {
+//     return item.name();
+// });
 
-console.log(tyrannosaurus.roar());
+tyrannosaurus.roar = function() {
+    return "RAWERSRARARWERSARARARRRR!"
+  }
+  
+  console.log(tyrannosaurus.roar());
+  
 
 
 // ==== Arrays ====
