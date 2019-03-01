@@ -30,13 +30,39 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+-- .map returns data, but .forEach does not.
+
 2. What is the difference between a function and a method?
+
+-- All data that is passed to a function is explicitly passed. A method is a piece of code that is called by name that is associated with an object. In most respects it is identical to a function except for those two key differences. 
 
 3. What is closure?
 
+--Closures are functions that refer to independent (free) variables. In other words, the function defined in the closure ‘remembers’ the environment in which it was created.
+
 4. Describe the four rules of the 'this' keyword.
 
+  1. // Window / Golbal Binding 
+  
+  -- refers to over all Golbal enviroment. --
+  
+  2. Implicit Binding
+  
+  -- the object standing before the dot is being refered to. 
+  
+  
+ 3. New Binding
+  
+  -- and empty objected is created and referenced by "this", inheriting the prototype function. 
+  
+  
+  4. Explicit Binding
+ 
+ 
+  --  force a function call to use a particular object for this binding, without putting a property function reference on the object. so we explicitly say to a function what object it should use for this — using functions such as call, apply and bind.--
+
 5. Why do we need super() in an extended class?
+-- super allows the object to use the attrbuites blueprint form the parent. 
 
 ## Project Set up
 
