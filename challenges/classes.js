@@ -21,17 +21,17 @@ class CubeMaker extends CuboidMaker{
     return 6 * (this.length * this.length);
   }
   boxVol() {
-    return (this.length)^3;
+    return Math.pow(this.length, 3) ;
   }
 }
 
 const cuboid = new CuboidMaker({length: 4, width: 5, height: 5});
-const cube = new CubeMaker({length: 8, width: 8, height: 8})
+const cube = new CubeMaker({length: 8})
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
-console.log(cube.volume());
+console.log(cube.boxVol());
 console.log(cube.surface());
 /* Stretch Task:
 
