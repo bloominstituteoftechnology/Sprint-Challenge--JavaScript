@@ -1,8 +1,8 @@
 // ==== Objects ====
 
-/* 
-  Given the following information about dinosaurs, create 3 objects: 
-  Use this pattern to create your objects: 
+/*
+  Given the following information about dinosaurs, create 3 objects:
+  Use this pattern to create your objects:
   object name, diet, weight, length, period
 */
 const dinosaur1 = {
@@ -40,23 +40,60 @@ const dinosaur3 = {
 
 // Using your dinosaur objects, log answers to these questions:
 
+class Dinosaur {
+    constructor(props) {
+      //super(props);
+    this.name = props.name;
+    this.diet = props.diet;
+    this.weight = props.weight;
+    this.length = props.length;
+    this.period = props.period;
+  }
+  roar() {
+    return "The tyranosaurus let's loose a loud RAWERSRARARWERSARARARRRR!";
+  }
+}
+
 // How much did tyrannosaurus weigh?
 
-console.log(`The Tyrannosaurus wieghed in at: ${dinosaur1.weight}`);
+const tyrannosaurus = new Dinosaur ({
+      name:  "Tyrannosaurus",
+      diet:  "Carnivorous",
+      weigh: 7000,
+      length: 12,
+      period: "Late Jurassic"
+  });
+
+const stegosaurus = new Dinosaur ({
+      name: "Stegosaurus",
+      diet: "Vegitarian",
+      weight: 2000,
+      length: 9,
+      period: "Late Cretaceious"
+});
+
+const velociraptor = new Dinosaur ({
+      name: "Velociraptor",
+      diet: "Carnivorous",
+      weight: 15,
+      length: 1.8,
+      period: "Cretaceious"
+});
+console.log(velociraptor.diet);
 
 // What was the diet of a velociraptor?
-
-console.log(`The Velociraptor lived ${dinosaur3.diet}`);
+console.log(stegosaurus.length);
 
 // How long was a stegosaurus?
-console.log(`A Stegosaurus was ${dinosaur2.length} long.`);
+console.log(tyrannosaurus.period);
 
 // What time period did tyrannosaurus live in?
-console.log(`The Tyrannosaurus Live in the ${dinosaur1.period}`);
+console.log(tyrannosaurus.roar());
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-dinosaur1.roar();
+
+
 
 
 // ==== Arrays ====
@@ -74,36 +111,42 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":9,"first_name":"Michail","university":"Universidad Católica de Ávila","email":"mrome8@shinystat.com"},
 {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
 
-/* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
+/* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-let universities = [];
-for ( let i = 0; i < graduates.length; i++) {
-  universities.push(graduates[i].university);
-}
-console.log(universities)
-const sortedArray = universities.sort();
-console.log(sortedArray);
-/* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
-The resulting contact information should have a space between the first name and the email information like this: 
+const universities = [];
+
+universities.push(graduates.sort(graduates.university));
+  console.log(universities);
+
+
+
+
+/* Request 2: Create a new array called contactInfo that contains both first name and email of each student.
+
+The resulting contact information should have a space between the first name and the email information like this:
 Name email@example.com
 
 Log the result of your new array. */
+
 let contactInfo = [];
 for ( let i = 0; i < graduates.length; i++) {
   contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
+
 }
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
+
 let uni = [];
 for ( let i = 0; i < graduates.length; i++) { 
   if ( graduates.filter( graduates[i].university === "Uni" ));
      uni.push(graduates[i].university);
 }
   console.log(uni);
+
 
 
 // ==== ADVANCED Array Methods ====
@@ -129,51 +172,58 @@ The individual values in the array should look like this "Name: Jackal, asiatic,
 
 */
 const animalNames = [];
+
 for ( let i =0; i < zooAnimals.length; i++)
 {
   animalNames.push(`Name: ${zooAnimals[i].animal_name}, `);
   animalNames.push(`Scientific Name: ${zooAnimals[i].scientific_name}`);
+
 }
 console.log(animalNames);
 
-/* Request 2: .map()    
+/* Request 2: .map()
 
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
 
-let lowerCase = [];
-for ( let i =0; i < zooAnimals[i].length; i++)
-{
-  lowerCase = zooAnimals.map(zooAnimal => zooAnimal.toLower);
 
-}
-console.log(lowerCase); 
+const lowerCase = zooAnimals.map((animal) => {
+  return animal.animal_name.toLowerCase();
+});
+console.log(lowerCase);
 
-/* Request 3: .filter() 
+
+/* Request 3: .filter()
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
-for ( let i = 0; zooAnimals[i].length; i++) {
-  largePopulation = zooAnimals.filter(population => population > 5);
-}
+
+const largerPopulation = zooAnimals.filter((population) => {
+  if ( population <= 5 ) {
+    zooAnimals.animal_name.push();
+  }
+});
+
+
 console.log(largerPopulation);
 
-/* Request 4: .reduce() 
+/* Request 4: .reduce()
 
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-let  populationTotal = 0;
-for ( let i = 0; i < zooAnimals.length; i++){
-  zooAnimals.reduce();
-}
+
+let populationTotal = zooAnimals.reduce((populationTotal, population) => {
+    populationTotal += population;
+  }, 0);
+
+
 console.log(populationTotal);
 
 
-/* 
+/*
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
