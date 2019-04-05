@@ -41,7 +41,14 @@ Closure is where a nested function can still access the parent function's scope.
 
 4. Describe the four rules of the 'this' keyword.
 
+-In a simple function call, this will default to the global object, and be undefined under strict mode.
+-Implicit binding: it points to the object of which the function is called.
+-This can also be explicit, in that you can point to a certain value using call, apply or bind (new keyword).
+-This can point to a newly constructed object using the "new" keyword.
+
 5. Why do we need super() in an extended class?
+
+You need super () to access an extended parent's class's scope, otherwise the child scope wouldn't even have access to it.
 
 ## Project Set up
 
