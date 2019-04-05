@@ -103,11 +103,15 @@ console.log('Arrays Request 2:', contactInfo);
 
 const uni = [];
 for (let i = 0; i < graduates.length; i++){
-    uni.push(graduates[i].university.match('Uni'));
-    
-  }
 
+  if( graduates[i].university.includes("Uni")){
+  uni.push(graduates[i].university)
+  }
+  
+  }
+  
   console.log('Arrays Request 3:', uni);
+  
 
 // ==== ADVANCED Array Methods ====
 
@@ -143,7 +147,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 const lowerCase = zooAnimals.map((animal) => {
   return animal.animal_name.toLowerCase();
-
+  
 });
 
 console.log('ADVANCED Array Methods Request 2:', lowerCase); 
