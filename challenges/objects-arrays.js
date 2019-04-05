@@ -51,7 +51,7 @@ console.log(tyran.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(tyran.roar);
+console.log(tyran.roar());
 
 
 // ==== Arrays ====
@@ -128,6 +128,11 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+zooAnimals.forEach(function (object) {
+  let name = "Name: " + object.animal_name + " Scientific: " + object.scientific_name;
+  animalNames.push(name)
+})
+
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -136,7 +141,11 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
+let lowerCase = [];
+const toLC = function(animal) {
+  return animal.animal_name.toLowerCase();
+}
+lowerCase = zooAnimals.map(toLC)
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -144,7 +153,11 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
+let largerPopulation = [];
+const smallpop = function(object) {
+  return object.population < 5;
+}
+largerPopulation = zooAnimals.filter(smallpop)
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -152,7 +165,11 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+let populationTotal = 0;
+const calculation = function (accu, animal) {
+  return accu + animal.population;
+}
+populationTotal = zooAnimals.reduce(calculation, 0)
 console.log(populationTotal);
 
 
