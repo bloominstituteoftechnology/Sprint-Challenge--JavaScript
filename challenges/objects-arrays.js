@@ -127,37 +127,38 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const animalNames = [];
-zooAnimals.forEach(function (object) {
-  let name = "Name: " + object.animal_name + " Scientific: " + object.scientific_name;
-  animalNames.push(name)
-})
+let animalNames = [];
+
+let name = zooAnimals.forEach(function(object) {
+  animalNames.push(object, "Name: " + object.animal_name + " Scientific: " + object.scientific_name);
+});
 
 console.log(animalNames);
 
+
+// let name = zooAnimals.forEach(function(object) {
+//   animalNames.push(object, "Name: " + animal_name + " Scientific: " + scientific_name);
+// })
 /* Request 2: .map()    
 
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
 
-let lowerCase = [];
-const toLC = function(animal) {
+let lowerCase = zooAnimals.map((animal) => {
   return animal.animal_name.toLowerCase();
-}
-lowerCase = zooAnimals.map(toLC)
-console.log(lowerCase); 
+});
+console.log(lowerCase)
 
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-let largerPopulation = [];
-const smallpop = function(object) {
-  return object.population < 5;
-}
-largerPopulation = zooAnimals.filter(smallpop)
+
+let largerPopulation = zooAnimals.filter((animal) => {
+  return animal.population < 5;
+});
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -165,14 +166,12 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-let populationTotal = 0;
-const calculation = function (accu, animal) {
+
+
+let populationTotal = zooAnimals.reduce((accu, animal) => {
   return accu + animal.population;
-}
-populationTotal = zooAnimals.reduce(calculation, 0)
-console.log(populationTotal);
-
-
+}, 0);
+console.log(populationTotal)
 /* 
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
