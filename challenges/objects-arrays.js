@@ -35,12 +35,7 @@ console.log(dinosaurs[0].period);
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 
 
-
-
-// dinosaurs.prototype.roar = function (){
-//   return `RAWERSRARARWERSARARARRRR`;
-// }
-// console.log(dinosaurs[0].roar());
+/////////////need todo
 
 
 // ==== Arrays ====
@@ -88,7 +83,9 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-console.log(uni);
+
+console.log();
+//graduates.find(finduni);
 
 
 // ==== ADVANCED Array Methods ====
@@ -102,7 +99,7 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"White-cheeked pintail","population":1,"scientific_name":"Anas bahamensis","state":"Oregon"},
 {"animal_name":"Black-backed jackal","population":2,"scientific_name":"Canis mesomelas","state":"Washington"},
 {"animal_name":"Brolga crane","population":9,"scientific_name":"Grus rubicundus","state":"New Mexico"},
-{"animal_name":"Common melba finch","population":5,"scientific_name":"Pytilia melba","state":"Pennsylvania"},
+{"animal_name":"Common melba finch","":5,"scientific_name":"Pytilia melba","state":"Pennsylvania"},
 {"animal_name":"Pampa gray fox","population":10,"scientific_name":"Pseudalopex gymnocercus","state":"Connecticut"},
 {"animal_name":"Hawk-eagle, crowned","population":10,"scientific_name":"Spizaetus coronatus","state":"Florida"},
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
@@ -125,19 +122,27 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
-// lowercase = zooAnimals.map(function (element){
-  
-// });
+lowercase = zooAnimals.map( function (x){
+  //lowerCase[x.animal_name] = x.animal_name.toLowerCase() ;//toLowerCase()
+  return lowerCase[x.animal_name] = x.animal_name.toLowerCase();
+
+  });
 console.log(lowerCase); 
+
+
+
 
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
+
 const largerPopulation = [];
-//largerPopulation = zooAnimals.filter( zooAnimals => zooAnimals.state < "West Virginia" );
+
 console.log(largerPopulation);
+
+
 
 /* Request 4: .reduce() 
 
@@ -145,8 +150,6 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = 0;
-// let total = (firstnum , currentnum) => firstnum+currentnum.population;
-// populationTotal = zooAnimals.reduce(total);
 
 console.log(populationTotal);
 
