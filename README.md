@@ -29,7 +29,8 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
-
+Foreach runs the desired function you created for each item in the array while .map has a built in function that creates a new array by fetching certain items in the array depending on the bullion statement (e.g. return array.donations > 100 would create a new array with all the items donation over 100
+)
 2. What is the difference between a function and a method?
 
 3. What is closure?
