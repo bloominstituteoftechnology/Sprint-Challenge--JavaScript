@@ -29,13 +29,17 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+* The biggest difference `.forEach` changes the original data in a loop whereas `.map` applies changes to a new array.
 
 2. What is the difference between a function and a method?
-
+* The biggest difference between a function and a method is that a function is typically in the global scope whereas a method is contained to the scope of an object.
 3. What is closure?
-
+* Closure is the lexical scope of variables as they pertain to functions. This is good because it helps protect the global scope variable inside a function.
 4. Describe the four rules of the 'this' keyword.
-
+* This is globally scoped to the widow. 
+* This can be implicitly bound.
+* This can be Explicitly bound.
+* New Binding works off of constructors and binds this to the constructed object properties or methods.
 5. Why do we need super() in an extended class?
 
 ## Project Set up
