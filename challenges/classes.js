@@ -14,19 +14,18 @@
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
 class CuboidMaker{
-  constructor(length, width, height){
-    this.newlength = length;
-    this.newwidth = width;
-    this.newheight = height;
+  constructor(nums){
+    this.newlength = nums.length;
+    this.newwidth = nums.width;
+    this.newheight = nums.height;
   }
   //methods
-  volume(length, width, height) {
-    const multi = length * width * height;
-    return multi;
+  volume() {
+    return this.newlength * this.newwidth * this.newheight;
   }
 
-  surfaceArea(length, width, height){
-    return  2 * (length * width + length * height + width * height);
+  surfaceArea(){
+    return  2 * (this.newlength * this.newwidth + this.newlength * this.newheight + this.newwidth * this.newheight);
   } 
 }//parent 
 const cuboid = new CuboidMaker({
