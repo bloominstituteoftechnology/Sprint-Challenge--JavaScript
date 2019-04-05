@@ -33,10 +33,14 @@ console.log(dinosaurs[0].period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+
+
+
+
 // dinosaurs.prototype.roar = function (){
 //   return `RAWERSRARARWERSARARARRRR`;
 // }
-// console.log();
+// console.log(dinosaurs[0].roar());
 
 
 // ==== Arrays ====
@@ -62,7 +66,10 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-
+graduates.forEach(function(element){
+  universities.push(element.university +"")
+})
+universities.sort()
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -73,7 +80,9 @@ Name email@example.com
 Log the result of your new array. */
 
 const contactInfo = [];
-//contactInfo = graduates.map( p => {[p].first_name + " " + [p].email })
+graduates.forEach(function(element){
+  contactInfo.push(element.first_name+" "+element.email +"")
+})
 console.log(contactInfo);
 
 
@@ -104,9 +113,9 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
-// zooAnimals.forEach(function (element)  {
-//   return animalNames.push(element.scientific_name)
-// });
+zooAnimals.forEach(function (element)  {
+  return animalNames.push(element.scientific_name)
+});
 console.log(animalNames);
 
 /* Request 2: .map()    
