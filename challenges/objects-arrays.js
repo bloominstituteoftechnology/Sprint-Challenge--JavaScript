@@ -14,13 +14,14 @@ let tyrannosaurus = {
   weight : "7000kg",
   length : "12m",
   period : "Late Cretaceious"
+  
 };
-// , herbivorous, 2000kg, 9m, Late Jurassic
+//stegosaurus , herbivorous, 2000kg, 9m, Late Jurassic
 let stegosaurus = {
   name : "herbivorous",
-  diet :  "carnivorous",
+  diet :  " herbivorous",
   weight : "2000kg",
-  height :  " 9m",
+  length :  " 9m",
   period : " Late Jurassic"
 }
 
@@ -29,30 +30,36 @@ let velociraptor = {
   name : "velociraptor ",
   diet :  "carnivorous",
   weight : "15kg",
-  height : " 1.8m",
+  lenght : " 1.8m",
   period : " Late Cretaceious"
 }
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
 
-  /console.log(tyrannosaurus.weight);
+  console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
- console.log(velociraptor.diet);
+console.log(velociraptor.diet);
+//  console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
- console.log(stegosaurus. height);
+console.log(stegosaurus.length);
+
 
 // What time period did tyrannosaurus live in?
- console.log(tyrannosaurus.period);
+console.log(tyrannosaurus.period);
+
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 // console.log();
-
-
+tyrannosaurus.roar = function(){
+  return "RAWERSRARARWERSARARARRRR!";
+  }
+  console.log(tyrannosaurus.roar());
 // ==== Arrays ====
+
 
 // Given an array of college graduates.  Complete the following requests WITHOUT using any array methods like .forEach(), .map(), .reduce(), .filter()
 
@@ -93,7 +100,7 @@ for (let i = 0; i<graduates.length; i++){
 console.log(contactInfo);
 
 
-/* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
+// Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 for (let i = 0; i < graduates.length; i++){
   if (graduates[i]["university"].includes("Uni") == true){
@@ -127,7 +134,8 @@ The zoo wants to display both the scientific name and the animal name in front o
   should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const animalNames =zooAnimals.forEach (function(i){
+const animalNames =zooAnimals.forEach ((i)=>
+{
   console.log(i.animal_name + " " + i.scientific_name);
 
 });
@@ -140,7 +148,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = zooAnimals.map(function(i){
+const lowerCase = zooAnimals.map((i)=> {
 return (i.animal_name.toLowerCase())
 });
 
@@ -152,7 +160,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 population less than 5.
 
 */
-const largerPopulation = zooAnimals.filter(function(i){
+const largerPopulation = zooAnimals.filter((i) => {
 return (i.population === 5);
 });
 
