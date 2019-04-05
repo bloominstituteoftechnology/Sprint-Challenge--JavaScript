@@ -33,7 +33,11 @@ Foreach runs the desired function you created for each item in the array while .
 )
 2. What is the difference between a function and a method?
 
+A method is a function within an object and is called through the array, such as employee.speak, where employee is the array and .speak is the method specificially called. In contrast, a function can be used in the global scale, not bound by an array.
+
 3. What is closure?
+
+Closure is where a nested function can still access the parent function's scope. In contrast, the parent function cannot access the nested function scope, but if the nested function has it's own declared variable, it's own nested functions can access it.
 
 4. Describe the four rules of the 'this' keyword.
 
