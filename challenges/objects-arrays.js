@@ -14,6 +14,7 @@
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
 var dino = {
+
 	tyrannosaurus: {
 		name: "Tyrannosaurus",
 		diet: "Carnivorous",
@@ -24,6 +25,7 @@ var dino = {
 			return "RAWERSRARARWERSARARARRRR!"
 		}
 	},
+
 	stegosaurus: {
 		name: "Stegosaurus",
 		diet: "Herbivorous",
@@ -31,6 +33,7 @@ var dino = {
 		length: "9m",
 		period: "Late Jurassic"
 	},
+
 	velociraptor: {
 		name: "Velociraptor",
 		diet: "Carnivorous",
@@ -44,17 +47,20 @@ var dino = {
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
+
 console.log(dino.tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
+
 console.log(dino.velociraptor.diet);
 
 // How long was a stegosaurus?
+
 console.log(dino.stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
-console.log(dino.tyrannosaurus.period);
 
+console.log(dino.tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 console.log(dino.tyrannosaurus.roar());
@@ -142,6 +148,8 @@ zooAnimals.forEach(function(thisArray) {
 
 console.log(animalNames);
 
+
+
 /* Request 2: .map()    
 
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
@@ -187,4 +195,33 @@ console.log(populationTotal);
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
+
+//request 1
+
+const animalNames = [];
+
+zooAnimals.forEach(thisArray => animalNames.push(`Name: ${thisArray.animal_name}, Scientific: ${thisArray.scientific_name}`));
+
+//request 2
+
+const lowerCase = zooAnimals.map(thisArray => thisArray.animal_name.toLowerCase());
+
+
+console.log(lowerCase); 
+
+//request 3
+
+const largerPopulation = zooAnimals.filter(thisArray => thisArray.population < 5);
+
+
+console.log(largerPopulation);
+
+//request 4
+
+
+const reducer = (totalPopulation, thisArray) => totalPopulation + thisArray.population;
+
+console.log(zooAnimals.reduce(reducer, 0));
+
+
 
