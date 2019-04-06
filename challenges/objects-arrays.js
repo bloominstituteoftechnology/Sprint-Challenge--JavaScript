@@ -125,11 +125,9 @@ const graduates = [{
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-let universities = [];
-
-
-
-console.log(universities)
+// let universities = [];
+//
+// console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student.
 
@@ -137,13 +135,13 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-let contactInfo = [];
-console.log(contactInfo);
+// let contactInfo = [];
+// console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-let uni = [];
-console.log(uni);
+// let uni = [];
+// console.log(uni);
 
 
 // ==== ADVANCED Array Methods ====
