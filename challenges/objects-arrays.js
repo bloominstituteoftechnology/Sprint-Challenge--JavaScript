@@ -96,15 +96,16 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 
- const uni = [];
+const uni = [];
 
- for (i=0; i < graduates.length; i++) {
-   graduates[i].university;
-   if (university === Uni)
-     uni.push(graduates[i].university)
- }
-
-console.log(uni);
+for (i = 0; i < graduates.length; i++) {
+    let x = graduates[i].university.includes("Uni");
+    if (x === true) {
+      uni.push(`${graduates[i].university}`);
+    }
+  }
+  
+   console.log(uni);
 
 // ==== ADVANCED Array Methods ====
 
@@ -145,17 +146,25 @@ const lowerCase = zooAnimals.map ((animal) => {
 console.log(lowerCase); 
  
 
-/* Request 3: .filter() 
+// /* Request 3: .filter() 
 
-The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
+// The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
-*/
- const largerPopulation = []; //work on later//
+// */
+// const largerPopulation = [];
 
- largerPopulation= zooAnimals.filter((count) => {
-  return count.population = "<5";
-});  
- console.log(largerPopulation);
+//  largerPopulation = zooAnimals.filter(function(pop) {
+//     if(pop.population < 5) {
+//         return true;
+//     }
+// });
+// console.log(largerPopulation);
+
+const largerPopulation = zooAnimals.filter((less) => {
+  return less.population < 5
+});
+
+console.log(largerPopulation);
 
 /* Request 4: .reduce() 
 
