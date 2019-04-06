@@ -35,7 +35,6 @@ const cuboid = new CuboidMaker({
 });
 
 
-
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
 

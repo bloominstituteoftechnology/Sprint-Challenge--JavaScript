@@ -34,10 +34,12 @@ console.log(dinosaurs[0].period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 
+dinosaurs.roar = function(){
+return `RAWERSRARARWERSARARARRRR`;
+}
 
-/////////////need todo
 
-
+console.log(dinosaurs.roar());
 // ==== Arrays ====
 
 // Given an array of college graduates.  Complete the following requests WITHOUT using any array methods like .forEach(), .map(), .reduce(), .filter()
@@ -83,8 +85,17 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+  graduates.forEach(element => {
+    if(element.graduates == "Uni"){
+      console.log("false");
+    }else{
+      console.log("true");
+    }
+  
+  return uni.push(element.university);
+})
 
-console.log();
+console.log(uni);
 //graduates.find(finduni);
 
 
@@ -138,8 +149,10 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 
-const largerPopulation = [];
 
+const largerPopulation = zooAnimals.filter(function (section){ 
+  return section.population < 5;
+})
 console.log(largerPopulation);
 
 
@@ -150,14 +163,16 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = 0;
-zooAnimals.reduce(
-  (accumulator, currentValue) => accumulator + currentValue.population ,populationTotal
-);
 
 
-console.log(populationTotal);
+const sum = zooAnimals.reduce(function (acc, curr) {
+  acc + curr.population;
+  return acc + curr;
+})
 
+console.log(sum);
 
+//////////////////////////////////
 /* 
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
