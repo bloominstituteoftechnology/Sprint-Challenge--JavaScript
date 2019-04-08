@@ -17,7 +17,7 @@
 */
 
 class CuboidMaker{
-    constructor(attr){
+    constructor(attr){ 
         this.length = attr.length;
         this.height = attr.height;
         this.width = attr.width;
@@ -46,7 +46,7 @@ console.log(cuboid.surfaceArea()); // 130
 /* Refactored Code Above */
 
 /* Original Code*/
-  
+
 /*
     function CuboidMaker(attr){
       this.length = attr.length;

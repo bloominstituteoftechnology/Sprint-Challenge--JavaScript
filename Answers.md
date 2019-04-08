@@ -23,4 +23,5 @@
 5. Why do we need super() in an extended class?
   - The super() keyword in javascript is used in order to call the methods of the
     parent class. This is often used within a constructor function to call the parent
-    constructor function. 
+    constructor function.
+ 

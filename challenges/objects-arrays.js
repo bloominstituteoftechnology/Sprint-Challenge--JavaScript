@@ -10,7 +10,7 @@
 
 var tyrannosaurus =
 {
-  name: 'tyrannosaurus',
+  name: 'tyrannosaurus', 
   weight: '7000kg',
   diet: 'carnivorous',
   length:'12m',
