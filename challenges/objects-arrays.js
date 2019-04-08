@@ -148,3 +148,6 @@ const populationTotal = zooAnimals.reduce((total, animal) => {
 /* 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 */
+
+
+// done
