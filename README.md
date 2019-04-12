@@ -29,14 +29,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+forEach is used to loop through each element in an array and execute a provided function. Map is used to create a new array with the results of executing a function on a given array. 
 
 2. What is the difference between a function and a method?
-
+methods are functions that are the property of an object
 3. What is closure?
-
+lexical scoping of variables in js is called closure. variables called inside a function will look outward for the definition of the variable if it is not already defined in the lexical scoping of the function
 4. Describe the four rules of the 'this' keyword.
-
+global binding - In global binding, "this" is binded to the console or the window. The scope is global
+implicit binding - "this" is binded to the object that calls the function/method
+new binding - New binding is for constructor functions and "this" is binded to the new object that is created using the constructor
+Explicit binding - we can use call, apply or bind to explicitly define what "this" should bind to
 5. Why do we need super() in an extended class?
+When used in an extended class, super can access and call the functions in the objects parent, thus making it easier to bind the objects together. 
 
 ## Project Set up
 
@@ -85,3 +90,6 @@ In your solutions, it is essential that you follow best practices and produce cl
 ## Stretch Problems
 
 There are a few stretch problems found throughout the files, don't work on them until you are finished with MVP requirements!
+
+##PullRequest
+Doing the pull request for the pm now
