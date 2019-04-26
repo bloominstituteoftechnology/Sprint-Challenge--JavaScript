@@ -40,10 +40,12 @@ class CubeMaker extends CuboidMaker {
     this.height = a;
   }
   volume() {
-    return this.length * this.length * this.length;
+    // return this.length * this.length * this.length;
+    return Math.pow(this.length, 3);
   }
   surfaceArea() {
-    return 6 * this.length * this.length;
+    // return 6 * this.length * this.length;
+    return 6 * Math.pow(this.length, 2);
   }
 }
 
