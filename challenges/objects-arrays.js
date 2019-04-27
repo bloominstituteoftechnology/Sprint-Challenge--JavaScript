@@ -73,6 +73,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
+
 const universities = [];
 
 for(let i = 0; i < graduates.length; i++){
@@ -87,6 +88,7 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
+
 const contactInfo = [];
 
 for(let i = 0; i < graduates.length; i++){
@@ -95,8 +97,18 @@ for(let i = 0; i < graduates.length; i++){
 
 console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
+
 const uni = [];
-console.log(uni);
+
+for(let i = 0; i < graduates.length; i++){
+  let uniName = graduates[i]['university'];
+
+  if(uniName === "Uni"){
+    uni.push(graduates[i]['university']);
+  }
+}
+
+console.log(graduates);
 
 
 // ==== ADVANCED Array Methods ====
@@ -154,4 +166,5 @@ console.log(populationTotal);
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
+
 
