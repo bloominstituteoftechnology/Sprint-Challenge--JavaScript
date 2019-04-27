@@ -1,0 +1,16 @@
+1. the ".forEach" will count each individual item in an array. the ".map" list the whole array as 1 item.
+
+2. a function contains variables and perameters to compute an output. a method is what is used to complete the said output. The function will allow the methods inside of it to compute whatever they are supposed to do.
+
+3. closure is when you are not able to access anything inside of a function from anywhere else outside the function unless you call the function.
+
+4.
+	Global Binding will grab the window or console object.
+
+	Implicit Binding will grab the object and look incide to look for what is dot notated next to it.
+
+	New Binding will create a new object that the takes each "this" and make it so that they can be used in multiple methods.
+
+	Explicit Binding will make it so that methods can be interchangable and/or overwritten.
+
+5. the super method is used to call the constructor of the base class. without the super method, the extended class could not take in the constructor properties from the base class.
