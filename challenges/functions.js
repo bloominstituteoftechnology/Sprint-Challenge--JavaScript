@@ -1,3 +1,4 @@
+console.log("==============callback===============");
 // ==== Callbacks ====  
 
 /* Step 1: Create a higher-order function that accepts a callback
