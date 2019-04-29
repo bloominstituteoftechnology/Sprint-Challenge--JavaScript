@@ -133,27 +133,26 @@ Create a new array named lowerCase and map over each name to convert them all to
 
 */
 
-// const lowerCase = [];
 
-// const lower = zooAnimals.map(function(names){
-//   let lc = zooAnimals.animal_name.toLowerCase();
-//   return lowerCase.push(lc);
 
-// });
-// console.log(lowerCase); 
+const lowerCase = zooAnimals.map(function(names){
+ return names.animal_name.toLowerCase();
+  
+});
+console.log("Lower case \n", lowerCase); 
 
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
 
-let popLessFive = zooAnimals.filter(function(size) {
-  console.log (size.population < 5);
-})
 
-console.log(largerPopulation);
+const largerPopulation = zooAnimals.filter(function(size) {
+  return (size.population < 5);
+});
+
+console.log("LargePop\n", largerPopulation);
 
 /* Request 4: .reduce() 
 
@@ -161,13 +160,13 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 
-const populationTotal = 0;
 
-let popTotal = zooAnimals.reduce(function(initial, amt) {
+
+const populationTotal = zooAnimals.reduce(function(initial, amt) {
   return initial += amt.population;
   
 }, 0);
-console.log(populationTotal);
+console.log("Pop Total \n", populationTotal);
 
 
 /* 
