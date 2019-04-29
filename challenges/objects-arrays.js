@@ -6,9 +6,9 @@
   object name, diet, weight, length, period
 */
 
-// const tyrannosaurus = {name: "tyrannosaurus", diet: "carnivorous", weight: "7000kg", length: "12m", period: "Late Cretaceous"};
-// const stegosaurus = {name: "stegosaurus", diet: "herbivorous", weight: "2000kg", length: "9m", period: "Late Jurassic"};
-// const velociraptor = {name: "velociraptor", diet: "carnivorous", weight: "15kg", length: "1.8m", period: "Late Cretaceous"};
+const tyrannosaurus = {name: "tyrannosaurus", diet: "carnivorous", weight: "7000kg", length: "12m", period: "Late Cretaceous"};
+const stegosaurus = {name: "stegosaurus", diet: "herbivorous", weight: "2000kg", length: "9m", period: "Late Jurassic"};
+const velociraptor = {name: "velociraptor", diet: "carnivorous", weight: "15kg", length: "1.8m", period: "Late Cretaceous"};
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
@@ -19,32 +19,32 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-// console.log("tyrannosaurus weight \n", tyrannosaurus.weight);
+console.log("tyrannosaurus weight \n", tyrannosaurus.weight);
 
 // // What was the diet of a velociraptor?
-// console.log("velociraptor diet \n", velociraptor.diet);
+console.log("velociraptor diet \n", velociraptor.diet);
 
 // // How long was a stegosaurus?
-// console.log("stegosaurus length \n", stegosaurus.length);
+console.log("stegosaurus length \n", stegosaurus.length);
 
 // // What time period did tyrannosaurus live in?
-// console.log("tyrannosaurus time period \n", tyrannosaurus.period);
+console.log("tyrannosaurus time period \n", tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 
-// const tyrannosaurus = {
-//   name: "tyrannosaurus",
-//   diet: "carnivorous", 
-//   weight: "7000kg", 
-//   length: "12m", 
-//   period: "Late Cretaceous",
-//   roar: function () {
-//     return `RAWERSRARARWERSARARARRRR!`;
-//   }
-// };
+const tyran = {
+  name: "tyrannosaurus",
+  diet: "carnivorous", 
+  weight: "7000kg", 
+  length: "12m", 
+  period: "Late Cretaceous",
+  roar: function () {
+    return `RAWERSRARARWERSARARARRRR!`;
+  }
+};
 
-// console.log("Tyran roar \n", tyrannosaurus.roar());
+console.log("Tyran roar \n", tyran.roar());
 
 
 // ==== Arrays ====
@@ -121,10 +121,10 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 const animalNames = [];
 
-let names = zooAnimals.forEach(function(i){
+let names = zooAnimals.forEach((i) => {
   animalNames.push(`Name: ${i.animal_name}, Scientific: ${i.scientific_name}`);
 });
-console.log(animalNames);
+console.log("animalNames\n", animalNames);
 
 /* Request 2: .map()    
 
@@ -135,10 +135,10 @@ Create a new array named lowerCase and map over each name to convert them all to
 
 
 
-const lowerCase = zooAnimals.map(function(names){
- return names.animal_name.toLowerCase();
-  
+const lowerCase = zooAnimals.map((names) => {
+ return names.animal_name.toLowerCase(); 
 });
+
 console.log("Lower case \n", lowerCase); 
 
 /* Request 3: .filter() 
@@ -148,7 +148,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 */
 
 
-const largerPopulation = zooAnimals.filter(function(size) {
+const largerPopulation = zooAnimals.filter((size) => {
   return (size.population < 5);
 });
 
@@ -162,7 +162,7 @@ The zoos need to know their total animal population across the United States.  F
 
 
 
-const populationTotal = zooAnimals.reduce(function(initial, amt) {
+const populationTotal = zooAnimals.reduce((initial, amt) => {
   return initial += amt.population;
   
 }, 0);
