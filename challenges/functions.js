@@ -19,15 +19,15 @@ function consume(param1, param2, callback) {
 
 function add(num1, num2) {
   return num1 + num2;
-};
+}
 
 function multiply(num1, num2) {
   return num1 * num2;
-};
+}
 
 function greeting(first, last) {
   return `Hello ${first} ${last}, nice to meet you!`;
-};
+}
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 consume("Add \n", 2,2,add); // 4
@@ -41,7 +41,7 @@ consume("Greeting \n", "Mary","Poppins", greeting); // Hello Mary Poppins, nice 
 
 // Explanation: 
 
-/* nestedFunction is a closure inside of myFunction,  and has access to myFunction's scope. 
+// nestedFunction is a closure inside of myFunction,  and has access to myFunction's scope. 
 
 
 const external = "I'm outside the function";
