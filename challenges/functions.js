@@ -46,6 +46,11 @@ console.log(higherOrderfunction("Mary","Poppins",greeting));
 
 // Explanation: 
 
+The nestedfunction() can access the variables of the enclosing function due to closures 
+in JavaScript. In other words, the inner function preserves the scope chain of the enclosing
+ function at the time the enclosing function was executed, and thus can access the enclosing 
+ function’s variables.
+
 
 const external = "I'm outside the function";
 
