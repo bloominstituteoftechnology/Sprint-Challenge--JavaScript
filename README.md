@@ -52,6 +52,8 @@ Edit this document to include your answers after each question. Make sure to lea
 
 5. Why do we need super() in an extended class?
 
+    Super() function calls the parent constructor and gives the parent attributes to the child.
+
 ## Project Set up
 
 Follow these steps to set up and work on your project:
