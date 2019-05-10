@@ -105,8 +105,8 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
-console.log(largerPopulation);
+const lowerPopulation = [];
+console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
 
