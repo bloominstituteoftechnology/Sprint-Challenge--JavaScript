@@ -31,7 +31,7 @@ CuboidMaker.prototype.volume = function () {
 */
 
 CuboidMaker.prototype.surfaceArea = function () {
-  return 2 * this.length * this.width + this.length * this.heightt + this.width * this.height;
+  return 2 * this.newLength * this.newWidth + this.newLength * this.newHeight + this.newWidth * this.newHeight;
 }
 
 
@@ -50,6 +50,6 @@ const cuboid = new CuboidMaker({
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
 
-console.log(cuboid.volume()); // 100
+console.log(cuboid.volume()); 
 console.log(cuboid.surfaceArea());
 
