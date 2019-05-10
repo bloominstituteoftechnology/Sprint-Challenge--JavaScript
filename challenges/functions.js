@@ -14,18 +14,34 @@
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function consume(a, b, callback) {
+  return callback(a, b);
+}
 
-/* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+const add = function(a, b) {
+  return a + b;
+}
+
+const multiply = function(a, b) {
+  return a * b;
+}
+
+const greeting = function(a,b) {
+  return `Hello ${a} ${b}, nice to meet you!`
+}
+
+//Step 3: Check your work by un-commenting the following calls to consume(): 
+console.log(consume(2,2, add)); // 4
+console.log(consume(10,16,multiply)); // 160
+console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: Do to the two-pass compiler the nestedFunction looks for variable 'internal' first locally then the next level up.
+
 
 
 const external = "I'm outside the function";
