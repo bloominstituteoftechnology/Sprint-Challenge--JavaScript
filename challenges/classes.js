@@ -23,8 +23,6 @@ class CuboidMaker15 {
   
   
   console.log(cuboid15);
-  console.log(cuboid15.volume());
-  console.log(cuboid15.surfaceArea());
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid15.volume()); // 100
 console.log(cuboid15.surfaceArea()); // 130
