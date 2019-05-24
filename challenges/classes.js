@@ -7,14 +7,15 @@ class CuboidMaker15 {
       this.height = cuboidMaker15Attributes.height;
     }
 }
-    CuboidMaker15.volume(); {
+   volume(); {
     return this.length * this.width * this.height;
-}
-surfaceArea(); {
+  }
+
+s  surfaceArea(); {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 }
 
-const cuboid15 = new CuboidMaker1({
+const cuboid15 = new CuboidMaker15({
   length: 4,
   width: 5,
   height: 5
