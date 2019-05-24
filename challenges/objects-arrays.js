@@ -82,7 +82,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 
-const graduates = [
+const grads2020 = [
   {"id":1,"first_name":"Cynde","university":"Missouri Southern State College","email":"ctorry0@macromedia.com"},
   {"id":2,"first_name":"Saundra","university":"The School of the Art Institute of Chicago","email":"swhal1@state.gov"},
   {"id":3,"first_name":"Lambert","university":"Marian College","email":"lparham2@techcrunch.com"},
@@ -115,11 +115,11 @@ console.log(contactInfo);
 const uni = [];
 
 for (let i = 0; i < graduates.length; i++) {
-  university.push(graduates[i].university);
+  uni.push(graduates[i].university);
 }  
 for (let i = 0; i < graduates.length; i++) {
-  if (university[i].includes("Uni")) {
-  uni.push(university[i]);
+  if (uni[i].includes("Uni")) {
+  uni.push(uni[i]);
   }
 }
 
@@ -167,8 +167,9 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
+
 const lowerPopulation = [];
-let bothNames = zooAnimals.forEach(function(i){
+let eachName = zooAnimals.forEach(function(i){
   animalNames.push(`Name: ${i.animal_name}, Scientific: ${i.scientific_name}`);
 });
 console.log(lowerPopulation);
@@ -180,7 +181,7 @@ The zoos need to know their total animal population across the United States.  F
 */
 const populationTotal = 0;
 
-let populationTotal = zooAnimals.reduce((populationTotal, populationAmount) => {
+let allpop = zooAnimals.reduce((populationTotal, populationAmount) => {
   return populationTotal + populationAmount.population;
 }, 0);
 
