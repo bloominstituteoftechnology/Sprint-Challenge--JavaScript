@@ -113,6 +113,16 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+
+for (let i = 0; i < graduates.length; i++) {
+  university.push(graduates[i].university);
+}  
+for (let i = 0; i < graduates.length; i++) {
+  if (university[i].includes("Uni")) {
+  uni.push(university[i]);
+  }
+}
+
 console.log(uni);
 
 
@@ -138,6 +148,9 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+let bothNames = zooAnimals.forEach(function(i){
+  animalNames.push(`Name: ${i.animal_name}, Scientific: ${i.scientific_name}`);
+});
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -155,6 +168,9 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const lowerPopulation = [];
+let bothNames = zooAnimals.forEach(function(i){
+  animalNames.push(`Name: ${i.animal_name}, Scientific: ${i.scientific_name}`);
+});
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
@@ -163,6 +179,11 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = 0;
+
+let populationTotal = zooAnimals.reduce((populationTotal, populationAmount) => {
+  return populationTotal + populationAmount.population;
+}, 0);
+
 console.log(populationTotal);
 
 
