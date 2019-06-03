@@ -41,7 +41,7 @@ return (`Hello ${param1} ${param2}, nice to meet you!`)
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: It can access the variable 'internal' the the callback it being made within the function
+// Explanation: It can access the variable 'internal' because the callback is being made within the function
 
 
 // const external = "I'm outside the function";
