@@ -2,8 +2,8 @@
 
 // Step 1: Create a higher-order function that accepts a callback
   // Create a higher-order function named consume that can take 3 parameters.
-  function consume (parameter1, parameter2, callback){
-    return parameter1, parameter2 , callback
+  const consume = function(parameter1, parameter2, callback) {
+    callback (parameter1 , parameter2)
   }
 
    // The first two parameters can accept any argument
@@ -14,7 +14,7 @@
 
 //Step 2: Create several functions to callback with consume();
   //Create a function named add that returns the sum of two numbers
-   function add (num1, num2){
+   function add (num1, num2,){
     return num1 + num2
    }
   
@@ -27,7 +27,7 @@
    //Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
      function greeting (firstName,lastName){
    
-      console.log ('Hello' + firstName + lastName)
+      console.log ('Hello' + firstName + lastName,'nice to meet you!')
      }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
