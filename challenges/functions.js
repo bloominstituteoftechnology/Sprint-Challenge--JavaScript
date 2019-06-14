@@ -8,7 +8,7 @@
  */
 
 function consume(num1, num2, cb) {
-  return cb(dog, cat);
+  return cb(num1, num2);
 }
 
 /* Step 2: Create several functions to callback with consume();
@@ -24,8 +24,8 @@ function multiply(num1, num2) {
   return num1 * num2;
 }
 
-function greeting(first, last) {
-  return `Hello ${first} ${last} nice to meet you!`;
+function greeting(num1, num2) {
+  return `Hello ${num1} ${num2} ,nice to meet you!`;
 }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
@@ -39,7 +39,7 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation:
+// Explanation: during the two passes that JS makes it scans the scope and finds access hoiseted
 
 const external = "I'm outside the function";
 
