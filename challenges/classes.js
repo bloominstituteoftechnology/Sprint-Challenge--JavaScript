@@ -20,6 +20,12 @@ class CuboidMaker{
     }
 }
 
+const cuboid = new CuboidMaker({
+    length: 4,
+    width: 5, 
+    height: 5
+  });
+
 // CuboidMaker.prototype.volume = function(){
 
 //     return this.length * this.width * this.height;
