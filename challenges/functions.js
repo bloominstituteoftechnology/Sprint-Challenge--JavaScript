@@ -24,11 +24,10 @@ const multiply = function(a, b){
 const greeting = function(firstName, lastName){
 return `Hello ${firstName} ${lastName}, nice to meet you!`;
 
-/* Step 3: Check your work by un-commenting the following calls to consume(): */
+// /* Step 3: Check your work by un-commenting the following calls to consume(): */
 consume(2,2,add); // 4
 consume(10,16,multiply); // 160
 consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
-
 
 // ==== Closures ==== 
 
@@ -49,3 +48,9 @@ function myFunction() {
   nestedFunction();
 }
 myFunction();
+
+function newFunction() {
+    consume(2, 2, add); // 4
+    consume(10, 16, multiply); // 160
+    consume("Mary", "Poppins", greeting);
+  }
