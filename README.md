@@ -29,14 +29,31 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+forEach does not return anything -> It only loops through all the elements within an array, .map can return three different values based on the default parameters of the callback function -> currentValue, index, array, thisArg.
 
 2. What is the difference between a function and a method?
+A function is a block of code that can be invoked by its name.
+A method is a block of code that is associated with a Object.
+A function lives on its own
+A method lives inside of an object
 
 3. What is closure?
+A closure is contained within the scope category which determines where variables can be accessed from. A defined function will remember the environment in which it was created. 
 
 4. Describe the four rules of the 'this' keyword.
+1)Window Binding
+This equal to the whole window *Bad behavior
+
+2)Impliciit Binding:To know what this means in this context, you look to the left of the dot notation where you are invoking a function.
+
+3)New Binding
+avaScript will create a brand new object for us and save it as this. So when you reference something like an Animal into a variable zebra this would mean zebra.
+
+4)Explicit Binding
+You tell what the this statement exactly references. 
 
 5. Why do we need super() in an extended class?
+Using super() to extend a class by giving the extended class access to the parents constructors. 
 
 ## Project Set up
 
