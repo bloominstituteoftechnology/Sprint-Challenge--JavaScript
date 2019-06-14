@@ -106,13 +106,20 @@ console.log(filteredItems);*/
 // console.log(uni);
 
 const uni = [];
-
-for(let i = 0; i < graduates.length; i++){
- if(graduates[i].university.includes('Uni')){
-   uni.push(graduates[i].university);
- }
-}
+const information = graduates.map((formerstu) => {
+  const included = formerstu.university.includes('Uni')
+  if (included === true){
+    uni.push(formerstu.university);
+  }
+});
 console.log(uni);
+
+// for(let i = 0; i < graduates.length; i++){
+//  if(graduates[i].university.includes('Uni')){
+//    uni.push(graduates[i].university);
+//  }
+// }
+// console.log(uni);
 
 // ==== ADVANCED Array Methods ====
 
