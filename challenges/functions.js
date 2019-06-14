@@ -20,13 +20,42 @@
 // consume(10,16,multiply); // 160
 // consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
+function consume (a, b, cb) {
+  return cb (a, b);
+}
 
+function add (a1, a2) {
+  return a1 + a2;
+}
+
+function multiply (a1, a2) {
+  return a1*a2;
+}
+
+function greeting (a1, a2) {
+  return `Hello ${a1} ${a2}, nice to meet you!`;
+}
+
+// consume(2,2,add); // 4
+// consume(10,16,multiply); // 160
+// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+
+// console.log(consume(2, 2, add));
+// consume(2, 2, add)
+// console.log(consume(10, 16, multiply));
+// consume(10, 16, multiply)
+// console.log(consume("Mary","Poppins", greeting));
+// consume("Mary","Poppins", greeting)
+
+console.log(consume(2, 2, add));
+console.log(consume(10, 16, multiply));
+console.log(consume("Mary","Poppins", greeting));
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-
+// nestedfunction() can access the variable 'internal' because it still has access to what is outside of itself, in this case the variable "internal." 
 
 const external = "I'm outside the function";
 
