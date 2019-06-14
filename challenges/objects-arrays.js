@@ -142,14 +142,14 @@ Log the result of your new array. */
 const contactInfo = [];
 
 for (let i = 0; i < graduates.length; i++) {
-  contactInfo.push(`{graduates[i].first_name} ${graduates[i].email}`);
+  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
 }
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 for (let i = 0; i < graduates.length; i++) {
-  if (graduates[i].university.includes("Uni")) {
+  if (graduates[i].university.includes("uni")) {
     uni.push(graduates[i.university]);
   }
 }
@@ -256,11 +256,16 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = zooAnimals.reduce(function(accumulator,currentValue) {
-  return accumulator + currentValue.population;
-})
+const populationTotal = zooAnimals.reduce((population, animal, index, zooAnimals) => {
+    return population + animal.population;
+},0);
 console.log(populationTotal);
 
+// const populationTotal = 0;
+// console.log(populationTotal);
+
+
+//The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 /* 
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
