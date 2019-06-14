@@ -7,7 +7,7 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-// const consume = [param1, param2, cb];
+
 
 function consume (x, y, cb) {
   return cb(x,y);
