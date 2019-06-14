@@ -30,6 +30,8 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.map is method on an array that creates a new array for you based on a criteria, whereas with .forEach you can loop through each item in the array, setting up the new array is not part of the syntax of the method.
+
 2. What is the difference between a function and a method?
 
 Methods are functions that are called on objects.
