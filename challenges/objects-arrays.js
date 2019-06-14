@@ -60,7 +60,8 @@ console.log(tyrannosaurus.speak());
 
 // Given an array of college graduates.  Complete the following requests using any array method you like
 
-const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern State College","email":"ctorry0@macromedia.com"},
+const graduates = [
+{"id":1,"first_name":"Cynde","university":"Missouri Southern State College","email":"ctorry0@macromedia.com"},
 {"id":2,"first_name":"Saundra","university":"The School of the Art Institute of Chicago","email":"swhal1@state.gov"},
 {"id":3,"first_name":"Lambert","university":"Marian College","email":"lparham2@techcrunch.com"},
 {"id":4,"first_name":"Modestine","university":"International Medical & Technological University","email":"mdolder3@symantec.com"},
@@ -75,6 +76,13 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+
+// const uniList = graduates.forEach(function (grad) {
+//     universities.push(grad.university);
+// })
+
+const uniList = graduates.forEach((grad) => {universities.push(grad.university)});
+const uniListAlpha = universities.sort();
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student.
@@ -84,11 +92,38 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+// const info = graduates.forEach(function (grad) {
+//     contactInfo.push(`${grad.first_name} ${grad.email}`)
+// });
+
+const info = graduates.forEach((grad) => {contactInfo.push(`${grad.first_name} ${grad.email}`)});
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+// University Array
+const uniList3 = [];
+// Filters out universities for uniList3
+/*
+const uniListFilter = graduates.forEach(function (grad) {
+    uniList3.push(grad.university);
+})
+console.log(uniList3);
+// Scan for 'Uni' string and puish to uni
+const uniFilter = uniList3.forEach(function (grad) {
+    if (grad.includes("Uni")) {
+        uni.push(grad);
+    }
+})
+*/
+// Arrow functions
+const uniListFilter = graduates.forEach((grad) => {uniList3.push(grad.university)});
+const uniFilter = uniList3.forEach((grad) => {
+    if (grad.includes("Uni")) {
+        uni.push(grad);
+}});
+
 console.log(uni);
 
 
