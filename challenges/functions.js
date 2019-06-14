@@ -7,6 +7,11 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
+// const consume = [param1, param2, cb];
+
+function consume (x, y, cb) {
+  return cb(x,y);
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -15,10 +20,24 @@
 */
 
 
+
+function add(a, b) {
+  return a + b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function greeting(first, last) {
+     return `Hello ${first} ${last}, nice to meet you!`;
+}
+
+
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -27,6 +46,7 @@
 
 // Explanation: 
 
+// Because the function body has access to variables that are defined outside the function body.
 
 const external = "I'm outside the function";
 
