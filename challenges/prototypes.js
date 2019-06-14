@@ -19,7 +19,7 @@ let CuboidMaker = (length, width, height) => {
   Formula for cuboid volume: length * width * height
 */
 
-CuboidMaker.prototype.findVolume = () => {
+CuboidMaker.prototype.findVolume = function() {
   return this.length * this.width * this.height;
 }
 
@@ -29,7 +29,7 @@ CuboidMaker.prototype.findVolume = () => {
   Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 */
 
-CuboidMaker.prototype.findSurfaceArea = () => {
+CuboidMaker.prototype.findSurfaceArea = function() {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 }
 
