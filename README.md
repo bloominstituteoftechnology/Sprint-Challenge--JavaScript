@@ -61,6 +61,8 @@ Follow these steps to set up and work on your project:
 - [*] Implement the project on your Branch, committing changes regularly.
 - [*] Push commits: git push origin `<firstName-lastName>`.
 
+
+
 Follow these steps for completing your project:
 
 - [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
