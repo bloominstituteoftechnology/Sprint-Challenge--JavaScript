@@ -5,7 +5,7 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
-
+console.log(`**********objects-arrays.js**********`)
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 tyrannosaurus = {
   name: `Tyrannosaurus`,
@@ -149,3 +149,4 @@ Stretch: If you haven't already, convert your array method callbacks into arrow 
 
 */
 
+console.log(`**********objects-arrays.js**********`)
