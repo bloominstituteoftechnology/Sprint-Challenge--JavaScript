@@ -51,7 +51,7 @@ console.log(stegosaurus.length);
 // What time period did tyrannosaurus live in?
 console.log(tyrannosaurus.period);
 
-tyrannosaurus.roar = () => { return "RAWERSRARARWERSARARARRRR!" }
+tyrannosaurus.roar = () =>  "RAWERSRARARWERSARARARRRR!";
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 console.log(tyrannosaurus.roar());
 
@@ -130,7 +130,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
-const lowerCaseTmp = zooAnimals.map((x) => { return x.animal_name.toLowerCase()})
+const lowerCaseTmp = zooAnimals.map((x) => x.animal_name.toLowerCase());
 lowerCase.push(lowerCaseTmp)
 console.log(lowerCase); 
 
@@ -141,7 +141,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 */
 
 const lowerPopulation = [];
-const lowerCountTmp = zooAnimals.filter((x) => { return x.population < 5;});
+const lowerCountTmp = zooAnimals.filter((x) => x.population < 5);
 lowerPopulation.push(lowerCountTmp)
 console.log(lowerPopulation);
 

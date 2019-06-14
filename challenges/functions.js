@@ -7,8 +7,8 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-sayIt = (x) => { console.log (x) } // Just for the output
-const sayMyName = (first,last,cb) => { return cb(first + last )};
+sayIt = (x) => console.log (x); // Just for the output
+const sayMyName = (first,last,cb) =>  cb(first + last );
 sayMyName('Noor ','Al Darraji',sayIt)
 
 /* Step 2: Create several functions to callback with consume();
@@ -17,11 +17,11 @@ sayMyName('Noor ','Al Darraji',sayIt)
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-const consume = (p1 , p2 , cb) => {console.log (cb(p1, p2)) };
+const consume = (p1 , p2 , cb) => console.log (cb(p1, p2));
 
-add = (x, y) => { return ( x + y )};
-multiply = (x, y) => { return ( x * y )};
-greeting = (first , last) => { return `Hello ${first} ${last}, nice to meet you!`};
+add = (x, y) => ( x + y );
+multiply = (x, y) =>  ( x * y );
+greeting = (first , last) => `Hello ${first} ${last}, nice to meet you!`;
 
 
 
