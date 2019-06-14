@@ -32,7 +32,7 @@ Edit this document to include your answers after each question. Make sure to lea
 Answer: Map creates new array and forEach executes on provided array.
 
 2. What is the difference between a function and a method?
-Answer: Both are functions, but a method is a function which is property of an object. 
+Answer: Both functions, but method is a function which is property of an object. 
 
 3. What is closure?
 Answer: Closure is where in nested functions, inner functions have access to outer function variables. 
@@ -45,7 +45,7 @@ c. new binding = Whenever constructor function is used, this refers to instance 
 d. explicit binding - when JS call or apply methods are used, this is explicity defined. 
 
 5. Why do we need super() in an extended class? 
-Answer: Super() binds 'this' to base class. 
+Answer: Super() binds 'this' to base classes. 
 
 ## Project Set up
 
