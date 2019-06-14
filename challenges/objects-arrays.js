@@ -105,6 +105,15 @@ console.log(filteredItems);*/
 // });
 // console.log(uni);
 
+const uni = [];
+
+for(let i = 0; i < graduates.length; i++){
+ if(graduates[i].university.includes('Uni')){
+   uni.push(graduates[i].university);
+ }
+}
+console.log(uni);
+
 // ==== ADVANCED Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
@@ -140,6 +149,9 @@ const tolowercase = zooAnimals.map((lower) => {
 });
 console.log(lowerCase);
 
+
+
+/*
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */

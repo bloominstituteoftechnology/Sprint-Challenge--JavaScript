@@ -30,4 +30,33 @@
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
 
+function CuboidMaker (props) {
+  this.length = props.length;
+  this.width = props.width;
+  this.height = props.height;
+}
 
+CuboidMaker.prototype.volume = function () {
+  return this.length * this.width * this.height;
+}
+
+CuboidMaker.prototype.sa = function () {
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+}
+function SmallCube(props) {
+  CuboidMaker.call(this, props);
+}
+
+SmallCube.prototype = Object.create(CuboidMaker.prototype);
+
+const cuboid = new SmallCube ({
+  length: 4,
+  width: 5,
+  height: 5
+})
+
+
+// CuboidMaker.prototype.surfaceArea = function 
+
+console.log(cuboid.volume()); // 100
+console.log(cuboid.sa()); // 130
