@@ -14,8 +14,7 @@ const tyrannosaurus = {
   weight: '7000kg',
   length: '12m',
   period: 'Late Cretaceous',
-  roar: function() {return 'RAWERSRARARWERSARARARRRR!'},
-
+  
 };
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -55,9 +54,12 @@ console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+tyrannosaurus.roar = function () {
+  return "RAWERSRARARWERSARARARRRR!"
+}
 
 
-console.log(tyrannosaurus.roar);
+console.log(tyrannosaurus.roar());
 
 
 
@@ -168,9 +170,24 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
 
-populationTotal = zooAnimals.reduce((total, pop) => total + pop.population);
+const populationTotal = [];
+const num = [];
+
+for (let i = 0; i<zooAnimals.length; i++){
+  console.log(zooAnimals[i].population);
+  num.push(zooAnimals[i].population);
+}
+console.log(num);
+
+
+
+function getSum(total, numb) {
+  return total + numb
+}
+
+num.reduce(getSum);
+populationTotal.push(num);
 
 console.log(populationTotal);
 
