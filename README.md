@@ -30,13 +30,35 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.forEach runs through an array and applies a certain set of instructions on each element.
+.map creates a new array from another array while applying a certain set of criteria.
+
 2. What is the difference between a function and a method?
+
+A method is a function that is a property of an object.
 
 3. What is closure?
 
+The area within the scope of a function where values only exist within, unless returned.
+An isolated environment created by the function, if you will.
+
 4. Describe the four rules of the 'this' keyword.
 
+Window/Global Object Binging
+    When 'this' is in the Global Scope, its value is the window/console Object
+
+Implicit Binding
+    When 'this' is used before a function with a .
+
+New Binding
+    'this' refers to a specific instance of an object created and returned by a constructor function.
+
+Explicit Binding
+    Whenever .bind or .apply is used, 'this' becomes explicitly defined.
+
 5. Why do we need super() in an extended class?
+
+It allows the child object to access and call functions from its parent object.
 
 ## Project Set up
 
@@ -65,11 +87,11 @@ Your finished project must include all of the following requirements:
 **Pro tip for this challenge: If something seems like it isn't working locally, copy and paste your code up to codepen and take another look at the console.**
 
 ## Task 1: Objects and Arrays
-Test your knowledge of objects and arrays. 
+Test your knowledge of objects and arrays.
 * [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
-This challenge takes a look at callbacks and closures as well as scope. 
+This challenge takes a look at callbacks and closures as well as scope.
 * [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
