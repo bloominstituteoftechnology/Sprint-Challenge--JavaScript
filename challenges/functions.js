@@ -46,7 +46,7 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 
 // Explanation: 
 
-// Because the function body has access to variables that are defined outside the function body.
+// Because of closure! The function body has access to variables that are defined outside the function body.
 
 const external = "I'm outside the function";
 
