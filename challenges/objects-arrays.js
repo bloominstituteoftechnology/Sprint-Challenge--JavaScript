@@ -257,12 +257,13 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = zooAnimals.reduce((population, animal, index, zooAnimals) => {
-    return population + animal.population;
+  console.log(`i am the accumulator ${population}`);
+  console.log(`i am the currentValue ${animal}`)  
+  return population + animal.population;
 },0);
 console.log(populationTotal);
 
-// const populationTotal = 0;
-// console.log(populationTotal);
+
 
 
 //The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
