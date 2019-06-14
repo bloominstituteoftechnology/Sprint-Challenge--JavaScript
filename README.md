@@ -44,6 +44,8 @@ The first rule of the 'this' keyword is that if you use it in global scope it wi
 
 5. Why do we need super() in an extended class?
 
+We need super() to take in the new parameter associated with the extended class and bind it the key-value pairs from the previous classes that it extends from.
+
 ## Project Set up
 
 Follow these steps to set up and work on your project:
