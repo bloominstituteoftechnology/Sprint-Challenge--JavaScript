@@ -40,6 +40,8 @@ Closure is the idea of global vs function scope. Something that is in global sco
 
 4. Describe the four rules of the 'this' keyword.
 
+The first rule of the 'this' keyword is that if you use it in global scope it will bind to the whole window. The second rule is that if you use it before a method, it will refer to the object that it is within. The third rule is that if you create a constructor function and instantiate a new object, you can call this. Finally, you can use this with explicit binding such as .call or .apply to override previous behaviors of an object.
+
 5. Why do we need super() in an extended class?
 
 ## Project Set up
