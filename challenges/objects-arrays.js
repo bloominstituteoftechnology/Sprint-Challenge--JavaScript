@@ -31,7 +31,13 @@ console.log(dinosaur1.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+var obj = {
+  foo() {
+    return 'RAWERSRARARWERSARARARRRR';
+  }
+}
+
+console.log(obj.dinosaur1());
 
 
 // ==== Arrays ====
