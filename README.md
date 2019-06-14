@@ -36,6 +36,8 @@ Methods are functions that are called on objects.
 
 3. What is closure?
 
+Closure is the idea of global vs function scope. Something that is in global scope can seep down into a function, but something that is in function scope cannot jump out to the global scope.
+
 4. Describe the four rules of the 'this' keyword.
 
 5. Why do we need super() in an extended class?
