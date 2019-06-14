@@ -29,14 +29,16 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+    .map creates a new array and doesn't affect the original array; whereas, .forEach does affect the original array
 
 2. What is the difference between a function and a method?
-
+    A method is a function within an object, and a function is simply that. 
 3. What is closure?
-
+    Every function has an execution context, which gives the variables within said function a reference to the parent’s environment. This reference makes all variables in the parent scope available for all inner functions.
 4. Describe the four rules of the 'this' keyword.
 
 5. Why do we need super() in an extended class?
+    Super is used in conjunction with "extends." Super is used to access and call functions on an object's Parent & allows for access to all the argumets. You also need extends since it essentially tells super where to go to access the properties and methods of what was extended (i.e. it points the child to the right spot - Parent).
 
 ## Project Set up
 
