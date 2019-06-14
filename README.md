@@ -35,7 +35,7 @@ Edit this document to include your answers after each question. Make sure to lea
 3. What is closure?
 
 4. Describe the four rules of the 'this' keyword.
-
+implicit explicit global
 5. Why do we need super() in an extended class?
 
 ## Project Set up
