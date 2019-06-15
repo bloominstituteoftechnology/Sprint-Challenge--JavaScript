@@ -14,19 +14,19 @@ function consume(num1, num2, callback) {
   return callback(num1, num2) 
 }
 
-// function add(num1, num2) {
-// return num1 + num2
-// }
+function add(num1, num2) {
+return num1 + num2
+}
 
-// console.log(consume(1,4, add))
+console.log(consume(1,4, add))
 
 
 
-// function subtract(num1, num2) {
-//   return num1 - num2;
-// }
+function subtract(num1, num2) {
+  return num1 - num2;
+}
 
-// console.log(consume(5,4, subtract))
+console.log(consume(5,4, subtract))
 
 
 
