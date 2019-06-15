@@ -6,7 +6,7 @@
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
 
-let CuboidMaker = (attr) => {
+function CuboidMaker(attr){
   console.log(attr)
   this.length = attr.length;
   this.width = attr.width;
