@@ -79,7 +79,7 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+const uni = graduates.filter (str => str.university.includes ('Uni'));
 console.log(uni);
 
 
@@ -113,7 +113,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
+const lowerCase = zoo ;
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
