@@ -6,10 +6,11 @@
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
 
-let CuboidMaker = (length, width, height) => {
-  this.length = length;
-  this.width = width;
-  this.height = height;
+let CuboidMaker = (attr) => {
+  console.log(attr)
+  this.length = attr.length;
+  this.width = attr.width;
+  this.height = attr.height;
 }
 
 
@@ -18,8 +19,7 @@ let CuboidMaker = (length, width, height) => {
   
   Formula for cuboid volume: length * width * height
 */
-
-CuboidMaker.prototype.findVolume = function() {
+CuboidMaker.prototype.findVolume = function(){
   return this.length * this.width * this.height;
 }
 
@@ -29,7 +29,7 @@ CuboidMaker.prototype.findVolume = function() {
   Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 */
 
-CuboidMaker.prototype.findSurfaceArea = function() {
+CuboidMaker.prototype.findSurfaceArea = function(){
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 }
 
@@ -39,7 +39,12 @@ CuboidMaker.prototype.findSurfaceArea = function() {
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
 
-let cuboid = new CuboidMaker(4, 5, 5);
+// let cuboid = new CuboidMaker(4, 5, 5);
+const cuboid = new CuboidMaker ({
+  length: 4,
+  width: 5,
+  height: 5,
+});
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.findVolume()); // 100
