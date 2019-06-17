@@ -21,11 +21,6 @@ class CuboidMaker {
             super(volume)
         }
 
-        let cube = new Cuboid({
-            length:4, 
-            width: 5,
-            height:5
-        })
            
   
 //   CuboidMaker.prototype.volume = function (){
