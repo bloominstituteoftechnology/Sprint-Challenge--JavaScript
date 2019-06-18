@@ -16,6 +16,7 @@ const tyrannosaurus = {
   speak: function () {
     console.log ('RAWERSRARARWERSARARARRRR!')
   }
+}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const stegosaurus = {
   name: 'Stegosaurus',
@@ -142,9 +143,9 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const lowerPopulation = [];
-const results = zooAnimals.filter(pop => pop.length < 5); 
+const results = lowerPopulation.filter(pop => pop.length < 5); 
   
-}
+
 console.log(results);
 
 /* Request 4: .reduce() 
@@ -153,7 +154,9 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = 0;
-console.log(populationTotal);
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+console.log(populationTotal.reduce(reducer));
 
 
 /* 
@@ -161,4 +164,5 @@ console.log(populationTotal);
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
+
 
