@@ -7,18 +7,20 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-function consume(item1, item2, callback){
-  callback(item1, item2);
+function consume(input1, input2, callback){
+  return callback(input1, input2);
 }
+
+
+
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-
-function add(item1, item2){
-  return (item1 + item2);
+function add(input1, input2){
+  return input1+input2;
 }
 
 function multiply(item1, item2){
