@@ -29,33 +29,43 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+- The forEach() method doesn’t actually return anything (undefined). It simply calls a provided function on each element in an array. This callback is allowed to mutate the calling array.
+- Meanwhile, the map() method will also call a provided function on every element in the array. The difference is that map() utilizes return values and actually returns a new Array of the same size.
 
 2. What is the difference between a function and a method?
+- Functions and methods both are functions in JavaScript. A method is just a function which is a property of an object.
 
 3. What is closure?
+- A closure is the combination of a function bundled together with references to its surrounding state. In other words, a closure gives access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
 
 4. Describe the four rules of the 'this' keyword.
+    - 1. Whenever a function is contained in the global scope, the value of this inside of that function will be the window object.
+    - 2. Whenever a function is called by a preceding dot, the object before that dot is this.
+    - 3. Whenever a constructor function is used, this refers to the specific instance of the object that is created and returned by the constructor function.
+    - 4. Whenever JavaScript’s call or apply method is used, this is explicitly defined.
 
 5. Why do we need super() in an extended class?
+- The super keyword is used to access and call functions on an object's parent.
+    When used in a constructor, the super keyword appears alone and must be used before the this keyword is used. The super keyword can also be used to call functions on a parent object.
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-- [ ] You are now ready to build this project with your preferred IDE
-- [ ] Implement the project on your Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add PM as collaborator on Github.
+- [X] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [X] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [X] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+- [X] You are now ready to build this project with your preferred IDE
+- [X] Implement the project on your Branch, committing changes regularly.
+- [X] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [X] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [X] Add your Project Manager as a Reviewer on the Pull-request
+- [X] PM then will count the HW as done by  merging the branch back into master.
 
 
 ## Minimum Viable Product
@@ -66,19 +76,19 @@ Your finished project must include all of the following requirements:
 
 ## Task 1: Objects and Arrays
 Test your knowledge of objects and arrays. 
-* [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
+* [X] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
 This challenge takes a look at callbacks and closures as well as scope. 
-* [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
+* [X] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
-* [ ] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
+* [X] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
 
 ## Task 4: Classes
 Once you have completed the prototypes challenge, it's time to convert all your hard work into classes.
-* [ ] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
+* [X] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
 
 In your solutions, it is essential that you follow best practices and produce clean and professional results. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
