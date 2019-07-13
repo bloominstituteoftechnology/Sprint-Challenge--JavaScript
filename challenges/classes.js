@@ -29,3 +29,21 @@ Find out the formulas for volume and surface area for cubes and create those met
 using the dimension properties from CuboidMaker.  
 Test your work by logging out your volume and surface area.
 */
+
+class CubeMaker extends CuboidMaker{
+  constructor(cubeAttributes){
+    super(cubeAttributes);
+  }
+    cubeArea() {
+      // A=6a2 formula for surface area
+      return 6 * (this.length * this.length);
+  }
+}
+
+const Cube = new CubeMaker({
+  length: 4,
+  width: 6,
+  height: 8,
+});
+
+console.log(Cube.cubeArea());
