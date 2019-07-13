@@ -7,28 +7,52 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
+let dynoOne = {
+  name: "tyrannosaurus", 
+  diet: "carnivorous",
+  weight: "7000kg",
+  length: "12m",
+  period: "Late Cretacaous"
+}
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+let dynoTwo = {
+  name: "stegosaurus",
+  diet: "herbivorous",
+  weight: "2000kg",
+  length: "9m",
+  period: "Jurassic"
+}
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
+let dynoThree = {
+  name: "velociraptor",
+  diet: "carnivorous",
+  weight: "15kg",
+  length: "1.8m",
+  period: "Cretacaous"
+}
 
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(dynoOne.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(dynoThree.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(dynoTwo.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(dynoOne.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+dynoOne.roar = function (rawr) {
+  return "RAWERSRARARWERSARARARRRR!";
+}
+console.log(dynoOne.roar());
 
 
 // ==== Arrays ====
