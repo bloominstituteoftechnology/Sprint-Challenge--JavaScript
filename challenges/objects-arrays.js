@@ -118,13 +118,11 @@ like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
 
-// const animalNames = () => {
-//   zooAnimals.forEach((animal) => {
-//     return `Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}.`
-//   });
-// }
+const animalNames = zooAnimals.forEach((animal) => {
+  return `Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}`;
+});
 
-// console.log(animalNames());
+console.log(animalNames);
 
 /* Request 2: .map()    
 
