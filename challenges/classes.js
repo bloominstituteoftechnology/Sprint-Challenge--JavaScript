@@ -11,7 +11,7 @@ class CuboidMaker {
     
     Formula for cuboid volume: length * width * height
   */
- let Volume = "";
+
  class Volume extends CuboidMaker = {
     constructor(surfaceAttrs){
         super(surfaceAttrs);
@@ -20,7 +20,7 @@ class CuboidMaker {
         this.width = surfaceAttrs.width;
     }
     demo(surfaceAttrs) {
-    return this.length * this.width + this.length * this.height + this.width * this.height;
+        return this.length * this.width * this.height;
   };
 
   
@@ -29,7 +29,7 @@ class CuboidMaker {
   
     Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
   */
-let SurfaceArea = "";
+
  class SurfaceArea extends CuboidMaker = {
     constructor(surfaceAttrs){
         super(surfaceAttrs);
@@ -38,7 +38,7 @@ let SurfaceArea = "";
         this.width = surfaceAttrs.width;
     }
     demo(surfaceAttrs) {
-    return this.length * this.width + this.length * this.height + this.width * this.height;
+        return this.length * this.width + this.length * this.height + this.width * this.height;
   };
 
 
