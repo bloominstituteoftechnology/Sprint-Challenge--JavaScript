@@ -122,15 +122,15 @@ Return an array with only the animal and scientific names in it.  The individual
 should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const animalNames = [{Name: "Jackal", Location: "asiatic", Scientific: "Canis aureus."}, {Name: Lion, Location: "african", Scientific: Canis"}, 
+const animalNames = [{Name: "Jackal", Location: "asiatic", Scientific: "Canis aureus."}, {Name: "Lion", Location: "african", Scientific: "Canis"}, 
 {Name: "Tiger", Location: "asiatic", Scientific: "Canis india"}];
 
 let fullNames = [];
-fullNames.forEach((animal) => {
+animalNames.forEach((animal) => {
     let full = animal.Name + ' ' + animal.Scientific;
     fullNames.push(full); 
 });
-console.log(animalNames);
+console.log(fullNames);
 /* Request 2: .map()    
 
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
