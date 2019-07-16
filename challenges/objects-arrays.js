@@ -107,6 +107,9 @@ for (let i = 0; i < graduates.length; i++) {
 }
 console.log(uni);
 
+// const uni = graduates.filter((grad) => 
+// grad.university "Uni");
+// console.log(uni);
 
 // ==== ADVANCED Array Methods ====
 
