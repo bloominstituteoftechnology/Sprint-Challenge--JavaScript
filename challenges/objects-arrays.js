@@ -83,16 +83,21 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = [
-  {Name: "Cynde", 
-  email: "ctorry0@macromedia.com"}, 
-  {Name: "Saundra",
-  email: "swhal1@state.gov"},
-  {Name: "Lambert",
-  email: "lparham2@techcrunch.com"},
-  {Name: "Modestine", email: "mdolder3@symantec.com"}];
-console.log(contactInfo);
-
+//const contactInfo = [
+//  {Name: "Cynde", 
+//  email: "ctorry0@macromedia.com"}, 
+//  {Name: "Saundra",
+//  email: "swhal1@state.gov"},
+//  {Name: "Lambert",
+//  email: "lparham2@techcrunch.com"},
+//  {Name: "Modestine", email: "mdolder3@symantec.com"}];
+//console.log(contactInfo);
+let students = [];
+graduates.forEach((student) => {
+    let full = student.first_name + ' ' + student.email;
+    students.push(full); 
+});
+console.log(students);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 //const uni = universities.indexOf("Uni");
