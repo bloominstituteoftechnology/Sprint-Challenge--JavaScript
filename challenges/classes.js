@@ -6,7 +6,10 @@ class CuboidMaker {
         this.height = attrs.height;
   };
   volume = () => {return this.length * this.width * this.height;};
+  surfaceArea = () => {return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)};
 };
+
+
 
   
   /* == Step 2: Volume Method ==
@@ -27,20 +30,20 @@ class CuboidMaker {
   
   /* == Step 3: Surface Area Method ==
     Create another method using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
-  
+  SEE ABOVE
     Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
   */
 
- class SurfaceArea extends CuboidMaker = {
-    constructor(surfaceAttrs){
-        super(surfaceAttrs);
-        this.length = surfaceAttrs.length;
-        this.height = surfaceAttrs.height;
-        this.width = surfaceAttrs.width;
-    }
-    demo(surfaceAttrs) {
-        return this.length * this.width + this.length * this.height + this.width * this.height;
-  };
+ //class SurfaceArea extends CuboidMaker = {
+ //   constructor(surfaceAttrs){
+//        super(surfaceAttrs);
+//        this.length = surfaceAttrs.length;
+//        this.height = surfaceAttrs.height;
+//        this.width = surfaceAttrs.width;
+//    }
+//    demo(surfaceAttrs) {
+//        return this.length * this.width + this.length * this.height + this.width * this.height;
+//  };
 
 
 
