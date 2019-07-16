@@ -7,10 +7,10 @@ class CuboidMaker {
     this.height = attr.height
   }
 volume() {
-    returns `${this.length} *  ${this.width} * ${this.height}`;
+    return (this.length *  this.width * this.height);
   }
  surfaceArea() {
-    returns `2 * ${this.length} * ${this.width} + ${this.length} * ${this.height} + ${this.width} * ${this.height}`
+    return (2 * (this.length * this.width + this.length * this.height + this.width * this.height));
   }
 }
 
@@ -18,7 +18,7 @@ const cuboid = new CuboidMaker({
     length: 4,
     width: 5,
     height: 5,
-    volume: 4,
+    volume: 10,
     surfaceArea: 13
   });
 

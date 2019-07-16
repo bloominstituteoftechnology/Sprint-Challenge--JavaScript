@@ -10,11 +10,11 @@ function sumNums(x, y, cb) {
   return cb(x+y)
 }
 
-let consume = sumNums(13,24, function(answer){
+let nums = sumNums(13,24, function(answer){
   return answer;
 });
 
-// console.log(consume);
+console.log(nums);
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -22,32 +22,13 @@ let consume = sumNums(13,24, function(answer){
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add(x,y,cb) {
-  return cb(x+y)
-};
+const consume = (arr1,arr2, cb) => cb(arr1, arr2);
 
-let nums = add(2,2, consume => {
-  return consume;
-});
+const add = (arr1, arr2) => arr1 + arr2;
 
+const multiply = (arr1, arr2) => arr1 * arr2;
 
-
-
-function multiply(a,b, cb) {
-  return cb(a*b)
-}
-
-let letters = multiply(10,16, consume => {
-  return consume;
-})
-
-function greeting(words,saying, cb) {
-  return `Hello ${words} ${saying}, nice to meet you!`
-};
-
-let saying = greeting('Mary', 'Poppins', consume => {
-  return consume;
-})
+const greeting = (arr1, arr2) => `Hello ${this.arr1} ${this.arr2}, nice to meet you!`
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
