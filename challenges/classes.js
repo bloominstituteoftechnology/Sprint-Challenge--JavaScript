@@ -11,20 +11,18 @@ class CuboidMaker {
   
   /* == Step 2: Volume Method ==
     Create a method using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
-    
+    SEE ABOVE METHOD
     Formula for cuboid volume: length * width * height
   */
 
- class Volume extends CuboidMaker = {
-    constructor(surfaceAttrs){
-        super(surfaceAttrs);
-        this.length = surfaceAttrs.length;
-        this.height = surfaceAttrs.height;
-        this.width = surfaceAttrs.width;
-    }
-    demo(surfaceAttrs) {
-        return this.length * this.width * this.height;
-  };
+ //class Volume extends CuboidMaker = {
+ //   constructor(surfaceAttrs){
+ //       super(surfaceAttrs);
+ //       this.length = surfaceAttrs.length;
+ //       this.height = surfaceAttrs.height;
+ //       this.width = surfaceAttrs.width;
+ //   }
+ // };
 
   
   /* == Step 3: Surface Area Method ==
