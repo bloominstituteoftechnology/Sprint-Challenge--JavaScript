@@ -43,7 +43,7 @@ function greeting (firstname, lastname, callback){
 // consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
-// ==== Closures ==== 
+// ==== Closures ==== jdjdjdjdjdj
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
