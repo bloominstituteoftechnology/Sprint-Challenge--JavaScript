@@ -118,9 +118,9 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = graduates.map ((university) =>{
-  return {"university":graduates.university};
-})
+const universities = graduates.map( function (schools){
+  return schools.university.sort(schools);
+});
 
 console.log(universities);
 
