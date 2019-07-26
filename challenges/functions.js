@@ -6,7 +6,9 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-
+function laserFocus (apple, bananas, callback){
+  callback(apple, bananas)
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -47,7 +49,7 @@ function greeting (firstname, lastname, callback){
 
 // Explanation: 
 
-
+//Because it is inside the same function scope
 const external = "I'm outside the function";
 
 function myFunction() {
