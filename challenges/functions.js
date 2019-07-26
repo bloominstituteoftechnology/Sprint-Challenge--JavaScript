@@ -6,7 +6,21 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
+const items = ['Pots', 'Pans', 'Strainer', 'Fridge'];
 
+function contains(items, list, cb) {
+  for (let i = 0; i < list.lenght; i++){
+    if (item === list[i]){
+      return cb(true);
+    } else {
+      return cb(false);
+    }
+  }
+}
+
+contains(items, function(){
+  console.log();
+});
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
