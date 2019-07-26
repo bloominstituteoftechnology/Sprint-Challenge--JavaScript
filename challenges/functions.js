@@ -6,10 +6,10 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-const consume = function (x , y, cb) {
-  return cb()
-  
+const consume = function (x, y, cb) {
+  console.log(cb(x , y));
 }
+  
 
 
     
@@ -42,7 +42,8 @@ consume(2,2,add); // 4
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: nestedfunction can access anything within its own scope of myFunction or any scope greater than it.
+
 
 
 const external = "I'm outside the function";
