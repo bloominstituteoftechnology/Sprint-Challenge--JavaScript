@@ -13,6 +13,26 @@
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+function add(num1, num2, callback){
+  callback(num1+num2)
+}
+
+add(4, 5, function(sun){
+  console.log(sun)
+})
+
+function multiply(pro1, pro2, callback){
+  callback(pro1*pro2)
+}
+
+multiply(10, 11, function(moon){
+  console.log(moon)
+})
+
+function greeting (firstname, lastname, callback){
+  callback(`Hello ${firstname} ${lastname}, nice to meet you!`)
+
+}
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
