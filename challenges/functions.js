@@ -15,34 +15,30 @@ function laserFocus (apple, bananas, callback){
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add(num1, num2, callback){
-  callback(num1+num2)
+function consume(par1, par2, callback){
+  return callback(par1, par2);
 }
 
-add(4, 5, function(sun){
-  console.log(sun)
-})
 
-function multiply(pro1, pro2, callback){
-  callback(pro1*pro2)
+function add(par1, par2){
+  return par1 + par2; 
 }
 
-multiply(10, 11, function(moon){
-  console.log(moon)
-})
+function multiply(par1, par2){
+  return par1 * par2;
+}
 
-function greeting (firstname, lastname, callback){
-  callback(`Hello ${firstname} ${lastname}, nice to meet you!`)
-
+function greeting(firstName, lastName){
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
 }
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2,2,add)); // 4
+console.log(consume(10,16,multiply)); // 160
+console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
-// ==== Closures ==== jdjdjdjdjdjjfjfjffjf
+// ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 

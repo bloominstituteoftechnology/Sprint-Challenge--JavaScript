@@ -91,13 +91,8 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
-for (i = 0; i < graduates.length; i++) {
-  graduates[i].university;
-  if (university == "Uni"){
-    uni.push(graduates[i].university);
-  }
-}
+const uni = graduates.filter((object, index, arr)=>{
+  return object.university.includes("Uni") ;});
 console.log(uni);
 
 
@@ -123,6 +118,11 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 
 */
 const animalNames = [];
+zooAnimals.forEach((object, index, arr) => {
+  let NewName = "Name:" + " " + object.animal_name + ", " + "Scientific:" + " " + object.scientific_name + "." ;
+
+  animalNames.push(NewName);
+}); 
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -130,16 +130,17 @@ console.log(animalNames);
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
-
-const lowerCase = [];
-console.log(lowerCase); 
-
+let lowerCase = zooAnimals.map((object, index, arr) =>{
+  return object.animal_name.toLowerCase();
+});
+console.log(lowerCase);
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const lowerPopulation = [];
+const lowerPopulation = zooAnimals.filter((object, index, arr)=>{
+  return object.population < 5;});
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
@@ -147,7 +148,9 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+const populationTotal = zooAnimals.reduce((acc, curr) => {
+  return acc + curr.population;
+},0);
 console.log(populationTotal);
 
 
