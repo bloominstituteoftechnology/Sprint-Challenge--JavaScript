@@ -2,9 +2,21 @@
 
 // Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge.
 
+// Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge.
+
+
 /* == Step 1: Base Constructor ==
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
+
+
+function CuboidMaker(length, width, height){
+  this.length = length;
+  this.width = width;
+  this.height =  height;
+  this.volume = (this.length * this.width * this.height);
+  this.surfaceArea = (2 * (this.length * this.width + this.length * this.height + this.width * this.height));
+}
 
 
 /* == Step 2: Volume Method ==
@@ -14,6 +26,13 @@
 */
 
 
+CuboidMaker.prototype.getVolume = function(){
+  return this.volume;
+}
+
+
+
+
 /* == Step 3: Surface Area Method ==
   Create another method using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
 
@@ -21,13 +40,23 @@
 */
 
 
+CuboidMaker.prototype.getSurfaceArea = function() {
+  return this.surfaceArea;
+}
+
+
+
+
 /* == Step 4: Create a new object that uses CuboidMaker ==
   Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
 
-// Test your volume and surfaceArea methods by uncommenting the logs below:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
 
+let prism = new CuboidMaker(4, 5, 5);
+
+
+// Test your volume and surfaceArea methods by uncommenting the logs below:
+console.log(prism.getVolume()); // 100
+console.log(prism.getSurfaceArea()); // 130
 
