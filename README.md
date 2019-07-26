@@ -36,7 +36,15 @@ Edit this document to include your answers after each question. Make sure to lea
 
 4. Describe the four rules of the 'this' keyword.
 
+  1.Window binding-a way to insure consistancy with in envoraments
+  2.implicit-referfes to the let of the do when invoking a fuction
+  3.New binding-allows you to add a new object inside of a constructer
+  4.explicit-Explicit binding of this occurs when .call(), .apply(), or .bind() are used on a function.
+
+
+
 5. Why do we need super() in an extended class?
+super is what includes the the parent class paramiters,then confirms to the parent that it has them 
 
 ## Project Set up
 
