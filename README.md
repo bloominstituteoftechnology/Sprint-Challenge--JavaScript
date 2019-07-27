@@ -1,3 +1,27 @@
+1.Describe the biggest difference between .forEach & .map.
+
+forEach will executes a provided function once for each array and map creates a new array with the result of calling a provided function on every element in calling the array.
+
+2.What is the difference between a function and a method?
+
+Function will return a value and a method does not.
+
+3.What is closure?
+
+Closures gives you access to an outer function's scope from an inner function.
+
+4.Describe the four rules of the 'this' keyword.
+
+-If the new keyword is used when calling the function, this inside the function is a brand new object.
+-If apply, call, or bind are used to call a function, this inside the function is the object that is passed in as the argument.
+-In other words, when a dot is to the left of a function invocation, this is the object to the left of the dot. 
+-If a function is invoked as a free function invocation, meaning it was invoked without any of the conditions present above, this is the global object. In a browser, it’s window.
+
+5.Why do we need super() in an extended class?
+
+The super keyword is used to access and call functions on an object's parent.
+
+
 # Sprint Challenge: JavaScript Fundamentals
 
 This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a survey of problems. This Sprint explored JavaScript Fundamentals. During this Sprint, you studied variables, functions, object literals, arrays, this keyword, prototypes, and class syntax. In your challenge this week, you will demonstrate proficiency by completing a survey of JavaScript problems.
