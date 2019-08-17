@@ -47,8 +47,8 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // Explanation: 
 
 /* Nested function has access to the scope above it.
-It gives us the ability to pass an argument to function and reuse it somewhere else in the file.
-All above variables and functions are accessible to this nested function and can update them.*/
+*  It gives us the ability to pass an argument to function and reuse it somewhere else in the file.
+*  All above variables and functions are accessible to this nested function and can update them.*/
 
 
 const external = "I'm outside the function";

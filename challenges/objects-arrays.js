@@ -12,56 +12,56 @@
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
-const dinnosaur1 = {
+const dinosaur1 = {
   name: 'tyrannosaurus',
   diet: 'carnivorous',
   weight: '7000kg',
   length: '12m',
   period: 'Late Cretaceous'
 };
-console.log(dinnosaur1);
+console.log(dinosaur1);
 
-const dinnosaur2 = {
+const dinosaur2 = {
   name: 'stegosaurus',
   diet: 'herbivorous',
   weight: '2000kg',
   length: '9m',
   period: 'Late Jurassic'
 };
-console.log(dinnosaur2);
+console.log(dinosaur2);
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
-const dinnosaur3 = {
+const dinosaur3 = {
   name: 'velociraptor',
   diet: 'carnivorous',
   weight: '15kg',
   length: '1.8m',
   period: 'Late Cretaceous'
 };
-console.log(dinnosaur3);
+console.log(dinosaur3);
 
 
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(dinnosaur1.weight);
+console.log(dinosaur1.weight);
 
 // What was the diet of a velociraptor?
-console.log(dinnosaur3.diet);
+console.log(dinosaur3.diet);
 
 // How long was a stegosaurus?
-console.log(dinnosaur2.length);
+console.log(dinosaur2.length);
 
 // What time period did tyrannosaurus live in?
-console.log(dinnosaur1.period);
+console.log(dinosaur1.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-dinnosaur1.roar = function(){
+dinosaur1.roar = function(){
   return "RAWERSRARARWERSARARARRRR!";
   }
-  console.log(dinnosaur1.roar());
+  console.log(dinosaur1.roar());
 
 
 // ==== Arrays ====
@@ -151,7 +151,7 @@ console.log(lowerCase);
 
 /* Request 3: .filter() 
 
-The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
+The zoos are concerned about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
 const largerPopulation = 
