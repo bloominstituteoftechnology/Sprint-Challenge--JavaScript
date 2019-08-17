@@ -30,13 +30,53 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+forEach provides a function once for each array element. It affects and changes the original array. Map does not affect the original array and returns a new one. 
+
+
 2. What is the difference between a function and a method?
+
+Function:
+    * may be named or anonymous
+    * independent code includes logic and passes parameters to be stored/used somewhere else. 
+    * defined outside of class
+
+Method:
+    * called in reference to an object
+    * defined inside the class
 
 3. What is closure?
 
+Closure: 
+    * combination of function and lexical environment within which that function was declared. 
+    * when a function is declared, a new scope is created - a functional scope. 
+    * variables or functions declared within that function have the ability to reach outward for context, but never inward. 
+    * keeps track of memory and stores for later. 
+
 4. Describe the four rules of the 'this' keyword.
 
+Types of "this keyword" binding: 
+
+1) Window Binding: points to window ... everything on the page. It doesn't know what you're actually pointing to. It's like pointing to the entire forest. Using "use strict" prevents anything from binding to window.
+
+2) Implicit Binding: automatic. Points to a particular tree in the forest. Only works on objects.
+
+3) Explicit Binding: for functions. Uses "call, bind, or apply." When using the apply() function the parameter must be placed in an array. Call() accepts both an array of parameters and a parameter itself. Call is instant. The bind() method creates a new function where “this” refers to the parameter in the parenthesis.
+
+4) New keyword Binding: The new keyword in front of any function turns the function call into constructor call and below things occurred when new keyword put in front of function. A brand new empty object gets created.
+
+Rules for determining which binding is used: 
+
+Is the function called by new?
+Is the function called by call(), apply(), or bind()?
+Is the function called as a method, ie: obj.func()?
+Is the function called in the global scope?
+
+If strict mode is enabled, return undefined.
+Otherwise, return the global object, ie: window.
+
 5. Why do we need super() in an extended class?
+
+The super keyword is used to access and call functions on an object's parent.
 
 ## Project Set up
 
