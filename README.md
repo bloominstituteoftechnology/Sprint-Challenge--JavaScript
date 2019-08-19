@@ -29,27 +29,39 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+    `.forEach` array method used to execute a function on each element in an array.  Can only be used on arrays, maps and sets.
+    `.map` is a method that creates a new array.  Will always create the results so you can edit the results instead of the original.
 
 2. What is the difference between a function and a method?
+    function: block of code designed to perform a particular task.  Executed when something calls it.
+    method: actions that can be performed on objects.  A method is a property containing a funciton definition.
 
 3. What is closure?
+    A feature where an inner function has access to the outer function's variables.
 
 4. Describe the four rules of the 'this' keyword.
+    1) window/global object binding: when in the global scope, the value of 'this' will be the window console object
+    2) implicit binding: whenever a function is called by a  preceding dot, the object before that dot is 'this'
+    3) new binding: whenever a constructor function is used 'this' refers to the specific instance of the object that is created and returned by the constructor function.
+    4) explict binding: whenever JS call or apply method is used 'this' is explicitly defined.
 
 5. Why do we need super() in an extended class?
+    super is used to access and call functions on an object's parent.
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-- [ ] You are now ready to build this project with your preferred IDE
-- [ ] Implement the project on your Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [*] Create a forked copy of this project.
+- [*] Add PM as collaborator on Github.
+- [*] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [*] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [*] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+- [*] You are now ready to build this project with your preferred IDE
+- [*] Implement the project on your Branch, committing changes regularly.
+- [*] Push commits: git push origin `<firstName-lastName>`.
+
+
 
 Follow these steps for completing your project:
 
@@ -66,15 +78,15 @@ Your finished project must include all of the following requirements:
 
 ## Task 1: Objects and Arrays
 Test your knowledge of objects and arrays. 
-* [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
+* [*] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
 This challenge takes a look at callbacks and closures as well as scope. 
-* [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
+* [*] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
-* [ ] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
+* [ ] Use the [prototypes.js](challenges/prototype s.js) link to get started. Read the instructions carefully!
 
 ## Task 4: Classes
 Once you have completed the prototypes challenge, it's time to convert all your hard work into classes.

@@ -7,28 +7,37 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
+var dinosaur1 = { name: "tyrannosaurus", diet: " carnivorous", weight: "7000kg", length:"12m", period:"LateCretaceous"}
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+var dinosaur2 = {name: "stegosaurus", diet:"herbivorous", weight: "2000kg", length:"9m", period: "LateJurassic"} 
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
+var dinosaur3 = {name: "velociraptor", diet: "carnivorous", weight: "15kg", length: "1.8m", period: "LateCretaceous", }
 
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(dinosaur1.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(dinosaur3.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(dinosaur2.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(dinosaur1.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+var obj = {
+  foo() {
+    return 'RAWERSRARARWERSARARARRRR';
+  }
+}
+
+console.log(obj.dinosaur1());
 
 
 // ==== Arrays ====
@@ -46,11 +55,18 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":9,"first_name":"Michail","university":"Universidad Católica de Ávila","email":"mrome8@shinystat.com"},
 {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
 
-/* Request 1: Create a new array called universities that contains all the universities in the graduates array.  
+/* Request 1: Create a new array called universities that contains all the universities in the graduates array. */ 
+var university = ["Missouri Southern State College", "The School of the Art Institute of Chicago", "Marian College", "International Medical & Technological University", "Sultan Salahuddin Abdul Aziz Shah Polytechnic", "Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft", "Salem University", "Coastal Carolina University", "Universidad Católica de Ávila", "Universitat Rovira I Virgili Tarragona" ]
 
-Once you have the new array created, sort the universities alphabetically and log the result. */
+const newLocal = [];
+/*Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities)
+graduates.forEach(function (grad){
+  return universities.push(grad.university);
+})
+
+universities.sort();
+console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -58,12 +74,12 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = [];
+const contactInfo = graduates.map (info => `${info.first_name} ${info.email}`)
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+const uni = graduates.filter (str => str.university.includes ('Uni'));
 console.log(uni);
 
 
@@ -97,7 +113,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
+const lowerCase = zoo ;
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
