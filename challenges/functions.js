@@ -41,7 +41,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: Because nestedFunction is nested within myFunction and is also in the same scope as the constant internal, therefor being able to access it when called.
+// Explanation: Because nestedFunction is nested within myFunction and is also in the same scope as the constant internal, therefor being able to access it when called.git 
 
 
 const external = "I'm outside the function";
