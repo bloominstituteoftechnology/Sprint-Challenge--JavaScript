@@ -19,6 +19,7 @@ function CuboidMaker (attrs) {
 */
 var CuboidMaker = {
   
+  return 
 }
 
 
