@@ -9,24 +9,24 @@
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 const tyrannosaurus = {
   diet: "carnivorous",
-  weight: 7000,
-  length: 12,
+  weight: "7000kg",
+  length: "12m",
   period: "Late Cretaceous"
 };
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const stegosaurus = {
   diet: "herbivorous",
-  weight: 2000,
-  length: 9,
+  weight: "2000kg",
+  length: "9m",
   period: "Late Jurassic"
 };
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 const velociraptor = {
   diet: "carnivoros",
-  weight: 15,
-  length: 1.8,
+  weight: "15kg",
+  length: "1.8m",
   period: "Late Cretaceous"
 };
 
@@ -143,7 +143,7 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 for (let i = 0; i < graduates.length; i++) {
-  if (graduates[i].university == "Uni") {
+  if (graduates[i].university.includes("Uni")) {
     uni.push(graduates[i].university);
   }
 }
