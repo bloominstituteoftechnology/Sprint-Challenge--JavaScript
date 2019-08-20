@@ -139,7 +139,7 @@ const uni = graduates
   });
 */
 const lowerPopulation = zooAnimals.filter((pop)=>{
-  return ver.population < 5;
+  return pop.population < 5;
 })
 console.log(lowerPopulation);
 
