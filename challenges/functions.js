@@ -43,4 +43,4 @@ consume("Mary", "Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // Explanation:
 
-// Explanation: The myFunction() creates a local scope (within it's brackets) that nestedFunction() has access due to being inside of myFunction().
+// Explanation: The nestedfunction() creates a local scope (within it's brackets) that `internal` has access due to being inside of nestedfunction().
