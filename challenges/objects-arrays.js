@@ -130,13 +130,7 @@ console.log(lowerCase);
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
-const uni = graduates
-  .filter((ver) =>{
-    return ver.university.includes('Uni')
-  })
-  .map((sity) =>{
-    return sity.university;
-  });
+
 */
 const lowerPopulation = zooAnimals.filter((pop)=>{
   return pop.population < 5;
@@ -148,7 +142,10 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+const populationTotal = zooAnimals.reduce((tot, ani)=>{
+  return tot +=ani.population
+},0);
+
 console.log(populationTotal);
 
 
