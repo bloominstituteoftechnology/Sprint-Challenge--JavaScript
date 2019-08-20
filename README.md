@@ -39,14 +39,14 @@ A function takes in inputs and returns various values depending on the parameter
 
 3. What is closure?
 
-A closure holds the borrowed block scope which is passed within nested functions. This allows nested functions to use global elements within the lexical scope. Closure preserves a functions value as a property  to be used again so in a sense, closures are functions with preserved values.
+A closure holds the borrowed block scope which is passed within nested functions. Closures are functions with preserved values.
 
 4. Describe the four rules of the 'this' keyword.
 
 1) If function is contained in the global scope, the value of this inside that function is the window object. 
 2) a function is called by a preceding dot, the object to the left of the dot indicates what  this is referring to. 
 
-3) Third, when a constructor function is used this is referring to the specific instance of the object that is created and returned by the constructor function. 
+3) a constructor function is used this is referring to the specific instance of the object that is created and returned by the constructor function. 
 
 4) Fourth .this can be accessed by using the .bind .call or .apply.
 
