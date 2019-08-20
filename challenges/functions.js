@@ -35,7 +35,8 @@ console.log(consume(2,2,add)); // 4
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: nestedfunction() is nested inside of the internal function, you can reach outside of it but not inside.
+//HAD TO COMMENT THIS OUT AS IT WAS MESSING MY CODE UP!!!!
+//Explanation: nestedfunction() is nested inside of the internal function, you can reach outside of it but not inside.
 
 
 const external = "I'm outside the function";
