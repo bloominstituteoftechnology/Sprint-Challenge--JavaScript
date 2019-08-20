@@ -43,15 +43,4 @@ consume("Mary", "Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // Explanation:
 
-const external = "I'm outside the function";
-
-function myFunction() {
-  console.log(external);
-  const internal = "Hello! I'm inside myFunction!";
-
-  function nestedFunction() {
-    console.log(internal);
-  }
-  nestedFunction();
-}
-myFunction();
+// Explanation: The myFunction() creates a local scope (within it's brackets) that nestedFunction() has access due to being inside of myFunction().
