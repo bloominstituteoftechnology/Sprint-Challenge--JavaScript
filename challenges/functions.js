@@ -11,8 +11,8 @@
 function consume (param1, param2, cb) {
 
   return cb(param1, param2);
-
 }
+
 
 /* 
 * Step 2: Create several functions to callback with consume();
@@ -31,7 +31,7 @@ function multiply(param1, param2)  {
 
 function greeting (param1, param2) {
   return "Hello "  + param1 + " " + param2 + ", nice to meet you!";
-}
+};
 /* 
 * Step 3: Check your work by un-commenting the following calls to consume(): */
  console.log(consume(2, 2, add)); // * 4
@@ -45,7 +45,8 @@ function greeting (param1, param2) {
 
   
 //*Explanation: 
-//*Inhertiance from the Parent Function, Inhertiance goes downward.
+
+"Inhertiance from the Parent Function, Inhertiance goes downward."
 
 const external = "I'm outside the function";
 
