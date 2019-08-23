@@ -40,22 +40,6 @@ class CubeMaker extends CuboidMaker {
     constructor(cuboid) {
         super(cuboid)
     }
-
-    // Methods
-    volume() {
-        let formulatedVolume = this.length * this.width * this.height;
-        return `Calculated current volume Cuboid to be ${formulatedVolume}`;
-    }
-
-    surfaceArea() {
-        let formulatedSurface =
-            2 *
-            (this.length * this.width +
-                this.length * this.height +
-                this.width * this.height);
-
-        return `Calculated current surface Cuboid to be ${formulatedSurface}`;
-    }
 }
 
 const cube = new CubeMaker({
