@@ -32,13 +32,29 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.forEach runs through the array item by item and applies an operation to each item; modifying the original array. Whereas .map does the same but returns a new array with the modifications and leaving the original intact. 
+
 2. What is the difference between a function and a method?
+
+A function is a block of code written to do something. A method is a function that belongs to an object, basically it is inside the curly brackets of that object. 
 
 3. What is closure?
 
+Closure is the concept that a function can access variables inside its curly brackets, but also has access to elements immediately outside of it. That could be global scope or a grandchild function accessing elements in the child function it is nested in. The curly brackets limit where the function can access. Using the grandchild function again, it has access to global scope, elements in the child function, and elements in the grandchild function. However, the child function only has access to global scope and the elements in the parent function. The child function cannot access the elements in the grandchild function because access is only granted in one direction, the furthest nested function out, going in the direction of global scope, not global scope going in. 
+
 4. Describe the four rules of the 'this' keyword.
 
+    * 1. Global binding - which means that the 'this' keyword is set to the window or console object. If you are in strict mode, it goes undefined. We generally don't use global binding (also called window binding).
+
+    * 2. Implicit binding - this clearly states what the keyword refers to. The simple and short explanation is that we look to the left of the dot. It binds it to a function. The more complex answer has to do with when/where we invoke the function and use the 'this' keyword. 
+
+    * 3. Explicit binding - allows us to point to a certain value by using: .call(), .apply(), or .bind(). 
+
+    * 4. Bind - also called New binding allows us to create a new function that is permanently bound to a 'this' value.
+
 5. Why do we need super() in an extended class?
+
+When we use .call(), .apply(), or .bind() they make the connect to the original object and migrate that object's elements to the new object. When we use classes and the extend keyword, it makes the initial connection, but we haven't migrated the elements from the parent class. So, we need super() to help us bring all the elements inside the parent class to the new class. So, when we use class, we need the extend to make the connection and super() to bring over the elements. 
 
 ## Project Set up
 
