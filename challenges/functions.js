@@ -7,6 +7,20 @@
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
+// Higher Order Function
+function consume(a, b, cb) {
+
+  return cb(a, b);
+}
+
+// Argument function for "cb" placeholder.
+const arg = function(a, b) {
+  return `I received ${a} & ${b} just now. TIME TO GRUB!`;
+}
+
+// Testing the return statement of arg's invocation as consume is invoked.
+console.log(consume("Apple", "GIANT Squid", arg))
+
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
