@@ -20,6 +20,10 @@ console.log(cuboid.surfaceArea()); // 130
 class CubeMaker extends CuboidMaker{
     constructor(attrs){
         super(attrs)
+        if (attrs.length!==attrs.width || attrs.length!==attrs.height){
+            console.log('Hmmm, that looks more a like a cuboid to me!')
+            return new CuboidMaker(attrs);
+        }
 
     }
     volume(){
@@ -36,3 +40,14 @@ const cube = new CubeMaker({
 
 console.log(cube.volume()); // 27
 console.log(cube.surfaceArea()); // 54
+
+
+const fakeCube = new CubeMaker({
+    length: 4, width: 5, height:5
+})
+
+console.log(fakeCube.volume()); // 27
+console.log(fakeCube.surfaceArea()); // 54
+
+console.log(fakeCube instanceof CuboidMaker);
+console.log(fakeCube instanceof CubeMaker);

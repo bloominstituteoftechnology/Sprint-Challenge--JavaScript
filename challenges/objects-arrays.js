@@ -93,7 +93,7 @@ console.log(contactInfo);
 const unisWithUni = [];
 for(let i=0; i<graduates.length; i++){
   if((graduates[i].university).includes('Uni'))
-  {unisWithUni.push(graduates)}
+  {unisWithUni.push(graduates[i])}
 }
 
 console.log(unisWithUni);
@@ -122,9 +122,9 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-zooAnimals.forEach(element => displayNames.push(`${element.animal_name} ${element.scientific_name}`))
+zooAnimals.forEach(element => displayNames.push(`Name: ${element.animal_name}, Scientific: ${element.scientific_name}`))
 console.log(displayNames);
-
+  
 /* Request 2: .map()
 
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
