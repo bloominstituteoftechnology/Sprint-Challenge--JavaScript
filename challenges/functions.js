@@ -37,6 +37,7 @@ function myFunction() {
   function nestedFunction() {
     console.log(internal);
   };
-  nestedFunction();
+  return nestedFunction;
 }
-myFunction();
+let returnedNestedFunction = myFunction();
+returnedNestedFunction();
