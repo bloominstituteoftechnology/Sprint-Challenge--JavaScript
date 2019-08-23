@@ -28,6 +28,25 @@ console.log(consume("Apple", "GIANT Squid", arg))
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function add(sum1, sum2) {
+  return sum1 + sum2;
+}
+
+function multiply(prod1, prod2) {
+  return prod1 * prod2;
+}
+
+function greeting(first, last) {
+  return `Hello ${first} ${last}, nice to meet you!`;
+}
+
+console.log(
+  `Challenge 2 console message \n`,
+  add(1, 2),
+  multiply(22, 16),
+  greeting("Thai", "Ngo")
+)
+
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 // console.log(consume(2, 2, add)); // 4
