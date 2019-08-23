@@ -30,22 +30,36 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+`.foreach` will execute a provided function once per array element but doesn't return anything, anything that's returned is discarded. `.map` will similarlry execute a provided function on every element in an array but it will capture and build a new array with the new values 
+
 2. What is the difference between a function and a method?
+
+A method is a function on an object whilst a function is independent of an object. 
+
 
 3. What is closure?
 
+Closures are created everytime a function is created. A closure is a function enclosed with references to its it's surrounding lexical environment. It gives you access to an outer fuinctions scope from an inner function.
+
 4. Describe the four rules of the 'this' keyword.
 
+`this` runs on four rules which determin what is calling the object: 1. Is the function call by new?
+        2. Is the function called by call(), appply(), or ninmd()?
+        3. Is the function called as a method, ie: obj.func() ?
+        4. Is the function called in the global scope?
+
 5. Why do we need super() in an extended class?
+In an extended class we're given access to properties and methods present in the other class or parent class. In order to invoke the parent class  before using the child class we need to use the super method.
+
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add PM as collaborator on Github.
+- [X] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [X] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
 - [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
 - [ ] You are now ready to build this project with your preferred IDE
 - [ ] Implement the project on your Branch, committing changes regularly.
