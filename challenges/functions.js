@@ -44,7 +44,7 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 
 // Explanation: 
 
-//Because it is inside the same function scope
+//Because it is inside the same function scope44
 const external = "I'm outside the function";
 
 function myFunction() {

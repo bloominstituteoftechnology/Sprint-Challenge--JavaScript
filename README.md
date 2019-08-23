@@ -30,13 +30,36 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The biggest difference is that .map returns a completely differnet array while for each just calls the provided functions in the array
+
+
 2. What is the difference between a function and a method?
+
+Methods are used in objects and are use for object-oriented programing. A functions data is passed expicitly while a methods data is implicitly passed
 
 3. What is closure?
 
+The combination of a function and the lexical environment within which that function was declared
+
 4. Describe the four rules of the 'this' keyword.
 
+-Not unique to JS:
+
+The this keyword is not unique to JS but it behaves very differently from other coding
+languages
+
+-Used as a pronoun in place of an object:
+
+The this keyword behaves as a pronoun in the Javascript. It is used to give reference to an "object"
+
+-Access to objects content:
+The this keyword allows you access to that object and allows you to maniuplate it data
+
+-This only deals with when and where the function was called
+
 5. Why do we need super() in an extended class?
+
+ To access and call functions on an object's parent
 
 ## Project Set up
 
