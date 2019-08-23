@@ -25,7 +25,8 @@
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: Closure lets you access a functions outer scope from an inner function.
+//`nestedfunction()` is able to access the variable `internal` because it was declared inside of myFunction().
 
 
 const external = "I'm outside the function";
@@ -40,3 +41,23 @@ function myFunction() {
   nestedFunction();
 }
 myFunction();
+
+function add(a,b) {
+  return a + b;
+}
+
+function multiply(a,b){
+  return a * b;
+}
+
+function greeting(a,b) {
+  return "hello " + a + b + " ,nice to meet you!";
+}
+
+function consume(a,b,cb) {
+  return cb(a,b);
+}
+ 
+console.log (consume(2,2,add));
+console.log(consume(10,16,multiply));
+console.log(consume("Mary","Poppins", greeting));
