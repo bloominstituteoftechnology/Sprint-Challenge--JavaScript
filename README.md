@@ -12,6 +12,7 @@ You are not allowed to collaborate during the Sprint Challenge. However, you are
 
 You have three hours to complete this challenge. Plan your time accordingly.
 
+
 ## Commits
 
 Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons) and your team lead.
