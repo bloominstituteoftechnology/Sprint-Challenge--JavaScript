@@ -30,11 +30,47 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+   The forEach() method executes a provided function once for each array element.
+
+    An Array or other iterable object whose elements are key-value pairs (arrays with two elements, e.g. [[ 1, 'one' ],[ 2, 'two' ]]). Each key-value pair is added to the new Map; null values are treated as undefined.
+
 2. What is the difference between a function and a method?
+      A function typically contains a set of commands for a specific purpose which you want to run at a certain time is is invoke
+      
+    When a function is called in a class it is refered to as a method.
+
 
 3. What is closure?
+JavaScript variables can belong to the local or global scope.
+Global variables can be made local (private) with closures. 
 
 4. Describe the four rules of the 'this' keyword.
+  1. Window Binding
+    if none of the other rules apply the THIS keyword defaults to the window object. 
+    If you are in "strict mode"  it defaults to undefined. We can console.log(this)
+    to see windows.
+
+    2.Implicit Binding
+   - most common
+    when a function is invoked js looks to the left of the dot. 
+    implict is automatic. It requires no settings.
+    It only applies to objects with methods.
+
+    3.-New Binding
+    Whenever the Constructor function is used THIS refers to the specific 
+    instance(associated) of the object that is created and returned by the constructor function.
+  4. -Explicit Binding
+    whenever JS apply method is used THis is fully and clearly defined. 
+*   It is used to invoke a function with a specific value for THIS.
+    It tells a function what the This word should be.
+    It uses Call Apply and Bind
+    CALL will immediately invoke the function whereas dot call passes in the arguments one by one
+    Apply will do the same accept for dot Apply it passes the argument in an array.
+    Bind will pass in arguments one by one but it does not immediately invoke the function but it
+    returns a brand new function that can be used later
+
+
+
 
 5. Why do we need super() in an extended class?
 
