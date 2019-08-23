@@ -100,6 +100,21 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 
+// option 6 --> BINGO!! 
+const unisWithUni = graduates.filter(function(item){
+  return item.university.includes('Uni'); 
+});
+console.log(unisWithUni); 
+
+//option 5
+// const unisWithUni = graduates.includes('Uni');
+// console.log(unisWithUni); 
+
+// option 4 use .filter and .includes
+// const unisWithUni = graduates.filter(function(item){
+//   return graduates.includes('Uni');
+// });
+// console.log(unisWithUni); 
 
 // option 3 if statement....but not a logical operator 
 // const unisWithUni = graduates.filter(function(item){
@@ -108,7 +123,6 @@ console.log(contactInfo);
 //   } 
 // });
 // console.log(unisWithUni); 
-
 
 // option 2 gets the objects into the arrays...found the solution in request 3 .filter below
 // const unisWithUni = graduates.filter(function(item){
