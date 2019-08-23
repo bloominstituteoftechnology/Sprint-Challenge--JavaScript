@@ -1,4 +1,36 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
+CuboidMaker.prototype.volume = function (attributes){
+    return(this.length * this.width * this.height);
+  }
+
+  class CuboidMaker {
+    constructor(attirbutes) {
+    this.length = attributes.length;
+    this.width = atrributes.length;
+    this.height = attribtues.height;
+  };
+
+  volume () {
+      return (this.length * this.width * this.height);
+  }
+}
+
+/////////  Next Problem ///////
+
+  CuboidMaker.prototype.surfaceArea = function (attributes){
+    return(2*((this.length * this.width) * (this.length + this.height) + (this.width * this.height)));
+  } 
+
+  class CuboidMaker {
+    constructor(attirbutes) {
+    this.length = attributes.length;
+    this.width = atrributes.length;
+    this.height = attribtues.height;
+  };
+
+  surfaceArea() {
+      return (2*((this.length * this.width) * (this.length + this.height) + (this.width * this.height)));}
+  }
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 // console.log(cuboid.volume()); // 100

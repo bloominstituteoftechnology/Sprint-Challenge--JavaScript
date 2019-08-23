@@ -29,14 +29,30 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+.forEach is a built in for loop function that feeds back the index of the array applying the specific orders given to the .forEach….  
+
+.map returns a new array reflecting the specific directions applied to the array through the .map function.
 
 2. What is the difference between a function and a method?
 
+A function takes in inputs and returns various values depending on the parameters and arguments. A method is like a function but is specific to object-oriented programming and is internal to a specific class.
+
 3. What is closure?
+
+A closure holds the borrowed block scope which is passed within nested functions. Closures are functions with preserved values.
 
 4. Describe the four rules of the 'this' keyword.
 
+1) If function is contained in the global scope, the value of this inside that function is the window object. 
+2) a function is called by a preceding dot, the object to the left of the dot indicates what  this is referring to. 
+
+3) a constructor function is used this is referring to the specific instance of the object that is created and returned by the constructor function. 
+
+4) Fourth .this can be accessed by using the .bind .call or .apply.
+
 5. Why do we need super() in an extended class?
+It is used as a function to call the parent class or can be used as an objec to refer to the parent class. 
+
 
 ## Project Set up
 
