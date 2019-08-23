@@ -41,6 +41,9 @@ const cube = new CubeMaker({
 console.log(cube.volume()); // 27
 console.log(cube.surfaceArea()); // 54
 
+//console.log(cube instanceof CuboidMaker);//true
+//console.log(cube instanceof CubeMaker);//true
+
 
 const fakeCube = new CubeMaker({
     length: 4, width: 5, height:5
@@ -49,5 +52,5 @@ const fakeCube = new CubeMaker({
 console.log(fakeCube.volume()); // 27
 console.log(fakeCube.surfaceArea()); // 54
 
-console.log(fakeCube instanceof CuboidMaker);
-console.log(fakeCube instanceof CubeMaker);
+//console.log(fakeCube instanceof CuboidMaker);//true
+//console.log(fakeCube instanceof CubeMaker);//false
