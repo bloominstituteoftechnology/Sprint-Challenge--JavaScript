@@ -25,7 +25,7 @@ function CuboidMaker (attributes){
   
   *Formula for cuboid volume: length * width * height
 */
-function VolumeMethod = (attributes){
+function VolumeMethod (attributes){
   CuboidMaker.call (this, attributes)
 };
 VolumeMethod.prototype = Object.create (CuboidMaker.prototype);
