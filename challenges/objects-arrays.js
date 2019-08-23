@@ -8,7 +8,17 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
+const trex = {
+  name: "Tyrannosaurus",
+  diet: "carnivorous",
+  weight: "7000kg",
+  length: "12m",
+  period: "Late Cretaceious",
+};
+
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+
+
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
