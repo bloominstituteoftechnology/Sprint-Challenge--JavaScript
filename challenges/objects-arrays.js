@@ -45,6 +45,7 @@ console.log(Sdino.length);
 console.log(Tdino.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+
 console.log();
 
 // ==== Arrays ====
@@ -248,10 +249,6 @@ The zoos are concenred about animals with a lower population count. Find out whi
 const lowerPopulation = zooAnimals.filter((item)=>{
   return item.population <5;
 });
-
-
-
-
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
@@ -259,7 +256,9 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+const populationTotal = zooAnimals.reduce((){
+  
+});
 console.log(populationTotal);
 
 /* 
