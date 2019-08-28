@@ -119,10 +119,12 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-// const universities = graduates.map( function (schools){
-//   return schools.university.sort(schools);});
-
-// console.log(universities);
+ const universities = graduates.map( (schools) =>{
+   return schools.university;
+  }).sort();
+ 
+ 
+  console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -256,9 +258,9 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = zooAnimals.reduce((){
-  
-});
+const populationTotal = zooAnimals.reduce((sum,animal)=>{
+return (animal.population+sum);
+},0);
 console.log(populationTotal);
 
 /* 
