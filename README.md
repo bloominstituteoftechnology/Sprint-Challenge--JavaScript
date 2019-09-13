@@ -29,9 +29,10 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+Technically, .forEach and .map essentially do the same thing - allow the developer to execute a function on every element of a given array. However, the way they accomplish these things is a little different, and each have their place. .forEach allows a callback function to mutate the original array, so it is useful when you want to actually change the original and not just return a new array. The .map function, however, will execute a given function on each element of an array and utilize the return values to populate a new array. It is probably more useful for a developer that favors functional programming. 
 
 2. What is the difference between a function and a method?
-
+A function is a block of code which contains its own scope within the global object. A method is a function that is attatched to an object.
 3. What is closure?
 
 4. Describe the four rules of the 'this' keyword.
