@@ -41,7 +41,8 @@ function greeting(firstName, lastName){
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: nestedFunction can reach out of it's function scope and grab the
+// variable 'internal'.   If you reversed the roles, myFunction would not be able to reach into the nested function and grab the variables of nestedFunction. 
 
 
 const external = "I'm outside the function";
