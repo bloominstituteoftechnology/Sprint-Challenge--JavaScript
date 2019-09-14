@@ -21,7 +21,7 @@ const dinos = [
   
   // What was the diet of a velociraptor?
   
-  const velo = dinos[2];
+  const velo = dinos[2]; 
   
   console.log(velo.diet);
   
