@@ -45,7 +45,7 @@ ANSWER: The four rules of 'this' are:
 --New Binding: When a constructor function is used, you use the "new" keyword to implement and apply your newly created property to a 'this' object
 
 5. Why do we need super() in an extended class?
-
+Answer: 'super()' is how you inherit the properties from the parent object.
 ## Project Set up
 
 Follow these steps to set up and work on your project:
