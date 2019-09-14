@@ -32,8 +32,10 @@ Edit this document to include your answers after each question. Make sure to lea
 ANSWER: The biggest difference between .foreach and .map is with .map you will return a new array. .foreach will iterate over your array, but it will not return a new array.
 
 2. What is the difference between a function and a method?
+ANSWER: A function is made on the global scope, while a method is made within the scope of an object. They're both functions, it just comes down to their scope.
 
 3. What is closure?
+ANSWER: Closure has to do with scope. For example, a variable made on the global scope can used from within a function. But a variable from within a function scope cannot be grabbed from the global scope. A function scope variable can but used if you use the return keyword.
 
 4. Describe the four rules of the 'this' keyword.
 
