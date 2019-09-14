@@ -1,3 +1,5 @@
+//Initial Commit 
+
 # Sprint Challenge: JavaScript Fundamentals
 
 This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a survey of problems. This Sprint explored JavaScript Fundamentals. During this Sprint, you studied variables, functions, object literals, arrays, this keyword, prototypes, and class syntax. In your challenge this week, you will demonstrate proficiency by completing a survey of JavaScript problems.
@@ -30,30 +32,46 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.forEach runs through the array item by item and applies an operation to each item; modifying the original array. Whereas .map does the same but returns a new array with the modifications and leaving the original intact. 
+
 2. What is the difference between a function and a method?
+
+A function is a block of code written to do something. A method is a function that belongs to an object, basically it is inside the curly brackets of that object. 
 
 3. What is closure?
 
+Closure is the concept that a function can access elements inside its curly brackets, but also has access to elements outside of them. That could be global scope or a grandchild function accessing elements in the child or parent function it is nested in. The curly brackets limit where the function can access. Using the grandchild function as an example, it has access to elements in the grandchild function, elements in the child function, elements in the parent function, and global scope. However, the child function only has access elements in the child function, elements in the parent function, and global scope. The child function cannot access the elements in the grandchild function because access is only granted in one direction, the furthest nested function out, going in the direction of global scope, not global scope going in (ex: grandchild function --> child function --> parent function --> global).
+
 4. Describe the four rules of the 'this' keyword.
 
+    * 1. Global binding - which means that the 'this' keyword is set to the window or console object. If you are in strict mode, it goes undefined. We generally don't use global binding (also called window binding).
+
+    * 2. Implicit binding - this clearly states what the keyword refers to. The simple and short explanation is that we look to the left of the dot. It binds it to a function. The more complex answer has to do with when/where we invoke the function and use the 'this' keyword. 
+
+    * 3. Explicit binding - allows us to point to a certain value by using: .call(), .apply(), or .bind(). 
+
+    * 4. Bind - also called New binding allows us to create a new function that is permanently bound to a 'this' value.
+
 5. Why do we need super() in an extended class?
+
+When we use .call(), .apply(), or .bind() they make the connect to the original object and migrate that object's elements to the new object. When we use classes and the extend keyword, it makes the initial connection, but we haven't migrated the elements from the parent class. So, we need super() to help us bring all the elements inside the parent class to the new class. So, when we use class, we need the extend to make the connection and super() to bring over the elements. 
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-- [ ] You are now ready to build this project with your preferred IDE
-- [ ] Implement the project on your Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add TL as collaborator on Github.
+- [X] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [X] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [X] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+- [X] You are now ready to build this project with your preferred IDE
+- [X] Implement the project on your Branch, committing changes regularly.
+- [X] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [X] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
 - [ ] Add your team lead as a Reviewer on the Pull-request
 - [ ] TL then will count the HW as done by  merging the branch back into master.
 
