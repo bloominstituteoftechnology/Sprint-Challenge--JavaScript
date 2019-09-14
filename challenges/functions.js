@@ -8,7 +8,7 @@
 */
 
 function consume (a, b, cb) {
-  cb(a , b);
+  return cb(a , b);
 }
 
 /* Step 2: Create several functions to callback with consume();
@@ -16,6 +16,20 @@ function consume (a, b, cb) {
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+function add (a , b) {
+  return(a + b);
+};
+
+function multiply (a , b) {
+  return(a * b );
+};
+
+let a = 'first-name';
+let b = 'last-name';
+
+function greeting(a, b){
+  return `Hello ${a} ${b}, nice to meet you!`
+};
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
@@ -28,7 +42,7 @@ function consume (a, b, cb) {
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: 
+// Explanation: nestedfunction didn't inherently have access to the internal variable so the closure property built into JS allows the function to make use of variables outside of their own scope
 
 
 const external = "I'm outside the function";
