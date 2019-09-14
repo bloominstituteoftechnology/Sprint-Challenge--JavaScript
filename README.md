@@ -38,6 +38,11 @@ ANSWER: A function is made on the global scope, while a method is made within th
 ANSWER: Closure has to do with scope. For example, a variable made on the global scope can used from within a function. But a variable from within a function scope cannot be grabbed from the global scope. A function scope variable can but used if you use the return keyword.
 
 4. Describe the four rules of the 'this' keyword.
+ANSWER: The four rules of 'this' are:
+--Window/console binding, 'this' is given the value of the window/console
+--Implicit Binding: Whatever is to the left of the dot when calling a function, that is 'this'
+--Explicit Binding: This is defined when the call or apply method is used.
+--New Binding: When a constructor function is used, you use the "new" keyword to implement and apply your newly created property to a 'this' object
 
 5. Why do we need super() in an extended class?
 
