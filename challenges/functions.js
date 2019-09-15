@@ -24,9 +24,6 @@ function multiply (a , b) {
   return(a * b );
 };
 
-let a = 'first-name';
-let b = 'last-name';
-
 function greeting(a, b){
   return `Hello ${a} ${b}, nice to meet you!`
 };
