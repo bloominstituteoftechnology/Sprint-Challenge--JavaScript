@@ -33,30 +33,40 @@ Technically, .forEach and .map essentially do the same thing - allow the develop
 
 2. What is the difference between a function and a method?
 A function is a block of code which contains its own scope within the global object. A method is a function that is attatched to an object.
+
 3. What is closure?
+Closure is the concept of scope within JavaScript. In JavaScript, an inner function has access to the variables of the enclosing function. This is partly how JavaScript's pseudo-class based inheritence system works as well.
 
 4. Describe the four rules of the 'this' keyword.
 
-5. Why do we need super() in an extended class?
+=======
 
+1. When in the global scope, the value of .this will be thie window/ console object. This refers to what is known in JavaScript as the Global scope. It is the scope that encapsulates all of the objects, variables, functions, etc. that are contained within JavaScript
+2. Implicit binding -- when an object is called is called by a preceding dot - (.objectName), - that object before the dot is .this .
+3. "New" binding -- Whenever a constructor function is used, ".this" refers to the specific instance of the object. 
+4. Explicit binding -- whenever the .binnd, .call, aor .apply methods are used, ".this" is explicitly defined.
+======
+
+5. Why do we need super() in an extended class?
+The super function is what binds the extended class' attributes from parent to child, helping to enable an object - oriented programming approach.
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-- [ ] You are now ready to build this project with your preferred IDE
-- [ ] Implement the project on your Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [+] Create a forked copy of this project.
+- [+] Add TL as collaborator on Github.
+- [+] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [+] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [+] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+- [+] You are now ready to build this project with your preferred IDE
+- [+] Implement the project on your Branch, committing changes regularly.
+- [+] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your team lead as a Reviewer on the Pull-request
-- [ ] TL then will count the HW as done by  merging the branch back into master.
+- [+] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [+] Add your team lead as a Reviewer on the Pull-request
+- [+] TL then will count the HW as done by  merging the branch back into master.
 
 
 ## Minimum Viable Product

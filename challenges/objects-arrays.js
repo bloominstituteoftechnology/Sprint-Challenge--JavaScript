@@ -7,24 +7,42 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
-
+const tyranosaurus = {
+  name: "Tyranosaurus",
+  diet: "carnivorous",
+  weight: "7000kg",
+  length: "12m",
+  period: "Late Cretaceous"
+};
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+const stegosaurus = {
+  name: "Stegosaurus",
+  diet: "herbivorous",
+  weight: "2000kg",
+  length: "9m",
+  period: "Late Jurassic"
+}
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
-
+const velociraptor = {
+  name: "Velociraptor",
+  diet: "carnivorous",
+  weight: "15kg",
+  length: "1.8m",
+  period: "Late Cretaceous"
+}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(tyranosaurus);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(stegosaurus);
 
 // How long was a stegosaurus?
-console.log();
+console.log(velociraptor);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(tyranosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
@@ -51,20 +69,50 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
+
 const universities = [];
+graduates.map(element => {
+  universities.push(element.university);
+});
 console.log(universities);
 
-/* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
+/* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of string.
+
 
 The resulting contact information strings should have a space between the first name and the email, like this: 
 "Josh josh@example.com"
 
 Log the result of your new array. */
+
+
 const contactInfo = [];
+graduates.map(element => {
+  contactInfo.push(element.first_name + ' ' + element.email);
+});
+
 console.log(contactInfo);
 
+
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
+// const unisWithUni = [];
+// let changer = /^Uni/;
+// if changer = graduates.map(element => {
+//   unisWithUni.push(element.university);
+// })
+// console.log(unisWithUni);
+
+
+
 const unisWithUni = [];
+for(let i=0; i < graduates.length; i++) {
+  let uniMap = {};
+  let filter = new RegExp ();
+  filter = /^Uni/;
+  let check = graduates[i].includes(filter);
+  if (check = true) {
+  return  unisWithUni.university;
+  }
+}
 console.log(unisWithUni);
 
 
@@ -124,4 +172,3 @@ console.log(populationTotal);
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
-
