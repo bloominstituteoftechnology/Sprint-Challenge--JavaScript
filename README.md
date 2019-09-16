@@ -30,13 +30,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+	--The main difference between forEach() method and map () method, is that map() actually returns a new
+          array. On the other hand, forEach () does not return anything, it simply calls upon a function for 
+          each element in your array.
+
+
 2. What is the difference between a function and a method?
+
+	--The main difference between a function and a method is that a method is in itself a function but it belongs to an object.
+
 
 3. What is closure?
 
+	--A closure is basically something that gives you access to the "outer scope" of a function from INSIDE the function itself. 
+
+
 4. Describe the four rules of the 'this' keyword.
 
+	--The four rules of this are: Default(window) binding, implicit binding, explicit binding and new binding.
+
+
 5. Why do we need super() in an extended class?
+
+	--When you use extend, you're essensially using it as a means to make a class a subclass of another class. Meaning, you have
+	  a parent class and a child class. Then, super () is needed to call to the parent class and have the parameters passed to 
+	  the child class. You can also use super () to call methods of a parent class.
 
 ## Project Set up
 
