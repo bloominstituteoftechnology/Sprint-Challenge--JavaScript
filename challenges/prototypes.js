@@ -6,10 +6,10 @@
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
 
-function CuboidMaker(makerAttrs){
-  this.length = makerAttrs.length;
-  this.width = makerAttrs.width;
-  this.height = makerAttrs.height;
+function CuboidMaker(cuboid){
+  this.length = cuboid.length;
+  this.width = cuboid.width;
+  this.height = cuboid.height;
 }
 
 
