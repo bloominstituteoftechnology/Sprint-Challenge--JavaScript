@@ -95,12 +95,12 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
-graduates.filter( (item) => {
-  if (item.university.includes("Uni")) {
-    uni.push(item);
-  }
-});
+const uni = graduates.filter(item => item.university.includes("Uni"));
+// graduates.filter( (item) => {
+//   if (item.university.includes("Uni")) {
+//     uni.push(item);
+//   }
+// });
 console.log(uni);
 
 
@@ -137,10 +137,10 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
-zooAnimals.map( (item) => {
-  lowerCase.push(item.animal_name.toLowerCase());
-})
+const lowerCase = zooAnimals.map(item => item.animal_name.toLowerCase());
+// zooAnimals.map( (item) => {
+//   lowerCase.push(item.animal_name.toLowerCase());
+// })
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -148,12 +148,12 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const lowerPopulation = [];
-zooAnimals.filter( (item) => {
-  if (item.population < 5) {
-    lowerPopulation.push(item);
-  }
-})
+const lowerPopulation = zooAnimals.filter(item => item.population < 5);
+// zooAnimals.filter( (item) => {
+//   if (item.population < 5) {
+//     lowerPopulation.push(item);
+//   }
+// })
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
