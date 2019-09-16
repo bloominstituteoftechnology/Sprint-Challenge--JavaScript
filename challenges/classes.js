@@ -4,7 +4,7 @@
 
 class CuboidMaker {
   constructor(newCuboid) {
-      this.length = newCuboid.length,
+    this.length = newCuboid.length,
       this.width = newCuboid.width,
       this.height = newCuboid.height
   }
@@ -45,7 +45,7 @@ class CuboidMaker {
     return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
   }
 
-};
+}
 
 
 // // Test your volume and surfaceArea methods by uncommenting the logs below:
@@ -58,16 +58,16 @@ class CuboidMaker {
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
 
-const cuboid = new CuboidMaker ({
-length: 4,
-width: 5,
-height: 5
+const cuboid = new CuboidMaker({
+  length: 4,
+  width: 5,
+  height: 5
 });
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 
 
-  console.log(cuboid.volume()); // 100
-  console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
 
 
 
