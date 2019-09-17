@@ -31,7 +31,7 @@ function greeting(a, b) {
 // Explain in your own words why nestedfunction can access the variable internal.
 
 // Explanation:
-
+It can do this due to JavaScripts built in closure feature which allows access to functions outside of their 'scope'.
 const external = "I'm outside the function";
 
 function myFunction() {

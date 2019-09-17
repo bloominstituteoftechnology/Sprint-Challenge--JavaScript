@@ -37,7 +37,14 @@ Edit this document to include your answers after each question. Make sure to lea
 3. What is closure?
    Gives access to an inner function. Can preserve variables from within the inner scope.
 4. Describe the four rules of the 'this' keyword.
-   NA
+   Is the function called by new?
+   Is the function called by call(), apply(), or bind()?
+   Is the function called as a method, ie: obj.func()?
+   Is the function called in the global scope?
+
+If strict mode is enabled, return undefined.
+Otherwise, return the global object, ie: window.
+
 5. Why do we need super() in an extended class?
    NA
 
