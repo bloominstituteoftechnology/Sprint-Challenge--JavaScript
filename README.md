@@ -46,7 +46,7 @@ If strict mode is enabled, return undefined.
 Otherwise, return the global object, ie: window.
 
 5. Why do we need super() in an extended class?
-   NA
+   Super() gives the ability to call methods and functions of a parent object.
 
 ## Project Set up
 
