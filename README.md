@@ -29,7 +29,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
 1. Describe the biggest difference between `.forEach` & `.map`.
-<!-- 
+
     The .foreach method excutes a function on each element provided in the Array and doesn't change anything itself. THe .map method creates a new array that contains the results of a function on each element in the original array.  -->
 
 2. What is the difference between a function and a method?
