@@ -12,7 +12,7 @@ const dinosaurOne = {
   name: 'tyrannosaurus',
   diet: 'carnivorous',
   weight: '7000kg',
-  lenght: '12m',
+  length: '12m',
   period: 'Late Cretaceous',
   speak: function () {
     return "RAWERSRARARWERSARARARRRR!";
@@ -25,7 +25,7 @@ const dinosaurTwo = {
   name: 'stegosaurus',
   diet: 'herbivorous',
   weight: '2000kg',
-  lenght: '9m',
+  length: '9m',
   period: 'Late Jurassic'
 }
 
@@ -35,7 +35,7 @@ const dinosaurThree = {
   name: 'velociraptor',
   diet: 'carnivorous',
   weight: '15kg',
-  lenght: '1.8m',
+  length: '1.8m',
   period: 'Late Cretaceous'
 }
 
@@ -48,7 +48,7 @@ console.log(dinosaurOne.name);
 console.log(dinosaurThree.diet);
 
 // How long was a stegosaurus?
-console.log(dinosaurTwo.lenght);
+console.log(dinosaurTwo.length);
 
 // What time period did tyrannosaurus live in?
 console.log(dinosaurOne.period);
