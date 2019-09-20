@@ -31,32 +31,45 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.forEach mutates the array, where as .map returns a new array
+
 2. What is the difference between a function and a method?
+
+a function is code that can be passed into peram or return data when called, however a method is a preset function that can operate on the code where it is implicitly called.
 
 3. What is closure?
 
+a closure should be called variable that is present in an outer function not a global scope, there should be an outer and inner function to make it a closure that is not accessible to global scope. 
+
 4. Describe the four rules of the 'this' keyword.
 
+ part of a simple function call, refers to a global object.
+ the object before the dot is this before the method that is being used. 
+ constructor func this is used to refer to the newly specific object created.
+ call or apply explicitly defines this allowing to custom set a value. 
+
 5. Why do we need super() in an extended class?
+
+to connect the class together to gain access to prior properties in parallel with extends.
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-- [ ] You are now ready to build this project with your preferred IDE
-- [ ] Implement the project on your Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [ ] ~~Create a forked copy of this project.~~
+- [ ] ~~Add TL as collaborator on Github.~~
+- [ ] ~~Clone your OWN version of Repo (Not Lambda's by mistake!).~~
+- [ ] ~~Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.~~
+- [ ] ~~Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.~~
+- [ ] ~~You are now ready to build this project with your preferred IDE~~
+- [ ] ~~Implement the project on your Branch, committing changes regularly.~~
+- [ ] ~~Push commits: git push origin `<firstName-lastName>`.~~
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your team lead as a Reviewer on the Pull-request
-- [ ] TL then will count the HW as done by  merging the branch back into master.
+- [ ] ~~Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).~~
+- [ ] ~~AA: dd your team lead as a Reviewer on the Pull-request~~
+- [ ] ~~TL then will count the HW as done by  merging the branch back into master.~~
 
 
 ## Minimum Viable Product
