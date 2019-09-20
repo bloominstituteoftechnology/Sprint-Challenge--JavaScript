@@ -29,6 +29,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+
 The biggest difference between .forEach & .map is that one (.map) returns a new array while the other (.forEach) does not.
 
 2. What is the difference between a function and a method?
