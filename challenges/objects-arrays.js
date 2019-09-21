@@ -238,7 +238,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 // const lowCaseAnimalNames = [];
 const lowCaseAnimalNames = zooAnimals.map(function lowerscase(animal) {
-  return animal.animal_name.lowerCaseAnimalNames();
+  return animal.animal_name.tolowerCase();
 });
 console.log(lowCaseAnimalNames);
 
@@ -260,8 +260,8 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 // const populationTotal = 0;
-const populationTotal;
-const populationTotal = zooAnimals.reduce(function(totalAnimals, item) {
+let populationTotal;
+populationTotal = zooAnimals.reduce(function(totalAnimals, item) {
   return totalAnimals + item.population;
 }, 0);
 

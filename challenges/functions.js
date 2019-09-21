@@ -39,7 +39,7 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: The outside function passes through and the function is in the globalscope.
+// Explanation: The outside function passes through and the nested function can see what the parent function has.
 
 const external = "I'm outside the function";
 
