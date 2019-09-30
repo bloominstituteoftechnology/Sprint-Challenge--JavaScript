@@ -7,11 +7,29 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
-
+let tyrannosaurus = {
+  name : "tyrannosaurus",
+  diet : "carnivorous",
+  weigh: 7000,
+  length: 12,
+  period: "Late Cretaceous"
+}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+let stegosaurus = {
+  name = "stegosaurus",
+  diet : "herbivorous",
+  weigh: 2000,
+  length: 9,
+  period: "Late Jurassic"
+}
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
-
+let velociraptor = {
+  name = "velociraptor",
+  diet : "carnivorus",
+  weigh: 15,
+  length: 1.8,
+  period: "Late Cretaceous"
+}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
