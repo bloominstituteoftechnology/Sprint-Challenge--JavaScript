@@ -33,20 +33,24 @@ const velociraptor = {
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(tyranosaurus);
+console.log(tyranosaurus.weight);
 
 // What was the diet of a velociraptor?
-console.log(stegosaurus);
+console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
-console.log(velociraptor);
+console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
 console.log(tyranosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+tyranosaurus.roar = function(){
+  return 'Roar';
+};
+
+console.log(tyranosaurus.roar());
 
 
 // ==== Arrays ====
@@ -139,9 +143,9 @@ The zoos want to display both the scientific name and the animal name in front o
 */
 const displayNames = [];
 zooAnimals.forEach(function (object){
+  let sName = object.scientific_name;
 let aName = object.animal_name;
-let sName = object.scientific_name;
-displayNames.push(aName + ' ' + sName);
+displayNames.push(sName + ' ' + aName);
 });
 console.log(displayNames);
 
