@@ -32,7 +32,10 @@ consume(2, 2, add) // 4
 consume(10, 16, multiply) // 160
 consume('Mary', 'Poppins', greeting); // Hello Mary Poppins, nice to meet you!
 
-// ==== Closures ==== 
+console.log(consume(10, 16, multiply))
+
+console.log(consume('Mary', 'Poppins', greeting))
+    // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 // nestedfunction() is a child of myFunction(),so it has access to the the variable internal and within its lexical environment. The code inside
