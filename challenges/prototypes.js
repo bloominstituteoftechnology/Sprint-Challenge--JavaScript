@@ -4,7 +4,18 @@
 
 /* == Step 1: Base Constructor ==
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
+
+  function Person(attributes) {
+  this.age = attributes.age;
+  this.name = attributes.name;
+  this.homeTown = attributes.homeTown;
+  this.speak = function () {
+    return `Hello, my name is ${this.name}`;
+  };
+}
 */
+function CuboidMaker
+}
 
 
 /* == Step 2: Volume Method ==
