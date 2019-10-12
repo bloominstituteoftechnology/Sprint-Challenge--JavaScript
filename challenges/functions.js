@@ -6,13 +6,11 @@
  * The last parameter accepts a callback 
  * In the body of the function return the callback with the two parameters that you created
  */
-// function consume( par1, par2, cb){
-//   return cb(par1, par2);
-// }
-// console.log(consume);
+
 function consume(item1, item2, callback) {
   return callback(item1, item2);
 }
+//console.log(consume);
 
 /* Step 2: Create several functions to callback with consume();
  * Create a function named add that returns the sum of two numbers
@@ -22,7 +20,7 @@ function consume(item1, item2, callback) {
 function add(a, b, cb) {
   return cb = a + b;
 }
-console.log(consume(2, 2, add));
+console.log(consume(6, 2, add));
 
 function multiply(a, b, cb) {
   return cb = a * b;
