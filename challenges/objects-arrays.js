@@ -7,11 +7,26 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
-
+const tyrannosaurus = {
+  diet:  ,
+  weight:  ,
+  length:  , 
+  period:  , 
+}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+const tyrannosaurus = {
+  diet:  ,
+  weight:  ,
+  length:  , 
+  period:  , 
+}
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
-
+const tyrannosaurus = {
+  diet:  ,
+  weight:  ,
+  length:  , 
+  period:  , 
+}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
