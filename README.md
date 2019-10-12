@@ -29,22 +29,22 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
 1. Describe the biggest difference between `.forEach` & `.map`.
-Technically, .forEach and .map essentially do the same thing - allow the developer to execute a function on every element of a given array. However, the way they accomplish these things is a little different, and each have their place. .forEach allows a callback function to mutate the original array, so it is useful when you want to actually change the original and not just return a new array. The .map function, however, will execute a given function on each element of an array and utilize the return values to populate a new array. It is probably more useful for a developer that favors functional programming. 
+<!-- Technically, .forEach and .map essentially do the same thing - allow the developer to execute a function on every element of a given array. However, the way they accomplish these things is a little different, and each have their place. .forEach allows a callback function to mutate the original array, so it is useful when you want to actually change the original and not just return a new array. The .map function, however, will execute a given function on each element of an array and utilize the return values to populate a new array. It is probably more useful for a developer that favors functional programming.  -->
 
 2. What is the difference between a function and a method?
-A function is a block of code which contains its own scope within the global object. A method is a function that is attatched to an object.
+<!-- A function is a block of code which contains its own scope within the global object. A method is a function that is attatched to an object. -->
 
-3. What is closure?
-Closure is the concept of scope within JavaScript. In JavaScript, an inner function has access to the variables of the enclosing function. This is partly how JavaScript's pseudo-class based inheritence system works as well.
+3. What is closure
+<!-- Closure is the concept of scope within JavaScript. In JavaScript, an inner function has access to the variables of the enclosing function. This is partly how JavaScript's pseudo-class based inheritence system works as well. -->
 
 4. Describe the four rules of the 'this' keyword.
 
 =======
-
+<!--
 1. When in the global scope, the value of .this will be thie window/ console object. This refers to what is known in JavaScript as the Global scope. It is the scope that encapsulates all of the objects, variables, functions, etc. that are contained within JavaScript
 2. Implicit binding -- when an object is called is called by a preceding dot - (.objectName), - that object before the dot is .this .
-3. "New" binding -- Whenever a constructor function is used, ".this" refers to the specific instance of the object. 
-4. Explicit binding -- whenever the .binnd, .call, aor .apply methods are used, ".this" is explicitly defined.
+3. "New" binding -- Whenever a constructor function is used, ".this" refers to the specific instance of the object.
+4. Explicit binding -- whenever the .binnd, .call, aor .apply methods are used, ".this" is explicitly defined. -->
 ======
 
 5. Why do we need super() in an extended class?
@@ -76,11 +76,11 @@ Your finished project must include all of the following requirements:
 **Pro tip for this challenge: If something seems like it isn't working locally, copy and paste your code up to codepen and take another look at the console.**
 
 ## Task 1: Objects and Arrays
-Test your knowledge of objects and arrays. 
+Test your knowledge of objects and arrays.
 * [+] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
-This challenge takes a look at callbacks and closures as well as scope. 
+This challenge takes a look at callbacks and closures as well as scope.
 * [+] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes

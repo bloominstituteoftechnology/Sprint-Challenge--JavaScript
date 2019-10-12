@@ -1,10 +1,23 @@
 // ==== Objects ====
 
-/* 
-  Given the following information about dinosaurs, create 3 objects: 
-  Use this pattern to create your objects: 
+/*
+  Given the following information about dinosaurs, create 3 objects:
+  Use this pattern to create your objects:
   object name, diet, weight, length, period
 */
+
+// Object creator constructor function
+
+function DinsoaurCreator(attrs) {
+this.name = attrs.name;
+this.diet = attrs.diet;
+this.weight = length;
+this.period = period
+
+
+
+}
+
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 const tyranosaurus = {
@@ -83,7 +96,7 @@ console.log(universities.sort());
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of string.
 
 
-The resulting contact information strings should have a space between the first name and the email, like this: 
+The resulting contact information strings should have a space between the first name and the email, like this:
 "Josh josh@example.com"
 
 Log the result of your new array. */
@@ -102,13 +115,13 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 
 const unisWithUni = [];
-// let r = /Uni*/; 
+// let r = /Uni*/;
 // graduates.map(element => {
 //   if(r.exec(element.university) !== null)
 //     unisWithUni.push(element.university);
 // });
 
-for (let i=0; i < graduates.length; i++) { 
+for (let i=0; i < graduates.length; i++) {
 if (graduates[i].university.includes("Uni")) {
 unisWithUni.push(graduates[i].university);
 }
@@ -160,7 +173,7 @@ const lowCaseAnimalNames = [];
       });
 console.log(lowCaseAnimalNames);
 
-/* Request 3: .filter() 
+/* Request 3: .filter()
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
@@ -170,12 +183,12 @@ const lowPopulationAnimals = zooAnimals.filter(element=>{
 });
 console.log(lowPopulationAnimals);
 
-/* Request 4: .reduce() 
+/* Request 4: .reduce()
 
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-const populationTotal = zooAnimals.reduce((total, animal)=> { 
+const populationTotal = zooAnimals.reduce((total, animal)=> {
   return total += animal.population;
 },0);
 console.log(populationTotal);
