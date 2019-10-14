@@ -46,7 +46,7 @@ Follow these steps to set up and work on your project:
 - [/ ] Add TL as collaborator on Github.
 - [/ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
 - [/ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Create a pull request before you start working on the project requirements. You will continuously push your updates throughout the project.
+- [ /] Create a pull request before you start working on the project requirements. You will continuously push your updates throughout the project.
 - [ ] You are now ready to build this project with your preferred IDE
 - [ ] Implement the project on your Branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
