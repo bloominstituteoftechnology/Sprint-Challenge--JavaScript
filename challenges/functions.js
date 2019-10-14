@@ -28,7 +28,7 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 // ==== Closures ====
 
-// Explain in your own words why nested function can access the variable internal.
+//* Explain in your own words why nested function can access the variable internal.
 
 //! Explanation: nested fuction can be retured, as a property or by itself-basicly this means the outer fuction creats a object with methods, you can use this elsewhere- it will have accsess to it regardless where it is at.
 
