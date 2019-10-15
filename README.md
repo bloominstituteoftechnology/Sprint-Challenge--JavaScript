@@ -44,6 +44,7 @@ Edit this document to include your answers after each question. Make sure to lea
 4 Explicit binding
 
 5. Why do we need super() in an extended class?
+gives more importance to the function called
 
 ## Project Set up
 
