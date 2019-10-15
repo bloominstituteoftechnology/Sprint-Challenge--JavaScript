@@ -76,12 +76,11 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-
-for (let i = 0; i < graduates.length; i++) {
-	universities.push(graduates[i].university);
+for (i=0; i<graduates.length; i++){
+  universities.push(graduates[i].university);
 }
+console.log(universities.sort());
 
-console.log(universities.sort())
 
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -92,7 +91,7 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 for (i=0; i <universities.length; i++){
-  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
+  contactInfo.push(`${graduates[i].first_name}  ${graduates[i].email}`);
 }
 
 console.log(contactInfo);
@@ -159,14 +158,13 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const lowerPopulation = [];
-for (i=0; i < zooAnimals.length; i++){
-  if (zooAnimals[i].population< 5){
-    lowerPopulation.push(zooAnimals[i]);
-  }
-}
-console.log(lowerPopulation);
 
+
+let lowerPopulation=zooAnimals.filter((lower)=>
+{
+  return lower.population <=5;
+});
+console.log(lowerPopulation);
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.

@@ -1,9 +1,9 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
 class CubeMaker{
     constructor(object){
-        this.width=width;
-        this.height=height;
-        this.length=length;
+        this.width=object.width;
+        this.height=object.height;
+        this.length=object.length;
     }
     volume(){
     return this.length*this.height*this.width;
