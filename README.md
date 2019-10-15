@@ -32,11 +32,20 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. What is the difference between a function and a method?
 
+//the methods are used by the functions console.log example//
+
 3. What is closure?
 
+is attached to the external scope reference
 4. Describe the four rules of the 'this' keyword.
 
+1  Window/Global Object Binding
+2 Implicit Binding
+3 New binding
+4 Explicit binding
+
 5. Why do we need super() in an extended class?
+gives more importance to the function called
 
 ## Project Set up
 
