@@ -36,6 +36,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 3. What is closure?
 
+is attached to the external scope reference
 4. Describe the four rules of the 'this' keyword.
 
 1  Window/Global Object Binding
