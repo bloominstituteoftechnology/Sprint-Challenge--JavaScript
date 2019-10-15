@@ -173,6 +173,7 @@ const populationTotal = zooAnimals.reduce((zooAnimal)=> zooAnimals + val);
 
 console.log(populationTotal);
 console.log(zooAnimals)
+console.
 
 
 /*
