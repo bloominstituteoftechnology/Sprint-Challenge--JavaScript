@@ -30,13 +30,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    forEach iterates a list and applies an operation to each member in the list
+    map iterates a list and transforms the members in the list, then returns a list with the newly transformed members 
+
 2. What is the difference between a function and a method?
+
+    method has a receiver function does not. both are object properties 
 
 3. What is closure?
 
+    a closure gives access to a certain scope in a function
+
+
 4. Describe the four rules of the 'this' keyword.
 
+    1. Window: here "this" refers to the window context or default
+
+    2. Implicit: it specifies to the left of "this" to which object it applies or refers to
+
+    3. Explicit: telling an object what function to use, having call, apply and bind as options. every option has a different behavior
+
+    4. New: creating a new object and "this" is the relation between new object and existing objects
+
 5. Why do we need super() in an extended class?
+
+    to access the properties inherited from parent
 
 ## Project Set up
 
