@@ -28,15 +28,27 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
-1. Describe the biggest difference between `.forEach` & `.map`.
+1. Describe the biggest difference between `.forEach` & `.map`. 
+".forEach" is a powerful function that basically goes over the list of data and in turn passes back an item or a piece of information and its index or place in the array  back to us for us to use. 
+".map" is also a powerful function used with arrays. It allows us to create a new array with the results of our inquiry.
 
 2. What is the difference between a function and a method?
+A function is a block of code. I think of it like this. You have a musician that you have taught how to do something, that is a function. But the musician or function won't play any music until it is told to do so in the sheet of music. When you call or invoke a function, that is when it plays its music.
+A method is a function but specifically resides inside of an object. 
 
-3. What is closure?
+3. What is closure? 
+A closure is the combination of a function bundled together and the lexical environment where that function was declared. It means it gives you the ability to access information from the outer portion of the function scope from an inner function. The inner function can reach out to grab information, but the outer portion cannot reach in and grab information.
 
 4. Describe the four rules of the 'this' keyword.
+“This” is a word used in place of an object within JS. We must pay close attention to WHERE and WHEN it is called to know what it refers to. There are 4 principles it follows:
+1.Window/Global object binding -This is when the word “this” refers to the global object because you are referring to it on a global scope. 
+2.Implicit Binding- whenever you call a function using the dot method, the “this” keyword is referring to the object to the left of the dot.  
+3.Explicit Binding- Whenever you use .call, .apply or .bind the “this” is explicitly defined by what is passed in the argument or inside (). 
+4.New Binding-using the word “new” constructs a new object and this refers to the specific instance of the object that is created and returned by the constructor function.
+
 
 5. Why do we need super() in an extended class?
+Super() and Extends are the keywords used to help us with Classes. They work together. Super tells the parent constructor to look at the child attributes. The extends tells the child to look at and take all of the parents attributes.
 
 ## Project Set up
 
