@@ -156,5 +156,7 @@ console.log(populationTotal);
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
+// student note: I used arrow functions on the first pass
+
 */
 
