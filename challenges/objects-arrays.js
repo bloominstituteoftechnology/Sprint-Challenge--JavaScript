@@ -102,11 +102,10 @@ graduates.forEach(function(items){
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
+for (let i = 0; i < graduates.length; i++){
+  unisWithUni.push(graduates[i].university.includes("Uni"))
+}
 console.log(unisWithUni);
-
-graduates.filter(function(items){
-  return unisWithUni.push(items.university > "Uni");
-});
 
 // ==== ADVANCED Array Methods ====
 
@@ -146,6 +145,10 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 const lowCaseAnimalNames = [];
 console.log(lowCaseAnimalNames);
 
+zooAnimals.map(function(items){
+  return lowCaseAnimalNames.push(items.animal_name.toLowerCase());
+})
+
 /* Request 3: .filter() 
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
@@ -166,7 +169,12 @@ The zoos need to know their total animal population across the United States. Fi
 const populationTotal = 0;
 console.log(populationTotal);
 
+//zooAnimals.reduce(function(total, currentValue, items){
+ // return lowPopulationAnimals.push(
+//})
 
+
+//total += zooAnimals.population);
 /*
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
