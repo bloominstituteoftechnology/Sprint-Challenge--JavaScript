@@ -9,7 +9,7 @@
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 const tyrannosaurus = {
   diet: "carnivorous", 
-  weight: "700kg", 
+  weight: "7000kg", 
   length: "12m", 
   period: "Late Cretaceous",
   roar: function(){
@@ -165,14 +165,14 @@ two arguments: a callback (which itself takes two args), and an initial value fo
 const populationTotal = 0;
 const population = []
 
-console.log(populationTotal);
+//console.log(populationTotal);
 
 for (let i=0;i < zooAnimals.length; i++) {
   population.push(zooAnimals[i].population) 
 }
-const reducer = (accumulator, currentValue) => accumulator + currentValue;
+const reducer = (accumulator, currentValue) => {return accumulator + currentValue};
 
-console.log(population.reduce(reducer,0));
+console.log(population.reduce(populationTotal));
 
 /*
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
