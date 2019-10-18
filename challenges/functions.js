@@ -6,6 +6,14 @@
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
+const consume = (a, b, cb) => {
+  return cb(a,b);
+}
+
+const add = (a,b) => a + b;
+const multiply = (a,b) => a * b;
+const greeting = (a,b) => `Hello ${a} ${b}, nice to meey you!`
+
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -16,17 +24,18 @@
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: 
-
+/* Explanation: functions have access to the information outside of it but not the other way around 
+so the further into a funtion you go, the more data your inner function as acces to in the outer layers
+*/
 
 const external = "I'm outside the function";
 
