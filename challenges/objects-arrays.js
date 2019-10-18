@@ -124,7 +124,7 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = graduates.map(university => {
+let universities = graduates.map(university => {
   return university.university;
 });
 
@@ -145,13 +145,22 @@ graduates.forEach(function(items) {
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-let unisWithUni = [];
 
+//let unisWithUni = [];
+//console.log(uniWithUni);
+//const list = graduates.filter(function(item) {
+//if (item.university === "Uni") {
+//return true;
+//}
+//});
+
+//console.log(unisWithUni);
+
+let unisWithUni = [];
 for (let i = 0; i < graduates.length; i++) {
   unisWithUni.push(graduates[i].university.match("Uni"));
   console.log(unisWithUni[i]);
 }
-console.log(unisWithUni);
 
 // ==== ADVANCED Array Methods ====
 
@@ -239,7 +248,6 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 const lowCaseAnimalNames = [];
-console.log(lowCaseAnimalNames);
 const lowCase = zooAnimals.map(function(item) {
   return item.animal_name.toLowerCase();
 });
