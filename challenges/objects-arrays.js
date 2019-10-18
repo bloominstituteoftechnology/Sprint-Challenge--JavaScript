@@ -106,9 +106,11 @@ const unisWithUni = [];
 
 for(i = 0; i < graduates.length; i++){
   if(graduates.university){
-    
+
   }
 }
+
+
 console.log(unisWithUni);
 
 
