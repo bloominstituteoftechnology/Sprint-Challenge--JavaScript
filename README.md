@@ -48,7 +48,7 @@ Explicit Binding
 Explicit Binding is when we descriptivly tell the engine to use call, apply, or bind when pointing to a specific value, these three words can invoke fuctions with certain values of "this".
 
 5. Why do we need super() in an extended class?
-When inheriting a parent the method super brings all the parameters from that parent.
+When inheriting a parent the method super brings all the parameters from that parent.readgit 
 
 ## Project Set up
 
