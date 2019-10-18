@@ -157,12 +157,10 @@ The zoos need to know their total animal population across the United States. Fi
 //   return total;
 // }, 0)
 
-let populationTotal = 0;
-zooAnimals.reduce((total, pop) => {
-  total += pop.population;
-}, 0)
-console.log(populationTotal);
-
+populationTotal = zooAnimals.reduce((total, pop) => {
+  return total + pop.population;
+}, 0);
+console.log(`The total zoo animal population is ${populationTotal}.`);
 
 /*
 
