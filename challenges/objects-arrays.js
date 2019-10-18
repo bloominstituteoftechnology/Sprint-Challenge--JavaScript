@@ -96,6 +96,8 @@ console.log(contactInfo);
 
 
 const unisWithUni = [];
+unisWithUni.push(graduates.filter(element => element.university.includes('Uni')))
+
 console.log(unisWithUni);
 
 
@@ -122,6 +124,7 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
+zooAnimals.forEach(element => { element.animal_name, element.scientific_name })
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -131,7 +134,13 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 const lowCaseAnimalNames = [];
+lowCaseAnimalNames.push(zooAnimals.map(function(element) {
+    console.log(element.animal_name.toLowerCase())
+}))
+
 console.log(lowCaseAnimalNames);
+
+
 
 /* Request 3: .filter() 
 
