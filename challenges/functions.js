@@ -13,25 +13,29 @@
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-function consume(a, b, cb) {
-  return cb(a, b);
+
+
+
+
+function add (apple, b, add) {
+  return apple + b;
 }
 
-function add (a, b, add) {
-  return a + b;
+function multiply (apple, b, multiply) {
+  return apple * b;
 }
 
-function multiply (a, b, multiply) {
-  return a * b;
-}
-
-function greeting(a,b){
-  return(`Hello ${a} ${b}, nice to meet you!`);
+function greeting(apple, b){
+  return(`Hello ${apple} ${b}, nice to meet you!`);
 }
 
 console.log(consume(2, 2, add)); // 4
 console.log(consume(10, 16, multiply)); // 160
 console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+
+function consume(apple, b, cb) {
+  return cb(apple, b);
+};
 
 
 // ==== Closures ==== 
