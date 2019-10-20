@@ -23,7 +23,7 @@
 
 // ==== Closures ==== 
 
-// Explain in your own words why the nested function can access the variable internal.
+// Explain in your own words why "nestedFunction" can access the variable internal.
 
 // Explanation: 
 
