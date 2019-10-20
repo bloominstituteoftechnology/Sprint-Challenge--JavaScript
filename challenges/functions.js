@@ -23,7 +23,7 @@
 
 // ==== Closures ==== 
 
-// Explain in your own words why nestedfunction can access the variable internal.
+// Explain in your own words why "nestedFunction" can access the variable internal.
 
 // Explanation: 
 
@@ -37,6 +37,7 @@ function myFunction() {
   function nestedFunction() {
     console.log(internal);
   };
-  nestedFunction();
+  return nestedFunction;
 }
-myFunction();
+const closureFunction = myFunction();
+closureFunction();
