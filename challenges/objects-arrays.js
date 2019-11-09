@@ -57,7 +57,7 @@ console.log(dionsaurThree.diet);
 console.log(dionsaurTwo.length);
 
 // What time period did tyrannosaurus live in?
-console.log(dinosaur.roar);
+console.log(dinosaur.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
