@@ -29,6 +29,49 @@ console.log();
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 console.log();
+const dinosaurs = {
+  printIntroduction: function () {
+    console.log(`name: ${name} diet: ${diet} weight: ${weight} length: ${length} period: ${period}`);
+  }
+};
+
+const dinoTypeOne = {
+	name: "tyrannosaurus",
+	diet: "carnivorous",
+	weight: "7000kg",
+	length: "12m",
+	period: "Late Cretaceous",
+	roar: function() {
+		return "RAWERSRARARWERSARARARRRR!";
+	}
+}
+
+const dinoTypeTwo = {
+	name: "stegosaurus",
+	diet: "herbivorous",
+	weight: "2000kg",
+	length: "9m",
+	period: "Late Jurassic"
+}
+
+const dinoTypeThree = {
+	name: "velociraptor",
+	diet: "carnivorous",
+	weight: "15kg",
+	length: "1.8m",
+	period: "Late Cretaceous"
+}
+
+console.log(dinoTypeThree.diet)
+console.log(dinoTypeTwo.length)
+console.log(dinoTypeOne.weight)
+console.log(dinoTypeOne.period)
+console.log(dinoTypeOne.roar())
+
+
+
+
+
 
 
 // ==== Arrays ====
