@@ -29,40 +29,44 @@ console.log();
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 console.log();
-
 const dinosaurs = {
-  
   printIntroduction: function () {
-    console.log(`name: ${this.name}.  diet: ${this.diet}  weight: ${this.weight}  length: ${this.length} period: ${this . period}`);
+    console.log(`name: ${name} diet: ${diet} weight: ${weight} length: ${length} period: ${period}`);
   }
 };
-    
-const dinoTypeOne = Object.create(dinosaurs);
-dinoTypeOne.name = "tyrannosaurus";
-dinoTypeOne.diet = "carnivorous,";
-dinoTypeOne.weight = "7000kg,";
-dinoTypeOne.length = "12m,";
-dinoTypeOne.period = "Late Cretaceous";
 
-console.log(dinoTypeOne.name)
-    
-const dinoTypeTwo = Object.create(dinosaurs);
-dinoTypeTwo.name = "stegosaurus,";
-dinoTypeTwo.diet = "herbivorous,";
-dinoTypeTwo.weight = "2000kg,";
-dinoTypeTwo.length = "9m,";
-dinoTypeTwo.period = " Late Jurassic";
+const dinoTypeOne = {
+	name: "tyrannosaurus",
+	diet: "carnivorous",
+	weight: "7000kg",
+	length: "12m",
+	period: "Late Cretaceous",
+	roar: function() {
+		return "RAWERSRARARWERSARARARRRR!";
+	}
+}
 
-console.log(dinoTypeTwo.name)
+const dinoTypeTwo = {
+	name: "stegosaurus",
+	diet: "herbivorous",
+	weight: "2000kg",
+	length: "9m",
+	period: "Late Jurassic"
+}
 
-const dinoTypeThree = Object.create(dinosaurs);
-dinoTypeThree.name = "velociraptor,";
-dinoTypeThree.diet = "carnivorous,";
-dinoTypeThree.weight = "15kg,";
-dinoTypeThree.length = "1.8m,";
-dinoTypeThree.period = "Late Cretaceous";
+const dinoTypeThree = {
+	name: "velociraptor",
+	diet: "carnivorous",
+	weight: "15kg",
+	length: "1.8m",
+	period: "Late Cretaceous"
+}
 
-console.log(dinoTypeThree.name)
+console.log(dinoTypeThree.diet)
+console.log(dinoTypeTwo.length)
+console.log(dinoTypeOne.weight)
+console.log(dinoTypeOne.period)
+console.log(dinoTypeOne.roar())
 
 
 
