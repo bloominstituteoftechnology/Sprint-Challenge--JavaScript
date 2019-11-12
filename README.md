@@ -1,5 +1,6 @@
 # Sprint Challenge: JavaScript Fundamentals
-
+# Sprint Challenge: JavaScript Fundamentals
+# Sprint Challenge: JavaScript Fundamentals
 This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a survey of problems. This Sprint explored JavaScript Fundamentals. During this Sprint, you studied variables, functions, object literals, arrays, this keyword, prototypes, and class syntax. In your challenge this week, you will demonstrate proficiency by completing a survey of JavaScript problems.
 
 ## Instructions
@@ -29,31 +30,47 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+both methods will iterate through each item in an array but the biggest difference is .forEach on its own preforms exactly like a for loop. It Means that an array has the possibility of being mutated. .map on the other hand will return a new array so the original array stays intact.
+<!-- ======================================== -->
 
 2. What is the difference between a function and a method?
+While all functions are technically methods. A method is a property of an object that has the value of a function.
+<!-- ======================================== -->
 
 3. What is closure?
+A function is a closure. It is where a local scope is created the the global scope doesn't have access to, but the function has the ability to reach outside of its own scope to grab variables from the global scope.
+<!-- ======================================== -->
 
 4. Describe the four rules of the 'this' keyword.
+Window/Global binding 'this' will bubble up. So, if using this in javascript, it will look for the object it is bound to. Thus bubbling up looking for what 'this' refers to. If not bound to an object it selects the window object in the browser and the global object in node.js. 
+
+Implicit binding is the object before the dot.
+
+New binding Uses the new keyword to create a new instance of an object.
+
+Explicit binding Having the parent object/class .call or .apply this to the child class/object
+<!-- ======================================== -->
 
 5. Why do we need super() in an extended class?
+The super() function allows a sub-class to send new attributes up to the parent class/object. It replaces .call()
+<!-- ======================================== -->
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-- [ ] You are now ready to build this project with your preferred IDE
-- [ ] Implement the project on your Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X]  Add TL as collaborator on Github.
+- [X]  Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [X]  Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [X]  Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+- [X]  You are now ready to build this project with your preferred IDE
+- [X]  Implement the project on your Branch, committing changes regularly.
+- [X]  Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [X]  Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
 - [ ] Add your team lead as a Reviewer on the Pull-request
 - [ ] TL then will count the HW as done by  merging the branch back into master.
 
