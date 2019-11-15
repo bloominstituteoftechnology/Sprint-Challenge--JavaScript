@@ -42,6 +42,9 @@ function greeting(firstName, lastName, callback) {
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
+// nestedFunction is accessing properties of myFunction because of closure. Closure gives us the ability to put functions together. And because myFunction is the parent, nestedFunction is inheriting from its parent. Additionally, nested functions allow us to hold on to code, not run it until we need it later. Also, we can't push things up, we can only push things down. Children can only inherit from parents, parent's can't. It's very similar to LESS and CSS concept of nesting styles. 
+
+
 // Explanation: 
 
 
