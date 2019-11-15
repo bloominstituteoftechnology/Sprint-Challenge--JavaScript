@@ -14,7 +14,7 @@ const dinossaurOne = {
   length: '12m',
   period: 'Late Cretaceous',
   roar: function(){
-    console.log('RAWERSRARARWERSARARARRRR')
+    return 'RAWERSRARARWERSARARARRRR'
   }
 }
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -97,14 +97,16 @@ graduates.forEach(function(items){
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = [];
-unisWithUni.push(graduates.includes("Uni"))
-console.log(unisWithUni);
 
+const unisWithUni = graduates.filter(function (uni) {
+  return uni.university.includes("Uni");
+});
+
+console.log(unisWithUni);
 
 // ==== ADVANCED Array Methods ====
 
-// Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
+// Given this zoo datas from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
 const zooAnimals = [
   { animal_name: "Jackal, asiatic", population: 5, scientific_name: "Canis aureus", state: "Kentucky" },
