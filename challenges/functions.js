@@ -6,7 +6,9 @@
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
+function consume(args,callback){
 
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -25,7 +27,7 @@
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: 
+// Explanation: Nestedfunction has acceses to the variables in its parents function scope.
 
 
 const external = "I'm outside the function";
