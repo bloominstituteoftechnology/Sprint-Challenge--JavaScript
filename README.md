@@ -36,6 +36,8 @@ Edit this document to include your answers after each question. Make sure to lea
 
 4. Describe the four rules of the 'this' keyword.
 
+this keyword refers to an object, that object executes a line of code. 
+
 5. Why do we need super() in an extended class?
 
 ## Project Set up
