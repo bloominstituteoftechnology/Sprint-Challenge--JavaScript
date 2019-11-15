@@ -8,30 +8,30 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 const tyrannosaurus = {
-  name : 'tyrannosaurus',
-  diet : 'carnivourus',
-  weight : '7000kg',
-  length : '12m',
-  period : 'Late Cretaceous',
-  roar : function(){return "RAWERSRARARWERSARARARRRR!"}
+  name: 'tyrannosaurus',
+  diet: 'carnivourus',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceous',
+  roar: function () { return "RAWERSRARARWERSARARARRRR!" }
 }
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const stegosaurus = {
-  name : 'stegosaurus',
-  diet : 'herbivourus',
-  weight : '2000kg',
-  length : '9m',
-  period : 'Late Jurassic'
+  name: 'stegosaurus',
+  diet: 'herbivourus',
+  weight: '2000kg',
+  length: '9m',
+  period: 'Late Jurassic'
 }
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 const velociraptor = {
-name : 'velociraptor',
-  diet : 'carnivourus',
-  weight : '15',
-  length : '1.8m',
-  period : 'Late Cretaceous'
+  name: 'velociraptor',
+  diet: 'carnivourus',
+  weight: '15',
+  length: '1.8m',
+  period: 'Late Cretaceous'
 }
 // Using your dinosaur objects, log answers to these questions:
 
@@ -72,8 +72,15 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-console.log(universities);
+function universitiesArrayCreator(graduates) {
+  let universities = [];
+  for (i = 0; i < graduates.length; i++) {
+    universities.push(graduates[i].university)
+  }
+  return universities.sort()
+}
+
+console.log(universitiesArrayCreator(graduates));
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
@@ -81,12 +88,27 @@ The resulting contact information strings should have a space between the first 
 "Josh josh@example.com"
 
 Log the result of your new array. */
-const contactInfo = [];
-console.log(contactInfo);
+function contactInfoArrayCreator(graduates) {
+  let contactInfo = [];
+  for (i = 0; i < graduates.length; i++) {
+    contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`)
+  }
+  return contactInfo.sort()
+}
+console.log(contactInfoArrayCreator(graduates));
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = [];
-console.log(unisWithUni);
+function unisWithUniArrayCreator(graduates, strMatch) {
+  let unisWithUni = [];
+  //console.log(graduates[0].universities.search("Uni"))
+  for (i = 0; i < graduates.length; i++) {
+    if (graduates[i].university.match(strMatch) !== null) {
+      unisWithUni.push(graduates[i].university)
+    }
+  }
+  return unisWithUni ;
+}
+console.log(unisWithUniArrayCreator(graduates, /Uni/gi));
 
 
 // ==== ADVANCED Array Methods ====
