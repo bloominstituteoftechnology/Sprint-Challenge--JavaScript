@@ -13,7 +13,7 @@ const tyrannosaurus = {
   weight: '7000kg',
   length: '12m',
   period: 'Late Cretaceous',
-  roar: function () { return "RAWERSRARARWERSARARARRRR!" }
+  roar: () => { return "RAWERSRARARWERSARARARRRR!" }
 }
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -72,7 +72,7 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-function universitiesArrayCreator(graduates) {
+universitiesArrayCreator = (graduates) => {
   let universities = [];
   for (i = 0; i < graduates.length; i++) {
     universities.push(graduates[i].university)
@@ -88,7 +88,7 @@ The resulting contact information strings should have a space between the first 
 "Josh josh@example.com"
 
 Log the result of your new array. */
-function contactInfoArrayCreator(graduates) {
+contactInfoArrayCreator = (graduates) => {
   let contactInfo = [];
   for (i = 0; i < graduates.length; i++) {
     contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`)
@@ -98,7 +98,7 @@ function contactInfoArrayCreator(graduates) {
 console.log(contactInfoArrayCreator(graduates));
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-function unisWithUniArrayCreator(graduates, strMatch) {
+unisWithUniArrayCreator = (graduates, strMatch) => {
   let unisWithUni = [];
   //console.log(graduates[0].universities.search("Uni"))
   for (i = 0; i < graduates.length; i++) {
@@ -133,9 +133,9 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-function displayNamesArrayCreator(zooAnimals) {
+displayNamesArrayCreator = (zooAnimals) => {
 let displayNames = [];
-  zooAnimals.forEach(function(arrayItem){
+  zooAnimals.forEach((arrayItem) => {
     displayNames.push(`Name: ${arrayItem.animal_name}, Scientific: ${arrayItem.scientific_name}`)
   })
   return displayNames ;
@@ -148,8 +148,8 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-function lowerCaseNamesArrayCreator(zooAnimals) {
-  return zooAnimals.map(function(arrayItem){
+lowerCaseNamesArrayCreator = (zooAnimals) => {
+  return zooAnimals.map((arrayItem) => {
     return arrayItem.animal_name.toLowerCase()
   })
 }
@@ -161,8 +161,8 @@ console.log(lowerCaseNamesArrayCreator(zooAnimals));
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-function lowPopulationAnimalsArrayCreator(zooAnimals, endangered){
-  return zooAnimals.filter(function(arrayItems){
+lowPopulationAnimalsArrayCreator = (zooAnimals, endangered) => {
+  return zooAnimals.filter((arrayItems) => {
     return arrayItems.population < endangered ;
   })
 }
@@ -173,8 +173,8 @@ console.log(lowPopulationAnimalsArrayCreator(zooAnimals, 5));
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-function populationTotalArrayCreator(zooAnimals){
-  return zooAnimals.reduce(function(accumulator, currentValue){
+populationTotalArrayCreator = (zooAnimals) => {
+  return zooAnimals.reduce((accumulator, currentValue) => {
     return accumulator + currentValue.population
   }, 0)
 }
