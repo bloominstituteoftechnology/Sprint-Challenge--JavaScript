@@ -7,7 +7,7 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
-const tyrannosaurus ={
+const tyrannosaurus = {
   name: 'tyrannosaurus',
   diet: 'carnivorous',
   weight: '7000kg',
@@ -38,7 +38,7 @@ const velociraptor = {
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(tryannosaurus.weight);
+console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
 console.log(velociraptor.diet);
@@ -47,11 +47,11 @@ console.log(velociraptor.diet);
 console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
-console.log(tryannosaurus.period);
+console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(tryannosaurus.roar);
+console.log(tyrannosaurus.roar);
 
 
 // ==== Arrays ====
@@ -81,7 +81,7 @@ const newSchoolData = graduates.map(function(currentValue){
 });
 universities.sort((uni1, uni2) => (uni1 > uni2) ? 1: -1)
 
-console.log(universities);
+console.log(newSchoolData);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
@@ -94,20 +94,21 @@ const newSchoolFilter = graduates.filter(function(currentValue){
   let container = `${currentValue.first_name} ${currentValue.email}`
   contactInfo.push(container);
 })
-console.log(contactInfo);
+console.log(newSchoolFilter);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
-let holder = []
-  graduates.map(function(currentValue){
+let hold = []
+   graduates.map(function(currentValue){
     return unisWithUni.push(currentValue.university);
 });
 for(let i = 0; i < unisWithUni.length; i++){
   if(unisWithUni[i].includes("Uni")){
-    holder.push(unisWithUni[i])
+    hold.push(unisWithUni[i])
   }
-}
-console.log(holder);
+};
+
+console.log(hold);
 
 
 // ==== ADVANCED Array Methods ====
@@ -136,7 +137,7 @@ const displayNames = [];
 zooAnimals.forEach(function(items){
   return displayNames.push(`Name: ${items.animal_name}, Scientific: ${items.scientific_name}`);
 
-})
+});
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -147,8 +148,8 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 const lowCaseAnimalNames = [];
 zooAnimals.map(function(lowCase){
-  lowCaseAnimalNames.push(lowCase.animal_name.toLowerCase());
-})
+   lowCaseAnimalNames.push(lowCase.animal_name.toLowerCase());
+});
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
