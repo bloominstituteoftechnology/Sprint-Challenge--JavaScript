@@ -28,17 +28,46 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
+
 1. Describe the biggest difference between `.forEach` & `.map`.
+
+forEach() — executes a provided function once for each array element.
+
+map() — creates a new array with the results of calling a provided function on every element in the calling array.
+
 
 2. What is the difference between a function and a method?
 
+A function is a piece of code that is called by name. It can be passed data to operate on (i.e. the parameters) and can optionally return data (the return value). All data that is passed to a function is explicitly passed.
+
+A method is a piece of code that is called by a name that is associated with an object. In most respects it is identical to a function except for two key differences:
+
+A method is implicitly passed the object on which it was called.
+A method is able to operate on data that is contained within the class (remembering that an object is an instance of a class - the class is the definition, the object is an instance of that data).
+
+
 3. What is closure?
+
+Closure allows us the ability to put functions together. A closure is code that's been identified elsewhere that we can use for later. We can't push things up, we can only push things down. Children can only inherit from parents, parent's can't inherit from children.
+
 
 4. Describe the four rules of the 'this' keyword.
 
-this keyword refers to an object, that object executes a line of code. 
+this keyword refers to an object, that object which is executing the current bit of javascript code.
+
+ 1) Window/Global Object Binding -- When in the global scope, the value of “this” will be the window/console Object.
+
+ 2) Implicit Binding -- Whenever a function is called by a preceding dot, the object before that dot is this. This happens almost 80% of the time. 
+
+ 3) New binding -- Whenever a constructor function is used, this refers to the specific instance of the object that is created and returned by the constructor function.
+
+ 4) Explicit Binding -- Whenever JavaScript’s call or apply method is used, this is explicitly defined.
 
 5. Why do we need super() in an extended class?
+
+super() tells a parent’s constructor to be concerned with the child’s attributes and abstracts away the Object.create(this, Class) syntax that is trickier to understand. super and extend do together what .call and .create did. 
+
+
 
 ## Project Set up
 
