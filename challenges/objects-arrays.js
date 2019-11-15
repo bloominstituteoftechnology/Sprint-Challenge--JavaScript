@@ -133,8 +133,14 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const displayNames = [];
-console.log(displayNames);
+function displayNamesArrayCreator(zooAnimals) {
+let displayNames = [];
+  zooAnimals.forEach(function(arrayItem){
+    displayNames.push(`Name: ${arrayItem.animal_name}, Scientific: ${arrayItem.scientific_name}`)
+  })
+  return displayNames ;
+}
+console.log(displayNamesArrayCreator(zooAnimals));
 
 /* Request 2: .map()
 
@@ -142,24 +148,37 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-const lowCaseAnimalNames = [];
-console.log(lowCaseAnimalNames);
+function lowerCaseNamesArrayCreator(zooAnimals) {
+  return zooAnimals.map(function(arrayItem){
+    return arrayItem.animal_name.toLowerCase()
+  })
+}
+
+console.log(lowerCaseNamesArrayCreator(zooAnimals));
 
 /* Request 3: .filter() 
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = [];
-console.log(lowPopulationAnimals);
+function lowPopulationAnimalsArrayCreator(zooAnimals, endangered){
+  return zooAnimals.filter(function(arrayItems){
+    return arrayItems.population < endangered ;
+  })
+}
+console.log(lowPopulationAnimalsArrayCreator(zooAnimals, 5));
 
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-const populationTotal = 0;
-console.log(populationTotal);
+function populationTotalArrayCreator(zooAnimals){
+  return zooAnimals.reduce(function(accumulator, currentValue){
+    return accumulator + currentValue.population
+  }, 0)
+}
+console.log(populationTotalArrayCreator(zooAnimals));
 
 
 /*
