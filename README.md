@@ -30,13 +30,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    .forEach does a certain action for each element in an array, while map also adds to an array.
+
 2. What is the difference between a function and a method?
+
+    a method is a function attached to an object.
 
 3. What is closure?
 
+    the { } which allow nesting, creating scopes which have properties similar to child-parent properties from CSS
+
 4. Describe the four rules of the 'this' keyword.
 
+    1.  Windo binding, whatever the set value for the windows are. 
+    2.  Implicit, whatever the object before it in the same scope is. 
+    3.  New binding, whatever the object in the function overseeing the scope is. 
+    4.  Explicit binding, explicitly tells what this is, instead of leaving it open to where it finds it. 
+
 5. Why do we need super() in an extended class?
+
+    To give acces to the parent's constructor and methods.
 
 ## Project Set up
 
