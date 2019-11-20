@@ -34,7 +34,7 @@ class CuboidMaker{
  const cuboid = new CuboidMaker({
     length: 4,
     width: 5,
-    height: 5
+    height: 4
 })
 
 console.log(cuboid.volume()); // 100
