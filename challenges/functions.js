@@ -34,7 +34,7 @@ function greeting(first_name, last_name) {
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 consume(2,2,add); // 4
-cconsume(10,16,multiply); // 160
+consume(10,16,multiply); // 160
 consume("Mary", "Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
@@ -52,7 +52,7 @@ const external = "I'm outside the function";
 
 function myFunction() {
   console.log(external);
-  const internal = "Hello! I'm inside myFunction!";
+  const internal = "I'm inside myFunction!";
 
   function nestedFunction() {
     console.log(internal);
