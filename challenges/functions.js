@@ -8,7 +8,7 @@
 */
 
 function consume(a, b, cb) {
-  return callback (cb);
+  return cb (a, b);
 }
 
 
@@ -19,16 +19,16 @@ function consume(a, b, cb) {
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-function add(num1, num2, callback) {
-  return callback(num1 + num2);
+function add(num1, num2) {
+  return (num1 + num2);
 }
 
-function multiply(num1, num2, callback) {
-  return callback(num1 * num2);
+function multiply(num1, num2) {
+  return (num1 * num2);
 }
 
-function greeting(firstName, lastName, callback) {
-  return callback(`Hello ${firstName} ${lastName}, nice to meet you!`);
+function greeting(firstName, lastName) {
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
 }
 
 
