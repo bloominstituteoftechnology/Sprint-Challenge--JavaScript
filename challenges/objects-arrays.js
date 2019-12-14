@@ -8,37 +8,36 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
-llet tyrannosaurus = {
-	name: 'tyrannosaurus',
-	diet: 'carnivorous',
-	weight: '7000kg',
-	length: '12m',
-	period: 'Late Cretaceous'
+let tyrannosaurus = {
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: "7000kg",
+  length: "12m",
+  period: "Late Cretaceous"
 };
-	let speak = function() {
-    return "RAWERSRARARWERSARARARRRR!";
- };
-console.log(speak());
+let speak = function() {
+  return "RAWERSRARARWERSARARARRRR!";
+};
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
 let stegosaurus = {
-	name: 'stegosaurus',
-	diet: 'herbivorous',
-	weight: '2000kg',
-	length: '9m',
-	period: 'Late Jurassic'
-}
+  name: "stegosaurus",
+  diet: "herbivorous",
+  weight: "2000kg",
+  length: "9m",
+  period: "Late Jurassic"
+};
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
 let velociraptors = {
-	name: 'velociraptor',
-	diet: 'carnivorous',
-	weight: '15kg',
-	length: '1.8m',
-	period: 'Late Cretaceous'
-}
+  name: "velociraptor",
+  diet: "carnivorous",
+  weight: "15kg",
+  length: "1.8m",
+  period: "Late Cretaceous"
+};
 
 // Using your dinosaur objects, log answers to these questions:
 
@@ -46,16 +45,16 @@ let velociraptors = {
 console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(velociraptors.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+console.log(speak());
 
 // ==== Arrays ====
 
@@ -129,7 +128,11 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities);
+for (let i = 0; i < graduates.length; i++) {
+  universities.push(graduates[i].universities);
+  return universities.sort();
+}
+console.log(universities.sort());
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
