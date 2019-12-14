@@ -46,9 +46,9 @@ Closure is used for inheritance. When nesting functions, child functions can acc
 
    Implicit - Used inside of the object. Uses .call, .apply, or .bind method.
 
-   Explicit - Uses .call, .apply, or .bind method.
+   Explicit - You can force a function call to use a particular object for 'this' binding, without putting a property function reference on the object. So, we EXPLICITLY say to a function what object it should use of 'this'.
 
-   New - Used in constructor funcion with newly created object.
+   New - used in constructor funcion with a new instance in an already created object.
 
 5. Why do we need super() in an extended class?
 
@@ -58,19 +58,19 @@ Closure is used for inheritance. When nesting functions, child functions can acc
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Create a pull request before you start working on the project requirements. You will continuously push your updates throughout the project.
-- [ ] You are now ready to build this project with your preferred IDE
-- [ ] Implement the project on your Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add TL as collaborator on Github.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x] Create a pull request before you start working on the project requirements. You will continuously push your updates throughout the project.
+- [x] You are now ready to build this project with your preferred IDE
+- [x] Implement the project on your Branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
-- [ ] Add your team lead as a Reviewer on the Pull-request
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
+- [x] Add your team lead as a Reviewer on the Pull-request
 - [ ] TL then will count the HW as done by merging the branch back into master.
 
 ## Minimum Viable Product
