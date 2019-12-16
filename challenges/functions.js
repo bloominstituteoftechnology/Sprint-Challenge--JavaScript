@@ -44,7 +44,7 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 //SO, 'const external' is in the Global Scope and it's being called in the Local Scope (line 53). There is 
 //another function nested inside of 'function myFunction' and it's being called (line 58), also.  Line 62
-//calls both console.log commands.
+//calls both console.log commands.  Oh, and 'nestedFunction' is nested in 'myFunction'; that's why it can access 'const internal'
 
 
 // Explanation:
