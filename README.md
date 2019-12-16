@@ -38,6 +38,10 @@ That a method is a function within a function.
 The process in which a child function inherits from its parent function.
 
 4. Describe the four rules of the 'this' keyword.
+    1. Whenever a function is in the global scope then "this" inside that function will be the window object.
+    2. Whenever a function is called using dot notation the object to the left of the dot is "this".
+    3. When using a constructor function "this" refers to the specific instance of the object created and returned by the constructor function.
+    4. When using call or apply "this" is explicitly defined.
 
 
 5. Why do we need super() in an extended class?
