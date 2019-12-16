@@ -8,7 +8,7 @@ class CuboidMaker2 {
   }
 
   volume() {
-    let volume = this.length * this.width * this.height;
+    let folume = this.length * this.width * this.height;
     return volume;
   }
 
