@@ -15,15 +15,17 @@ function add (a, b, cb){
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add(a, b, sum){
-  sum => a + b;
+function consume(p1, p2, callback){
+  return callback(p1, p2);
+}
+function add(a, b){
+  return a + b;
  }
- function multipy(a, b, product ){
-  product => a * b;
+ function multiply(a, b){
+  return a * b;
  }
- function greeting(first_name, last_name, callback){
-  callback => first_name + last_name;
-return `Hello ${callback}, nice to meet you!`;
+ function greeting(first_name, last_name){
+  return `Hello ${first_name} ${last_name}, nice to meet you!`;
  }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
@@ -36,7 +38,7 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: Beacuse nested function are the child function and children can inherit from their parent function but not vice versa.
+// Explanation: Beacuse nested function are the child and children can inherit from their parent  but not vice versa.
 
 
 const external = "I'm outside the function";
