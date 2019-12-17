@@ -39,4 +39,4 @@ function myFunction() {
   };
   nestedFunction();
 }
-myFunction()
+myFunction();
