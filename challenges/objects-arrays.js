@@ -109,7 +109,7 @@ for (let i in graduates) {
 }
 console.log(unisWithUni);
 
-//I CAN'T FIGURE REQUEST 3 AT ALL - I GIVE UP ON REQUEST 3 
+//I CAN'T FIGURE REQUEST 3 AT ALL - I GIVE UP ON REQUEST 3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 // ==== ADVANCED Array Methods ====
@@ -162,7 +162,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 const lowPopulationAnimals = [];
 const popFilter = zooAnimals.filter(function(item){
   return item.population < 5;
-})
+});
 console.log(popFilter);
 
 /* Request 4: .reduce() 
@@ -170,12 +170,13 @@ console.log(popFilter);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-const populationTotal = 0;
-zooAnimals.reduce(function totalAll (runningTotal, animal) {
-  return runningTotal + animal.population;
+const populationTotal = [];
+const populationTotal = zooAnimals.reduce(function totalAll (runningTotal, animal) {
+  return runningTotal + animal.populationTotal;
 });
 console.log(populationTotal);
 
+// IT GIVES ME AN ERROR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 /*
 
