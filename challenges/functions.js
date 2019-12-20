@@ -25,7 +25,7 @@
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: 
+// Explanation: An item on the inside can look out but an item on the outside cannot look in. Like a one way mirror.
 
 
 const external = "I'm outside the function";
