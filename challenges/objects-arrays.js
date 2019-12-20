@@ -15,20 +15,55 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+const tyrannosaurus = {
+  name: 'tyrannosaurus',
+  weight: '700kg',
+  period: 'Late Cretaceous'
+};
+console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+const velociraptor = {
+  name: 'velociraptor',
+  weight: '700kg',
+  period: 'Late Cretaceous',
+  diet: 'carnivorous',
+};
+console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
-console.log();
-
+const stegosaurus = {
+  name: 'stegosaurus',
+  weight: '2000kg',
+  period: 'Late Jurassic',
+  diet: 'herbivorous',
+  length: '9m'
+};
+console.log(stegosaurus.length);
 // What time period did tyrannosaurus live in?
 console.log();
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+/*const roar = {
+  speak(tyrnannosaurus){
+    return `RAWERSRARARWERSARARARRRR!`;
+  }
+}
+
+
+
+console.log(tyrnannosaurus.roar);*/
+
+/*const tyrannosaurus = {
+  name: 'tyrannosaurus',
+  weight: '700kg',
+  period: 'Late Cretaceous'
+};
+speak(roar){
+  return `"RAWERSRARARWERSARARARRRR!"`;
+} 
+console.log(tyrnannosaurus.roar)*/
 
 
 // ==== Arrays ====
@@ -52,7 +87,10 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities);
+const graduatesFirst = [];
+
+console.log(graduatesFirst.universities);
+
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
