@@ -39,7 +39,7 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: 
+// Explanation: Nested functions 'inherit' arguments and variables of its containing function. This means that variables only have to be declared once because the inner functon contains the scope of the outer function.
 
 
 const external = "I'm outside the function";
