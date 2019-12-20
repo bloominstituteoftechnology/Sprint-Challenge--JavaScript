@@ -15,7 +15,7 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-/*
+
 var dinosour1 = {
 
   name: 'tyrannosaurus', 
@@ -44,9 +44,9 @@ var dinosour3 = {
   length: '12m', 
   period: 'Late Cretaceous'
 
-} */
+} 
 
-function dinosaurs(name, diet, weight, length, period){
+function Dinosaurs(name, diet, weight, length, period){
   this.name = name;
   this.diet = diet;
   this.weight = weight;
@@ -56,14 +56,14 @@ function dinosaurs(name, diet, weight, length, period){
 
 }
 
-var tyrannosaurus = new dinosaurs('tyrannosaurus', 
+var tyrannosaurus = new Dinosaurs('tyrannosaurus', 
 'carnivorous', '7000kg', '12m', 'Late Cretaceous'); 
 
 
-var stegosaurus = new dinosaurs('stegosaurus', 
+var stegosaurus = new Dinosaurs('stegosaurus', 
 'herbivorous', '2000kg', '9m', 'Late Jurassic')
 
-var velociraptor = new dinosaurs('velociraptor', 
+var velociraptor = new Dinosaurs('velociraptor', 
 'carnivorous', '15kg', '1.8m', 'Late Cretaceous');
 
 
@@ -82,19 +82,11 @@ console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-const tyrannosaurus = {
-   
-
-  Roar: function(){
 
 
-    console.log("RAWERSRARARWERSARARARRRR!");
-  
-  
-  }
-}
 
-tyrannosaurus.roar();
+
+//tyrannosaurus.roar();
 
   
 
@@ -151,7 +143,7 @@ graduates.forEach(element =>{
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = graduates.filter(graduate => graduate.university.indexOf('Uni')> -1);
+const unisWithUni = graduates.filter(graduate => graduate.university.indexOf('Uni')> -1);//need change
 
 console.log(unisWithUni);
 
@@ -220,7 +212,7 @@ const populations = (animals) =>{
   })
   return sum; 
 }
-const populationTotal = reduce(populations(zooAnimals));
+const populationTotal2 = reduce(populations(zooAnimals));
 console.log(populationTotal);
 
 
