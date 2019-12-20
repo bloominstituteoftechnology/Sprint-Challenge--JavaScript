@@ -50,6 +50,14 @@ forEach() changes the original array. But map() returns a new array, without cha
 4. Describe the four rules of the 'this' keyword.
 
 - This keyword has the following four rules:
+1. In a method, this refers to object.
+2. In a function, this refers to the global object
+3. In an event, this refers to to the element 
+4.
+
+
+
+
 
 5. Why do we need super() in an extended class?
 
