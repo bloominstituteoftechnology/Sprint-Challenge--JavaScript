@@ -30,13 +30,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+forEach does not create an array while .map does
+
 2. What is the difference between a function and a method?
+
+a function is standalone while a method is inside of an object
 
 3. What is closure?
 
+it is how far an item in a scope is looking out
+
 4. Describe the four rules of the 'this' keyword.
 
+if you use 'new', then 'this' is the new object
+if apply, call, or binf are used the 'this' is what will be passed on
+if a method is used, the item to the left of the dot is 'this'
+if no other condition are met, 'this' is a global object
+
 5. Why do we need super() in an extended class?
+
+a super tells the class to look at the parent object
 
 ## Project Set up
 
