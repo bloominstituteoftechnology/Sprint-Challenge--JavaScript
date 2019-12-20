@@ -40,11 +40,11 @@ function greeting(first, last) {
 const external = "I'm outside the function";
 
 function myFunction() {
-  console.log(external);
+  console.log(external); //I am outside of the function
   const internal = "Hello! I'm inside myFunction!";
 
   function nestedFunction() {
-    console.log(internal);
+    console.log(internal);//Hello! I am inside myFunction!
   };
   nestedFunction();
 }

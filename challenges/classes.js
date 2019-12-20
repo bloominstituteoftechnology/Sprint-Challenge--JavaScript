@@ -31,5 +31,8 @@ class CubeMaker extends CuboidMaker{
     };
     surfaceArea() {
         return 6 * (length + length);
-    }
-}
+    };
+};
+const cube = new CubeMaker({
+    length: 8
+});
