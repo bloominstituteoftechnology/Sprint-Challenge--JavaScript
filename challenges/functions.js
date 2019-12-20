@@ -7,6 +7,15 @@
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
+function test (arg1, arg2) {
+  return 'Beep, Beep, this is a test: ${arg1} ${arg2}';  
+}
+
+function consume (a, b, cb) {
+  return cb(a, b)
+}
+
+console.log(consume('arg1', 'arg2', test))
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
