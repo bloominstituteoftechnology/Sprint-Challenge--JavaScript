@@ -1,6 +1,7 @@
 /* ===== Prototype Practice ===== */
 
-// Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge.
+// Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to 
+//cubes but do not have even sides. Follow the steps in order to accomplish this challenge.
 
 /* == Step 1: Base Constructor ==
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
@@ -14,6 +15,12 @@ const cuboid = new CuboidMaker({
   length: 4,
   width: 5,
   height: 5 
+})
+
+let cube = new CuboidMaker ({
+  length: 4,
+  width: 6,
+  height: 8
 })
 
 
@@ -47,5 +54,7 @@ CuboidMaker.prototype.surfaceArea = function(){
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
+console.log(cube.volume()); // 100
+console.log(cube.surfaceArea()); // 130
 
 
