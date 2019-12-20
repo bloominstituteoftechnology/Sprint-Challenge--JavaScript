@@ -100,12 +100,24 @@ return contactInfo.sort()
 console.log(contactInfoArrayCreation(graduates));
 
 
-const contactInfo = [];
-console.log(contactInfo);
+// const contactInfo = [];
+// console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = [];
-console.log(unisWithUni);
+unisWithUniArrayCreation = (graduates, uniMatch) => {
+  let unisWithUni = [];
+  for (i = 0; i < graduates.length; i++) {
+    if (graduates[i].university.match(uniMatch) !== null) {
+      unisWithUni.push(graduates[i].university)
+    }
+}
+return unisWithUni;
+}
+console.log(universitiesArrayCreation(graduates, /Uni/gi));
+
+
+// const unisWithUni = [];
+// console.log(unisWithUni);
 
 
 // ==== ADVANCED Array Methods ====
