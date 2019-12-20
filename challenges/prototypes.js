@@ -9,8 +9,16 @@ function CuboidMaker (length, width, height){
   this.cuboLength = length;
   this.cuboWidth = width;
   this.cuboHeight = height;
-  
+
 }
+CuboidMaker.prototype.volume = function(){
+  return this.cuboLength * this.cuboWidth * this.cuboHeight
+}
+CuboidMaker.prototype.surfaceArea = function(){
+  return 2 * (this.cuboLength * this.cuboWidth + this.cuboLength * this.cuboHeight + this.cuboWidth * this.cuboHeight)
+}
+
+const cuboid = new CuboidMaker (4,5,5);
 
 /* == Step 2: Volume Method ==
   Create a method using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
