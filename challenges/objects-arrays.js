@@ -136,7 +136,7 @@ graduates.forEach(element =>{
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = [];
+const unisWithUni = graduates.filter(graduate => graduate.university.indexOf('Uni')> -1);
 
 console.log(unisWithUni);
 
@@ -173,6 +173,12 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 const lowCaseAnimalNames = [];
+zooAnimals.forEach(zooAnimal => {
+  lowCaseAnimalNames.push('Name: ' + zooAnimal.animal_name + ", Scientific: " + zooAnimal.scientific_name);
+
+});
+
+
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -180,7 +186,8 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = [];
+const lowPopulationAnimals = zooAnimals.filter(zooAnimal => zooAnimal.population<5);
+
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -189,6 +196,16 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 const populationTotal = 0;
+const populations = (animals) =>{
+
+  var sum = 0;
+  animals.forEach(animal => {
+    sum +=animal.population;
+
+  })
+  return sum; 
+}
+const populationTotal = reduce(populations(zooAnimals));
 console.log(populationTotal);
 
 
