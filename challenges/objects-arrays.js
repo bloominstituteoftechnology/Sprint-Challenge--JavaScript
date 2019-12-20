@@ -90,7 +90,14 @@ The resulting contact information strings should have a space between the first 
 "Josh josh@example.com"
 
 Log the result of your new array. */
-
+contactInfoArrayCreation = (graduates) => {
+  let contactInfo = [];
+  for (i=0, i < graduates.length; i++) {
+    contactInfo.push(`${graduates[i].firstname} ${graduates[i].email}`)
+}
+return contactInfo.sort()
+}
+console.log(contactInfoArrayCreation(graduates));
 
 
 const contactInfo = [];
