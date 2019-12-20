@@ -25,7 +25,7 @@
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: 
+// Explanation: Is the process of functions creating other function within it's lexical environment giving the nested function access to the outer function.
 
 
 const external = "I'm outside the function";
