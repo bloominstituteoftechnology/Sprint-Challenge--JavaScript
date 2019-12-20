@@ -109,22 +109,13 @@ console.log (contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 let unisWithUni = university;
-// function filterItems(arr, query) {
-//   return arr.filter(function(el) {
-//       return el.toUpperCase().indexOf(query.toUpperCase()) !== -1;
-//   })
-// }
 
-//Arrow Function
-let filterUni  = (arr, que) => {
-  return arr.filter((el) => {
-    return el.toLowerCase().indexOf(que.toLowerCase()) !== -1
+function filterItems(arr, query) {
+  return arr.filter(function(el) {
+      return el.toUpperCase().indexOf(query.toUpperCase()) !== -1;
   })
 }
-
-console.log(filterUni(unisWithUni, 'uni'))
-
-// console.log(filterItems(unisWithUni, 'uni'));
+console.log(filterItems(unisWithUni, 'uni'));
 
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
@@ -148,22 +139,12 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
+const animalsName = [];
+zooAnimals.forEach(function(items) {
+  return animalsName.push(`Name: ${items.animal_name} Scientific: ${items.scientific_name}`)
+});
 
-
-// const animalsName = [];
-// zooAnimals.forEach(function(items) {
-//   return animalsName.push(`Name: ${items.animal_name} Scientific: ${items.scientific_name}`)
-// });
-
-//Converted Arrow Function
-const animalsName1 = []
-let animalNames = zooAnimals.forEach((items) =>{
-  return animalsName1.push(`Name ${items.animal_name} Scientific ${items.scientific_name}`)
-})
-
-
-console.log(animalsName1)
-// console.log(animalsName)
+console.log(animalsName)
 
 /* Request 2: .map()
 
@@ -171,16 +152,14 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-// const  lowCaseAnimalNames = zooAnimals.map(function(element){
-//   return element.animal_name.toLowerCase();
-// })
-// console.log(lowCaseAnimalNames);
-
-//Arrow Function
-let lowCaseAni = zooAnimals.map((element) => {
-  return element.animal_name;
+const  lowCaseAnimalNames = zooAnimals.map(function(element){
+  return element.animal_name.toLowerCase();
 })
-console.log(lowCaseAni)
+console.log(lowCaseAnimalNames);
+
+// const zooAnimals = [... new Set(zooAnimals.map(data => data.scientific_name))]
+// let lowerCaseAnimalsNames = scientific_name.toLowerCase();
+//  console.log(lowCaseAnimalNames)
 
 
 
@@ -190,18 +169,11 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 
-// const lowPopulationAnimals = zooAnimals.filter(function(element){
-//   return element.population < 5;
-// })
-
-//Arrow Function
-let lowPop = zooAnimals.filter((el) => {
-  return el.population < 5
-
+const lowPopulationAnimals = zooAnimals.filter(function(element){
+  return element.population < 5;
 })
-console.log(lowPop)
 
-// console.log(lowPopulationAnimals);
+console.log(lowPopulationAnimals);
 
 
 /* Request 4: .reduce() 
@@ -210,19 +182,13 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 // const populationTotal = 0;
-//  const populationTotal = zooAnimals.reduce(function(accum, value){
+ const populationTotal = zooAnimals.reduce(function(accum, value){
 
-//   return accum + value.population
-// }, 0)
-
-// console.log(populationTotal);
-
-//Arrow Function
-let totalPop = zooAnimals.reduce((ac, va) => {
-  return ac + va.population
+  return accum + value.population
 }, 0)
 
-console.log(totalPop);
+console.log(populationTotal);
+
 
 
 /*
