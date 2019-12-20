@@ -82,12 +82,27 @@ console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-Roar(){
+const tyrannosaurus = {
+   
+
+  Roar: function(){
 
 
+    console.log("RAWERSRARARWERSARARARRRR!");
+  
+  
+  }
 }
 
-console.log();
+tyrannosaurus.roar();
+
+  
+
+
+
+
+
+
 
 
 // ==== Arrays ====
