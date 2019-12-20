@@ -15,7 +15,60 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+/*
+var dinosour1 = {
+
+  name: 'tyrannosaurus', 
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m', 
+  period: 'Late Cretaceous'
+
+}
+
+var dinosour2 = {
+
+  name: 'tyrannosaurus', 
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m', 
+  period: 'Late Cretaceous'
+
+}
+
+var dinosour3 = {
+
+  name: 'tyrannosaurus', 
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m', 
+  period: 'Late Cretaceous'
+
+} */
+
+function dinosaurs(name, diet, weight, length, period){
+  this.name = name;
+  this.diet = diet;
+  this.weight = weight;
+  this.length = length;
+  this.period = period;
+
+
+}
+
+var tyrannosaurus = new dinosaurs('tyrannosaurus', 
+'carnivorous', '7000kg', '12m', 'Late Cretaceous'); 
+
+
+var stegosaurus = new dinosaurs('stegosaurus', 
+'herbivorous', '2000kg', '9m', 'Late Jurassic')
+
+var velociraptor = new dinosaurs('velociraptor', 
+'carnivorous', '15kg', '1.8m', 'Late Cretaceous');
+
+
+
+console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
 console.log();
