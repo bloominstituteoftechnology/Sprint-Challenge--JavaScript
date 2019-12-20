@@ -25,13 +25,16 @@ const stegosaurus = {
   length: '9m', 
   period: 'Late Jurassic'
 
+}
+
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
-const velociraptors = {
-  name: 'velociraptor',
-  diet: 'carnivorous', 
+const velociraptor = {
+  name: 'velociraptor', 
+  diet: 'herbivorous', 
   weight: '15kg', 
-  length: '1.8m', 
+  length: '9m', 
   period: 'Late Cretaceous'
+}
 
 // Using your dinosaur objects, log answers to these questions:
 
@@ -39,7 +42,7 @@ const velociraptors = {
 console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
-console.log(velociraptors.diet);
+console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
 console.log(stegosaurus.length);
@@ -72,14 +75,16 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-universitiesArrayCreation = (graduates) => {
+
+universitiesArrayCreator = (graduates) => {
   let universities = [];
-  for (i=0, i < graduates.length; i++) {
+  for (i = 0; i < graduates.length; i++) {
     universities.push(graduates[i].university)
   }
   return universities.sort()
 }
-console.log(universitiesArrayCreation(graduates));
+
+console.log(universitiesArrayCreator(graduates));
 
 // const universities = [];
 // console.log(universities);
@@ -92,7 +97,7 @@ The resulting contact information strings should have a space between the first 
 Log the result of your new array. */
 contactInfoArrayCreation = (graduates) => {
   let contactInfo = [];
-  for (i=0, i < graduates.length; i++) {
+  for (i = 0; i < graduates.length; i++) {
     contactInfo.push(`${graduates[i].firstname} ${graduates[i].email}`)
 }
 return contactInfo.sort()
@@ -142,33 +147,59 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const displayNames = [];
-console.log(displayNames);
+displayNamesArrayCreator = (zooAnimals) => {
+  let displayNames = [];
+    zooAnimals.forEach((arrayItem) => {
+      displayNames.push(`Name: ${arrayItem.animal_name}, Scientific: ${arrayItem.scientific_name}`)
+    })
+    return displayNames ;
+  }
+  console.log(displayNamesArrayCreator(zooAnimals));
+
+// const displayNames = [];
+// console.log(displayNames);
 
 /* Request 2: .map()
 
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
 
 */
-
-const lowCaseAnimalNames = [];
-console.log(lowCaseAnimalNames);
+lowerCaseNamesArrayCreator = (zooAnimals) => {
+  return zooAnimals.map((arrayItem) => {
+    return arrayItem.animal_name.toLowerCase()
+  })
+}
+// const lowCaseAnimalNames = [];
+// console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = [];
-console.log(lowPopulationAnimals);
+lowPopulationAnimalsArrayCreator = (zooAnimals, endangered) => {
+  return zooAnimals.filter((arrayItems) => {
+    return arrayItems.population < endangered ;
+  })
+}
+
+// const lowPopulationAnimals = [];
+// console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-const populationTotal = 0;
-console.log(populationTotal);
+populationTotalArrayCreator = (zooAnimals) => {
+  return zooAnimals.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.population
+  }, 0)
+}
+console.log(populationTotalArrayCreator(zooAnimals));
+
+// const populationTotal = 0;
+// console.log(populationTotal);
 
 
 /*
