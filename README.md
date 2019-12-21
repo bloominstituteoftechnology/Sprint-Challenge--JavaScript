@@ -46,7 +46,7 @@ Closure is the combination of a function bundled together with refereces to its 
 4. Whenever JavaScript's call or apply method is used, this is explicitly defined. 
 
 5. Why do we need super() in an extended class?
-to avoid duplicating the constructor parts
+to avoid duplicating the constructor parts I believe. SUper is used to access and call functions on an object's parent.
 
 ## Project Set up
 
