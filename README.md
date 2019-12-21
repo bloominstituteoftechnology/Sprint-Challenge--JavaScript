@@ -36,7 +36,7 @@ forEach loops through the array and will allow changes to be made. Map does not 
 A function returns a value. A method can contain a function. A method is almost like a functin but is inside of an object.
 
 3. What is closure?
- An inner functin that has access to outer variables within scope.
+ An inner function that has access to outer variables within scope.
  You can inherit down but not up meaning a child can inherit from its parent but not the opposite.
 
 4. Describe the four rules of the 'this' keyword.
