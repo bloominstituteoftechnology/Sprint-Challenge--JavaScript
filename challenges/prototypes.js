@@ -11,13 +11,16 @@ function CuboidMaker(length, width, height) {
 
 /* == Step 2: Volume Method ==
   Create a method using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
-  
   Formula for cuboid volume: length * width * height
 */
+
 CuboidMaker.prototype.volume = function() {
-  let vol = this.length * this.width * this.height;
-  return vol;
+  // let volume= this.length * this.width * this.height;
+  return this.length * this.width * this.height;
 };
+
+const cuboidMaker = new CuboidMaker();
+// console.log(cuboidMaker.volume());
 
 /* == Step 3: Surface Area Method ==
   Create another method using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
@@ -25,35 +28,36 @@ CuboidMaker.prototype.volume = function() {
   Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 */
 CuboidMaker.prototype.surfaceArea = function() {
-  let surfArea =
+  //  let surfaceArea= 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
+  return (
     2 *
     (this.length * this.width +
       this.length * this.height +
-      this.width * this.height);
-  return surfArea;
+      this.width * this.height)
+  );
 };
 
-// let parentcuboid = new CuboidMaker({
-//   length: length,
-//    width: width,
-//    height: height
-// });
+// console.log(cuboidMaker.surfaceArea());
 
 /* == Step 4: Create a new object that uses CuboidMaker ==
   Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
-function Cuboid() {
-  CuboidMaker.call(this);
-}
-Cuboid.prototype = Object.create(CuboidMaker.prototype);
+// function Cuboid(childAttributes){
+// CuboidMaker.call(this, childAttributes);
+// }
+const cuboid = new CuboidMaker(4,5,5)
 
-const cuboid = new Cuboid({
-  length: 4,
-  width: 5,
-  height: 5
-});
+// Cuboid.prototype = Object.create(CuboidMaker.prototype);
+
+// // const cuboid = new Cuboid({
+
+// const cuboid = new Cuboid({
+//   length: 4,
+//   width: 5,
+//   height: 5
+// });
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid.surfaceArea()); // 130
