@@ -30,11 +30,28 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.map returns a new array while .forEach doesn't
+
 2. What is the difference between a function and a method?
+
+a method is a function that is the value of an object
 
 3. What is closure?
 
+the ability to use inherited elements inside of a scope
+
 4. Describe the four rules of the 'this' keyword.
+
+---- when a function is in the global scope, the value of 'this' in that function is the 'window/console' object
+
+---- whenever a function is called by dot notation, the object before that dot is 'this'
+
+---- in the context of a constructor function, 'this' points to the certain instance of the object that is created and returned by the said function
+
+----  when the call/apply method is used, 'this' is defined
+
+
+
 
 5. Why do we need super() in an extended class?
 
