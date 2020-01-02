@@ -34,7 +34,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. What is the difference between a function and a method?
 
-a method is a function that is the value of an object
+a method is a function that is a value inside an object
 
 3. What is closure?
 
@@ -44,16 +44,15 @@ the ability to use inherited elements inside of a scope
 
 ---- when a function is in the global scope, the value of 'this' in that function is the 'window/console' object
 
----- whenever a function is called by dot notation, the object before that dot is 'this'
+---- the object before the dot is 'this' on a function/method invocation
 
 ---- in the context of a constructor function, 'this' points to the certain instance of the object that is created and returned by the said function
 
 ----  when the call/apply method is used, 'this' is defined
 
-
-
-
 5. Why do we need super() in an extended class?
+
+super() binds or gives the extended class access to its parent 'this' context
 
 ## Project Set up
 
