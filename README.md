@@ -30,13 +30,29 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.map returns a new array while .forEach doesn't
+
 2. What is the difference between a function and a method?
+
+a method is a function that is a value inside an object
 
 3. What is closure?
 
+the ability to use inherited elements inside of a scope
+
 4. Describe the four rules of the 'this' keyword.
 
+---- when a function is in the global scope, the value of 'this' in that function is the 'window/console' object
+
+---- the object before the dot is 'this' on a function/method invocation
+
+---- in the context of a constructor function, 'this' points to the certain instance of the object that is created and returned by the said function
+
+----  when the call/apply method is used, 'this' is defined
+
 5. Why do we need super() in an extended class?
+
+super() binds or gives the extended class access to its parent 'this' context
 
 ## Project Set up
 
@@ -45,7 +61,7 @@ Follow these steps to set up and work on your project:
 - [ ] Create a forked copy of this project.
 - [ ] Add TL as collaborator on Github.
 - [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
 - [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
 - [ ] You are now ready to build this project with your preferred IDE
 - [ ] Implement the project on your Branch, committing changes regularly.
