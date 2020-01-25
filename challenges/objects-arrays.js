@@ -6,6 +6,29 @@
   object name, diet, weight, length, period
 */
 
+  let dinoTyrannosaurus = {
+       name:"tyrannosaurus",
+       diet: "carnivorous",
+       weigh: "7000kg",
+       length: "12m",
+       period: "Late Cretaceous",
+  }
+
+  let dinoStegosaurus = {
+    name:"stegosaurus",
+    diet: "herbivorous",
+    weigh: "2000kg",
+    length: "9m",
+    period: "Late Jurassic",
+  }
+
+  let dinoVelociraptor ={
+    name:"velociraptor",
+    diet: "carnivorous",
+    weigh: "15kg",
+    length: "1.8m",
+    period: "Late Cretaceous",
+  }
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
