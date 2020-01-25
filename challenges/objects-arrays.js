@@ -56,7 +56,7 @@ const graduates = [
   { id: 2, first_name: "Saundra", university: "The School of the Art Institute of Chicago", email: "swhal1@state.gov" },
   { id: 3, first_name: "Lambert", university: "Marian College", email: "lparham2@techcrunch.com" },
   { id: 4, first_name: "Modestine", university: "International Medical & Technological University", email: "mdolder3@symantec.com" },
-  { id: 5, first_name: "Chick", university: "Sultan Salahuddin Abdul Aziz Shah Polytechnic", email: "camorts4@google.com.au" },
+  { id: 5, first_name: "Chick", university: "International Medical & Technological University", email: "camorts4@google.com.au" },
   { id: 6, first_name: "Jakob", university: "Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft", email: "jharken5@spiegel.de" },
   { id: 7, first_name: "Robbi", university: "Salem University", email: "rbrister6@redcross.org" },
   { id: 8, first_name: "Colline", university: "Coastal Carolina University", email: "cbrosh7@alibaba.com" },
@@ -67,17 +67,33 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
+const universities = ["Missouri Southern State College","The School of the Art Institute of Chicago","Marian College","International Medical & Technological University",
+"International Medical & Technological University","Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft","Salem University","Coastal Carolina University","Universidad Católica de Ávila",
+"Universitat Rovira I Virgili Tarragona"];
+universities.sort();
 console.log(universities);
-
+console.log(universities.sort());
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
 The resulting contact information strings should have a space between the first name and the email, like this: 
 "Josh josh@example.com"
 
 Log the result of your new array. */
-const contactInfo = [];
-console.log(contactInfo);
+const contactInfo = [
+  {first_name: "Cynde", email: "ctorry0@macromedia.com" },
+{  first_name: "Saundra",  email: "swhal1@state.gov" },
+{ first_name: "Lambert", email: "lparham2@techcrunch.com" },
+{ first_name: "Modestine",  email: "mdolder3@symantec.com" },
+{ first_name: "Chick",  email: "camorts4@google.com.au" },
+{ first_name: "Jakob",  email: "jharken5@spiegel.de" },
+{  first_name: "Robbi", email: "rbrister6@redcross.org" },
+{  first_name: "Colline",  email: "cbrosh7@alibaba.com" },
+{  first_name: "Michail",  email: "mrome8@shinystat.com" },
+{ first_name: "Hube",  email: "hlethbrig9@foxnews.com" }
+];
+//not working
+contactInfo.toString();
+console.log(contactInfo.toString());
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
@@ -106,7 +122,8 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const displayNames = [];
+
+const displayNames.forEach(`${zooAnimals.animal_name}, ${zooAnimals.scientific_name}`) 
 console.log(displayNames);
 
 /* Request 2: .map()

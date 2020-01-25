@@ -30,13 +30,45 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.forEach can change an original array while .map() creates a new array
+
 2. What is the difference between a function and a method?
+
+A function calls upon arguments and parameters to perform tasks. A method binds to objects to and called by name
 
 3. What is closure?
 
+Is a combo of functions and references to its environment
+
 4. Describe the four rules of the 'this' keyword.
 
+ when a function is contained in global scope, the value of "this" inside of that function will be the window object
+      function greetMe(name){
+        consle.log('Hi' + name);
+        console.log(this);
+      }
+      greetMe('John');
+  2.  when a func is called by a proceeding dot, the object before that dot is this
+          var greetMe={
+            greeting:'Hello',
+            speak:function (name) {
+              console.log(this.greeting + name);
+              console.log(this);
+            }
+          }
+          greetMe.speak('John');
+3. When a constructor function is used, this refers to the specific instance
+ of the object that is created and returned by the constructor function.
+              function GreetMe(name) {
+
+              }
+  4. Whenever call or apply method is used, this is explicitly defined
+*/
+
+
+
 5. Why do we need super() in an extended class?
+we need it after creating the new constructor in order to call the attributes.  need everytime to call
 
 ## Project Set up
 
