@@ -30,13 +30,37 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The major difference is in the return values for each of these functions.  In the case of .forEach(), an iterator function, we use a callback to access the items in the array that come back with each pass. The .forEach() method of the array object iterates over the array’s items, in ascending order, without mutating the array. The .forEach() method executes the callback function with 3 arguments: the current iterated array item, the index of the iterated item and the array instance itself.
+The most significant difference between .forEach and .map is that map returns a new array of elements while in turn passing each element back to the callback.  The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+
 2. What is the difference between a function and a method?
+
+Methods and functions are both functions in JS - methods are functions that are properties of an object. In JavaScript, functions themselves are objects, so, in that context, a method is actually an object reference to a function.
 
 3. What is closure?
 
+ A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+
 4. Describe the four rules of the 'this' keyword.
 
+1. Principle 1: Window/Global Object Binding -
+  When in the global scope, the value of “this” will be the window/console Object.
+  
+2. Principle 2: Implicit Binding
+  Whenever a preceding dot calls a function, the object before the dot is this.
+  This principle is one of the most commonly used applications of the this keyword. Here is another example for use to play with.
+
+3. Principle 3: New binding
+  Whenever we use a constructor function, this refers to the specific instance of the object that is created and returned by the constructor function.
+
+4. Principle 4: Explicit binding
+  Whenever we use JavaScript’s call or apply method, this is explicitly defined.
+  We can override how we set constructor objects by taking the object-oriented approach. We do so by calling them explicitly with new functions, .call and .apply.
+
 5. Why do we need super() in an extended class?
+
+Calling super() in a subclass tells the superclass constructor to be concerned with the subclass attributes and does away with the need of using the Object.create(this, Class) syntax used when creating child functions from parent functions.
+In a child class, you use super() to call its parent’s constructor and super.<methodName> to access its parent’s methods. 
 
 ## Project Set up
 
