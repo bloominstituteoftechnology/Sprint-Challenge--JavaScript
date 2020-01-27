@@ -39,20 +39,20 @@ const velociraptor = {
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log('Tyrannosaurus weight: ${tyrannosaurus.weight}'); // 7000kg
+console.log(`Tyrannosaurus weight: ${tyrannosaurus.weight}`); // 7000kg
 
 // What was the diet of a velociraptor?
-console.log('Velociraptor diet: ${velociraptor.diet}'); // carnivorous
+console.log(`Velociraptor diet: ${velociraptor.diet}`); // carnivorous
 
 // How long was a stegosaurus?
-console.log('Stegosaurus length: ${stegosaurus.length}'); // 9m
+console.log(`Stegosaurus length: ${stegosaurus.length}`); // 9m
 
 // What time period did tyrannosaurus live in?
-console.log('Tyrannosaurus time period: ${tyrannosaurus.period}'); // Late Crustaceous
+console.log(`Tyrannosaurus time period: ${tyrannosaurus.period}`); // Late Crustaceous
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log('Tyrannosaurus roar: ${tyrannosaurus.roar}'); // RAWERSRARARWERSARARARRRR!
+console.log(`Tyrannosaurus roar: ${tyrannosaurus.roar()}`); // RAWERSRARARWERSARARARRRR!
 
 
 // ==== Arrays ====
@@ -88,7 +88,7 @@ The resulting contact information strings should have a space between the first 
 "Josh josh@example.com"
 
 Log the result of your new array. */
-const contactInfo = graduates.map(graduate => '${graduate.first_name} ${graduate.email}');
+const contactInfo = graduates.map(graduate => `${graduate.first_name} ${graduate.email}`);
 console.log('contactInfo:');
 console.log(contactInfo);
 
@@ -132,7 +132,7 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-zooAnimals.forEach(element => displayNames.push('Name: ${element.animal_name}, Scientific: ${element.scientific_name}'));
+zooAnimals.forEach(element => displayNames.push(`Name: ${element.animal_name}, Scientific: ${element.scientific_name}`));
 console.log('displayNames:');
 console.log(displayNames);
 
@@ -167,7 +167,7 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 const populationTotal = zooAnimals.reduce((total, animal) => total += animal.population, 0);
-console.log('Population Total = ${populationTotal}'); // 56
+console.log(`Population Total = ${populationTotal}`); // 56
 
 //console.log(typeof populationTotal); // number
 

@@ -19,12 +19,12 @@ function add(num1, num2) {
 	return num1 + num2;
 }
 
-function mutiply(num1, num2) {
+function multiply(num1, num2) {
 	return num1 * num2;
 }
 
 function greeting(fName, lName) {
-	return 'Hello ${fName} ${lName}, nice to meet you!';
+	return `Hello ${fName} ${lName}, nice to meet you!`;
 }
 
 
