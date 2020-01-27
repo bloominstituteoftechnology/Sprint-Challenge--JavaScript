@@ -14,21 +14,54 @@
 
 // Using your dinosaur objects, log answers to these questions:
 
+const dinosaurs = {
+  printIntroduction: function () {
+    console.log(`name: ${name} diet: ${diet} weight: ${weight} length: ${length} period: ${period}`);
+  }
+};
+
+const dinoTypeOne = {
+	name: "tyrannosaurus",
+	diet: "carnivorous",
+	weight: "7000kg",
+	length: "12m",
+	period: "Late Cretaceous",
+	roar: function() {
+		return "RAWERSRARARWERSARARARRRR!";
+	}
+}
+
+const dinoTypeTwo = {
+	name: "stegosaurus",
+	diet: "herbivorous",
+	weight: "2000kg",
+	length: "9m",
+	period: "Late Jurassic"
+}
+
+const dinoTypeThree = {
+	name: "velociraptor",
+	diet: "carnivorous",
+	weight: "15kg",
+	length: "1.8m",
+	period: "Late Cretaceous"
+}
+
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(dinoTypeOne.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(dinoTypeThree.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(dinoTypeTwo.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(dinoTypeOne.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+console.log(dinoTypeOne.roar);
 const dinosaurs = {
   printIntroduction: function () {
     console.log(`name: ${name} diet: ${diet} weight: ${weight} length: ${length} period: ${period}`);
