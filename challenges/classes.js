@@ -7,10 +7,10 @@
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
 class CuboidMaker {
-  constructor(attributes) {
-    this.length = attributes.length;
-    this.width = attributes.width;
-    this.height = attributes.height;
+  constructor(length, width, height) {
+    this.length = length;
+    this.width = width;
+    this.height = height;
   }
 
   /* == Step 2: Volume Method ==
@@ -19,7 +19,7 @@ class CuboidMaker {
     Formula for cuboid volume: length * width * height
   */
   volume() {
-    return (calvol = this.length * this.width * this.height);
+    return this.length * this.width * this.height;
   }
 
   /* == Step 3: Surface Area Method ==
@@ -27,12 +27,13 @@ class CuboidMaker {
   
     Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
   */
-  surfaceArea(cuboid) {
-    return (cuboid =
+  surfaceArea() {
+    return (
       2 *
       (this.length * this.width +
         this.length * this.height +
-        this.width * this.height));
+        this.width * this.height)
+    );
   }
 }
 
@@ -41,7 +42,7 @@ class CuboidMaker {
     Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
   */
 
-const cuboid = new CuboidMaker(4, 5, 5);
+var cuboid = new CuboidMaker(4, 5, 5);
 console.log(cuboid);
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
