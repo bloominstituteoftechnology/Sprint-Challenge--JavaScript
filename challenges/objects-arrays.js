@@ -5,29 +5,31 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
-const dinosaurs = [
-  {
-    name: "tyrannosaurus",
-    diet: "carnivorous",
-    weight: 7000,
-    length: "12m",
-    period: "Late Cretaceous"
-  },
-  {
-    name: "stegosaurus",
-    diet: "herbivorous",
-    weight: "2000 kg",
-    length: "12m",
-    period: "Late Jurassic"
-  },
-  {
-    name: "velociraptor",
-    diet: "carnivorous",
-    weight: "15 kg",
-    length: "1.8m",
-    period: "Late Cretaceous"
+const tyrannosaurus = {
+  diet: "carnivorous",
+  weight: "7000 kg",
+  length: "12m",
+  period: "Late Cretaceous",
+  roar: function() {
+    return "RAWERSRARARWERSARARARRRR!";
   }
-];
+};
+
+const stegosaurus = {
+  name: "stegosaurus",
+  diet: "herbivorous",
+  weight: "2000 kg",
+  length: "12m",
+  period: "Late Jurassic"
+};
+const velociraptor = {
+  name: "velociraptor",
+  diet: "carnivorous",
+  weight: "15 kg",
+  length: "1.8m",
+  period: "Late Cretaceous"
+};
+
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -37,25 +39,21 @@ const dinosaurs = [
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-var myArr = dinosaurs.map(a => a.weight);
-console.log(myArr[0]);
+//var myArr = dinosaurs.map(a => a.weight);
+console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
-var myArr1 = dinosaurs.find(a => {
-  a.diet;
-  return a.name === "velociraptor";
-});
 
-console.log(myArr1);
+console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+console.log(this.roar);
 
 // ==== Arrays ====
 
