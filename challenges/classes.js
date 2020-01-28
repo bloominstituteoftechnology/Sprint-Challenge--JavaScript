@@ -1,16 +1,16 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
 class CuboidMaker {
-    constructor (attrs) {
-    this.length=attrs.length;
-    this.width=attrs.width;
-    this.height=attrs.height;
+    constructor (length,width,height) {
+    this.length=length;
+    this.width=width;
+    this.height=height;
   }
 
       volume (){
     returns this.length * this.width * this.height ;
   }
 surfaceArea () {
-    returns 2 * (this.length *this.width * this.length * this.height * this.width *this.height);
+    returns 2 * (this.length *this.width + this.length * this.height + this.width *this.height);
   }
 }
  

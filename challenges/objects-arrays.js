@@ -98,7 +98,7 @@ console.log(contactInfo.toString());
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
 
-const filterItems =(arr,query)=> {
+const filterItems =(contactInfo,query)=> {
   return ArrayBuffer.filter(el=>el.toLowerCase().indexOf(query.toLowerCase())!==-1)
 }
 console.log(filterItems(unisWithUni,'Uni'));
@@ -135,14 +135,22 @@ const zooAnimals = [
 ];
 
 /* Request 1: .forEach()
+const array1 = ['a', 'b', 'c'];*/
+zooAnimals.for Each(element=>console.log(element));
+//array1.forEach(element => console.log(element));
 
-The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name 
-and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
+// expected output: "a"
+// expected output: "b"
+// expected output: "c"
+
+//The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name 
+//and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
 
 const displayNames.forEach(`${zooAnimals[animal_name]}, ${zooAnimal[scientific_name]}`) 
 console.log(displayNames);
+
 
 /* Request 2: .map()
 
@@ -152,8 +160,13 @@ pattern: "jackal, asiatic". Log the resut.
 
 */
 
-const lowCaseAnimalNames = [];
+const lowCaseAnimalNames = [animal_name];
 console.log(lowCaseAnimalNames);
+
+// pass a function to map
+const map1 = lowCaseAnimalNames.map(x => x * 2);
+
+console.log(map1);
 
 /* Request 3: .filter() 
 
@@ -179,8 +192,19 @@ The zoos need to know their total animal population across the United States.
  the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-const populationTotal = 0;
-console.log(populationTotal);
+const populationTotal = [];
+//console.log(populationTotal);
+
+//const array1 = [1, 2, 3, 4];
+const reducer = (accumulator, currentValue) => 
+accumulator + currentValue;
+
+// 1 + 2 + 3 + 4
+console.log(populationTotal.reduce(reducer));
+
+
+// 5 + 1 + 2 + 3 + 4
+console.log(populationTotal.reduce(reducer, 5));
 
 
 /*
