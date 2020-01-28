@@ -40,6 +40,8 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 // Explanation: 
 
+// MY ANSWER:
+// Nested function function defined in the same local scope as internal. Nested function called to internal inside its function via console.log.
 
 const external = "I'm outside the function";
 
