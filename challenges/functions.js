@@ -30,7 +30,7 @@ const greeting = (first_name, last_name) => {return `Hello ${first_name} ${last_
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: 
+// Explanation: Since the nested function is inside the myfunction, it has access to its properties.
 
 
 const external = "I'm outside the function";
