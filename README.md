@@ -37,6 +37,7 @@ Edit this document to include your answers after each question. Make sure to lea
 4. Describe the four rules of the 'this' keyword.
 
 5. Why do we need super() in an extended class?
+It's similar to call as we are getting the variables from the main class.
 
 ## Project Set up
 
