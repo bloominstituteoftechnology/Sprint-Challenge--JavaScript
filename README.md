@@ -45,7 +45,7 @@ Follow these steps to set up and work on your project:
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
 - [ ] Add your team lead as a Reviewer on the Pull-request
 - [ ] TL then will count the HW as done by  merging the branch back into master.
 
@@ -62,11 +62,11 @@ Test your knowledge of objects and arrays.
 
 ## Task 2: Functions
 This challenge takes a look at callbacks and closures as well as scope. 
-* [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
+* [x] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
-* [ ] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
+* [x] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
 
 ## Task 4: Classes
 Once you have completed the prototypes challenge, it's time to convert all your hard work into classes.
