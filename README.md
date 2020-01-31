@@ -30,9 +30,15 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The difference between a .map and .foreach is a foreach can mutate the original array
+
 2. What is the difference between a function and a method?
 
+
+
 3. What is closure?
+
+a function with access to its outerscope
 
 4. Describe the four rules of the 'this' keyword.
 
