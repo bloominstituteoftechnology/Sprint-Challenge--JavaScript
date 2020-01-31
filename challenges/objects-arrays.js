@@ -15,10 +15,26 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+let tyrannosaurus = {
+    name: 'tyrannosaurus' ,
+    diet: 'carnivorous',
+    weight: '7000kg',
+    length: '12m',
+    period: 'Late Jurassic'
+}
+console.log(tyrannosaurus);
 
 // What was the diet of a velociraptor?
-console.log();
+let velociraptor = {
+  name: 'velociraptor' ,
+  diet: 'herbivorous',
+  weight: '2000kg',
+  length: '1.8m',
+  period: 'Late Cretaceous'
+}
+console.log(velociraptor);
+
+
 
 // How long was a stegosaurus?
 console.log();
