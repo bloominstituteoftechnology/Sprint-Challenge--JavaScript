@@ -1,16 +1,12 @@
 1. Describe the biggest difference between `.forEach` & `.map`.
 .foreach goes through each element in an array, and allows you to manipulate data for each of the items inside of the array.
-
 .map creates a new array depending on what you pass into it, for example you can get all the emails from objects without writing a foreach loop.
-
 
 2. What is the difference between a function and a method?
 A method is a function inside of an object, they are similar but a function doesn't have to be inside an object.
 
-
 3. What is closure?
 Its how you give access to an outer function's scope from an inner function
-
 
 4. Describe the four rules of the 'this' keyword.
 Window/Global
@@ -27,7 +23,7 @@ When you use .apply(), .call(), .bind() or inbuilt functions to manipulate data 
 
 
 5. Why do we need super() in an extended class?
-to properly access data in the parent class that it is inheriting
+Properly access data in the parent class that it is inheriting
 
 
 ## Project Set up
