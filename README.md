@@ -30,13 +30,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+forEach executes a provided function once for each array element.
+
+map creates a new array with the results of calling a provided function on every element in the calling array.
+
 2. What is the difference between a function and a method?
+
+They are both functions but a standard function exists on the global scope. A 
+method is nested inside an object.
 
 3. What is closure?
 
-4. Describe the four rules of the 'this' keyword.
+I think this might be a repeat of the question in functions.js
+
+4. Describe the four rules of the 'this' keyword. 
+
+You know, they all sort of boil down to one question: What's calling the object.
+But yeah they're:
+1. Is the function called by new?
+2. Is the function called by call(), apply(), or bind()?
+3. Is the function called as a method, ie: obj.func()?
+4. Is the function called in the global scope?
 
 5. Why do we need super() in an extended class?
+
+We need super() becaust it tells the constructor to take in properties from a constructor. Extends is used as well   to tell super() where to look.
 
 ## Project Set up
 
