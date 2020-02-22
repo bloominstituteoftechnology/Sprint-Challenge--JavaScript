@@ -29,20 +29,23 @@ const longneck = new Dinosaur('stegosaurus', 'herbivorous', '2000kg', '9m', 'Lat
 const raptor = new Dinosaur('velociraptor', 'carnivorous', '15kg', '1.8m', 'Late Cretaceous');
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(trex.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(raptor.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(longneck.longth);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(trex.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+Dinosaur.prototype.roar = function() {
+  return "RAWERSRARARWERSARARARRRR!";
+}
+console.log(trex.roar());
 
 
 // ==== Arrays ====
