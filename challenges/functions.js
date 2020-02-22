@@ -41,9 +41,9 @@ function greeting(a,b) {
 // ==== Closures ==== 
 
 // Explain in your own words why nestedfunction can access the variable internal.
-  The nestedFunction is an inner function, meaning it can access outside variables functions.
+  
 // Explanation: 
-
+  The nestedFunction is an inner function, meaning it can access outside variables functions.
 
 const external = "I'm outside the function";
 
