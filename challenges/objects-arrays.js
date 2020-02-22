@@ -7,6 +7,16 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
+const tyrannosaurus = {
+  diet: "MEATS",
+  weight: "7000kg",
+  height: "12m",
+  period: "Late Cretaceous",
+  roar: function() {
+    return "LOUD NOISES"
+  }
+
+}
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
