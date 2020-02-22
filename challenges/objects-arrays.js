@@ -14,6 +14,20 @@
 
 // Using your dinosaur objects, log answers to these questions:
 
+class Dinosaur {
+  constructor(name, diet, weight, longth, period) {
+    this.name = name;
+    this.diet = diet;
+    this.weight = weight;
+    this.longth = longth;
+    this.period = period;
+  }
+};
+
+const trex = new Dinosaur('tyrannosaurus', 'carnivorous', '7000kg', '12m', 'Late Cretaceous');
+const longneck = new Dinosaur('stegosaurus', 'herbivorous', '2000kg', '9m', 'Late Jurassic');
+const raptor = new Dinosaur('velociraptor', 'carnivorous', '15kg', '1.8m', 'Late Cretaceous');
+
 // How much did tyrannosaurus weigh?
 console.log();
 
