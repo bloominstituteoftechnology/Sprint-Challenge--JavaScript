@@ -28,9 +28,9 @@ const add = function(a, b) {
   }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -38,6 +38,9 @@ const add = function(a, b) {
 // Explain in your own words why nestedfunction can access the variable internal.
 
 // Explanation: 
+// Basically it's because nestedfunction is within the "lexical environment" aka scpe of the parent function named external.
+// All objects can reach out to receive values, but not inwards.
+// It's just like the TK said: a closure is the result of a function and its scope, so like if you just write some rando function, its scope would be global. Everything nested within that function would have access to anything that the new scope created by the global function has within it. 
 
 
 const external = "I'm outside the function";
