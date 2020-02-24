@@ -29,24 +29,29 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
 1. Describe the biggest difference between `.forEach` & `.map`.
-
+    both will run a function on every item in an array but map will return a new array with the results.
 2. What is the difference between a function and a method?
-
+    both are pieces of code methods are attached to objects
 3. What is closure?
-
+    a function and the varibles that it uses
 4. Describe the four rules of the 'this' keyword.
+    Window Binding: global scope, no declared object
+    Implicit Binding: declared object
+    'new' Binding: 'new' operator with constructor
+    Explicit Binding: call(obj, args...)/apply(obj, array) 
 
 5. Why do we need super() in an extended class?
-
+    super applies all of the parent attributes to a child
+    always used with exteneds
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+- [x] Create a forked copy of this project.
+- [x] Add TL as collaborator on Github.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
 - [ ] You are now ready to build this project with your preferred IDE
 - [ ] Implement the project on your Branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
