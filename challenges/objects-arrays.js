@@ -12,6 +12,7 @@ const tyrannosaurus = {
   "weight":"7000kg", 
   "length":"12m", 
   "era": "Late Cretaceous",
+  // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
   "roar": function() {
     return "RAWERSRARARWERSARARARRRR!"
   }
@@ -49,7 +50,7 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.era);
 
 
-// Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+
 
 console.log(tyrannosaurus.roar());
 
