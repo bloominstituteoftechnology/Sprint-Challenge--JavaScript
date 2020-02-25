@@ -87,14 +87,17 @@ Log the result of your new array. */
 const contactInfo = graduates.map(grad => `${grad.first_name} ${grad.email}`)
 console.log(contactInfo);
 
-/* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-var count = 0;
+/* Request 3: Find out how many universities have the string "Uni" included in their name. 
+//Create a new array called unisWithUni that contains them all. 
+//This will be an array of objects. Log the result. */
+var arr = [];
+
 for(var i = 0; i < universities.length; ++i){
     if(universities[i].includes("Uni"))
-        count++;
+      arr.push(universities[i]);
 }
-const unisWithUni = count;
-console.log(unisWithUni);
+
+console.log(arr);
 // ==== ADVANCED Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
@@ -144,7 +147,7 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 const populationArr = zooAnimals.map(x => x.population)
-const populationTotal = populationArr.reduce((a, b) => a+b);
+const populationTotal = populationArr.reduce((a, b) => a+b,0);
 
 console.log(populationTotal);
 

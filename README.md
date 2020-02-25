@@ -31,9 +31,9 @@ Edit this document to include your answers after each question. Make sure to lea
 1. Describe the biggest difference between `.forEach` & `.map`.
     both will run a function on every item in an array but map will return a new array with the results.
 2. What is the difference between a function and a method?
-    both are pieces of code methods are attached to objects
+    both are pieces of code, but methods are attached to objects functions are not
 3. What is closure?
-    a function and the varibles that it uses
+    The closure is a collection of all the variables in scope at the time of creation of the function.
 4. Describe the four rules of the 'this' keyword.
     Window Binding: global scope, no declared object
     Implicit Binding: declared object
