@@ -38,16 +38,15 @@ var tyrannosaurus = {
  // How much did tyrannosaurus weigh?
 
 console.log(tyrannosaurus.weight);
-return tyrannosaurus.weight;
 // What was the diet of a velociraptor?
 console.log(velociraptor.diet);
-return velociraptor.weight;
+
 // How long was a stegosaurus?
 console.log(stegosaurus.length);
-return stegosaurus.length;
+
 // What time period did tyrannosaurus live in?
 console.log(tyrannosaurus.period);
-return tyrannosaurus.period;
+
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 tyrannosaurus.roar = "RAWERSRARARWERSARARARRRR!";
@@ -122,8 +121,8 @@ The zoos want to display both the scientific name and the animal name in front o
 */
 const displayNames = [];
 zooAnimals.forEach(zooo =>{
-  displayNames.push(`Name: ${animal_name},Scientific: ${scientific_name}`)
-})
+  displayNames.push(`Name: ${zooo.animal_name},Scientific: ${zooo.scientific_name}`)
+});
 
 console.log(displayNames);
 /* Request 2: .map()
@@ -134,7 +133,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 const lowCaseAnimalNames = [];
 zooAnimals.map(name => {
-  lowCaseAnimalNames.push(name.animal_name.toLowerCase)
+  lowCaseAnimalNames.push(name.animal_name.toLowerCase())
 });
 console.log(lowCaseAnimalNames);
 
