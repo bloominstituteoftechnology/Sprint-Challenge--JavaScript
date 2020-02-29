@@ -8,7 +8,8 @@
 'use strict';
 function CuboidMaker (attr){
   this.length = attr.length;
-  this.width =
+  this.width = attr.width;
+  this.height = attr.height;
 }
 
 /* == Step 2: Volume Method ==
