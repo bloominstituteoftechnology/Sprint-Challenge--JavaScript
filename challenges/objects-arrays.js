@@ -99,7 +99,7 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 const contactInfo =
-graduates.filter(function(item) {
+graduates.map(function(item) {
   console.log (item.first_name + " " + item.email);
 });
 

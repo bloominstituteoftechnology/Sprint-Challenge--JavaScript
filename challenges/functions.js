@@ -41,7 +41,7 @@ const greeting = (firstName, lastName) => {
 
 // Explanation: 
 
-  The nested functions can access the internal variable because the functions saves its variables in a contained workspace. It may have its own workspace, but it can also access the parent function's, and grandparent function's and great-great-greats...
+  <!-- The nested functions can access the internal variable because the functions saves its variables in a contained workspace. It may have its own workspace, but it can also access the parent function's, and grandparent function's and great-great-greats... -->
 
 const external = "I'm outside the function";
 
