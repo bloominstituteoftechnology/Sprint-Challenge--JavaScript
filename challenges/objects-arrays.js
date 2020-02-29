@@ -1,5 +1,5 @@
 // ==== Objects ====
-
+'use strict';
 /* 
   Given the following information about dinosaurs, create 3 objects: 
   Use this pattern to create your objects: 
@@ -7,69 +7,62 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
-
-
+// stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+// velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
 // Using your dinosaur objects, log answers to these questions:
 
-function Dino(attr){
-  this.name = attr.name;
-  this.diet = attr.diet;
-  this.weight = attr.weight;
-  this.length = attr.length;
-  this.period = attr.period;
+
+
+
+const tyrannosaurus = {
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceous',
+
+  roar: function(){
+    return 'RAWERSRARARWERSARARARRRR!';
+  }
 }
-Dino.prototype.roar = function(){
-  return `RAWERSRARARWERSARARARRRR!`
-};
-
-const tyran = new Dino({
-  name: 'tyrannosaurus';
-  diet: 'carnivorous';
-  weight: '7000kg';
-  length: '12m';
-  period: 'Late Cretaceous';
-});
-
-// stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
 
 
-const steg = new Dino({
-  name: 'Stegosaurus';
-  diet: 'herbivorous';
-  weight:'2000kg';
-  length: '9m';
-  period:'Late Jurassic';
-});
+const stegosaurus = {
+  name: 'Stegosaurus',
+  diet: 'herbivorous',
+  weight:'2000kg',
+  length: '9m',
+  period:'Late Jurassic'
+}
 
-// velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
-const velo = new Dino({
-  name: 'velociraptor';
-  diet: 'carnivorous';
-  weight: '15kg';
-  length:'1,8m';
-  period:'Late Cretaceous';
-});
+const velociraptor = {
+  name: 'velociraptor',
+  diet: 'carnivorous',
+  weight: '15kg',
+  length:'1,8m',
+  period:'Late Cretaceous'
+}
 
 
 
 // How much did tyrannosaurus weigh?
-console.log(tyran.weight);
+console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
-console.log(velo.diet);
+console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
-console.log(steg.length);
+console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
-console.log(tyran.period);
+console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(tyran.roar());
+console.log(tyrannosaurus.roar());
 
 
 // ==== Arrays ====
@@ -94,17 +87,9 @@ const graduates = [
 Once you have the new array created, sort the universities alphabetically and log the result. */
 
 const universities = [];
-graduates.sort((a,b)=>{
-  if (a.university < b.university)
- return -1;
-}
-  if (a.university> b.university)
-  return 1;
-}
-return 0;
-});
-
-console.log(university);
+graduates.map(function(item) {
+  console.log(item.university);
+})
 
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
@@ -113,7 +98,11 @@ The resulting contact information strings should have a space between the first 
 "Josh josh@example.com"
 
 Log the result of your new array. */
-const contactInfo = [];
+const contactInfo =
+graduates.filter(function(item, contact){
+  return `${item.first_name} ${contact.email}`;
+});
+
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
