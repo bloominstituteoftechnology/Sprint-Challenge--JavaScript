@@ -30,13 +30,28 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    forEach calls a callback function for each element in an array. Map creates an array that functions call back to.
+
 2. What is the difference between a function and a method?
+
+    Functions have parameters which are used to perform a specific task or computation. Methods are functions that are properties of a givin object. 
 
 3. What is closure?
 
+    Closures allow developers to call outer functions with an inner function.
+
 4. Describe the four rules of the 'this' keyword.
 
+    There are four types of bindings, which are Window/Global Binding, Implicit Binding, Explicit Binding and New Binding.
+
+    Window/Global Binding apply to the global scope.
+    Implicit Binding uses .this to point to a given parameter.
+    Explicit Binding uses .call or .apply keywords to call parameters from another object.
+    New Binding uses .new to create a new constructor function
+
 5. Why do we need super() in an extended class?
+
+    We use super() to extend parent properties and methods into a new class.
 
 ## Project Set up
 
