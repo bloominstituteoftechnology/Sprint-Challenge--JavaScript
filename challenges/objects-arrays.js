@@ -90,7 +90,8 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-const findUni = (arr) => arr.map(x => x.)
+const findUni = (arr) => arr.map(x => (x.university.includes('Uni') ? uni.push(x.university) : null))
+findUni(graduates)
 console.log(uni);
 
 
@@ -150,6 +151,6 @@ Stretch: If you haven't already, convert your array method callbacks into arrow 
 
 */
 
-let noor = []
-noor.push('1', '2')
-console.log(noor)
+// let noor = []
+// noor.push('1', '2')
+// console.log(noor)
