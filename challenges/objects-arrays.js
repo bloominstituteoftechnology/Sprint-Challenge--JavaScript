@@ -46,7 +46,8 @@ console.log(tyDinosaurs.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+tyDinosaurs.roar = "RAWERSRARARWERSARARARRRR"
+console.log(tyDinosaurs);
 
 
 // ==== Arrays ====
