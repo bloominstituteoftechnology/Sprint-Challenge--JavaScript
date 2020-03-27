@@ -6,6 +6,10 @@
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
+function consume(a, b, cb){
+  return cb(a, b);
+}
+
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -14,11 +18,25 @@
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function add(a, b){
+  return a + b;
+}
+// console.log (add(2, 8));
+
+function multiply(a, b){
+  return a * b;
+}
+
+// console.log (multiply(2, 8));
+
+function greeting(first, last){
+  return `Hello ${first} ${last}, nice to meet you!`;
+}
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+ console.log(consume(10, 16, multiply)); // 160
+ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -27,15 +45,22 @@
 
 // Explanation: 
 
+// A: because the concept of a closures is a combination of functions bundled together (enclosed) and within that enviroement, you have access to our functions's scope from an inner function. Variables can reference each other beyond their scope with the utalization of "let", "const" and "var".
+
+// Global{
+//   outer{
+//     inner
+//   }
+// }
 
 const external = "I'm outside the function";
 
 function myFunction() {
-  console.log(external);
+  // console.log(external);
   const internal = "Hello! I'm inside myFunction!";
 
   function nestedFunction() {
-    console.log(internal);
+    // console.log(internal);
   };
   nestedFunction();
 }
