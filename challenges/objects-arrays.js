@@ -15,16 +15,20 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+const tyrannosaurus = {type: carnivorous; weight: 7000"kg"; size: 12"m"; timeEra: "Late Cretaceous"}
+console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+const velociraptor = {type: carnivorous; weight: 15"kg"; size: 1.8"m"; timeEra: "Late Cretaceous"}
+console.log(velociraptor.type);
 
 // How long was a stegosaurus?
-console.log();
+const stegosaurus = {type: herbivorous; weight: 2000"kg"; size: 9"m"; timeEra: "Late Jurassic"}
+console.log(stegosaurus.size);
 
 // What time period did tyrannosaurus live in?
-console.log();
+const tyrannosaurus = {type: carnivorous; weight: 7000"kg"; size: 12"m"; timeEra: "Late Cretaceous"}
+console.log(tyrannosaurus.timeEra);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
