@@ -56,18 +56,22 @@ Your finished project must include all of the following requirements:
 **Pro tip for this challenge: If something seems like it isn't working locally, copy and paste your code up to codepen and take another look at the console.**
 
 #### Task A: Objects and Arrays
-Test your knowledge of objects and arrays. 
+
+Test your knowledge of advanced array methods and callbacks.
 * [ ] Use the [arrays-callbacks.js](challenges/arrays-callbacks.js) link to get started.  Read the instructions carefully!
 
 #### Task B: Closure
-This challenge takes a look at callbacks and closures as well as scope. 
+
+This challenge takes a look at closures as well as scope. 
 * [ ] Use the [closure.js](challenges/closure.js) link to get started. Read the instructions carefully!
 
 #### Task C: Prototypes
+
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
 * [ ] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
 
 #### Task D: Classes
+
 Once you have completed the prototypes challenge, it's time to convert all your hard work into classes.
 * [ ] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
 
