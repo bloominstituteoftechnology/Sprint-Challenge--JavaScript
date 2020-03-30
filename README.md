@@ -81,7 +81,6 @@ In your solutions, it is essential that you follow best practices and produce cl
 
 There are a few stretch problems found throughout the files, don't work on them until you are finished with MVP requirements!
 
-
 ## Submission Format
 
 Follow these steps for completing your project:
