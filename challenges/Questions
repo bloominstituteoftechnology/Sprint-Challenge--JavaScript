@@ -1,0 +1,22 @@
+Describe the biggest difference between .forEach & .map.
+
+.map returns a new array of the same length
+
+What is the difference between a function and a method?
+
+Functions are independently called, while methods have to use an object or an instance to call them.
+
+What is closure?
+
+A closure is the combination of a function bundled together
+
+Describe the four rules of the 'this' keyword.
+
+Default binding
+Implicit binding
+Explicit binding
+New binding
+
+Why do we need super() in an extended class?
+
+super() is called to avoid duplicating the constructor 
