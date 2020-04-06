@@ -6,7 +6,7 @@
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
-function callbackFunction(a , b, cb){
+function consume(a , b, cb){
   return cb (a , b)
 }
 
@@ -18,10 +18,19 @@ function callbackFunction(a , b, cb){
 function add(a,b){
 return a + b;
 }
+
+function multiply(a,b){
+return a * b;
+}
+
+function greeting(firstname, lastname){
+  return `Hello ${firstname} ${lastname}, nice to meet you!`
+
+}
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); 
+ console.log(consume(10, 16, multiply));
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
