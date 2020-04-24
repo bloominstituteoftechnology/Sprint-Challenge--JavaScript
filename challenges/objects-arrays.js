@@ -6,10 +6,43 @@
   object name, diet, weight, length, period
 */
 
+function Dino(name, diet, weight, length, period) {
+  this.name = name;
+  this.diet = diet;
+  this.wegith = weight;
+  this.length = length;
+  this.period = period;
+}
+
+const dinoOne = new Dino(
+  "tyrannosaurus",
+  "carnivorous",
+  "7000kg",
+  "12m",
+  "Late Cretaceous"
+);
+const dinoTwo = new Dino(
+  "stegosaurus",
+  "herbivorous",
+  "2000kg",
+  "9m",
+  "Late Jurassic"
+);
+const dinoThree = new Dino(
+  "velociraptor",
+  "carnivorous",
+  "15kg",
+  "1.8m",
+  "Late Cretaceous"
+);
+
+//! dino1
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
+//* dino2
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
+//? dino3
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
 // Using your dinosaur objects, log answers to these questions:
