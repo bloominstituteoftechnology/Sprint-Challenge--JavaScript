@@ -37,6 +37,7 @@ Edit this document to include your answers after each question. Make sure to lea
 ### Task 1 - Project Set up
 
 Follow these steps to set up and work on your project:
+Make sure you clone the branch that the TK links to: the vnext branch, NOT master!
 
 - [ ] Create a forked copy of this project.
 - [ ] Add TL as collaborator on Github.
