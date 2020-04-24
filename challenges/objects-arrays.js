@@ -251,8 +251,11 @@ console.log(display(displayNames));
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
 
 */
+//? Can't get arrow function to work on this one.
 
-const lowCaseAnimalNames = [];
+const lowCaseAnimalNames = zooAnimals.map(function (item) {
+  return item.animal_name.toLowerCase();
+});
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -260,7 +263,8 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = [];
+
+const lowPopulationAnimals = zooAnimals.filter((it) => it.population < 5);
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
