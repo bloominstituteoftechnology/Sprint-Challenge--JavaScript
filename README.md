@@ -29,14 +29,28 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+.forEach iterates over a list and applies some operation with side effects to each list member. However, .map iterates over a list, transforms each member of the list, and returns another list of the same size with the transformed members.
 
 2. What is the difference between a function and a method?
+A function is a piece of code that is called by name. It can be passed data to operate (such as parameters) and can optionally return data(return value). All data to a function is explicitly passed.
+
+A method is a piece of code that is called by a name that is associated with an object. It’s very similar to a function except for two differences. 1) is implicitly passed the object on which is called and 2) is able to operate on data that is contained within the class. 
 
 3. What is closure?
+A closure is a combination of a function bundled together(enclosed) with references to its surround state(the lexical environment). A closure gives you acmes to an outer function’s scope from an inner function.
 
 4. Describe the four rules of the 'this' keyword.
+    1. Window/Global Object Binding
+    The value of "this" will be the window/console object.
+    2. Implicit binding
+    When a preceding dot calls the function. The "this" keyword is the object before the dot.
+    3. New Binding
+    In a constructor functions, "this" refers to the specific instance of the object that is created and returned by the constructor function.
+    4. Explicit Binding
+    "This" is specifically defined when using JavaScript's Call or apply method.
 
 5. Why do we need super() in an extended class?
+This keywords make its possible for classes to bind together. the .super() tells a parent’s constructor to be concerned with the child’s attributes and abstracts awarenesses the Object.create(this, Class) syntax.
 
 ## Project Set up
 
