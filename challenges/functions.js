@@ -17,18 +17,16 @@ function consume(a,b,cb) {
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add(num1, num2, cb) {
-  return cb(num2 + num1);
+function add (a, b) {
+  return a + b;
 }
 
-function multiply(cb) {
-  const a = nun
-  
-  return cb(a*b);
+function multiply(a, b) {
+  return a*b
 }
 
-function greeting(a, b, cb) {
-  return cb(`Hello ${a} ${b}, nice to meet you!`);
+function greeting(a, b) {
+  return `Hello ${a} ${b}, nice to meet you!`;
 }
 
 
