@@ -6,30 +6,30 @@
   object name, diet, weight, length, period
 */
 let tRex = {
-  name: tyrannosaurus,
-  diet: carnivorous,
-  weight: 7000 kg,
-  length: 12 m,
-  period: Late Cretaceous,
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: '7000 kg',
+  length: '12 m',
+  period: 'Late Cretaceous',
   roar: function roar() {
     return `RAWERSRARARWERSARARARRRR!`;
   }
 }
 
 let steg = {
-  name: stegosaurus,
-  diet: herbivorous,
-  weight: 2000 kg,
-  length: 9 m,
-  period: Late Jurassic,
+  name: 'stegosaurus',
+  diet: 'herbivorous',
+  weight: '2000 kg',
+  length: '9 m',
+  period: 'Late Jurassic',
 }
 
 let velo = {
-  name: velociraptor,
-  diet: carnivorous,
-  weight: 15 kg,
-  length: 1.8 m,
-  period: Late Cretaceous,
+  name: 'velociraptor',
+  diet: 'carnivorous',
+  weight: '15 kg',
+  length: '1.8 m',
+  period: 'Late Cretaceous',
 }
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
