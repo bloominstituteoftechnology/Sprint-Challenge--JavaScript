@@ -30,13 +30,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+<!-- .forEach edits the original array and .map creates a brand new array.  -->
+
 2. What is the difference between a function and a method?
+
+<!-- A method is a function that is a property of an object. So a method executes the function specifically for that object. -->
 
 3. What is closure?
 
+<!-- Closure is the closing off of one scope to further code. -->
+
 4. Describe the four rules of the 'this' keyword.
 
+<!-- 1. Global scope
+     2. Explicit scope
+     3. Implicit scope
+     4. New scope -->
+
 5. Why do we need super() in an extended class?
+
+<!-- We need super in order to bring the attributes of the parent class that we want the extended class to possess. -->
 
 ## Project Set up
 
