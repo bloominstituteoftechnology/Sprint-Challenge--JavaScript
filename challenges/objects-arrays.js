@@ -53,8 +53,7 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, log the result. */
-const universities = [];
-universities.push (graduates.map(arr => arr.university))
+const universities =graduates.map(arr => arr.university)
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
@@ -63,8 +62,7 @@ The resulting contact information strings should have a space between the first 
 "Josh josh@example.com"
 
 Log the result of your new array. */
-const contactInfo = [];
-contactInfo.push(graduates.map((arr) => {return `${arr.first_name} ${arr.email}`}))
+const contactInfo = graduates.map((arr) => {return `${arr.first_name} ${arr.email}`})
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
@@ -105,8 +103,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-const lowCaseAnimalNames = [];
-lowCaseAnimalNames.push(zooAnimals.map(arr => arr.animal_name.toLowerCase()))
+const lowCaseAnimalNames = zooAnimals.map(arr => arr.animal_name.toLowerCase())
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
