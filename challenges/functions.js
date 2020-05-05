@@ -7,7 +7,7 @@
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 function consume(a, b, cb) {
-  return (a, b, cb);
+  return cb(a, b);
 }
 
 
@@ -17,13 +17,13 @@ function consume(a, b, cb) {
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 function add(a, b) {
-  return add(a + b);
+  return a + b;
 }
 function multiply(a, b) {
-  return multiply(a * b);
+  return a * b;
 }
 function greeting(a, b) {
-  return greeting(`Hello ${a + b}, nice to meet you!`);
+  return `Hello ${a + b}, nice to meet you!`;
 }
 
 
