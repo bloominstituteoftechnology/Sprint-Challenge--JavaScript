@@ -31,5 +31,5 @@ class CubeMaker extends CuboidMaker {
         return (this.length * this.width) * 6;
     }
 }
-console.log(CuboidMaker.volume(5, 5, 5));
-console.log(CuboidMaker.surfaceArea(5, 5));
+console.log(CubeMaker.volume(5, 5, 5));
+console.log(CubeMaker.surfaceArea(5, 5));
