@@ -18,7 +18,18 @@ myFunction();
 
 // Explanation: 
 
+// nestfunctions can acess the variable internal because nested functions, although is a new function, 
+//its still in the block scope of myFunction.
+//a function that wasnt in the same block scope couldnt access that variable.
 
 /* Task 2: Counter */
 
-/* Create a function called `sumation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+/* Create a function called `sumation` that accepts a parameter
+ and uses a counter to return the summation of that number
+. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+function sumation(n) {
+  return n * (n + 1) / 2;
+}
+
+console.log( sumation(4) );
