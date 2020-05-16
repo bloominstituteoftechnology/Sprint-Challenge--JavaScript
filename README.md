@@ -26,13 +26,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+.forEach and .map are both iterator functions that return arrays. While .forEach is mutable .map is imutable and returns a new array
+
 2. Explain the difference between a callback and a higher order function.
+
+A higher order function takes another function as an argument and returns a function to its callers but a callback passes itself to another function to be called upon by the said function
 
 3. What is closure?
 
+Closures give access to the outer scope of a function from the inner function.
+
 4. Describe the four rules of the 'this' keyword.
 
+  1. the global object binds "this" to the window object. 
+  2. implicit binding is when "this" refers to whats to the left of the dot when the dot calls a function.
+  3. new binding binds "this" to the instance of the object thats being created and returned by a constructor function.
+  4. explicit binding is when "this" is explicitly defined to bind "this" to an object by calling the constuctor object with .call and .apply.
+
 5. Why do we need super() in an extended class?
+
+Super() in an extended class  allow binding to acheive object inheritance by telling a parent constructor to be concerned with the child’s attributes.
 
 ### Task 1 - Project Set up
 
