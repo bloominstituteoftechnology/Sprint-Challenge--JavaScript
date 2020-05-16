@@ -16,9 +16,21 @@ function myFunction() {
 }
 myFunction();
 
-// Explanation: 
+// Explanation: Because a funcction that is nested within can see out but another function cannot see in.
 
 
 /* Task 2: Counter */
 
 /* Create a function called `sumation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+function sumation(num){
+  let counter = 1;
+  return function() {
+      for(num; num > 1; num--) {
+          counter = counter + num
+      }
+      return counter;
+  }
+};
+const addition = sumation(4);
+
+console.log(addition());

@@ -25,15 +25,18 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
-
+.forEach does not put a new array into memory, .map does
 2. Explain the difference between a callback and a higher order function.
-
+a callback invokes a higher-order function
 3. What is closure?
-
+a function and what it can remember 
 4. Describe the four rules of the 'this' keyword.
-
+in the global scope refers to the window object.
+in implicit binding- when caled in a function represents the object preceding the dot
+in explicit binding-refers to the .call or .apply method
+in new binding refers to the specific instance in a constructor
 5. Why do we need super() in an extended class?
-
+it replaes the .call and .apply methods
 ### Task 1 - Project Set up
 
 Follow these steps to set up and work on your project:
