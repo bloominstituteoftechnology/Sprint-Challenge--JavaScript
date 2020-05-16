@@ -16,7 +16,7 @@ function myFunction() {
 }
 myFunction();
 
-// Explanation: 
+// Explanation: Because a funcction that is nested within can see out but another function cannot see in.
 
 
 /* Task 2: Counter */
