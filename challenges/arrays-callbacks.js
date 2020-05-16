@@ -69,9 +69,8 @@ const populationTotal = zooAnimals.reduce(function (arr1,arr2){
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 function consume(a,b,cb){
-  return (cb = a + b);
+  console.log(cb(a,b));
   }
-  consume(12,3);
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
