@@ -21,9 +21,12 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-zooAnimals.forEach( function(array) { 
-  return displayNames.push(`Name: ${array.animal_name}, Scientific: ${array.scientific_name}`);
+
+ zooAnimals.forEach( function(array) { 
+   return displayNames.push(`Name: ${array.animal_name}, Scientific: ${array.scientific_name}`);
 });
+
+
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -93,8 +96,6 @@ function greeting(firstName, lastName) {
 console.log(consume(2, 2, add)); // 4
 console.log(consume(10, 16, multiply)); // 160
 console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
-
-
 
 
 /*
