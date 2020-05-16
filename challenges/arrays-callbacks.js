@@ -32,9 +32,9 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 const lowCaseAnimalNames = [];
-let lowAnimals=zooAnimals.map((names)=>lowCaseAnimalNames.push(names.animal_name))
+let lowAnimals=zooAnimals.map((names)=>lowCaseAnimalNames.push(names.animal_name.toLowerCase()))
 console.log(lowCaseAnimalNames);
-// .toLowercase
+
 /* Request 3: .filter() 
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.

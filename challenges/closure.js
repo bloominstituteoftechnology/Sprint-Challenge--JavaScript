@@ -18,7 +18,7 @@ myFunction();
 
 // Explanation: 
 
-// The nested function can access the variable "internal" because they are both inside the "myFunction scope" and while you can't access a variable that is inside a closed function the function can pull variables from outside its scope.
+"The nested function can access the variable (internal) because they are both inside the (myFunction scope) and while you can't access a variable that is inside a closed function the function can pull variables from outside its scope."
 
 /* Task 2: Counter */
 
