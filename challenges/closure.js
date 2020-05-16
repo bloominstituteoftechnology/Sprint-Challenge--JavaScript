@@ -18,7 +18,19 @@ myFunction();
 
 // Explanation: 
 
+// nestedFunction() lays within the closure of myFunction(), so nestedFunction() can access anything within myFunction(), but myFunction() wouldn't be able to access the contents of nestedFunction().
 
 /* Task 2: Counter */
 
 /* Create a function called `sumation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+function sumation(num) {
+  let result = 0;
+  for (var i = 1; i <= num; i++) {
+    result += i;
+  }
+  return result;
+}
+
+let output = sumation(4);
+// console.log(output);
