@@ -30,12 +30,13 @@ Edit this document to include your answers after each question. Make sure to lea
 
 3. What is closure? A closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function's variables.
 4. Describe the four rules of the 'this' keyword.
-    1. When a function is called in the global scope, the this reference is by default bound to the global object (window in the browser, or global in Node.js).
-    2. When a function is called with a context object, the this reference will be bound to this object.
-    3. .call, .apply and .bind can all be used at the call site to explicitly bind this.
-    4. JavaScript determines the value of this at runtime, based on the current context. So this can sometimes point to something other than what you expect.
+    1. Whenever a function is contained in the global scope, the value of this inside of that function will be the window object.
+     2. Whenever a function is called by a preceding dot, the object before that dot is this.
+     3. Whenever JavaScript’s call or apply method is used, this is defined.
 
-5. Why do we need super() in an extended class? he super keyword in JavaScript is used in order to call the methods of the parent class. By itself, super() is used within a constructor function to call the parent constructor function. 
+    4. Whenever a constructor function is used, this refers to the specific instance of the object that is created and returned by the constructor function.
+
+5. Why do we need super() in an extended class? The super keyword in JavaScript is used in order to call the methods of the parent class. By itself, super() is used within a constructor function to call the parent constructor function. 
 
 ### Task 1 - Project Set up
 
