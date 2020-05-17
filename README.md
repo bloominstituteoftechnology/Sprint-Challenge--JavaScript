@@ -26,13 +26,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+-.Foreach does not modify an array while .map does modify an array.
+
 2. Explain the difference between a callback and a higher order function.
+
+-
 
 3. What is closure?
 
+-Closure is when an inside function can access the outside function’s variables.
+
 4. Describe the four rules of the 'this' keyword.
 
+     1. Window/Global Object Binding - references the window object - this is "the whole forest."
+     2. Implicit Binding - this refers to the odject before the dot when a function is called.
+     3. New binding - this refers to the object created using the construcor function.
+     4. Explicit binding - this is defined by using the apply or call method.
+
 5. Why do we need super() in an extended class?
+
+-super() allows access to the this items from the extended class.
 
 ### Task 1 - Project Set up
 
