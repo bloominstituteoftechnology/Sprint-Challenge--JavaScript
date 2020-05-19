@@ -1,7 +1,7 @@
 // ==== ADVANCED Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below.  
-Use the specific array methods in the requests below to solve the problems.
+//
 
 const zooAnimals = [
   { animal_name: "Jackal, asiatic", population: 5, scientific_name: "Canis aureus", state: "Kentucky" },
@@ -35,8 +35,7 @@ pattern: "jackal, asiatic". Log the resut.
 
 */
 
-const lowCaseAnimalNames = zooAnimals.map(animal_name) { 
-}
+const lowCaseAnimalNames = zooAnimals.map(animal_name) 
 return {"animal_name": animal.lowCaseAnimalNames}
 console.log(lowCaseAnimalNames);
 
@@ -81,8 +80,12 @@ console.log(populationTotal)
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+
+function consume(cb, b, a)
+return cb (a, b)
+
 function add (cb)
-return sum (a+b);
+return (a+b)
 
 function multiply (cb)
 return a*b; 
@@ -90,7 +93,7 @@ return a*b;
 function greeting (cb)
 return 'Hello ${first-name} ${last-name} , nice to meet you'
 
-/* Step 3: Check your work by un-commenting the following calls to consume(): */
+//* Step 3: Check your work by un-commenting the following calls to consume(): *//
 // console.log(consume(2, 2, add)); // 4
 // console.log(consume(10, 16, multiply)); // 160
 // console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
