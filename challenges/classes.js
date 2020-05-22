@@ -36,10 +36,18 @@ class CubeMaker extends CuboidMaker {
         super(attributes);
     }
     CubeVolume(){
-        return this.length * this. width * this.height;
+        return (
+          this.length * 
+          this. width * 
+          this.height
+        );
     }
     CubeSurfaceArea(){
-        return 2 * (this.length * this.length + this.width * this.width + this.height * this.height);
+        return 2 * (
+          this.length * this.length + 
+          this.width * this.width + 
+          this.height * this.height
+        );
     }
 }
 
