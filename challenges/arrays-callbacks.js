@@ -103,4 +103,28 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
+const displayNames2 = [];
+zooAnimals.forEach(currentValue => {
+  displayNames2.push(
+    `Name: ${currentValue.animal_name}, Scientific: ${currentValue.scientific_name}.`
+  );
+});
 
+const lowCaseAnimalNames2 = [];
+zooAnimals.map(currentValue => {
+  lowCaseAnimalNames2.push(
+    currentValue.animal_name.toLowerCase());
+});
+
+const lowPopulationAnimals2  = zooAnimals.filter(currentValue => {
+  return currentValue.population < 5;
+});
+
+const populationTotal2 = zooAnimals.reduce((callBackPopReduce, data) => {
+  return callBackPopReduce + data.population;
+}, 0);
+
+console.log(displayNames2);
+console.log(lowCaseAnimalNames2);
+console.log(lowPopulationAnimals2);
+console.log(populationTotal2);
