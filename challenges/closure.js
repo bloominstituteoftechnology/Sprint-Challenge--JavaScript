@@ -27,7 +27,7 @@ myFunction();
 
 
 
-function add(count){
+function sumation(count){
   let counter=0;
 for(let i=0; i<=count; i++){
 counter+=i;
@@ -36,4 +36,4 @@ counter+=i;
 return counter;
 }
 
-console.log(add(4))
+console.log(sumation(4))
