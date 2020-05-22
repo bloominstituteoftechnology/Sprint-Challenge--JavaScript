@@ -126,7 +126,7 @@ const greeting = (a, b) => `Hello ${a} ${b}`;
 // console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 console.log(consume(2, 4,add));
-console.log(consume(2, 10,divide));
+console.log(consume(10, 2,divide));
 console.log(consume(2, 20,multiply));
 console.log(greeting("Cameron", "Lares",greeting));
 
