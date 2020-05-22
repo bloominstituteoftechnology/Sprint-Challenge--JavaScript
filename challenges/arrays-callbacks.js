@@ -25,14 +25,6 @@ string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aur
 */
 const displayNames = [];
 
-function twoAnimals(zooAnimals, callback) {
-  // callback(zooAnimals);
-}
-
-const cb = function(zooAnimals) {
-  return zooAnimals;
-}
-
 zooAnimals.forEach(function(animalName) {
   return displayNames.push('Name: ' + animalName.animal_name + ', Scientific Name: ' + animalName.scientific_name);
 });
@@ -50,14 +42,6 @@ of strings named lowCaseAnimalNames, each string following this pattern: "jackal
 
 const lowCaseAnimalNames = [];
 
-function lowCase(zooAnimals, callback2) {
-  // callback(zooAnimals);
-}
-
-const cb2 = function(zooAnimals) {
-  return zooAnimals;
-}
-
 zooAnimals.map(function(animalName2) {
   return lowCaseAnimalNames.push(animalName2.animal_name + ', ');
 });
@@ -71,7 +55,6 @@ lowPopulationAnimals which contains only the animals with a population less than
 
 */
 
-// let game = fifaData.filter(c => (c["Year"] == 2014) && (c["Stage"] == 'Final'))[0];
 const lowPopulationAnimals = [];
 
   let lessthan5 = zooAnimals.filter(less5 => (less5["population"] < 5));
@@ -86,15 +69,7 @@ using the .reduce() method. Remember the reduce method takes two arguments: a ca
 an initial value for the count.
 
 */
-//const populationTotal = 0;
-
-function totalPopulation(zooAnimals, callback3) {
-  // callback(zooAnimals);
-}
-
-const cb3 = function(zooAnimals) {
-  return zooAnimals;
-}
+let populationTotal = 0;
 
 zooAnimals.reduce(function(accumalator,populations) {
   populationTotal = accumalator + populations.population
