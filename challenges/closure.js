@@ -2,9 +2,6 @@
 
 /* Task 1: Study the code below and explain in your own words why nested function can access the variable internal. */
 
-// Variables are scoped to the parent function. Because internal is set inside of the parent function: myFunction(),
-// nestedFunction() - the child, can access and call the variable from it's parent.
-
 const external = "I'm outside the function";
 
 function myFunction() {
@@ -20,6 +17,8 @@ myFunction();
 
 // Explanation: 
 
+// Variables are scoped to the parent function. Because internal is set inside of the parent function: myFunction(),
+// nestedFunction() - the child, can access and call the variable from it's parent.
 
 /* Task 2: Counter */
 
