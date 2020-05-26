@@ -16,9 +16,9 @@ function myFunction() {
 }
 myFunction();
 
-// Explanation: 
+// Explanation: the reason why because of scoping. Scope feature starts from the variable being called on. If its not there thn it wil go outside of the function to look for it.
 
-
+  
 /* Task 2: Counter */
 let cou = 4;
 

@@ -85,13 +85,9 @@ function multiply(mu1,mu2){
      }
 
 
-function consume(a, b, type){
-if(type === 'add'){
- add(a,b)};
- if(type === 'multiply'){
- multiply(a,b)};
- if(type === 'greeting'){
- greeting(a,b)};
+function consume(a, b, func){
+return func(a,b);
+
 
 
  
