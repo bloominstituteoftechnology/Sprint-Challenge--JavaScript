@@ -176,3 +176,16 @@ functions.
 
 */
 
+
+
+/*
+  Call back function for  buttons clickes
+<button id="callback-btn">Click here</button>
+This time we will see a message on the console only when the user clicks on the button:
+
+document.queryselector("#callback-btn")
+    .addEventListener("click", function() {    
+      console.log("User has clicked on the button!");
+});
+
+*/
