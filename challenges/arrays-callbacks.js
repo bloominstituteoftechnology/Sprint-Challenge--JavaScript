@@ -4,16 +4,27 @@
 // Use the specific array methods in the requests below to solve the problems.
 
 const zooAnimals = [
-  { animal_name: "Jackal, asiatic", population: 5, scientific_name: "Canis aureus", state: "Kentucky" },
-  { animal_name: "Screamer, southern", population: 1, scientific_name: "Chauna torquata", state: "Alabama" },
-  { animal_name: "White spoonbill", population: 8, scientific_name: "Platalea leucordia", state: "Georgia" },
-  { animal_name: "White-cheeked pintail", population: 1, scientific_name: "Anas bahamensis", state: "Oregon" },
-  { animal_name: "Black-backed jackal", population: 2, scientific_name: "Canis mesomelas", state: "Washington" },
-  { animal_name: "Brolga crane", population: 9, scientific_name: "Grus rubicundus", state: "New Mexico" },
-  { animal_name: "Common melba finch", population: 5, scientific_name: "Pytilia melba", state: "Pennsylvania" },
-  { animal_name: "Pampa gray fox", population: 10, scientific_name: "Pseudalopex gymnocercus", state: "Connecticut" },
-  { animal_name: "Hawk-eagle, crowned", population: 10, scientific_name: "Spizaetus coronatus", state: "Florida" },
-  { animal_name: "Australian pelican", population: 5, scientific_name: "Pelecanus conspicillatus", state: "West Virginia" },
+  { animal_name: "Jackal, asiatic", population: 5, 
+  scientific_name: "Canis aureus", state: "Kentucky" },
+  { animal_name: "Screamer, southern", population: 1, 
+  scientific_name: "Chauna torquata", state: "Alabama" },
+  { animal_name: "White spoonbill", population: 8, 
+  scientific_name: "Platalea leucordia", state: "Georgia" },
+  { animal_name: "White-cheeked pintail", population: 1, 
+  scientific_name: "Anas bahamensis", state: "Oregon" },
+  { animal_name: "Black-backed jackal", population: 2, 
+  scientific_name: "Canis mesomelas", state: "Washington" },
+  { animal_name: "Brolga crane", population: 9, 
+  scientific_name: "Grus rubicundus", state: "New Mexico" },
+  { animal_name: "Common melba finch", population: 5, 
+  scientific_name: "Pytilia melba", state: "Pennsylvania" },
+  { animal_name: "Pampa gray fox", population: 10, 
+  scientific_name: "Pseudalopex gymnocercus", state: "Connecticut" },
+  { animal_name: "Hawk-eagle, crowned", population: 10, 
+  scientific_name: "Spizaetus coronatus", state: "Florida" },
+  { animal_name: "Australian pelican", population: 5, 
+  scientific_name: "Pelecanus conspicillatus", 
+  state: "West Virginia" },
 ];
 
 /* Request 1: .forEach()
@@ -65,8 +76,14 @@ Using filter, create a new array of objects
   population less than 5.
 
 */
-const lowPopulationAnimals = [];
-console.log(lowPopulationAnimals);
+let lowPopulationAnimals = [];
+
+lowPopulationAnimals = zooAnimals.filter(e =>  e.population <= 5);
+
+console.log('Task3');
+for(let i in lowPopulationAnimals){
+  console.log(lowPopulationAnimals[i].animal_name);
+}
 
 /* Request 4: .reduce() 
 
@@ -78,7 +95,26 @@ Find the total population from all
 
 */
 let populationTotal = 0;
-console.log(populationTotal);
+// Array reducer
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+/*  Array OBject accumulator
+let initialValue = 0
+let sum = [{x: 1}, {x: 2}, {x: 3}].reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue.x
+}, initialValue)
+
+console.log(sum) // logs 6
+*/
+// population array
+let popar = [];
+for(let i = 0; i < zooAnimals.length; i++){
+  popar.push(zooAnimals[i].population);
+}
+
+for(let i = 0; i< zooAnimals.length; i++){
+  console.log('Task 4 Total Popualtion: '+popar.reduce(reducer));
+}
+
 
 
 // ==== Callbacks ====  
