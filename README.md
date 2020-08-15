@@ -24,6 +24,8 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
+
+
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
     Both are similar however .map returns a new array with transformed 
@@ -49,6 +51,27 @@ Edit this document to include your answers after each question. Make sure to lea
 
 4. Describe the four rules of the 'this' keyword.
 
+1.  Simple Function call: Where global functions defaults to the global object and in 
+    strict mode they will default to undefined
+
+2.  Implicit value: The Implicit value points to the object from which it is called 
+    and accounts for the majority of day to day code examples of this. This as an
+    Implicit value is what is to the left of the assignment operator. Which is used 
+    when a constructor's value is referenced. 
+
+
+3. Explicti Value: Used when assigning a specific function or variable a value
+    for Prototypes bind apply or call all use this as a explicit value. In classes 
+    this is similar to passing in values throug the super keyword or when assigning
+    a function to a variable to return an explicitvalue as the bind functions does.  
+
+
+4. new binding: Using the new keyword constructs a new object and this points to it. 
+    So when a function is invoked as a constructor function the this will then point
+    to the new object created to the left of the assignment operator. 
+
+
+
 
 
 5. Why do we need super() in an extended class?
@@ -57,6 +80,9 @@ Edit this document to include your answers after each question. Make sure to lea
     the child class. So all properties a parent class have the child class will
     as well by just adding in the paramerters need within the parent construtor 
     through the super function inside of the child class. 
+
+
+
 
 ### Task 1 - Project Set up
 
