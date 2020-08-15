@@ -4,27 +4,27 @@
 // Use the specific array methods in the requests below to solve the problems.
 
 const zooAnimals = [
-  { animal_name: "Jackal, asiatic", population: 5, 
-  scientific_name: "Canis aureus", state: "Kentucky" },
-  { animal_name: "Screamer, southern", population: 1, 
-  scientific_name: "Chauna torquata", state: "Alabama" },
-  { animal_name: "White spoonbill", population: 8, 
-  scientific_name: "Platalea leucordia", state: "Georgia" },
-  { animal_name: "White-cheeked pintail", population: 1, 
-  scientific_name: "Anas bahamensis", state: "Oregon" },
-  { animal_name: "Black-backed jackal", population: 2, 
-  scientific_name: "Canis mesomelas", state: "Washington" },
-  { animal_name: "Brolga crane", population: 9, 
-  scientific_name: "Grus rubicundus", state: "New Mexico" },
-  { animal_name: "Common melba finch", population: 5, 
-  scientific_name: "Pytilia melba", state: "Pennsylvania" },
-  { animal_name: "Pampa gray fox", population: 10, 
-  scientific_name: "Pseudalopex gymnocercus", state: "Connecticut" },
-  { animal_name: "Hawk-eagle, crowned", population: 10, 
-  scientific_name: "Spizaetus coronatus", state: "Florida" },
-  { animal_name: "Australian pelican", population: 5, 
-  scientific_name: "Pelecanus conspicillatus", 
-  state: "West Virginia" },
+    { animal_name: "Jackal, asiatic", population: 5, 
+    scientific_name: "Canis aureus", state: "Kentucky" },
+    { animal_name: "Screamer, southern", population: 1, 
+    scientific_name: "Chauna torquata", state: "Alabama" },
+    { animal_name: "White spoonbill", population: 8, 
+    scientific_name: "Platalea leucordia", state: "Georgia" },
+    { animal_name: "White-cheeked pintail", population: 1, 
+    scientific_name: "Anas bahamensis", state: "Oregon" },
+    { animal_name: "Black-backed jackal", population: 2, 
+    scientific_name: "Canis mesomelas", state: "Washington" },
+    { animal_name: "Brolga crane", population: 9, 
+    scientific_name: "Grus rubicundus", state: "New Mexico" },
+    { animal_name: "Common melba finch", population: 5, 
+    scientific_name: "Pytilia melba", state: "Pennsylvania" },
+    { animal_name: "Pampa gray fox", population: 10, 
+    scientific_name: "Pseudalopex gymnocercus", state: "Connecticut" },
+    { animal_name: "Hawk-eagle, crowned", population: 10, 
+    scientific_name: "Spizaetus coronatus", state: "Florida" },
+    { animal_name: "Australian pelican", population: 5, 
+    scientific_name: "Pelecanus conspicillatus", 
+    state: "West Virginia" },
 ];
 
 /* Request 1: .forEach()
@@ -38,11 +38,11 @@ Canis aureus."
 
 */
 const displayNames = [];
-let count  = 0;
- zooAnimals.forEach(function(e){
-
-  displayNames[count]  = `Name: ${e.animal_name} Scientific: ${e.scientific_name}.`;
-  ++count;
+  let count  = 0;
+  zooAnimals.forEach(function(e){
+// Add up the object properties
+    displayNames[count]  = `Name: ${e.animal_name} Scientific: ${e.scientific_name}.`;
+    ++count;
 });
 
 console.log('Task1 - Array callbacks');
@@ -56,16 +56,17 @@ this pattern: "jackal, asiatic". Log the
  resut.
 
 */
-count = 0;
 let  lowCaseAnimalNames = [];
 lowCaseAnimalNames =  zooAnimals.map(function(e){
-  return  e.animal_name.toLowerCase();
+// Return the lowercase animals names
+    return  e.animal_name.toLowerCase();
 });
 
 
 console.log('Task 2');
 for(let i = 0; i < lowCaseAnimalNames.length; i++){
-  console.log(lowCaseAnimalNames[i]);
+// Print the lowercase animal names    
+    console.log(lowCaseAnimalNames[i]);
 }
 
 /* Request 3: .filter() 
@@ -82,7 +83,8 @@ lowPopulationAnimals = zooAnimals.filter(e =>  e.population <= 5);
 
 console.log('Task3');
 for(let i in lowPopulationAnimals){
-  console.log(lowPopulationAnimals[i].animal_name);
+// All low population animals 
+    console.log(lowPopulationAnimals[i].animal_name);
 }
 
 /* Request 4: .reduce() 
@@ -108,11 +110,13 @@ console.log(sum) // logs 6
 // population array
 let popar = [];
 for(let i = 0; i < zooAnimals.length; i++){
-  popar.push(zooAnimals[i].population);
+// Make a population array to use with reducer
+    popar.push(zooAnimals[i].population);
 }
 
 for(let i = 0; i< zooAnimals.length; i++){
-  console.log('Task 4 Total Popualtion: '+popar.reduce(reducer));
+// The population array added up     
+    console.log('Task 4 Total Popualtion: '+popar.reduce(reducer));
 }
 
 
@@ -135,12 +139,31 @@ for(let i = 0; i< zooAnimals.length; i++){
   * "Hello first-name last-name,
   *  nice to meet you!"
 */
+function add(a,b){
+
+  return a+b;
+}
+function multiply(a,b){
+
+  return a*b;
+}
+function greeting(a,b){
+
+  return `Hello ${a} ${b}, nice to meet you!`;
+}
 
 
+function consume(a,b,cb){
+
+   return  cb(a,b);
+   
+  }
+  //console.log(consume(3,3,cconsume()));
+console.log('Consume callback functions ');
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice 
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice 
 //to meet you!
 
 
