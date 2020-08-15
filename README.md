@@ -26,13 +26,37 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+    Both are similar however .map returns a new array with transformed 
+    elements while .forEach returns undefined. Also .map is chainable 
+    while .forEach is not. This means .map can handle other calls like 
+    .sort or .reduce after the .map call. This is something .forEach
+    is not capable of. Also both methods do not mutate the array's 
+    elements on its own without a callback function in use to do so. 
+
+
 2. Explain the difference between a callback and a higher order function.
 
+    A higher order function is the outer scope block within the function 
+    a global scope could call. However a callback function can not be 
+    invoked or called by the global scope. Only the higher order function's
+    scope is capable of accessing the callback function. 
+
 3. What is closure?
+    
+    Closure is a scope block a variable or function can be accessable within.
+    Depending on how many nested curly braces there are closure can be increased
+    or decreased. 
 
 4. Describe the four rules of the 'this' keyword.
 
+
+
 5. Why do we need super() in an extended class?
+
+    Super in a extended class will allow the parent class to be accessible from
+    the child class. So all properties a parent class have the child class will
+    as well by just adding in the paramerters need within the parent construtor 
+    through the super function inside of the child class. 
 
 ### Task 1 - Project Set up
 
