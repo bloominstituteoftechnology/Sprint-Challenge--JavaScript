@@ -35,11 +35,12 @@ displayNames array with only the animal_name and scientific_name of each animal.
 be an array 
 of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: 
 Canis aureus."
-
+Stretch goal
+Convert the regular functions into new es6 arrow functions 
 */
 const displayNames = [];
   let count  = 0;
-  zooAnimals.forEach(function(e){
+  zooAnimals.forEach((e) =>{
 // Add up the object properties
     displayNames[count]  = `Name: ${e.animal_name} Scientific: ${e.scientific_name}.`;
     ++count;
@@ -57,7 +58,7 @@ this pattern: "jackal, asiatic". Log the
 
 */
 let  lowCaseAnimalNames = [];
-lowCaseAnimalNames =  zooAnimals.map(function(e){
+lowCaseAnimalNames =  zooAnimals.map((e)=>{
 // Return the lowercase animals names
     return  e.animal_name.toLowerCase();
 });
@@ -139,21 +140,21 @@ for(let i = 0; i< zooAnimals.length; i++){
   * "Hello first-name last-name,
   *  nice to meet you!"
 */
-function add(a,b){
+ add = (a,b) => {
 
   return a+b;
 }
-function multiply(a,b){
+ multiply=(a,b)=>{
 
   return a*b;
 }
-function greeting(a,b){
+ greeting=(a,b)=>{
 
   return `Hello ${a} ${b}, nice to meet you!`;
 }
 
 
-function consume(a,b,cb){
+ consume=(a,b,cb)=>{
 
    return  cb(a,b);
    

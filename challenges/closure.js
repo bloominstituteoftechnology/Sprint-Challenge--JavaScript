@@ -6,11 +6,11 @@ function can access the variable internal. */
 
 const external = "I'm outside the function";
 
-function myFunction() {
+ myFunction = () => {
   console.log(external);
   const internal = "Hello! I'm inside myFunction!";
 
-  function nestedFunction() {
+   nestedFunction=()=> {
     console.log(internal);
   };
   nestedFunction();

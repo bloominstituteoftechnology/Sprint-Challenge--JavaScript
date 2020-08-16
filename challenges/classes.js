@@ -9,11 +9,11 @@ class CuboidMaker{
         this.width = width;
     }
 
-    volume(){
+    volume = () =>{
         return this.length * this.width * this.height;
     }
 
-    surfaceArea(){
+    surfaceArea = () =>{
         return 2 * (this.length * this.width + this.length * this.height +
             this.width * this.height);
     }
@@ -43,10 +43,10 @@ class CubeMaker extends CuboidMaker{
         super(a,b,c);
         this.cubeMakerValue = 0;
     }
-    makeAcube(c,d){
+    makeAcube = (c,d) =>{
         this.cubeMakerValue = c * d;
     }
-    theCube(){
+    theCube = () =>{
         return this.cubeMakerValue;
     }
 }
