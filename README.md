@@ -26,24 +26,44 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+.map on an array returns a new arra with the result of the callback function for each element of the original array. 
+
+.foreach also covers the callback function for each element of the array, but it does not return a new array like .map does. 
+
 2. Explain the difference between a callback and a higher order function.
+
+A higher order functions take another function as argument. Callbacl is a function that is passed to another function for it to be invoked inside of it. 
+
+A higher order function receives a function as argument. Callback functions are passed as arguments to other functions. 
 
 3. What is closure?
 
+Closure is the combination of a function bundled together(enclosed) with references to its surrounding state. Closures are created everytime a function is created, at function creation time. 
+
 4. Describe the four rules of the 'this' keyword.
 
+1)Global Scope binding: when 'this' is used outside of any specific object.
+
+2)New binding: when 'new' is used with constructors to build new objects.
+
+3)Explicit binding: when using apply and call where we chose some object for some fucntion to copy parent's property.  
+
+4)Implicit binding: when 'this' is used with a specific declared object.
+
 5. Why do we need super() in an extended class?
+
+when creating a child class of a parent class. It is for the child class to access the methods and properties of the parent class for the child class to access the functions of the parent class. 
 
 ### Task 1 - Project Set up
 
 Follow these steps to set up and work on your project:
 Make sure you clone the branch that the TK links to: the vnext branch, NOT master!
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+- [ ] Create a forked copy of this project. DONE
+- [ ] Add TL as collaborator on Github. DONE
+- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!). DONE
+- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`. Done
+- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project. DONE
 - [ ] You are now ready to build this project with your preferred IDE
 - [ ] Implement the project on your Branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
