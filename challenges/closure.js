@@ -17,8 +17,24 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
+/* nestedFunction is the Child of the myFunction Parent function. The Child function(nested function)can reach the Parent function to get the variable's value. Closure is made as the 'internal' variable is available in the Parent function's scope. And the Child function is able to reach out to the Parent function when the variable is not defined within it. 
+*/
 
 
 /* Task 2: Counter */
 
 /* Create a function called `sumation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+function sumation(number) {
+  let sum=0;
+  if(number>=1) {
+    sum=number+sumation(number-1);
+  } return sum;
+}
+console.log("Counter: ")
+console.log(sumation(4));
+console.log(sumation(3));
+console.log(sumation(2));
+console.log(sumation(10));
+console.log(sumation(100));
+ 
