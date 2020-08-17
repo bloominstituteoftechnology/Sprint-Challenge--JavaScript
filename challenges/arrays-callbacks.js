@@ -20,7 +20,15 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
+
 const displayNames = [];
+zooAnimals.forEach((item) =>{
+  displayNames.push(`Name: ${item.animal_name}`);
+
+  displayNames.push(`Scientific: ${item.scientific_name}`);
+});
+
+
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -30,6 +38,10 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 const lowCaseAnimalNames = [];
+zooAnimals.map((item) =>{
+  lowCaseAnimalNames.push(`${item.animal_name.toLowerCase()}`);
+});
+
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -38,7 +50,14 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 const lowPopulationAnimals = [];
+zooAnimals.filter((item) =>{
+  if(item.population < 5){
+return lowPopulationAnimals.push(item.animal_name);
+}
+
+});
 console.log(lowPopulationAnimals);
+
 
 /* Request 4: .reduce() 
 
@@ -46,6 +65,19 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 let populationTotal = 0;
+let zooArray = [];
+
+zooAnimals.map((item) =>{
+  zooArray.push(item.population);
+})
+
+
+zooArray.reduce((cb,index) => {
+  populationTotal = cb + index;
+  return populationTotal
+}, 0);
+
+
 console.log(populationTotal);
 
 
@@ -58,6 +90,11 @@ console.log(populationTotal);
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
+function consume(a,b,cb){
+  return cb(a,b);
+}
+
+
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -65,11 +102,23 @@ console.log(populationTotal);
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function add(a,b){
+  return a + b
+}
+
+function multiply(a,b){
+  return a * b
+}
+
+function greeting(a,b){
+  return `Hello ${a} ${b}, nice to meet you! `
+}
+
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 
