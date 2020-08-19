@@ -91,7 +91,14 @@ Remember the reduce method takes two arguments: a callback (which itself takes t
 
 */
 let populationTotal = 0;
-console.log(populationTotal);
+
+zooAnimals.reduce(function(callback, 0) {
+  return populationTotal.push(zooAnimals.population);
+}, 0);
+
+
+
+console.log(populationTotal(zooAnimals, 0));
 
 
 
@@ -129,6 +136,21 @@ function consume(a, b, callback) {
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+
+const add = function consume(num1, num2) {
+  return num1 + num2;
+}
+
+const multiply = function consume(num1, num2) {
+  return num1 * num2;
+}
+
+const greeting = function consume(firstName, lastName) {
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
+}
+
+
+
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
