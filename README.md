@@ -26,13 +26,15 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
-.map on an array returns a new arra with the result of the callback function for each element of the original array. 
+Both .forEach and .map are array methods that accept a callback to execute a set of instructions on each array element. 
+
+.map on an array returns a new array with the result of the callback function for each element of the original array. 
 
 .foreach also covers the callback function for each element of the array, but it does not return a new array like .map does. 
 
 2. Explain the difference between a callback and a higher order function.
 
-A higher order functions take another function as argument. Callbacl is a function that is passed to another function for it to be invoked inside of it. 
+A higher order functions take another function as argument. Callback is a function that is passed to another function for it to be invoked inside of it. 
 
 A higher order function receives a function as argument. Callback functions are passed as arguments to other functions. 
 
@@ -52,21 +54,21 @@ Closure is the combination of a function bundled together(enclosed) with referen
 
 5. Why do we need super() in an extended class?
 
-when creating a child class of a parent class. It is for the child class to access the methods and properties of the parent class for the child class to access the functions of the parent class. 
+When creating a child class of a parent class. It is for the child class to access the methods and properties of the parent class for the child class to access the functions of the parent class. 
 
 ### Task 1 - Project Set up
 
 Follow these steps to set up and work on your project:
 Make sure you clone the branch that the TK links to: the vnext branch, NOT master!
 
-- [ ] Create a forked copy of this project. DONE
-- [ ] Add TL as collaborator on Github. DONE
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!). DONE
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`. Done
-- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project. DONE
+- [X] Create a forked copy of this project. 
+- [ ] Add TL as collaborator on Github. 
+- [X] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [X] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`. 
+- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project. 
 - [ ] You are now ready to build this project with your preferred IDE
-- [ ] Implement the project on your Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [X] Implement the project on your Branch, committing changes regularly.
+- [X] Push commits: git push origin `<firstName-lastName>`.
 
 
 
@@ -81,7 +83,7 @@ Your finished project must include all of the following requirements:
 Test your knowledge of advanced array methods and callbacks.
 * [ ] Use the [arrays-callbacks.js](challenges/arrays-callbacks.js) link to get started.  Read the instructions carefully!
 
-#### Task B: Closure
+#### Task B: Closure DONE
 
 This challenge takes a look at closures as well as scope. 
 * [ ] Use the [closure.js](challenges/closure.js) link to get started. Read the instructions carefully!
@@ -106,6 +108,6 @@ There are a few stretch problems found throughout the files, don't work on them 
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [X] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
 - [ ] Add your team lead as a Reviewer on the Pull-request
 - [ ] TL then will count the HW as done by  merging the branch back into master.
